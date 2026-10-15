@@ -1,0 +1,110 @@
+{
+  "kind": "engineering-user-persona-projection/v1",
+  "schemaVersion": 1,
+  "recordId": "persona-projection:job-application-v5:task-user",
+  "revision": "revision:v5-job-application",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "subject": {"subjectRef": "subject:requester", "projectionKind": "task_user", "identityStored": false},
+  "boundary": {
+    "taskRef": "task:job-application-v5",
+    "objectiveRef": "objective:self-introduction-v5",
+    "scopeRef": "scope:current-draft-round",
+    "purposeRef": "purpose:adapt-self-introduction-structure-and-review",
+    "consumerRefs": ["consumer:self-introduction-v5-editor", "consumer:self-introduction-v5-evaluator", "consumer:self-introduction-v5-report"],
+    "impactRef": "impact:editorial-draft-only",
+    "riskRef": "risk:unsupported-stable-trait-or-acceptance-inference",
+    "environmentRef": "environment:collab-mono-job-application",
+    "claimCeiling": "declared_single_user",
+    "storageClass": "ephemeral",
+    "validFrom": "2026-09-08T09:00:00+09:00",
+    "expiresAt": "2026-09-15T09:00:00+09:00"
+  },
+  "evidenceItems": [
+    {"evidenceRef": "evidence:user-request:five-sets-threshold", "evidenceClass": "declared_preference", "sourceClass": "explicit_user", "sourceRef": "source:current-conversation", "consentRef": "consent:current-task-use", "purposeRef": "purpose:adapt-self-introduction-structure-and-review", "observedAt": "2026-09-08T09:00:00+09:00", "validUntil": "2026-09-15T09:00:00+09:00", "correctionRef": "correction:current-conversation", "deletionRef": "deletion:task-expiry", "coverage": "supported"},
+    {"evidenceRef": "evidence:user-request:high-level-context", "evidenceClass": "observed_human_response", "sourceClass": "managed_observation", "sourceRef": "source:current-conversation", "consentRef": "consent:current-task-use", "purposeRef": "purpose:adapt-self-introduction-structure-and-review", "observedAt": "2026-09-08T09:00:00+09:00", "validUntil": "2026-09-15T09:00:00+09:00", "correctionRef": "correction:current-conversation", "deletionRef": "deletion:task-expiry", "coverage": "supported"},
+    {"evidenceRef": "evidence:user-request:source-visibility", "evidenceClass": "declared_preference", "sourceClass": "explicit_user", "sourceRef": "source:current-conversation", "consentRef": "consent:current-task-use", "purposeRef": "purpose:adapt-self-introduction-structure-and-review", "observedAt": "2026-09-08T09:00:00+09:00", "validUntil": "2026-09-15T09:00:00+09:00", "correctionRef": "correction:current-conversation", "deletionRef": "deletion:task-expiry", "coverage": "supported"},
+    {"evidenceRef": "evidence:user-request:revision-loop", "evidenceClass": "declared_preference", "sourceClass": "explicit_user", "sourceRef": "source:current-conversation", "consentRef": "consent:current-task-use", "purposeRef": "purpose:adapt-self-introduction-structure-and-review", "observedAt": "2026-09-08T09:00:00+09:00", "validUntil": "2026-09-15T09:00:00+09:00", "correctionRef": "correction:current-conversation", "deletionRef": "deletion:task-expiry", "coverage": "supported"}
+  ],
+  "attributes": [
+    {
+      "attributeId": "persona-attribute:evidence-and-numeric-meaning",
+      "dimensionId": "evidence_and_trust",
+      "valueRef": "preference:meaningful-numeric-editorial-evaluation",
+      "evidenceRefs": ["evidence:user-request:five-sets-threshold"],
+      "coverage": "supported",
+      "permittedUses": ["evidence_budget", "eligible_option_comparison", "interaction_presentation"],
+      "prohibitedUses": ["identity", "permission", "authority", "safety_waiver", "privacy_waiver", "factual_truth", "factual_evidence_strength", "reviewer_competence", "reviewer_independence", "comprehension", "approval", "effect_permission", "acceptance", "settlement", "protected_trait_inference"],
+      "expiresAt": "2026-09-15T09:00:00+09:00",
+      "invalidationTriggerIds": ["user_correction", "objective_revision_change", "expiry"]
+    },
+    {
+      "attributeId": "persona-attribute:five-sets-and-threshold",
+      "dimensionId": "goal_and_outcome",
+      "valueRef": "preference:five-sets-and-score-threshold",
+      "evidenceRefs": ["evidence:user-request:five-sets-threshold"],
+      "coverage": "supported",
+      "permittedUses": ["eligible_option_comparison", "interaction_presentation"],
+      "prohibitedUses": ["identity", "permission", "authority", "safety_waiver", "privacy_waiver", "factual_truth", "factual_evidence_strength", "reviewer_competence", "reviewer_independence", "comprehension", "approval", "effect_permission", "acceptance", "settlement", "protected_trait_inference"],
+      "expiresAt": "2026-09-15T09:00:00+09:00",
+      "invalidationTriggerIds": ["user_correction", "objective_revision_change", "expiry"]
+    },
+    {
+      "attributeId": "persona-attribute:high-level-domain-context",
+      "dimensionId": "interaction_and_presentation",
+      "valueRef": "preference:high-level-domain-and-project-context",
+      "evidenceRefs": ["evidence:user-request:high-level-context"],
+      "coverage": "supported",
+      "permittedUses": ["interaction_presentation", "clarification_priority"],
+      "prohibitedUses": ["identity", "permission", "authority", "safety_waiver", "privacy_waiver", "factual_truth", "factual_evidence_strength", "reviewer_competence", "reviewer_independence", "comprehension", "approval", "effect_permission", "acceptance", "settlement", "protected_trait_inference"],
+      "expiresAt": "2026-09-15T09:00:00+09:00",
+      "invalidationTriggerIds": ["user_correction", "objective_revision_change", "expiry"]
+    },
+    {
+      "attributeId": "persona-attribute:viewpoint-and-question-fit",
+      "dimensionId": "autonomy_and_control",
+      "valueRef": "preference:explicit-viewpoint-question-differentiation",
+      "evidenceRefs": ["evidence:user-request:high-level-context", "evidence:user-request:revision-loop"],
+      "coverage": "supported",
+      "permittedUses": ["interaction_presentation", "collaboration_interface"],
+      "prohibitedUses": ["identity", "permission", "authority", "safety_waiver", "privacy_waiver", "factual_truth", "factual_evidence_strength", "reviewer_competence", "reviewer_independence", "comprehension", "approval", "effect_permission", "acceptance", "settlement", "protected_trait_inference"],
+      "expiresAt": "2026-09-15T09:00:00+09:00",
+      "invalidationTriggerIds": ["user_correction", "objective_revision_change", "expiry"]
+    },
+    {
+      "attributeId": "persona-attribute:source-visibility",
+      "dimensionId": "interaction_and_presentation",
+      "valueRef": "preference:official-posting-only-visible-source",
+      "evidenceRefs": ["evidence:user-request:source-visibility"],
+      "coverage": "supported",
+      "permittedUses": ["interaction_presentation", "collaboration_interface"],
+      "prohibitedUses": ["identity", "permission", "authority", "safety_waiver", "privacy_waiver", "factual_truth", "factual_evidence_strength", "reviewer_competence", "reviewer_independence", "comprehension", "approval", "effect_permission", "acceptance", "settlement", "protected_trait_inference"],
+      "expiresAt": "2026-09-15T09:00:00+09:00",
+      "invalidationTriggerIds": ["user_correction", "objective_revision_change", "expiry"]
+    }
+  ],
+  "unknownDimensionIds": ["role_and_relationship", "knowledge_and_experience", "accessibility_functional_need", "collaboration", "validity_and_rights"],
+  "correction": {"correctionRouteRef": "correction:current-conversation", "withdrawalRouteRef": "withdrawal:current-conversation", "deletionRouteRef": "deletion:task-expiry", "userCorrectionPrecedence": true, "appendOnlyCorrectionLineage": true, "pendingSemanticAcknowledgement": true, "note": "AI가 확장한 사용자 관점은 제출 전 사용자가 의미를 확인해야 함"},
+  "nonEffects": {"mayAnswerForHuman": false, "mayInferIdentity": false, "mayGrantPermission": false, "mayEstablishExpertise": false, "mayEstablishReviewerIndependence": false, "mayAcceptOutput": false, "mayChangeAuthority": false},
+  "rubric": {
+    "catalogRef": "user-understanding-rubric-catalog/v1",
+    "aggregateScoreAllowed": false,
+    "results": [
+      {"criterionId": "purpose_and_consumer_binding", "anchor": "supported", "evidenceRefs": ["evidence:boundary"]},
+      {"criterionId": "provenance_and_evidence_class", "anchor": "supported", "evidenceRefs": ["evidence:user-request:high-level-context", "evidence:user-request:source-visibility"]},
+      {"criterionId": "persona_user_agent_separation", "anchor": "supported", "evidenceRefs": ["evidence:non-effects"]},
+      {"criterionId": "consent_privacy_and_minimization", "anchor": "supported", "evidenceRefs": ["consent:current-task-use"]},
+      {"criterionId": "correction_withdrawal_expiry", "anchor": "supported", "evidenceRefs": ["correction:v5"]},
+      {"criterionId": "mode_profile_alignment", "anchor": "not_applicable", "evidenceRefs": []},
+      {"criterionId": "authority_truth_and_acceptance_neutrality", "anchor": "supported", "evidenceRefs": ["evidence:non-effects"]},
+      {"criterionId": "protected_trait_non_inference", "anchor": "supported", "evidenceRefs": ["evidence:unknown-dimensions"]},
+      {"criterionId": "functional_accessibility", "anchor": "not_applicable", "evidenceRefs": []},
+      {"criterionId": "task_relevance", "anchor": "supported", "evidenceRefs": ["evidence:user-request:five-sets-threshold", "evidence:user-request:revision-loop"]},
+      {"criterionId": "recipient_minimum_disclosure", "anchor": "supported", "evidenceRefs": ["evidence:boundary"]},
+      {"criterionId": "correction_cost", "anchor": "supported", "evidenceRefs": ["correction:v5"]},
+      {"criterionId": "user_burden", "anchor": "unavailable", "evidenceRefs": []}
+    ],
+    "disposition": "ready"
+  },
+  "integrity": {"algorithm": "sha256", "digest": "sha256:56bb36731906497109fad577d9933ead17c67b05577f5509139e45949396da4e"}
+}

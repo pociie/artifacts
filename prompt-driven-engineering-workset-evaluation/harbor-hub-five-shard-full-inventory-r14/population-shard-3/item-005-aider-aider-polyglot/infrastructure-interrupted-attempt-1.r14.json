@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "harbor-hub-r14-infrastructure-interruption/v1",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "lane": "population-shard-3",
+  "ordinal": 5,
+  "identity": {
+    "datasetId": "aider/aider-polyglot",
+    "datasetVersion": "latest",
+    "providerCasePreserved": true
+  },
+  "attempt": {
+    "actualAttempt": true,
+    "attemptNumber": 1,
+    "attemptState": "infrastructure_interrupted",
+    "providerTaskName": "aider/polyglot_java_affine-cipher",
+    "providerTaskDigest": "sha256:a7466808812aadf91ac80c70ca6c80fdc9cbb8b71c27a3d6f6804b900b9c551e",
+    "frameworkRevision": "sha256:ec23c40270733d0a9ffd336abcd2f51c084fbb439acd73ccd67d2e0c7fdc5d68",
+    "jobName": "shard3-005-aider-aider-polyglot-r14",
+    "resultStateAtInterruption": {
+      "completedTrials": 0,
+      "erroredTrials": 0,
+      "runningTrials": 1,
+      "cancelledTrials": 1
+    }
+  },
+  "infrastructure": {
+    "cause": "lane-controller-interruption while predecessor controller was being fenced at the r16 transition boundary",
+    "composeProject": "polyglot_java_affine-cipher__h4bpfjh__env",
+    "stopped": true,
+    "volumeDeletion": false
+  },
+  "terminal": {
+    "status": "infrastructure-interrupted",
+    "failureClass": "infrastructure_interrupted",
+    "wakeCondition": "Retry the exact representative task under the r16 framework fingerprint with the shared slots=3 wrapper before terminal settlement."
+  },
+  "privacy": {
+    "metadataOnly": true,
+    "runtimeHandles": false,
+    "rawPrompts": false,
+    "privateReasoning": false,
+    "secrets": false
+  }
+}

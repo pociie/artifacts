@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "self-introduction-evaluation-data-operations/v4",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-07",
+  "purpose": "자기소개서 평가 숫자가 현재 작업 목적에 맞는 정보가 되도록 구성개념·관찰 단위·계산·불확실성·재평정·의사결정 사용을 분리해 관리한다.",
+  "dataModel": {
+    "definition": "evaluation-rubric-v4.json",
+    "profile": "evaluation-rubric-v4.json#profile",
+    "operation": "assessment-operation-v4.json",
+    "evidence": "evidence-map-v4.json",
+    "domainLanguage": "domain-language-map-v4.json",
+    "languageCoverage": "domain-language-coverage-v4.json",
+    "claims": "claim-ledger-v4.json",
+    "subjects": "self-introduction-content-v4.json",
+    "render": "self-introduction-5sets-v4.pdf"
+  },
+  "fieldDefinitions": [
+    {"field": "rating", "type": "ordinal_integer", "allowed": [0, 1, 2, 3, 4], "meaning": "criterion-specific observable anchor level", "doNotInfer": "equal psychological distance between levels"},
+    {"field": "score", "type": "bounded_editorial_number", "formula": "sum(weight * rating / 4)", "meaning": "weighted comparison within this revision", "doNotInfer": "candidate ability, hiring probability or quality truth"},
+    {"field": "gateStatus", "type": "non_compensatory_status", "allowed": ["pass", "fail", "pending"], "meaning": "hard condition before weighted score can select a set", "doNotInfer": "a high score compensates for a failed gate"},
+    {"field": "evidenceBinding", "type": "trace_reference", "meaning": "claim/term/project source supporting the rating", "doNotInfer": "source existence proves personal implementation"},
+    {"field": "limitation", "type": "uncertainty_note", "meaning": "what remains unverified or outside the current evidence", "doNotInfer": "missing evidence is zero performance"},
+    {"field": "agreement", "type": "reliability_metric", "meaning": "consistency between independent raters after common training", "doNotInfer": "agreement alone proves validity"},
+    {"field": "outcomeJoin", "type": "outcome_linkage", "meaning": "future link to user review, submission/interview feedback or accepted result", "doNotInfer": "absence of outcome is evidence of failure"}
+  ],
+  "operatingRules": [
+    {"id": "R1_construct_first", "rule": "평가 전에 무엇을 평가하는지 한 문장으로 정의하고 평가하지 않는 것을 함께 적는다.", "implementation": "primaryConstruct와 notConstructs를 rubric에 고정"},
+    {"id": "R2_non_compensatory_gates", "rule": "분량·귀속·추상화·용어 명료성·문장 추적성의 결함은 다른 축 점수로 상쇄하지 않는다.", "implementation": "9개 protected gate를 weighted score보다 먼저 평가"},
+    {"id": "R3_observable_anchor", "rule": "점수는 인상이나 잠재력이 아니라 행위자·대상·행동·확인 기준·근거 연결의 관찰 결과로 부여한다.", "implementation": "criteria별 anchor4~0와 counterEvidence"},
+    {"id": "R4_evidence_and_limit", "rule": "주장마다 근거 유형과 미확인 범위를 함께 저장한다.", "implementation": "claim-ledger의 class·sourceIds·limitation"},
+    {"id": "R5_missing_not_zero", "rule": "평가자 일치도·사용자 의미 확인·사후 결과가 없으면 unavailable/pending 상태로 둔다.", "implementation": "unknownIsZero=false"},
+    {"id": "R6_discrimination", "rule": "세트 간 차이를 평균 점수 하나로만 보지 않고 criterion spread, pairwise separation, close pair를 확인한다.", "implementation": "assessment-operation-v4.criterionDiscrimination"},
+    {"id": "R7_sensitivity", "rule": "가중치가 바뀌어도 순위와 threshold 통과가 어떻게 변하는지 기록한다.", "implementation": "baseline·clarity·evidence·role scenarios"},
+    {"id": "R8_user_validation", "rule": "사용자 가치관·견해의 표현은 사용자 확인을 거쳐야 제출용 사실로 승격된다.", "implementation": "pending_user_review 상태와 follow-up checklist"},
+    {"id": "R9_reproducibility", "rule": "같은 rubric·증거 스냅샷·콘텐츠 버전이면 같은 점수가 나와야 한다.", "implementation": "revision, asOf, subjectSnapshot, formula, criterion ratings 기록"}
+  ],
+  "qualityMetrics": [
+    {"id": "content_validity_coverage", "definition": "문항 요구·공고 직무·사용자 관점·프로젝트 근거·공통 용어가 rubric criterion 또는 gate에 매핑되는 비율", "current": {"value": 1.0, "state": "observed_by_mapping"}, "caveat": "전문가 검토를 대체하지 않음"},
+    {"id": "canonical_term_coverage", "definition": "목표 canonical concept 중 실제 답변에서 정의된 용어로 나타난 비율", "current": {"value": 1.0, "numerator": 7, "denominator": 7, "state": "observed"}},
+    {"id": "undefined_critical_term_rate", "definition": "핵심 문장에서 대상·행위·기준 없이 남은 critical abstract term의 비율", "current": {"value": 0.0, "numerator": 0, "denominator": 15, "state": "observed"}},
+    {"id": "sentence_traceability_rate", "definition": "핵심 답변 기록이 문항·문장·근거·제한으로 추적되는 비율", "current": {"value": 1.0, "numerator": 15, "denominator": 15, "state": "observed"}},
+    {"id": "pairwise_separation", "definition": "10개 쌍 중 baseline score difference >= 1 point인 쌍의 비율", "current": {"value": 0.9, "numerator": 9, "denominator": 10, "state": "observed"}, "caveat": "점수 차이는 의미 차이의 충분조건이 아니며 close pair의 정성 검토가 필요"},
+    {"id": "rank_stability", "definition": "가중치 시나리오에서 상위 set과 전체 순위가 유지되는 비율", "current": {"topSet": "set-4", "value": 1.0, "numerator": 4, "denominator": 4, "state": "observed"}, "caveat": "시나리오가 실제 채용 담당자의 가중치를 대표하지 않음"},
+    {"id": "rater_agreement", "definition": "독립 평가자 간 기준 적용의 일치도", "current": {"value": null, "state": "unavailable"}, "nextAction": "동일 rubric로 독립 재평정 후 Cohen kappa 또는 weighted agreement 선택"},
+    {"id": "user_semantic_acknowledgement", "definition": "사용자가 가치관·견해 표현을 본인의 의미로 인정하거나 수정한 비율", "current": {"value": null, "state": "pending_user_review"}},
+    {"id": "accepted_outcome_join", "definition": "자소서 선택과 제출·면접·결과 피드백의 연결 가능성", "current": {"value": null, "state": "unavailable"}}
+  ],
+  "interpretationGuide": {
+    "94_to_100": "현재 증거와 rubric에서 강한 제출 검토 후보. 사용자 의미 확인과 사실 확인은 여전히 필요.",
+    "90_to_93_9": "threshold를 통과한 검토 후보. 특정 축의 약점과 close pair를 확인한 뒤 선택.",
+    "below_90": "현재 revision의 결과물에는 넣지 않음. 어떤 criterion·gate가 낮았는지 수정 후 재평정.",
+    "any_gate_fail": "총점과 관계없이 결과물에서 제외하거나 gate를 해결한 새 revision을 생성.",
+    "score_change": "점수 변화는 문장·근거·가중치·평가자 변화 중 어느 원인인지 change log와 함께 해석."
+  },
+  "decisionAndReviewLoop": [
+    {"stage": "freeze", "action": "공고·사용자 입력·프로젝트 증거·canonical terms를 snapshot으로 고정"},
+    {"stage": "draft", "action": "세트별 관점과 문항 답변을 작성하고 핵심 문장에 의미를 명시"},
+    {"stage": "gate", "action": "문항·분량·귀속·상위 추상화·용어·추적성을 먼저 확인"},
+    {"stage": "score", "action": "criterion anchor에 따라 독립적으로 평정하고 산식으로 재현"},
+    {"stage": "discriminate", "action": "criterion spread·pairwise·sensitivity로 세트 차이와 취약한 세트를 확인"},
+    {"stage": "select", "action": "90점 이상이며 gates가 모두 pass인 세트만 PDF 포함"},
+    {"stage": "user_review", "action": "사용자가 가치관·견해·개인 기여·사실 범위를 확인"},
+    {"stage": "reassess", "action": "사용자 수정 또는 새 증거가 있으면 이전 점수와 새 점수를 같은 rubric으로 비교"}
+  ],
+  "prohibitedUses": [
+    "점수로 지원자의 실제 개발 역량을 확정",
+    "점수로 채용 확률이나 합격 가능성을 예측",
+    "평가자 일치도가 없는데 단일 점수를 객관적 사실로 표현",
+    "미확인 사용자 견해를 본인의 확정 가치관으로 제출",
+    "가중치 민감도나 close pair를 숨긴 채 순위만 제시"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "working-memory-binding/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "objectiveRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r9",
+  "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r9",
+  "sessionCursor": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r9/cursor-settled",
+  "memoryClassRefs": {
+    "episodic": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r9/episodic",
+    "procedural": "artifacts/agent-loop/assessment/engineering-workset-simulation/skill/operate-engineering-workset-simulation/SKILL.md",
+    "recovery": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r9/checkpoints",
+    "semantic": "artifacts/loop-architecture/components/execution-routing/pre-route-workflow-resolution.md",
+    "working": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r9/working"
+  },
+  "checkpointRefs": [
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r9/checkpoints/source-binding.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r9/checkpoints/settlement.json"
+  ],
+  "retention": "runtime-private-until-lane-settlement-then-sanitized-immutable-projection",
+  "expiry": "invalidate-on-operation-revision-source-digest-provider-capability-or-settlement-change",
+  "invalidation": [
+    "operation_revision_change",
+    "source_digest_change",
+    "hub_inventory_digest_change",
+    "provider_capability_change",
+    "model_effort_timeout_receipt_change",
+    "settlement_state_change",
+    "privacy_classification_change"
+  ],
+  "source": {
+    "workspaceRef": "workspace:collab-mono",
+    "worktreeRef": "worktree:collab-mono:integration-checkout",
+    "head": "f3b99b29a2947370e37b25a26c73bb6d40012edd",
+    "workflowRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/loop.yaml",
+    "workflowSha256": "504fb8b42d94e4951088f64cf1c05236032bfa9e6d824d3e03c29ee084a16c28",
+    "compositionRef": "artifacts/loop-architecture/compositions/default-ai-execution-control/composition.json",
+    "compositionSha256": "d47af15b0ef5fe4d0ea11619b8d7df7e741a91ce4c0b2e1d2b7978552150811c"
+  },
+  "sourceBindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r9/source-and-plan-binding.json",
+  "sourceBindingDigest": "sha256:d1908e227808d8e721787a21f47f40a53f8b7b371e97d6e0ef3fc3265297dee6",
+  "privacy": {
+    "metadataOnly": true,
+    "rawTaskContentProjected": false,
+    "privateReasoningProjected": false,
+    "secretsProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "digest": "sha256:e8ceacf1a549309b642c0d8c13e98c0e69445514e39f23df3f0c7e1eda01702b"
+}

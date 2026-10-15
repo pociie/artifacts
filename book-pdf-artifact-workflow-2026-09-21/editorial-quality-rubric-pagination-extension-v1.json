@@ -1,0 +1,54 @@
+{
+  "kind": "editorial-quality-rubric-extension/v1",
+  "extensionId": "rubric-extension:pagination-and-content-continuity",
+  "revision": "book-pdf-editorial-rubric-pagination/1",
+  "status": "candidate",
+  "authorityEffect": "none",
+  "baseRubricRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-v1.json",
+  "baseRubricDigest": "sha256:354102254cc59a982e92b7f275f87224c5028f1f63b4af3e6fd58cfde04f743c",
+  "typographyRubricRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-typography-extension-v1.json",
+  "typographyRubricDigest": "sha256:0dc735179283d2bf45ef8d6373d54b2246e0bb5960be3ceb754bf78aea32d9e6",
+  "mandatoryCriteria": [
+    {
+      "id": "page-count-is-not-a-semantic-cap",
+      "question": "Was the final page count produced by complete content and readable layout rather than imposed by truncation or shrink-to-fit?",
+      "failure": "A page target caused omitted reasoning, examples, evidence, limitations or unreadable typography."
+    },
+    {
+      "id": "explanation-bridge-integrity",
+      "question": "Does each included bridge retain observed project fact, bounded background, explicit project inference, why it matters and any unresolved limitation?",
+      "failure": "Pagination hides, merges or changes an evidence class or turns background into project proof."
+    },
+    {
+      "id": "placement-correctness",
+      "question": "Is each prerequisite or example placed exactly where it resolves a named comprehension gap?",
+      "failure": "Mandatory context is hidden in an appendix, repeated as filler or placed for layout convenience."
+    },
+    {
+      "id": "multi-page-continuity",
+      "question": "Can the reader follow every split bridge, example, trace, diagram and evidence unit across pages without reconstructing lost identity or state?",
+      "failure": "Continuation markers, step numbers, state recap, claim id or evidence label are absent or inconsistent."
+    },
+    {
+      "id": "semantic-unit-completeness",
+      "question": "Does a before/after comparison account for every included semantic unit and explain every move, continuation, deferral or exclusion?",
+      "failure": "Rendered content is missing or altered without a recorded disposition."
+    },
+    {
+      "id": "legible-reflow",
+      "question": "Does reflow preserve the declared body size, leading, captions, figures, selectable text and accessible reading order?",
+      "failure": "Content is clipped, rasterized, over-compressed, orphaned or separated from its meaning-bearing caption or label."
+    },
+    {
+      "id": "hard-limit-conflict-handling",
+      "question": "If an external hard page maximum conflicts with required understanding, was the conflict held for explicit scope resolution?",
+      "failure": "The agent silently reduces content, authority, claim strength or source transparency to meet the limit."
+    }
+  ],
+  "decisionRule": "Any mandatory pagination or continuity failure holds the candidate. These criteria are not averaged with visual polish or other scores.",
+  "independentValidationRequiredForAcceptance": true,
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}

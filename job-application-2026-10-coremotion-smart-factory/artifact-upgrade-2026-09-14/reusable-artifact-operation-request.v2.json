@@ -1,0 +1,139 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:coremotion-smart-factory-five-set-pdf-artifact-upgrade",
+  "requestRevision": "revision:2026-09-14.2",
+  "requestRelation": "correct_prior_outcome",
+  "routeBinding": {
+    "decisionRef": "route-decision.json",
+    "decisionDigest": "sha256:ce875f638bb77e0fb3e0885f2fb6f6c9963c953fb952ce0cf7ae25927c25871d",
+    "effectiveMode": "loop"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:coremotion-smart-factory-five-set-pdf-builder",
+    "agencyRef": "artifacts/agents/requirement-realization/agents/artifact-builder.yaml",
+    "agencyDigest": "sha256:06ebe77c9b1b5754e6f2e749c470d9129854abe04690022b3156705f6f10410d",
+    "responsibilityClass": "builder",
+    "outcomeContract": "기존 자기소개서 보고서 아티팩트에 5세트 PDF 출력 프로파일과 검증 경로를 추가하고, 근거가 제한된 지원자 정보로 완전한 보고서를 생성한다.",
+    "outputContract": "프로파일·스키마·체크·테스트와 5세트 답변, 평가, 전문가 검토, 면접 준비, 자료 요청, PDF 렌더 검증 증거를 산출한다.",
+    "decisionScopes": [
+      "문서 출력 프로파일 보완",
+      "지원자 답변 세트 구성",
+      "로컬 PDF 렌더링 및 검증"
+    ],
+    "nonAuthority": [
+      "회사 사실 확정",
+      "지원자 사실 발명",
+      "채용 판단",
+      "지원서 제출",
+      "외부 시스템 변경"
+    ]
+  },
+  "objective": "코어모션 인더스트리 스마트팩토리 시스템 엔지니어 지원 보고서가 5개의 완전한 자기소개서 세트와 문항별 평가를 검색 가능한 PDF로 제공하도록 기존 재사용 아티팩트를 보완하고 실제 보고서를 생성한다.",
+  "successEvidenceRefs": [
+    "profile-schema-and-checker",
+    "profile-bound-five-set-request",
+    "five-candidate-result-with-all-question-answers",
+    "revision-and-criterion-evaluation",
+    "pdf-html-text-artifacts",
+    "render-and-publication-validation"
+  ],
+  "protectedConstraintRefs": [
+    "job-application-report-contract",
+    "evidence-bound-writing",
+    "no-invented-company-facts",
+    "report-only-no-submission",
+    "searchable-pdf-no-clipped-content"
+  ],
+  "nonGoalRefs": [
+    "external-application-submission",
+    "company-fact-invention",
+    "hiring-probability-or-acceptance",
+    "unverified-attachment-interpretation",
+    "unrelated-repository-reorganization"
+  ],
+  "lifecycleIntent": "improve_existing",
+  "capabilities": [
+    "workspace_read",
+    "artifact_write",
+    "command_execute",
+    "validation_execute"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "783a32562aa185dbef333dde7c7c8945adb294fe76af24b935aa271916d242be",
+  "allowedBaseClasses": [
+    "loop"
+  ],
+  "allowedScopes": [
+    "unresolved"
+  ],
+  "requiredFacts": [
+    "owner",
+    "scope",
+    "consumer",
+    "validation"
+  ],
+  "exactArtifactIds": [
+    "loop:document:job-application-report-production"
+  ],
+  "relationshipDepth": 1,
+  "maxCandidates": 1,
+  "contextBudget": {
+    "maxSourceMembers": 16,
+    "maxConsumerRefs": 8,
+    "maxValidationRefs": 12
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "company-specific facts",
+      "actual attachment contents"
+    ],
+    "allowedRelationshipTypes": [
+      "defines",
+      "validates",
+      "generates"
+    ],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "effect",
+      "route_or_topology"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "profile-bound-five-set-request",
+      "five-candidate-result-with-all-question-answers",
+      "render-and-publication-validation"
+    ],
+    "validationRefs": [
+      "profile-checker",
+      "request-result-checker",
+      "package-checker",
+      "pdf-publication-assessment"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "budget:one-owner-one-profile-upgrade-one-report-generation",
+  "dataClassification": "confidential",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": false,
+  "constructionAllowed": true,
+  "residualGapProven": true,
+  "requestDigest": "834e241265948d49c09b8d3cfc0d12d48e8789338bfe6e4135a23ad8fc8ff50c"
+}

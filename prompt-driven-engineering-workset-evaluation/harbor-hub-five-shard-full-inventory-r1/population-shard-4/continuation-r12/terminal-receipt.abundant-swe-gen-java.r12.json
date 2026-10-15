@@ -1,0 +1,103 @@
+{
+  "claimDigest": "sha256:e2255cdb01a9a6ab6b556cd627c3bc8468dde2a34068b2ae23ecdf6a3f655572",
+  "claimFrameworkRevision": "harbor-hub-item-scoped-population-settlement-r12",
+  "claimId": "claim:population-shard-4:abundant/swe-gen-java:r12",
+  "claimWorkerRef": "worker:harbor-population-shard-4:r12-controller",
+  "digest": "sha256:bacbfb9e66365cdacec06fd66c848b6591772aac0b1919fb41070cd0fbc7ad85",
+  "evaluation": {
+    "diagnosticReward": null,
+    "evaluationDigest": "sha256:dffceb6ada444deba92a6220a1ec0b63ec0cf5bf7de0fdfd518ed3206b5ce779",
+    "evaluationRef": "artifacts/population-shard-4/continuation-r12/final-engineering-evaluation.r12.json",
+    "primaryReward": 0.0,
+    "reductionDisposition": "require_context",
+    "state": "require_context",
+    "terminalRewardResultDigest": "sha256:5650adb16ac0a414b29a08be2a63f4a2f913fa149bd1e72e3fe9e4b941bbf044",
+    "terminalRewardResultRef": "artifacts/population-shard-4/continuation-r12/terminal-reward-result.r12.json"
+  },
+  "evidenceRefs": [
+    "artifacts/population-shard-4/continuation-r12/queue-reconciliation-after-settlement.r12.json",
+    "artifacts/population-shard-4/continuation-r12/simulation-evidence.r12.json",
+    "artifacts/population-shard-4/continuation-r12/final-engineering-evaluation.r12.json",
+    "artifacts/population-shard-4/continuation-r12/terminal-reward-result.r12.json",
+    "artifacts/population-shard-4/continuation-r12/settlement-ledger.r12.json"
+  ],
+  "execution": {
+    "executionRef": "artifacts/population-shard-4/continuation-r12/harbor-execution-observation.r12.json",
+    "simulationEvidenceDigest": "sha256:585f781fbbe3347ca5c133b4c3adcdfa9758ce264485a3be045484d4c8f20a61",
+    "simulationEvidenceRef": "artifacts/population-shard-4/continuation-r12/simulation-evidence.r12.json",
+    "state": "not_started"
+  },
+  "hold": {
+    "reasonCode": "provider:effective-model-effort-timeout-credential-receipts-unavailable",
+    "retryPolicy": "no_unchanged_retry_on_missing_effective_provider_receipt",
+    "scope": "this_exact_claim_only",
+    "wakeCondition": "Re-observe Harbor capability for this exact next item only after the provider capability fingerprint changes: credentials must authenticate, the effective gpt-5.6-luna model and max effort must be receipt-bound, the effective subject and verifier timeout must be proven at or below 3600 seconds, and the protected verifier capability must be qualified; then admit a fresh item-bound round. Do not retry this hold or claim the next pending item with the unchanged capability fingerprint."
+  },
+  "identityDigest": "sha256:dde74a7e707f60a1978399f9af6bea1b45f345e818cbf66aa425b48418b5f650",
+  "itemId": "abundant/swe-gen-java",
+  "itemTerminalStatus": "held",
+  "kind": "harbor-population-item-terminal-receipt/v2",
+  "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r12",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "populationDisposition": {
+    "noPopulationProjection": true,
+    "pendingUnclaimedShardMembersAfterSettlement": 46,
+    "populationComplete": false,
+    "thisItemOnly": true
+  },
+  "privacy": {
+    "credentialsProjected": false,
+    "hiddenVerifierBodyProjected": false,
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawPromptProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "provider": {
+    "class": "harbor",
+    "effectiveModel": null,
+    "effectiveReasoningEffort": null,
+    "effectiveReceiptPresent": false,
+    "effectiveSubjectTimeoutSeconds": null,
+    "effectiveVerifierTimeoutSeconds": null,
+    "requestedModel": "gpt-5.6-luna",
+    "requestedReasoningEffort": "max",
+    "requestedSubjectTimeoutSeconds": 3600,
+    "requestedVerifierTimeoutSeconds": 3600,
+    "version": "0.22.0"
+  },
+  "receiptId": "harbor-shard-4-abundant-swe-gen-java-r12-held",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-4:abundant/swe-gen-java:dde74a7e707f60a1978399f9af6bea1b45f345e818cbf66aa425b48418b5f650",
+  "reward": {
+    "diagnosticReward": null,
+    "primaryReward": 0.0,
+    "promotionEligible": false,
+    "rawVerifierReward": null,
+    "rewardDisposition": "require_context_due_missing_effective_receipt"
+  },
+  "route": {
+    "reasoningEnvelopeDigest": "sha256:3cb9a7098a9784be6076c960f12b998ee1476df29361648711c3eb95a81abd26",
+    "reasoningEnvelopeRef": "artifacts/population-shard-4/continuation-r12/mode-reasoning-envelope.r12.json",
+    "routeDigest": "sha256:cb916cf93702d22ed5545ed847abaeab81e8385013e292c2092445f78f785de3",
+    "routeRef": "artifacts/population-shard-4/continuation-r12/route-decision.r12.json",
+    "selectedMode": "single_task"
+  },
+  "schemaVersion": 2,
+  "selectedTask": {
+    "taskId": "0022412f-eb94-42e7-919e-f0901d908546",
+    "taskPageDigest": "sha256:6c2ace3000962e29299b58ebe47968f2824d010c7ee3a5f62545d6407db9c20b",
+    "taskRef": "abundant/swe-gen-java/junit-team__junit5-4692",
+    "taskRevision": 1
+  },
+  "settledAt": "2026-08-28T15:06:33Z",
+  "settlement": {
+    "activeProviderResourceCount": 0,
+    "settlementDigest": "sha256:2ebc46f16fb231f9332b7adb778569e36eac4aa15f070cf819d8c1ea569e1de5",
+    "settlementRef": "artifacts/population-shard-4/continuation-r12/settlement-ledger.r12.json",
+    "state": "complete",
+    "unresolvedExecutionResources": []
+  },
+  "shardId": "population-shard-4",
+  "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:e185aff8ec6d9dc521d527c67fa959614fefc94514a3a092d00c00b25bb125ab",
+  "terminalDisposition": "held"
+}

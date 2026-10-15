@@ -1,0 +1,263 @@
+{
+  "kind": "harbor-shard-continuation-settlement-ledger/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "continuationId": "population-shard-2:continuation-r5",
+  "shardIndex": 1,
+  "settlementState": "complete",
+  "activeProviderResourceCount": 0,
+  "resourceCount": 33,
+  "reconciliation": {
+    "hubPages": "settled_observed_and_released",
+    "candidateDetailPages": "settled_metadata_observed_and_released",
+    "taskMaterializations": "settled_private_runtime_retained",
+    "queueClaims": "settled_none_created",
+    "providerJobs": "settled_none_created",
+    "taskWorkspaces": "settled_none_created",
+    "containers": "settled_none_created",
+    "volumes": "settled_none_created",
+    "authMaterial": "settled_not_materialized",
+    "temporaryFiles": "settled_released_after_digest_projection",
+    "verifierState": "settled_none_created",
+    "probeImageCaches": "settled_deleted_or_not_materialized",
+    "dynamicCandidates": "settled_none_created"
+  },
+  "resources": [
+    {
+      "resourceClass": "hub-page-01",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "observed_and_released",
+      "evidenceRefs": ["continuation-r5/source-and-plan-binding.json"]
+    },
+    {
+      "resourceClass": "hub-page-02",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "observed_and_released",
+      "evidenceRefs": ["continuation-r5/source-and-plan-binding.json"]
+    },
+    {
+      "resourceClass": "hub-page-03",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "observed_and_released",
+      "evidenceRefs": ["continuation-r5/source-and-plan-binding.json"]
+    },
+    {
+      "resourceClass": "hub-page-04",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "observed_and_released",
+      "evidenceRefs": ["continuation-r5/source-and-plan-binding.json"]
+    },
+    {
+      "resourceClass": "hub-page-05",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "observed_and_released",
+      "evidenceRefs": ["continuation-r5/source-and-plan-binding.json"]
+    },
+    {
+      "resourceClass": "hub-page-06",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "observed_and_released",
+      "evidenceRefs": ["continuation-r5/source-and-plan-binding.json"]
+    },
+    {
+      "resourceClass": "hub-page-07",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "observed_and_released",
+      "evidenceRefs": ["continuation-r5/source-and-plan-binding.json"]
+    },
+    {
+      "resourceClass": "hub-page-08",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "observed_and_released",
+      "evidenceRefs": ["continuation-r5/source-and-plan-binding.json"]
+    },
+    {
+      "resourceClass": "hub-page-09",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "observed_and_released",
+      "evidenceRefs": ["continuation-r5/source-and-plan-binding.json"]
+    },
+    {
+      "resourceClass": "hub-page-10",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "observed_and_released",
+      "evidenceRefs": ["continuation-r5/source-and-plan-binding.json"]
+    },
+    {
+      "resourceClass": "candidate-detail-pages",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "metadata_observed_and_released",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "task-materialization-probe-01",
+      "owner": "probe-01-ryanmarten-tb-test",
+      "state": "settled",
+      "disposition": "private_runtime_retained",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "task-materialization-probe-02",
+      "owner": "probe-02-harbor-index",
+      "state": "settled",
+      "disposition": "private_runtime_retained",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "task-materialization-probe-03",
+      "owner": "probe-03-NovitaAI-tb21-file-recovery",
+      "state": "settled",
+      "disposition": "private_runtime_retained",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "probe-image-cache-ryanmarten-environment",
+      "owner": "probe-01-ryanmarten-tb-test",
+      "state": "deleted",
+      "disposition": "removed_after_platform_probe",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "probe-image-cache-ryanmarten-verifier",
+      "owner": "probe-01-ryanmarten-tb-test",
+      "state": "deleted",
+      "disposition": "removed_after_platform_probe",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "probe-image-cache-NovitaAI-environment",
+      "owner": "probe-03-NovitaAI-tb21-file-recovery",
+      "state": "deleted",
+      "disposition": "removed_after_platform_probe",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "probe-image-reference-harbor-index-environment",
+      "owner": "probe-02-harbor-index",
+      "state": "settled",
+      "disposition": "not_materialized",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "probe-image-reference-harbor-index-verifier",
+      "owner": "probe-02-harbor-index",
+      "state": "settled",
+      "disposition": "not_materialized",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "probe-image-reference-NovitaAI-verifier",
+      "owner": "probe-03-NovitaAI-tb21-file-recovery",
+      "state": "settled",
+      "disposition": "implicit_task_environment_not_materialized_twice",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "queue-claims",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "not_created_after_qualification_hold",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "provider-jobs",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "not_created_after_qualification_hold",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "task-workspaces",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "not_created_after_platform_fence",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "containers",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "none_created_by_subject_or_verifier",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "volumes",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "none_created_by_subject_or_verifier",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "auth-material",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "not_materialized",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "temporary-files",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "released_after_digest_projection",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "verifier-state-probe-01",
+      "owner": "probe-01-ryanmarten-tb-test",
+      "state": "settled",
+      "disposition": "not_created_after_platform_fence",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "verifier-state-probe-02",
+      "owner": "probe-02-harbor-index",
+      "state": "settled",
+      "disposition": "not_created_after_platform_fence",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "verifier-state-probe-03",
+      "owner": "probe-03-NovitaAI-tb21-file-recovery",
+      "state": "settled",
+      "disposition": "not_created_after_platform_fence",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "mode-reasoning-envelopes",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "report_only_envelopes_closed_at_hold",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "dynamic-candidates",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "none_created_structure_adequate",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    },
+    {
+      "resourceClass": "terminal-reward-round",
+      "owner": "lane",
+      "state": "settled",
+      "disposition": "not_scored_no_executed_candidate",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"]
+    }
+  ],
+  "terminalRewardRoundState": "not_scored_no_executed_candidate",
+  "sourceArtifactRef": "continuation-r5/settlement-ledger.json",
+  "updatedAt": "2026-08-28T13:12:08Z",
+  "digest": "sha256:d16887572bfbaad96acb105a8e7a866e082386b21a58e1374bcd904f2f24a2aa"
+}

@@ -1,0 +1,125 @@
+{
+  "authorityEffect": "none",
+  "blockerCodes": [
+    "provider:credential-mechanism-unavailable",
+    "model:effective-model-unobserved",
+    "model:effective-effort-unobserved",
+    "environment:effective-timeout-unestablished",
+    "verifier:protected-verifier-unobserved",
+    "license:license-metadata-unresolved",
+    "platform:task-image-manifest-unobserved",
+    "environment:restricted-network-capability-unobserved",
+    "provider:cost-budget-unqualified"
+  ],
+  "changedFingerprintRequired": true,
+  "digest": "sha256:63b834cd9595302d7cca78ef09cb54cac36b9f82b69e3ccf560c3c6cd8b1cefd",
+  "effective": {
+    "effectiveSubjectTimeoutSeconds": null,
+    "receiptState": "unavailable_before_token_admission",
+    "subjectModel": null,
+    "subjectReasoningEffort": null
+  },
+  "effectiveReceipt": {
+    "model": null,
+    "reasoningEffort": null,
+    "state": "missing_require_context",
+    "timeoutSeconds": null
+  },
+  "itemId": "openthoughts/tasktrove-exp-rpt-crosscodeeval-java",
+  "itemIdentityDigest": "sha256:7dd0d25f7a2ac5e0ac79476265b133d4f111044e30a5c53a5b70fcf0b21354d5",
+  "itemScoped": true,
+  "kind": "harbor-capability-qualification-receipt/v1",
+  "noSecretsOrHandlesStored": true,
+  "observations": {
+    "access": {
+      "detail": "Hub rows are Public; task page access is independently observed",
+      "state": "qualified"
+    },
+    "cost": {
+      "reasonCode": "model_cost_budget_not_qualified_without_admission",
+      "state": "held"
+    },
+    "credentials": {
+      "availability": "missing",
+      "reasonCode": "harbor_auth_status_not_authenticated",
+      "selectedMechanism": null,
+      "state": "held"
+    },
+    "effort": {
+      "effective": null,
+      "reasonCode": "effective_reasoning_effort_not_observed",
+      "requested": "max",
+      "state": "held"
+    },
+    "harborCli": {
+      "evidence": "harbor_version",
+      "state": "qualified",
+      "version": "0.22.0"
+    },
+    "harborSourceRevision": {
+      "revision": "c178c20710c362ef806c5d5d18852f95b21ca34b",
+      "state": "observed"
+    },
+    "hubInventoryAccess": {
+      "evidence": "all_current_inventory_pages_observed",
+      "state": "qualified"
+    },
+    "license": {
+      "reasonCode": "license_metadata_not_exposed_by_inventory_pages",
+      "state": "held"
+    },
+    "model": {
+      "effective": null,
+      "reasonCode": "effective_model_not_observed",
+      "requested": "gpt-5.6-luna",
+      "state": "held"
+    },
+    "network": {
+      "publicAccess": "observed",
+      "reasonCode": "network_enforcement_not_observed",
+      "restrictedNoNetwork": "held"
+    },
+    "platform": {
+      "dockerTarget": "linux-aarch64",
+      "hostPlatform": "darwin-arm64",
+      "reasonCode": "task_image_manifest_not_observed",
+      "state": "held"
+    },
+    "publicTaskPageAccess": {
+      "evidence": "owned_representative_task_pages_hashed",
+      "state": "qualified"
+    },
+    "timeout": {
+      "effectiveSeconds": null,
+      "reasonCode": "effective_timeout_not_established",
+      "requestedSeconds": 3600,
+      "state": "held"
+    },
+    "verifier": {
+      "reasonCode": "protected_verifier_capability_not_observed",
+      "state": "held"
+    }
+  },
+  "observedAt": "2026-08-28T12:46:01.369Z",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "requested": {
+    "configuredHierarchyCeiling": 12,
+    "effectiveSubjectTimeoutSeconds": 3600,
+    "subjectModel": "gpt-5.6-luna",
+    "subjectReasoningEffort": "max"
+  },
+  "requestedSubject": {
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "timeoutSeconds": 3600
+  },
+  "schemaVersion": 1,
+  "sourceQualificationRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:capability-qualification.json",
+  "status": "held"
+}

@@ -1,0 +1,121 @@
+{
+  "agentArchitectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+  "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+  "agentSwarmDigest": null,
+  "agentSwarmRef": null,
+  "authorityEffect": "none",
+  "controllerMaySelect": false,
+  "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+  "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+  "decisionBindings": [
+    {
+      "decisionKind": "route",
+      "digest": "sha256:21776100034bcbdf3642c11e5d20a8dc6b650061e1d34b7862bb6231e5a59467",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-41-openthoughts-tasktrove-swesmith-oracle-filtered/native-route-decision.r13.json"
+    },
+    {
+      "decisionKind": "reasoning_control",
+      "digest": "sha256:41ba9dbc23bd5aef99d8d03de5a671227134da09e73ab1a934b0ed53076d7c16",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-41-openthoughts-tasktrove-swesmith-oracle-filtered/native-mode-reasoning-control.r13.json"
+    },
+    {
+      "decisionKind": "reasoning_envelope",
+      "digest": "sha256:e83cd07d03a7b141cfd99de04a6c9ee71e0f71e01cdd801e6b4cfb86d6a47d3c",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-41-openthoughts-tasktrove-swesmith-oracle-filtered/native-mode-reasoning-envelope.r13.json"
+    },
+    {
+      "decisionKind": "artifact_reuse",
+      "digest": "sha256:6203de9df75d341448be22a93a518578bbcc933450fa80006d6b7f5abc268765",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-41-openthoughts-tasktrove-swesmith-oracle-filtered/artifact-reuse-decision.r13.json"
+    },
+    {
+      "decisionKind": "subject_operation_scope",
+      "digest": "sha256:e8b720ffde9d3d22cc94a4d7b0ee7d5652a8236d20daf570f2eb531b756d5459",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-41-openthoughts-tasktrove-swesmith-oracle-filtered/subject-operation-scope-binding.r13.json"
+    },
+    {
+      "decisionKind": "topology_requirement",
+      "digest": "sha256:39cf33453e4c7a56eab325c49a68f1ea63b6ef443b90dd9f4caa099b2990034f",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-41-openthoughts-tasktrove-swesmith-oracle-filtered/topology-requirement-decision.r13.json"
+    },
+    {
+      "decisionKind": "workflow_pattern",
+      "digest": "sha256:f9d73b6a17da1bf6c1c6aaf0dee45dda63a359f3bff4ad901e06e7237b3f2514",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-41-openthoughts-tasktrove-swesmith-oracle-filtered/workflow-pattern-decision.r13.json"
+    },
+    {
+      "decisionKind": "topology_selection",
+      "digest": "sha256:18a18cf609cf2a757c0278f5de07aaa7fc72ae4a62df3cd1d48d91cc087d1579",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-41-openthoughts-tasktrove-swesmith-oracle-filtered/topology-selection-decision.r13.json"
+    },
+    {
+      "decisionKind": "coordination_plan",
+      "digest": "sha256:3f8877035904bdb6c7fc9dc0dede88374b5cceb4f84e690122247deb56816ea3",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-41-openthoughts-tasktrove-swesmith-oracle-filtered/coordination-plan-decision.r13.json"
+    },
+    {
+      "decisionKind": "coordination_closure",
+      "digest": "sha256:a80d5ed7a19a05f6243303d0fc4de16440f158347a799036bd613dda83c10b36",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-41-openthoughts-tasktrove-swesmith-oracle-filtered/coordination-closure-decision.r13.json"
+    },
+    {
+      "decisionKind": "role_context_projection",
+      "digest": "sha256:ed49a758e2a538796a799b045c4d9ea0a6a2c9fb7802fd869b717fc27ed2d560",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-41-openthoughts-tasktrove-swesmith-oracle-filtered/role-context-projection.r13.json"
+    }
+  ],
+  "kind": "subject-topology-operation-request/v1",
+  "mode": "single_task",
+  "operationContracts": {
+    "executionRecordSchemaRef": "artifacts/agent-loop/work/workflow-pattern-execution/schemas/workflow-pattern-execution-record-v2.schema.json",
+    "packetSchemaRef": "artifacts/agent-loop/work/workflow-pattern-execution/schemas/subject-operation-packet.schema.json",
+    "receiptSchemaRef": "artifacts/agent-loop/work/workflow-pattern-execution/schemas/subject-topology-operation-receipt-v2.schema.json",
+    "roleResultSchemaRef": "artifacts/agent-loop/work/workflow-pattern-execution/schemas/subject-role-operation-result.schema.json"
+  },
+  "requestId": "subject-operation-request:population-shard-5:openthoughts/tasktrove-swesmith-oracle-filtered:r13",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-5:openthoughts/tasktrove-swesmith-oracle-filtered:r13:execute-harbor-subject",
+  "responsibilitySlots": [
+    {
+      "profileDigest": "sha256:3c84136e80f99bc44c4f2f1be8d9349887389da826574d60c2531195c8f35489",
+      "profileRef": "artifacts/agents/agent-operation/agents/work-orchestration-coordinator.yaml",
+      "required": true,
+      "responsibilityClass": "orchestrator",
+      "roleId": "coordinator"
+    },
+    {
+      "profileDigest": "sha256:1359813cef538a12b342609c8e5a88f120425957ee8d954b9e79f6ae86cf643d",
+      "profileRef": "artifacts/agents/agent-operation/agents/external-tool-surface-curator.yaml",
+      "required": true,
+      "responsibilityClass": "specialist",
+      "roleId": "provider-curator"
+    },
+    {
+      "profileDigest": "sha256:dcaa90f790aaaf86d630ae7571ee686252eb663c413165182298caecdfb3bef1",
+      "profileRef": "artifacts/agents/evidence-governance/agents/representative-collection-readiness-curator.yaml",
+      "required": true,
+      "responsibilityClass": "specialist",
+      "roleId": "population-curator"
+    },
+    {
+      "profileDigest": "sha256:94a3ec55600f73dc4b6222b2a713b03d5b1da8b64fef6af751ea981d88900aa5",
+      "profileRef": "artifacts/agents/engineering/agents/source-evidence-reviewer.yaml",
+      "required": true,
+      "responsibilityClass": "validator",
+      "roleId": "validator"
+    }
+  ],
+  "runtimeBinding": {
+    "capabilityEvidenceDigest": "sha256:9279bad3f1ee2bee0c4cd967cc8bf2bbf1bc57792c1edc2c9f4572c048aaaefc",
+    "capabilityEvidenceRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-41-openthoughts-tasktrove-swesmith-oracle-filtered/runtime-capability-binding.r13.json",
+    "controllerActorRef": "controller:worker:harbor-population-shard-5:r13-controller",
+    "providerRef": "provider:harbor:0.22.0",
+    "subjectRuntimeRef": "runtime:harbor-subject:population-shard-5:item-41-openthoughts-tasktrove-swesmith-oracle-filtered"
+  },
+  "schemaVersion": 1,
+  "status": "report_only",
+  "subjectOwnsActivation": true,
+  "subjectRef": "subject:harbor:openthoughts/tasktrove-swesmith-oracle-filtered:r13",
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "workflowPatternId": "pipeline"
+}

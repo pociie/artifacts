@@ -1,0 +1,282 @@
+{
+  "agentArchitectureDigest": "sha256:a26d7c3ef0658cdb86cd2cd542d664aec52c4e1cc7a42785c0e03b463164d8d4",
+  "agentArchitectureRef": "artifacts/agents/execution-preparation/architectures/focused-preparation-generator-validator.json",
+  "agentSwarmDigest": null,
+  "agentSwarmRef": null,
+  "authorityEffect": "none",
+  "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+  "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+  "kind": "role-context-projection-decision/v1",
+  "mode": "single_task",
+  "operationPlan": {
+    "aggregateReplayRoleId": "preparation-validator",
+    "deliveryEdges": [
+      {
+        "from": "preparation-curator",
+        "handoffContract": "frozen-loop-output-with-requirement-revision",
+        "to": "preparation-validator"
+      }
+    ],
+    "executionWaves": [["preparation-curator", "preparation-validator"]],
+    "feedbackEdges": [
+      {
+        "from": "preparation-curator",
+        "handoffContract": "frozen-loop-output-with-requirement-revision",
+        "to": "preparation-validator"
+      }
+    ],
+    "omittedEdges": [],
+    "scheduling": "dependency_waves",
+    "turns": [
+      {
+        "requiredActorEmissions": [
+          {
+            "eventFamily": "contribution_packet",
+            "state": "completed",
+            "toRoleId": "preparation-validator"
+          },
+          {
+            "eventFamily": "handoff_packet",
+            "state": "proposed",
+            "toRoleId": "preparation-validator"
+          }
+        ],
+        "roleId": "preparation-curator",
+        "runtimeObservationFamilies": ["assignment_acknowledgement", "resource_settlement"],
+        "turnId": "turn:0:preparation-curator:operate",
+        "turnKind": "operate",
+        "turnOrdinal": 0,
+        "waveOrdinal": 0
+      },
+      {
+        "requiredActorEmissions": [
+          {
+            "eventFamily": "contribution_packet",
+            "state": "completed",
+            "toRoleId": null
+          },
+          {
+            "eventFamily": "validation_packet",
+            "state": "completed",
+            "toRoleId": null
+          }
+        ],
+        "roleId": "preparation-validator",
+        "runtimeObservationFamilies": ["assignment_acknowledgement", "resource_settlement"],
+        "turnId": "turn:1:preparation-validator:operate",
+        "turnKind": "operate",
+        "turnOrdinal": 1,
+        "waveOrdinal": 0
+      },
+      {
+        "requiredActorEmissions": [
+          {
+            "eventFamily": "aggregation",
+            "state": "completed",
+            "toRoleId": null
+          }
+        ],
+        "roleId": "preparation-validator",
+        "runtimeObservationFamilies": ["assignment_acknowledgement", "resource_settlement"],
+        "turnId": "turn:2:preparation-validator:aggregate",
+        "turnKind": "aggregate",
+        "turnOrdinal": 2,
+        "waveOrdinal": 1
+      }
+    ]
+  },
+  "reasonCodes": [],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-3:NovitaAI/tb21-code-debug:r13:execute-harbor-subject",
+  "roleContexts": [
+    {
+      "architecture": {
+        "aggregation": {
+          "dissentPolicy": "preserve_unresolved_and_rejected_findings",
+          "ownerRoleId": "preparation-validator",
+          "rule": "classify_every_criterion_without_repairing_the_candidate",
+          "unresolvedPolicy": "hold_the_loop_output"
+        },
+        "digest": "sha256:a26d7c3ef0658cdb86cd2cd542d664aec52c4e1cc7a42785c0e03b463164d8d4",
+        "id": "agent-architecture:execution-preparation:focused-generator-validator",
+        "inboundEdges": [],
+        "independence": {
+          "acceptanceOwnerExternal": true,
+          "authorRoleIds": ["preparation-curator"],
+          "validatorRoleIds": ["preparation-validator"]
+        },
+        "nestedPatterns": ["generator_validator"],
+        "nonAuthority": [
+          "runtime_assignment",
+          "tool_grant",
+          "prompt_materialization",
+          "acceptance",
+          "activation",
+          "settlement_authority"
+        ],
+        "outboundEdges": [
+          {
+            "from": "preparation-curator",
+            "handoffContract": "frozen-loop-output-with-requirement-revision",
+            "to": "preparation-validator"
+          }
+        ],
+        "primaryPattern": "pipeline",
+        "purpose": "Produce and independently validate one bounded execution-preparation output without combining authoring, validation, or acceptance.",
+        "ref": "artifacts/agents/execution-preparation/architectures/focused-preparation-generator-validator.json",
+        "selectedRoleBinding": {
+          "activation": "required",
+          "id": "preparation-curator",
+          "outputContract": "loop-owned-output-port-candidate",
+          "parentRoleId": null,
+          "profileRef": "artifacts/agents/execution-preparation/agents/execution-preparation-curator.yaml",
+          "responsibilityClass": "builder",
+          "validatorRoleId": "preparation-validator"
+        },
+        "selection": {
+          "disqualifiers": [
+            "unbounded_iteration",
+            "validator_must_author_repair",
+            "effect_authority_required"
+          ],
+          "requiredSignals": ["one_bounded_preparation_output", "independent_validation_available"]
+        },
+        "settlement": {
+          "incompletePolicy": "hold_without_workflow_successor_activation",
+          "perRoleDispositionRequired": true,
+          "requiredStates": ["settled", "completed", "rejected", "held", "not_applicable"]
+        }
+      },
+      "communication": {
+        "activeRoleIds": ["preparation-curator", "preparation-validator"],
+        "aggregationOwnerRoleId": "preparation-validator",
+        "allowedOutboundContracts": ["frozen-loop-output-with-requirement-revision"],
+        "inboundRoleIds": [],
+        "omittedRoleIds": [],
+        "outboundRoleIds": ["preparation-validator"],
+        "requiredInboundContracts": []
+      },
+      "contextDigest": "sha256:23cbb081e5886ab1acd94fbf40fc3365288290058b2b93e32248a16d12ecfdb6",
+      "coordination": {
+        "acknowledgement": "successor acknowledges packet revision and responsibility before work",
+        "agreementMechanism": "not_required",
+        "closureConditions": [
+          "terminal owner emits a disposition",
+          "every activated stage acknowledges settlement"
+        ],
+        "communicationTopology": "ordered_handoff",
+        "deliverySemantics": "exactly addressed immutable packet per declared successor",
+        "digest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+        "dissentPolicy": "retain dissent with its source stage and route it to the terminal owner",
+        "id": "architecture-pattern:coordination-ordered-handoff",
+        "purpose": "Coordinate a pipeline through acknowledged one-to-one ownership handoffs and exact predecessor revisions.",
+        "ref": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+        "settlementRequirements": [
+          "per-stage terminal state",
+          "delivery reconciliation",
+          "retained-resource declaration"
+        ]
+      },
+      "profileDigest": "sha256:53ce44e01f526327e36d6c78239b8dc0c2ceefe4b42200b98bca53f159bec88b",
+      "profileRef": "artifacts/agents/execution-preparation/agents/execution-preparation-curator.yaml",
+      "responsibilityClass": "builder",
+      "roleId": "preparation-curator",
+      "swarm": null
+    },
+    {
+      "architecture": {
+        "aggregation": {
+          "dissentPolicy": "preserve_unresolved_and_rejected_findings",
+          "ownerRoleId": "preparation-validator",
+          "rule": "classify_every_criterion_without_repairing_the_candidate",
+          "unresolvedPolicy": "hold_the_loop_output"
+        },
+        "digest": "sha256:a26d7c3ef0658cdb86cd2cd542d664aec52c4e1cc7a42785c0e03b463164d8d4",
+        "id": "agent-architecture:execution-preparation:focused-generator-validator",
+        "inboundEdges": [
+          {
+            "from": "preparation-curator",
+            "handoffContract": "frozen-loop-output-with-requirement-revision",
+            "to": "preparation-validator"
+          }
+        ],
+        "independence": {
+          "acceptanceOwnerExternal": true,
+          "authorRoleIds": ["preparation-curator"],
+          "validatorRoleIds": ["preparation-validator"]
+        },
+        "nestedPatterns": ["generator_validator"],
+        "nonAuthority": [
+          "runtime_assignment",
+          "tool_grant",
+          "prompt_materialization",
+          "acceptance",
+          "activation",
+          "settlement_authority"
+        ],
+        "outboundEdges": [],
+        "primaryPattern": "pipeline",
+        "purpose": "Produce and independently validate one bounded execution-preparation output without combining authoring, validation, or acceptance.",
+        "ref": "artifacts/agents/execution-preparation/architectures/focused-preparation-generator-validator.json",
+        "selectedRoleBinding": {
+          "activation": "required",
+          "id": "preparation-validator",
+          "outputContract": "loop-owned-output-port-validation",
+          "parentRoleId": null,
+          "profileRef": "artifacts/agents/execution-preparation/agents/execution-preparation-validator.yaml",
+          "responsibilityClass": "validator",
+          "validatorRoleId": null
+        },
+        "selection": {
+          "disqualifiers": [
+            "unbounded_iteration",
+            "validator_must_author_repair",
+            "effect_authority_required"
+          ],
+          "requiredSignals": ["one_bounded_preparation_output", "independent_validation_available"]
+        },
+        "settlement": {
+          "incompletePolicy": "hold_without_workflow_successor_activation",
+          "perRoleDispositionRequired": true,
+          "requiredStates": ["settled", "completed", "rejected", "held", "not_applicable"]
+        }
+      },
+      "communication": {
+        "activeRoleIds": ["preparation-curator", "preparation-validator"],
+        "aggregationOwnerRoleId": "preparation-validator",
+        "allowedOutboundContracts": [],
+        "inboundRoleIds": ["preparation-curator"],
+        "omittedRoleIds": [],
+        "outboundRoleIds": [],
+        "requiredInboundContracts": ["frozen-loop-output-with-requirement-revision"]
+      },
+      "contextDigest": "sha256:cfdbae260380a126c64cd3835343ca6b6e15f6eb430f4ee899079a5cf007a082",
+      "coordination": {
+        "acknowledgement": "successor acknowledges packet revision and responsibility before work",
+        "agreementMechanism": "not_required",
+        "closureConditions": [
+          "terminal owner emits a disposition",
+          "every activated stage acknowledges settlement"
+        ],
+        "communicationTopology": "ordered_handoff",
+        "deliverySemantics": "exactly addressed immutable packet per declared successor",
+        "digest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+        "dissentPolicy": "retain dissent with its source stage and route it to the terminal owner",
+        "id": "architecture-pattern:coordination-ordered-handoff",
+        "purpose": "Coordinate a pipeline through acknowledged one-to-one ownership handoffs and exact predecessor revisions.",
+        "ref": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+        "settlementRequirements": [
+          "per-stage terminal state",
+          "delivery reconciliation",
+          "retained-resource declaration"
+        ]
+      },
+      "profileDigest": "sha256:d34743e14a012799b4e7177a66008319e377820d9b536d9cd6b91e8e2fad14b9",
+      "profileRef": "artifacts/agents/execution-preparation/agents/execution-preparation-validator.yaml",
+      "responsibilityClass": "validator",
+      "roleId": "preparation-validator",
+      "swarm": null
+    }
+  ],
+  "status": "ready",
+  "workflowPatternId": "pipeline"
+}

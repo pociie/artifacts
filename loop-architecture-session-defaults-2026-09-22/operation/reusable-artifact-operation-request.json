@@ -1,0 +1,139 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:loop-architecture-session-defaults",
+  "requestRevision": "revision:v1",
+  "requestRelation": "refine_constraints",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/loop-architecture-session-defaults-2026-09-22/operation/route-decision.json",
+    "decisionDigest": "sha256:947dc6194ec47dcadb3c6c00904dbcf3f7e2e2ce292a7448701e4029d5d7ecc3",
+    "effectiveMode": "orchestration"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:workspace-agent-session-operations-steward",
+    "agencyRef": "artifacts/agent-loop/management/artifact-plugin-lifecycle/loop.yaml",
+    "agencyDigest": "sha256:e356e02f748759fca13ce52886b6f34388572d4f1827fafae0645ed4aab52f71",
+    "responsibilityClass": "orchestrator",
+    "outcomeContract": "outcome:loop-architecture-session-bootstrap-and-observation",
+    "outputContract": "output:bounded-plugin-improvement-memory-binding-validation-and-observer-report",
+    "decisionScopes": [
+      "workspace-agent-plugin-session-bootstrap",
+      "objective-local-memory-binding",
+      "read-only-runtime-observation"
+    ],
+    "nonAuthority": [
+      "adjacent-plugin-migration",
+      "source-integration",
+      "approval-or-acceptance",
+      "new-component-or-agent-role"
+    ]
+  },
+  "objective": "Improve the existing Workspace Agent Operations Plugin so every materially controlled new or resumed agent session and spawned worker receives a Loop Architecture bootstrap, an objective-local memory namespace, and an independently observable lifecycle without widening runtime authority.",
+  "successEvidenceRefs": [
+    "evidence:session-bootstrap-contract-explicit",
+    "evidence:per-assignment-memory-binding-explicit",
+    "evidence:observer-lane-running-and-read-only",
+    "evidence:plugin-checker-and-focused-tests-pass"
+  ],
+  "protectedConstraintRefs": [
+    "constraint:six-mode-routing-before-agent-architecture",
+    "constraint:native-ownership-effect-and-acceptance-remain-separate",
+    "constraint:no-prompts-transcripts-secrets-or-runtime-handles-in-source",
+    "constraint:observer-does-not-mutate-source-or-infer-completion"
+  ],
+  "nonGoalRefs": [
+    "non-goal:edit-AGENTS-md",
+    "non-goal:create-new-loop-architecture-component",
+    "non-goal:activate-implicit-team-routing",
+    "non-goal:change-provider-product-semantics"
+  ],
+  "lifecycleIntent": "improve_existing",
+  "capabilities": [
+    "workspace-agent session operation",
+    "Orca orchestration execution",
+    "working-memory binding",
+    "runtime observation"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "428a42e075cb9d5d66f87be50bf6b28b0ad29c1b597d88612f213a7634935779",
+  "allowedBaseClasses": [
+    "plugin",
+    "skill",
+    "contract_checker"
+  ],
+  "allowedScopes": [
+    "framework"
+  ],
+  "requiredFacts": [
+    "owner",
+    "scope",
+    "consumer",
+    "validation"
+  ],
+  "exactArtifactIds": [
+    "plugin:tooling/workspace-agent-operations"
+  ],
+  "relationshipDepth": 1,
+  "maxCandidates": 6,
+  "contextBudget": {
+    "maxSourceMembers": 8,
+    "maxConsumerRefs": 6,
+    "maxValidationRefs": 6
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "Exact settled owner of the pre-existing untracked Plugin candidate paths."
+    ],
+    "allowedRelationshipTypes": [
+      "defines",
+      "consumes",
+      "depends_on",
+      "validates"
+    ],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "hold"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "consumer",
+      "effect",
+      "route_or_topology",
+      "lifecycle",
+      "protected_constraint"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "evidence:bounded-source-diff-or-documented-hold",
+      "evidence:observer-delivery-reconciled",
+      "evidence:resources-released-or-explicitly-retained"
+    ],
+    "validationRefs": [
+      "validation:reusable-artifact-operation-request-v2",
+      "validation:workspace-agent-plugin-checker",
+      "validation:workspace-agent-plugin-focused-tests",
+      "validation:working-memory-binding"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "loop-budget:bounded-plugin-improvement:v1",
+  "dataClassification": "internal",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": false,
+  "constructionAllowed": false,
+  "residualGapProven": true,
+  "requestDigest": "3adf67b45c5d3dd5c26e0688689fbc512f553423a0a8b605fde2ff5cce306b4c"
+}

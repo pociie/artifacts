@@ -1,0 +1,101 @@
+{
+  "kind": "author-side-editorial-visual-validation-candidate/v2",
+  "validationId": "validation:claim-led-book-pdf:author-side",
+  "revision": "book-pdf-editorial-validation/2",
+  "status": "candidate_not_independent",
+  "authorityEffect": "none",
+  "independent": false,
+  "subject": {
+    "pdfRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/prototype-v2/claim-led-book-pdf-prototype.pdf",
+    "pdfDigest": "sha256:219de3a0f867568106aab29c50f290ecd98c9d40b06f1d8888fc1adc8bc96e8d",
+    "rubricRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-v1.json",
+    "handoffRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/recipient-handoff-candidate-v2.json",
+    "combinedEvidenceDigest": "sha256:a53303171ade921d45e663dff2b1958f5cc0cbf5b136fba55a2e1d08010e65ca"
+  },
+  "automatedChecks": [
+    {
+      "id": "page-count",
+      "result": "pass",
+      "evidence": "PDFKit reported 15 pages."
+    },
+    {
+      "id": "selectable-text",
+      "result": "pass",
+      "evidence": "PDFKit extracted 19,466 characters and every page contained text."
+    },
+    {
+      "id": "page-overflow",
+      "result": "pass",
+      "evidence": "Browser geometry reported zero horizontal and vertical overflow across all 15 A4 page elements."
+    },
+    {
+      "id": "preview-set",
+      "result": "pass",
+      "evidence": "Fifteen page previews and one contact sheet were rendered from the same frozen HTML."
+    }
+  ],
+  "rubricApplication": [
+    {
+      "criterion": "reader-purpose",
+      "result": "author_side_pass",
+      "evidence": "The report follows one user request and states a reader question for each chapter."
+    },
+    {
+      "criterion": "high-level-context",
+      "result": "author_side_pass",
+      "evidence": "Chapters introduce interaction semantics, state ownership, resumable computation, effect governance and durable recovery before project-specific mechanisms."
+    },
+    {
+      "criterion": "keyword-decoupling",
+      "result": "author_side_pass_with_limitations",
+      "evidence": "Each chapter states a system principle independent of framework names; an independent reader test is still pending."
+    },
+    {
+      "criterion": "causal-continuity",
+      "result": "author_side_pass",
+      "evidence": "Every Monograph chapter ends with the value or question handed to the next stage."
+    },
+    {
+      "criterion": "worked-trace",
+      "result": "author_side_pass",
+      "evidence": "Enter routing, generator progression, tool failures and end-to-end recovery have concrete traces."
+    },
+    {
+      "criterion": "evidence-strength",
+      "result": "author_side_pass_with_limitations",
+      "evidence": "Observed, background and inference sections are separated; factual completeness requires independent review."
+    },
+    {
+      "criterion": "design-function",
+      "result": "author_side_pass",
+      "evidence": "Monograph pages advance the argument; Notebook pages review claims, counterexamples and limitations."
+    },
+    {
+      "criterion": "anti-card",
+      "result": "author_side_pass",
+      "evidence": "Continuous prose is primary and diagrams are introduced and interpreted by text."
+    },
+    {
+      "criterion": "transfer",
+      "result": "author_side_pass_with_limitations",
+      "evidence": "The conclusion expresses general boundaries; transfer comprehension requires an independent reader."
+    },
+    {
+      "criterion": "render-integrity",
+      "result": "author_side_pass_with_limitations",
+      "evidence": "Digital page/text/overflow checks pass; physical print, grayscale and accessibility checks remain pending."
+    }
+  ],
+  "limitations": [
+    "The author performed this review and cannot provide independent validation.",
+    "Video transcripts remain participant-supplied starting lenses rather than independently verified sources.",
+    "The analyzed project remains a third-party reconstruction snapshot with missing-module and build-parity limits.",
+    "Physical print, grayscale, screen-reader and independent comprehension tests are pending."
+  ],
+  "decision": "candidate_ready_for_independent_fact_visual_and_reader_review",
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}
+

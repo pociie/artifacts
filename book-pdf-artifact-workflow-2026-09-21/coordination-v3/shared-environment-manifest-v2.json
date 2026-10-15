@@ -1,0 +1,113 @@
+{
+  "kind": "sanitized-shared-environment-manifest/v2",
+  "manifestId": "manifest:book-pdf-analysis-environment:v2",
+  "status": "current_candidate_snapshot_with_failures_and_holds",
+  "supersedes": [
+    {
+      "ref": "coordination-v3/shared-environment-manifest-v1.json",
+      "sha256": "571ec6f2a27d8ef5e638c6542d00572ca6b0ea6d08541597fc6048fd6d2f5a1d",
+      "reason": "The visual owner manifest and independent context-enrichment validation report arrived."
+    },
+    {
+      "ref": "coordination-v3/artifact-state-manifest.json",
+      "sha256": "aa3a1338e8ee07cfc68248dc43e9d03c6b58b35796b4c3abb427e7d4f541e7dd",
+      "reason": "Its visual digest snapshot predates the current owner handoff and it does not represent the context-enrichment dependency and validation edges."
+    }
+  ],
+  "binding": {
+    "ref": "coordination-v3/shared-environment-binding-v2.json",
+    "sha256": "4612beeb8f60e65dc9865c62e901922a37ab8be412eb0593da439529435275c1",
+    "state": "informational_candidate_with_validation_failure_and_holds"
+  },
+  "artifacts": [
+    {
+      "roleRef": "agent-role:source-analysis-coordinator",
+      "ref": "coordination-v3/project-analysis-v1/artifact-manifest.json",
+      "sha256": "49400762416b9570b9b9d5db07bbb75cdd19622e2c899dd189e030b3ede17742",
+      "state": "candidate_complete_pending_independent_acceptance"
+    },
+    {
+      "roleRef": "agent-role:visual-pdf-spec-builder",
+      "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/visual-pagination-continuity-contribution-manifest-v1.json",
+      "sha256": "68267f5d22c98e042c726e6366415b2895979aa2433fea301a06f35349cd7000",
+      "state": "candidate_pending_coordinator_fan_in_and_independent_visual_validation"
+    },
+    {
+      "roleRef": "agent-role:project-context-enrichment-producer",
+      "ref": ".collab/artifacts/project-context-enrichment-validation-2026-09-21/run-v1/source-freeze-manifest.json",
+      "sha256": "21273c5d9cb50e43482a84476114909df0d0c0f8f785f12c03a2536855311cb9",
+      "state": "frozen_unaccepted_candidate"
+    },
+    {
+      "roleRef": "agent-role:independent-project-context-enrichment-validator",
+      "ref": ".collab/artifacts/project-context-enrichment-validation-2026-09-21/run-v1/contributions/independent-validator-report.json",
+      "sha256": "43a1eb6a24497c31ad2e81c1e91991e47f71aef24839e6570e1f660458f460b4",
+      "state": "contribution_received_overall_fail_with_fitness_hold"
+    },
+    {
+      "roleRef": "agent-role:independent-project-context-enrichment-validator",
+      "ref": ".collab/artifacts/project-context-enrichment-validation-2026-09-21/run-v1/validation-completion-receipt.json",
+      "sha256": "6c1b5974d3e13dae17495e25ce34e23eebe3de695a8f7070e33dada00de6b0ca",
+      "state": "worker_done_acknowledged_resource_released"
+    },
+    {
+      "roleRef": "agent-role:session-context-integrator",
+      "ref": "coordination-v3/session-context-contribution-packet.json",
+      "sha256": "cffa117a0046a7c672ba80dbdf1489e9b5220dfabe9b58586e19cf9d49cba102",
+      "state": "read_only_context_contribution_and_message_only_mismatch_report"
+    }
+  ],
+  "findings": [
+    {
+      "id": "project-context-reference-minimality",
+      "state": "fail",
+      "summary": "The frozen prompt contract represents an uncreated task-purpose projection, evaluation baseline, and evaluation dataset as present without creation evidence or a not-applicable, not-required, not-activated, or unresolved disposition."
+    },
+    {
+      "id": "repository-fitness",
+      "state": "hold",
+      "summary": "Targeted candidate checks pass, but repository fitness exits 1 because of unrelated documentation defects and unresolved mixed generated-state drift; downstream chained stages did not run."
+    },
+    {
+      "id": "visual-pagination-continuity",
+      "state": "candidate_hold",
+      "summary": "The owner manifest and all ten referenced digests are present, but an admitted successor PDF render and independent artifact or reader validation are absent."
+    },
+    {
+      "id": "source-analysis",
+      "state": "candidate_hold",
+      "summary": "The source-bound analysis and its coordinator checks are complete; independent acceptance is absent."
+    }
+  ],
+  "pending": [
+    {
+      "artifactOrDecision": "separately authorized project-context candidate repair and revalidation",
+      "state": "not_started",
+      "reason": "The independent contribution is fail with hold; this Run authorized validation only."
+    },
+    {
+      "artifactOrDecision": "admitted successor PDF render and independent artifact or reader validation",
+      "state": "not_started",
+      "reason": "The visual contribution is author-side candidate evidence only."
+    },
+    {
+      "artifactOrDecision": "independent source-analysis review and owner acceptance",
+      "state": "not_started",
+      "reason": "Coordinator synthesis and validation do not constitute independent acceptance."
+    }
+  ],
+  "mutableRuntimeStateLocation": ".collab/memory",
+  "runtimeHandlesIncluded": false,
+  "invalidation": [
+    "any referenced digest changes",
+    "a pending artifact or decision materializes",
+    "a role, owner, consumer, audience, project revision, selected lens, write boundary, or validation result changes"
+  ],
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "promotion": "not_performed",
+  "integration": "not_performed",
+  "settlement": "not_performed",
+  "authorityEffect": "none"
+}

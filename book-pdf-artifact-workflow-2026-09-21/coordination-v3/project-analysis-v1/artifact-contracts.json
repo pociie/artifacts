@@ -1,0 +1,94 @@
+{
+  "kind": "dynamic-analysis-artifact-contracts/v1",
+  "contractId": "artifact-contracts:claude-code-source-project-analysis:v1",
+  "commonEnvelope": {
+    "required": [
+      "kind",
+      "sourceRevisionOrParentRef",
+      "owner",
+      "lifecycleState",
+      "evidenceRefs",
+      "limitations",
+      "invalidatedBy",
+      "authorityEffect"
+    ],
+    "claimClasses": [
+      "source-observed",
+      "repository-authored",
+      "bounded-inference",
+      "unknown"
+    ],
+    "lifecycleStates": [
+      "pending",
+      "observed",
+      "corroborated",
+      "candidate",
+      "rejected",
+      "superseded"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "source-state.json",
+      "kind": "source-state-snapshot/v1",
+      "owner": "agent-role:source-analysis-coordinator",
+      "lifecycleState": "observed"
+    },
+    {
+      "path": "prior-analysis-index.json",
+      "kind": "prior-analysis-index/v1",
+      "owner": "agent-role:source-analysis-coordinator",
+      "lifecycleState": "observed"
+    },
+    {
+      "path": "module-topology.json",
+      "kind": "source-module-topology-analysis/v1",
+      "owner": "agent-role:source-analysis-coordinator",
+      "lifecycleState": "corroborated"
+    },
+    {
+      "path": "algorithm-catalog.json",
+      "kind": "algorithm-study-catalog/v1",
+      "owner": "agent-role:source-analysis-coordinator",
+      "lifecycleState": "candidate"
+    },
+    {
+      "path": "semantic-module-candidates.json",
+      "kind": "semantic-module-candidate-set/v1",
+      "owner": "agent-role:source-analysis-coordinator",
+      "lifecycleState": "candidate"
+    },
+    {
+      "path": "project-operating-model.md",
+      "kind": "project-operation-assessment/v1",
+      "owner": "agent-role:source-analysis-coordinator",
+      "lifecycleState": "candidate"
+    },
+    {
+      "path": "continuation-roadmap.md",
+      "kind": "report-only-continuation-roadmap/v1",
+      "owner": "agent-role:source-analysis-coordinator",
+      "lifecycleState": "candidate"
+    },
+    {
+      "path": "PROJECT-ANALYSIS.md",
+      "kind": "source-bound-project-analysis/v1",
+      "owner": "agent-role:source-analysis-coordinator",
+      "lifecycleState": "candidate"
+    },
+    {
+      "path": "validation-report.json",
+      "kind": "analysis-validation-report/v1",
+      "owner": "agent-role:source-analysis-coordinator",
+      "lifecycleState": "candidate"
+    },
+    {
+      "path": "artifact-manifest.json",
+      "kind": "analysis-artifact-manifest/v1",
+      "owner": "agent-role:source-analysis-coordinator",
+      "lifecycleState": "observed"
+    }
+  ],
+  "changeRule": "Material source, metric, claim, or boundary changes create a successor record and supersession link; they do not silently rewrite accepted provenance.",
+  "authorityEffect": "none"
+}

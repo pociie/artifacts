@@ -1,0 +1,86 @@
+{
+  "activeClaims": [],
+  "authorityEffect": "none",
+  "digest": "sha256:d2f1c0ecc3e8a0d9242b9dc620ac4ac158a88c66391fe8013431adbaa4958e8f",
+  "eventCursor": 20,
+  "eventHeadSha256": "sha256:7ae0628875b8913541da56f6597032121c0db943aea1c50d755201256a8434a5",
+  "kind": "atomic-lane-claim-admission-input/v3",
+  "maxConcurrency": 1,
+  "proposals": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 20,
+      "expectedEventHeadSha256": "7ae0628875b8913541da56f6597032121c0db943aea1c50d755201256a8434a5",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:8c462fe031f0ea558b45dc866e4de885beabeec44c940175edc7780cb1256321"
+      },
+      "identityDigest": "sha256:d39b03b25efba06a6749a3e83eac3d70ca7619092c69b9611e1dc72068f5b96a",
+      "itemId": "openthoughts/tasktrove-exp-rpt-pymethods2test-large",
+      "laneId": "population-shard-4",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-4:openthoughts/tasktrove-exp-rpt-pymethods2test-large:r13",
+      "sequence": 21,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-4:r13-controller"
+    }
+  ],
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-4",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13-next/item-21-openthoughts-tasktrove-exp-rpt-pymethods2test-large/queue-reconciliation-before-claim.r13.json",
+  "resolverDecision": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "openthoughts/tasktrove-exp-rpt-pymethods2test-large",
+        "laneId": "population-shard-4",
+        "proposalId": "proposal:population-shard-4:openthoughts/tasktrove-exp-rpt-pymethods2test-large:r13",
+        "workerId": "worker:harbor-population-shard-4:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 20,
+      "eventHeadSha256": "7ae0628875b8913541da56f6597032121c0db943aea1c50d755201256a8434a5",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 20,
+    "eventHeadSha256": "7ae0628875b8913541da56f6597032121c0db943aea1c50d755201256a8434a5",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-4",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "resolverInputDigest": "sha256:3f8e33a8e4a34c06c7af0ea089479eaf12c7440230ef0d411f6c1c36e60d039c",
+  "schemaVersion": 3,
+  "terminalReceiptRefs": [
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r9/terminal-receipt.harbor-hello-world.r5.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r9/terminal-receipt.abundant-swe-gen-go.r9.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r12/terminal-receipt.abundant-swe-gen-java.r12.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13/terminal-receipt.adameubanks-rating-generation-consistency.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-04-benchflow-skillsbench/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-05-bigcode-bigcodebench-hard-complete/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-06-camel-ai-seta-env/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-07-featurebench-featurebench-lite-modal/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-08-frontis-agent-obs-core/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-09-google-deepmind-terminal-bench-science/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-10-gorilla-bfcl/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-12-lamina-product-bench/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-13-lica-world-gdb/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-14-nl2repobench-nl2repobench/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-15-openai-swe-lancer-diamond-all/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-16-openthoughts-tasktrove-exp-flat25-speed-bonus-v2/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-17-openthoughts-tasktrove-exp-flat25-stackoverflow-v2/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-18-openthoughts-tasktrove-exp-rpt-crosscodeeval-java/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-19-openthoughts-tasktrove-exp-rpt-exercism-python-v2/terminal-item-receipt.r13.json",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-20-openthoughts-tasktrove-exp-rpt-methods2test-large-v3/terminal-item-receipt.r13.json"
+  ]
+}

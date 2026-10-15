@@ -1,0 +1,67 @@
+{
+  "kind": "job-application-pdf-output-contract-validation/v1",
+  "observed_at": "2026-09-14",
+  "subject": "artifacts/agent-loop/document/job-application-report-production",
+  "profile": "artifacts/agent-loop/document/job-application-report-production/profiles/five-set-pdf-report.profile.json",
+  "contract": {
+    "candidate_count": 5,
+    "report_format": "pdf",
+    "final_user_output_count": 1,
+    "final_user_output_role": "primary_report",
+    "final_user_output_media_type": "application/pdf",
+    "final_user_output_extension": ".pdf",
+    "completion_handoff": "existing_pdf_direct_link_required",
+    "html_disposition": "runtime_render_source_only"
+  },
+  "historical_finebridge_replay": {
+    "status": "rejected_as_expected",
+    "observed_request": {
+      "candidate_count": 2,
+      "report_format": "html",
+      "profile_ref": null
+    },
+    "material_findings": [
+      "request:profile-ref:required",
+      "request:profile:candidate-count",
+      "request:profile:report-format",
+      "result:profile:candidate-count",
+      "result:profile:report-format",
+      "result:profile:missing-artifact:primary_report:application/pdf:final_user_output",
+      "result:profile:final-report-count:0",
+      "result:profile:primary-report-not-pdf:artifact-primary-report"
+    ]
+  },
+  "checks": [
+    {
+      "id": "behavior-tests",
+      "status": "pass",
+      "evidence": "28 tests passed, including the executable five-set PDF example, missing-profile, two-set, HTML-primary, wrong final media type, wrong extension, renderer non-PDF path, and renderer missing-profile cases."
+    },
+    {
+      "id": "loop-package-strict",
+      "status": "pass",
+      "evidence": "0 issues and 0 warnings."
+    },
+    {
+      "id": "skill-validation",
+      "status": "pass",
+      "evidence": "skill-creator quick validation passed."
+    },
+    {
+      "id": "operation-request",
+      "status": "pass",
+      "evidence": "Reusable artifact operation request validated."
+    },
+    {
+      "id": "work-execution-binding",
+      "status": "pass",
+      "evidence": "The v1.5 work execution binding passed its integrity check and was accepted as report-only evidence with no authority effect."
+    }
+  ],
+  "limitations": [
+    "The historical Finebridge HTML report remains unchanged and is evidence of the rejected prior execution shape.",
+    "HTML may still exist inside a runtime directory because the PDF renderer consumes HTML; it is not a completed report artifact.",
+    "A separately requested non-PDF report would require a different reusable artifact rather than weakening this profile."
+  ],
+  "authority_effect": "none"
+}

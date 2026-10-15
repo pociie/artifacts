@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "bounded-lane-plan-input/v1",
+  "objectiveRef": "objective:cafe-study-evidence-report-2026-09-04",
+  "phase": {
+    "ref": "phase:cafe-evidence-and-report",
+    "revision": 2,
+    "digest": "2906632c70914e34b50f99b6e5df956c51a4a2edd85daee24e6d7ed18cce1ffa"
+  },
+  "observedAt": "2026-09-04T13:51:14+09:00",
+  "components": [
+    {
+      "id": "rubric-and-classification",
+      "ownerRef": "agent:cafe-evaluation-specialist",
+      "mode": "read_only",
+      "sourcePaths": [
+        "artifacts/agent-loop/assessment/engineering-evaluation",
+        "artifacts/knowledge/architecture",
+        "external:web:cafe-study-evaluation-sources"
+      ],
+      "semanticDomains": ["cafe-rubric-and-independent-image-classification"],
+      "mutableResources": [],
+      "outputContract": "frozen-rubric-and-independent-evaluation",
+      "validationRefs": ["validation:rubric-coverage-arithmetic-evidence"],
+      "dependsOn": [],
+      "sharedContractRefs": ["contract:cafe-report-scope-v1"],
+      "estimatedContextTokens": 6000
+    },
+    {
+      "id": "gangdong-evidence-collection",
+      "ownerRef": "agent:gangdong-cafe-evidence-collector",
+      "mode": "read_only",
+      "sourcePaths": ["external:web:gangdong-cafes"],
+      "semanticDomains": ["gangdong-cafe-review-and-image-evidence"],
+      "mutableResources": [],
+      "outputContract": "raw-evidence-manifest-without-scores",
+      "validationRefs": ["validation:source-url-image-url-venue-identity"],
+      "dependsOn": [],
+      "sharedContractRefs": ["contract:cafe-report-scope-v1"],
+      "estimatedContextTokens": 6000
+    },
+    {
+      "id": "jungnang-evidence-collection",
+      "ownerRef": "agent:jungnang-cafe-evidence-collector",
+      "mode": "read_only",
+      "sourcePaths": ["external:web:jungnang-cafes"],
+      "semanticDomains": ["jungnang-cafe-review-and-image-evidence"],
+      "mutableResources": [],
+      "outputContract": "raw-evidence-manifest-without-scores",
+      "validationRefs": ["validation:source-url-image-url-venue-identity"],
+      "dependsOn": [],
+      "sharedContractRefs": ["contract:cafe-report-scope-v1"],
+      "estimatedContextTokens": 6000
+    }
+  ],
+  "sharedContracts": [
+    {
+      "ref": "contract:cafe-report-scope-v1",
+      "state": "frozen",
+      "ownerRef": "agent:root-coordinator",
+      "decisionRef": "decision:10-cafes-45-to-55-images-20-to-30-minutes"
+    }
+  ],
+  "capacity": {
+    "workerSlots": 3,
+    "writerSlots": 1,
+    "reviewSlots": 1,
+    "integrationSlots": 1,
+    "maxContextTokensPerWave": 20000,
+    "maxTotalContextTokens": 30000,
+    "maxLanes": 5,
+    "maxProduceValidateCycles": 1,
+    "maxAutomaticEscalations": 0
+  },
+  "worktreePolicy": {
+    "taskRootState": "clean",
+    "acceptedBaseRef": "git:1bf67e8ca1b9806dce130796bc772c1d9a01a4e2",
+    "allowCurrentWriter": true,
+    "isolatedChildSlots": 0,
+    "sourceWritersRequireIsolationWhenConcurrent": true
+  },
+  "completionCapability": {
+    "state": "verified",
+    "receiptRef": "capability:orca-orchestration-current-session",
+    "failureFingerprint": null,
+    "repeatedFailureCount": 0,
+    "fallback": "coordinator_only"
+  },
+  "fanIn": {
+    "synthesisOwnerRef": "agent:root-coordinator",
+    "validatorOwnerRef": "agent:cafe-evaluation-specialist",
+    "validatorOutputContract": "cafe-evaluation-and-html-validation-report",
+    "integrationOwnerRef": "agent:root-coordinator",
+    "integrationOutputContract": "single-interactive-html-cafe-study-report"
+  },
+  "authorityEffect": "none"
+}

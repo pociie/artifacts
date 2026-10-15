@@ -1,0 +1,45 @@
+{
+  "kind": "isolated-job-application-operation/v1",
+  "status": "report_only",
+  "authority_effect": "none",
+  "owner": "loop:document:job-application-report-production",
+  "subject": "agent-subject:ibk-it-motivation-builder",
+  "objective": "Create five evidence-grounded, under-1,000-character Korean answers to the supplied IBK motivation prompt.",
+  "success_evidence": [
+    "five complete candidates",
+    "unicode character count at most 1000",
+    "every material project claim traces to the public portfolio or official job source"
+  ],
+  "non_goals": [
+    "submission",
+    "hiring prediction",
+    "unsupported personal claims",
+    "reuse of earlier job-application runtime artifacts"
+  ],
+  "discovery_surface": [
+    "https://linkareer.com/cover-letter/35317",
+    "https://github.com/judangs/dev-group-bank-msa",
+    "https://ibk.incruit.com/hire/viewhire.asp?projectid=128",
+    "https://job.alio.go.kr/recruitview.do?idx=304338"
+  ],
+  "validation": [
+    "character count",
+    "source-boundary review",
+    "PDF text extraction"
+  ],
+  "material_change_signals": [
+    "different prompt",
+    "different job posting",
+    "new applicant evidence"
+  ],
+  "stop_conditions": [
+    "a required claim cannot be sourced",
+    "a candidate exceeds 1000 characters"
+  ],
+  "route": {
+    "request_relation": "new_objective",
+    "effective_mode": "loop",
+    "contribution_shape": "one_owner",
+    "effect_intent": "local_mutation"
+  }
+}

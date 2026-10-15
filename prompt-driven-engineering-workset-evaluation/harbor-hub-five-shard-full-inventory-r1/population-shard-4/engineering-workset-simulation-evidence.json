@@ -1,0 +1,538 @@
+{
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "schemaVersion": 1,
+  "evidenceId": "harbor-hub-five-shard-full-inventory-r1.population-shard-4",
+  "status": "held",
+  "authorityEffect": "none",
+  "scope": {
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-r1:population-shard-4:r1",
+    "requestDigest": "sha256:8081f99a1dd1ed559623cf122afcd249103f3ba07a01e96fb10d9eee177235ca",
+    "providerClass": "harbor",
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:70e69fe6ed938230c1b46b7a2647721cc5e045b19c6657ad8ca19155445a7129",
+    "sourceDigest": "sha256:02fd6d480879a76e9bec6f0f805ca39860e08ca6522ef35429701bccfb3f6fe1",
+    "verifierDigest": "sha256:4ab4bc7ad2c84fd1f2328e84b13ce66aa819ee88b22122ceb3c349b0e653cbcc",
+    "rubricRefs": ["artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md"]
+  },
+  "workingMemory": {
+    "bindingRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/working-memory-binding.json",
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4",
+    "sessionCursor": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/operation-state.json",
+    "checkpointRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/inventory-freeze.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/operation-state.json"
+    ],
+    "retention": "until-operation-successor-or-expiry; private-lane-runtime-only",
+    "invalidation": [
+      "inventory-source-or-content-digest-changes",
+      "request-or-operation-envelope-changes",
+      "provider-adapter-or-auth-environment-changes",
+      "model-effort-or-timeout-observation-changes",
+      "namespace-cursor-or-retention-owner-changes"
+    ],
+    "digest": "sha256:f559fe8ab7f103f081c7994798ba2b0ef36ce8729f02f0dc4612e0179a541933"
+  },
+  "provider": {
+    "qualificationRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/capability-qualification.json",
+    "qualificationDigest": "sha256:47ec5cec537bd4f6430ad595f8a138a4fe8fc696011b4135e33618cc2856aee1",
+    "state": "held",
+    "limitations": [
+      "provider:credential-mechanism-unavailable",
+      "model:effective-model-unobserved",
+      "model:effective-effort-unobserved",
+      "environment:effective-timeout-unestablished",
+      "verifier:protected-verifier-unobserved",
+      "license:license-metadata-unresolved",
+      "platform:task-image-manifest-unobserved",
+      "environment:restricted-network-capability-unobserved",
+      "provider:cost-budget-unqualified"
+    ]
+  },
+  "population": {
+    "selectionRule": "frozen Hub datasets whose sha256-prefix64 modulo 5 maps to population-shard-4",
+    "taskCount": 49,
+    "taskDigests": [
+      "sha256:d433b9581efa9cddb7215b07ea429c4c45b397d48061c926dcad10b8fd46cd75",
+      "sha256:dde74a7e707f60a1978399f9af6bea1b45f345e818cbf66aa425b48418b5f650",
+      "sha256:6f425580e941b7de0d2e5a4e1a2fd0f096d570068d4d32efb2e9ac7fbceb1a83",
+      "sha256:33b59873b306eec96de41ee4d682bc0d3af91dc807f104cc76755661dc60670d",
+      "sha256:e4f745d8aa0edc814791b1dfb9e1791c184c728c7585e7a7cd8b7534e76a54f3",
+      "sha256:3146e695bfb4cd4f18c8d1c9bdfa0aa2b3ace6600ced5286ba30a958c038b90f",
+      "sha256:760c24550135cfa1d736f63099aabbe074ab591be0fafc410dbe2553e70010d3",
+      "sha256:eb6dfd0f85f9cd406a76f6e45645f5f5f311c131c80a2206a1ed813053efdc47",
+      "sha256:3d70b984696d86a5f6100a0b9d8d7f04a2c540a1344d1ab84ec1a3c8b0581273",
+      "sha256:304ebe16faf53953139b611ae2ff9cdc5d6d09e958995d99282dc02515c24b26",
+      "sha256:dde3d71950c80730c5e52f6982af3f9f44b4598953e77c38b00ff0c243687252",
+      "sha256:acab9bf2455119d57117aecff129eaa9833f52752dd644f62982b497f95abc61",
+      "sha256:ebea5038e99ef156c009b625df3c0f468338dcec08e58f26a916310b5fc055da",
+      "sha256:7f5792d93092030e074d2e0a77a97cf662b809ca5135806a130effd93bb23b64",
+      "sha256:50f73a300a729d8b3f8c0e40856c46110263eb232535cecf7885f69efb51cf52",
+      "sha256:c69c7bb4115bf3f0183793fbacf790240288991786bc872a2a56a2eff4846b3d",
+      "sha256:5f6d88bd9049112d10cbb766d05cd6da101a9355605602e7156340034c3bde94",
+      "sha256:7dd0d25f7a2ac5e0ac79476265b133d4f111044e30a5c53a5b70fcf0b21354d5",
+      "sha256:59db0b6b42937dd1f3503dd725396caa80b8a1fd887e308cbd4243607440e7f8",
+      "sha256:47e25a88d5802f43b573dbfaff77acd239e5ff6d5bd442f63bbb7215ca39584f",
+      "sha256:d39b03b25efba06a6749a3e83eac3d70ca7619092c69b9611e1dc72068f5b96a",
+      "sha256:83942d3a234be7551f05dff44825d5bf0a201d6c5d5be0efe4d83947a7d4e040",
+      "sha256:8b458039c8b602837928fc20ca960dade970acc88569156ba687ff8371be1bb9",
+      "sha256:a88dcdc4285958e2a9e66e0194b0afcd516356725d21ab23cbaf8c657659e6da",
+      "sha256:7db6de8522b9d1945db7f1c3b09e5d8a4548cae0318d45745344814021d7991a",
+      "sha256:ac9de9f692af334ed876318f969103f100f38fec958658040c69ee8eab5f0118",
+      "sha256:2526de3e8b675368ef33c64b8ae4b787e4fa767451aaf93ea4cac930697babf0",
+      "sha256:463c0de1f5b245ee5a356362979d8162caccc7964691a0152181683aecc4aed3",
+      "sha256:a66b44d5e8dbe9b48504fff309e8433ffe03279732ce54971d6eee53ace7f8e5",
+      "sha256:4637c38ea208a4076389d258ff29ace9337ed1f8953c357cc8fd4f278da4496a",
+      "sha256:254de151d67b088f31fce38d3ae05e46161abc99c308886a07e1b45aed80e0f9",
+      "sha256:3a48df3cbe7fbc2df59f0bc0b185a93763a6be2bd51738383321fb168d827c4a",
+      "sha256:141fbedd597ad516de0ca0fda4b1f8d6e016b66a5db64e913df05004d87f5b01",
+      "sha256:23ee7c0e0ac400019409731b5c64d6c7bd7e4f811f03be7993f5306e7aba70b7",
+      "sha256:4a69e15bbef4890795e58af2a8081e896ae6fdd3d339b3fbc317a26ebd28da80",
+      "sha256:4eb85ffb72fb668af5bf24da7158edba986dfde56f4cb95098335a7e190b1787",
+      "sha256:2a79bd798fe535c83655962e5ee2fa3df60efba6b5258abf4576b4e7528ab0ad",
+      "sha256:37f21225e7edea9fa1b9e03b6ba92878a743c5dbe88507d7e6e5b29b4562a354",
+      "sha256:ec54f6c0565bfff3c1cbf327679aa2eb2002a6f2b8d8172a0cf03bc47345170f",
+      "sha256:88bbbce459b3adbc1311eabf085de23c46f9ee34a385840849041122b30f6dc2",
+      "sha256:71868f994ac057b1fedf362f50b79f17e52914e5dcc3c0ad97a7601204d59917",
+      "sha256:a02fb76ec70b3447c56d7a9576d5667f2e3c7e3c5cf32d75c80d6e325d651c6a",
+      "sha256:88eec5fa90249ca60a9735fa146bc5e66f80155520f3c8ba3db2b42ddd61c835",
+      "sha256:2a96f8a945db54d9d679d98e04d699bea5f03ea6d3a68ff6484837144339fbe6",
+      "sha256:7aad4f427d14df9b9736b91bbc7c26391c6315e8d21a2753174ca37585381cde",
+      "sha256:0c5581dd450bcd4cdd47acc041f4516d31a0ab6774ffa97415823d4eab93abac",
+      "sha256:f329db55a8195408199f30b17e9e284fd5430c074520e21d6805e34df287fc7a",
+      "sha256:25006ad2e75b9ca7245eb611b1b712df47b8299947ea79926812d88628b161c5",
+      "sha256:df81e905eff6fd8cb41f85df2869ab540cb6ea64a14d497a70eefcd1d7ab50c0"
+    ],
+    "exclusions": ["no_population_exclusions; shard_4_is_the_frozen_assignment"]
+  },
+  "environment": {
+    "platformRef": "darwin-arm64-to-linux-arm64:manifest-unobserved",
+    "environmentDigest": "sha256:ba5acdbda7b35b899c026ec6a87681a95d20c1400613e222e9a49eb3d2a1c0ff",
+    "compatibilityState": "held",
+    "limitations": ["task_image_manifest_unobserved", "restricted_network_capability_unobserved"]
+  },
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "arms": [
+    {
+      "id": "artifact-blind-max",
+      "modelRef": "gpt-5.6-luna",
+      "requestedReasoningEffort": "max",
+      "allowedReasoningEfforts": ["max"],
+      "reasoningProfileRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/reasoning-effort-max",
+      "instructionProfileRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/current-six-mode-policy",
+      "artifactProjectionDigest": "sha256:aa1b5ddf2bb7376eb283467e3a88c0b24601d3ac80f28bb4c9b127bb98f840b7",
+      "admitted": false
+    }
+  ],
+  "trials": [],
+  "outcomes": {
+    "benchmarkEligibility": false,
+    "architectureInterpretationEligibility": false,
+    "eligibleTrialIds": [],
+    "disqualifications": [
+      "provider_capability_hold",
+      "no_model_tokens_admitted",
+      "no_terminal_reward_round"
+    ]
+  },
+  "failures": [
+    {
+      "id": "provider-auth-unavailable",
+      "class": "provider",
+      "code": "provider:credential-mechanism-unavailable",
+      "subjectRef": "population-shard-4:all-candidates",
+      "evidenceRefs": ["capability-qualification:credentials"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "requested-model-unobserved",
+      "class": "model",
+      "code": "model:effective-model-unobserved",
+      "subjectRef": "population-shard-4:all-candidates",
+      "evidenceRefs": ["capability-qualification:model"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "requested-effort-unobserved",
+      "class": "model",
+      "code": "model:effective-effort-unobserved",
+      "subjectRef": "population-shard-4:all-candidates",
+      "evidenceRefs": ["capability-qualification:effort"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "effective-timeout-unestablished",
+      "class": "environment",
+      "code": "environment:effective-timeout-unestablished",
+      "subjectRef": "population-shard-4:all-candidates",
+      "evidenceRefs": ["capability-qualification:timeout"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "protected-verifier-unobserved",
+      "class": "verifier",
+      "code": "verifier:protected-verifier-unobserved",
+      "subjectRef": "population-shard-4:all-candidates",
+      "evidenceRefs": ["capability-qualification:verifier"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "license-metadata-unresolved",
+      "class": "license",
+      "code": "license:license-metadata-unresolved",
+      "subjectRef": "population-shard-4:all-candidates",
+      "evidenceRefs": ["inventory-freeze:public-visibility-is-not-license"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "task-image-manifest-unobserved",
+      "class": "platform",
+      "code": "platform:task-image-manifest-unobserved",
+      "subjectRef": "population-shard-4:all-candidates",
+      "evidenceRefs": ["capability-qualification:platform"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "restricted-network-unobserved",
+      "class": "environment",
+      "code": "environment:restricted-network-capability-unobserved",
+      "subjectRef": "population-shard-4:all-candidates",
+      "evidenceRefs": ["capability-qualification:network"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "cost-budget-unqualified",
+      "class": "provider",
+      "code": "provider:cost-budget-unqualified",
+      "subjectRef": "population-shard-4:all-candidates",
+      "evidenceRefs": ["capability-qualification:cost"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    }
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4",
+    "contentEvidenceRefs": []
+  },
+  "settlement": {
+    "state": "held",
+    "resources": [
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:55bf19f4283525acb1e8e9c91b456331efe24a63de5e2460558d7567e4021525",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:a37372de6b545f5ac0ce1c01a625cb52566ad5fccecbb61dec9f7a6a135444da",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:381b8d24a456ebeb16807b6c16c93a74ab21cf967073d849737dbc3ef8ea678f",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:5050e4327784a9d0ea2d580071ec68cbd715145e0c814b6c12c445e24a95dade",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:287941a76848281ad463f7b17baf3d1bae44d9d314213a0363042b4ebb379bd4",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:6b8c6a5ed105b59f58c8269bae03ee38bbfd34b072ea46ee74b24c254d74913c",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:eb56f520d90a10c0efa96a26720e0c4ef79a2b3d42ffe523fe50c81988e6c3cc",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:da67ae78fb8dac027f24f27d413d1e14f20c7d2691124e2ea6d7c1b9f4c116f2",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:0685de530868d78e9d174f482ec0def483fce703bac059bd1561dbfb69709c4c",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:65c6a3c23e694ddfa192f1da33f6f7ffbf4892c1044b0634d32eac80ee88dcf8",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:e50cef66544ab8dacda8783fa25942ba5fe0146b69a8f1740864a0f733879e39",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:f91571e53cb9331c3bd4b497a7c64f66ed3662f05ddcb990ae77558924acf7cc",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:4b831b89aa4f72414c87023cc70668028f344f0bf0286477f69339560adc3941",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:348d64c8e7f2e5d69acfe3eec259ee9e78e77c0f0cdb51c3d79df9bcc4cf85cc",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:fbdfba924c9595003af63231cf520d9ece79a4b8f65e8db84a3bb985e8bb0e4d",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:3d83be65ac223cb6ee147e7d7e974e38ab206bfe015963adb352cdd60e9ac5b6",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:090bb101f3c840bdeacaf891529048110b20f73e01fe14f97daa949ea9f6bfda",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:56102be2d48b4d3c341638d16a5a782a55e10f9a0ec2db0e2c7d6f6190710d67",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:c2bfc349fdad00098176ce0f879e4b5df9f6dbbbdd3cd4dfc07ac6bcce4383b3",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:44506eaf3c354a74731ce011d9b54b55e6302b4b1d4c60800f73f22ef8dc7c28",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:0d621799ef17f5a9f5a25b244d6e0e11d66f0738cb3645e2b431f8ff5a8c93dc",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:0fdd0121a6e3df7117f1f7a95a7a1783b5fcae16bbb67ea19dd4ca933af3d28f",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:0efcf98bf574a33f4b71460a28d0564655491a37014542540889abad1bb4aca2",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:adac14f9fced04bbbc020b820cb0c316d691beacaeca8f5a0d647f5c55f3be0b",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:15af17154edf0071b99c6b678b0978a226dcf5d1efc76b633982a40da3e4cd39",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:d42cf4f97b7bd88212bdbec8442d942b3d0fb4740476834faa45ead30bf49e94",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:b088d823210f3ebe5cf6eab9f85a7951d92efa7130d6efa93319d3146fb15d85",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:997d4b2086636c5589f4dcf88e923387512c05404a2cf009afc2554fafb9c417",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:06e5a958d3db24230d29d421a9f4fc011f66ef53d8166f18dff0ffcd18e9b31d",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:4b9a401f9f966259589866205d49fd4dcf3eaf2cf7ca3685ed40026d7b1ce061",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:e8a17d5dc94560db515f4030344698bc8c517cf98f4cfa07af2a38258e7d60e2",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:a6d39df52ab79c1db71bf78b8176403136541295cffc6b08d6181d4fdc658ac0",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:f08940539ce6bea924c55a6157962f20d15e09fee2a983fc77689a5a32c7a02d",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:400b75cfa0046e10ed8d73217df285dced79c64ac20ee89a1baf563d56218f8a",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:94001841a3bc3a58ebe88cdc0acf44fe889be844d6fca1058af3b261c5b91e51",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:45316f7e01b77c220f5a63b187708045996f86a595018c1b334f35a2ebc83da6",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:6437cbe596607f322da44c6aabc0eddaed3325c4025c7c1aabec3fc2f7d4efca",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:bdd0101d0beb2dd9e5bc2a2c133516787a148407c7ea68854021d0d9eab2cd42",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:e720e44d00db7ea9eadce5629cab9701a9a54c66382951e1b193ec460c9c4762",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:d1572dfe05fd4c7d221f51159323e3627178f77f2cee1daf58ea2614c4d8f0ef",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:a299ebcf6486a8c331a3219aa4c4fd61084d3809d765589059b0d71eacade971",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:efc6aad9285c4790368d4810b07dea4fd219ab0394e9bf7cae5499c082633e4c",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:28e3946a6f63733609dca831142ffc99f6e617d00cc122c2ec7fecd89991ca23",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:b573bf879aa9e0c3486c761f41db072dcbdc0901bb5c79ef07afbb751d9c859f",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:ee1398d9405ac11c08c4468c7e180270ad9c224de27ef74a7ea2a2233eef2668",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:2117fe239d4aef7517ba15c3d641620ab1b0eaee96420887fc80b00c9a8caeb4",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:a27aea228702f1800e9a82a8a5f4c883cdbed13a65d0bb281f9e13912a9cb011",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:bc6ece9acaa636a14bcde7b30e02235367ea836fb66bd0d0b142b3b22e009f50",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      },
+      {
+        "resourceClass": "population_candidate",
+        "resourceRefDigest": "sha256:c635c68094180d940dd38b5e5e5845a8217a5c8fa9ba9acc3f5609b70b0c114b",
+        "state": "held",
+        "evidenceRefs": ["settlement:population-shard-4"]
+      }
+    ],
+    "reconciliationRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/settlement.json"
+  },
+  "sourceRefs": [
+    "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/04-current-harbor-hub-five-shard-operation.md",
+    "artifacts/loop-architecture/components/execution-routing/pre-route-workflow-resolution.md",
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/skill/operate-engineering-workset-simulation/SKILL.md",
+    "https://hub.harborframework.com/datasets",
+    "https://www.harborframework.com/docs/datasets"
+  ],
+  "createdAt": "2026-08-28T12:46:01.369Z",
+  "digest": "sha256:1faa915cc05a89f6590fe49950d7909595e3ed5e4d574c5316fd470ffcaab3a1"
+}

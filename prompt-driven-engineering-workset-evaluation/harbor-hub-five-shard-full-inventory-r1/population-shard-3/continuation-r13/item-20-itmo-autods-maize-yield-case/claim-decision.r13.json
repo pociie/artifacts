@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 9,
+      "expectedEventHeadSha256": "cf3d599b2e4d0de03121bc78966fc0f10360c1983b6c9ca55ec5fcee31caa60d",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:a3285e5976f3c69d2ea5718db5d3969a2256a81b500b7f40c266a801458eafe6"
+      },
+      "identityDigest": "sha256:9f8c5128fad12c36f0f529de03ec1b469551c4dc9ec9d337a45704e453aa0c13",
+      "itemId": "itmo-autods/maize-yield-case",
+      "laneId": "population-shard-3",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-3:itmo-autods/maize-yield-case:r13",
+      "sequence": 20,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-3:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 9,
+    "eventHeadSha256": "sha256:cf3d599b2e4d0de03121bc78966fc0f10360c1983b6c9ca55ec5fcee31caa60d",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:a28ec5977181f92f47b3f04c17d3650511ae44db12861a6e18f56a4df588d56e",
+  "eventCursor": 9,
+  "eventHeadSha256": "sha256:cf3d599b2e4d0de03121bc78966fc0f10360c1983b6c9ca55ec5fcee31caa60d",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-3",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-20-itmo-autods-maize-yield-case/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "itmo-autods/maize-yield-case",
+        "laneId": "population-shard-3",
+        "proposalId": "proposal:population-shard-3:itmo-autods/maize-yield-case:r13",
+        "workerId": "worker:harbor-population-shard-3:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 9,
+      "eventHeadSha256": "cf3d599b2e4d0de03121bc78966fc0f10360c1983b6c9ca55ec5fcee31caa60d",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 9,
+    "eventHeadSha256": "cf3d599b2e4d0de03121bc78966fc0f10360c1983b6c9ca55ec5fcee31caa60d",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-3",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}

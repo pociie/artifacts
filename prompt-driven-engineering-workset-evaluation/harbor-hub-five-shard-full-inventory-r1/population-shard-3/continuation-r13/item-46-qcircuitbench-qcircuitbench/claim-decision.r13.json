@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 9,
+      "expectedEventHeadSha256": "e1ccc620929489d22469c59ce60afd1da0bbd8a326e11eb49d3d06a70438d50e",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:e43c5f96b3c2874aadce1db8ddd533ae147ec637c8084c9627a916839b626c3d"
+      },
+      "identityDigest": "sha256:aed43acbd5ca030ccab33279cc38a01212b2a4f415817dec19639943291511a5",
+      "itemId": "qcircuitbench/qcircuitbench",
+      "laneId": "population-shard-3",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-3:qcircuitbench/qcircuitbench:r13",
+      "sequence": 46,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-3:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 9,
+    "eventHeadSha256": "sha256:e1ccc620929489d22469c59ce60afd1da0bbd8a326e11eb49d3d06a70438d50e",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:6909a7ed82ffa7a01341ec0ea973b1a0b2daba529c8373ba4be9ce94156c93ea",
+  "eventCursor": 9,
+  "eventHeadSha256": "sha256:e1ccc620929489d22469c59ce60afd1da0bbd8a326e11eb49d3d06a70438d50e",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-3",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-46-qcircuitbench-qcircuitbench/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "qcircuitbench/qcircuitbench",
+        "laneId": "population-shard-3",
+        "proposalId": "proposal:population-shard-3:qcircuitbench/qcircuitbench:r13",
+        "workerId": "worker:harbor-population-shard-3:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 9,
+      "eventHeadSha256": "e1ccc620929489d22469c59ce60afd1da0bbd8a326e11eb49d3d06a70438d50e",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 9,
+    "eventHeadSha256": "e1ccc620929489d22469c59ce60afd1da0bbd8a326e11eb49d3d06a70438d50e",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-3",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}

@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "d3c669c649cd42454d05f888d88e41584b46efd3081de8aca801a85e6683a954",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-19-ibragim-badertdinov-swe-rebench-07-2026/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-19-ibragim-badertdinov-swe-rebench-07-2026/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "2c519c76ae4d9d5dd9decb20bf8cbf0d4ba501088beb820e8d5c8aa1ce29278e",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "4d8aff5f1a93b090e2bc3fcbb920d51bf01fd02b219e5dd4df4d1ca413580e94",
+      "topologySelectionDecisionSha256": "4f13980550700307f2caba166c19e4da9a23bb88a3969b8727e3cc743b873176"
+    },
+    {
+      "coordinationPlanDecisionSha256": "d3c669c649cd42454d05f888d88e41584b46efd3081de8aca801a85e6683a954",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-19-ibragim-badertdinov-swe-rebench-07-2026/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-19-ibragim-badertdinov-swe-rebench-07-2026/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "2c519c76ae4d9d5dd9decb20bf8cbf0d4ba501088beb820e8d5c8aa1ce29278e",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "4d8aff5f1a93b090e2bc3fcbb920d51bf01fd02b219e5dd4df4d1ca413580e94",
+      "topologySelectionDecisionSha256": "4f13980550700307f2caba166c19e4da9a23bb88a3969b8727e3cc743b873176"
+    },
+    {
+      "coordinationPlanDecisionSha256": "d3c669c649cd42454d05f888d88e41584b46efd3081de8aca801a85e6683a954",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-19-ibragim-badertdinov-swe-rebench-07-2026/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-19-ibragim-badertdinov-swe-rebench-07-2026/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "2c519c76ae4d9d5dd9decb20bf8cbf0d4ba501088beb820e8d5c8aa1ce29278e",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "4d8aff5f1a93b090e2bc3fcbb920d51bf01fd02b219e5dd4df4d1ca413580e94",
+      "topologySelectionDecisionSha256": "4f13980550700307f2caba166c19e4da9a23bb88a3969b8727e3cc743b873176"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

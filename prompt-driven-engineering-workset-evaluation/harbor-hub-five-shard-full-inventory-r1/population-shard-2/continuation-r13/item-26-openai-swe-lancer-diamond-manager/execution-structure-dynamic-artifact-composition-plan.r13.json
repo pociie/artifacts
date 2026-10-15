@@ -1,0 +1,139 @@
+{
+  "authorityEffect": "none",
+  "automaticPromotion": false,
+  "decision": {
+    "authorityEffect": "none",
+    "automaticPromotion": false,
+    "dynamicCompositionEvaluationEligible": true,
+    "kind": "dynamic-artifact-composition-resolution-decision/v1",
+    "nativeTopologyEvidenceDisposition": "not_required_not_claimed",
+    "nativeTopologyReceiptBinding": null,
+    "rejectedDynamicCandidates": [],
+    "remainingGapIds": [],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/openai/swe-lancer-diamond-manager:dynamic-composition",
+    "residualGapIds": ["gap:item-effective-provider-receipt", "gap:r13-context-projection"],
+    "selectedDynamicArtifacts": [
+      {
+        "artifactKind": "construct",
+        "artifactRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/dynamic-candidate.r13.json",
+        "componentRefs": [
+          "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+          "artifacts/loop-architecture/components/execution-routing/component.json",
+          "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+        ],
+        "coveredGapIds": ["gap:item-effective-provider-receipt"],
+        "digest": "sha256:74e97cbc22a2e2a52759f4af6387280457a027c4b5d890958addb1f092f36ce7",
+        "expiryConditionRefs": [
+          "item-terminal-settlement",
+          "operation-revision-successor",
+          "provider-receipt-observed"
+        ],
+        "fallbackRef": "fallback:hold:population-shard-2:openai/swe-lancer-diamond-manager:until-effective-provider-receipt",
+        "invalidationConditionRefs": [
+          "capability-fingerprint-change",
+          "requirement-scope-change",
+          "source-binding-change"
+        ],
+        "operationEvidenceContractRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+        "topologyBearing": false,
+        "validationEvidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/artifact-reuse-decision.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json"
+        ],
+        "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-2:continuation-r13/item-26-openai-swe-lancer-diamond-manager:openai/swe-lancer-diamond-manager"
+      }
+    ],
+    "selectedMode": "single_task",
+    "selectedReusableArtifactBindings": [
+      {
+        "artifactRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json",
+        "coveredGapIds": ["gap:r13-context-projection"],
+        "digest": "sha256:68812a487135db628c34c709cbc1d3c8e4407b118fcdbfde8a1295a4dd01400a"
+      }
+    ],
+    "selectedReusableArtifactRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json"
+    ],
+    "status": "selected"
+  },
+  "digest": "sha256:9bb3e78761c11dc2db8e1a757cce1fe24d5444b8c39898181140039820ef8ae9",
+  "identityDigest": "sha256:686e74cf2bc384e5fb91e1ef4a5a559e2ce0911ca509d867d8a9169e270348f5",
+  "itemId": "openai/swe-lancer-diamond-manager",
+  "kind": "harbor-item-dynamic-artifact-composition-evidence/v2",
+  "nativeTopologyReceiptInferred": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "runPrivateCandidateOnly": true
+  },
+  "request": {
+    "dynamicCandidates": [
+      {
+        "artifactKind": "construct",
+        "artifactRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/dynamic-candidate.r13.json",
+        "capabilityIds": ["effective_provider_receipt"],
+        "compatibleModes": ["single_task"],
+        "componentRefs": [
+          "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+          "artifacts/loop-architecture/components/execution-routing/component.json",
+          "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+        ],
+        "coveredGapIds": ["gap:item-effective-provider-receipt"],
+        "digest": "sha256:74e97cbc22a2e2a52759f4af6387280457a027c4b5d890958addb1f092f36ce7",
+        "expiryConditionRefs": [
+          "item-terminal-settlement",
+          "operation-revision-successor",
+          "provider-receipt-observed"
+        ],
+        "fallbackRef": "fallback:hold:population-shard-2:openai/swe-lancer-diamond-manager:until-effective-provider-receipt",
+        "invalidationConditionRefs": [
+          "source-binding-change",
+          "requirement-scope-change",
+          "capability-fingerprint-change"
+        ],
+        "operationEvidenceContractRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+        "runPrivate": true,
+        "structuralCost": 1,
+        "topologyBearing": false,
+        "validated": true,
+        "validationEvidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/artifact-reuse-decision.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json"
+        ],
+        "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-2:continuation-r13/item-26-openai-swe-lancer-diamond-manager:openai/swe-lancer-diamond-manager"
+      }
+    ],
+    "nativeTopologyReceiptAvailable": false,
+    "nativeTopologyReceiptDigest": null,
+    "nativeTopologyReceiptRef": null,
+    "requestRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/openai/swe-lancer-diamond-manager:dynamic-composition",
+    "residualGaps": [
+      {
+        "allowedDynamicKinds": ["context_projection"],
+        "id": "gap:r13-context-projection",
+        "requiredCapabilityIds": ["r13_context_binding"]
+      },
+      {
+        "allowedDynamicKinds": ["construct"],
+        "id": "gap:item-effective-provider-receipt",
+        "requiredCapabilityIds": ["effective_provider_receipt"]
+      }
+    ],
+    "reusableArtifacts": [
+      {
+        "artifactRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json",
+        "coveredGapIds": ["gap:r13-context-projection"],
+        "digest": "sha256:68812a487135db628c34c709cbc1d3c8e4407b118fcdbfde8a1295a4dd01400a",
+        "qualified": true
+      },
+      {
+        "artifactRef": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md",
+        "coveredGapIds": [],
+        "digest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18",
+        "qualified": true
+      }
+    ],
+    "selectedMode": "single_task"
+  },
+  "schemaVersion": 2
+}

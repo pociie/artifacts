@@ -1,0 +1,313 @@
+{
+  "kind": "cafe-visual-study-rubric-profile/v2",
+  "schemaVersion": 2,
+  "revision": "cafe-visual-study-rubric/2026-09-04.2",
+  "status": "task_scoped_report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "automaticPromotion": false,
+  "purpose": "네이버 지도 내부사진만으로 공부 환경과 조망 가능성을 보수적으로 비교하되, 증거 적격성과 장소 선호 점수를 분리한다.",
+  "definitionBinding": {
+    "ref": "reusable-extraction/visual-evidence-rubric-definition.candidate.json",
+    "digest": "sha256:09e93071356acb636ed21793cc83b8ab15945cd619212b253ca8952815a919b7",
+    "disposition": "task_local_hypothesis"
+  },
+  "taskContext": {
+    "taskId": "cafe-study-report-naver-map-2026-09-04",
+    "objective": "중랑구·강동구에서 넓은 작업면, 장시간 작업에 유리해 보이는 좌석 형태, 공간 여유, 채광·뷰, 차분한 인테리어가 사진으로 확인되는 비브런치 카페 10곳을 비교한다.",
+    "subject": "네이버 지도 장소 14곳과 사진 탭의 AI View 내부사진 107장",
+    "consumer": "공부 카페를 고르려는 요청자",
+    "decision": "필수 적격성을 통과한 카페 중 시각적으로 확인 가능한 공부 환경을 비교해 10곳을 정렬한다.",
+    "population": {
+      "districts": ["중랑구", "강동구"],
+      "candidateCount": 14,
+      "imageCount": 107,
+      "requestedResultCount": 10
+    },
+    "sourceWindow": {
+      "observedAt": "2026-09-04T05:34:35.932Z",
+      "validUntil": "2026-10-04T05:34:35.932Z",
+      "refreshTriggers": [
+        "네이버 지도 장소 분류 또는 내부사진 집합 변경",
+        "카페 이전·폐업·대규모 리뉴얼",
+        "사용자의 지역·공부 방식·선호 우선순위 변경"
+      ]
+    },
+    "timeBudget": {
+      "targetMinutes": { "minimum": 20, "maximum": 30 },
+      "observedDurationMinutes": null,
+      "observationState": "unavailable",
+      "policy": "시간 한도는 후보·이미지 수와 브라우저 순회를 제한하지만 필수 증거 기준을 낮추지 않는다."
+    }
+  },
+  "sourcePolicy": {
+    "allowedPlaceMetadata": ["네이버 지도 장소명", "네이버 지도 카테고리", "네이버 지도 주소"],
+    "allowedImages": "네이버 지도 사진 탭의 AI View > 내부에서 실제 로드된 search.pstatic.net 이미지",
+    "excludedSources": ["방문자 리뷰", "블로그 리뷰", "별점", "외부 추천 글", "외부 평가 체계"],
+    "externalReviewsUsed": false,
+    "externalRatingFrameworkUsed": false,
+    "sourceChangeDisposition": "invalidate_and_reassess"
+  },
+  "decisionOrder": ["mandatory", "qualifying", "comparative", "observational"],
+  "assessmentAnchors": [
+    "not_applicable",
+    "unavailable",
+    "conflicting",
+    "fails_mandatory",
+    "partially_supported",
+    "supported",
+    "independently_verified"
+  ],
+  "mandatoryCriteria": [
+    {
+      "id": "source.provenance",
+      "tier": "tier_0",
+      "kind": "mandatory",
+      "question": "평가 이미지가 허용된 네이버 지도 내부사진 출처와 장소·인덱스로 추적되는가?",
+      "passCondition": "모든 평가 이미지 URL의 호스트가 원시 매니페스트 allowlist에 있고 장소별 이미지 인덱스가 유효함",
+      "unknownDisposition": "exclude_evidence_or_subject"
+    },
+    {
+      "id": "place.scope_and_category",
+      "tier": "tier_0",
+      "kind": "mandatory",
+      "question": "장소가 중랑구 또는 강동구의 카페 계열이며 브런치·식사 중심 카테고리로 명시되지 않았는가?",
+      "passCondition": "district가 중랑구 또는 강동구이고 category에 카페가 포함되며 브런치·레스토랑·음식점 표현이 없음",
+      "unknownDisposition": "subject_ineligible"
+    },
+    {
+      "id": "evidence.no_prohibited_inference",
+      "tier": "tier_0",
+      "kind": "mandatory",
+      "question": "사진으로 확인할 수 없는 소음·콘센트·Wi-Fi·혼잡도·체류 정책·착좌감을 긍정 점수로 추론하지 않았는가?",
+      "passCondition": "비시각 항목은 비교 점수에서 제외되고 제한사항으로 명시됨",
+      "unknownDisposition": "withhold_claim"
+    }
+  ],
+  "qualifyingCriteria": [
+    {
+      "id": "evidence.minimum_relevant_images",
+      "tier": "tier_1",
+      "kind": "qualifying",
+      "question": "공부 환경 판정에 직접 유효한 내부사진이 3장 이상인가?",
+      "passCondition": "acceptedImageCount >= 3",
+      "unknownDisposition": "subject_ineligible"
+    },
+    {
+      "id": "evidence.work_surface_coverage",
+      "tier": "tier_1",
+      "kind": "qualifying",
+      "question": "노트북·필기 작업면을 직접 확인할 수 있는 사진이 1장 이상인가?",
+      "passCondition": "채택 사진에 wide-table 또는 standard-work-table 태그가 있음",
+      "unknownDisposition": "subject_ineligible"
+    },
+    {
+      "id": "evidence.spatial_coverage",
+      "tier": "tier_1",
+      "kind": "qualifying",
+      "question": "좌석 배치·통로·공간 깊이를 확인할 수 있는 사진이 1장 이상인가?",
+      "passCondition": "채택 사진에 spacious-layout 또는 clear-aisle 태그가 있음",
+      "unknownDisposition": "subject_ineligible"
+    }
+  ],
+  "ratingScale": {
+    "0": "판단 근거 없음 또는 기준과 명백히 반대",
+    "1": "매우 약한 단일 단서",
+    "2": "제한적인 단서",
+    "3": "보통 수준의 명확한 단서",
+    "4": "여러 이미지에서 강하고 일관된 단서",
+    "5": "대부분의 관련 이미지에서 매우 강하고 일관된 단서"
+  },
+  "criteria": [
+    {
+      "id": "deskUsability",
+      "kind": "comparative",
+      "label": "작업면 활용성",
+      "weight": 32,
+      "observable": "노트북과 필기물을 함께 놓을 깊이·폭, 대형·공용 테이블, 테이블 밀집도",
+      "limitation": "사진의 원근 왜곡 때문에 실제 치수는 확정하지 않음"
+    },
+    {
+      "id": "seatErgonomics",
+      "kind": "comparative",
+      "label": "좌석 형태",
+      "weight": 21,
+      "observable": "등받이 유무, 테이블과 의자의 높이 관계, 작업 방향을 향한 좌석 배치",
+      "limitation": "실제 착좌감과 장시간 피로도는 확정하지 않음"
+    },
+    {
+      "id": "spatialOpenness",
+      "kind": "comparative",
+      "label": "공간 여유",
+      "weight": 21,
+      "observable": "좌석 간격, 통로 폭, 여러 구역의 깊이, 시야를 막는 요소의 정도",
+      "limitation": "광각 렌즈와 촬영 위치에 따른 과장을 고려함"
+    },
+    {
+      "id": "lightView",
+      "kind": "comparative",
+      "label": "채광·뷰",
+      "weight": 16,
+      "observable": "창 면적, 자연광, 창밖 시야 또는 실내의 장거리 시선",
+      "limitation": "창밖 풍경이 직접 보이지 않으면 뷰 점수를 높이지 않음"
+    },
+    {
+      "id": "focusInterior",
+      "kind": "comparative",
+      "label": "집중형 인테리어",
+      "weight": 10,
+      "observable": "차분한 색·조명, 시각적 정돈, 장식 과밀 여부",
+      "limitation": "미적 취향이 아니라 집중을 방해할 시각적 복잡성만 보수적으로 해석함"
+    }
+  ],
+  "comparativeMechanism": {
+    "type": "weighted_sum_after_eligibility",
+    "weightTotal": 100,
+    "formula": "필수·자격 기준을 모두 통과한 장소에 한해 각 비교 항목 기여점수 = (0~5 평점 ÷ 5) × 가중치",
+    "nonCompensatoryRule": "필수 또는 자격 기준의 실패·판단 불가는 비교 점수로 보상할 수 없음",
+    "weightBasis": "사용자가 명시한 공부 환경 우선순위를 작업면 > 좌석·공간 > 채광·뷰 > 인테리어 순으로 작업 한정 변환"
+  },
+  "observationalCriteria": [
+    {
+      "id": "evidenceSufficiency",
+      "kind": "observational",
+      "label": "시각 근거 충실도",
+      "observable": "채택 이미지 수, 작업면·좌석·공간·창 근거 범위, 사진 간 일관성",
+      "scoreContribution": 0,
+      "unknownDisposition": "retain_unavailable"
+    },
+    {
+      "id": "evidenceRejectionProfile",
+      "kind": "observational",
+      "label": "배제 자료 분포",
+      "observable": "장식·메뉴·외관·가림·중복·판독 제한 태그와 배제 비율",
+      "scoreContribution": 0,
+      "unknownDisposition": "retain_unavailable"
+    },
+    {
+      "id": "evaluatorAgreement",
+      "kind": "observational",
+      "label": "평가자 합의도",
+      "observable": "동일 이미지를 독립 평가한 판정 간 일치",
+      "scoreContribution": 0,
+      "observationState": "unavailable",
+      "unknownDisposition": "withhold_reliability_claim"
+    },
+    {
+      "id": "fieldOutcomeJoin",
+      "kind": "observational",
+      "label": "현장 결과 연결",
+      "observable": "실제 방문 후 작업 적합성 확인과 시각 평가의 일치",
+      "scoreContribution": 0,
+      "observationState": "unavailable",
+      "unknownDisposition": "withhold_effectiveness_claim"
+    }
+  ],
+  "imageEvidencePolicy": {
+    "positiveObservationTags": [
+      "wide-table",
+      "standard-work-table",
+      "supportive-seat",
+      "spacious-layout",
+      "clear-aisle",
+      "window-view",
+      "daylight",
+      "calm-interior"
+    ],
+    "absoluteRejectTags": ["exterior", "duplicate"],
+    "rejectWhenNoDirectStudyEvidence": ["decor-only", "food-menu", "partial-unreadable"],
+    "conditionalLimitationTags": ["people-obscured", "tight-space"],
+    "acceptanceRule": "공부 환경을 직접 보여주는 양성 태그가 있고 외관·중복이 아니며, 장식·음식·가림만으로 구성되지 않은 이미지만 채택",
+    "duplicateRule": "같은 구도 또는 동일 이미지로 판단되면 한 장만 증거 단위로 유지",
+    "conflictRule": "사진 간 주장이 상충하면 유리한 사진만 선택하지 않고 제한사항과 판단 불가를 보존"
+  },
+  "hardGates": [
+    "네이버 장소 메타데이터상 중랑구 또는 강동구의 카페 계열 장소",
+    "카테고리에 브런치·레스토랑·음식점이 명시되지 않은 장소",
+    "공부 환경 판정에 직접 유효한 내부사진이 3장 이상",
+    "작업 가능한 테이블 사진이 1장 이상",
+    "공간 배치 또는 통로를 확인할 수 있는 사진이 1장 이상",
+    "사진으로 확인할 수 없는 항목을 긍정 점수로 추론하지 않음"
+  ],
+  "imageRejectTags": ["decor-only", "food-menu", "exterior", "partial-unreadable", "duplicate"],
+  "notScored": [
+    "시각 근거 충실도 자체",
+    "리뷰와 별점",
+    "소음",
+    "콘센트",
+    "Wi-Fi 품질",
+    "실제 혼잡도",
+    "장시간 체류 허용 정책",
+    "의자의 실제 착좌감"
+  ],
+  "uncertaintyPolicy": {
+    "fact": "사진 또는 허용된 장소 메타데이터에서 직접 확인한 내용",
+    "inference": "여러 사진의 형태·배치로 제한적으로 도출한 내용이며 한계를 함께 표시",
+    "conflicting": "사진 간 상반된 단서가 있어 단일 결론을 내리지 않음",
+    "unavailable": "사진으로 확인할 수 없으며 0점이나 긍정값으로 대체하지 않음"
+  },
+  "roleSeparation": {
+    "collector": "원시 네이버 지도 장소·이미지 증거만 동결하며 채점하지 않음",
+    "visualEvaluator": "할당 이미지의 채택·배제, 관찰 태그, 제한 및 차원 평점을 작성하며 공유 산출물을 수정하지 않음",
+    "integrator": "게이트·공식·순위·HTML을 결정적으로 재계산하고 단일 작성자로 동작",
+    "independentValidation": "구조·인덱스·공식·출처는 결정적으로 검증했으나 동일 이미지의 독립 이중 판정은 수행하지 않음"
+  },
+  "operationalBounds": {
+    "candidateCap": 14,
+    "frozenImageCount": 107,
+    "evaluatorCount": 3,
+    "maxVenuesPerEvaluator": 4,
+    "additionalBrowserTraversalAfterFreeze": 0,
+    "sharedFileWriters": 1,
+    "stopConditions": [
+      "내부사진 100장 이상 확보",
+      "평가 가능한 장소가 요청 결과 10곳보다 많음",
+      "추가 수집보다 동결 이미지 판독의 한계효용이 큼",
+      "동일 실패 지문은 재시도하지 않음"
+    ]
+  },
+  "privacyAndRights": {
+    "storedMaterial": "공개 이미지 원격 URL, 장소 메타데이터, 이미지 인덱스와 시각 태그",
+    "notStored": ["쿠키", "인증 토큰", "브라우저 핸들", "원본 이미지 바이너리", "프롬프트 본문", "비공개 추론"],
+    "peopleInImages": "인물은 평가 대상이 아니며 사람으로 가려진 영역은 제한 태그로만 사용",
+    "publicationBoundary": "이미지는 복제하지 않고 원격 출처 링크와 지연 로딩으로 표시"
+  },
+  "tieBreakOrder": ["deskUsability", "seatErgonomics", "spatialOpenness", "lightView"],
+  "evidenceBasis": [
+    "사용자가 명시한 우선순위: 공부 환경, 넓은 테이블, 여유 공간, 인테리어, 뷰",
+    "네이버 지도 사진 탭의 AI View > 내부에서 실제 로드된 이미지",
+    "사진에서 직접 관찰 가능한 형태·배치·채광만 채점하는 보수적 시각 판정 규칙",
+    "engineering-decision-rubric의 필수·자격·비교·관찰 분리",
+    "rubric-operation의 작업·대상·소비자·자료원·모집단·유효기간·무효화 결합"
+  ],
+  "limitations": [
+    "사진 촬영 시점과 최신성은 각 이미지에서 일관되게 확인할 수 없다.",
+    "평가자별 장소 묶음이 분리되어 동일 이미지에 대한 평가자 간 합의도는 측정되지 않았다.",
+    "현장 방문 결과와 연결되지 않아 추천 효과를 검증했다고 볼 수 없다.",
+    "브런치 제외는 네이버 장소 카테고리의 명시적 표현에만 의존하며 실제 메뉴 구성을 확정하지 않는다."
+  ],
+  "lifecycle": {
+    "scope": "이 보고서 한정",
+    "expiry": "2026-10-04T05:34:35.932Z",
+    "invalidationTriggers": [
+      "목표·지역·소비자 선호 변경",
+      "원시 이미지 매니페스트 또는 평가 태그 변경",
+      "가중치·게이트·평가 공식 변경",
+      "네이버 지도 장소 카테고리 변경"
+    ],
+    "rollback": "visual-rubric v1의 6개 가중 항목과 기존 evaluation.json을 별도 이력에서 복원하되 v2 결과와 혼합하지 않음",
+    "nextReview": "다른 공급자 또는 다른 시각 선택 도메인의 독립 사례가 추가되거나 현장 결과가 수집될 때"
+  },
+  "legacyCompatibility": {
+    "previousSchema": "cafe-visual-study-rubric/v1",
+    "breakingChanges": [
+      "evidenceSufficiency를 가중 점수에서 관찰 지표로 이동",
+      "비교 가중치를 32/21/21/16/10으로 재정규화",
+      "하드게이트를 필수와 자격 기준으로 분리",
+      "작업 맥락·유효기간·불확실성·권리 경계를 추가"
+    ],
+    "evaluationCompatibility": "기존 ratings.evidenceSufficiency 값은 관찰용으로 유지하되 총점과 순위 계산에는 사용하지 않음"
+  },
+  "externalReviewsUsed": false,
+  "externalRatingFrameworkUsed": false
+}

@@ -1,0 +1,63 @@
+{
+  "sourceSubdirectory": "src",
+  "includeExtensions": [".ts", ".tsx"],
+  "largestFileLimit": 50,
+  "fallbackGroup": "shared-other",
+  "groups": [
+    {
+      "id": "runtime-and-conversation",
+      "match": {
+        "exact": ["main.tsx", "QueryEngine.ts", "query.ts", "replLauncher.tsx"],
+        "prefix": ["bootstrap/", "cli/", "query/", "services/api/", "upstreamproxy/"]
+      }
+    },
+    {
+      "id": "context-message-session",
+      "match": {
+        "exact": ["history.ts", "context.ts"],
+        "prefix": ["assistant/", "memdir/", "services/compact/", "services/autoDream/", "services/extractMemories/", "utils/processUserInput/", "utils/sessionStorage", "utils/messages", "constants/"]
+      }
+    },
+    {
+      "id": "tool-system",
+      "match": {
+        "exact": ["Tool.ts", "tools.ts"],
+        "prefix": ["tools/", "services/tools/", "utils/tool", "utils/file"]
+      }
+    },
+    {
+      "id": "permission-and-safety",
+      "match": {
+        "prefix": ["utils/permissions/", "utils/sandbox/", "hooks/toolPermission/", "services/policyLimits/", "components/sandbox/"]
+      }
+    },
+    {
+      "id": "surfaces-and-extensions",
+      "match": {
+        "prefix": ["screens/", "components/", "ink/", "entrypoints/", "bridge/", "remote/", "plugins/", "skills/", "hooks/", "tasks/", "services/mcp/", "services/plugins/", "context/"]
+      }
+    },
+    {
+      "id": "configuration-and-operations",
+      "match": {
+        "prefix": ["commands/", "migrations/", "services/analytics/", "services/remoteManagedSettings/", "state/", "types/", "utils/model/", "utils/settings/", "voice/"]
+      }
+    }
+  ],
+  "lexicalPressures": [
+    {"id": "security", "pattern": "security|permission|sandbox|unsafe|deny|allow|trust", "flags": "i"},
+    {"id": "recovery", "pattern": "retry|resume|recover|orphan|stale|fallback|abort", "flags": "i"},
+    {"id": "compatibility", "pattern": "legacy|compat|migration|deprecated|backward", "flags": "i"}
+  ],
+  "callExpressions": [
+    {"id": "logEvent", "callee": "logEvent"},
+    {"id": "feature", "callee": "feature"},
+    {"id": "yieldStar", "callee": "yieldTo"}
+  ],
+  "textOccurrences": [
+    {"id": "featureGate", "pattern": "feature\\s*\\(", "flags": "g"},
+    {"id": "abortSignal", "pattern": "AbortSignal|AbortController", "flags": "g"},
+    {"id": "toolUse", "pattern": "tool_use|toolUse", "flags": "g"},
+    {"id": "cacheControl", "pattern": "cache_control|cacheControl", "flags": "g"}
+  ]
+}

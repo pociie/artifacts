@@ -1,0 +1,41 @@
+{
+  "kind": "editorial-quality-rubric-extension/v1",
+  "extensionId": "rubric-extension:clean-typography",
+  "revision": "book-pdf-editorial-rubric-typography/1",
+  "status": "candidate",
+  "authorityEffect": "none",
+  "baseRubricRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-v1.json",
+  "mandatoryCriteria": [
+    {
+      "id": "typographic-role-consistency",
+      "question": "Do display, body and utility typefaces remain within their declared semantic roles?",
+      "failure": "Page-local styling or mixed fonts replace the shared hierarchy."
+    },
+    {
+      "id": "clean-opening-paragraph",
+      "question": "Does every opening paragraph begin at normal body size without a drop cap or oversized initial letter?",
+      "failure": "Decorative initial treatment draws more attention than the argument."
+    },
+    {
+      "id": "body-readability",
+      "question": "Are body size, leading, line length, paragraph spacing and contrast suitable for sustained A4 reading?",
+      "failure": "The typography is compressed, overly decorative or dependent on zoom."
+    },
+    {
+      "id": "emphasis-restraint",
+      "question": "Would the meaning remain intact if bold, color and capitalization were removed?",
+      "failure": "Styling rather than prose carries the semantic hierarchy."
+    },
+    {
+      "id": "glyph-and-fallback-integrity",
+      "question": "Do Korean, Latin, punctuation and code glyphs render without fallback-induced hierarchy drift?",
+      "failure": "Missing glyphs or inconsistent fallback changes reading rhythm."
+    }
+  ],
+  "decisionRule": "Any mandatory typography failure holds the candidate; typography criteria are not averaged with other quality criteria.",
+  "independentValidationRequiredForAcceptance": true,
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}
+

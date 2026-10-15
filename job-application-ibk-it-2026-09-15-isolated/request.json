@@ -1,0 +1,284 @@
+{
+  "kind": "job-application-report-request/v1",
+  "schema_version": 1,
+  "request_id": "request:ibk-it-motivation-isolated",
+  "revision": "r1",
+  "application": {
+    "company_name": "IBK기업은행",
+    "role_title": "IT",
+    "language": "ko-KR",
+    "official_posting_source_ids": [
+      "official-posting",
+      "official-job-description"
+    ]
+  },
+  "questions": [
+    {
+      "id": "motivation",
+      "prompt": "IBK와 동행, 지원자님을 환영합니다! 다양한 회사들 중에서도 IBK를 선택하신 이유가 궁금합니다. 지원동기에 대해 자유롭게 이야기해 주세요.",
+      "min_chars": 1,
+      "max_chars": 1000,
+      "required_contents": [
+        "IBK 선택 이유",
+        "지원동기",
+        "IT 직무 연결"
+      ],
+      "focus": {
+        "family_id": "motivation-and-fit",
+        "primary_claim": "금융 흐름의 안정성과 변경 가능성을 함께 설계하려는 경험이 IBK IT 직무와 연결된다.",
+        "reader_takeaway": "금융 서비스의 신뢰를 구조와 운영 책임으로 이해한다.",
+        "reviewer_need": "지원동기와 프로젝트 경험의 연결",
+        "evidence_function": "포트폴리오에 확인되는 프로젝트 구조와 공식 직무 책임을 연결",
+        "rhetorical_move_ids": [
+          "direct-answer",
+          "experience",
+          "role-connection",
+          "future-direction"
+        ],
+        "voice_evidence_ids": [
+          "portfolio-project"
+        ],
+        "closing_function": "concrete-contribution",
+        "non_overlap_boundary": "검증되지 않은 운영 성과나 개인 배경은 서술하지 않는다."
+      },
+      "user_confirmation_ids": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "official-posting",
+      "source_type": "official_posting",
+      "locator": "https://ibk.incruit.com/hire/viewhire.asp?projectid=128",
+      "authority": "primary",
+      "observed_at": "2026-09-15T00:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "official-job-description",
+      "source_type": "official_posting",
+      "locator": "https://job.alio.go.kr/recruitview.do?idx=304338",
+      "authority": "primary",
+      "observed_at": "2026-09-15T00:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "applicant-portfolio",
+      "source_type": "project_repository",
+      "locator": "https://github.com/judangs/dev-group-bank-msa",
+      "authority": "project_observation",
+      "observed_at": "2026-09-15T00:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    }
+  ],
+  "application_analysis": {
+    "company_context": [
+      {
+        "id": "company-context",
+        "observation": "IBK기업은행은 기업 및 개인 금융과 중소기업 컨설팅을 주요 사업으로 제시한다.",
+        "evidence_refs": [
+          "official-job-description"
+        ],
+        "writing_implication": "금융 흐름을 안정적으로 연결하는 관점을 지원동기에 사용한다.",
+        "certainty": "fact"
+      }
+    ],
+    "role_domain_concerns": [
+      {
+        "id": "role-concern",
+        "observation": "IT 직무에는 SW 아키텍처, 응용SW, DB, IT시스템 관리, IT 프로젝트 관리가 포함된다.",
+        "evidence_refs": [
+          "official-job-description"
+        ],
+        "writing_implication": "기술 나열보다 설계·검증·운영 책임을 강조한다.",
+        "certainty": "fact"
+      }
+    ],
+    "domain_stakes": [
+      {
+        "id": "domain-stake",
+        "observation": "금융 서비스의 상태 오류나 중단은 고객의 거래와 판단을 방해할 수 있다.",
+        "evidence_refs": [
+          "official-job-description"
+        ],
+        "writing_implication": "신뢰를 구조와 점검 가능성으로 설명한다.",
+        "certainty": "inference"
+      }
+    ],
+    "fit_hypotheses": [
+      {
+        "id": "fit-hypothesis",
+        "statement": "핀테크 백엔드의 인증·결제·이벤트·게이트웨이 구성 경험은 IBK IT의 설계와 운영 책임에 전이될 수 있다.",
+        "evidence_refs": [
+          "official-job-description",
+          "applicant-portfolio"
+        ],
+        "confirmation_required": false
+      }
+    ],
+    "question_writing_implications": [
+      {
+        "id": "motivation-implication",
+        "question_id": "motivation",
+        "context_claim": "IBK IT는 금융 서비스의 기능·품질·운영을 함께 다룬다.",
+        "writing_implication": "금융 흐름을 안정적으로 연결하고 변경을 검증할 수 있는 구조를 만든 경험으로 지원 동기를 설명한다.",
+        "evidence_refs": [
+          "role-concern",
+          "domain-stake"
+        ],
+        "applicant_relevance_refs": [
+          "portfolio-project"
+        ],
+        "exclusion_boundary": "정량 성과와 개인적 금융 경험은 확인 자료가 없어 제외한다."
+      }
+    ]
+  },
+  "applicant_evidence": {
+    "facts": [
+      {
+        "id": "portfolio-project",
+        "statement": "Spring 기반 핀테크 백엔드 프로젝트에 인증·결제·게이트웨이·이벤트 처리와 다중 모듈 구조가 문서화되어 있다.",
+        "source_refs": [
+          "applicant-portfolio"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "motivation"
+        ]
+      }
+    ],
+    "value_statements": [],
+    "unknowns": [
+      {
+        "id": "unknown-production-metric",
+        "needed_fact": "실제 운영 사용자·성능·장애 지표",
+        "affected_question_ids": [
+          "motivation"
+        ],
+        "why_material": "운영 성과를 수치로 주장하려면 필요하다.",
+        "acceptable_evidence": "배포 기록, 모니터링 또는 사용자 검증 자료",
+        "resolution": "omit_from_answer"
+      }
+    ]
+  },
+  "project_evidence": [
+    {
+      "id": "fintech-backend",
+      "kind": "Spring 기반 핀테크 백엔드",
+      "scale": "공개 저장소에서 확인되는 개인 프로젝트",
+      "applicant_role": "저장소의 작성자",
+      "contribution": "인증, 결제, 게이트웨이, 이벤트 처리와 모듈 구조를 구현·문서화",
+      "process": "관심사와 책임을 모듈로 분리",
+      "learning": "금융 흐름은 기능뿐 아니라 변경과 점검 가능성을 함께 고려해야 한다.",
+      "claims": [
+        {
+          "id": "project-structure",
+          "statement": "API·애플리케이션·도메인·저장소·공통 모듈과 실행 가능한 애플리케이션이 문서화되어 있다.",
+          "source_refs": [
+            "applicant-portfolio"
+          ],
+          "certainty": "observed",
+          "outcome_limit": "실제 운영 성과와 팀 협업 범위는 확인되지 않았다."
+        }
+      ],
+      "language_translations": []
+    }
+  ],
+  "source_policy": {
+    "as_of": "2026-09-15",
+    "prefer_primary": true,
+    "allowed_source_ids": [
+      "official-posting",
+      "official-job-description",
+      "applicant-portfolio"
+    ],
+    "visible_source_ids": [
+      "official-posting",
+      "official-job-description"
+    ],
+    "public_source_scope": "official_posting_only",
+    "missing_evidence_policy": "omit_claim"
+  },
+  "quality_profile": {
+    "policy_ref": "artifacts/agent-loop/document/job-application-report-production/vocabularies/job-application-report-quality-policy.json",
+    "mandatory_gate_ids": [
+      "request-and-question-coverage",
+      "source-and-freshness-boundary",
+      "applicant-attribution-and-confirmation",
+      "project-evidence-and-causality"
+    ],
+    "dimensions": [
+      {
+        "id": "question-fit-and-differentiation",
+        "weight": 30
+      },
+      {
+        "id": "role-and-domain-alignment",
+        "weight": 25
+      },
+      {
+        "id": "evidence-causality-and-attribution",
+        "weight": 25
+      },
+      {
+        "id": "clarity-and-interview-defensibility",
+        "weight": 20
+      }
+    ],
+    "rating_min": 0,
+    "rating_max": 4,
+    "qualification_threshold": 90,
+    "score_meaning": "editing_fitness_not_hiring_probability",
+    "revision_passes": 1
+  },
+  "output_profile": {
+    "profile_ref": "artifacts/agent-loop/document/job-application-report-production/profiles/five-set-pdf-report.profile.json",
+    "candidate_count": 5,
+    "report_format": "pdf",
+    "audiences": [
+      "지원자"
+    ],
+    "required_sections": [
+      "application-overview",
+      "company-role-analysis",
+      "question-analysis",
+      "candidate-answers",
+      "candidate-evaluation",
+      "expert-review",
+      "interview-preparation",
+      "material-requests"
+    ],
+    "design": {
+      "tone": "신뢰감 있는 간결한 편집 보고서",
+      "comparison_layout": "vertical",
+      "avoid_patterns": [
+        "내부 작업 기록"
+      ],
+      "raster_policy": "allowed"
+    },
+    "publication": {
+      "searchable_text_required": true,
+      "overflow_policy": "no_clipped_content",
+      "visible_source_policy": "allowlisted_only",
+      "content_policies": []
+    }
+  },
+  "privacy_boundary": {
+    "public_evidence_ids": [
+      "official-posting",
+      "official-job-description"
+    ],
+    "prohibited_content_categories": [
+      "private_reasoning",
+      "unverified_metrics"
+    ],
+    "identity_handling": "runtime_private"
+  },
+  "stop_budget": {
+    "max_research_rounds": 1,
+    "max_revision_passes": 1,
+    "unchanged_failure_limit": 1
+  }
+}

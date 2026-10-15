@@ -1,0 +1,54 @@
+{
+  "kind": "sanitized-six-mode-route-decision/v1",
+  "decisionId": "route-decision:book-pdf-artifact-workflow:v2",
+  "requestRelation": "change_execution_surface",
+  "historyCoverage": "complete",
+  "sessionBoundary": "cross_session",
+  "priorPrimaryMode": "loop",
+  "outerObligationState": "active",
+  "priorCompletionEvidence": "missing",
+  "workPurpose": ["research", "design", "implement", "validate", "deliver"],
+  "operationFamily": "outcome_production",
+  "effectIntent": "local_mutation",
+  "outputShape": "aggregate",
+  "temporalShape": "iterative",
+  "contributionShape": "multiple_dependent",
+  "executionSurface": "multiple_workers",
+  "uncertainty": "medium",
+  "novelty": "adjacent",
+  "risk": "low",
+  "reversibility": "reversible",
+  "validationSeparability": "independent",
+  "contextPartitionability": "high",
+  "capabilityReadiness": "verified",
+  "lifecycleReadiness": "verified",
+  "effectivePrimaryMode": "orchestration",
+  "segmentMode": "loop",
+  "segmentSubject": "agent-subject:visual-pdf-spec-builder",
+  "predecessor": {
+    "decisionRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/route-decision.json",
+    "decisionDigest": "sha256:bbebd935db1f9271130c76499676b6f8b40cada1992afdb89539a07eb833a3cf",
+    "invalidatedAssumption": "contributionShape=one_owner",
+    "materialChange": "A separate instruction-governance editor now owns AGENTS.md while this subject owns the visual PDF specification contribution."
+  },
+  "collaborationBundle": {
+    "bundleRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/collaboration-bundle.json",
+    "bundleRevision": "book-pdf-collaboration/v1",
+    "bundleDigest": "sha256:b5a274bc5d75587cbe08991a84203ead30cbd63296d7a6c49c72c8222c6171e5"
+  },
+  "rejectedModes": {
+    "communication": "Durable project-local artifacts and multiple material contributions are required.",
+    "investigation": "Research alone cannot satisfy the requested deliverables.",
+    "single_task": "The visual contribution itself needs bounded research, generation, specification, and validation iterations.",
+    "loop": "Loop remains the visual contribution's segment mode, but no longer describes the multiple dependent contributions across sessions.",
+    "session_control": "No session mutation or runtime handle operation is requested."
+  },
+  "materialChangeSignals": [
+    "The project domain, audience, or recipient changes.",
+    "A participant role, contribution boundary, dependency edge, or fan-in owner changes.",
+    "A third material contribution or parallel writer is activated.",
+    "The task changes from exploratory mockups to a production PDF with publication acceptance.",
+    "The native reusable-artifact owner or output location changes."
+  ],
+  "authorityEffect": "none"
+}

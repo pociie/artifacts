@@ -1,0 +1,82 @@
+{
+  "authorityEffect": "none",
+  "digest": "sha256:e3b5d74e1f8cb90fd156256e7ff7dc32a3cb9d9316dd524bb6c2b8e702fa25a2",
+  "itemId": "abundant/swe-gen-go",
+  "kind": "harbor-execution-observation/v2",
+  "model": {
+    "effective": "gpt-5.6-luna",
+    "effectiveReasoningEffort": "max",
+    "requested": "gpt-5.6-luna",
+    "requestedReasoningEffort": "max"
+  },
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "credentialsProjected": false,
+    "metadataOnly": true,
+    "privateTrajectoryProjected": false,
+    "rawProviderMaterialProjected": false
+  },
+  "provider": {
+    "acceptedTrialCount": 1,
+    "attemptObservationRef": "artifacts/population-shard-4/continuation-r9/provider-preflight-attempts.r9.json",
+    "class": "harbor",
+    "version": "0.22.0"
+  },
+  "runtime": {
+    "acceptedProviderTrial": true,
+    "activeProviderResourceCountAfterRun": 0,
+    "containerDeleted": true,
+    "verifierStateDeletedAfterDigest": true
+  },
+  "schemaVersion": 2,
+  "shardId": "population-shard-4",
+  "sourceRefs": [
+    "artifacts/population-shard-4/continuation-r9/provider-qualification.r9.json",
+    "artifacts/population-shard-4/continuation-r9/environment-platform-observation.r9.json"
+  ],
+  "status": "completed_with_verifier_hold",
+  "supportingChecks": {
+    "focusedCgoDisabledChecks": "passed",
+    "protectedVerifier": "held",
+    "supportingChecksAreNotProtectedOracle": true
+  },
+  "taskId": "abundant/swe-gen-go/prometheus__client_golang-1917",
+  "taskPackageDigest": "sha256:533504b9b99cfb6fe716b32681612e700b9f7e25cb621ccadbf46713f9bb9368",
+  "taskPageDigest": "sha256:61d9922316b5872407062a1abb0f1dc8579cd860702f24169f4c5f13a8768caa",
+  "taskRevision": 1,
+  "timeouts": {
+    "agentMultiplier": 6.0,
+    "effectiveSubjectSeconds": 3600,
+    "effectiveVerifierSeconds": 3600,
+    "requestedSubjectSeconds": 3600,
+    "taskDeclaredAgentSeconds": 600,
+    "taskDeclaredVerifierSeconds": 600,
+    "verifierMultiplier": 6.0
+  },
+  "timing": {
+    "agentElapsedMs": 1288953,
+    "elapsedMs": 1416500,
+    "finishedAt": "2026-08-28T14:20:32.838477Z",
+    "startedAt": "2026-08-28T13:56:56.338963Z",
+    "verifierElapsedMs": 2266
+  },
+  "trialId": "trial:harbor-shard-4:r9:abundant-swe-gen-go",
+  "trialState": "completed",
+  "usage": {
+    "cachedInputTokens": 3484928,
+    "costUsd": 0.11811936000000002,
+    "elapsedMs": 1416500,
+    "inputTokens": 3605310,
+    "outputTokens": 20287
+  },
+  "verifier": {
+    "failureClass": "environment",
+    "failureCode": "environment_toolchain_incompatible",
+    "observedOutputDigest": "sha256:dc87c90d726343271a4e9f540dd65b3f9a3491166e8d4572df992c050b0f6b49",
+    "protectedBuildContract": "CGO-enabled Go test failed because gcc rejected -m64",
+    "protectedValidationState": "not_scored",
+    "rawVerifierReward": 0.0,
+    "resultDigest": "sha256:c96d0f751851195a7d5aa3cf7dea6a39a50fdedc208913738ea7d2a5174b2c80",
+    "state": "held_environment_failure"
+  }
+}

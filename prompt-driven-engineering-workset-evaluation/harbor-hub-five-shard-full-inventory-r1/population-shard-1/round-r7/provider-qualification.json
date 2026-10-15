@@ -1,0 +1,109 @@
+{
+  "kind": "harbor-provider-qualification/v1",
+  "schemaVersion": 1,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "shardId": "population-shard-1",
+  "frameworkRevision": "r4",
+  "provider": {
+    "name": "harbor",
+    "version": "0.22.0",
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "agent": "codex",
+    "modelRequested": "gpt-5.6-luna",
+    "modelEffective": "gpt-5.6-luna",
+    "effortRequested": "max",
+    "effortEffective": "max",
+    "subjectTimeoutRequestedSeconds": 3600,
+    "subjectTimeoutEffectiveSeconds": 3600,
+    "nativeTaskTimeoutSeconds": 600,
+    "agentTimeoutMultiplier": 6,
+    "agentSetupTimeoutMultiplier": 10,
+    "environmentBuildTimeoutMultiplier": 2,
+    "verifierTimeoutMultiplier": 4,
+    "nConcurrent": 1,
+    "nAttempts": 1,
+    "maxRetries": 0
+  },
+  "qualification": {
+    "status": "qualified",
+    "access": { "state": "supported", "publicListOrDownloadAuthRequired": false },
+    "auth": {
+      "mechanism": "codex_auth_json",
+      "mode": "CODEX_FORCE_AUTH_JSON",
+      "state": "supported",
+      "valuesRead": false,
+      "valuesExported": false
+    },
+    "model": {
+      "state": "supported",
+      "requested": "gpt-5.6-luna",
+      "effective": "gpt-5.6-luna",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation"
+    },
+    "effort": {
+      "state": "supported",
+      "requested": "max",
+      "effective": "max",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation"
+    },
+    "timeout": {
+      "state": "supported",
+      "nativeSeconds": 600,
+      "multiplier": 6,
+      "effectiveSeconds": 3600,
+      "lowerMaxCap": false
+    },
+    "network": {
+      "state": "partially_supported",
+      "taskPolicy": "allow_internet=true",
+      "restrictedEnforcement": "unobserved"
+    },
+    "platform": {
+      "state": "partially_supported",
+      "host": "darwin/arm64",
+      "containerHost": "linux/aarch64",
+      "targetReceipt": "unexposed"
+    },
+    "verifier": {
+      "state": "supported",
+      "terminalReward": 1.0,
+      "trialCount": 1,
+      "exceptionCount": 0,
+      "environmentMode": "not_exposed"
+    },
+    "license": { "state": "unobserved", "sourceMetadataLicense": "not_available" },
+    "cost": {
+      "state": "observed",
+      "currency": "USD",
+      "value": 0.28241108,
+      "budgetCapSupplied": false
+    },
+    "cleanup": {
+      "state": "supported",
+      "temporaryResourcesReleased": true,
+      "runtimeEvidenceRetainedPrivate": true
+    }
+  },
+  "receipts": {
+    "subject": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation",
+    "jobResultSha256": "sha256:5a1049a0b5e5e9b80e9ac94d1ee595e17edef7397a697783a992acc1de67d76b",
+    "jobConfigSha256": "sha256:4977a6b50472bae93fdc45837f01a791026514216ed3458442225e76e7e762b",
+    "verifierRewardSha256": "sha256:d1a7b60df83a72fc820ce76f1883d30dc36f3980ce7570692f7fe30e98ce5b7e"
+  },
+  "sourceRefs": [
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-3:harbor-provider-qualification",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:credential-mechanism-comparison",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation"
+  ],
+  "limitations": [
+    "one representative task only",
+    "license metadata unobserved",
+    "restricted network enforcement unobserved",
+    "target platform receipt unexposed on arm64 host",
+    "monetary budget cap not supplied",
+    "verifier environment mode not exposed",
+    "independent review pending"
+  ],
+  "authorityEffect": "none"
+}

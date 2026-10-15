@@ -1,0 +1,54 @@
+{
+  "kind": "job-application-validation-evidence/v1",
+  "schema_version": 1,
+  "run_id": "job-application-nextwave-backend-2026-09-14",
+  "validated_on": "2026-09-14",
+  "status": "pass_with_submission_blockers_preserved",
+  "checks": [
+    {
+      "id": "job-application-report-checker",
+      "command": "node artifacts/agent-loop/document/job-application-report-production/scripts/check_job_application_report.mjs --request request.json --result result.json",
+      "status": "pass",
+      "evidence": "OK job-application-report request/result"
+    },
+    {
+      "id": "prompt-engineering-contract-checker",
+      "command": "python3 artifacts/agent-loop/execution-preparation/prompt-assistance/scripts/check_prompt_engineering_contract.py prompt-engineering-contract.json --format json",
+      "status": "pass",
+      "evidence": "ok=true; issues=[]"
+    },
+    {
+      "id": "job-application-report-tests",
+      "command": "node --test artifacts/agent-loop/document/job-application-report-production/scripts/test_job_application_report.mjs",
+      "status": "pass",
+      "evidence": "11 tests passed; 0 failed"
+    },
+    {
+      "id": "answer-character-counts",
+      "status": "pass",
+      "evidence": "20 answers have stored Unicode code-point counts equal to measured counts; Q1/Q2/Q3 are within 500/700/800, Q4 uses provisional 1,000"
+    },
+    {
+      "id": "publication-boundary",
+      "status": "pass",
+      "evidence": "Markdown is searchable, contains required reader sections, has no raster dependency, exposes only allowlisted public GitHub sources, and contains no local absolute path"
+    },
+    {
+      "id": "authority-and-effect-boundary",
+      "status": "pass",
+      "evidence": "Only task-local .collab/artifacts files were created or changed; no submission, provider write, source-tree edit, Git index/ref update, or shared-memory publication occurred"
+    }
+  ],
+  "submission_blockers": [
+    "공식 회사·공고 원문 미확인",
+    "4번 문항 실제 글자수 제한 미확인",
+    "지원자의 직접 기여 범위 미확인",
+    "테스트 실행 결과와 Redis 변경의 실제 효과 미확인",
+    "배포·사용자·트래픽·운영 여부 미확인"
+  ],
+  "digest_receipts": {
+    "request_sha256": "aa081318f9a8751a4f3b7451f9800d09126675170d16a5ef714f34c27c3ebb7d",
+    "report_sha256": "bc43ecb386dc1c16ecef6baa300400ed4fe708f9694eb0898923e36c10c6fcf8"
+  },
+  "authority_effect": "none"
+}

@@ -1,0 +1,204 @@
+{
+  "kind": "review-investigation-resolution/v1",
+  "schemaVersion": 1,
+  "packetId": "phase10-revision3-schema-parity-resolution",
+  "revision": "revision-1",
+  "status": "review_observation",
+  "authorityEffect": "none",
+  "reportOnly": true,
+  "subject": {
+    "phaseRef": "docs/plan/agent-operation/loop-operation-modeling-framework-qualification/phases/10-responsibility-and-adoption-fence.md",
+    "planRevision": "revision-3",
+    "candidateRef": "candidate:phase10:revision-3",
+    "candidateIdentity": {
+      "kind": "git_commit_tree",
+      "commit": "44debd66d95c5f35c82c365a67cc0e25e2b14873",
+      "tree": "4254315da13c34b4b7b61866e863af085f6f7a37",
+      "digest": "sha256:318ce67b6fff21f4ae68b0ab539d92e20ffaf04bc90e927244ab1d0b9beb59b6",
+      "fingerprint": "sha256:318ce67b6fff21f4ae68b0ab539d92e20ffaf04bc90e927244ab1d0b9beb59b6"
+    },
+    "architectureRecordRef": "artifacts/agent-loop/assessment/agent-review/contract.md@2286ae09",
+    "architectureRecordDigest": "sha256:9cbe07a66e3555f3fea53319ab4845987506abd65d1b51d25bf2bf3308bbf6f9",
+    "policyRefs": ["policy:phase10-completion-contract", "policy:runtime-integration-prohibited"],
+    "evidenceRefs": [
+      "evidence:revision3-independent-review-status",
+      "evidence:revision3-schema-engine-rejection",
+      "evidence:revision3-worker-stop-release"
+    ],
+    "rubricRefs": [
+      "rubric:published-schema-example-conformance",
+      "rubric:checker-claim-truthfulness"
+    ]
+  },
+  "roles": {
+    "candidateOwnerRef": "owner:loop-architecture-framework-qualification",
+    "reviewerOwnerRef": "owner:revision3-independent-reviewer",
+    "solutionDecisionOwnerRef": "owner:phase10-hitl",
+    "correctionOwnerRef": "owner:loop-architecture-framework-qualification",
+    "revalidatorOwnerRef": "owner:next-independent-phase10-validator",
+    "acceptanceOwnerRef": "owner:phase10-acceptance",
+    "integrationOwnerRef": "owner:phase10-transition"
+  },
+  "reviewLifecycle": {
+    "assignmentRef": "assignment:phase10-revision3-independent-review-sanitized",
+    "reviewContentState": "complete_with_findings",
+    "runtimeCompletionState": "stopped_without_worker_done",
+    "completionReceiptRef": null,
+    "resourceSettlementState": "settled",
+    "settlementEvidenceRefs": ["evidence:orchestration-worker-stopped-and-terminal-released"],
+    "lifecycleLimitationRefs": ["limitation:review-verdict-arrived-as-status-without-worker-done"]
+  },
+  "findings": [
+    {
+      "id": "finding:phase10-schema-cardinality-parity",
+      "severity": "blocker",
+      "criterionRef": "criterion:published-example-conforms-to-published-schema",
+      "classification": "cross_artifact_schema_parity",
+      "observation": "The published schema requires nine domain principles and eight ubiquitous-language references, while the catalog and published example require eight principles and nine references.",
+      "expected": "The schema, responsibility catalog, example, checker claim, and tests agree on the same closed cardinalities.",
+      "evidenceRefs": [
+        "artifacts/agent-loop/meta/loop-operation-model-inspection/schemas/operation-modeling-framework.schema.json#domainModeling",
+        "artifacts/agent-loop/meta/loop-operation-model-inspection/vocabularies/framework-responsibility-policy.json#requiredDomainModelingPrinciples",
+        "artifacts/agent-loop/meta/loop-operation-model-inspection/examples/operation-modeling-framework.example.json#domainModeling"
+      ],
+      "reproduction": {
+        "preconditionRefs": ["precondition:exact-revision3-commit-and-tree"],
+        "steps": [
+          "Load the published Draft 2020-12 schema and the published example from revision 3.",
+          "Compare domainModeling array cardinalities with the closed catalog arrays.",
+          "Validate the published example with an independent Draft 2020-12 schema engine."
+        ],
+        "observedResult": "The schema declares principles 9 and ubiquitous-language refs 8; the catalog/example contain principles 8 and refs 9, so independent schema validation rejects the example.",
+        "expectedResult": "The exact published example is accepted by the exact published schema and matches the closed catalog.",
+        "validationRef": "validation:revision3-independent-draft-2020-12"
+      },
+      "rootCause": {
+        "category": "correction_and_oracle_coverage_gap",
+        "statement": "The revision 3 correction swapped the two schema cardinalities, and the checker only digest-bound the schema file without checking semantic parity between schema, catalog, and example.",
+        "causalEvidenceRefs": [
+          "evidence:schema-principles-minmax-nine",
+          "evidence:schema-language-refs-minmax-eight",
+          "evidence:checker-schema-digest-without-parity-oracle"
+        ],
+        "confidence": "high",
+        "unknownRefs": []
+      },
+      "impact": {
+        "affectedRefs": [
+          "artifact:operation-modeling-framework-schema",
+          "artifact:operation-modeling-framework-example",
+          "artifact:operation-modeling-framework-checker",
+          "claim:positive-fixture-conformance"
+        ],
+        "blastRadius": "package",
+        "authorityOrRuntimeEffect": "none_from_review"
+      },
+      "solutionOptions": [
+        {
+          "id": "option:repair-cardinality-and-add-parity-oracle",
+          "summary": "Restore principles to eight and ubiquitous-language references to nine, then add a deterministic schema-catalog-example parity oracle and negative regression fixtures.",
+          "ownerRef": "owner:loop-architecture-framework-qualification",
+          "effectClass": "artifact_contract",
+          "changeScopeRefs": [
+            "scope:operation-modeling-schema-cardinality",
+            "scope:operation-modeling-checker-parity",
+            "scope:operation-modeling-contract-tests"
+          ],
+          "constraintRefs": [
+            "constraint:no-root-dependency-change",
+            "constraint:no-runtime-integration",
+            "constraint:no-phase20-selection-before-acceptance"
+          ],
+          "verificationRefs": [
+            "test:published-example-schema-catalog-parity",
+            "test:swapped-principle-cardinality-rejected",
+            "test:swapped-language-ref-cardinality-rejected",
+            "test:existing-operation-contract-suite"
+          ],
+          "tradeoffRefs": ["tradeoff:bounded-parity-oracle-is-not-a-general-json-schema-engine"],
+          "authorityEffect": "none",
+          "reviewerMayApply": false,
+          "automaticApplication": false
+        },
+        {
+          "id": "option:adopt-general-json-schema-runtime",
+          "summary": "Add and govern a general Draft 2020-12 runtime dependency for every contract validation path.",
+          "ownerRef": "owner:loop-architecture-framework-qualification",
+          "effectClass": "runtime_candidate",
+          "changeScopeRefs": ["scope:root-dependency-and-runtime-validation-integration"],
+          "constraintRefs": [
+            "constraint:requires-separate-selected-runtime-plan",
+            "constraint:currently-prohibited-by-user"
+          ],
+          "verificationRefs": ["validation:dependency-qualification-and-runtime-parity"],
+          "tradeoffRefs": ["tradeoff:larger-responsibility-and-cross-module-blast-radius"],
+          "authorityEffect": "none",
+          "reviewerMayApply": false,
+          "automaticApplication": false
+        }
+      ],
+      "recommendedOptionId": "option:repair-cardinality-and-add-parity-oracle",
+      "acceptanceTestRefs": [
+        "test:published-example-schema-catalog-parity",
+        "test:both-cardinality-inversions-rejected",
+        "test:all-existing-operation-modeling-adversarial-cases"
+      ],
+      "residualRiskRefs": [
+        "risk:bounded-parity-oracle-does-not-prove-full-json-schema-conformance"
+      ],
+      "dispositionRequest": "rework"
+    }
+  ],
+  "correction": {
+    "enabled": true,
+    "ownerDecisionRef": null,
+    "newRevisionRequired": true,
+    "maxRounds": 2,
+    "sameFingerprintLimit": 1,
+    "currentFingerprint": "sha256:318ce67b6fff21f4ae68b0ab539d92e20ffaf04bc90e927244ab1d0b9beb59b6",
+    "priorRejectedFingerprints": [
+      "sha256:7c72f9aec933cb358c49b6ea1bbccc7c852bcc00bb84d095d4b6dd948901030e"
+    ],
+    "nextAction": "stop_replan_or_hitl"
+  },
+  "revalidation": {
+    "required": true,
+    "independent": true,
+    "exactCandidateRequired": true,
+    "independentFromRefs": [
+      "owner:revision3-independent-reviewer",
+      "owner:loop-architecture-framework-qualification",
+      "owner:phase10-acceptance"
+    ],
+    "criterionRefs": [
+      "criterion:published-example-conforms-to-published-schema",
+      "criterion:parity-oracle-rejects-inverted-cardinality",
+      "criterion:runtime-integration-remains-prohibited"
+    ],
+    "verificationRefs": [
+      "validation:operation-modeling-contract-suite",
+      "validation:phase-plan-and-link-checks",
+      "validation:governance-fitness"
+    ]
+  },
+  "decisionBoundary": {
+    "reviewOutputEffect": "recommendation_only",
+    "automaticCorrection": false,
+    "candidateAcceptanceImplied": false,
+    "phaseTransitionImplied": false,
+    "settlementImplied": false
+  },
+  "privacy": {
+    "classification": "sanitized_immutable_artifact",
+    "rawPromptStored": false,
+    "transcriptStored": false,
+    "privateReasoningStored": false,
+    "credentialStored": false,
+    "runtimeHandleStored": false
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "canonicalization": "sorted-json-without-integrity-digest",
+    "digest": "sha256:d5e10cd8ba76ba79f8fc2cb83f59676d105b2a35815c426fdbb921c7e61e19a8"
+  }
+}

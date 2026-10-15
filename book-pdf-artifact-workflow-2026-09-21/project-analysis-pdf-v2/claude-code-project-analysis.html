@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>복구된 Claude Code 소스 — 프로젝트 이해를 위한 기술 독본</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    :root {
+      --paper:#f6f1e7; --paper2:#f1ebdf; --ink:#102d43; --teal:#2d6972;
+      --teal2:#8fb7b9; --red:#88483f; --red2:#ead8d0; --gold:#a87a32;
+      --muted:#5d6d72; --rule:#9aa9a6; --grid:rgba(48,77,82,.075);
+      --font-display:"Noto Serif KR","AppleMyungjo",Georgia,serif;
+      --font-body:Pretendard,SUIT,"Noto Sans KR","Apple SD Gothic Neo",sans-serif;
+      --font-utility:"SFMono-Regular",Menlo,Consolas,monospace;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:#d5d1c9;color:var(--ink)}
+    body{font-family:var(--font-body);font-kerning:normal;text-rendering:optimizeLegibility}
+    .page{width:210mm;height:297mm;position:relative;overflow:hidden;background:var(--paper);padding:15mm 17mm 18mm 19mm;page-break-after:always}
+    .page:last-of-type{page-break-after:auto}
+    .notebook{background-color:#f3ede2;background-image:linear-gradient(var(--grid) .22mm,transparent .22mm),linear-gradient(90deg,var(--grid) .22mm,transparent .22mm);background-size:7mm 7mm}
+    .cover{padding:19mm 18mm 18mm 18mm}
+    .running{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6mm;padding-bottom:2.5mm;border-bottom:.35mm solid var(--teal);color:var(--teal);font:600 7.4pt/1.25 var(--font-utility);letter-spacing:.08em}
+    .notebook .running{color:var(--red);border-color:var(--red)}
+    .folio{position:absolute;left:19mm;right:17mm;bottom:7.5mm;display:flex;justify-content:space-between;padding-top:2mm;border-top:.25mm solid var(--rule);color:#53656b;font:7.2pt/1.2 var(--font-utility);letter-spacing:.04em}
+    h1,h2,h3,h4,.display{font-family:var(--font-display)}
+    h1{margin:0;font-size:43pt;line-height:1.04;letter-spacing:-.025em}
+    h2{margin:0 0 3.5mm;font-size:22pt;line-height:1.18;letter-spacing:-.018em}
+    h3{margin:0 0 2mm;font-size:13.5pt;line-height:1.38}
+    h4{margin:0 0 1.4mm;font-size:10.4pt;line-height:1.4}
+    p{margin:0 0 3.2mm;font-size:10.2pt;line-height:1.62;word-break:keep-all;overflow-wrap:anywhere}
+    .lead{font:13.2pt/1.5 var(--font-display);color:#294b5b;margin-bottom:5mm}
+    .small{font-size:8.2pt;line-height:1.52;color:#58686c}
+    .utility{font-family:var(--font-utility)}
+    .eyebrow{margin-bottom:2.5mm;color:var(--teal);font:600 7.4pt/1.2 var(--font-utility);letter-spacing:.1em}
+    .notebook .eyebrow{color:var(--red)}
+    .columns{columns:2;column-gap:9mm;column-rule:.25mm solid #c2c8c2}
+    .columns p,.columns .semantic-unit{break-inside:avoid}
+    .two{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:7mm}
+    .equal{display:grid;grid-template-columns:1fr 1fr;gap:7mm}
+    .three{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm}
+    .semantic-unit{break-inside:avoid;position:relative}
+    .rule-section{margin-top:4mm;padding-top:3mm;border-top:.35mm solid var(--rule)}
+    .notebook .rule-section{border-top:.55mm solid var(--red)}
+    .evidence-label{display:inline-flex;align-items:center;gap:1.4mm;margin-bottom:2mm;padding:1mm 1.8mm;background:rgba(246,241,231,.85);font:700 6.9pt/1 var(--font-utility);letter-spacing:.045em}
+    .evidence-label.observed{color:var(--red);border:.3mm solid currentColor}.evidence-label.observed:before{content:"●"}
+    .evidence-label.background{color:var(--gold);border:.7mm double currentColor;padding:.6mm 1.4mm}.evidence-label.background:before{content:"▤"}
+    .evidence-label.inference{color:var(--teal);border:.3mm dashed currentColor}.evidence-label.inference:before{content:"◆"}
+    .evidence-label.unresolved{color:#58666a;border:.3mm dotted currentColor}.evidence-label.unresolved:before{content:"?"}
+    .claim-line{font:13.2pt/1.48 var(--font-display);color:#27495a;margin-bottom:3mm}
+    .source-line{margin-top:2mm;padding-top:1.7mm;border-top:.25mm solid #b3bbb6;color:#59686d;font:7.1pt/1.45 var(--font-utility);word-break:break-all}
+    a{color:inherit;text-decoration:none;border-bottom:.2mm solid currentColor}
+    .note{padding:3mm 4mm;border-left:.8mm solid var(--teal);background:rgba(216,232,229,.58);font-size:8.8pt;line-height:1.5}
+    .warning{padding:3mm 4mm;border-left:.8mm solid var(--red);background:rgba(234,216,208,.48);font-size:8.8pt;line-height:1.5}
+    .transition{margin-top:4mm;padding:2.7mm 4mm;border-left:.8mm solid var(--teal);background:rgba(216,232,229,.55);font-size:8.8pt;line-height:1.5}
+    .diagram{margin:4mm 0;padding:5mm;background:rgba(255,255,255,.38);border:.3mm solid #a6b3b0}
+    .flow{display:flex;align-items:center;justify-content:space-between;gap:2mm}
+    .node{min-width:24mm;padding:3mm 2mm;border:.45mm solid var(--teal);background:rgba(246,241,231,.94);text-align:center;font:600 8.2pt/1.35 var(--font-body)}
+    .node.red{border-color:var(--red)}
+    .arrow{flex:1;height:.35mm;background:var(--teal);position:relative}.arrow:after{content:"";position:absolute;right:-.2mm;top:-1.25mm;border-left:2.2mm solid var(--teal);border-top:1.4mm solid transparent;border-bottom:1.4mm solid transparent}
+    figcaption{margin-top:2mm;color:#52656a;font:8.1pt/1.45 var(--font-body)}
+    table{width:100%;border-collapse:collapse;margin:3mm 0;background:rgba(246,241,231,.68);font-size:8.5pt;line-height:1.45}
+    th,td{padding:2.1mm 2.2mm;border-top:.25mm solid #a9b0ab;text-align:left;vertical-align:top}
+    th{color:var(--red);font:700 7.1pt/1.3 var(--font-utility);letter-spacing:.035em}
+    ul,ol{margin:1mm 0 3mm;padding-left:5.5mm}
+    li{margin:0 0 1.4mm;font-size:9.5pt;line-height:1.5;word-break:keep-all}
+    .compact p{font-size:9.6pt;line-height:1.54;margin-bottom:2.5mm}
+    .compact li{font-size:8.8pt;line-height:1.43;margin-bottom:1mm}
+    .compact table{font-size:7.9pt;line-height:1.38}
+    .algorithm-grid{display:grid;grid-template-columns:minmax(0,1.38fr) minmax(0,.9fr);gap:7mm;margin-top:3mm}
+    .algorithm-grid .side{padding-left:5mm;border-left:.35mm solid #9aa9a6}
+    .algorithm-grid .diagram .node{min-width:17mm;padding:2.5mm 1mm;font-size:7pt}
+    .state-list{display:flex;flex-wrap:wrap;gap:1.5mm;margin:2mm 0 3mm}
+    .state-list span{padding:1mm 1.6mm;border:.25mm solid #9cadab;background:rgba(255,255,255,.35);font:7.2pt/1.25 var(--font-utility)}
+    .algorithm-table th{width:29mm}.algorithm-table td{font-size:8.5pt}
+    .terminal-matrix td:first-child{font-family:var(--font-utility);font-size:7.4pt;color:var(--red)}
+    .metric{padding-top:2.5mm;border-top:.6mm solid var(--teal)}
+    .metric b{display:block;font:22pt/1 var(--font-display);color:var(--teal);margin-bottom:1.5mm}.metric span{font-size:8.4pt;line-height:1.4;color:#53666b}
+    .module{padding-top:3mm;border-top:.55mm solid var(--teal);margin-bottom:4mm}.module h3{font-size:12.5pt}.module code{font:7.2pt/1.4 var(--font-utility);color:#59686d}
+    .roadmap{display:grid;grid-template-columns:23mm 1fr;gap:5mm;margin:3mm 0}
+    .roadmap .phase{color:var(--red);font:700 8pt/1.35 var(--font-utility);border-top:.5mm solid var(--red);padding-top:2mm}
+    .roadmap .body{border-top:.25mm solid #adb5b0;padding:2mm 0 3mm}.roadmap .body p{font-size:9.1pt;margin-bottom:1.8mm}
+    .glossary dt{font:700 9pt/1.35 var(--font-utility);color:var(--teal);margin-top:2mm}.glossary dd{margin:0 0 2.5mm;font-size:9.2pt;line-height:1.5}
+    .cover .kicker{width:126mm;padding-bottom:4mm;border-bottom:.4mm solid var(--teal);font:600 7.8pt/1.2 var(--font-utility);letter-spacing:.1em;color:var(--teal)}
+    .cover .title{width:142mm;margin-top:17mm}
+    .cover .subtitle{width:118mm;margin-top:7mm;font:16pt/1.48 var(--font-display);color:#294a5b}
+    .cover .scope{position:absolute;right:18mm;top:51mm;width:42mm;padding-left:6mm;border-left:.35mm solid #91a6a5}.cover .scope p{font-size:8.7pt;line-height:1.55}
+    .cover .wave{position:absolute;left:-10mm;bottom:25mm;width:164mm;height:97mm}
+    .cover .stamp{position:absolute;right:18mm;bottom:19mm;width:48mm;font:7.1pt/1.65 var(--font-utility);letter-spacing:.05em;color:#59696d}
+    .contents article{display:grid;grid-template-columns:13mm 1fr 18mm;gap:4mm;align-items:baseline;padding:3.2mm 0;border-top:.25mm solid #adb6b1}.contents b{color:var(--red);font:8pt/1 var(--font-utility)}.contents strong{font:12.4pt/1.35 var(--font-display)}.contents span{text-align:right;font:7.2pt/1 var(--font-utility);color:#5c6c70}
+    .quote{margin:5mm 7mm;padding:4mm 0;border-top:.5mm solid var(--teal);border-bottom:.5mm solid var(--teal);font:14.5pt/1.5 var(--font-display);text-align:center;color:#274b5b}
+    .continued{display:inline-block;margin-bottom:2mm;color:var(--red);font:700 7pt/1.2 var(--font-utility);letter-spacing:.08em}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+
+<section class="page cover" data-section="표지" data-coverage="status-provenance-limitations">
+  <div class="kicker">RECOVERED SOURCE · PROJECT ANALYSIS · READER CANDIDATE</div>
+  <div class="title">
+    <h1>복구된 소스에서<br>실행의 질서를 읽다</h1>
+    <div class="subtitle">Claude Code v2.1.88 스냅샷의 turn, stream, effect, transcript, topology를 한 시스템으로 이해하는 기술 독본</div>
+  </div>
+  <aside class="scope"><p>공개 저장소의 제3자 복구 스냅샷을 분석한다. 공식 Anthropic 설계나 현재 제품 전체를 설명한다고 주장하지 않는다.</p><p class="small">고정 revision<br>2ca5ddab…<br>tree 1b6b4ab…</p></aside>
+  <svg class="wave" viewBox="0 0 700 420" aria-hidden="true"><g fill="none" stroke="#4f858c" stroke-width="2" opacity=".75"><path d="M-40 292 C100 116 190 390 330 180 S560 350 740 78"/><path d="M-40 309 C100 133 190 407 330 197 S560 367 740 95"/><path d="M-40 326 C100 150 190 424 330 214 S560 384 740 112"/><path d="M-40 343 C100 167 190 441 330 231 S560 401 740 129"/><path d="M-40 360 C100 184 190 458 330 248 S560 418 740 146"/><path d="M-40 377 C100 201 190 475 330 265 S560 435 740 163"/><path d="M-40 394 C100 218 190 492 330 282 S560 452 740 180"/></g></svg>
+  <div class="stamp">SUCCESSOR AUTHORING CANDIDATE<br>SYSTEMS MONOGRAPH × EVIDENCE NOTEBOOK<br>SEARCHABLE A4 · 2026-09-21</div>
+</section>
+
+<section class="page" data-section="읽기 계약" data-coverage="status-provenance-limitations">
+  <div class="running"><b>읽기 계약</b><span>무엇을 확정하고 무엇을 남겨 두는가</span></div>
+  <div class="eyebrow">Reader orientation</div>
+  <h2>이 보고서는 제품 설명서가 아니라<br>고정된 소스의 작동 모델이다</h2>
+  <p class="lead">독자의 목표는 파일 이름을 외우는 것이 아니라, 입력이 상태를 바꾸고 효과를 만들며 기록과 복구로 닫히는 경계를 이해하는 것이다.</p>
+  <div class="two">
+    <div class="semantic-unit" data-claim data-claim-id="STATUS-001" data-evidence-class="observed_project_fact" data-source-ref="source-state.json;PROJECT-ANALYSIS.md">
+      <span class="evidence-label observed">observed_project_fact</span>
+      <p>분석 대상은 commit <code>2ca5ddabfed5…</code>, tree <code>1b6b4ab07d0…</code>로 고정된 공개 저장소의 복구 스냅샷이다. manifest는 1,952개 tracked file, 1,884개 TypeScript/TSX 구현 파일, 512,664 physical TypeScript line을 기록한다. build와 runtime은 실행하지 않았다.</p>
+      <p>저장소가 package 2.1.88에서 복구했다고 서술하는 사실은 <em>repository-authored</em> 주장이다. 누락 모듈과 feature gate가 존재할 수 있으므로 현재 공식 제품과의 parity를 추정하지 않는다.</p>
+      <div class="source-line">PROJECT-ANALYSIS.md · source-state.json · artifact-manifest.json</div>
+    </div>
+    <aside class="semantic-unit warning" data-claim data-claim-id="STATUS-002" data-evidence-class="unresolved" data-source-ref="validation-report.json">
+      <span class="evidence-label unresolved">unresolved</span>
+      <b>이 보고서가 답하지 않는 것</b>
+      <ul>
+        <li>공식 upstream 의도와 현행 제품 전체 기능</li>
+        <li>실제 runtime hot path와 장애율</li>
+        <li>공식 module owner 또는 bounded context</li>
+        <li>구현·리팩터링·출판의 승인 여부</li>
+      </ul>
+    </aside>
+  </div>
+  <div class="quote">같은 코드도 “무엇을 관찰했는가”와 “무엇을 해석했는가”를 나누면 훨씬 정확하게 읽힌다.</div>
+  <div class="contents">
+    <article><b>01</b><strong>상태와 실행의 한 줄 구조</strong><span>04–08</span></article>
+    <article><b>02</b><strong>열두 알고리즘의 경계 불변식</strong><span>09–20</span></article>
+    <article><b>03</b><strong>물리 topology와 의미 모듈 후보</strong><span>22–26</span></article>
+    <article><b>04</b><strong>관리·증거·점진적 모듈화</strong><span>27–31</span></article>
+    <article><b>05</b><strong>미해결 질문과 근거 색인</strong><span>32–37</span></article>
+  </div>
+</section>
+
+<section class="page notebook" data-section="근거 문법" data-coverage="status-provenance-limitations evidence-governance">
+  <div class="running"><b>Evidence notebook</b><span>근거 등급은 장식이 아니다</span></div>
+  <div class="eyebrow">Provenance and authority</div>
+  <h2>네 종류의 문장을 같은 목소리로 쓰지 않는다</h2>
+  <p class="lead">원천 분석의 <em>source-observed</em>는 이 책에서 <em>observed_project_fact</em>로 번역한다. 나머지 문장은 배경, 추론, 미해결 상태를 명시한다.</p>
+  <div class="equal">
+    <div class="semantic-unit rule-section" data-claim data-claim-id="EVID-001" data-evidence-class="observed_project_fact" data-source-ref="algorithm-catalog.json;module-topology.json">
+      <span class="evidence-label observed">observed_project_fact</span>
+      <h3>고정 snapshot에서 직접 확인</h3>
+      <p>source path, line locator, 정적 import 수, algorithm transition처럼 현재 bundle의 근거가 직접 지지한다. 단, 정적 관찰은 runtime reachability를 증명하지 않는다.</p>
+    </div>
+    <div class="semantic-unit rule-section" data-claim data-claim-id="EVID-002" data-evidence-class="external_background" data-source-ref="source-to-claim-packet.json:SRC-MDN-GENERATOR;SRC-ANTHROPIC-TOOL-LOOP">
+      <span class="evidence-label background">external_background</span>
+      <h3>이해에 필요한 일반 개념</h3>
+      <p>generator의 pause/resume, client tool loop처럼 공식 기술 문서가 설명하는 배경이다. 배경 개념은 프로젝트 구현의 증거가 아니며 적용 범위를 따로 적는다.</p>
+    </div>
+    <div class="semantic-unit rule-section" data-claim data-claim-id="EVID-003" data-evidence-class="project_inference" data-source-ref="semantic-module-candidates.json;PROJECT-ANALYSIS.md">
+      <span class="evidence-label inference">project_inference</span>
+      <h3>사실과 배경을 잇는 명시적 해석</h3>
+      <p>예를 들어 여덟 의미 모듈은 현행 package가 아니라 책임을 따라 읽기 위한 분석 가설이다. 반증 조건과 extraction risk를 함께 둔다.</p>
+    </div>
+    <div class="semantic-unit rule-section" data-claim data-claim-id="EVID-004" data-evidence-class="unresolved" data-source-ref="validation-report.json;source-state.json">
+      <span class="evidence-label unresolved">unresolved</span>
+      <h3>관찰 범위 밖의 질문</h3>
+      <p>누락된 feature-gated source, 공식 ownership, production behavior, runtime trace는 보이지 않는다. 일반 튜토리얼로 빈칸을 채우지 않는다.</p>
+    </div>
+  </div>
+  <div class="warning"><b>Authority 경계</b> — candidate 작성, worker contribution, PDF 생성은 activation·acceptance·publication·integration·settlement가 아니다.</div>
+</section>
+
+<section class="page" data-section="선수지식" data-coverage="code-system-flow">
+  <div class="running"><b>선수지식</b><span>문법보다 먼저 필요한 세 가지 모델</span></div>
+  <div class="eyebrow">Prerequisite bridge</div>
+  <h2>상태 기계, 효과 경계, 기록 그래프</h2>
+  <p class="lead">프로젝트의 긴 함수들을 이해하려면 코드 문법보다 “무엇이 상태이고, 누가 전이를 허용하며, 무엇이 다시 읽힐 기록이 되는가”를 먼저 구분해야 한다.</p>
+  <div class="three">
+    <div class="semantic-unit metric" data-claim data-claim-id="BG-STATE" data-evidence-class="external_background" data-source-ref="source-to-claim-packet.json:SRC-MDN-GENERATOR;SRC-MDN-YIELD">
+      <span class="evidence-label background">external_background</span>
+      <h3>중단 가능한 상태 기계</h3>
+      <p class="small">generator는 return으로 끝내기 전에 yield로 frame을 보존할 수 있다. 여기서는 문법 자체보다 suspended·running·completed 사이의 제어 전달이 중요하다.</p>
+    </div>
+    <div class="semantic-unit metric" data-claim data-claim-id="BG-EFFECT" data-evidence-class="external_background" data-source-ref="source-to-claim-packet.json:SRC-ANTHROPIC-TOOL-LOOP">
+      <span class="evidence-label background">external_background</span>
+      <h3>요청과 효과의 분리</h3>
+      <p class="small">모델의 tool call은 외부 세계를 바꾼 결과가 아니다. client가 schema, permission, executor를 통과시킨 뒤 tool_result를 다음 요청에 돌려준다.</p>
+    </div>
+    <div class="semantic-unit metric" data-claim data-claim-id="INF-JOURNAL" data-evidence-class="project_inference" data-source-ref="algorithm-catalog.json:ALG-TRANSCRIPT-APPEND;ALG-RESUME-GRAPH">
+      <span class="evidence-label inference">project_inference</span>
+      <h3>로그가 아니라 복구 그래프</h3>
+      <p class="small">JSONL append와 parentUuid 복구를 함께 보면 transcript는 단순 출력 보관이 아니라 다음 turn과 resume를 재구성하는 graph journal로 읽을 수 있다.</p>
+    </div>
+  </div>
+  <figure class="diagram semantic-unit" data-claim data-claim-id="BG-FLOW" data-evidence-class="project_inference" data-source-ref="PROJECT-ANALYSIS.md;algorithm-catalog.json">
+    <div class="flow"><div class="node">trigger</div><div class="arrow"></div><div class="node">state</div><div class="arrow"></div><div class="node">transition</div><div class="arrow"></div><div class="node red">failure</div><div class="arrow"></div><div class="node">recovery</div></div>
+    <figcaption>이 보고서는 모든 결정적 알고리즘을 같은 여섯 질문으로 읽는다: 무엇이 시작하고, 어떤 상태를 보유하며, 어떻게 전이하고, 무엇을 지켜야 하며, 어디서 실패하고, 어떻게 닫는가.</figcaption>
+  </figure>
+  <div class="transition"><b>다음 단계</b> 세 개념을 실제 실행 흐름에 겹치면 input, model stream, tool effect, transcript가 하나의 순환 구조로 연결된다.</div>
+</section>
+
+<section class="page" data-section="시스템 모델" data-coverage="code-system-flow">
+  <div class="running"><b>System model</b><span>입력에서 복구까지</span></div>
+  <div class="eyebrow">One-sentence architecture</div>
+  <h2>이 시스템의 중심은 채팅 화면이 아니라<br>결과를 다시 입력으로 만드는 상태 기계다</h2>
+  <p class="lead">입력은 분류되고, turn은 provider stream을 소비하며, 허용된 tool effect를 실행하고, 결과와 transcript를 다음 turn 또는 resume가 읽을 수 있는 형태로 닫는다.</p>
+  <figure class="diagram semantic-unit" data-claim data-claim-id="FLOW-001" data-evidence-class="observed_project_fact" data-source-ref="PROJECT-ANALYSIS.md;algorithm-catalog.json">
+    <div class="flow"><div class="node">input<br>dispatch</div><div class="arrow"></div><div class="node">turn<br>engine</div><div class="arrow"></div><div class="node">stream<br>reducer</div><div class="arrow"></div><div class="node red">effect<br>runtime</div><div class="arrow"></div><div class="node">transcript<br>recovery</div></div>
+    <figcaption>그림 1. 제안된 tool use는 effect runtime을 통과해야 하며, tool_result와 transcript가 다시 turn engine의 문맥이 된다.</figcaption>
+  </figure>
+  <div class="columns">
+    <div class="semantic-unit" data-claim data-claim-id="FLOW-002" data-evidence-class="observed_project_fact" data-source-ref="PROJECT-ANALYSIS.md:결정적인 실행 흐름">
+      <h3>제어의 왕복</h3>
+      <p><code>src/query.ts</code>의 generator loop는 message, turn count, compaction과 pending tool state를 보유한다. <code>src/services/api/claude.ts</code>는 provider event를 내부 content block과 usage·stop reason으로 줄인다.</p>
+      <p>tool proposal은 <code>toolExecution.ts</code>와 <code>toolOrchestration.ts</code>에서 validation, hook, permission, scheduling을 통과한다. 결과는 protocol-compatible <code>tool_result</code>로 닫혀 다음 model turn에 재주입된다.</p>
+    </div>
+    <div class="semantic-unit" data-claim data-claim-id="FLOW-003" data-evidence-class="observed_project_fact" data-source-ref="PROJECT-ANALYSIS.md:경계 불변식">
+      <h3>흐름을 지키는 불변식</h3>
+      <p>핵심은 함수의 개수가 아니라 짝과 순서다. tool_use에는 tool_result가 필요하고, 실패한 fallback의 결과는 폐기되어야 하며, abort도 미완료 result를 닫아야 한다.</p>
+      <p>session journal은 append 순서를 보존하고 parent topology를 다시 만들 수 있어야 한다. compaction은 정보를 잃는 대신 무엇을 보존했는지를 명시해야 한다.</p>
+    </div>
+  </div>
+  <div class="transition"><b>전환</b> 다음 두 면은 같은 사용자 요청을 따라가며 각 알고리즘이 언제 소유권을 넘기는지 추적한다.</div>
+</section>
+
+<section class="page notebook" data-section="전체 순서" data-coverage="code-system-flow runtime-algorithms">
+  <div class="running"><b>Sequence review</b><span>소유권이 바뀌는 지점</span></div>
+  <div class="eyebrow">End-to-end sequence</div>
+  <h2>하나의 요청은 일곱 번 의미가 바뀐다</h2>
+  <p class="lead">효과 단계의 닫힘 신호는 <span style="font-family:var(--font-body)">tool_result</span>다. 입력 intent와 internal message는 provider event를 거쳐 durable record와 다음 turn의 문맥이 된다.</p>
+  <table class="semantic-unit" data-claim data-claim-id="FLOW-004" data-evidence-class="observed_project_fact" data-source-ref="algorithm-catalog.json:ALG-INPUT-DISPATCH;ALG-QUERY-ENGINE-PROJECTION;ALG-TURN-LOOP;ALG-STREAM-REDUCER;ALG-EFFECT-INTERPRETER;ALG-TRANSCRIPT-APPEND;ALG-RESUME-GRAPH">
+    <thead><tr><th>단계</th><th>소유 상태</th><th>넘기는 값</th><th>깨지기 쉬운 경계</th></tr></thead>
+    <tbody>
+      <tr><td>01 입력 분류</td><td>mode, content block, origin</td><td>prompt 또는 control action</td><td>remote command safety</td></tr>
+      <tr><td>02 대화 투영</td><td>messages, session, abort</td><td>internal message + context</td><td>checkpoint ordering</td></tr>
+      <tr><td>03 turn loop</td><td>turn/recovery budget</td><td>model request</td><td>terminal reason, abort</td></tr>
+      <tr><td>04 stream reduce</td><td>partial blocks, usage</td><td>assistant slices / tool use</td><td>late finalization</td></tr>
+      <tr><td>05 effect 해석</td><td>schema, permission, hooks</td><td>tool_result</td><td>denial vs execution</td></tr>
+      <tr><td>06 transcript append</td><td>UUID, parent, write queue</td><td>durable JSONL entries</td><td>ordered flush</td></tr>
+      <tr><td>07 resume/continue</td><td>graph, leaf, compact boundary</td><td>reconstructed context</td><td>cycle/orphan repair</td></tr>
+    </tbody>
+  </table>
+  <div class="rule-section semantic-unit" data-claim data-claim-id="FLOW-005" data-evidence-class="project_inference" data-source-ref="PROJECT-ANALYSIS.md;algorithm-catalog.json">
+    <span class="evidence-label inference">project_inference</span>
+    <p class="claim-line">이 흐름을 “요청 → 응답”으로만 그리면 가장 중요한 authority와 durability 경계가 사라진다.</p>
+    <p>따라서 이 책은 UI, model, tool을 독립 기능 카드로 나열하지 않고, 각 단계가 다음 단계에 넘기는 값과 실패했을 때 닫아야 하는 protocol을 함께 표시한다.</p>
+  </div>
+</section>
+
+<section class="page" data-section="Worked trace" data-coverage="code-system-flow runtime-algorithms" data-continuation-id="TRACE-E2E" data-continuation-part="start" data-step-range="1-5">
+  <div class="running"><b>Worked trace · 1/2</b><span>파일 수정 요청이 effect가 되기까지</span></div>
+  <div class="eyebrow">Concrete example</div>
+  <h2>“설정 파일의 값을 바꿔 줘”라는 요청</h2>
+  <p class="lead">예시는 실제 prompt 내용을 재현하지 않고, source에서 관찰된 경계만 사용해 한 요청의 state와 authority 이동을 설명한다.</p>
+  <div class="semantic-unit" data-claim data-claim-id="TRACE-001" data-evidence-class="project_inference" data-source-ref="algorithm-catalog.json:ALG-INPUT-DISPATCH;ALG-QUERY-ENGINE-PROJECTION;ALG-TURN-LOOP;ALG-STREAM-REDUCER;ALG-EFFECT-INTERPRETER">
+    <div class="roadmap"><div class="phase">STEP 01</div><div class="body"><h3>입력을 분류한다</h3><p><code>processUserInputBase</code>는 mode와 origin을 확인하고 media와 attachment를 정규화한다. remote bridge가 허용되지 않은 local command를 보내면 model query 전에 차단한다.</p></div></div>
+    <div class="roadmap"><div class="phase">STEP 02</div><div class="body"><h3>대화 owner가 turn 입력을 만든다</h3><p><code>QueryEngine</code>은 external request를 internal message로 바꾸고 session identity와 abort controller가 들어 있는 context를 결합한다.</p></div></div>
+    <div class="roadmap"><div class="phase">STEP 03</div><div class="body"><h3>generator turn을 시작한다</h3><p><code>query()</code>는 message와 ToolUseContext를 받고 model stream을 연다. turnCount와 recovery budget은 이 실행이 무한히 반복되지 않게 한다.</p></div></div>
+    <div class="roadmap"><div class="phase">STEP 04</div><div class="body"><h3>partial stream을 내부 block으로 줄인다</h3><p>content block의 index와 type을 검증하며 delta를 누적한다. file edit tool_use가 완성되면 아직 외부 파일은 바뀌지 않았다.</p></div></div>
+    <div class="roadmap"><div class="phase">STEP 05</div><div class="body"><h3>효과를 허가할 수 있는지 판단한다</h3><p>tool lookup, schema validation, pre-hook, permission을 통과한 요청만 executor로 간다. denial도 protocol-compatible tool_result로 돌아간다.</p></div></div>
+  </div>
+  <div class="transition"><b>계속</b> 다음 면은 file edit의 stale check와 commit point, tool_result closure, transcript append, resume 가능 상태까지 이어진다.</div>
+</section>
+
+<section class="page" data-section="Worked trace" data-coverage="code-system-flow runtime-algorithms" data-continuation-id="TRACE-E2E" data-continuation-part="continued" data-step-range="6-10">
+  <div class="running"><b>Worked trace · 2/2</b><span>state recap: tool request admitted</span></div>
+  <span class="continued">TRACE-E2E · CONTINUED · STEPS 06–10</span>
+  <h2>효과의 완료와 다음 turn의 시작</h2>
+  <p class="lead">현재 상태: tool identity와 input은 검증되었고 permission은 allow다. 아직 성공을 주장할 수 없으며 filesystem commit과 결과 closure가 남아 있다.</p>
+  <div class="semantic-unit" data-claim data-claim-id="TRACE-002" data-evidence-class="project_inference" data-source-ref="algorithm-catalog.json:ALG-FILE-EDIT-COMMIT;ALG-EFFECT-INTERPRETER;ALG-TRANSCRIPT-APPEND;ALG-API-NORMALIZATION;ALG-RESUME-GRAPH">
+    <div class="roadmap"><div class="phase">STEP 06</div><div class="body"><h3>읽었던 파일이 아직 같은지 확인한다</h3><p>FileEditTool은 expected string과 match cardinality를 검사하고 동기적으로 다시 읽는다. stale이면 write 전에 실패한다.</p></div></div>
+    <div class="roadmap"><div class="phase">STEP 07</div><div class="body"><h3>temporary file을 flush하고 rename을 시도한다</h3><p>mode와 symlink behavior를 가능한 범위에서 보존한다. atomic replace가 실패하면 flushed direct write로 fallback하지만 cleanup은 best effort다.</p></div></div>
+    <div class="roadmap"><div class="phase">STEP 08</div><div class="body"><h3>결과를 tool_result로 닫는다</h3><p>성공·실패·거부·abort는 서로 다른 의미를 유지한 채 result가 된다. turn loop는 누락된 result가 있으면 합성해 pairing invariant를 회복한다.</p></div></div>
+    <div class="roadmap"><div class="phase">STEP 09</div><div class="body"><h3>journal에 순서대로 append한다</h3><p>message UUID와 parent cursor를 연결하고 per-file queue가 JSONL line 순서를 보존한다. 이 기록은 다음 model request와 resume의 근거다.</p></div></div>
+    <div class="roadmap"><div class="phase">STEP 10</div><div class="body"><h3>다음 turn 또는 복구 경로를 선택한다</h3><p>정상 경로라면 result를 다시 model context로 넣는다. 재개라면 parent graph, compact segment, orphan sibling을 repair한 뒤 bounded chain을 구성한다.</p></div></div>
+  </div>
+  <div class="warning"><b>예제의 한계</b> — 이 sequence는 catalog의 관찰된 경계를 연결한 설명용 inference다. 실제 runtime trace나 production latency를 관찰한 기록은 아니다.</div>
+</section>
+
+<div id="algorithm-pages"></div>
+
+<section class="page notebook compact" data-section="런타임 불변식" data-coverage="runtime-algorithms evidence-governance">
+  <div class="running"><b>Evidence notebook</b><span>열두 알고리즘을 관통하는 조건</span></div>
+  <div class="eyebrow">Cross-algorithm review</div>
+  <h2>성공 경로보다 닫히는 규칙이 시스템을 설명한다</h2>
+  <table class="semantic-unit" data-claim data-claim-id="INV-001" data-evidence-class="project_inference" data-source-ref="algorithm-catalog.json">
+    <thead><tr><th>불변식</th><th>관련 알고리즘</th><th>깨졌을 때 보이는 현상</th><th>회복 수단</th></tr></thead>
+    <tbody>
+      <tr><td>proposal/result pairing</td><td>turn, effect, normalization, resume</td><td>provider protocol 불일치, 다음 turn 실패</td><td>synthetic error result, orphan 제거, sibling 복구</td></tr>
+      <tr><td>bounded progress</td><td>turn, compaction, reconnect</td><td>무한 retry 또는 정지하지 않는 session</td><td>turn budget, retry cap, circuit breaker</td></tr>
+      <tr><td>ordered durability</td><td>query engine, transcript append</td><td>checkpoint가 message보다 앞서거나 parent chain 손실</td><td>per-file queue, ordered mutation</td></tr>
+      <tr><td>authority before effect</td><td>input dispatch, effect interpreter</td><td>remote origin 또는 denial이 실제 효과로 이동</td><td>safety gate, permission decision, structured denial</td></tr>
+      <tr><td>deterministic state fold</td><td>stream reducer, scheduler</td><td>event 순서나 동시성에 따라 context가 달라짐</td><td>index/type check, original-order modifier fold</td></tr>
+      <tr><td>stale-state rejection</td><td>file edit commit</td><td>읽은 뒤 바뀐 파일에 오래된 edit 적용</td><td>synchronous reread, equality proof, pre-write failure</td></tr>
+    </tbody>
+  </table>
+  <div class="equal">
+    <div class="semantic-unit rule-section" data-claim data-claim-id="INV-002" data-evidence-class="observed_project_fact" data-source-ref="algorithm-catalog.json">
+      <span class="evidence-label observed">observed_project_fact</span>
+      <h3>catalog가 직접 말하는 것</h3>
+      <p>각 card는 trigger, state, transition, invariant, failure/recovery와 source locator를 가진다. source reference 89개는 존재·line-range 검사를 통과했다.</p>
+    </div>
+    <div class="semantic-unit rule-section" data-claim data-claim-id="INV-003" data-evidence-class="unresolved" data-source-ref="validation-report.json">
+      <span class="evidence-label unresolved">unresolved</span>
+      <h3>아직 검증하지 못한 것</h3>
+      <p>runtime trace와 conventional test corpus는 없다. 따라서 실제 빈도, hot path, 성능, product parity는 이 불변식 표에서 유도할 수 없다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="page" data-section="물리 topology" data-coverage="physical-topology">
+  <div class="running"><b>Physical topology</b><span>파일 그래프를 판정이 아닌 관측으로 읽기</span></div>
+  <div class="eyebrow">Static structure</div>
+  <h2>디렉터리는 많지만 의존 그래프는 큰 덩어리다</h2>
+  <p class="lead">정적 import 분석은 “어디를 먼저 옮길까”에 답하지 않는다. 대신 변경 blast radius를 과소평가하면 안 된다는 경고를 준다.</p>
+  <div class="three semantic-unit" data-claim data-claim-id="TOPO-001" data-evidence-class="observed_project_fact" data-source-ref="module-topology.json">
+    <div class="metric"><b>1,884</b><span>분석한 TypeScript/TSX 구현 파일</span></div>
+    <div class="metric"><b>13,219</b><span>해결된 import occurrence</span></div>
+    <div class="metric"><b>65.25%</b><span>top-level group을 넘는 import occurrence</span></div>
+    <div class="metric"><b>35 / 36</b><span>하나의 cyclic group SCC에 포함된 group</span></div>
+    <div class="metric"><b>1,433</b><span>type-inclusive 최대 file SCC</span></div>
+    <div class="metric"><b>591</b><span>runtime-like 휴리스틱 최대 file SCC</span></div>
+  </div>
+  <figure class="diagram semantic-unit" data-claim data-claim-id="TOPO-002" data-evidence-class="observed_project_fact" data-source-ref="module-topology.json:topCrossGroupEdges">
+    <div class="flow"><div class="node">components</div><div class="arrow"></div><div class="node red">utils<br>564 files</div><div class="arrow"></div><div class="node">services</div><div class="arrow"></div><div class="node">tools</div></div>
+    <figcaption>상위 cross-group edge는 components→utils 868회, tools→utils 696회, services→utils 669회다. 동시에 utils→services와 utils→tools도 관찰되어 단방향 layer로 단순화하기 어렵다.</figcaption>
+  </figure>
+  <div class="warning"><b>해석 금지</b> SCC가 크다고 자동으로 결함인 것은 아니다. runtime-like graph도 실제 실행이 아니라 type-only edge를 제외한 정적 syntax 휴리스틱이다.</div>
+</section>
+
+<section class="page notebook" data-section="Topology evidence" data-coverage="physical-topology evidence-governance">
+  <div class="running"><b>Evidence notebook</b><span>숫자의 적용 범위</span></div>
+  <div class="eyebrow">Metric interpretation</div>
+  <h2>617개의 unresolved import는 617개의 버그가 아니다</h2>
+  <div class="two">
+    <div class="semantic-unit" data-claim data-claim-id="TOPO-003" data-evidence-class="observed_project_fact" data-source-ref="module-topology.json">
+      <span class="evidence-label observed">observed_project_fact</span>
+      <p class="claim-line">analyzer는 617 unresolved internal import occurrence와 250 raw specifier를 기록했다.</p>
+      <p>분석기는 TypeScript AST의 import/export와 literal dynamic import/require, relative와 <code>src/</code> specifier를 대상으로 한다. directory는 resolved module로 세지 않고, non-TypeScript file은 occurrence로만 처리한다.</p>
+      <div class="source-line">module-topology.json · analyzer semantics · totals</div>
+    </div>
+    <div class="semantic-unit" data-claim data-claim-id="TOPO-004" data-evidence-class="unresolved" data-source-ref="module-topology.json:limitations;source-state.json">
+      <span class="evidence-label unresolved">unresolved</span>
+      <p class="claim-line">unresolved의 원인은 현재 bundle만으로 분해할 수 없다.</p>
+      <p>누락된 feature-gated module, resolver 한계, generated file, specifier 이상이 함께 섞일 수 있다. 따라서 occurrence 수를 결함 수나 복구 가능 파일 수로 바꾸어 말하지 않는다.</p>
+    </div>
+  </div>
+  <div class="rule-section semantic-unit" data-claim data-claim-id="TOPO-005" data-evidence-class="project_inference" data-source-ref="module-topology.json;PROJECT-ANALYSIS.md">
+    <span class="evidence-label inference">project_inference</span>
+    <h3>왜 이 숫자가 중요한가</h3>
+    <p>directory move를 첫 단계로 삼으면 type, UI, service, tool, root composition의 숨은 계약을 동시에 흔들 가능성이 크다. topology는 추출 순서를 결정하지 않지만, 먼저 behavior fixture와 compatibility facade가 필요하다는 운영 우선순위를 지지한다.</p>
+  </div>
+  <table><thead><tr><th>측정</th><th>말할 수 있음</th><th>말할 수 없음</th></tr></thead><tbody><tr><td>cross-group occurrence</td><td>정적 참조 집중도</td><td>runtime call frequency</td></tr><tr><td>SCC</td><td>상호 도달 가능한 import graph</td><td>각 edge의 설계 결함 여부</td></tr><tr><td>unresolved specifier</td><td>현재 resolver가 찾지 못함</td><td>원본 제품에도 파일이 없음</td></tr></tbody></table>
+</section>
+
+<section class="page compact" data-section="의미 모듈" data-coverage="semantic-module-candidates" data-continuation-id="SEMANTIC-MODULES" data-continuation-part="start" data-step-range="M1-M4">
+  <div class="running"><b>Semantic modules · 1/2</b><span>공식 경계가 아닌 책임 기반 가설</span></div>
+  <div class="eyebrow">Bounded candidates</div>
+  <h2>파일 위치보다 “무엇을 소유하는가”로 다시 묶는다</h2>
+  <p class="lead">여덟 후보는 현행 package나 upstream bounded context가 아니다. 실행 흐름과 import topology를 함께 읽기 위한 project inference다.</p>
+  <div class="equal semantic-unit" data-claim data-claim-id="MOD-001" data-evidence-class="project_inference" data-source-ref="semantic-module-candidates.json:M1-M4">
+    <div>
+      <article class="module"><h3>M1 · composition-routing</h3><p>bootstrap, command/tool/surface 선택과 interactive/headless 조립을 맡는 가설. root fan-out이 커서 추출 위험은 높다.</p><code>main.tsx · tools.ts · commands.ts · bootstrap/** · entrypoints/**</code></article>
+      <article class="module"><h3>M2 · turn-engine</h3><p>user turn, model iteration, tool-result reinjection, limit와 terminal projection을 소유한다. cross-cutting context 때문에 위험이 높다.</p><code>query.ts · QueryEngine.ts · queryHelpers.ts · context.ts</code></article>
+    </div>
+    <div>
+      <article class="module"><h3>M3 · effect-runtime</h3><p>schema, hook, permission, concurrency, execution, result normalization으로 proposal을 effect로 해석한다.</p><code>services/tools/** · hooks/** · Tool.ts</code></article>
+      <article class="module"><h3>M4 · built-in-effects-and-presenters</h3><p>built-in tool과 UI/terminal presentation 계약을 구현한다. surface가 넓지만 runtime 경계와 분리해서 보아야 한다.</p><code>tools/** · components/** · ink/**</code></article>
+    </div>
+  </div>
+  <div class="transition"><b>계속</b> 다음 면은 durability, extension, surface, platform 책임을 분리하고 후보 간 의존을 읽는다.</div>
+</section>
+
+<section class="page compact" data-section="의미 모듈" data-coverage="semantic-module-candidates" data-continuation-id="SEMANTIC-MODULES" data-continuation-part="continued" data-step-range="M5-M8">
+  <div class="running"><b>Semantic modules · 2/2</b><span>durability와 adapter의 분리</span></div>
+  <span class="continued">SEMANTIC-MODULES · CONTINUED · M5–M8</span>
+  <h2>기록, 확장, 표면, 플랫폼은 서로 다른 변화 이유를 가진다</h2>
+  <div class="equal semantic-unit" data-claim data-claim-id="MOD-002" data-evidence-class="project_inference" data-source-ref="semantic-module-candidates.json:M5-M8">
+    <div>
+      <article class="module"><h3>M5 · session-recovery</h3><p>append-only transcript, parent-linked reconstruction, compaction, resume topology repair를 묶는다. round-trip 의미가 extraction 위험이다.</p><code>sessionStorage.ts · services/compact/** · SessionMemory/**</code></article>
+      <article class="module"><h3>M6 · extension-runtime</h3><p>plugin, skill, MCP capability, hook extension을 발견하고 호스팅한다. feature gate와 provider variance가 크다.</p><code>plugins/** · skills/** · mcpClient* · hooks/**</code></article>
+    </div>
+    <div>
+      <article class="module"><h3>M7 · surface-adapters</h3><p>CLI, bridge, remote, SDK, server transport를 core turn/effect semantics에 맞춘다. transport별 차이를 adapter 책임으로 본다.</p><code>cli/** · bridge/** · remote/** · server/**</code></article>
+      <article class="module"><h3>M8 · platform-adapters</h3><p>filesystem, process, config, telemetry, permission, OS, provider mechanism을 제공한다. <code>utils</code> 전체를 하나의 모듈로 취급해서는 안 된다.</p><code>utils/** · services/api/** · analytics/** · native-ts/**</code></article>
+    </div>
+  </div>
+  <figure class="diagram"><div class="flow"><div class="node">surfaces<br>M7</div><div class="arrow"></div><div class="node">turn<br>M2</div><div class="arrow"></div><div class="node red">effects<br>M3/M4</div><div class="arrow"></div><div class="node">recovery<br>M5</div></div><figcaption>M1은 이들을 조립하고, M6은 확장을 연결하며, M8은 여러 후보에 platform mechanism을 제공한다. 화살표는 분석용 책임 관계이며 현행 package boundary가 아니다.</figcaption></figure>
+  <div class="warning"><b>반증 조건</b> runtime trace가 책임 mapping과 충돌하거나 공식 ownership evidence가 도착하면 후보 집합은 invalidation 대상이다.</div>
+</section>
+
+<section class="page" data-section="코드 읽기" data-coverage="code-system-flow semantic-module-candidates">
+  <div class="running"><b>Code reading map</b><span>directory tour가 아닌 question-driven path</span></div>
+  <div class="eyebrow">How to read</div>
+  <h2>진입점보다 먼저 불변식을 고르고 양쪽을 따라간다</h2>
+  <p class="lead">대형 SCC에서는 “main부터 순서대로” 읽기가 쉽게 분산된다. 하나의 contract를 고르고 producer, transformer, consumer, durable record를 왕복하는 편이 낫다.</p>
+  <table class="semantic-unit" data-claim data-claim-id="READ-001" data-evidence-class="project_inference" data-source-ref="PROJECT-ANALYSIS.md;algorithm-catalog.json;semantic-module-candidates.json">
+    <thead><tr><th>질문</th><th>시작 지점</th><th>따라갈 경계</th><th>도착 확인</th></tr></thead>
+    <tbody>
+      <tr><td>turn은 왜 계속되는가?</td><td><code>query.ts</code></td><td>stream → tool result → terminal reason</td><td>bounded continuation 또는 terminal</td></tr>
+      <tr><td>요청이 언제 effect가 되는가?</td><td><code>toolExecution.ts</code></td><td>schema → hook → permission → executor</td><td>structured result와 post-hook</td></tr>
+      <tr><td>partial stream은 언제 message가 되는가?</td><td><code>claude.ts</code></td><td>block index/type → delta → late usage</td><td>queued transcript reference</td></tr>
+      <tr><td>중단 뒤 무엇을 복구하는가?</td><td><code>sessionStorage.ts</code></td><td>UUID map → parent chain → compact/snip repair</td><td>bounded leaf-to-root chain</td></tr>
+      <tr><td>동시 tool은 state를 어떻게 합치는가?</td><td><code>toolOrchestration.ts</code></td><td>safety partition → bounded batch → ordered fold</td><td>deterministic context</td></tr>
+    </tbody>
+  </table>
+  <div class="two">
+    <div class="note"><b>읽기 규칙</b><br>source locator를 확인한 뒤 failure branch를 먼저 찾고, 해당 실패를 다음 layer가 어떤 result로 관찰하는지 확인한다.</div>
+    <div class="warning"><b>피해야 할 규칙</b><br>파일 수가 적거나 directory 이름이 좋아 보인다는 이유로 extraction 후보를 정하지 않는다.</div>
+  </div>
+</section>
+
+<section class="page" data-section="프로젝트 관리" data-coverage="project-management">
+  <div class="running"><b>Project management</b><span>큰 리팩터링을 작은 증거 단위로 바꾸기</span></div>
+  <div class="eyebrow">Work-item contract</div>
+  <h2>첫 산출물은 이동된 디렉터리가 아니라<br>재현 가능한 behavior fixture다</h2>
+  <p class="lead">관례적 test/spec corpus가 관찰되지 않은 snapshot에서는 구조 개선의 안전성을 기존 테스트 수로 가정할 수 없다. 먼저 무엇을 보존할지 실행 가능한 계약으로 만든다.</p>
+  <div class="two">
+    <div class="semantic-unit" data-claim data-claim-id="PM-001" data-evidence-class="project_inference" data-source-ref="project-operating-model.md;PROJECT-ANALYSIS.md">
+      <span class="evidence-label inference">project_inference</span>
+      <h3>한 work item이 가져야 할 것</h3>
+      <ol><li>하나의 observable contract 또는 invariant</li><li>정확한 source revision과 evidence line</li><li>success와 failure fixture</li><li>owner와 consumer, non-goal</li><li>targeted → differential → wider check</li><li>rollback 또는 compatibility 기간</li></ol>
+    </div>
+    <div class="semantic-unit" data-claim data-claim-id="PM-002" data-evidence-class="observed_project_fact" data-source-ref="validation-report.json;source-state.json">
+      <span class="evidence-label observed">observed_project_fact</span>
+      <h3>현재 증거가 요구하는 제약</h3>
+      <p>bounded filename scan에서 conventional test/spec file은 관찰되지 않았다. 이는 snapshot 밖에 테스트가 없었다는 증명이 아니다. build와 runtime도 실행하지 않았다.</p>
+      <p>따라서 repository-wide failure를 곧바로 candidate 결함으로 귀속하지 않고 candidate-related, pre-existing, environment/tool, unresolved로 분류해야 한다.</p>
+    </div>
+  </div>
+  <figure class="diagram"><div class="flow"><div class="node">shape</div><div class="arrow"></div><div class="node">static</div><div class="arrow"></div><div class="node">contract</div><div class="arrow"></div><div class="node red">differential</div><div class="arrow"></div><div class="node">system</div></div><figcaption>검증 계층은 작은 shape와 static check에서 시작해 behavior contract와 변경 전후 trace로 확장한다. 넓은 system check는 마지막에 수행한다.</figcaption></figure>
+</section>
+
+<section class="page notebook" data-section="증거 거버넌스" data-coverage="evidence-governance project-management">
+  <div class="running"><b>Evidence governance</b><span>상태와 권위를 분리한다</span></div>
+  <div class="eyebrow">Claim lifecycle</div>
+  <h2>worker_done과 clean worktree는 결론의 증거가 아니다</h2>
+  <div class="equal">
+    <div class="semantic-unit rule-section" data-claim data-claim-id="GOV-001" data-evidence-class="project_inference" data-source-ref="project-operating-model.md;artifact-contracts.json">
+      <span class="evidence-label inference">project_inference</span>
+      <h3>claim과 lifecycle을 직교시킨다</h3>
+      <p>claim class는 source-observed, repository-authored, bounded-inference, unknown으로, lifecycle은 pending, observed, corroborated, candidate, rejected, superseded로 관리한다. “무슨 종류의 주장인가”와 “검토가 어디까지 왔는가”는 다른 축이다.</p>
+    </div>
+    <div class="semantic-unit rule-section" data-claim data-claim-id="GOV-002" data-evidence-class="observed_project_fact" data-source-ref="project-operating-model.md">
+      <span class="evidence-label observed">observed_project_fact</span>
+      <h3>운영 상태가 의미하지 않는 것</h3>
+      <p>runtime session start는 Agent activation이 아니고, worker contribution은 acceptance가 아니며, report 작성은 publication이 아니다. Git/worktree clean과 worker_done도 settlement 증거가 아니다.</p>
+    </div>
+  </div>
+  <table><thead><tr><th>상태</th><th>뜻</th><th>자동으로 뜻하지 않는 것</th></tr></thead><tbody><tr><td>pass</td><td>지정 check가 해당 revision에서 통과</td><td>전체 정확성·acceptance</td></tr><tr><td>hold</td><td>필요 증거 없음 또는 source 변경</td><td>실패·포기</td></tr><tr><td>fail</td><td>재현 가능한 contract 위반</td><td>인접 artifact의 거절</td></tr><tr><td>candidate</td><td>검토 가능한 제안</td><td>공식 경계·publication</td></tr></tbody></table>
+  <div class="warning"><b>Revision rule</b> 코드와 문서가 같은 revision/digest를 가리키지 않으면 어느 한쪽도 자동으로 최신이라고 간주하지 않는다. material change는 predecessor를 덮어쓰지 않고 successor record로 남긴다.</div>
+</section>
+
+<section class="page" data-section="점진적 모듈화" data-coverage="incremental-modularization semantic-module-candidates">
+  <div class="running"><b>Incremental modularization</b><span>move보다 contract가 먼저</span></div>
+  <div class="eyebrow">Evolution strategy</div>
+  <h2>한 번에 하나의 concrete dependency를 뒤집는다</h2>
+  <p class="lead">큰 SCC를 한 번에 해체하려 하지 않고, 입력·출력·실패 상태를 완전히 기술할 수 있는 leaf policy에서 시작한다.</p>
+  <div class="semantic-unit" data-claim data-claim-id="MODERN-001" data-evidence-class="project_inference" data-source-ref="PROJECT-ANALYSIS.md;project-operating-model.md;semantic-module-candidates.json">
+    <div class="roadmap"><div class="phase">01 FIXTURE</div><div class="body"><p>turn, stream, tool pairing, transcript/resume의 정상·실패 결과를 characterization corpus로 고정한다.</p></div></div>
+    <div class="roadmap"><div class="phase">02 PURE SEAM</div><div class="body"><p>message normalization, pairing repair, scheduling policy, compaction decision처럼 I/O 없이 설명 가능한 policy를 분리한다.</p></div></div>
+    <div class="roadmap"><div class="phase">03 PORT</div><div class="body"><p>filesystem, provider, process, UI를 port 뒤 adapter로 밀어낸다. compatibility facade로 기존 caller를 보존한다.</p></div></div>
+    <div class="roadmap"><div class="phase">04 INVERT</div><div class="body"><p>한 번에 하나의 concrete dependency를 역전하고 event, terminal reason, transcript를 differential 비교한다.</p></div></div>
+    <div class="roadmap"><div class="phase">05 SLICE</div><div class="body"><p>하나의 surface 또는 extension만 vertical slice로 이동한다. package boundary와 rollback을 먼저 정한다.</p></div></div>
+    <div class="roadmap"><div class="phase">06 RETIRE</div><div class="body"><p>consumer가 새 경계를 사용하고 wider fitness가 안정된 뒤에만 barrel, shim, old surface를 제거한다.</p></div></div>
+  </div>
+  <div class="warning"><b>높은 위험의 첫 수</b> <code>query.ts</code>, 전체 <code>utils</code>, root composition을 처음부터 package로 분리하지 않는다. fan-in이 높은 이름은 경계가 아니라 조사 대상이다.</div>
+</section>
+
+<section class="page" data-section="계속 계획" data-coverage="roadmap" data-continuation-id="ROADMAP" data-continuation-part="start" data-step-range="A-B">
+  <div class="running"><b>Continuation roadmap · 1/2</b><span>Phase A–B · 관찰 가능한 기준선부터</span></div>
+  <div class="eyebrow">Report-only phases</div>
+  <h2>A와 B: behavior를 고정하고 실제 경로를 측정한다</h2>
+  <div class="semantic-unit" data-claim data-claim-id="ROAD-001" data-evidence-class="project_inference" data-source-ref="continuation-roadmap.md">
+    <div class="rule-section"><span class="evidence-label inference">project_inference</span><h3>Phase A · Characterization baseline</h3><p>turn terminal-reason table, stream event projection, tool_use/tool_result pairing, transcript append/resume/compaction round-trip corpus를 만든다. 정상뿐 아니라 abort, partial stream, orphan tool use, context overflow를 포함하고 source revision과 fixture provenance를 묶는다.</p></div>
+    <div class="rule-section"><span class="evidence-label inference">project_inference</span><h3>Phase B · Runtime trace map</h3><p>CLI 시작부터 첫 terminal result, permission/hook/execution, transcript write와 resume read를 bounded trace로 측정한다. prompt body와 개인정보는 저장하지 않는다. 실행할 수 없는 feature는 unknown으로 둔다.</p></div>
+  </div>
+  <figure class="diagram"><div class="flow"><div class="node">static<br>edge</div><div class="arrow"></div><div class="node">runtime<br>trace</div><div class="arrow"></div><div class="node red">difference</div><div class="arrow"></div><div class="node">candidate<br>seam</div></div><figcaption>static topology는 trace의 질문을 만들고, runtime trace는 실제 hot path와 비활성 edge를 구분한다. 둘의 차이가 contract seam 후보를 좁힌다.</figcaption></figure>
+  <div class="warning"><b>실행 상태</b> 이 phase들은 report-only 후보이며 owner, plan, transition record가 배정되지 않았다.</div>
+</section>
+
+<section class="page" data-section="계속 계획" data-coverage="roadmap incremental-modularization" data-continuation-id="ROADMAP" data-continuation-part="continued" data-step-range="C-E">
+  <div class="running"><b>Continuation roadmap · 2/2</b><span>seam에서 maintenance까지</span></div>
+  <span class="continued">ROADMAP · CONTINUED · PHASES C–E</span>
+  <h2>C, D, E: 계약을 추출하고 한 slice로 검증한다</h2>
+  <div class="semantic-unit" data-claim data-claim-id="ROAD-002" data-evidence-class="project_inference" data-source-ref="continuation-roadmap.md">
+    <div class="rule-section"><h3>Phase C · Contract seams</h3><p>API normalization과 pairing repair → tool concurrency partition → compaction decision/retry budget → file-edit stale/atomic policy → reconnect/backoff 순으로 검토한다. 각 후보에 caller map, adapter dependency, differential fixture, compatibility facade가 필요하다.</p></div>
+    <div class="rule-section"><h3>Phase D · One vertical slice pilot</h3><p>단일 surface 또는 extension, 제한된 consumer, 되돌릴 수 있는 facade로 좁힌다. package-scoped 검증 뒤 wider fitness를 실행하고 end-to-end 의미가 같을 때만 다음 slice를 연다.</p></div>
+    <div class="rule-section"><h3>Phase E · Governance and maintenance</h3><p>source revision이 바뀔 때 topology analyzer와 evidence line drift 검사를 다시 실행한다. dependency budget, fixture coverage, unresolved import trend, claim supersession을 revision-bound record로 관리한다.</p></div>
+  </div>
+  <table><thead><tr><th>단계</th><th>진입 증거</th><th>중단 조건</th></tr></thead><tbody><tr><td>C</td><td>A/B fixture와 trace</td><td>behavior를 완전히 기술할 수 없음</td></tr><tr><td>D</td><td>seam, facade, rollback</td><td>differential mismatch</td></tr><tr><td>E</td><td>반복 가능한 analyzer/check</td><td>source identity 또는 owner 불명</td></tr></tbody></table>
+  <div class="note"><b>Page policy와 같은 원칙</b> 단계 수도 목표가 아니다. 필요한 evidence가 없으면 다음 phase로 압축해서 넘어가지 않고 hold한다.</div>
+</section>
+
+<section class="page notebook" data-section="미해결 질문" data-coverage="unknowns status-provenance-limitations">
+  <div class="running"><b>Unknown ledger</b><span>빈칸을 결론처럼 보이지 않게 하기</span></div>
+  <div class="eyebrow">Explicit unresolved</div>
+  <h2>현재 snapshot으로 답할 수 없는 질문</h2>
+  <div class="semantic-unit" data-claim data-claim-id="UNKNOWN-001" data-evidence-class="unresolved" data-source-ref="PROJECT-ANALYSIS.md;source-state.json;validation-report.json">
+    <span class="evidence-label unresolved">unresolved</span>
+    <table><thead><tr><th>질문</th><th>왜 모르는가</th><th>필요한 후속 증거</th></tr></thead><tbody>
+      <tr><td>공식 module owner는 누구인가?</td><td>공식 ownership map이 snapshot에 없음</td><td>upstream owner document 또는 accepted boundary record</td></tr>
+      <tr><td>실제 production hot path는 무엇인가?</td><td>runtime trace를 수집하지 않음</td><td>privacy-safe bounded trace</td></tr>
+      <tr><td>누락 모듈이 어떤 behavior를 바꾸는가?</td><td>feature-gated source가 불완전함</td><td>추가 source 또는 controlled build comparison</td></tr>
+      <tr><td>12개 알고리즘이 현재 제품에도 동일한가?</td><td>제3자 복구 snapshot만 분석</td><td>현재 공식 source/runtime evidence</td></tr>
+      <tr><td>어떤 seam이 가장 먼저 안전하게 추출되는가?</td><td>fixture와 differential trace가 아직 없음</td><td>Phase A–C 결과</td></tr>
+      <tr><td>실제 장애율과 성능 병목은 어디인가?</td><td>metrics와 incident evidence가 없음</td><td>operational telemetry와 incident review</td></tr>
+    </tbody></table>
+  </div>
+  <div class="rule-section semantic-unit" data-claim data-claim-id="UNKNOWN-002" data-evidence-class="project_inference" data-source-ref="continuation-roadmap.md">
+    <span class="evidence-label inference">project_inference</span>
+    <p class="claim-line">unknown은 보고서의 결함이 아니라 다음 조사에서 지켜야 할 boundary다.</p>
+    <p>후속 조사의 목적은 모든 빈칸을 채우는 것이 아니라, 독자의 결정에 필요한 빈칸을 정확한 revision과 source class로 좁히는 것이다.</p>
+  </div>
+</section>
+
+<div id="algorithm-index-pages"></div>
+
+<section class="page compact" data-section="용어와 배치" data-coverage="code-system-flow">
+  <div class="running"><b>Glossary</b><span>본문 설명을 대체하지 않는 탐색 장치</span></div>
+  <div class="eyebrow">Reader reference</div>
+  <h2>이 책에서 반복되는 경계 언어</h2>
+  <div class="equal">
+    <dl class="glossary"><dt>turn</dt><dd>한 model request만이 아니라 stream, tool execution, result reinjection과 terminal reason까지 포함하는 실행 단위.</dd><dt>effect</dt><dd>filesystem·process·network처럼 외부 관찰 가능한 상태를 바꾸는 일. tool proposal과 구분한다.</dd><dt>closure</dt><dd>tool_use가 성공·실패·거부·abort 중 하나의 tool_result로 닫히는 protocol 조건.</dd><dt>projection</dt><dd>내부 state나 message를 UI, SDK, provider format으로 변환한 표현.</dd></dl>
+    <dl class="glossary"><dt>journal</dt><dd>순서와 parent link를 보존해 다시 읽을 수 있는 append 기록.</dd><dt>compaction</dt><dd>token 압력에서 일부 context를 summary와 preserved attachment로 옮기는 손실 변환.</dd><dt>SCC</dt><dd>directed graph에서 서로 도달 가능한 node 집합. 자동으로 설계 결함을 뜻하지 않는다.</dd><dt>compatibility facade</dt><dd>새 경계로 이동하는 동안 기존 caller contract를 유지하는 임시 표면.</dd></dl>
+  </div>
+  <div class="rule-section"><h3>정보 배치 규칙</h3><table><tbody><tr><th>introduction</th><td>보고서 전체를 읽는 모델을 바꿀 때</td><th>worked trace</th><td>순서와 중간 상태가 핵심일 때</td></tr><tr><th>prerequisite callout</th><td>인접 주장을 위한 짧은 배경일 때</td><th>failure case</th><td>경계가 실패로 더 선명해질 때</td></tr><tr><th>glossary</th><td>안정된 용어의 lookup이 필요할 때</td><th>appendix</th><td>main path에 필수적이지 않은 검증 깊이</td></tr></tbody></table></div>
+  <div class="warning">mandatory prerequisite를 page 수 때문에 appendix로 보내지 않는다. page count는 결과이며, 의미를 줄이는 cap이 아니다.</div>
+</section>
+
+<section class="page" data-section="결론" data-coverage="status-provenance-limitations roadmap">
+  <div class="running"><b>Conclusion</b><span>구조를 이해했다는 것의 기준</span></div>
+  <div class="eyebrow">What the reader should carry forward</div>
+  <h2>이 프로젝트는 tool 목록이 아니라<br>state·authority·durability의 왕복으로 읽힌다</h2>
+  <p class="lead">turn engine은 계속할지 끝낼지를 결정하고, stream reducer는 partial observation을 message로 수렴시키며, effect runtime은 요청이 외부 변화가 될 자격을 판단한다.</p>
+  <div class="columns">
+    <div class="semantic-unit" data-claim data-claim-id="CONC-001" data-evidence-class="project_inference" data-source-ref="PROJECT-ANALYSIS.md;algorithm-catalog.json">
+      <h3>실행을 이해하는 질문</h3><p>trigger가 무엇인지, state를 누가 보유하는지, 어떤 transition이 authority를 넘기는지, failure가 result인지 abort인지, recovery가 retry인지 repair인지 묻는다.</p>
+      <p>특히 tool_use/tool_result closure, bounded retry, ordered transcript, stale-state rejection은 서로 다른 파일에 있어도 같은 품질 원칙을 공유한다.</p>
+    </div>
+    <div class="semantic-unit" data-claim data-claim-id="CONC-002" data-evidence-class="project_inference" data-source-ref="module-topology.json;semantic-module-candidates.json;project-operating-model.md">
+      <h3>구조를 바꾸는 질문</h3><p>directory보다 contract seam을 먼저 찾고, behavior fixture와 differential trace를 만든다. 의미 모듈 후보는 소유권 선언이 아니라 이 질문을 분리하기 위한 지도다.</p>
+      <p>다음 단계는 큰 이동이 아니라 하나의 pure policy, 하나의 adapter, 하나의 vertical slice를 증거와 함께 바꾸는 일이다.</p>
+    </div>
+  </div>
+  <div class="quote">좋은 분석은 모든 것을 확정하지 않는다. 무엇을 관찰했고, 무엇을 추론했으며, 무엇이 아직 필요한지를 다음 사람에게 정확히 넘긴다.</div>
+  <div class="warning"><b>Candidate delivery</b> 이 PDF는 successor authoring contribution이다. 독립 factual/visual/reader validation, acceptance, publication, integration, settlement는 수행되지 않았다.</div>
+</section>
+
+<section class="page notebook compact" data-section="출처와 제한" data-coverage="status-provenance-limitations evidence-governance">
+  <div class="running"><b>Sources and limitations</b><span>frozen input ledger</span></div>
+  <div class="eyebrow">Delivery basis</div>
+  <h2>이 보고서를 다시 확인하는 방법</h2>
+  <div class="semantic-unit" data-claim data-claim-id="SRC-001" data-evidence-class="observed_project_fact" data-source-ref="authoring-input-freeze.json;artifact-manifest.json">
+    <span class="evidence-label observed">observed_project_fact</span>
+    <h3>고정 authoring input</h3>
+    <p>authoring freeze SHA-256은 <code>1fe79995a7160c2bb20fc8b46e16d4e0669daf57ca48be32a16ad7689baf2d4e</code>다. project-analysis manifest와 모든 required/limited input digest, 그리고 manifest가 묶은 14개 source-analysis artifact digest를 작성 전에 대조했다.</p>
+  </div>
+  <div class="rule-section"><h3>주요 분석 산출물</h3><ul><li><code>PROJECT-ANALYSIS.md</code> — source-bound synthesis</li><li><code>algorithm-catalog.json</code> — 12 algorithm cards와 89 evidence locator</li><li><code>module-topology.json</code> — 정적 import graph와 limitations</li><li><code>semantic-module-candidates.json</code> — 책임 기반 후보, 공식 경계 아님</li><li><code>project-operating-model.md</code> — fixture와 evidence-led change model</li><li><code>continuation-roadmap.md</code> — report-only Phase A–E</li></ul></div>
+  <div class="equal">
+    <div class="rule-section"><span class="evidence-label background">external_background</span><p class="small"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator">MDN Generator</a> · <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield">MDN yield</a> · <a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/how-tool-use-works">Anthropic tool use</a>. 일반 개념만 지원하며 project behavior를 증명하지 않는다.</p></div>
+    <div class="rule-section"><span class="evidence-label unresolved">unresolved</span><p class="small">복구 snapshot의 누락, build/runtime parity, feature flag, 공식 ownership, production behavior, physical print, grayscale, accessibility, reader comprehension은 독립 검증 전까지 보류한다.</p></div>
+  </div>
+  <div class="warning">이 문서는 activation·formal acceptance·publication·promotion·integration·settlement 권한을 전달하지 않는다.</div>
+</section>
+
+<script>
+  const REV = '2ca5ddabfed5f220812ea11f029eda03b21bc4c1';
+  const REPO = 'https://github.com/stupidhumans/claude-code-source-code/blob/' + REV + '/';
+  const algorithms = [
+    {id:'ALG-TURN-LOOP',ko:'Generator 기반 turn 상태 기계',question:'한 turn은 언제 계속되고 언제 끝나는가?',thesis:'query()는 model stream과 tool 결과를 소비하면서 bounded state를 교체하고 terminal reason을 산출한다.',background:'긴 대화를 단일 함수 호출로 보면 partial observation, tool execution, abort 이후 closure를 설명할 수 없다. 중단 가능한 실행 frame과 명시적 terminal state가 필요하다.',trigger:'query()가 initial messages와 ToolUseContext를 받음',state:['messages','toolUseContext','turnCount','compaction','output recovery','stop hooks','pending tools'],transition:'model event를 stream하고 tool_use를 기록한다. tool을 실행하거나 drain하고 abort/error에서 누락 result를 합성한 뒤 terminal reason을 반환하거나 새 State로 계속한다.',invariants:['모든 tool_use는 tool_result로 닫힌다','turn과 recovery budget은 bounded다','실패한 fallback attempt의 결과는 폐기한다'],failures:['model/runtime error는 terminal result가 된다','abort는 tool result를 drain 또는 합성한다','prompt/output limit는 bounded recovery를 거친다','maxTurns는 max_turns로 끝난다'],why:'이 경계를 알면 UI에 text가 보이는 순간과 turn이 protocol상 완료된 순간을 구분할 수 있다.',refs:['src/query.ts:219','src/query.ts:241','src/query.ts:554','src/query.ts:834','src/query.ts:1012','src/query.ts:1062','src/query.ts:1381','src/query.ts:1506','src/query.ts:1705']},
+    {id:'ALG-EFFECT-INTERPRETER',ko:'Tool proposal을 허가된 effect로 해석하기',question:'모델의 요청은 언제 외부 세계를 바꿀 수 있는가?',thesis:'runToolUse는 schema, hook, permission과 executor를 순서대로 통과시켜 proposal과 effect 사이에 authority boundary를 만든다.',background:'tool 이름과 JSON input이 있다는 사실은 실행 권한이 있다는 뜻이 아니다. 거부도 다음 turn이 이해할 수 있는 result여야 한다.',trigger:'streamed ToolUseBlock이 runToolUse에 전달됨',state:['tool schema','processed input','pre hooks','permission','progress','post hooks','abort signal'],transition:'tool을 찾고 input을 검증한다. hook와 permission을 적용해 거부 result를 만들거나 실행하고 progress, success, error를 정규화한다.',invariants:['unknown/invalid tool은 실행하지 않는다','non-allow decision은 effect boundary를 넘지 않는다','모든 경로가 protocol-compatible result를 시도한다'],failures:['hook와 permission denial은 reason을 반환한다','AbortError와 tool failure를 구분한다','post-failure hook는 retry guidance만 더하고 직접 retry하지 않는다'],why:'모델 능력과 client 권한을 같은 것으로 오해하지 않게 하며, audit에서 누가 실제 효과를 허용했는지 찾을 수 있다.',refs:['src/services/tools/toolExecution.ts:337','src/services/tools/toolExecution.ts:599','src/services/tools/toolExecution.ts:916','src/services/tools/toolExecution.ts:995','src/services/tools/toolExecution.ts:1571','src/services/tools/toolHooks.ts:39','src/services/tools/toolHooks.ts:332','src/services/tools/toolHooks.ts:435']},
+    {id:'ALG-STREAM-REDUCER',ko:'Provider stream reducer와 late finalization',question:'화면에 보인 partial text는 언제 canonical message가 되는가?',thesis:'event reducer는 indexed content block을 누적하고, 이미 yield한 object에 late usage와 stop reason을 반영해 transcript와 terminal state를 완성한다.',background:'streaming은 문자열을 이어 붙이는 기능이 아니다. block identity, delta type, usage와 종료 정보가 서로 다른 시점에 도착한다.',trigger:'queryModelWithStreaming이 API event stream을 엶',state:['partial message','indexed blocks','usage','stop reason','yielded references','watchdog/fallback'],transition:'block_start가 state를 만들고 delta가 typed fragment를 추가한다. block_stop은 assistant slice를 yield하고 message_delta는 이미 yield한 object의 final usage와 stop reason을 갱신한다.',invariants:['delta type과 target block type이 일치한다','content-block index가 존재한다','late usage/stop data가 queued transcript reference에 도달한다'],failures:['event 순서가 잘못되면 명시적 error','idle stream abort는 non-streaming fallback','user abort는 model failure로 보고하지 않는다'],why:'partial UI projection과 durable canonical message를 분리해야 resume와 usage accounting이 일치한다.',refs:['src/services/api/claude.ts:752','src/services/api/claude.ts:1017','src/services/api/claude.ts:1995','src/services/api/claude.ts:2053','src/services/api/claude.ts:2213','src/services/api/claude.ts:2229','src/services/api/claude.ts:2309']},
+    {id:'ALG-TRANSCRIPT-APPEND',ko:'Queued append-only JSONL journal',question:'대화 기록은 어떤 순서로 durable state가 되는가?',thesis:'per-file write queue는 UUID와 parent cursor를 연결한 entry를 순서대로 batch append하여 종료와 resume가 공유할 journal을 만든다.',background:'화면 로그는 사라져도 되지만 resume 입력은 순서와 parent relation을 잃으면 안 된다. durability는 단순 file write보다 강한 계약이다.',trigger:'message, queue operation, metadata 또는 recovery record가 persistence에 admit됨',state:['per-file queue','flush timer','session file','UUID set','parent cursor','remote state'],transition:'message chain에 parent를 부여하고 entry kind를 route한다. serialized line을 queue에 넣고 flush가 파일별 순서대로 append한다.',invariants:['main-chain UUID dedup과 sidechain local persistence가 다르다','파일별 entry 순서를 보존한다','progress message는 parent chain에 참여하지 않는다'],failures:['shutdown에서 flush를 await할 수 있다','누락 directory는 append 시 만든다','remote persistence와 local sidechain dedup을 분리한다'],why:'다음 turn과 resume가 같은 history를 읽으려면 write order와 graph identity를 하나의 contract로 관리해야 한다.',refs:['src/utils/sessionStorage.ts:532','src/utils/sessionStorage.ts:606','src/utils/sessionStorage.ts:634','src/utils/sessionStorage.ts:841','src/utils/sessionStorage.ts:993','src/utils/sessionStorage.ts:1128','src/utils/sessionStorage.ts:1408']},
+    {id:'ALG-RESUME-GRAPH',ko:'Transcript graph 재구성과 repair',question:'중단된 session을 어떤 history로 다시 시작하는가?',thesis:'resume loader는 JSONL을 UUID graph로 만들고 compact·snip·legacy gap·parallel sibling을 repair해 bounded leaf-to-root chain을 구성한다.',background:'append 순서만으로는 branch와 compaction을 복원할 수 없다. parent link와 보존 구간, 삭제 구간을 graph transform으로 다뤄야 한다.',trigger:'persisted JSONL transcript를 resume, branch, share 또는 agent recovery로 읽음',state:['UUID map','parentUuid','compact segments','snip removals','candidate leaves','parallel siblings'],transition:'record를 parse하고 legacy gap을 bridge한다. preserved segment를 relink하고 snipped range를 제거·연결한 뒤 cycle detection으로 leaf-to-root를 걷고 orphan sibling/result를 회수한다.',invariants:['cycle에서는 bounded partial chain을 반환한다','삭제된 middle range는 dangling parent를 남기지 않는다','parallel sibling은 API pairing 가능성을 유지한다'],failures:['malformed preserved metadata는 fuller history로 fallback','resume consistency가 expected/actual delta를 낸다','legacy record는 read-side repair한다'],why:'resume는 파일을 다시 여는 행위가 아니라, 다음 model request가 사용할 일관된 대화 graph를 재구성하는 일이다.',refs:['src/utils/sessionStorage.ts:1839','src/utils/sessionStorage.ts:1982','src/utils/sessionStorage.ts:2069','src/utils/sessionStorage.ts:2097','src/utils/sessionStorage.ts:2224','src/utils/sessionStorage.ts:3472','src/utils/sessionStorage.ts:3704']},
+    {id:'ALG-API-NORMALIZATION',ko:'Provider message compiler와 tool-pair repair',question:'내부 transcript는 어떻게 provider가 받을 수 있는 message가 되는가?',thesis:'compiler pass는 내부 variant를 정규화·병합하고 tool pair를 수리한 뒤 provider-incompatible metadata를 제거한다.',background:'내부 기록은 UI와 recovery에 필요한 정보를 포함하지만 provider API는 더 좁은 schema와 pairing 규칙을 요구한다.',trigger:'internal transcript message를 provider API MessageParam으로 변환해야 함',state:['normalized sequence','assistant merge','tool-use IDs','tool-result IDs','media/cache policy'],transition:'internal message를 normalize/merge하고 unsupported field를 제거한다. orphan tool use에 synthetic error result를 넣고 orphan/duplicate result를 제거한 뒤 cache marker를 추가한다.',invariants:['API 제출 전 tool ID가 pair된다','provider-incompatible metadata를 제거한다','cache annotation은 reusable source block을 in-place mutate하지 않는다'],failures:['missing result는 synthetic error result','orphan result는 제거','repair 후 empty message는 bounded fallback'],why:'durable transcript와 provider message를 같은 자료구조로 가정하지 않아야 repair와 information loss를 명시할 수 있다.',refs:['src/services/api/claude.ts:1266','src/services/api/claude.ts:1298','src/utils/messages.ts:1989','src/utils/messages.ts:5123','src/utils/messages.ts:5305','src/services/api/claude.ts:3063']},
+    {id:'ALG-TOOL-SCHEDULER',ko:'입력 의존 tool scheduling과 deterministic fold',question:'여러 tool을 언제 병렬로 실행해도 되는가?',thesis:'scheduler는 연속 safe call을 bounded concurrent batch로 묶고 unsafe call을 singleton으로 직렬화한 뒤 context modifier를 원래 순서로 fold한다.',background:'동시 실행은 속도만의 문제가 아니다. 두 tool이 공유 state를 바꾸면 완료 순서가 context 의미를 바꿀 수 있다.',trigger:'한 assistant turn이 하나 이상의 tool call을 생성함',state:['ordered calls','safety classification','batches','ToolUseContext','context modifiers','in-progress IDs'],transition:'safe consecutive call은 concurrent batch, unsafe call은 serial singleton으로 partition한다. cap 아래 실행 후 original block order로 modifier를 적용한다.',invariants:['classification error는 serial로 fail closed','unsafe tool은 concurrent batch를 공유하지 않는다','context mutation은 batch 뒤 결정적으로 적용한다'],failures:['schema parse failure는 non-concurrent','tool failure는 기본적으로 scheduling abort가 아닌 result','완료 시 in-progress ID를 제거한다'],why:'실행 완료 순서와 state 반영 순서를 분리하면 성능을 얻으면서도 다음 turn의 context를 재현할 수 있다.',refs:['src/services/tools/toolOrchestration.ts:8','src/services/tools/toolOrchestration.ts:19','src/services/tools/toolOrchestration.ts:91','src/services/tools/toolOrchestration.ts:118','src/services/tools/toolOrchestration.ts:152','src/services/tools/StreamingToolExecutor.ts']},
+    {id:'ALG-COMPACTION-MIGRATION',ko:'Bounded retry를 가진 lossy context migration',question:'context가 너무 커질 때 무엇을 잃고 무엇을 보존하는가?',thesis:'compaction은 older context를 summary와 restoration attachment로 이동하고 retry와 연속 실패를 bounded budget으로 제한한다.',background:'요약은 투명한 압축이 아니라 정보 손실을 수반하는 migration이다. 보존한 것과 버린 것을 boundary metadata로 드러내야 한다.',trigger:'estimated token이 auto/manual threshold를 넘거나 recovery가 compaction을 요청함',state:['token estimate','threshold/reserve','failure counter','summarize/keep sets','summary/attachments','boundary metadata'],transition:'eligibility를 판단하고 older context를 summarize한다. prompt-too-long이면 oldest API-round group을 줄여 retry하고 boundary와 restoration attachment를 emit한다.',invariants:['compact/session-memory query는 recursive autocompact하지 않는다','retry와 consecutive failure는 bounded','preserved context를 명시적으로 표현한다'],failures:['auto-compact 3회 연속 실패면 circuit open','prompt-too-long retry 최대 3회','manual과 automatic failure presentation이 다르다'],why:'context limit을 넘는 순간을 단순 error가 아니라 provenance가 있는 migration으로 관리하면 resume와 debugging이 가능해진다.',refs:['src/services/compact/autoCompact.ts:70','src/services/compact/autoCompact.ts:160','src/services/compact/autoCompact.ts:241','src/services/compact/compact.ts:227','src/services/compact/compact.ts:243','src/services/compact/compact.ts:387','src/services/compact/compact.ts:713']},
+    {id:'ALG-FILE-EDIT-COMMIT',ko:'Optimistic file edit와 atomic-replace 시도',question:'읽은 뒤 바뀐 파일에 오래된 편집을 쓰지 않으려면?',thesis:'FileEditTool은 expected content와 mtime을 재확인하고 await 없는 commit window에서 temp flush·rename을 시도한다.',background:'read와 write 사이에 다른 actor가 파일을 바꿀 수 있다. edit tool은 자신이 본 state가 여전히 유효한지 증명해야 한다.',trigger:'FileEditTool이 prior read 뒤 old/new string edit를 받음',state:['last-read content/time','current content/mtime','encoding/line endings','patch','temp path/mode'],transition:'expected string과 cardinality를 검사하고 sync reread한다. stale이면 equality proof가 없는 한 거부하고 patch를 계산해 flushed temp file을 rename한 뒤 read state를 갱신한다.',invariants:['staleness check와 write 사이 await 없음','가능하면 mode와 symlink target behavior 보존','ambiguous multi-match는 replace_all 요구'],failures:['stale content는 write 전 실패','atomic replace 실패 시 flushed direct write','temp cleanup은 best effort'],why:'permission을 받았더라도 stale state면 effect를 멈춰야 한다는 점에서 authority와 concurrency control이 결합된다.',refs:['src/tools/FileEditTool/FileEditTool.ts:86','src/tools/FileEditTool/FileEditTool.ts:387','src/tools/FileEditTool/FileEditTool.ts:429','src/tools/FileEditTool/FileEditTool.ts:465','src/tools/FileEditTool/FileEditTool.ts:491','src/utils/file.ts:362','src/utils/file.ts:385','src/utils/file.ts:434','src/utils/file.ts:439']},
+    {id:'ALG-QUERY-ENGINE-PROJECTION',ko:'Headless conversation owner와 SDK projection',question:'UI가 없어도 누가 conversation과 terminal state를 소유하는가?',thesis:'QueryEngine은 request를 internal message로 바꾸고 durable checkpoint와 query() 실행을 순서화한 뒤 SDK event/result로 투영한다.',background:'headless caller는 화면 state를 읽을 수 없다. 대화 owner가 mutable conversation과 abort, session, terminal status를 명시적으로 관리해야 한다.',trigger:'submitMessage 또는 ask가 headless SDK request를 받음',state:['conversation messages','app state','tool context','session identity','abort controller','SDK status'],transition:'request를 internal message로 바꾸고 checkpoint를 persist한다. query()를 drive하고 conversation을 갱신한 뒤 internal message를 SDK shape로 normalize한다.',invariants:['conversation mutation과 transcript checkpoint 순서 유지','internal variant를 직접 leak하지 않고 projection','abort와 terminal reason이 generator를 닫는다'],failures:['orphan permission flow repair','compaction/tool result를 resume 전에 기록','headless caller에는 UI가 아닌 terminal status'],why:'core turn semantics와 CLI/SDK surface를 분리해도 conversation ownership과 durability contract는 유지되어야 한다.',refs:['src/QueryEngine.ts:184','src/QueryEngine.ts:209','src/QueryEngine.ts:451','src/QueryEngine.ts:675','src/QueryEngine.ts:769','src/QueryEngine.ts:1186','src/utils/queryHelpers.ts:102','src/utils/queryHelpers.ts:224']},
+    {id:'ALG-INPUT-DISPATCH',ko:'Remote-command safety gate를 가진 입력 분류',question:'같은 문자열이 prompt, command, attachment 중 무엇이 되는가?',thesis:'processUserInputBase는 media와 origin을 먼저 정규화하고 bridge-safe override를 평가한 뒤 bash, slash command 또는 ordinary prompt로 보낸다.',background:'입력 text만 보면 intent를 알 수 없다. origin과 mode가 다르면 같은 slash text도 local effect를 요청하거나 plain prompt가 될 수 있다.',trigger:'raw string 또는 content block이 processUserInputBase에 들어옴',state:['input mode','content blocks','bridge origin','slash skip flag','attachments','image metadata','permission mode'],transition:'media를 normalize하고 bridge-safe slash override를 평가한다. feature keyword와 attachment를 처리한 뒤 bash, slash command 또는 ordinary prompt로 dispatch한다.',invariants:['bridge client는 unsafe local command를 실행할 수 없다','unknown remote slash text는 plain text로 fall through','image normalization이 prompt path보다 먼저'],failures:['unsafe remote command는 model query 없이 local-command message','mode/input mismatch는 early throw','hook output은 별도 cap'],why:'입력 경계에서 trust를 잃으면 이후 permission layer가 있어도 잘못된 control path에 진입할 수 있다.',refs:['src/utils/processUserInput/processUserInput.ts:281','src/utils/processUserInput/processUserInput.ts:314','src/utils/processUserInput/processUserInput.ts:422','src/utils/processUserInput/processUserInput.ts:455','src/utils/processUserInput/processUserInput.ts:516','src/utils/processUserInput/processUserInput.ts:531','src/utils/processUserInput/processUserInput.ts:576']},
+    {id:'ALG-REMOTE-RECONNECT',ko:'Bounded WebSocket reconnect 상태 기계',question:'연결이 끊겼을 때 언제 다시 시도하고 언제 끝내는가?',thesis:'close code와 이전 state에 따라 retry budget을 나누고 explicit close에서는 timer를 정리해 reconnect가 영원히 계속되지 않게 한다.',background:'모든 disconnect를 같은 retry로 다루면 permanent rejection에도 반복하거나 이미 닫힌 session을 되살릴 수 있다.',trigger:'session WebSocket close 또는 caller의 force reconnect',state:['connecting/connected/closed','general attempts','4001 attempts','ping/reconnect timers','socket reference'],transition:'permanent code는 종료한다. 4001은 별도 bounded delay를 적용하고 다른 transient close는 connected state에서만 retry한다. explicit close는 timer를 취소하고 force reconnect는 budget을 reset한다.',invariants:['permanent rejection은 retry하지 않는다','explicit close에서 timer clear','send는 connected state에서만'],failures:['general retry는 5회 후 중단','4001은 3회 후 중단','ping error는 close handler에 위임'],why:'recovery는 항상 재시도가 아니라 원인별 budget과 terminal decision을 갖는 상태 기계여야 한다.',refs:['src/remote/SessionsWebSocket.ts:18','src/remote/SessionsWebSocket.ts:26','src/remote/SessionsWebSocket.ts:34','src/remote/SessionsWebSocket.ts:82','src/remote/SessionsWebSocket.ts:232','src/remote/SessionsWebSocket.ts:290','src/remote/SessionsWebSocket.ts:369','src/remote/SessionsWebSocket.ts:393']}
+  ];
+
+  function refLink(ref){
+    const match = ref.match(/^(.*?):(\d+)$/);
+    const path = match ? match[1] : ref;
+    const line = match ? '#L' + match[2] : '';
+    return `<a href="${REPO}${path}${line}">${ref}</a>`;
+  }
+  function list(items){ return '<ul>' + items.map(x => `<li>${x}</li>`).join('') + '</ul>'; }
+  function algorithmPage(a, index){
+    return `<section class="page algorithm-card compact" data-section="알고리즘 ${String(index+1).padStart(2,'0')}" data-coverage="runtime-algorithms code-system-flow" data-algorithm-id="${a.id}">
+      <div class="running"><b>Algorithm ${String(index+1).padStart(2,'0')} · ${a.id}</b><span>trigger · state · transition · invariant · failure · recovery</span></div>
+      <div class="eyebrow">Reader question</div>
+      <h2>${a.ko}</h2>
+      <p class="lead">${a.question}</p>
+      <div class="algorithm-grid semantic-unit" data-claim data-claim-id="${a.id}" data-evidence-class="observed_project_fact" data-source-ref="algorithm-catalog.json:${a.id}">
+        <main>
+          <span class="evidence-label observed">observed_project_fact</span>
+          <p class="claim-line">${a.thesis}</p>
+          <p>${a.background}</p>
+          <div class="state-list">${a.state.map(s=>`<span>${s}</span>`).join('')}</div>
+          <table class="algorithm-table"><tbody>
+            <tr><th>Trigger</th><td>${a.trigger}</td></tr>
+            <tr><th>Transition</th><td>${a.transition}</td></tr>
+            <tr><th>Invariant</th><td>${list(a.invariants)}</td></tr>
+            <tr><th>Failure / recovery</th><td>${list(a.failures)}</td></tr>
+          </tbody></table>
+        </main>
+        <aside class="side">
+          <span class="evidence-label inference">why it matters</span>
+          <p>${a.why}</p>
+          <figure class="diagram"><div class="flow"><div class="node">trigger</div><div class="arrow"></div><div class="node">transition</div><div class="arrow"></div><div class="node red">result</div></div><figcaption>정상 경로와 failure/recovery가 같은 terminal contract로 수렴하는지 확인한다.</figcaption></figure>
+          <div class="source-line"><b>Exact project evidence</b><br>${a.refs.map(refLink).join(' · ')}</div>
+          <div class="warning" style="margin-top:3mm">정적 source 관찰이며 runtime reachability와 current-product parity는 검증하지 않았다.</div>
+        </aside>
+      </div>
+    </section>`;
+  }
+  document.getElementById('algorithm-pages').innerHTML = algorithms.map(algorithmPage).join('');
+
+  function indexPage(slice, index){
+    const start = index * 6 + 1;
+    const end = start + slice.length - 1;
+    return `<section class="page notebook compact" data-section="알고리즘 색인" data-coverage="runtime-algorithms evidence-governance" data-continuation-id="ALGORITHM-INDEX" data-continuation-part="${index===0?'start':'continued'}" data-step-range="${start}-${end}">
+      <div class="running"><b>Algorithm evidence index · ${index+1}/2</b><span>source-bound locator</span></div>
+      ${index===1?'<span class="continued">ALGORITHM-INDEX · CONTINUED · 07–12</span>':''}
+      <h2>알고리즘 ${String(start).padStart(2,'0')}–${String(end).padStart(2,'0')} 근거 색인</h2>
+      <p class="lead">각 locator는 frozen revision의 project-analysis catalog에서 가져왔다. 링크는 commit에 고정되어 있으며 network reachability는 별도 검증 대상이다.</p>
+      ${slice.map(a=>`<div class="rule-section semantic-unit" data-claim data-claim-id="INDEX-${a.id}" data-evidence-class="observed_project_fact" data-source-ref="algorithm-catalog.json:${a.id}"><span class="evidence-label observed">${a.id}</span><h3>${a.ko}</h3><div class="source-line">${a.refs.map(refLink).join(' · ')}</div></div>`).join('')}
+    </section>`;
+  }
+  document.getElementById('algorithm-index-pages').innerHTML = [algorithms.slice(0,6), algorithms.slice(6)].map(indexPage).join('');
+
+  [...document.querySelectorAll('.page')].forEach((page, i) => {
+    const footer = document.createElement('footer');
+    footer.className = 'folio';
+    footer.innerHTML = `<span>${page.dataset.section || 'PROJECT ANALYSIS'}</span><b>${String(i+1).padStart(3,'0')}</b>`;
+    page.appendChild(footer);
+  });
+</script>
+</body>
+</html>

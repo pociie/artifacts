@@ -1,0 +1,95 @@
+{
+  "activeClaims": [],
+  "authorityEffect": "none",
+  "digest": "sha256:274a14e858d34b45d19c6980f70d13e1eeaf6b385701593319b93786a01d2627",
+  "eventCursor": 29,
+  "eventHeadSha256": "sha256:203b57d601f55ab9e18b1a4b85cde18b790f11b95882f9bb5ca09c2ff2d3cd4e",
+  "kind": "atomic-lane-claim-admission-input/v3",
+  "maxConcurrency": 1,
+  "proposals": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 29,
+      "expectedEventHeadSha256": "203b57d601f55ab9e18b1a4b85cde18b790f11b95882f9bb5ca09c2ff2d3cd4e",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:14bac4144a44ab3ebdd26cb142dc7da9f5cd69321bf25b250325ac0aacfd6e8b"
+      },
+      "identityDigest": "sha256:dbab26184a110b06066dc37c4f2d0fe1c1e7678ff9f0960823daa10cd94ec215",
+      "itemId": "openai/swe-lancer-diamond-ic",
+      "laneId": "population-shard-1",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-1:openai/swe-lancer-diamond-ic:r13",
+      "sequence": 29,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-1:r13-controller"
+    }
+  ],
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-1",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-27-openai-swe-lancer-diamond-ic/queue-reconciliation-before-claim.r13.json",
+  "resolverDecision": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "openai/swe-lancer-diamond-ic",
+        "laneId": "population-shard-1",
+        "proposalId": "proposal:population-shard-1:openai/swe-lancer-diamond-ic:r13",
+        "workerId": "worker:harbor-population-shard-1:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 29,
+      "eventHeadSha256": "203b57d601f55ab9e18b1a4b85cde18b790f11b95882f9bb5ca09c2ff2d3cd4e",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 29,
+    "eventHeadSha256": "203b57d601f55ab9e18b1a4b85cde18b790f11b95882f9bb5ca09c2ff2d3cd4e",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-1",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "resolverInputDigest": "sha256:2786b920c2ad75b225afa0e5a0e48d37856cca86880bf682bc6363c3276bdc60",
+  "schemaVersion": 3,
+  "terminalReceiptRefs": [
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:settlement-ledger-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:settlement-ledger",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:continuation-r12:terminal-item-receipt.r12",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-01-michaely310-devopsgym/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-02-abundant-swe-gen-js/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-03-abundant-swe-marathon/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-04-adyen-dabstep/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-05-ai-forever-harness-bench-fast/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-06-android-bench-android-bench/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-07-arcprize-arc-agi-2/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-08-binary-audit-binary-audit/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-09-blobfishai-domainbench-24/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-10-blobfishai-factorybench-100/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-11-codepde-codepde/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-12-cookbook-test/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-13-factory-ai-legacy-bench/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-14-featurebench-featurebench/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-15-featurebench-featurebench-modal/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-16-futurehouse-labbench/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-17-gaia-gaia/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-18-grafana-o11y-bench/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-19-harbor-index-harbor-index-1-0/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-20-infra-bench-infra-bench-v1/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-21-islo-labs-reward-hack-bench/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-22-itmo-autods-scientific-cases/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-23-josancamon19-physician-bench/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-24-kumo-kumo-easy/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-25-lawbench-lawbench/terminal-item-receipt.r13.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-26-openai-mmmlu/terminal-item-receipt.r13.json"
+  ]
+}

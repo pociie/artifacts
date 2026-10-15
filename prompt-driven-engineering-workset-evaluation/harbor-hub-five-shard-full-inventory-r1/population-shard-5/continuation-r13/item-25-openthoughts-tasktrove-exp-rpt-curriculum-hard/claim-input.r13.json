@@ -1,0 +1,91 @@
+{
+  "activeClaims": [],
+  "authorityEffect": "none",
+  "digest": "sha256:15eee5737ef8c9708d61102dad47ad7f6ab8ee6a7c14a0849ac872ffb9739a07",
+  "eventCursor": 25,
+  "eventHeadSha256": "sha256:909a7532864092c8fb01a264eb782ea88e946e9d7ed4e395802b5e12b3a0709d",
+  "kind": "atomic-lane-claim-admission-input/v3",
+  "maxConcurrency": 1,
+  "proposals": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 25,
+      "expectedEventHeadSha256": "909a7532864092c8fb01a264eb782ea88e946e9d7ed4e395802b5e12b3a0709d",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:8f70cd6d4286e0e5a55e8aaebd1484db2d2c800ec4033553fccd1e1d2a9e65f2"
+      },
+      "identityDigest": "sha256:4e3c21c8fd149e89e9c283781b9a440c29e8531bb694b375b8eae181255e3363",
+      "itemId": "openthoughts/tasktrove-exp-rpt-curriculum-hard",
+      "laneId": "population-shard-5",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-5:openthoughts/tasktrove-exp-rpt-curriculum-hard:r13",
+      "sequence": 25,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-5:r13-controller"
+    }
+  ],
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-5",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-25-openthoughts-tasktrove-exp-rpt-curriculum-hard/queue-reconciliation-before-claim.r13.json",
+  "resolverDecision": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "openthoughts/tasktrove-exp-rpt-curriculum-hard",
+        "laneId": "population-shard-5",
+        "proposalId": "proposal:population-shard-5:openthoughts/tasktrove-exp-rpt-curriculum-hard:r13",
+        "workerId": "worker:harbor-population-shard-5:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 25,
+      "eventHeadSha256": "909a7532864092c8fb01a264eb782ea88e946e9d7ed4e395802b5e12b3a0709d",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 25,
+    "eventHeadSha256": "909a7532864092c8fb01a264eb782ea88e946e9d7ed4e395802b5e12b3a0709d",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-5",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "resolverInputDigest": "sha256:8b50f5c210d281ec65219d1beb2c6ce75f09b887fcc2cb1806eceacbdd5cc3c3",
+  "schemaVersion": 3,
+  "terminalReceiptRefs": [
+    "population-shard-5/runs/gpqa-10/2026-08-28__21-31-46/result.json",
+    "population-shard-5/runs/tb3-crash-safe-loop/2026-08-28__21-37-10/result.json",
+    "population-shard-5/r7/runs/compilebench-next/2026-08-28__22-29-42/result.json",
+    "population-shard-5/continuation-r12/terminal-receipt.aarr-aarri-bench.r12.json",
+    "population-shard-5/continuation-r13/item-02-abundant-swe-gen-rust/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-03-actava-ai-chi-bench/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-04-ale-rsi-post-training/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-06-blobfishai-counselbench-100/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-07-crustbench-crustbench/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-08-deveval-deveval/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-09-futurehouse-bixbench/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-10-futurehouse-bixbench-cli/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-13-grandsmile-unicode/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-14-hack-verifiable-environments-hv-terminal-bench-2-1/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-15-ineqmath-ineqmath/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-16-itmo-autods-openpoly-tg-case/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-17-kumo-kumo-parity/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-18-luosuu-swe-kokkos-bench/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-19-meta-mlgym-bench/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-20-minnesotanlp-aar/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-21-openai-simpleqa/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-22-openthoughts-openthoughts-tblite/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-24-openthoughts-tasktrove-exp-rle-github-issue-v3/terminal-item-receipt.r13.json"
+  ]
+}

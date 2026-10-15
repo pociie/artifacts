@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "researchedAt": "2026-09-21",
+  "purpose": "코드베이스 학습·아키텍처 문서·기술 서적 편집 방법을 실제 독자판의 페이지와 validator로 변환한다.",
+  "copyrightBoundary": "외부 문장·도식을 복제하지 않고 방법만 요약하여 새 코드·도식·서술에 적용한다.",
+  "sources": [
+    {
+      "id": "R01",
+      "name": "The Architecture of Open Source Applications",
+      "url": "https://aosabook.org/en/",
+      "authority": "편집된 오픈소스 아키텍처 사례 연구 모음",
+      "observedMethod": "새 개발자에게 한 시간 동안 소개하듯 주요 구성요소, 상호작용, 구조가 생긴 이유와 배운 점을 한 사례의 언어로 설명한다.",
+      "adoptedElement": "각 Part를 책임 질문으로 열고, 파일 카탈로그가 아니라 component interaction과 설계 압력을 서술한다.",
+      "rejectedSimplification": "모든 장을 동일한 아키텍처 템플릿이나 포괄적 component 목록으로 만드는 방식을 기각한다.",
+      "applications": ["#part-1", "#part-2", "#part-3", "#part-4", "#part-5", "#conclusion"],
+      "validators": ["fivePartStructure", "chapterQuestionCoverage"],
+      "status": "adopted"
+    },
+    {
+      "id": "R02",
+      "name": "500 Lines or Less",
+      "url": "https://aosabook.org/en/500L/introduction.html",
+      "authority": "제약된 구현으로 설계를 설명하는 편집형 사례 연구",
+      "observedMethod": "독자가 먼저 문제를 어떻게 풀지 생각하게 하고, 제약·추상화·분해를 작은 구현과 실행 순서로 드러낸 뒤 실제 시스템과의 차이를 밝힌다.",
+      "adoptedElement": "심층 독해마다 독자 질문, 선행 개념, 최소 예제, 실제 source 복귀, 실패 반례, transfer question을 연결한다.",
+      "rejectedSimplification": "작은 예제가 실제 프로젝트를 완전히 재현하거나 일반화한다고 말하는 방식을 기각한다.",
+      "applications": ["#walkthrough-A03", "#walkthrough-A10", "#walkthrough-A39", "#walkthrough-A17", "#walkthrough-A18", "#walkthrough-A23", "#walkthrough-A25", "#walkthrough-A41", "#walkthrough-A30", "#walkthrough-A44"],
+      "validators": ["deepWalkthroughCount", "exampleReturnsToCode"],
+      "status": "adopted"
+    },
+    {
+      "id": "R03",
+      "name": "Code Reading Club",
+      "url": "https://codereading.club/",
+      "authority": "반복적인 소그룹 코드 읽기 커뮤니티",
+      "observedMethod": "짧은 code selection을 facilitator와 함께 읽고, 정답 전달보다 관찰·질문·토론을 통해 낯선 코드 읽기 기술을 연습한다.",
+      "adoptedElement": "장마다 독자가 source를 보기 전 가설을 세우는 질문과 독해 뒤 다른 변경에 적용하는 transfer question을 둔다.",
+      "rejectedSimplification": "해설자가 모든 의미를 확정하고 독자를 수동적 소비자로 두는 방식을 기각한다.",
+      "applications": ["#reading-paths", "#chapter-2", "#chapter-4", "#chapter-7", "#chapter-11"],
+      "validators": ["readerQuestionsPresent", "transferQuestionsPresent"],
+      "status": "adopted"
+    },
+    {
+      "id": "R04",
+      "name": "CodeReadingClubs Resources",
+      "url": "https://github.com/CodeReadingClubs/Resources",
+      "authority": "Code Reading Club 진행 자료와 exercise repository",
+      "observedMethod": "agenda, code 선택, 탐색 exercise, 회고를 재사용 가능한 진행 단위로 제공하고 선택한 코드보다 읽기 과정의 명시성을 중시한다.",
+      "adoptedElement": "10분·60분·심층 경로와 walkthrough의 질문→관찰→적용 순서를 스터디 진행 단위로 제공한다.",
+      "rejectedSimplification": "repo 전체를 선형으로 읽거나 큰 code dump를 그대로 토론 자료로 삼는 방식을 기각한다.",
+      "applications": ["#reading-paths", "#walkthrough-A03", "#walkthrough-A39", "#appendix-sources"],
+      "validators": ["readingPathsWithin12", "sourceExcerptBounded"],
+      "status": "adopted"
+    },
+    {
+      "id": "R05",
+      "name": "GitHub code navigation: definitions and references",
+      "url": "https://docs.github.com/en/repositories/working-with-files/using-files/navigating-code-on-github",
+      "authority": "GitHub 공식 코드 탐색 문서",
+      "observedMethod": "symbol 정의와 repository 전역 참조를 오가며 symbol이 선언된 곳과 사용되는 곳을 구분해 탐색한다.",
+      "adoptedElement": "각 알고리즘에 exact source range를 연결하고 source index에서 같은 경로의 정의·소비 맥락으로 역탐색한다.",
+      "rejectedSimplification": "검색 hit 수나 파일 이름만으로 ownership과 runtime activation을 단정하는 방식을 기각한다.",
+      "applications": ["#appendix-sources", "#algorithm-A01", "#algorithm-A44"],
+      "validators": ["sourceRangesExist", "sourceAnchorsResolve"],
+      "status": "adopted"
+    },
+    {
+      "id": "R06",
+      "name": "arc42 overview",
+      "url": "https://arc42.org/overview/",
+      "authority": "아키텍처 문서 구조와 관점의 공개 템플릿",
+      "observedMethod": "목표·제약·context·building blocks·runtime·deployment·crosscutting·decision·quality·risk·glossary를 필요에 맞게 선택하고 계층적으로 상세화한다.",
+      "adoptedElement": "front matter의 boundary/context, Part별 building-block 책임, 필요한 곳의 runtime view, 결론의 risk/decision, 부록 glossary를 분리한다.",
+      "rejectedSimplification": "arc42의 모든 section을 빈칸 없이 채우거나 원 저장소의 공식 아키텍처 문서처럼 보이게 하는 방식을 기각한다.",
+      "applications": ["#front-boundary", "#part-1", "#part-5", "#conclusion", "#appendix-glossary"],
+      "validators": ["hierarchicalViews", "statusBoundaries"],
+      "status": "adopted"
+    },
+    {
+      "id": "R07",
+      "name": "C4 model",
+      "url": "https://c4model.com/",
+      "authority": "소프트웨어 아키텍처의 계층적 시각화 모델",
+      "observedMethod": "system context에서 container·component·code로 필요한 만큼 확대하고, 동적 상호작용은 별도 dynamic view로 보여 준다.",
+      "adoptedElement": "전체 시스템 지도 뒤 Part별 책임으로 확대하고, turn·permission·recovery에는 동적 인과관계 도식을 사용한다.",
+      "rejectedSimplification": "모든 C4 level을 의무적으로 그리거나 복원 파일을 공식 deployable container로 단정하는 방식을 기각한다.",
+      "applications": ["#figure-system-topology", "#figure-state-ownership", "#figure-turn-runtime", "#figure-permission-effect", "#figure-transcript-recovery", "#figure-extension-control-plane"],
+      "validators": ["diagramCount>=6", "figureCrossReferences"],
+      "status": "adopted"
+    },
+    {
+      "id": "R08",
+      "name": "Diátaxis",
+      "url": "https://diataxis.fr/",
+      "authority": "documentation을 학습·과업·이해·정보 요구로 구분하는 공개 방법론",
+      "observedMethod": "explanation과 reference가 서로 다른 독자 질문에 답한다는 점을 명시하고 한 페이지가 모든 목적을 동시에 수행하지 않게 한다.",
+      "adoptedElement": "본문은 프로젝트 이해와 이유를 연결하는 explanation으로, 알고리즘·source·glossary·ledger 부록은 빠른 reference로 분리한다.",
+      "rejectedSimplification": "각 장을 네 문서 유형의 고정 카드로 반복하거나 코드 독해를 API reference로 축소하는 방식을 기각한다.",
+      "applications": ["#chapter-1", "#chapter-13", "#appendix-algorithms", "#appendix-sources", "#appendix-glossary"],
+      "validators": ["explanationReferenceSeparation", "allAppendixAnchors"],
+      "status": "adopted"
+    },
+    {
+      "id": "R09",
+      "name": "O'Reilly production style guide",
+      "url": "https://oreillymedia.github.io/production-resources/styleguide/",
+      "authority": "기술 서적 제작을 위한 공개 편집·마크업 지침",
+      "observedMethod": "위·아래 같은 위치 의존 표현 대신 명명된 cross-reference를 쓰고, figure/table/example을 일관되게 참조하며, code line length와 print/electronic 재사용을 관리한다.",
+      "adoptedElement": "그림 번호·설명·본문 참조, descriptive links, 72자 code display 목표, 자연 흐름 print CSS, 하나의 HTML에서 PDF와 preview를 생성한다.",
+      "rejectedSimplification": "코드를 작게 축소하거나 페이지 위치만으로 독자를 안내하는 방식, 외부 책의 시각 자산을 복제하는 방식을 기각한다.",
+      "applications": ["#toc", "#figure-system-topology", "#mechanism-yield-suspension", "#appendix-algorithms"],
+      "validators": ["internalLinksResolve", "codeDisplay<=72", "fontThresholds", "noClipping"],
+      "status": "adopted"
+    }
+  ]
+}

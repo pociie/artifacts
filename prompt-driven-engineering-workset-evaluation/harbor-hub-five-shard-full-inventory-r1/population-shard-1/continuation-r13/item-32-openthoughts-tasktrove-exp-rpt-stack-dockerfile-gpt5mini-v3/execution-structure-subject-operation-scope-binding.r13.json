@@ -1,0 +1,73 @@
+{
+  "authorityEffect": "none",
+  "blockers": [],
+  "effectivePrimaryMode": "single_task",
+  "excludedScopeKinds": ["ambient", "controller", "coverage"],
+  "kind": "subject-operation-scope-binding-decision/v1",
+  "reasonCodes": [
+    "non_subject_scopes_explicitly_excluded",
+    "selected_subject_topology_content_bound"
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-1:openthoughts/tasktrove-exp-rpt-stack-dockerfile-gpt5mini-v3:r13:execute-harbor-subject",
+  "routeDecisionSha256": "5a4d44ffc0b73a5d5e04b3b16e0fe75cf5471603e2acc24e21b95e0c015008f1",
+  "scopeBindings": [
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:737763e073babf73b2e36827b729b48d5cfa1c356c04129db1029c274614f749",
+      "disposition": "coverage_stimulus_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-32-openthoughts-tasktrove-exp-rpt-stack-dockerfile-gpt5mini-v3/source-and-plan-binding.r13.json",
+      "scopeId": "coverage:population-shard-1:openthoughts/tasktrove-exp-rpt-stack-dockerfile-gpt5mini-v3:r13",
+      "scopeKind": "coverage",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:69cdc2489576d3d2dd2ce16f62ea9e948316b53e79cc755a4dc482a04514921b",
+      "disposition": "context_only",
+      "ref": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/environment-platform-observation.json",
+      "scopeId": "ambient:population-shard-1:openthoughts/tasktrove-exp-rpt-stack-dockerfile-gpt5mini-v3:r13",
+      "scopeKind": "ambient",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:f6cffb5ce8844841ad1881b154f632e63b35620083e8c1f4f7772b945d28b249",
+      "disposition": "control_plane_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-32-openthoughts-tasktrove-exp-rpt-stack-dockerfile-gpt5mini-v3/claim.r13.json",
+      "scopeId": "controller:population-shard-1:openthoughts/tasktrove-exp-rpt-stack-dockerfile-gpt5mini-v3:r13",
+      "scopeKind": "controller",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": true,
+      "digest": "sha256:6bb5a700138dcf438fc9e74c4db2e2cc94ce5212011eec48a4662f5d281de0fd",
+      "disposition": "eligible_report_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-32-openthoughts-tasktrove-exp-rpt-stack-dockerfile-gpt5mini-v3/subject-topology-binding.r13.json",
+      "scopeId": "subject-scope:population-shard-1:openthoughts/tasktrove-exp-rpt-stack-dockerfile-gpt5mini-v3:r13",
+      "scopeKind": "subject",
+      "state": "selected"
+    }
+  ],
+  "scopedMode": "single_task",
+  "segmentMode": null,
+  "status": "ready",
+  "subjectOperation": {
+    "agentArchitectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmDigest": null,
+    "agentSwarmRef": null,
+    "bindingDigest": "sha256:6bb5a700138dcf438fc9e74c4db2e2cc94ce5212011eec48a4662f5d281de0fd",
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-32-openthoughts-tasktrove-exp-rpt-stack-dockerfile-gpt5mini-v3/subject-topology-binding.r13.json",
+    "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "disposition": "eligible_report_only",
+    "scopeId": "subject-scope:population-shard-1:openthoughts/tasktrove-exp-rpt-stack-dockerfile-gpt5mini-v3:r13",
+    "workflowPatternDigest": "sha256:93bf91356072b399cd3684ea2d482c7fe3afe4ca083e8443e86978b2bdb5d7bd",
+    "workflowPatternId": "pipeline",
+    "workflowPatternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/pipeline/workflow-pattern.json"
+  },
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "topologyRequirementDecisionSha256": "6272dae9d8de8fbe6a59b6220ed120eda671be742872ba17efbd63eb07ec9f1a",
+  "topologySelectionDecisionSha256": "a8f33f93508f6f2ac585c4e7b05820b66fda666ba8ba738ed36a2e6aa3ac045a"
+}

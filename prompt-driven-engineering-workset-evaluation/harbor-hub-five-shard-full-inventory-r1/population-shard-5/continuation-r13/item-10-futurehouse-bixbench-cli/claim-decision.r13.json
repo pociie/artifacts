@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 11,
+      "expectedEventHeadSha256": "c136a2985cfd612edaf6bd1302fced3f68c2b317a490acf34f1d651b4e5357ca",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:4d4c861176cd42f8646600d7b2e7ed5893261f2bfc25d726a4dae93d310e0664"
+      },
+      "identityDigest": "sha256:333989be2ea3f67769dcb818b0c33cbca7a506fe60c148e63fa92881edec1c69",
+      "itemId": "futurehouse/bixbench-cli",
+      "laneId": "population-shard-5",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-5:futurehouse/bixbench-cli:r13",
+      "sequence": 10,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-5:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 11,
+    "eventHeadSha256": "sha256:c136a2985cfd612edaf6bd1302fced3f68c2b317a490acf34f1d651b4e5357ca",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:e83bb442068af9de19a8b427a3bbf518fba705614e5b028fa5116dcd90081d10",
+  "eventCursor": 11,
+  "eventHeadSha256": "sha256:c136a2985cfd612edaf6bd1302fced3f68c2b317a490acf34f1d651b4e5357ca",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-5",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-10-futurehouse-bixbench-cli/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "futurehouse/bixbench-cli",
+        "laneId": "population-shard-5",
+        "proposalId": "proposal:population-shard-5:futurehouse/bixbench-cli:r13",
+        "workerId": "worker:harbor-population-shard-5:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 11,
+      "eventHeadSha256": "c136a2985cfd612edaf6bd1302fced3f68c2b317a490acf34f1d651b4e5357ca",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 11,
+    "eventHeadSha256": "c136a2985cfd612edaf6bd1302fced3f68c2b317a490acf34f1d651b4e5357ca",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-5",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}

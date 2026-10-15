@@ -1,0 +1,69 @@
+{
+  "kind": "sanitized-collaboration-bundle/v1",
+  "bundleId": "collaboration-bundle:book-pdf-artifact-workflow",
+  "bundleRevision": "book-pdf-collaboration/v1",
+  "status": "active",
+  "objective": "Coordinate an instruction-governance contribution and a visual PDF-specification contribution without sharing raw prompts, private reasoning, provider handles, or mutable session identifiers.",
+  "participants": [
+    {
+      "roleRef": "agent-role:instruction-governance-editor",
+      "contributionScope": [
+        "AGENTS.md editing",
+        "background-knowledge research routing rules",
+        "recipient-specific delivery rules",
+        "PDF authorship handoff rules"
+      ],
+      "writeBoundary": ["AGENTS.md"],
+      "nonGoals": [
+        "editing the visual mockup files",
+        "changing the visual expression specification without a new handoff revision"
+      ]
+    },
+    {
+      "roleRef": "agent-role:visual-pdf-spec-builder",
+      "contributionScope": [
+        "ten or more raster editorial directions",
+        "domain-book reference synthesis",
+        "mockup-to-PDF expression mapping",
+        "dynamic artifact and collaboration specification",
+        "validation and recipient handoff packet"
+      ],
+      "writeBoundary": [
+        ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/**"
+      ],
+      "nonGoals": [
+        "editing AGENTS.md",
+        "activating or controlling another session",
+        "publishing or accepting a production PDF"
+      ]
+    }
+  ],
+  "dependencyEdges": [
+    {
+      "from": "agent-role:visual-pdf-spec-builder",
+      "to": "agent-role:instruction-governance-editor",
+      "deliverable": "recipient-handoff:visual-pdf-workflow-candidate",
+      "acceptanceBoundary": "The instruction-governance editor independently decides whether and how to translate the candidate into AGENTS.md."
+    }
+  ],
+  "fanInOwner": "agent-role:instruction-governance-editor",
+  "sharedInputs": [
+    "artifacts/knowledge/sources/report-information-design-and-raster-pdf-v6.md",
+    ".collab/artifacts/claude-code-architecture-algorithms-study-2026-09-20/book-edition-2026-09-21/manifest.json",
+    ".collab/artifacts/claude-code-architecture-algorithms-study-2026-09-20/book-edition-2026-09-21/engineering/editorial-rationale.md"
+  ],
+  "sharedOutputContract": [
+    "role and contribution boundaries are explicit",
+    "each handoff binds this bundle revision and file digest",
+    "source claims and local design inferences remain distinguishable",
+    "no raw prompt body or runtime handle is persisted",
+    "each writer stays inside its declared write boundary"
+  ],
+  "reassessmentSignals": [
+    "participant role or write boundary changes",
+    "the selected project domain or recipient changes",
+    "a third material contribution is added",
+    "the PDF moves from exploratory design to publication acceptance"
+  ],
+  "authorityEffect": "none"
+}

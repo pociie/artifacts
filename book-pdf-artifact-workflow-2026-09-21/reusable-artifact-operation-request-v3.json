@@ -1,0 +1,144 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:book-pdf-artifact-workflow-visual-segment",
+  "requestRevision": "revision:v3",
+  "requestRelation": "refine_constraints",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/route-decision-v3.json",
+    "decisionDigest": "sha256:9c9fa247e9e90c1af5885bb204cd26e3111ef50ef8743e00ae2d1e0a7930db41",
+    "effectiveMode": "orchestration"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:visual-pdf-spec-builder",
+    "agencyRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/subject-agency-v2.json",
+    "agencyDigest": "sha256:4102a9d361183effa75c34d8a0f38d4f1198ab558987ec199c6731a8ec00b073",
+    "responsibilityClass": "specialist",
+    "outcomeContract": "outcome:task-local-book-pdf-workflow-candidate",
+    "outputContract": "output:source-claims-mockups-expression-prototype-blueprint-validation-handoff",
+    "decisionScopes": [
+      "registered-profile-read-only-lookup",
+      "domain-reference-selection",
+      "task-local-visual-direction-generation",
+      "pdf-expression-and-prototype",
+      "dynamic-blueprint-candidate",
+      "recipient-handoff-packet"
+    ],
+    "nonAuthority": [
+      "AGENTS.md-editing",
+      "canonical-loop-architecture-mutation",
+      "external-publication",
+      "runtime-session-activation",
+      "team-assignment-or-acknowledgement",
+      "framework-promotion",
+      "final-pdf-acceptance",
+      "unrelated-source-change"
+    ]
+  },
+  "objective": "Produce a task-local, report-only book-PDF workflow candidate: registered-profile lookup, source-to-claim packet, thirteen raster directions, a dual Systems-Monograph/Evidence-Notebook PDF expression and prototype, dynamic team blueprint, validation and digest-bound handoff.",
+  "successEvidenceRefs": [
+    "evidence:registered-profile-lookup",
+    "evidence:source-to-claim-packet",
+    "evidence:thirteen-raster-mockups",
+    "evidence:dual-mode-pdf-expression-spec",
+    "evidence:nine-page-pdf-prototype",
+    "evidence:dynamic-team-blueprint",
+    "evidence:source-plus-visual-recipient-handoff",
+    "evidence:validation-and-settlement"
+  ],
+  "protectedConstraintRefs": [
+    "constraint:AGENTS-md-out-of-scope",
+    "constraint:canonical-loop-architecture-reference-only",
+    "constraint:mutable-state-under-collab-memory-only",
+    "constraint:sanitized-durable-output-under-task-artifact-directory",
+    "constraint:copyright-safe-original-visual-directions",
+    "constraint:existing-user-changes-preserved",
+    "constraint:no-raw-prompts-private-reasoning-assignments-acks-session-identifiers-or-runtime-handles"
+  ],
+  "nonGoalRefs": [
+    "non-goal:AGENTS-md-edit",
+    "non-goal:canonical-reusable-component-edit",
+    "non-goal:runtime-role-activation",
+    "non-goal:production-pdf-publication",
+    "non-goal:application-source-change",
+    "non-goal:automatic-team-routing",
+    "non-goal:framework-wide-artifact-promotion",
+    "non-goal:copy-specific-book-trade-dress"
+  ],
+  "lifecycleIntent": "retain_task_specific",
+  "capabilities": [
+    "document and PDF production",
+    "editorial design exploration",
+    "domain reference research",
+    "raster image generation",
+    "registered-profile lookup",
+    "cross-session evidence handoff"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "783a32562aa185dbef333dde7c7c8945adb294fe76af24b935aa271916d242be",
+  "allowedBaseClasses": [
+    "workflow",
+    "loop",
+    "loop_architecture_component",
+    "agent_profile",
+    "agent_architecture",
+    "skill",
+    "contract_checker",
+    "knowledge_reference",
+    "dynamic_blueprint"
+  ],
+  "allowedScopes": ["framework", "team", "personal"],
+  "requiredFacts": ["owner", "scope", "consumer", "validation"],
+  "exactArtifactIds": [],
+  "relationshipDepth": 1,
+  "maxCandidates": 16,
+  "contextBudget": {
+    "maxSourceMembers": 24,
+    "maxConsumerRefs": 12,
+    "maxValidationRefs": 12
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "Whether the recipient will activate any candidate role.",
+      "Whether the selected dual-mode design will pass a full physical A4 and independent reader review.",
+      "Whether repeated use later justifies promotion beyond a task-specific candidate."
+    ],
+    "allowedRelationshipTypes": ["defines", "consumes", "depends_on", "validates", "generates", "binds_capability", "observed_in"],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": ["objective", "native_owner", "artifact_revision", "public_contract", "consumer", "effect", "route_or_topology", "lifecycle", "protected_constraint"],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "evidence:requested-task-local-artifact-set-present",
+      "evidence:source-and-visual-evidence-share-one-handoff-revision-and-digest",
+      "evidence:activation-acceptance-promotion-not-performed",
+      "evidence:AGENTS-md-and-canonical-contracts-untouched"
+    ],
+    "validationRefs": [
+      "validation:reusable-artifact-operation-request-v3",
+      "validation:image-inventory-and-visual-review",
+      "validation:pdf-page-render-and-text-check",
+      "validation:recipient-handoff-digest"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "loop-budget:book-pdf-visual-segment:v3",
+  "dataClassification": "internal",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": true,
+  "constructionAllowed": true,
+  "residualGapProven": true,
+  "requestDigest": "89987d7392ed1759af3757301ba30fdfefec396f19c124ae4428017ae6050672"
+}

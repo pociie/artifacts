@@ -1,0 +1,253 @@
+{
+  "kind": "project-analysis-pdf-authoring-validation/v2",
+  "candidateId": "candidate:claude-code-project-analysis-pdf:v2",
+  "validatedAt": "2026-09-21T00:13:03Z",
+  "validationScope": "author-side one-cycle correction, rendering, PDFKit search-order, structure, source-binding, continuity, and visual checks",
+  "status": "pass_author_side_correction_candidate",
+  "authorityEffect": "none",
+  "correctionCycle": {
+    "allowed": 1,
+    "used": 1,
+    "additionalEquivalentCorrectionTasks": "not_allowed",
+    "defectId": "DEFECT-PDF-TEXT-ORDER-001",
+    "defectStatusInV2": "not_reproduced_by_frozen_queries"
+  },
+  "correctionInputFreeze": {
+    "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/pdf-delivery-v1/correction-input-freeze-v2.json",
+    "expectedSha256": "e51903b9a91e5443f8d13a0c367602d0fc10d5b61034345bc83d3ef23b29497d",
+    "observedSha256": "e51903b9a91e5443f8d13a0c367602d0fc10d5b61034345bc83d3ef23b29497d",
+    "match": true,
+    "sourceRevision": {
+      "commit": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+      "tree": "1b6b4ab07d0d7b795129852183137c28099c5550"
+    }
+  },
+  "independentFailureEvidence": {
+    "outputFreeze": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/pdf-delivery-v1/author-output-freeze.json",
+      "expectedSha256": "0fb5223acd3dd16cbcf1efd00050547355334890e013c9791f584b3c60af635d",
+      "observedSha256": "0fb5223acd3dd16cbcf1efd00050547355334890e013c9791f584b3c60af635d",
+      "match": true
+    },
+    "validationReport": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-validation-v1/independent-validation-report.json",
+      "expectedSha256": "f75461e24cac263a0cec828e1a43660cdd40cc617017d41437d0aba5a1674f81",
+      "observedSha256": "f75461e24cac263a0cec828e1a43660cdd40cc617017d41437d0aba5a1674f81",
+      "match": true,
+      "judgment": "fail"
+    },
+    "failedCandidateV1": {
+      "root": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v1",
+      "fileCount": 45,
+      "totalBytes": 12259317,
+      "treeDigest": "fd19d959b6e34722da6f19ee5f85fdc038943c5cece1c3356d273eba142dbf90",
+      "digestRecipe": "sha256 of sorted UTF-8 lines: <file-sha256> <bytes> <relative-path>\\n",
+      "unchangedFromIndependentReport": true
+    }
+  },
+  "frozenInputVerification": {
+    "requiredInputs": [
+      {
+        "role": "project_analysis_source",
+        "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/project-analysis-v1/artifact-manifest.json",
+        "expectedSha256": "49400762416b9570b9b9d5db07bbb75cdd19622e2c899dd189e030b3ede17742",
+        "observedSha256": "49400762416b9570b9b9d5db07bbb75cdd19622e2c899dd189e030b3ede17742",
+        "match": true
+      },
+      {
+        "role": "pdf_expression_spec",
+        "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-expression-spec-v2.md",
+        "expectedSha256": "5e5881ff524e13f7f22150f55c43cd35090e3d8ea6fb4deca82acc9a1facf33d",
+        "observedSha256": "5e5881ff524e13f7f22150f55c43cd35090e3d8ea6fb4deca82acc9a1facf33d",
+        "match": true
+      },
+      {
+        "role": "flow_and_continuity_spec",
+        "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-flow-and-continuity-spec-v1.md",
+        "expectedSha256": "bbcde8592504f1f78b96013cfc51e47c0eca504e0bf81f45c71df8367372a1e3",
+        "observedSha256": "bbcde8592504f1f78b96013cfc51e47c0eca504e0bf81f45c71df8367372a1e3",
+        "match": true
+      },
+      {
+        "role": "writing_quality_contract",
+        "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/writing-quality-contract-v1.md",
+        "expectedSha256": "517accc76e904d3b58d7e3960121f50614b3fc728b68709822e55c6c657f98e7",
+        "observedSha256": "517accc76e904d3b58d7e3960121f50614b3fc728b68709822e55c6c657f98e7",
+        "match": true
+      },
+      {
+        "role": "typography_and_page_system",
+        "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/typography-and-page-system-v1.json",
+        "expectedSha256": "bb88969c6271b91604914749ee1254fa0ffefc96ebfd3a357972cc49bb9bb3d1",
+        "observedSha256": "bb88969c6271b91604914749ee1254fa0ffefc96ebfd3a357972cc49bb9bb3d1",
+        "match": true
+      }
+    ],
+    "allRequiredInputsMatch": true,
+    "historicalContributionDisposition": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/visual-pagination-continuity-contribution-manifest-v1.json",
+      "expectedSha256": "68267f5d22c98e042c726e6366415b2895979aa2433fea301a06f35349cd7000",
+      "observedSha256": "68267f5d22c98e042c726e6366415b2895979aa2433fea301a06f35349cd7000",
+      "match": true,
+      "use": "lineage_and_contribution_evidence_only",
+      "transitiveSharedPathClosure": "not_required_by_correction_freeze"
+    }
+  },
+  "projectAnalysisManifestVerification": {
+    "basePath": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/project-analysis-v1",
+    "manifestSha256": "49400762416b9570b9b9d5db07bbb75cdd19622e2c899dd189e030b3ede17742",
+    "artifactCount": 14,
+    "verifiedArtifactCount": 14,
+    "mismatches": [],
+    "artifacts": [
+      { "path": "PROJECT-ANALYSIS.md", "sha256": "b7ac3f320d732db882ea0426755eee6ae00977b3d062cccd3900cb5c821a03c4" },
+      { "path": "algorithm-catalog.json", "sha256": "81554bbd2774d2f87d04dd97717baa61b6d4fe334b91b670cb5e3b511743d86c" },
+      { "path": "analysis-objective.json", "sha256": "7395e1ad7ad663f6942438351bbd80403e049594eaa2845d2bd86232ed1dade5" },
+      { "path": "artifact-contracts.json", "sha256": "3f3340903131d3e2ddc570091ce478bdc238b589c49cc5268826f49797269a6d" },
+      { "path": "continuation-roadmap.md", "sha256": "9029f1ce768fcb764011609bf53c4c4a0df56c8ffc8d558eaa8c1e6fac744cab" },
+      { "path": "module-topology-analyzer.mjs", "sha256": "513eaf81133fd8be046257bac1777b9af11f653e0de4c7309db36536659b83cb" },
+      { "path": "module-topology.json", "sha256": "0f399a07cf5c43be5d187af187219dbacf20c5df22399c91d5bb0f70da143630" },
+      { "path": "prior-analysis-index.json", "sha256": "469432a76bdba5520ef9cd53950d6dffd0961f2cafc8082d15c60d4a989f5076" },
+      { "path": "project-operating-model.md", "sha256": "f3ec025f484f9a15633e29f35b55686370bb5fd6154a0900f2ea44ec48092fc3" },
+      { "path": "route-decision.json", "sha256": "091d90e5ae41c168d2c4de76ac4981d33135d6fc529114d056fc78c29da4813b" },
+      { "path": "semantic-module-candidates.json", "sha256": "7a7a7728974e076c36de2f9fa8940d14c9e7475bc63fe2984c4dd7308c19a5b7" },
+      { "path": "source-state.json", "sha256": "0605a4ed52cefd0326075d19d12165f8f75a940e53d15128aeca8a32465279e5" },
+      { "path": "validation-report.json", "sha256": "c5ba45e176de62552dc7265363941d3a1882b07b30cbc27fe38fd88285f16e69" },
+      { "path": "work-execution-binding.json", "sha256": "12a8741707b7366c4b0cee5e2e4b1976ca539f9bf8bf3d744d49afd8e800f8dd" }
+    ],
+    "result": "pass"
+  },
+  "rootCauseAndCorrection": {
+    "rootCauseEvidence": "The reverse-order fingerprint reproduces in the frozen untagged v1 PDF and disappears under identical layout CSS when Chromium emits a tagged PDF structure tree. PDFKit had interpreted affected grid, flex, and multi-column paint-stream runs as reversed logical text in the untagged file.",
+    "renderFix": "Set Playwright page.pdf tagged=true so StructTreeRoot, MarkInfo, and Lang markers carry DOM-aligned logical order.",
+    "boundedTextAdjustments": [
+      "Page 6 lead names tool_result as the effect-stage closure signal and renders that token with the body font to keep it searchable as one phrase.",
+      "Page 30 running header names Phase A–B."
+    ],
+    "layoutCssChanged": false,
+    "pageCountChanged": false,
+    "changedPreviewPages": [6, 30],
+    "byteIdenticalPreviewPages": 35
+  },
+  "renderedCandidate": {
+    "htmlPath": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/claude-code-project-analysis.html",
+    "pdfPath": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/claude-code-project-analysis.pdf",
+    "pdfBytes": 5083379,
+    "pdfSha256": "001289cccb32c83c12bd3f282d5ce0a6e6f6ec35e379c0bc712fd4a7ddbe8802",
+    "pageCount": 37,
+    "pageSize": "A4",
+    "pageSizePoints": "594.95996x841.91998",
+    "searchable": true,
+    "pdfStructure": {
+      "taggedRequested": true,
+      "structTreeRootPresent": true,
+      "markInfoPresent": true,
+      "languageMarkerPresent": true
+    },
+    "textExtraction": {
+      "engine": "macOS PDFKit via Swift",
+      "perPageCharacterSum": 45802,
+      "documentStringLength": 45838,
+      "emptyTextPages": [],
+      "allPagesNonEmpty": true
+    }
+  },
+  "pdfKitSearchOrder": {
+    "result": "pass",
+    "queries": [
+      { "visible": "worker_done", "requiredNormalHits": 2, "normalHits": 2, "reversed": "enod_rekrow", "requiredReversedHits": 0, "reversedHits": 0, "pass": true },
+      { "visible": "Phase A", "requiredNormalHits": 2, "normalHits": 2, "reversed": "A esahP", "requiredReversedHits": 0, "reversedHits": 0, "pass": true },
+      { "visible": "공식 module owner", "requiredNormalHits": 2, "normalHits": 2, "reversed": "renwo eludom 식공", "requiredReversedHits": 0, "reversedHits": 0, "pass": true },
+      { "visible": "tool_result", "requiredNormalHits": 12, "normalHits": 12, "reversed": "tluser_loot", "requiredReversedHits": 0, "reversedHits": 0, "pass": true }
+    ]
+  },
+  "previewAndVisualVerification": {
+    "previewDirectory": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews",
+    "expectedCount": 37,
+    "observedCount": 37,
+    "sequenceComplete": true,
+    "dimensions": {
+      "794x1123": 18,
+      "794x1124": 19
+    },
+    "contactSheetPath": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/contact-sheet.png",
+    "contactSheetDimensions": "1900x4294",
+    "representativeAffectedPagesInspected": [2, 5, 10, 16, 18, 24, 27, 28, 29, 30, 31, 32, 37],
+    "changedPagesInspected": [6, 30],
+    "legibility": "pass",
+    "compositionPreservation": "pass",
+    "result": "pass"
+  },
+  "layoutAndContinuity": {
+    "renderAuditPath": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/render-audit.json",
+    "horizontalOverflowPages": [],
+    "verticalOverflowPages": [],
+    "clippedSemanticUnits": [],
+    "folioOverlapUnits": [],
+    "continuationGroups": [
+      { "id": "TRACE-E2E", "pages": [7, 8], "valid": true },
+      { "id": "SEMANTIC-MODULES", "pages": [24, 25], "valid": true },
+      { "id": "ROADMAP", "pages": [30, 31], "valid": true },
+      { "id": "ALGORITHM-INDEX", "pages": [33, 34], "valid": true }
+    ],
+    "result": "pass"
+  },
+  "claimAndCoverage": {
+    "materialClaimCount": 64,
+    "classCounts": {
+      "observed_project_fact": 37,
+      "external_background": 3,
+      "project_inference": 19,
+      "unresolved": 5
+    },
+    "missingClaimBindings": [],
+    "algorithmCardCount": 12,
+    "requiredCoverageAreaCount": 10,
+    "requiredCoverageAreasPresent": true,
+    "thirdPartyReconstructedSourceLimitationPreserved": true,
+    "officialUpstreamBoundaryClaims": false,
+    "result": "pass"
+  },
+  "linkValidation": {
+    "htmlAnchorCount": 181,
+    "invalidHtmlAnchors": [],
+    "pdfLinkAnnotations": 268,
+    "pdfUniqueUrls": 92,
+    "pdfInvalidSchemes": [],
+    "externalReachability": "not_checked",
+    "result": "pass_with_network_hold"
+  },
+  "fontAndRenderEnvironment": {
+    "renderer": "Playwright Chromium using existing workspace dependency",
+    "pdfLogicalStructure": "tagged Chromium output",
+    "pdfTextVerifier": "macOS PDFKit through Swift 5.10",
+    "observedBodyFont": "Apple SD Gothic Neo",
+    "observedDisplayFont": "AppleMyungjo",
+    "observedUtilityFonts": ["Menlo", "Apple SD Gothic Neo"],
+    "limitation": "Preferred Pretendard, SUIT, and Noto Serif KR were unavailable on the host; the candidate uses the documented macOS fallbacks and remains font-environment dependent."
+  },
+  "protectedBoundaryVerification": {
+    "workerWriteBoundary": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/**",
+    "workerProducedPathsOutsideBoundary": [],
+    "failedV1CandidateUnchanged": true,
+    "independentV1ReportUnchanged": true,
+    "coordinationFreezeUnchanged": true,
+    "note": "The shared worktree contains unrelated changes owned by other sessions. This result verifies this worker's bounded output paths and exact protected predecessor digests; it does not claim global worktree cleanliness.",
+    "result": "pass_for_worker_scope"
+  },
+  "holds": [
+    "Independent validation of the v2 successor has not yet been performed.",
+    "External URL reachability was not checked.",
+    "Physical print and grayscale proofing were not performed.",
+    "Assistive-technology reading behavior was not independently tested even though tagged PDF markers are present.",
+    "Build and runtime execution of the reconstructed source snapshot remain outside this authoring task."
+  ],
+  "nonClaims": {
+    "activation": "not_claimed",
+    "formalAcceptance": "not_claimed",
+    "publication": "not_claimed",
+    "promotion": "not_claimed",
+    "integration": "not_claimed",
+    "settlement": "not_claimed"
+  }
+}

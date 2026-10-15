@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "a7e19c7cdfe3524a0a938f88dec50966dac56638ba3190f65523061f14194aab",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-45-polyvorlabs-klyrune-bench/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-45-polyvorlabs-klyrune-bench/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "371ff898f77c1c0f3c45d4d6c33af3db4e98b13270830bdd6abab926de6446ea",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "644fbba6cc2d39acdd22e4223cc37de5b82b4dd1a52e5929b4c7159e1214471a",
+      "topologySelectionDecisionSha256": "008bfcc943f19f043b5fd3303aade9a65a371b691380e5170d471f0242d96dd8"
+    },
+    {
+      "coordinationPlanDecisionSha256": "a7e19c7cdfe3524a0a938f88dec50966dac56638ba3190f65523061f14194aab",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-45-polyvorlabs-klyrune-bench/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-45-polyvorlabs-klyrune-bench/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "371ff898f77c1c0f3c45d4d6c33af3db4e98b13270830bdd6abab926de6446ea",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "644fbba6cc2d39acdd22e4223cc37de5b82b4dd1a52e5929b4c7159e1214471a",
+      "topologySelectionDecisionSha256": "008bfcc943f19f043b5fd3303aade9a65a371b691380e5170d471f0242d96dd8"
+    },
+    {
+      "coordinationPlanDecisionSha256": "a7e19c7cdfe3524a0a938f88dec50966dac56638ba3190f65523061f14194aab",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-45-polyvorlabs-klyrune-bench/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-45-polyvorlabs-klyrune-bench/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "371ff898f77c1c0f3c45d4d6c33af3db4e98b13270830bdd6abab926de6446ea",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "644fbba6cc2d39acdd22e4223cc37de5b82b4dd1a52e5929b4c7159e1214471a",
+      "topologySelectionDecisionSha256": "008bfcc943f19f043b5fd3303aade9a65a371b691380e5170d471f0242d96dd8"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

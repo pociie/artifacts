@@ -1,0 +1,56 @@
+{
+  "kind": "reusable-artifact-agent-operation-boundary/v1",
+  "revision": "2026-09-14.1",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "subjectRef": "agent-subject:job-application-report-artifact-builder",
+  "nativeOwnerRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+  "requestedOutcome": "Extract a report-only reusable Loop candidate that can produce and validate an evidence-grounded job-application report from bounded company, role, question, applicant, project, and presentation inputs.",
+  "successEvidence": [
+    "a native Loop descriptor with typed public inputs, outputs, stages, retries, stop conditions, and existing-Loop references",
+    "request and result schemas plus deterministic contract checks",
+    "a reusable operation guide that preserves user-specific unknowns and publication boundaries",
+    "a sanitized chronology and extraction decision grounded in the completed report run",
+    "focused package, schema, checker, negative-case, and repository fitness validation"
+  ],
+  "nonGoals": [
+    "copying company-specific facts, applicant identity, private reasoning, raw conversation text, or absolute local paths into reusable source",
+    "reimplementing progressive research, rubric lifecycle, prompt assistance, context resolution, agent review, or session handoff semantics",
+    "creating a new Loop Architecture Component or Agent Architecture without a separate responsibility gap",
+    "claiming that one successful report proves broad reuse, hiring success, or production readiness",
+    "modifying existing generated reports or unrelated dirty worktree paths"
+  ],
+  "boundedDiscoverySurface": {
+    "sessionEvidence": ".collab/artifacts/job-application-2026-09-ai-service-engineer",
+    "reusableFamilies": [
+      "artifacts/agent-loop/work/progressive-knowledge-research",
+      "artifacts/agent-loop/assessment/rubric-management",
+      "artifacts/agent-loop/execution-preparation/prompt-assistance",
+      "artifacts/agent-loop/execution-preparation/context-resolution",
+      "artifacts/agent-loop/assessment/agent-review",
+      "artifacts/agent-loop/work/session-handoff-resume"
+    ],
+    "maximumNewReusableUnit": 1,
+    "newSourceRoot": "artifacts/agent-loop/document/job-application-report-production"
+  },
+  "validation": [
+    "validate request and result examples against their schemas",
+    "run deterministic positive and negative contract tests",
+    "run the agent-loop package checker and link checker for the exact new unit",
+    "run governance fitness without repairing unrelated failures"
+  ],
+  "materialChangeSignals": [
+    "the requested outcome expands beyond job-application report production",
+    "an existing registered Loop fully owns the same domain workflow",
+    "the public input or output contract changes materially",
+    "a runtime provider, external effect, personal-data publication, or automatic submission is requested",
+    "the work requires more than one independently owned material contribution"
+  ],
+  "stopConditions": [
+    "required source ownership, applicant consent, evidence provenance, publication boundary, or output validation is unavailable",
+    "the candidate would store raw prompts, transcripts, private reasoning, credentials, mutable runtime handles, or applicant identity",
+    "a protected claim would be omitted or a mandatory rubric failure would be averaged away",
+    "the same validation fingerprint fails twice without changed evidence",
+    "the target path overlaps an unrelated active writer or the target scope widens"
+  ]
+}

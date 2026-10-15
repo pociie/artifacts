@@ -1,0 +1,130 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:reusable-operation:finebridge-fresh-report",
+  "requestRevision": "revision:fresh-r1",
+  "requestRelation": "new_objective",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/job-application-2026-10-finebridge-digital-service-planner-fresh/route-decision.json",
+    "decisionDigest": "sha256:532e04bc11f60971b795cd4e4bef86e3bb3252011d2bb3f4ba57ac9cbb05e242",
+    "effectiveMode": "loop"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:finebridge-fresh-report-builder",
+    "agencyRef": "artifacts/agents/requirement-realization/agents/artifact-builder.yaml",
+    "agencyDigest": "sha256:06ebe77c9b1b5754e6f2e749c470d9129854abe04690022b3156705f6f10410d",
+    "responsibilityClass": "builder",
+    "outcomeContract": "outcome:five-set-searchable-pdf-job-application-review",
+    "outputContract": "output:request-result-projection-review-and-pdf",
+    "decisionScopes": [
+      "selected-job-application-loop",
+      "five-candidate-answer-content",
+      "reader-facing-pdf-publication"
+    ],
+    "nonAuthority": [
+      "source-truth",
+      "applicant-impersonation",
+      "acceptance",
+      "submission",
+      "hiring-outcome",
+      "native-artifact-edit"
+    ]
+  },
+  "objective": "Use the selected job-application report Loop as-is to produce a fresh five-set Korean application review and one searchable PDF for the supplied Finebridge Finance posting.",
+  "successEvidenceRefs": [
+    "evidence:fresh-runtime-bundle-created",
+    "evidence:five-candidate-coverage",
+    "evidence:searchable-pdf-addressable"
+  ],
+  "protectedConstraintRefs": [
+    "constraint:no-invented-applicant-facts",
+    "constraint:five-set-pdf-profile",
+    "constraint:public-private-projection-separation",
+    "constraint:authority-effect-none"
+  ],
+  "nonGoalRefs": [
+    "non-goal:reuse-old-finebridge-runtime",
+    "non-goal:edit-reusable-source",
+    "non-goal:application-submission",
+    "non-goal:company-fact-invention"
+  ],
+  "lifecycleIntent": "reuse_as_is",
+  "capabilities": [
+    "job application report production",
+    "Korean editorial writing",
+    "PDF publication validation"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "428a42e075cb9d5d66f87be50bf6b28b0ad29c1b597d88612f213a7634935779",
+  "allowedBaseClasses": [
+    "loop"
+  ],
+  "allowedScopes": [
+    "unresolved"
+  ],
+  "requiredFacts": [],
+  "exactArtifactIds": [],
+  "relationshipDepth": 0,
+  "maxCandidates": 1,
+  "contextBudget": {
+    "maxSourceMembers": 8,
+    "maxConsumerRefs": 4,
+    "maxValidationRefs": 6
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "The selected native artifact is present in the current runtime source but is not classified by the current inventory snapshot.",
+      "The official example-domain pages and listed attachments are not independently inspectable in this run."
+    ],
+    "allowedRelationshipTypes": [
+      "defines",
+      "consumes",
+      "validates"
+    ],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "consumer",
+      "effect",
+      "route_or_topology",
+      "lifecycle",
+      "protected_constraint"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "evidence:fresh-runtime-bundle-created",
+      "evidence:adjacent-findings-not-executed",
+      "evidence:pdf-rendered-and-addressable"
+    ],
+    "validationRefs": [
+      "validation:reusable-artifact-operation-request-v2",
+      "validation:five-set-pdf-profile",
+      "validation:request-result-writing-projection",
+      "validation:render-publication"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "loop-budget:finebridge-fresh-five-set-report:v1",
+  "dataClassification": "internal",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": true,
+  "constructionAllowed": false,
+  "residualGapProven": true,
+  "requestDigest": "3cee389d7639778f33e76ac61642f6418a17c99c0d608139b49ae1a536a04f82"
+}

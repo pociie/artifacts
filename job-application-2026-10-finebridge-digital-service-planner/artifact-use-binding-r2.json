@@ -1,0 +1,36 @@
+{
+  "kind": "reusable-artifact-use-binding/v1",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "disposition": "improve_existing",
+  "subjectRef": "agent-subject:finebridge-digital-service-planner-answer-projection-fixer",
+  "artifactRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+  "artifactContractRef": "artifacts/agent-loop/document/job-application-report-production/contract.md",
+  "skillRef": "artifacts/agent-loop/document/job-application-report-production/skill/job-application-report-loop-operation/SKILL.md",
+  "routeBinding": {
+    "decisionRef": "route-decision-r2.json",
+    "decisionDigest": "ed862955dc9f2764f3aef0b0f097f46b25eddbf250a0d5dc7c58bb5510fe08ae",
+    "effectiveMode": "loop"
+  },
+  "selectedResponsibilities": [
+    "separate application-answer projection from review report",
+    "preserve applicant evidence and answer text without workflow leakage",
+    "validate projection parity and publication safety",
+    "retain review-only assessment and confirmation material outside the answer projection"
+  ],
+  "excludedResponsibilities": [
+    "changing applicant facts or personal meaning",
+    "application acceptance",
+    "external submission",
+    "hiring outcome"
+  ],
+  "sourceRevisionEvidence": {
+    "loopDigest": "00157f537c2df5ba44e6d213b4efa7116f30dde9f4363483532f5e5e96dac0fe",
+    "contractDigest": "2820d156474f5b037a59a6ae3bb3e82f78ed4f1fd8c327d4d7b075706b72a5d5",
+    "policyDigest": "0208d0cd2e3292c9877ad83d43572c41de25c35ab8eb43c1268574681ba783c3",
+    "requirementDigest": "b7955a50451745b558d290cfca2e5f21385712d4f890918cfacd2d58a9ce2ed8",
+    "skillDigest": "a9186b9fd3788d16128168ce89047aafa9102834d61c8ba251abca110ee18930",
+    "checkerDigest": "ee3a0fce80119891625fca3507d490122463218257186e272a6ca62b64b33d83"
+  },
+  "changeSummary": "명시적인 제출용 답안 프로젝션 경계를 추가하고, 검토 보고서의 점수·검증·면접·확인 메타데이터가 자기소개서 본문으로 복사되지 않도록 분리했다."
+}

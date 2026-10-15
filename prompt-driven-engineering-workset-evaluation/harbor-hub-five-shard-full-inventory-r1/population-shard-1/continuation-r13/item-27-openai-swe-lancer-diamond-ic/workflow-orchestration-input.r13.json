@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "f85bc406cbc355bc01c71b9df4dc8931bac67d01a2b1be7b5f1fc71b32ca2cfc",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-27-openai-swe-lancer-diamond-ic/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-27-openai-swe-lancer-diamond-ic/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "4e2cf44488c8539f0bc248114c6676008830764e8da5d84cbf7e6e7d8f8c557a",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "8a4202c406f6c3f34020fd2505fdc9422daa616fc09bc96ffff2a817f0e31754",
+      "topologySelectionDecisionSha256": "916acb0c97e0fae576b3d64dedc9b4bf606252ce469b57b86912e7188cce0432"
+    },
+    {
+      "coordinationPlanDecisionSha256": "f85bc406cbc355bc01c71b9df4dc8931bac67d01a2b1be7b5f1fc71b32ca2cfc",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-27-openai-swe-lancer-diamond-ic/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-27-openai-swe-lancer-diamond-ic/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "4e2cf44488c8539f0bc248114c6676008830764e8da5d84cbf7e6e7d8f8c557a",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "8a4202c406f6c3f34020fd2505fdc9422daa616fc09bc96ffff2a817f0e31754",
+      "topologySelectionDecisionSha256": "916acb0c97e0fae576b3d64dedc9b4bf606252ce469b57b86912e7188cce0432"
+    },
+    {
+      "coordinationPlanDecisionSha256": "f85bc406cbc355bc01c71b9df4dc8931bac67d01a2b1be7b5f1fc71b32ca2cfc",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-27-openai-swe-lancer-diamond-ic/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-27-openai-swe-lancer-diamond-ic/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "4e2cf44488c8539f0bc248114c6676008830764e8da5d84cbf7e6e7d8f8c557a",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "8a4202c406f6c3f34020fd2505fdc9422daa616fc09bc96ffff2a817f0e31754",
+      "topologySelectionDecisionSha256": "916acb0c97e0fae576b3d64dedc9b4bf606252ce469b57b86912e7188cce0432"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

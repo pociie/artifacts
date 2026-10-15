@@ -1,0 +1,47 @@
+{
+  "artifactKind": "construct",
+  "authorityEffect": "none",
+  "automaticPromotion": false,
+  "candidateRole": "bounded_effective_provider_receipt_projection",
+  "capabilityIds": ["effective_provider_receipt"],
+  "compatibleModes": ["single_task"],
+  "componentRefs": [
+    "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+    "artifacts/loop-architecture/components/execution-routing/component.json",
+    "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+  ],
+  "coveredGapIds": ["gap:item-effective-provider-receipt"],
+  "expiryConditionRefs": [
+    "item-terminal-settlement",
+    "operation-revision-successor",
+    "provider-receipt-observed"
+  ],
+  "fallbackRef": "fallback:hold:population-shard-2:terminal-bench-science/terminal-bench-science:until-effective-provider-receipt",
+  "identityDigest": "sha256:d0eddfc84490c64411dd00f2a9c6d5dae03e306bab54245a04923d3e2e2182e4",
+  "invalidationConditionRefs": [
+    "source-binding-change",
+    "requirement-scope-change",
+    "capability-fingerprint-change"
+  ],
+  "itemId": "terminal-bench-science/terminal-bench-science",
+  "kind": "dynamic-artifact-candidate/v1",
+  "operationEvidenceContractRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "runPrivate": true,
+  "schemaVersion": 1,
+  "structuralCost": 1,
+  "topologyBearing": false,
+  "validated": true,
+  "validationEvidenceRefs": [
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/artifact-reuse-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/candidate-probe.r13.json"
+  ],
+  "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-2:continuation-r13/item-54-terminal-bench-science-terminal-bench-science:terminal-bench-science/terminal-bench-science"
+}

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "self-introduction-evaluation/v1",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "threshold": {
+    "minimumPercent": 90,
+    "rule": "include_only_results_at_or_above_threshold"
+  },
+  "hardGates": [
+    {
+      "id": "G1",
+      "name": "character-count",
+      "rule": "every_answer_is_between_300_and_700_characters"
+    },
+    {
+      "id": "G2",
+      "name": "prompt-elements",
+      "rule": "every_answer_contains_the_required_prompt_elements"
+    },
+    {
+      "id": "G3",
+      "name": "evidence-fidelity",
+      "rule": "no_unverified_technology_result_or_personal_contribution_is_presented_as_fact"
+    },
+    {
+      "id": "G4",
+      "name": "anonymized-education",
+      "rule": "no_school_department_or_course_identifying_information"
+    }
+  ],
+  "axes": [
+    {
+      "id": "A1",
+      "name": "문항 요구사항 충족",
+      "weight": 10,
+      "question": "문항이 요구한 필수 요소를 빠짐없이 담았는가?"
+    },
+    {
+      "id": "A2",
+      "name": "직무 적합성",
+      "weight": 12,
+      "question": "AI 서비스 API·데이터 흐름·운영·품질과 직접 연결되는가?"
+    },
+    {
+      "id": "A3",
+      "name": "기업·사업 맥락",
+      "weight": 8,
+      "question": "롯데이노베이트의 고객·플랫폼·AI 사업 맥락에서 자연스러운가?"
+    },
+    {
+      "id": "A4",
+      "name": "사실성·근거",
+      "weight": 12,
+      "question": "저장소와 사용자 제공 정보로 방어 가능한가?"
+    },
+    {
+      "id": "A5",
+      "name": "구체성",
+      "weight": 8,
+      "question": "기술·상황·행동이 추상어가 아닌 구체 명사로 표현됐는가?"
+    },
+    {
+      "id": "A6",
+      "name": "역할·주도성",
+      "weight": 10,
+      "question": "본인이 무엇을 판단하고 구현했는지 드러나는가?"
+    },
+    {
+      "id": "A7",
+      "name": "수행 논리",
+      "weight": 10,
+      "question": "문제-판단-행동-검증의 인과관계가 이어지는가?"
+    },
+    {
+      "id": "A8",
+      "name": "결과·학습·성장성",
+      "weight": 10,
+      "question": "결과와 배운 점이 다음 직무 수행으로 연결되는가?"
+    },
+    {
+      "id": "A9",
+      "name": "운영·품질·리스크 성숙도",
+      "weight": 10,
+      "question": "권한·실패·관측·검증·운영 조건을 고려하는가?"
+    },
+    {
+      "id": "A10",
+      "name": "차별성·가독성·면접 방어력",
+      "weight": 10,
+      "question": "다른 문항과 중복되지 않고, 면접에서 실제 사례로 설명 가능한가?"
+    }
+  ],
+  "setResults": [
+    {
+      "setId": "set-1",
+      "scores": {"A1": 10, "A2": 12, "A3": 8, "A4": 12, "A5": 8, "A6": 9, "A7": 9, "A8": 8, "A9": 10, "A10": 8},
+      "total": 94,
+      "disposition": "include"
+    },
+    {
+      "setId": "set-2",
+      "scores": {"A1": 10, "A2": 11, "A3": 8, "A4": 12, "A5": 8, "A6": 9, "A7": 9, "A8": 8, "A9": 9, "A10": 8},
+      "total": 92,
+      "disposition": "include"
+    },
+    {
+      "setId": "set-3",
+      "scores": {"A1": 10, "A2": 10, "A3": 8, "A4": 12, "A5": 8, "A6": 9, "A7": 9, "A8": 9, "A9": 8, "A10": 8},
+      "total": 91,
+      "disposition": "include"
+    },
+    {
+      "setId": "set-4",
+      "scores": {"A1": 10, "A2": 12, "A3": 8, "A4": 12, "A5": 8, "A6": 9, "A7": 9, "A8": 8, "A9": 9, "A10": 8},
+      "total": 93,
+      "disposition": "include"
+    },
+    {
+      "setId": "set-5",
+      "scores": {"A1": 10, "A2": 10, "A3": 8, "A4": 12, "A5": 8, "A6": 9, "A7": 9, "A8": 8, "A9": 8, "A10": 8},
+      "total": 90,
+      "disposition": "include"
+    }
+  ],
+  "notes": [
+    "The score is an internal evidence-based editing score, not a hiring prediction.",
+    "Personal contribution claims must be confirmed by the applicant before submission.",
+    "No Python/PyTorch model-training, Kubernetes, AWS/Azure operation, production-user, or numeric performance claim was added without evidence."
+  ]
+}

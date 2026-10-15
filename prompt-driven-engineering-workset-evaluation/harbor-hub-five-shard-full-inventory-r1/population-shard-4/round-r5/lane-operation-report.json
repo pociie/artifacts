@@ -1,0 +1,200 @@
+{
+  "architectureAndSwarm": {
+    "architecture": "not_required_topology_none",
+    "operationEvidence": "none_claimed",
+    "swarm": "not_required_topology_none"
+  },
+  "artifactLifecycle": {
+    "create": "rejected",
+    "discover": "operated",
+    "dynamicComposition": "not_required",
+    "merge": "rejected",
+    "observationRef": "artifacts/population-shard-4/artifact-lifecycle-observation.json",
+    "reuse": "operated",
+    "split": "rejected",
+    "update": "rejected"
+  },
+  "authorityEffect": "none",
+  "benchmark": {
+    "effectiveReasoningEffort": "max",
+    "effectiveSubjectTimeoutSeconds": 3600,
+    "model": "gpt-5.6-luna",
+    "oracle": "2/2 tests passed",
+    "requestedReasoningEffort": "max",
+    "requestedSubjectTimeoutSeconds": 3600,
+    "reward": 1.0,
+    "state": "passed"
+  },
+  "counts": {
+    "discovered": 1,
+    "evaluated": 1,
+    "executed": 1,
+    "globalInventoryRowsDiscovered": 287,
+    "held": 0,
+    "qualified": 1,
+    "rejected": 0,
+    "settled": 1,
+    "shardCandidatesDiscovered": 49
+  },
+  "digest": "sha256:4e4e51f6d150923eb591a9da1b7b4dc51eebc64282b64b548675938cd5d6a91e",
+  "gaps": [
+    "independent external claim review was not performed",
+    "one representative does not establish the 49-candidate shard or 287-row population",
+    "network isolation enforcement was not exercised because the task declares public access",
+    "private reasoning remains runtime-only; max is a configuration observation",
+    "live resolution file drifted from the r5 dispatch binding; explicit r5 successor binding was preserved"
+  ],
+  "inventory": {
+    "globalRowsDiscovered": 287,
+    "ownedShardCandidates": 49,
+    "providerReobservation": "validation_only",
+    "representativeIdentityDigest": "sha256:dde3d71950c80730c5e52f6982af3f9f44b4598953e77c38b00ff0c243687252",
+    "selectionRule": "sha256-prefix64-modulo-v1"
+  },
+  "kind": "harbor-hub-shard-operation-report/v2",
+  "limitations": [
+    "public import qualification is scoped to this public dataset and does not imply Hub authentication for private sources",
+    "network isolation was not required by the task environment policy"
+  ],
+  "operationDecisionDigest": "sha256:b1d84a88ae49f897ecdd383ee66b567a4742cf9770b9a2bf77c63cc79b4631e0",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationRequestRevision": "harbor-hub-five-shard-full-inventory-source-r5",
+  "populationCounts": {
+    "population-shard-1": 60,
+    "population-shard-2": 54,
+    "population-shard-3": 66,
+    "population-shard-4": 49,
+    "population-shard-5": 58
+  },
+  "populationPlanDigest": "sha256:705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+  "populationPlanRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-4/population-shard-plan.json",
+  "resourceSettlement": {
+    "activeProviderResourceCount": 0,
+    "resourceCount": 8,
+    "state": "complete",
+    "unresolvedExecutionResources": []
+  },
+  "round": "round-r5",
+  "schemaVersion": 2,
+  "shardId": "population-shard-4",
+  "sourceBinding": {
+    "driftRef": "artifacts/population-shard-4/source-drift-observation.json",
+    "expectedDecisionDigest": "sha256:b1d84a88ae49f897ecdd383ee66b567a4742cf9770b9a2bf77c63cc79b4631e0",
+    "expectedResolutionRequestRevision": "harbor-hub-five-shard-full-inventory-source-r5",
+    "expectedSourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:dc8b56e26addb909623cd1c09b451b232a8b1a077277bda8cbbe82743c7ba9c6"
+  },
+  "sourceRefs": [
+    "artifacts/population-shard-4/simulation-evidence.json",
+    "artifacts/population-shard-4/final-engineering-evaluation.json",
+    "artifacts/population-shard-4/terminal-reward-result.json",
+    "artifacts/population-shard-4/settlement-ledger.json",
+    "artifacts/population-shard-4/source-drift-observation.json"
+  ],
+  "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:dc8b56e26addb909623cd1c09b451b232a8b1a077277bda8cbbe82743c7ba9c6",
+  "status": "complete",
+  "terminalReward": {
+    "assessmentDigest": "sha256:b9739275f23ecf34d2f1b3f9bfc1ee196f6d991a4617470b223548b090c08808",
+    "assessmentRef": "artifacts/population-shard-4/terminal-reward-assessment.json",
+    "diagnosticReward": 1.0,
+    "dimensions": {
+      "agent_architecture": {
+        "dimensionId": "agent_architecture",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "agent_swarm": {
+        "dimensionId": "agent_swarm",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "artifact_creation": {
+        "dimensionId": "artifact_creation",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "artifact_discovery": {
+        "dimensionId": "artifact_discovery",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "artifact_merge": {
+        "dimensionId": "artifact_merge",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "artifact_reuse": {
+        "dimensionId": "artifact_reuse",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "artifact_split": {
+        "dimensionId": "artifact_split",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "artifact_update": {
+        "dimensionId": "artifact_update",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "context_adaptation": {
+        "dimensionId": "context_adaptation",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "dynamic_artifact_composition": {
+        "dimensionId": "dynamic_artifact_composition",
+        "reward": null,
+        "state": "not_applicable"
+      },
+      "efficiency": {
+        "dimensionId": "efficiency",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "evidence_quality": {
+        "dimensionId": "evidence_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "loop_architecture_quality": {
+        "dimensionId": "loop_architecture_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "operability": {
+        "dimensionId": "operability",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "outcome_quality": {
+        "dimensionId": "outcome_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "reasoning_control": {
+        "dimensionId": "reasoning_control",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "requirement_understanding": {
+        "dimensionId": "requirement_understanding",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "routing": {
+        "dimensionId": "routing",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      "workflow": {
+        "dimensionId": "workflow",
+        "reward": 1.0,
+        "state": "scored"
+      }
+    },
+    "primaryReward": 1.0,
+    "promotionEligible": false,
+    "state": "passed"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "kind": "reviewer-competence-assessment/v1",
+  "lens": "safety",
+  "subject": {
+    "commit": "4abb7c671282ecceb8943b843e37354ef4476bfc",
+    "tree": "2489bd7af9d3769e3b173a6bced29fd58745268e",
+    "policyDigest": "sha256:374037e175a975a2df8c09efef2bc439469e88ced133bd148d14d4f4522c352e",
+    "evidenceBundleDigest": "sha256:fb23e3719e3fe4c616671707dadac40062abbb492ca3444d43d1cb52f7052b7c"
+  },
+  "catalog": {
+    "ref": "review-objective-catalog/v1",
+    "digest": "sha256:06dad34a88c03bfa602fe8e1ffb4dc6cdc43ec029a6077f41541b8796cd625cb"
+  },
+  "knowledgeProjection": {
+    "ref": "knowledge:governance:scope-aware-assurance-reviewer-competence",
+    "digest": "sha256:1592fa1e3465212b45d81db5889f41d8e64b75fbddd03c3456da7222aee003cf"
+  },
+  "runtime": {
+    "identityRef": "unknown:not-observed",
+    "assignmentRef": "unknown:not-dispatched",
+    "relationToCandidate": "unknown",
+    "candidateMutation": "unknown",
+    "correlations": {
+      "model": "unknown",
+      "prompt": "unknown",
+      "sources": "unknown",
+      "harness": "unknown",
+      "dataset": "unknown"
+    },
+    "limitationIds": []
+  },
+  "impactSignals": ["authority_change", "policy_change", "reviewer_assignment", "evidence_change"],
+  "objectiveResults": [
+    {
+      "objectiveId": "SAFE-001",
+      "methods": ["examine", "scenario_analysis"],
+      "depth": "focused",
+      "coverage": "representative",
+      "result": "unknown",
+      "evidenceRefs": ["prior-run:phase5/reviewer-eligibility-blocker.json"],
+      "findingSummary": "No assigned safety runtime applied the objective.",
+      "limitationIds": ["limitation:reviewer-not-assigned"]
+    },
+    {
+      "objectiveId": "SAFE-002",
+      "methods": ["examine", "test"],
+      "depth": "focused",
+      "coverage": "representative",
+      "result": "unknown",
+      "evidenceRefs": ["prior-run:phase5/reviewer-eligibility-blocker.json"],
+      "findingSummary": "No assigned safety runtime applied the objective.",
+      "limitationIds": ["limitation:reviewer-not-assigned"]
+    },
+    {
+      "objectiveId": "SAFE-003",
+      "methods": ["examine"],
+      "depth": "focused",
+      "coverage": "representative",
+      "result": "unknown",
+      "evidenceRefs": ["prior-run:phase5/reviewer-eligibility-blocker.json"],
+      "findingSummary": "Runtime identity and relationship were not observed.",
+      "limitationIds": ["limitation:runtime-provenance-absent"]
+    },
+    {
+      "objectiveId": "SAFE-006",
+      "methods": ["test", "scenario_analysis"],
+      "depth": "focused",
+      "coverage": "representative",
+      "result": "unknown",
+      "evidenceRefs": ["prior-run:candidate/implementation-evidence-manifest.json"],
+      "findingSummary": "Implementation evidence exists but reviewer method application is absent.",
+      "limitationIds": ["limitation:reviewer-method-unobserved"]
+    },
+    {
+      "objectiveId": "SAFE-007",
+      "methods": ["examine", "test"],
+      "depth": "focused",
+      "coverage": "representative",
+      "result": "unknown",
+      "evidenceRefs": ["prior-run:knowledge/verification-receipt.json"],
+      "findingSummary": "Prior evidence is bound, but no reviewer reproduced it under this assessment.",
+      "limitationIds": ["limitation:reviewer-method-unobserved"]
+    }
+  ],
+  "competenceClaims": [
+    {
+      "dimension": "lens_knowledge",
+      "result": "missing",
+      "evidenceRefs": ["prior-run:phase5/reviewer-eligibility-blocker.json"],
+      "validityBasis": "No runtime competence exercise exists."
+    },
+    {
+      "dimension": "method_application",
+      "result": "missing",
+      "evidenceRefs": ["prior-run:phase5/reviewer-eligibility-blocker.json"],
+      "validityBasis": "No runtime assessment execution exists."
+    },
+    {
+      "dimension": "project_context",
+      "result": "missing",
+      "evidenceRefs": ["prior-run:phase5/reviewer-eligibility-blocker.json"],
+      "validityBasis": "No reviewer impact map exists."
+    },
+    {
+      "dimension": "evidence_handling",
+      "result": "missing",
+      "evidenceRefs": ["prior-run:phase5/reviewer-eligibility-blocker.json"],
+      "validityBasis": "No reviewer reproduction receipt exists."
+    },
+    {
+      "dimension": "deterministic_tool_boundary",
+      "result": "missing",
+      "evidenceRefs": ["prior-run:phase5/reviewer-eligibility-blocker.json"],
+      "validityBasis": "No reviewer execution boundary evidence exists."
+    }
+  ],
+  "freshness": {
+    "evaluatedAt": "2026-08-16T00:00:00Z",
+    "validUntil": "2026-08-16T00:00:00Z",
+    "state": "unknown",
+    "invalidationTriggers": [
+      "candidate_change",
+      "policy_change",
+      "catalog_change",
+      "knowledge_projection_change",
+      "source_set_change",
+      "model_change",
+      "prompt_contract_change",
+      "harness_change",
+      "dataset_change",
+      "runtime_identity_change",
+      "assignment_change",
+      "project_boundary_change"
+    ]
+  },
+  "decisionRequest": "evaluate_competence_evidence"
+}

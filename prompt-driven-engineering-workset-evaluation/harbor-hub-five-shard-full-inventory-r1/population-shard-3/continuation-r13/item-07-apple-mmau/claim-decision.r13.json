@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 9,
+      "expectedEventHeadSha256": "a015e11e4df98ee5f7c1d670eac5dd154acefc97f8254e2c264115fa454840d9",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:1431c200c325954fc798e28f875edd9e0aa31a9ed9cfd46e025c250528d5f843"
+      },
+      "identityDigest": "sha256:5ddba2d6db991394841d93ac9d02569553e029aec47dd9cf496f8dbd2f2a1988",
+      "itemId": "apple/mmau",
+      "laneId": "population-shard-3",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-3:apple/mmau:r13",
+      "sequence": 7,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-3:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 9,
+    "eventHeadSha256": "sha256:a015e11e4df98ee5f7c1d670eac5dd154acefc97f8254e2c264115fa454840d9",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:3bcbd8ee4ab029397b54233feceb46b3721f5884f53c35bb5386bc2be9e65a96",
+  "eventCursor": 9,
+  "eventHeadSha256": "sha256:a015e11e4df98ee5f7c1d670eac5dd154acefc97f8254e2c264115fa454840d9",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-3",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-07-apple-mmau/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "apple/mmau",
+        "laneId": "population-shard-3",
+        "proposalId": "proposal:population-shard-3:apple/mmau:r13",
+        "workerId": "worker:harbor-population-shard-3:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 9,
+      "eventHeadSha256": "a015e11e4df98ee5f7c1d670eac5dd154acefc97f8254e2c264115fa454840d9",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 9,
+    "eventHeadSha256": "a015e11e4df98ee5f7c1d670eac5dd154acefc97f8254e2c264115fa454840d9",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-3",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}

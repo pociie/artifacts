@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>Enter 뒤의 시스템 — claim-led book PDF prototype v2</title>
+  <style>
+    @page { size: A4; margin: 0; }
+    :root {
+      --paper:#f5f0e6; --ink:#102d43; --teal:#2e6972; --teal2:#8eb6b8;
+      --red:#88483f; --red2:#ead9d1; --gold:#a47a36; --muted:#637177;
+      --rule:#9eaaa6; --grid:rgba(46,75,82,.085);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:#d8d4cc;color:var(--ink)}
+    body{font-family:"Apple SD Gothic Neo","Noto Sans KR",sans-serif}
+    .page{width:210mm;height:297mm;position:relative;overflow:hidden;background:var(--paper);padding:15mm 17mm 18mm 20mm;page-break-after:always}
+    .page:last-child{page-break-after:auto}
+    .notebook{background-color:#f3eee4;background-image:linear-gradient(var(--grid) .22mm,transparent .22mm),linear-gradient(90deg,var(--grid) .22mm,transparent .22mm);background-size:7mm 7mm}
+    .running{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:2.5mm;border-bottom:.35mm solid var(--teal);margin-bottom:6mm;color:var(--teal);font:7.8pt/1.2 Georgia,serif;letter-spacing:.14em;text-transform:uppercase}
+    .notebook .running{color:var(--red);border-color:var(--red)}
+    .folio{position:absolute;left:20mm;right:17mm;bottom:8mm;padding-top:2mm;border-top:.25mm solid var(--rule);display:flex;justify-content:space-between;color:#55676d;font:7.4pt/1.2 Georgia,serif;letter-spacing:.06em}
+    h1,h2,h3,.serif{font-family:Georgia,"Noto Serif KR",serif}
+    h1{margin:0;font-size:38pt;line-height:1.03;letter-spacing:-.025em}
+    h2{margin:0 0 3.5mm;font-size:22.5pt;line-height:1.16;letter-spacing:-.015em}
+    h3{margin:0 0 2mm;font-size:13.5pt;line-height:1.35}
+    p{margin:0 0 3mm;font-size:10pt;line-height:1.58;word-break:keep-all}
+    .lead{font:13.5pt/1.48 Georgia,"Noto Serif KR",serif;color:#29495b;margin-bottom:5mm}
+    .eyebrow{margin-bottom:3mm;color:var(--teal);font:7.5pt/1.2 ui-monospace,monospace;letter-spacing:.15em;text-transform:uppercase}
+    .small{font-size:8.1pt;line-height:1.55;color:#59686d}
+    .body-columns{columns:2;column-gap:9mm;column-rule:.25mm solid #c3c8c2}
+    .body-columns p{break-inside:avoid}
+    .dropcap:first-letter{float:left;margin:1mm 2mm 0 0;font:38pt/.78 Georgia,serif;color:var(--teal)}
+    .subhead{margin:4mm 0 2mm;padding-top:2.5mm;border-top:.35mm solid var(--rule);font:700 11.5pt/1.35 Georgia,"Noto Serif KR",serif}
+    .transition{margin-top:4mm;padding:2.5mm 4mm;border-left:.8mm solid var(--teal);background:rgba(218,232,229,.55);font-size:8.8pt;line-height:1.5}
+    .source-note{margin-top:3mm;padding-top:2mm;border-top:.25mm solid #aeb7b3;color:#59686c;font:7.2pt/1.45 ui-monospace,monospace}
+    figure{margin:5mm 0 3mm}
+    figure svg{display:block;width:100%;height:auto;background:rgba(255,255,255,.34);border:.3mm solid #a8b5b1}
+    figcaption{margin-top:2mm;color:#52646a;font:8pt/1.45 Georgia,"Noto Serif KR",serif}
+    .label{display:inline-flex;align-items:center;gap:1.4mm;padding:1.1mm 2mm;color:var(--teal);border:.3mm dashed currentColor;background:rgba(245,240,230,.8);font:700 7pt/1 ui-monospace,monospace;letter-spacing:.07em;text-transform:uppercase}
+    .label.observed{color:var(--red);border-style:solid}.label.observed:before{content:"●"}
+    .label.background{color:var(--gold);border-style:double;border-width:.75mm;padding:.7mm 1.6mm}.label.background:before{content:"▤"}
+    .label.inference:before{content:"◆"}
+    .evidence-section{padding:3.5mm 0 4mm;border-top:.6mm solid var(--red);break-inside:avoid}
+    .evidence-section.gold{border-color:var(--gold)}
+    .evidence-section.teal{border-color:var(--teal);border-top-style:dashed}
+    .evidence-section h3{margin-top:3mm}
+    .claim-line{font:14pt/1.45 Georgia,"Noto Serif KR",serif;color:#294659}
+    .margin-grid{display:grid;grid-template-columns:1fr 49mm;gap:7mm}
+    .margin-note{padding-left:5mm;border-left:.35mm solid #9ba8a4;color:#56666b}
+    .margin-note p{font-size:8.5pt;line-height:1.55}
+    pre{margin:3mm 0;padding:3.5mm 5mm;background:rgba(255,255,255,.56);border-left:.8mm solid #708a91;color:#213c48;font:8.2pt/1.48 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap}
+    table{width:100%;border-collapse:collapse;margin:4mm 0;font-size:8.3pt;line-height:1.45;background:rgba(245,240,230,.62)}
+    th,td{padding:2.5mm 2.2mm;border-top:.25mm solid #a8aaa4;text-align:left;vertical-align:top}
+    th{color:var(--red);font:700 7.2pt/1.3 ui-monospace,monospace;letter-spacing:.05em}
+    .cover{padding:19mm 19mm 18mm 17mm}
+    .cover .topline{width:122mm;color:var(--teal);font:8pt/1.2 Georgia,serif;letter-spacing:.16em;text-transform:uppercase;border-bottom:.35mm solid var(--teal);padding-bottom:4mm}
+    .cover .title{position:relative;z-index:2;width:130mm;margin-top:16mm}
+    .cover h1{font-size:45pt}
+    .cover .subtitle{width:113mm;margin-top:7mm;font:16.5pt/1.5 Georgia,"Noto Serif KR",serif;color:#29495b}
+    .cover .blurb{position:absolute;right:18mm;top:52mm;width:43mm;padding-left:7mm;border-left:.35mm solid #93a9a8}
+    .cover .blurb p{font-size:9pt;line-height:1.65}
+    .cover .wave{position:absolute;left:-12mm;bottom:18mm;width:165mm;height:102mm;opacity:.92}
+    .cover .edition{position:absolute;right:18mm;bottom:19mm;width:46mm;color:#5e6b6d;font:7.3pt/1.65 ui-monospace,monospace;letter-spacing:.07em;text-transform:uppercase}
+    .contents{margin-top:7mm}
+    .contents article{display:grid;grid-template-columns:15mm 1fr 22mm;gap:4mm;padding:4mm 0;border-top:.25mm solid #a8b1ad;align-items:baseline}
+    .contents b{color:var(--red);font:9pt/1 ui-monospace,monospace}.contents strong{font:13.5pt/1.3 Georgia,"Noto Serif KR",serif}.contents span{text-align:right;color:#607074;font:7.4pt/1 ui-monospace,monospace}
+    .pull{margin:7mm 7mm;padding:4mm 0;border-top:.5mm solid var(--teal);border-bottom:.5mm solid var(--teal);font:15pt/1.5 Georgia,"Noto Serif KR",serif;text-align:center;color:#274a5b}
+    .trace{display:grid;grid-template-columns:29mm 1fr;gap:5mm;margin:4mm 0}
+    .trace .time{color:var(--red);font:8pt/1.3 ui-monospace,monospace;border-top:.4mm solid var(--red);padding-top:2mm}
+    .trace .event{border-top:.25mm solid #aeb5b0;padding:2mm 0 3mm}
+    .trace .event b{display:block;font:11pt/1.3 Georgia,"Noto Serif KR",serif;margin-bottom:1mm}.trace .event p{font-size:9.3pt;margin:0}
+    .question{margin:5mm 0;padding:4mm 0;border-top:.6mm solid var(--red);border-bottom:.25mm solid var(--red);font:13pt/1.5 Georgia,"Noto Serif KR",serif;color:#684139}
+    .end-mark{margin-top:8mm;text-align:center;color:var(--teal);font:20pt/1 Georgia,serif}
+  </style>
+</head>
+<body>
+
+<section class="page cover">
+  <div class="topline">ORCA AGENT SYSTEMS · TECHNICAL READER EDITION</div>
+  <div class="title">
+    <h1>ENTER 뒤의<br>시스템</h1>
+    <div class="subtitle">React 화면에서 generator turn, tool effect, recovery까지 한 요청의 생애를 따라간다</div>
+  </div>
+  <aside class="blurb"><p>이 보고서는 구성요소를 나열하지 않는다. 사용자가 Enter를 누른 순간부터 화면과 실행 상태가 갈라지고 다시 합류하는 과정을 하나의 인과적 이야기로 읽는다.</p><p class="small">제3자 복원 snapshot을 대상으로 하며, 관찰·외부 배경·프로젝트 추론을 분리한다.</p></aside>
+  <svg class="wave" viewBox="0 0 700 430" aria-hidden="true"><g fill="none" stroke="#4f858c" stroke-width="2" opacity=".72"><path d="M-40 300 C110 130 180 390 330 190 S550 340 740 90"/><path d="M-40 316 C110 146 180 406 330 206 S550 356 740 106"/><path d="M-40 332 C110 162 180 422 330 222 S550 372 740 122"/><path d="M-40 348 C110 178 180 438 330 238 S550 388 740 138"/><path d="M-40 364 C110 194 180 454 330 254 S550 404 740 154"/><path d="M-40 380 C110 210 180 470 330 270 S550 420 740 170"/><path d="M-40 396 C110 226 180 486 330 286 S550 436 740 186"/><path d="M-40 412 C110 242 180 502 330 302 S550 452 740 202"/></g></svg>
+  <div class="edition">CLAIM-LED PROTOTYPE V2<br>SYSTEMS MONOGRAPH × EVIDENCE NOTEBOOK<br>REPORT-ONLY CANDIDATE · 2026-09-21</div>
+</section>
+
+<section class="page">
+  <div class="running"><b>읽기 계약</b><span>설명과 검증은 서로 다른 일을 한다</span></div>
+  <div class="eyebrow">Before the first chapter</div>
+  <h2>이 보고서가 말할 수 있는 것과<br>말할 수 없는 것</h2>
+  <p class="lead">독자가 알아야 할 첫 번째 사실은 기술이 아니라 근거의 경계다.</p>
+  <div class="body-columns">
+    <p class="dropcap">분석 대상은 배포 bundle에서 복원된 제3자 snapshot이다. 파일, 타입, 분기와 호출은 그 snapshot 안에서 관찰할 수 있지만, 그것만으로 upstream 개발자의 의도나 현재 공식 제품의 전체 동작을 확정할 수는 없다. 따라서 이 보고서는 보이는 구조를 출발점으로 삼되, “왜 그렇게 설계되었는가”를 말할 때는 반드시 추론임을 표시한다.</p>
+    <p>JavaScript generator와 React state처럼 언어·framework의 일반 동작은 공식 문서에서 가져온 외부 배경지식이다. 이 지식은 코드를 읽는 선행 개념을 제공하지만 프로젝트 내부의 특정 상태 전이를 스스로 증명하지 않는다. 반대로 local source의 함수나 타입은 현재 snapshot의 사실이지만 JavaScript와 React의 보편적 의미를 정의하지 않는다.</p>
+    <p>두 종류의 근거를 연결할 때 비로소 프로젝트 추론이 생긴다. 예를 들어 React의 state snapshot 개념과 local REPL의 event 소비 구조를 함께 보면, Enter handler와 agent turn 완료를 같은 시간 경계로 그려서는 안 된다는 편집 결론을 낼 수 있다. 이 결론은 유용하지만 관찰 사실과 동일한 확정성을 갖지는 않는다.</p>
+    <p>이 책은 그래서 두 종류의 지면을 사용한다. Systems Monograph 면에서는 한 요청의 인과관계를 연속 산문과 도해로 설명한다. Evidence Notebook 면에서는 그 설명을 멈추고 source, background, inference, unknown을 다시 분해한다. Notebook은 부록이 아니라 본문의 주장 강도를 조절하는 제동 장치다.</p>
+  </div>
+  <div class="pull">장 제목과 강조어를 지워도 본문만으로 논증이 남아야 한다.</div>
+  <p><span class="label observed">Observed source fact</span> 현재 복원 snapshot과 그로부터 생성된 local study에서 직접 확인한 내용</p>
+  <p><span class="label background">External background</span> MDN, React, Anthropic 등 공식 자료가 설명하는 일반 개념</p>
+  <p><span class="label inference">Project inference</span> 두 근거를 현재 프로젝트의 구조와 독자 여정에 연결한 해석</p>
+  <div class="folio"><span>READER CONTRACT</span><b>002</b></div>
+</section>
+
+<section class="page">
+  <div class="running"><b>전체 지도</b><span>한 요청은 일곱 개의 경계를 건넌다</span></div>
+  <div class="eyebrow">The end-to-end argument</div>
+  <h2>Enter는 명령 하나가 아니라<br>서로 다른 소유권을 통과하는 값이다</h2>
+  <p class="lead">각 단계는 앞 단계가 만든 값을 받으며, 화면 갱신·model continuation·외부 effect·복구 판단은 같은 종류의 사건이 아니다.</p>
+  <figure>
+    <svg viewBox="0 0 720 330" role="img" aria-label="Enter event에서 recovery까지의 한 방향 흐름">
+      <defs><marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9z" fill="#2e6972"/></marker></defs>
+      <path d="M58 170 H668" stroke="#2e6972" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+      <g fill="#f9f6ef" stroke="#2e6972" stroke-width="2">
+        <circle cx="62" cy="170" r="34"/><circle cx="160" cy="170" r="34"/><circle cx="258" cy="170" r="34"/><circle cx="356" cy="170" r="34"/><circle cx="454" cy="170" r="34"/><circle cx="552" cy="170" r="34"/><circle cx="650" cy="170" r="34"/>
+      </g>
+      <g font-family="Georgia" font-size="14" text-anchor="middle" fill="#102d43"><text x="62" y="166">USER</text><text x="62" y="184">EVENT</text><text x="160" y="166">REACT</text><text x="160" y="184">SNAPSHOT</text><text x="258" y="166">MESSAGE</text><text x="258" y="184">CONTEXT</text><text x="356" y="166">GENERATOR</text><text x="356" y="184">TURN</text><text x="454" y="166">STREAM</text><text x="454" y="184">STATE</text><text x="552" y="166">TOOL</text><text x="552" y="184">EFFECT</text><text x="650" y="166">DURABLE</text><text x="650" y="184">RECOVERY</text></g>
+      <g font-family="monospace" font-size="10" text-anchor="middle" fill="#88483f"><text x="111" y="130">event payload</text><text x="209" y="215">queued intent</text><text x="307" y="130">turn input</text><text x="405" y="215">yielded event</text><text x="503" y="130">tool request</text><text x="601" y="215">effect receipt</text></g>
+    </svg>
+    <figcaption>그림 1. 화살표는 “다음 기능”이 아니라 다음 owner에게 넘어가는 값을 표시한다. 이 값을 구분해야 재시도와 cleanup의 대상을 고를 수 있다.</figcaption>
+  </figure>
+  <div class="body-columns">
+    <p>처음 두 단계는 사용자 경험의 시간과 실행의 시간을 분리한다. Enter는 UI가 받은 사건이고, React update는 다음 render를 예약한다. 여기까지 진행됐다는 사실만으로 model 요청이 끝났거나 tool effect가 일어났다고 말할 수 없다.</p>
+    <p>중간 세 단계는 progressive observation을 만든다. 정규화된 message와 context가 generator turn의 입력이 되고, generator는 partial event를 내보내면서 실행 frame을 보존한다. stream consumer는 그 event를 화면에 투영하지만 canonical message가 닫히는 시점은 별도 protocol이 정한다.</p>
+    <p>마지막 두 단계는 외부 세계와 실패 이후를 다룬다. model이 tool을 요청해도 client의 validation과 permission을 지나기 전에는 effect가 아니다. effect가 끝난 뒤에는 result와 durable record가 남아야 다음 model call이나 recovery가 같은 일을 두 번 하지 않는다.</p>
+  </div>
+  <div class="transition"><b>다음 장으로 넘기는 질문</b> Enter를 눌렀을 때 UI는 곧바로 “모델에게 보내기”를 실행하는가, 아니면 먼저 현재 mode와 입력 상태를 해석하는가?</div>
+  <div class="folio"><span>WHOLE TURN MAP</span><b>003</b></div>
+</section>
+
+<section class="page">
+  <div class="running"><b>Chapter 01 · User event</b><span>입력은 먼저 의미를 얻는다</span></div>
+  <div class="eyebrow">Reader question</div>
+  <h2>Enter는 언제 “전송”이 되고,<br>언제 다른 행동이 되는가</h2>
+  <p class="lead">키보드 사건의 이름은 같아도, UI mode와 guard가 다르면 다음 owner에게 넘기는 값이 달라진다.</p>
+  <div class="margin-grid">
+    <main>
+      <p class="dropcap">사용자가 Enter를 누르면 가장 먼저 일어나는 일은 agent loop의 시작이 아니다. local study가 복원한 REPL 흐름에서는 selection 확인, suggestion 수락, agent routing, 빈 입력 처리처럼 현재 mode에 따라 Enter의 의미가 먼저 갈린다. 이 분기는 단순한 편의 기능이 아니라 키보드 사건을 application intent로 바꾸는 해석 경계다.</p>
+      <p>이 경계를 건너기 전에는 “사용자 메시지”가 아직 만들어지지 않았을 수 있다. 선택 목록이 열려 있다면 Enter는 선택을 확정하고, suggestion이 활성화되어 있다면 입력을 보완한다. 빈 입력은 전송을 만들지 않을 수 있으며, 별도의 agent route가 선택된 상태라면 같은 문자열도 다른 실행 경로로 전달될 수 있다.</p>
+      <p>따라서 보고서가 Enter 다음에 곧바로 model box를 배치하면 두 책임을 하나로 접게 된다. UI는 현재 interaction mode를 해석하고, application boundary는 그 결과를 message 또는 control action으로 정규화한다. agent turn은 그 뒤에 시작한다. 이 순서를 보존해야 중복 Enter, modal input, cancellation race를 어느 층에서 다룰지 설명할 수 있다.</p>
+      <div class="subhead">Worked trace — 평범한 한 줄 입력</div>
+      <p>사용자가 “이 변경의 위험을 설명해줘”라고 입력하고 Enter를 누른다. selection과 suggestion이 없고 입력이 비어 있지 않다는 guard가 확인되면 UI는 문자열과 현재 interaction context를 제출 의도로 바꾼다. 아직 assistant output은 없고, pending UI는 turn 완료가 아니라 “입력이 다음 owner에게 넘어갔다”는 사실만 보여 준다.</p>
+    </main>
+    <aside class="margin-note">
+      <span class="label observed">Observed</span>
+      <p>기존 source study는 Enter 처리에 mode별 guard가 존재하고, Enter가 항상 model 전송을 의미하지 않는다고 정리한다.</p>
+      <span class="label inference">Inference</span>
+      <p>따라서 PDF의 첫 화살표는 `Enter → Model`이 아니라 `Enter → UI intent`여야 한다.</p>
+    </aside>
+  </div>
+  <figure>
+    <svg viewBox="0 0 720 170" role="img" aria-label="Enter가 UI mode guard를 거쳐 intent가 되는 흐름">
+      <defs><marker id="a1" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9z" fill="#2e6972"/></marker></defs>
+      <g fill="#fbf8f1" stroke="#2e6972" stroke-width="2"><rect x="24" y="53" width="110" height="58"/><rect x="190" y="35" width="150" height="95"/><rect x="397" y="35" width="150" height="95"/><rect x="603" y="53" width="94" height="58"/></g>
+      <g font-family="Georgia" font-size="15" text-anchor="middle" fill="#102d43"><text x="79" y="86">Enter</text><text x="265" y="68">UI mode guards</text><text x="265" y="91" font-size="11">selection · suggestion</text><text x="265" y="108" font-size="11">route · empty input</text><text x="472" y="68">Application intent</text><text x="472" y="92" font-size="11">message or control action</text><text x="650" y="86">Turn input</text></g>
+      <g stroke="#2e6972" stroke-width="2" marker-end="url(#a1)"><line x1="134" y1="82" x2="187" y2="82"/><line x1="340" y1="82" x2="394" y2="82"/><line x1="547" y1="82" x2="600" y2="82"/></g>
+    </svg>
+    <figcaption>그림 2. 같은 key event라도 mode guard를 통과한 뒤에야 message 또는 control action이라는 의미를 얻는다.</figcaption>
+  </figure>
+  <div class="transition"><b>다음 단계</b> application intent가 만들어져도 handler가 보고 있는 state와 다음 render의 state는 아직 같지 않다.</div>
+  <div class="folio"><span>SYSTEMS MONOGRAPH</span><b>004</b></div>
+</section>
+
+<section class="page notebook">
+  <div class="running"><b>Evidence notebook · Event and React</b><span>UI 사건과 turn 완료를 분리하는 근거</span></div>
+  <div class="eyebrow">Claim under review</div>
+  <p class="claim-line">“Enter handler가 끝났다는 사실은 agent loop가 끝났다는 뜻이 아니다.”</p>
+  <section class="evidence-section gold">
+    <span class="label background">External background</span>
+    <h3>React가 제공하는 시간 모델</h3>
+    <p>React 공식 문서는 event handler, render별 state snapshot, handler가 끝난 뒤 처리되는 update queue를 구분한다. handler 안에서 setter를 호출해도 이미 실행 중인 handler가 보는 local state가 즉시 다른 값으로 바뀌는 것은 아니다. update는 다음 render를 요청한다.</p>
+    <pre>function onEnter() {
+  setPending(true)      // 다음 render를 위한 update
+  submit(currentInput)  // 현재 render가 포착한 값 사용
+}</pre>
+    <p class="small">이 코드는 React 개념을 설명하는 의사코드이며 local project source의 인용이 아니다.</p>
+  </section>
+  <section class="evidence-section">
+    <span class="label observed">Observed source fact</span>
+    <h3>현재 snapshot에서 볼 수 있는 연결</h3>
+    <p>기존 project study는 provider event가 query generator에서 yield되고, REPL consumer가 message와 state를 갱신하며, React/Ink가 그 state의 projection을 그린다고 정리한다. 이는 “API가 React를 직접 호출한다”는 모델과 다르다.</p>
+  </section>
+  <section class="evidence-section teal">
+    <span class="label inference">Project inference</span>
+    <h3>보고서에 적용하는 결론</h3>
+    <p>sequence diagram은 최소한 UI event, queued render update, normalized message, generator event를 서로 다른 lane에 둬야 한다. pending indicator는 turn의 terminal state가 아니라 UI projection 상태로 설명한다.</p>
+  </section>
+  <div class="question">경쟁 설명: “setPending(true)가 호출됐으니 turn이 시작됐다”고 단정할 수 있는가?</div>
+  <p>아니다. setter 호출은 UI update request를 설명할 뿐, message 정규화·model request·tool effect의 성공을 증명하지 않는다. local implementation이 두 동작을 같은 callback에서 연달아 호출하더라도 소유권과 실패 경계는 분리해 읽어야 한다.</p>
+  <div class="source-note">SOURCES · React responding to events / state as a snapshot / queueing updates · local source study React/Ink chapter · CLM-002 / CLM-004</div>
+  <div class="folio"><span>EVIDENCE NOTEBOOK</span><b>005</b></div>
+</section>
+
+<section class="page">
+  <div class="running"><b>Chapter 02 · Message and context</b><span>화면 값이 turn 입력으로 바뀌는 곳</span></div>
+  <div class="eyebrow">From interaction to execution</div>
+  <h2>화면의 state는 그대로 model에<br>전달되는 payload가 아니다</h2>
+  <p class="lead">turn은 입력 문자열뿐 아니라 현재 message history, tools, settings와 cancellation context를 함께 묶어 시작한다.</p>
+  <div class="body-columns">
+    <p class="dropcap">UI에서 제출 의도가 생긴 다음에는 그 의도를 실행 가능한 message와 context로 정규화해야 한다. 이 단계가 없으면 화면에서 보이는 문자열, React state에 저장된 배열, provider에게 보내는 canonical message가 같은 값이라고 오해하기 쉽다. 실제 시스템에서는 각 표현이 서로 다른 갱신 주기와 실패 위험을 가진다.</p>
+    <p>local study는 REPL이 render state만 소유하지 않고 message working set, query lifecycle, permission interaction까지 조정하는 복합 component라고 지적한다. 특히 messagesRef와 React state는 같은 대화의 서로 다른 시간 표현일 수 있다. ref는 synchronous control path가 최신 값을 보도록 돕고, React state는 다음 render에서 화면을 갱신한다.</p>
+    <p>turn context에는 현재 tools와 permission capability, model/settings, abort signal처럼 화면에 직접 보이지 않는 요소도 들어간다. 여기서 중요한 것은 항목 수가 아니라 provenance다. 어느 설정이 이번 turn에 들어왔고, 어떤 tool 목록과 permission mode가 선택됐는지를 기록해야 이후 행동 변화를 설명할 수 있다.</p>
+    <p>이 단계에서 생기는 대표적 실패는 stale context다. UI에는 최신 입력이 보이지만 turn이 이전 message 배열을 읽거나, 화면에는 활성 tool이 표시되지만 실제 context에는 갱신 전 registry가 들어갈 수 있다. 그러므로 보고서는 “state가 있다”가 아니라 누가 언제 snapshot을 만들고 어떤 digest나 identity로 다음 단계에 넘기는지를 설명해야 한다.</p>
+  </div>
+  <figure>
+    <svg viewBox="0 0 720 220" role="img" aria-label="UI projection과 turn context의 소유권 지도">
+      <defs><marker id="a2" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9z" fill="#2e6972"/></marker></defs>
+      <g fill="#fbf8f1" stroke="#2e6972" stroke-width="2"><rect x="32" y="55" width="155" height="110"/><rect x="282" y="35" width="160" height="150"/><rect x="537" y="55" width="155" height="110"/></g>
+      <g font-family="Georgia" fill="#102d43" text-anchor="middle"><text x="109" y="82" font-size="16">UI projection</text><text x="109" y="109" font-size="11">input · pending</text><text x="109" y="129" font-size="11">rendered messages</text><text x="362" y="65" font-size="16">Context compiler</text><text x="362" y="96" font-size="11">canonical messages</text><text x="362" y="116" font-size="11">tools · settings</text><text x="362" y="136" font-size="11">permission · abort</text><text x="362" y="156" font-size="11">provenance</text><text x="614" y="82" font-size="16">Generator input</text><text x="614" y="109" font-size="11">one turn snapshot</text><text x="614" y="129" font-size="11">bounded capabilities</text></g>
+      <g stroke="#2e6972" stroke-width="2" marker-end="url(#a2)"><line x1="187" y1="110" x2="278" y2="110"/><line x1="442" y1="110" x2="533" y2="110"/></g>
+    </svg>
+    <figcaption>그림 3. context compiler는 화면을 복사하는 것이 아니라 실행에 필요한 canonical values와 capability를 한 turn snapshot으로 묶는다.</figcaption>
+  </figure>
+  <div class="transition"><b>다음 단계</b> 고정된 turn input을 받은 generator는 모든 일을 한 번에 반환하지 않고, 관찰 가능한 중간 event와 terminal을 다른 시점에 내보낸다.</div>
+  <div class="folio"><span>SYSTEMS MONOGRAPH</span><b>006</b></div>
+</section>
+
+<section class="page">
+  <div class="running"><b>Chapter 03 · Generator turn</b><span>멈춘 실행 frame이 protocol이 된다</span></div>
+  <div class="eyebrow">Language mechanism in service of the system</div>
+  <h2>yield는 여러 번 return하는<br>문법이 아니다</h2>
+  <p class="lead">중간 관찰을 내보내면서도 같은 실행 문맥을 보존한다는 점이 turn lifecycle의 핵심이다.</p>
+  <div class="margin-grid">
+    <main>
+      <p class="dropcap">일반 함수의 return은 현재 호출 frame을 끝낸다. generator의 yield는 다르다. instruction pointer, local variable, try/finally 문맥을 보존한 채 iterator result를 호출자에게 돌려주고, 다음 resume를 기다린다. 소비자가 `next()`를 호출하면 새 함수를 시작하는 것이 아니라 같은 frame이 yield 다음 지점에서 계속된다.</p>
+      <p>이 차이는 agent turn에서 단순한 문법 취향이 아니다. model stream의 partial text, tool request, progress event를 UI나 SDK에 즉시 노출하면서도 turn 내부는 다음 provider event와 tool result를 기다려야 한다. generator는 “관찰 가능한 중간 상태”와 “계속 살아 있는 실행”을 동시에 표현한다.</p>
+      <pre>async function* query() {
+  yield { type: 'message_delta', text: '안' }
+  yield { type: 'message_delta', text: '녕' }
+  return { reason: 'end_turn' }
+}</pre>
+      <p>두 글자가 화면에 보였다는 사실은 terminal을 뜻하지 않는다. 각 yield는 partial observation이고, return 또는 surrounding protocol이 end turn을 확정한다. 오류는 `throw()` 경로로, 소비자의 조기 종료는 `return()` 경로로 frame 안에 전달될 수 있으며, finally는 cleanup을 실행할 기회를 제공한다.</p>
+    </main>
+    <aside class="margin-note">
+      <span class="label background">Background</span>
+      <p>MDN은 generator의 `next(value)`, `throw()`, `return()`과 yield suspension을 설명한다.</p>
+      <span class="label observed">Observed</span>
+      <p>기존 reader edition은 query event와 return을 다른 채널로 읽고, terminal reason을 별도 추적해야 한다고 정리한다.</p>
+    </aside>
+  </div>
+  <figure>
+    <svg viewBox="0 0 720 180" role="img" aria-label="generator의 suspended running completed 상태">
+      <defs><marker id="a3" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9z" fill="#2e6972"/></marker></defs>
+      <g fill="#fbf8f1" stroke="#2e6972" stroke-width="2"><ellipse cx="120" cy="88" rx="82" ry="36"/><ellipse cx="360" cy="88" rx="82" ry="36"/><ellipse cx="600" cy="88" rx="82" ry="36" stroke="#88483f"/></g>
+      <g font-family="Georgia" font-size="16" text-anchor="middle" fill="#102d43"><text x="120" y="94">SUSPENDED</text><text x="360" y="94">RUNNING</text><text x="600" y="94">COMPLETED</text></g>
+      <g stroke="#2e6972" stroke-width="2" marker-end="url(#a3)"><path d="M202 80H274"/><path d="M442 88H514"/><path d="M360 124C360 158 120 158 120 126" fill="none"/></g>
+      <g font-family="monospace" font-size="10" fill="#88483f"><text x="225" y="68">next / throw / return</text><text x="478" y="76">terminal</text><text x="216" y="168">yield value + preserved frame</text></g>
+    </svg>
+    <figcaption>그림 4. yield는 completed로 가는 중간 return이 아니라 running과 suspended 사이를 오가는 protocol boundary다.</figcaption>
+  </figure>
+  <div class="transition"><b>다음 단계</b> generator가 내보낸 event를 UI가 곧바로 그릴 수는 있지만, partial event를 canonical message로 정산하는 책임은 남아 있다.</div>
+  <div class="folio"><span>SYSTEMS MONOGRAPH</span><b>007</b></div>
+</section>
+
+<section class="page notebook">
+  <div class="running"><b>Evidence notebook · Generator</b><span>하나의 turn을 직접 진행해 본다</span></div>
+  <div class="eyebrow">Worked protocol trace</div>
+  <p class="claim-line">“yielded value와 terminal result는 같은 채널로 소비된다고 가정하면 완료와 중간 상태를 혼동한다.”</p>
+  <div class="trace"><div class="time">T0 · CALL</div><div class="event"><b>`query()`는 iterator를 만든다</b><p>함수 body 전체가 끝난 것이 아니라, 소비자가 진행을 요청할 수 있는 실행 protocol이 만들어진다.</p></div></div>
+  <div class="trace"><div class="time">T1 · NEXT</div><div class="event"><b>첫 provider delta가 yield된다</b><p>소비자는 `{done:false}`인 event를 받아 화면 projection을 갱신한다. generator frame은 다음 event를 기다리며 보존된다.</p></div></div>
+  <div class="trace"><div class="time">T2 · RESUME</div><div class="event"><b>같은 frame이 다시 실행된다</b><p>새 query 호출이 아니다. local accumulator와 try/finally 문맥이 이어지며 다음 partial block이나 tool request를 처리한다.</p></div></div>
+  <div class="trace"><div class="time">T3 · TOOL</div><div class="event"><b>tool request를 yield해도 effect는 아직 일어나지 않았다</b><p>client는 request를 검증하고 permission을 확인한 뒤 실행 결과를 다음 continuation에 돌려준다.</p></div></div>
+  <div class="trace"><div class="time">T4 · RETURN</div><div class="event"><b>terminal reason이 turn을 닫는다</b><p>`done:true`의 value가 일반 `for await` body에 보이지 않을 수 있으므로 surrounding protocol이 terminal reason을 별도로 보존해야 한다.</p></div></div>
+  <div class="trace"><div class="time">T× · CANCEL</div><div class="event"><b>오류·취소는 cleanup 경로를 연다</b><p>`throw()` 또는 `return()`이 suspended frame으로 전달되며, finally에서 stream·resource cleanup을 수행할 수 있다.</p></div></div>
+  <section class="evidence-section gold" style="margin-top:6mm">
+    <span class="label background">External background</span>
+    <p>pause/resume와 iterator control은 MDN Generator/yield에서 확인한다.</p>
+  </section>
+  <section class="evidence-section" style="padding-bottom:2mm">
+    <span class="label observed">Observed source fact</span>
+    <p>local reader edition은 yield 수가 아니라 event의 partial state와 canonical message가 닫히는 시점을 추적해야 한다고 명시한다.</p>
+  </section>
+  <div class="source-note">LIMITATION · 복원 snapshot은 모든 provider adapter와 cleanup 경로의 build parity를 보장하지 않는다.</div>
+  <div class="folio"><span>EVIDENCE NOTEBOOK</span><b>008</b></div>
+</section>
+
+<section class="page">
+  <div class="running"><b>Chapter 04 · Streaming</b><span>보이는 text와 정산된 message 사이</span></div>
+  <div class="eyebrow">Progressive observation</div>
+  <h2>화면에 보이기 시작한 응답은<br>아직 완성된 message가 아니다</h2>
+  <p class="lead">stream consumer는 partial event를 즉시 투영하면서도 block identity와 terminal metadata를 보존해야 한다.</p>
+  <div class="body-columns">
+    <p class="dropcap">streaming의 가치는 첫 token을 빨리 보여 주는 데만 있지 않다. provider가 text, thinking, tool use와 message metadata를 서로 다른 event로 보낼 때 consumer는 이 조각들이 어느 block과 message에 속하는지 복원해야 한다. UI는 아직 열린 message를 보여 줄 수 있지만 다음 model request는 정산된 canonical message를 필요로 한다.</p>
+    <p>local study는 일반 text/thinking event가 즉시 yield되면서 assistant message accumulator에도 쌓이고, tool use block은 별도 follow-up 요구를 만든다고 정리한다. recoverable error는 바로 terminal로 노출되지 않고 recovery 판단을 위해 잠시 보류될 수 있으며, fallback에서는 이전 partial array를 그대로 믿지 않고 tombstone이나 초기화로 관찰 상태를 고친다.</p>
+    <p>여기서 React의 역할은 provider event를 해석하는 것이 아니라 바뀐 application state를 terminal element tree로 투영하는 것이다. consumer가 replace와 append를 잘못 고르면 화면은 중복 text나 사라진 tool block을 보게 된다. 반대로 canonical accumulator가 잘못되면 화면이 멀쩡해도 다음 turn의 context가 손상될 수 있다.</p>
+    <p>따라서 성능 설명도 “React가 batching한다”에서 멈출 수 없다. chunk arrival, consumer state transition, render/commit, Ink layout, ANSI diff, stdout flush가 서로 다른 비용을 만든다. 정확한 timing은 scheduler와 renderer 버전에 따라 달라질 수 있으므로 이 prototype은 고정된 millisecond 수치를 주장하지 않는다.</p>
+  </div>
+  <figure>
+    <svg viewBox="0 0 720 250" role="img" aria-label="provider event에서 UI와 canonical message로 갈라지는 흐름">
+      <defs><marker id="a4" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9z" fill="#2e6972"/></marker></defs>
+      <g fill="#fbf8f1" stroke="#2e6972" stroke-width="2"><rect x="28" y="89" width="130" height="68"/><rect x="224" y="65" width="155" height="116"/><rect x="455" y="28" width="220" height="72"/><rect x="455" y="150" width="220" height="72"/></g>
+      <g font-family="Georgia" fill="#102d43" text-anchor="middle"><text x="93" y="128" font-size="15">Provider events</text><text x="301" y="95" font-size="15">Typed consumer</text><text x="301" y="120" font-size="11">identity · append/replace</text><text x="301" y="140" font-size="11">withhold · terminal</text><text x="565" y="60" font-size="15">UI projection</text><text x="565" y="81" font-size="11">partial, reversible view</text><text x="565" y="182" font-size="15">Canonical message</text><text x="565" y="203" font-size="11">next-turn context</text></g>
+      <g stroke="#2e6972" stroke-width="2" marker-end="url(#a4)"><line x1="158" y1="123" x2="220" y2="123"/><path d="M379 104C420 104 415 64 451 64" fill="none"/><path d="M379 142C420 142 415 186 451 186" fill="none"/></g>
+    </svg>
+    <figcaption>그림 5. 같은 stream event가 화면과 canonical message에 모두 영향을 주지만, 두 projection의 완료 조건은 다르다.</figcaption>
+  </figure>
+  <div class="transition"><b>다음 단계</b> stream에서 tool request가 나타나면 model의 제안과 client가 실제로 일으키는 effect 사이에 새로운 경계가 열린다.</div>
+  <div class="folio"><span>SYSTEMS MONOGRAPH</span><b>009</b></div>
+</section>
+
+<section class="page">
+  <div class="running"><b>Chapter 05 · Tool, permission, effect</b><span>요청과 실행 사이의 책임</span></div>
+  <div class="eyebrow">The effect boundary</div>
+  <h2>model이 tool을 요청해도<br>외부 세계는 아직 바뀌지 않았다</h2>
+  <p class="lead">validation, permission, hook, sandbox와 executor는 서로 다른 질문에 답하며 실패 의미도 다르다.</p>
+  <div class="margin-grid">
+    <main>
+      <p class="dropcap">tool use는 model이 구조화된 JSON을 만들었다는 사실에서 시작한다. 그러나 name과 input이 존재한다고 곧바로 실행할 수 있는 것은 아니다. client는 등록된 tool인지 찾고, schema와 path 같은 입력을 정규화하며, permission rule과 human decision을 적용한다. pre-hook는 허용된 입력을 거부하거나 바꿀 수 있고, sandbox는 executor가 실제로 행사할 수 있는 capability를 제한한다.</p>
+      <p>이 단계들을 하나의 “allowed” boolean으로 접으면 실패를 설명할 수 없다. permission denial은 effect가 의도적으로 일어나지 않은 상태다. executor error는 effect를 시도했지만 완료하지 못한 상태일 수 있다. timeout은 외부 effect가 실제로 일어났는지 불명확한 상태를 만들 수 있다. retry policy는 이 차이를 알아야 같은 파일 쓰기나 command를 두 번 수행하지 않는다.</p>
+      <p>Anthropic의 client tool loop 설명도 model request와 client effect, tool result, continuation을 분리한다. model은 어떤 tool을 어떤 input으로 호출하고 싶은지 요청한다. client가 실행한 뒤에는 성공, 오류 또는 거부를 `tool_result`로 되돌리고, model은 그 결과를 다음 reasoning에 사용한다. 요청과 결과 사이가 application의 권한·감사·복구 경계다.</p>
+      <div class="subhead">Worked trace — 파일 읽기 요청</div>
+      <p>model이 경로와 함께 read tool을 요청한다. client는 tool identity와 schema를 확인하고 canonical path를 만든다. permission rule이 read를 허용하더라도 sandbox에서 해당 경로가 보이지 않으면 executor는 실패한다. 이때 기록해야 하는 것은 단순한 `false`가 아니라 어느 단계가 어떤 input을 보고 어떤 결과를 냈는지다.</p>
+    </main>
+    <aside class="margin-note">
+      <span class="label background">Background</span><p>공식 tool-use 문서는 client-side effect와 `tool_result` continuation을 구분한다.</p>
+      <span class="label inference">Inference</span><p>PDF에서는 model lane과 effect lane 사이에 permission gate를 명시해야 한다.</p>
+    </aside>
+  </div>
+  <figure>
+    <svg viewBox="0 0 720 170" role="img" aria-label="tool request가 effect와 result를 거치는 흐름">
+      <defs><marker id="a5" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9z" fill="#2e6972"/></marker></defs>
+      <path d="M28 84H692" stroke="#2e6972" stroke-width="2" marker-end="url(#a5)"/>
+      <g fill="#fbf8f1" stroke="#2e6972" stroke-width="2"><circle cx="64" cy="84" r="30"/><circle cx="164" cy="84" r="30"/><circle cx="264" cy="84" r="30"/><circle cx="364" cy="84" r="30"/><circle cx="464" cy="84" r="30"/><circle cx="564" cy="84" r="30" stroke="#88483f"/><circle cx="664" cy="84" r="30"/></g>
+      <g font-family="monospace" font-size="9" text-anchor="middle" fill="#102d43"><text x="64" y="80">TOOL</text><text x="64" y="93">REQUEST</text><text x="164" y="87">VALIDATE</text><text x="264" y="87">PERMISSION</text><text x="364" y="87">HOOK</text><text x="464" y="87">SANDBOX</text><text x="564" y="87">EFFECT</text><text x="664" y="80">TOOL</text><text x="664" y="93">RESULT</text></g>
+    </svg>
+    <figcaption>그림 6. 각 원은 기능이 아니라 서로 다른 결정·실패·재시도 경계다. effect만 외부 세계를 바꾼다.</figcaption>
+  </figure>
+  <div class="transition"><b>다음 단계</b> result가 돌아와도 turn이 안전하게 끝났다는 뜻은 아니다. durable record가 무엇을 남겼는지 확인해야 복구할 수 있다.</div>
+  <div class="folio"><span>SYSTEMS MONOGRAPH</span><b>010</b></div>
+</section>
+
+<section class="page notebook">
+  <div class="running"><b>Evidence notebook · Effect failures</b><span>같아 보이는 세 실패를 분리한다</span></div>
+  <div class="eyebrow">Counterexample-driven review</div>
+  <p class="claim-line">“tool 실패”라는 한 문장으로는 retry 여부를 결정할 수 없다.</p>
+  <table>
+    <thead><tr><th>관찰</th><th>실제 의미</th><th>model에 돌려줄 값</th><th>재시도 전 확인</th></tr></thead>
+    <tbody>
+      <tr><td>Permission denied</td><td>effect가 의도적으로 시작되지 않았다.</td><td>거부 이유가 포함된 tool result 또는 control response</td><td>입력 변경이나 사용자 결정 없이는 같은 요청을 반복하지 않는다.</td></tr>
+      <tr><td>Executor error before commit</td><td>실행을 시도했지만 외부 상태 변경 전 실패했다.</td><td>구체적 실행 오류</td><td>commit boundary와 idempotency를 확인한다.</td></tr>
+      <tr><td>Timeout after request</td><td>effect 발생 여부가 불명확할 수 있다.</td><td>unknown/timeout 상태</td><td>receipt, external state 또는 recovery token을 조회한다.</td></tr>
+    </tbody>
+  </table>
+  <section class="evidence-section gold">
+    <span class="label background">External background</span>
+    <h3>client tool loop의 기본 분리</h3>
+    <p>model request → client execution → tool result → continuation이라는 순서는 effect가 model 내부에서 자동으로 일어나지 않음을 보여 준다.</p>
+  </section>
+  <section class="evidence-section">
+    <span class="label observed">Observed source fact</span>
+    <h3>현재 local study가 보여 주는 더 세밀한 경계</h3>
+    <p>lookup, parse, validation, permission, hook, call, normalize가 한 pipeline으로 정리되어 있으며, unknown tool도 model이 self-correction할 수 있도록 error result로 돌려주는 경로가 기술돼 있다.</p>
+  </section>
+  <section class="evidence-section teal">
+    <span class="label inference">Project inference</span>
+    <h3>도해와 운영 설명에 반영하는 방식</h3>
+    <p>permission과 effect를 하나의 방패 아이콘으로 표시하지 않는다. 각각의 입력, 결정, side effect와 receipt를 별도 node로 그리고, timeout은 실패가 아니라 “effect 여부 unknown”으로 표시한다.</p>
+  </section>
+  <div class="question">Unknown: 복원 snapshot만으로 모든 외부 tool의 idempotency와 server-side commit을 확정할 수 있는가?</div>
+  <p>확정할 수 없다. client에서 관찰 가능한 요청·result와 local durability를 설명하되, server-side settlement는 별도 source가 없으면 unknown으로 남겨야 한다.</p>
+  <div class="source-note">SOURCES · Anthropic tool-use flow · local source study tool pipeline · CLM-003 · reconstruction limitations retained</div>
+  <div class="folio"><span>EVIDENCE NOTEBOOK</span><b>011</b></div>
+</section>
+
+<section class="page">
+  <div class="running"><b>Chapter 06 · Durability and recovery</b><span>재시도 전에 남은 사실을 읽는다</span></div>
+  <div class="eyebrow">After interruption</div>
+  <h2>복구는 다시 시작하는 일이 아니라<br>이미 일어난 것을 구분하는 일이다</h2>
+  <p class="lead">화면, generator, effect, transcript는 서로 다른 속도로 사라지고 남는다.</p>
+  <div class="body-columns">
+    <p class="dropcap">terminal 화면이 닫혔다고 대화와 effect가 모두 사라지는 것은 아니다. 반대로 UI에 마지막 assistant text가 보인다고 canonical transcript와 tool result pairing이 모두 정산됐다고 말할 수도 없다. recovery는 먼저 어떤 layer가 durable하고 어떤 layer가 projection인지 분류하는 일에서 시작한다.</p>
+    <p>local study는 transcript write가 chain identity를 남기고, leaf에서 root로 conversation을 재구성하며, 병렬 tool result의 orphan을 복원하는 경로를 다룬다. compaction은 긴 history를 줄이지만, 압축 전후의 context와 pending summary가 올바르게 연결되지 않으면 다음 turn이 서로 다른 대화를 이어받을 수 있다.</p>
+    <p>generator cancellation도 별도다. consumer가 조기에 iteration을 끝내면 suspended frame에 return이나 abort가 전달되어야 한다. cleanup이 끝나기 전에 새 turn을 시작하면 같은 provider stream이나 tool resource가 중첩될 수 있다. UI의 pending flag를 false로 바꾸는 것만으로 이 자원을 닫을 수는 없다.</p>
+    <p>따라서 recovery decision은 최소한 마지막 canonical message, outstanding tool use/result pair, effect receipt, transcript checkpoint, cancellation state를 읽어야 한다. 이 증거가 충분하면 resume할 수 있고, effect는 남았지만 result가 없다면 compensate하거나 reconciliation을 해야 하며, 어느 쪽인지 모르면 자동 반복 대신 hold해야 한다.</p>
+  </div>
+  <figure>
+    <svg viewBox="0 0 720 255" role="img" aria-label="복구 결정을 위한 증거 흐름">
+      <defs><marker id="a6" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9z" fill="#2e6972"/></marker></defs>
+      <g fill="#fbf8f1" stroke="#2e6972" stroke-width="2"><rect x="28" y="25" width="170" height="46"/><rect x="28" y="88" width="170" height="46"/><rect x="28" y="151" width="170" height="46"/><rect x="273" y="77" width="175" height="72"/><rect x="523" y="24" width="165" height="50"/><rect x="523" y="101" width="165" height="50"/><rect x="523" y="178" width="165" height="50"/></g>
+      <g font-family="Georgia" font-size="13" text-anchor="middle" fill="#102d43"><text x="113" y="54">Transcript checkpoint</text><text x="113" y="117">Tool/effect receipt</text><text x="113" y="180">Cancellation state</text><text x="360" y="109">Recovery decision</text><text x="360" y="129" font-size="10">same identity · bounded evidence</text><text x="605" y="54">RESUME</text><text x="605" y="131">COMPENSATE</text><text x="605" y="208">HOLD / ABORT</text></g>
+      <g stroke="#2e6972" stroke-width="2" marker-end="url(#a6)"><line x1="198" y1="48" x2="269" y2="96"/><line x1="198" y1="111" x2="269" y2="111"/><line x1="198" y1="174" x2="269" y2="130"/><line x1="448" y1="102" x2="519" y2="50"/><line x1="448" y1="113" x2="519" y2="126"/><line x1="448" y1="128" x2="519" y2="199"/></g>
+    </svg>
+    <figcaption>그림 7. recovery는 UI 상태가 아니라 durable evidence를 같은 identity로 합류시킨 뒤 resume, compensate, hold를 고르는 과정이다.</figcaption>
+  </figure>
+  <div class="transition"><b>장 결론</b> 한 turn의 완료는 화면의 마지막 frame이 아니라 message, effect, transcript와 cleanup이 서로 모순 없이 정산된 상태다.</div>
+  <div class="folio"><span>SYSTEMS MONOGRAPH</span><b>012</b></div>
+</section>
+
+<section class="page notebook">
+  <div class="running"><b>Evidence notebook · End-to-end review</b><span>한 요청을 다시 읽는다</span></div>
+  <div class="eyebrow">Case reconstruction</div>
+  <p class="claim-line">사용자가 Enter를 누른 순간부터 복구 가능한 기록이 남을 때까지, 같은 “진행 중”이라는 말은 단계마다 다른 뜻을 가진다.</p>
+  <div class="trace"><div class="time">01 · INTENT</div><div class="event"><b>UI는 key event를 application intent로 바꾼다</b><p>selection·suggestion·route guard가 먼저 평가된다. 결과는 message 또는 control action이다.</p></div></div>
+  <div class="trace"><div class="time">02 · SNAPSHOT</div><div class="event"><b>React update는 다음 render를 예약한다</b><p>handler가 보는 snapshot과 turn terminal은 동일하지 않다.</p></div></div>
+  <div class="trace"><div class="time">03 · CONTEXT</div><div class="event"><b>message, tools, settings, permission과 abort가 한 turn input으로 묶인다</b><p>provenance가 없으면 stale context와 capability drift를 설명할 수 없다.</p></div></div>
+  <div class="trace"><div class="time">04 · YIELD</div><div class="event"><b>generator는 frame을 보존한 채 partial event를 내보낸다</b><p>보이는 text는 아직 terminal result가 아니다.</p></div></div>
+  <div class="trace"><div class="time">05 · EFFECT</div><div class="event"><b>tool request는 client의 permission과 execution을 거쳐야 한다</b><p>request, denial, executor error, timeout은 다른 recovery 의미를 가진다.</p></div></div>
+  <div class="trace"><div class="time">06 · DURABLE</div><div class="event"><b>transcript와 receipt가 다음 결정을 위한 사실을 남긴다</b><p>중단 뒤에는 이 사실을 읽고 resume, compensate, hold를 선택한다.</p></div></div>
+  <section class="evidence-section teal" style="margin-top:5mm">
+    <span class="label inference">Editorial disposition</span>
+    <p>최종 보고서는 이 trace를 본문 spine으로 유지한다. component별 특징 표는 appendix로 보내고, 각 장은 앞 단계의 output value에서 시작해 다음 단계의 input value로 끝낸다.</p>
+  </section>
+  <div class="question">검증자가 물어야 할 마지막 질문: 이 설명은 어느 지점에서 source보다 더 강한 확신을 말하고 있는가?</div>
+  <div class="folio"><span>EVIDENCE NOTEBOOK</span><b>013</b></div>
+</section>
+
+<section class="page">
+  <div class="running"><b>Conclusion</b><span>메커니즘보다 경계를 기억한다</span></div>
+  <div class="eyebrow">What the reader should carry forward</div>
+  <h2>좋은 agent runtime 설명은<br>“무엇이 있다”보다 “언제 바뀌는가”를 말한다</h2>
+  <p class="lead">React, generator, tool과 transcript는 각각 다른 시간을 표현하며, 시스템은 그 시간들을 무리하게 하나로 만들지 않을 때 복구 가능해진다.</p>
+  <div class="body-columns">
+    <p class="dropcap">이 보고서의 출발점은 두 개의 구현 직관이었다. 하나는 generator가 progressive observation과 suspension을 표현한다는 것, 다른 하나는 React/Ink가 application state를 terminal 화면으로 투영한다는 것이다. 그러나 두 직관만으로는 permission, effect, durability와 recovery를 설명할 수 없다.</p>
+    <p>전체 흐름을 따라가면 각 기술의 위치가 선명해진다. React는 handler와 render snapshot의 시간을 관리한다. context compiler는 현재 turn이 사용할 canonical inputs와 capabilities를 묶는다. generator는 partial event와 terminal을 분리한다. client tool loop는 model request를 permission과 effect로 연결한다. transcript는 중단 후에도 남는 사실을 제공한다.</p>
+    <p>이 구조를 책으로 표현할 때도 같은 원칙이 필요하다. Systems Monograph 면은 원인과 결과를 끊지 않고 설명한다. Evidence Notebook 면은 그 설명을 다시 source와 limitation으로 분해한다. 둘 중 하나만 있으면 각각 근거 없는 유창함이나 맥락 없는 증거 목록이 된다.</p>
+    <p>따라서 이후의 본편 작성은 더 많은 카드나 키워드를 추가하는 방향이 아니다. 한 장마다 하나의 material claim을 선택하고, 독자의 질문에서 시작해 worked trace와 failure path를 거친 뒤 다음 장으로 넘길 값을 명시하는 방향이어야 한다. 시각 디자인은 이 논증을 읽을 수 있게 만드는 편집 장치로 남는다.</p>
+  </div>
+  <div class="pull">UI event ≠ render update ≠ generator terminal ≠ external effect ≠ durable settlement</div>
+  <p class="small">이 식은 구현의 모든 세부를 대신하지 않는다. 다만 서로 다른 경계를 한 사건으로 접지 않기 위한 독서 규칙을 제공한다.</p>
+  <div class="end-mark">◆</div>
+  <div class="folio"><span>CLAIM-LED BOOK PROTOTYPE</span><b>014</b></div>
+</section>
+
+<section class="page notebook">
+  <div class="running"><b>Sources and limitations</b><span>prototype v2</span></div>
+  <div class="eyebrow">Reference note</div>
+  <h2>근거를 다시 찾을 수 있게 남긴다</h2>
+  <section class="evidence-section gold">
+    <span class="label background">Official background</span>
+    <p><b>MDN Generator</b> — generator object의 pause/resume와 iterator control.</p>
+    <p class="small">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator</p>
+    <p><b>MDN yield</b> — yield suspension과 resume value.</p>
+    <p class="small">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield</p>
+    <p><b>React</b> — responding to events, state as a snapshot, queueing state updates.</p>
+    <p class="small">https://react.dev/learn/responding-to-events · /state-as-a-snapshot · /queueing-a-series-of-state-updates</p>
+    <p><b>Anthropic</b> — model request, client tool execution, tool result, continuation.</p>
+    <p class="small">https://platform.claude.com/docs/en/agents-and-tools/tool-use/how-tool-use-works</p>
+  </section>
+  <section class="evidence-section">
+    <span class="label observed">Project-local evidence</span>
+    <p>Claude Code source study, Architecture & Algorithms reader edition, language mechanisms, book plan과 editorial rationale를 사용했다.</p>
+    <p class="small">`.collab/artifacts/claude-code-source-study-2026-09-20/**`<br>`.collab/artifacts/claude-code-architecture-algorithms-study-2026-09-20/book-edition-2026-09-21/**`</p>
+  </section>
+  <section class="evidence-section teal">
+    <span class="label inference">Limitations</span>
+    <p>분석 대상은 제3자 복원 snapshot이다. 누락 모듈과 build parity 한계가 있으며 upstream intent, 현재 공식 제품 동작, server-side settlement를 확정하지 않는다. 두 영상은 출발 렌즈로만 사용했고 transcript를 독립 검증하지 않았다.</p>
+  </section>
+  <div class="question">상태: report-only candidate. 독립 Fact/Visual validation, acceptance, publication, settlement는 수행되지 않았다.</div>
+  <div class="folio"><span>EVIDENCE NOTEBOOK · REFERENCE</span><b>015</b></div>
+</section>
+
+</body>
+</html>

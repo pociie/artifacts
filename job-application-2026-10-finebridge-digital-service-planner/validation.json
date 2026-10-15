@@ -1,0 +1,45 @@
+{
+  "kind": "job-application-report-validation/v1",
+  "status": "passed",
+  "authority_effect": "none",
+  "subject": {
+    "request_ref": "request.json",
+    "result_ref": "result.json",
+    "request_digest": "54523e845da2475ac74a3168f300dd111bcb1d11bd5adc41789993a4d011ddcd",
+    "result_digest": "d8cfef8df97d3ca6e6905b5465e7d1d2b60fba0560bb1ef7004f8be2a7665eb8",
+    "report_digest": "fce2159240010ec231ec8b2ceb7221b6bce21bf74439f6cce052c557aca9c8ed",
+    "text_extract_digest": "f183df672010dd8ecd152f792913212c5d615b483dcaef4956025db6862d5950",
+    "application_answer_html_digest": "27af282744cdd13d83ce9a6114e8aec4be1d16654865bd34c4f62f7fde5f50ac",
+    "application_answer_text_digest": "427554a99a649d6749749090c0ff9764eb76eaeb41829104da2a5e53f54a50cc"
+  },
+  "focused_checks": [
+    { "id": "request-result-deterministic-check", "status": "passed", "evidence": "OK job-application-report request/result" },
+    { "id": "native-package-tests", "status": "passed", "evidence": "19 tests passed across report, writing-quality, and answer-projection suites" },
+    { "id": "native-package-strict-check", "status": "passed", "evidence": "issues: 0; warnings: 0" },
+    { "id": "character-counts", "status": "passed", "evidence": "8 answers measured by Unicode code point and all are within their question limits" },
+    { "id": "writing-quality-review", "status": "passed", "evidence": "all 8 candidate-question pairs, 4 cross-candidate comparisons, and editorial dimensions passed" },
+    { "id": "answer-projection-check", "status": "passed", "evidence": "JSON projection matches all 8 reviewed answer bodies and character counts" },
+    { "id": "publication-searchable-text", "status": "passed", "evidence": "HTML and text extract contain the reader-facing sections and full answer text" },
+    { "id": "publication-privacy", "status": "passed", "evidence": "no absolute local path, internal bookkeeping token, external image, or unconsented identity in visible output" },
+    { "id": "publication-visible-source", "status": "passed", "evidence": "only the allowlisted posting source is declared visible" },
+    { "id": "application-answer-projection-boundary", "status": "passed", "evidence": "the separate JSON/HTML/TXT application-ready projections contain both complete candidate sets, match all answer bodies and character counts, and contain no review-only or workflow metadata" }
+  ],
+  "publication_observations": {
+    "format": "html",
+    "page_count": null,
+    "searchable_text_required": true,
+    "searchable_text_passed": true,
+    "overflow_policy": "no_clipped_content",
+    "overflow_passed": true,
+    "raster_policy": "not_required",
+    "raster_asset_count": 0,
+    "visible_source_ids": ["source-finebridge-posting"],
+    "content_policy_status": "all_mandatory_policies_passed"
+  },
+  "limitations": [
+    "검증은 구조·산식·공개 표현·파일 상태를 확인하며 지원자의 실제 경력이나 회사 사이트의 사실성을 증명하지 않는다.",
+    "의미 검토는 별도 패스로 수행했지만 외부 채용 담당자 또는 지원자 본인의 확인을 대체하지 않는다."
+  ],
+  "acceptance_effect": "none",
+  "submission_effect": "none"
+}

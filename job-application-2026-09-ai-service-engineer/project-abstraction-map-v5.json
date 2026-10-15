@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "self-introduction-project-abstraction-map/v5",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "project": "pociie/collab-mono",
+  "abstractionLevel": "service-and-human-workflow",
+  "thesis": "사람의 업무 목적을 서비스 처리 흐름으로 구조화하고, 책임 경계·검토 가능한 기록·결과 확인·피드백 기반 개선을 연결한 개인 프로젝트 설계 경험으로 번역한다.",
+  "highLevelFlow": [
+    {"id": "user-goal", "canonicalTerm": "사용자 목표", "meaning": "사용자가 업무에서 이루려는 결과와 해결하려는 문제", "repositorySignals": ["shared/README.md", "apps/components/core-domain/workspace/README.md"], "essayUse": "기능보다 서비스를 만들게 된 문제와 결과를 먼저 설명"},
+    {"id": "work-context", "canonicalTerm": "업무 맥락", "meaning": "결과 판단에 필요한 정보·제약·역할·확인 기준", "repositorySignals": ["apps/components/core-domain/team-collaboration/README.md", "docs/architecture/module-operating-model.md", "artifacts/loop-architecture/components/work-pattern-context-resolution/README.md"], "essayUse": "모호한 요구를 책임과 확인 기준으로 구조화한 판단 설명"},
+    {"id": "service-processing", "canonicalTerm": "서비스 처리 흐름", "meaning": "입력을 받아 처리하고 결과와 다음 행동으로 연결하는 흐름", "repositorySignals": ["apps/components/core-domain/agent-runtime/README.md", "apps/components/generic-sub-domain/chat-gateway/README.md"], "essayUse": "AI를 독립 기능이 아닌 업무에 연결되는 서비스로 설명"},
+    {"id": "result-verification", "canonicalTerm": "결과 검증", "meaning": "결과를 확인 기준에 비추어 사람이 확인하고 다음 행동을 정하는 과정", "repositorySignals": ["apps/components/generic-sub-domain/reporting/README.md", "apps/components/generic-sub-domain/provenance/README.md", "e2e"], "essayUse": "완수를 동작 여부가 아니라 결과 확인과 수정 가능성으로 설명"},
+    {"id": "reviewable-record", "canonicalTerm": "검토 가능한 기록", "meaning": "입력·맥락·결과·확인 내용이 다시 검토되는 상태", "repositorySignals": ["apps/components/generic-sub-domain/provenance/README.md", "apps/components/generic-sub-domain/reporting/README.md"], "essayUse": "개선이 일회성 감상이 아니라 다음 판단으로 이어짐을 설명"},
+    {"id": "error-recovery", "canonicalTerm": "오류 원인과 복구", "meaning": "문제의 위치를 좁히고 이용을 이어가기 위한 대응", "repositorySignals": ["governance/governance-fitness.mjs", "e2e"], "essayUse": "문제 발생 시 기준·상태·책임을 먼저 확인한 과정 설명"},
+    {"id": "feedback-improvement", "canonicalTerm": "피드백 기반 개선", "meaning": "관찰된 부담·오류·변경을 다음 요구·설계·검증에 반영하는 순환", "repositorySignals": ["docs/operations/agent-workflow.md", "governance/governance-fitness.mjs", "artifacts/loop-architecture/components/adaptive-execution-control"], "essayUse": "입사 후 현업·사용자 피드백을 품질 개선으로 연결"}
+  ],
+  "loopArchitectureExperienceTranslation": [
+    {"internalConcept": "execution routing", "universalMeaning": "작업의 목표·제약·미확인을 정리해 적절한 처리 경로를 선택하는 설계", "essayPhrase": "작업 맥락과 책임을 먼저 정리한 뒤 처리 경로를 설계했습니다."},
+    {"internalConcept": "reusable artifact lifecycle", "universalMeaning": "재사용 가능한 설계·검증 자료를 목적과 범위에 맞게 관리하는 방식", "essayPhrase": "다음 판단에 쓸 수 있도록 설계 자료와 확인 기준을 정리했습니다."},
+    {"internalConcept": "knowledge/context projection", "universalMeaning": "목적에 필요한 정보와 제약을 선별해 처리에 사용할 수 있는 맥락으로 구성하는 과정", "essayPhrase": "모호한 요구를 필요한 정보·제약·확인 기준으로 구조화했습니다."},
+    {"internalConcept": "workflow/verification/adaptive review", "universalMeaning": "처리와 검증을 분리하고 변경이 생기면 다음 확인 기준을 다시 세우는 순환", "essayPhrase": "결과 확인과 변경 후 재검토를 설계의 일부로 두었습니다."}
+  ],
+  "projectState": {
+    "repositoryFacts": [
+      "root package manifest declares 28 npm workspaces",
+      "source structure separates core-domain, generic-sub-domain and supporting-domain with web, infrastructure, external integration and E2E surfaces",
+      "documented module shape separates domain, application, adapters and composition responsibilities",
+      "Loop Architecture documents preserve report-only, authorityEffect:none and unresolved/missing context boundaries"
+    ],
+    "userProvidedContext": [
+      "사용자가 현재 진행 중인 개인 프로젝트로 제시함",
+      "요구 분석부터 구조 설계·코드 구현·검증·배포 구성까지 전 과정을 연결했다고 설명함"
+    ],
+    "notEstablished": [
+      "production users, customer outcome, traffic, latency, cost, availability, incident or adoption",
+      "every component personally implemented",
+      "all checks passing at a dated run",
+      "simultaneous activation of external execution surfaces",
+      "exact changed files, deployment environment and dated operational result",
+      "which alternatives were actually discarded"
+    ]
+  },
+  "scopeTranslation": {
+    "projectScale": "28개 workspace는 저장소 범위의 근거로만 쓰고 서비스·팀·사용자 규모로 확장하지 않는다.",
+    "personalRole": "개인 프로젝트에서 요구 분석·구조 설계·구현·검증·배포 구성을 연결한 경험으로 쓰되 실제 변경 범위는 제출 전 확인한다.",
+    "architectureMeaning": "domain/application/adapters/composition과 Loop Architecture의 분리는 모듈 수가 아니라 업무 규칙·처리·외부 연결·검증의 책임을 나누는 설계 판단으로 번역한다.",
+    "aiMeaning": "AI는 모델 성능의 대리어가 아니라 사람의 업무 목표를 서비스 처리와 결과 검증으로 연결하는 업무 지원 방식으로 표현한다.",
+    "completionMeaning": "프로젝트 완수는 기능 수가 아니라 사용자 목표가 결과 확인까지 이어지고 오류를 다시 확인해 다음 개선에 활용할 수 있는 상태다."
+  },
+  "claimPolicy": {
+    "allowed": [
+      "사람의 업무 목적과 AI 처리 결과를 서비스 처리·결과 검증·개선 흐름으로 연결한 설계 경험",
+      "넓은 TypeScript 모노레포에서 핵심 서비스 처리 흐름과 책임 경계를 먼저 구조화한 경험",
+      "작업 맥락·재사용 자료·검증·변경 재평가를 분리해 설계 자료로 활용한 경험",
+      "업무 규칙과 외부 연결의 책임을 구분하고 변경 영향과 확인 기준을 함께 고민한 관점"
+    ],
+    "requiresUserConfirmation": [
+      "본인이 실제로 변경한 파일·영역과 주요 의사결정",
+      "실행한 검증 명령·시점·결과",
+      "배포 환경, 실제 사용자 사용 여부와 운영 결과",
+      "프로젝트에서 실제로 보류·폐기한 대안",
+      "AI 결과를 사람이 확인했던 구체 사례"
+    ],
+    "excludedFromEssayCenter": [
+      "AST·Graph·AdjustmentRequest와 같은 구현 구조명",
+      "provider readiness·output contract·cost/usage signal을 동시 활성화 또는 성과로 표현",
+      "auth·requestRef·cancellation·smoke·loopback을 운영 성과로 표현",
+      "runtime activation·acceptance·settlement·convergence를 프로젝트 성과로 표현",
+      "특정 프로토콜·필드·포트·알고리즘 ID의 나열"
+    ]
+  },
+  "reportPolicy": {
+    "visibleInPdf": "상위 흐름·문항 연결·사용자 확인이 필요한 범위·공식 모집공고 링크",
+    "internalOnly": "상세 저장소 경로·외부 연구 URL·내부 컴포넌트명·원문 프롬프트·개인 추론",
+    "authority": "report_only; this map does not grant runtime, acceptance, deployment or hiring authority"
+  }
+}

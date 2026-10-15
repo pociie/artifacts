@@ -1,0 +1,135 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:job-application-report-ibk-conflict-hardening",
+  "requestRevision": "revision:public-report-contract-v1",
+  "requestRelation": "continue_objective",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/job-application-report-ibk-conflict-hardening-2026-09-15/route-decision.json",
+    "decisionDigest": "sha256:adff949fce1c4f34de59d35e2a725c179e2878ecb77952d0a874eefdafe23472",
+    "effectiveMode": "loop"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:job-application-public-report-contract-builder",
+    "agencyRef": "artifacts/agents/requirement-realization/agents/artifact-builder.yaml",
+    "agencyDigest": "sha256:06ebe77c9b1b5754e6f2e749c470d9129854abe04690022b3156705f6f10410d",
+    "responsibilityClass": "builder",
+    "outcomeContract": "Improve the reusable job-application report artifact so public PDFs expose only reader-useful content, preserve applicant voice, avoid redundant candidate framing, show comparable criterion scores, paginate coherent reading units, and integrate raster visuals into the report composition.",
+    "outputContract": "A bounded reusable-artifact revision, an evidence-backed IBK conflict audit, regression fixtures, and package validation evidence.",
+    "decisionScopes": [
+      "applicant-understanding adequacy by question family",
+      "reader-facing language and candidate heading hierarchy",
+      "reusable editorial design tokens, typography, spacing, and page rhythm",
+      "candidate score-profile visibility",
+      "paged-media content grouping",
+      "raster visual purpose, placement, and size evidence"
+    ],
+    "nonAuthority": [
+      "application submission",
+      "applicant fact invention",
+      "regeneration or replacement of the IBK report",
+      "unrelated reusable artifact changes",
+      "reusable artifact promotion"
+    ]
+  },
+  "objective": "Use the observed IBK report as a bounded diagnostic case, research durable reader-facing report and visual-design principles, and improve the reusable production artifact so future five-set PDFs cannot pass while leaking production language, duplicating candidate framing, applying inconsistent editorial styling, hiding criterion scores, fragmenting reading units, detaching visuals from their explanatory context, or overstating an applicant's unconfirmed perspective.",
+  "successEvidenceRefs": [
+    "evidence:ibk-report-conflict-audit",
+    "evidence:authoritative-report-design-and-accessibility-research",
+    "evidence:applicant-voice-adequacy-contract",
+    "evidence:public-language-and-heading-deduplication-contract",
+    "evidence:reusable-editorial-design-system-contract",
+    "evidence:score-visibility-pagination-and-visual-integration-contract",
+    "evidence:focused-regression-and-package-validation"
+  ],
+  "protectedConstraintRefs": [
+    "constraint:five-complete-answer-sets",
+    "constraint:question-specific-character-bounds",
+    "constraint:one-final-searchable-pdf",
+    "constraint:applicant-evidence-fidelity",
+    "constraint:no-ibk-report-mutation",
+    "constraint:no-observed-phrase-denylist-as-primary-control",
+    "constraint:authority-effect-none"
+  ],
+  "nonGoalRefs": [
+    "non-goal:regenerate-the-ibk-report",
+    "non-goal:invent-applicant-values-or-outcomes",
+    "non-goal:replace-the-browser-pdf-renderer",
+    "non-goal:design-one-universal-page-template",
+    "non-goal:alter-unrelated-job-application-artifacts",
+    "non-goal:submit-an-application"
+  ],
+  "lifecycleIntent": "improve_existing",
+  "capabilities": [
+    "rendered-report conflict inspection",
+    "applicant-understanding adequacy evaluation",
+    "reader-facing information-architecture design",
+    "paged-media and visual-integration validation",
+    "reusable report-profile regression testing"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "783a32562aa185dbef333dde7c7c8945adb294fe76af24b935aa271916d242be",
+  "allowedBaseClasses": ["loop", "skill", "contract_checker"],
+  "allowedScopes": ["framework"],
+  "requiredFacts": ["owner", "scope", "consumer", "validation"],
+  "exactArtifactIds": ["loop:document:job-application-report-production"],
+  "relationshipDepth": 1,
+  "maxCandidates": 4,
+  "contextBudget": {
+    "maxSourceMembers": 36,
+    "maxConsumerRefs": 12,
+    "maxValidationRefs": 28
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "Whether the user will later request regeneration of the already-produced IBK PDF."
+    ],
+    "allowedRelationshipTypes": ["defines", "consumes", "validates", "generates"],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "consumer",
+      "effect",
+      "route_or_topology",
+      "lifecycle",
+      "protected_constraint"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "evidence:reusable-public-report-contract-produced",
+      "evidence:ibk-conflicts-covered-by-regression-fixtures",
+      "evidence:validation-and-limitations-recorded"
+    ],
+    "validationRefs": [
+      "validation:reusable-artifact-operation-request-v2",
+      "validation:job-application-package-tests",
+      "validation:skill-quick-validation",
+      "validation:loop-package-strict",
+      "validation:failure-and-acceptance-fixtures"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "loop-budget:bounded-job-application-public-report-contract-v1",
+  "dataClassification": "internal",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": true,
+  "constructionAllowed": true,
+  "residualGapProven": true,
+  "requestDigest": "eb67a1833b456127ceb250d1a51cd0dd6f3715aef48c21629eec6bbbc3c8c30f"
+}

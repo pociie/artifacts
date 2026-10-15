@@ -1,0 +1,103 @@
+{
+  "kind": "six-mode-route-decision/v1",
+  "requestRevision": "r2-fresh-five-set-pdf-1000",
+  "status": "selected",
+  "selectedMode": "loop",
+  "continuityDecision": {
+    "requestRelation": "new_objective",
+    "objectiveRelation": "new",
+    "historyCoverage": "not_applicable",
+    "sessionBoundary": "not_applicable",
+    "priorPrimaryMode": "none",
+    "outerObligationState": "none",
+    "priorCompletionEvidence": "not_applicable",
+    "projectionRef": ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15/context-projection.json",
+    "executionSurface": "local_coordinator_only",
+    "candidateMode": "loop",
+    "effectivePrimaryMode": "loop",
+    "segmentMode": null,
+    "disposition": "standalone",
+    "outerObligationAction": "start",
+    "modeCompositionRequired": true
+  },
+  "architectureSelection": {
+    "requirement": "eligible",
+    "selectionStatus": "deferred_to_native_artifact",
+    "targetScope": "effective_primary",
+    "effectivePrimaryMode": "loop",
+    "structuralSignals": [
+      "five_complete_candidate_sets",
+      "one_bounded_revision",
+      "publication_validation"
+    ],
+    "segmentMode": null,
+    "segmentRequirement": null,
+    "segmentSelectionStatus": null,
+    "segmentStructuralSignals": [],
+    "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json",
+    "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+    "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+    "patternSelectedByRouting": false
+  },
+  "eligibleModes": [
+    "loop"
+  ],
+  "rejectedModes": [
+    {
+      "mode": "communication",
+      "reasonCodes": [
+        "bounded_revision_required",
+        "publication_artifact_required",
+        "effect_not_none"
+      ]
+    },
+    {
+      "mode": "investigation",
+      "reasonCodes": [
+        "complete_report_production_requested",
+        "mutation_required",
+        "output_not_finding"
+      ]
+    },
+    {
+      "mode": "single_task",
+      "reasonCodes": [
+        "multiple_ordered_stages",
+        "bounded_revision_and_reassessment"
+      ]
+    },
+    {
+      "mode": "orchestration",
+      "reasonCodes": [
+        "one_material_contribution_owner",
+        "no_multi-lane_fan-in-required"
+      ]
+    },
+    {
+      "mode": "session_control",
+      "reasonCodes": [
+        "no_explicit_session_action",
+        "effect_not_session_control"
+      ]
+    }
+  ],
+  "blockers": [],
+  "missingFacts": [
+    "공고의 직무 적합성 외에 지원자 개인이 IBK기업은행을 선택한 직접적인 계기와 관심 고객·업무",
+    "입행 후 선호하는 애플리케이션·데이터·보안·인프라 등 IT 세부 영역과 맡고 싶은 초기 책임",
+    "각 공개 저장소에서 지원자가 직접 작성·설계·검증한 범위와 개인 프로젝트인지 협업 프로젝트인지",
+    "포트폴리오의 테스트 결과, 처리량·지연·정확도·오류 재현 등 정량 또는 관찰 가능한 성과",
+    "실제 배포·운영, 장애 대응, 보안 점검, DB·인프라 관리 경험 여부와 범위",
+    "제출 시스템의 문항별 최소 글자 수와 최종 글자 수 산정 방식"
+  ],
+  "conflictingFacts": [],
+  "reassessmentTriggers": [
+    "objective_or_question_change",
+    "company_role_or_applicant_evidence_change",
+    "quality_profile_or_publication_contract_change",
+    "effect_or_execution_surface_change",
+    "route_or_topology_change",
+    "user_confirmation_or_material_source_change"
+  ],
+  "authorityEffect": "none"
+}

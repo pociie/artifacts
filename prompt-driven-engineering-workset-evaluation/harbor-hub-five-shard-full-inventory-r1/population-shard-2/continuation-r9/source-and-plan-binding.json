@@ -1,0 +1,58 @@
+{
+  "kind": "harbor-shard-source-plan-projection/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "continuationId": "population-shard-2:continuation-r9",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r9",
+  "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:fb88be3a0d69a80d51adda2bc4f6d62e52d5a525fcf33789efb099f474c6eed7",
+  "structureDigest": "sha256:fb88be3a0d69a80d51adda2bc4f6d62e52d5a525fcf33789efb099f474c6eed7",
+  "resolutionDecisionDigest": "sha256:5b5fa2713334ff3e1c0451a48291c1343318435f9be3620f8cbfaf6b8ecc6663",
+  "resolutionRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/operation-extraction-resolution.json",
+  "contextReconciliationRequestRevision": "harbor-context-and-compound-routing-r9",
+  "contextReconciliationDigest": "sha256:5b5fa2713334ff3e1c0451a48291c1343318435f9be3620f8cbfaf6b8ecc6663",
+  "contextReconciliationRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/context-reconciliation-decision.r9.json",
+  "requirementScopeDigest": "sha256:199c12a851ccbe7e741347b2baabb058fa55f33042ef7e081b9af8d9a768afdb",
+  "activePhaseContractDigest": "sha256:7c023d00f44158c76c8505de9dd656f2c1b1dfbc51c2452136acd87c5da8bdb9",
+  "planRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/population-shard-plan.json",
+  "planSha256": "sha256:705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+  "planPopulationRevision": "sha256:3129ad473a1c60f76d7159614e57c251e1fdf0a3ee64c9c347166e3315a1dd69",
+  "selectionRule": "integer(SHA256(canonicalDatasetId)[0:16],16) mod 5 == 1; trim Unicode NFC and preserve provider case",
+  "shard": {
+    "number": 2,
+    "zeroBasedIndex": 1,
+    "plannedCount": 54,
+    "shardCounts": [60, 54, 66, 49, 58]
+  },
+  "candidate": {
+    "itemId": "NovitaAI/tb21-data-science",
+    "canonicalDatasetId": "NovitaAI/tb21-data-science",
+    "identityDigest": "sha256:bd8bce739f7ae64c133d986af741e72ea5c40da0ede132437d39eaec8f32c1e3",
+    "ordinalWithinShard": 1,
+    "taskId": "terminal-bench/dna-assembly",
+    "taskDigest": "sha256:7b571544b64d9be1c91526837e5d805c2181afe0e6fd57a7f0676bba36c868d7",
+    "scope": "first_task_in_current_Hub_task_list_only; no_dataset_wide_disposition"
+  },
+  "inventory": {
+    "freezeRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/inventory-freeze.json",
+    "pageCount": 10,
+    "globalCount": 287,
+    "inventoryDigest": "sha256:fc7b45b9f5cddb714cd8f651b6bb20cc498992cd53776805b631c43d1ca1e3ad",
+    "canonicalIdsDigest": "sha256:bc7a4b855eff6dfa8eacacbbae9a7010ec001ddfc4a605632b058f0d999d0a29"
+  },
+  "priorReceiptCount": 4,
+  "pendingBeforeClaim": 50,
+  "invalidAggregateRefs": [
+    "population-shard-2/operation-state.json",
+    "population-shard-2/lane-operation-report.json"
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "rawTaskContentProjected": false,
+    "privateReasoningProjected": false,
+    "secretsProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "createdAt": "2026-08-28T13:45:43Z",
+  "digest": "sha256:d1908e227808d8e721787a21f47f40a53f8b7b371e97d6e0ef3fc3265297dee6"
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "task-local-effect-admission/v1",
+  "status": "admitted",
+  "authorityEffect": "none",
+  "objectiveRef": ".collab/artifacts/job-application-2026-10-finebridge-digital-service-planner-fresh/route-decision.json",
+  "admittedEffect": {
+    "type": "local_write",
+    "scope": ".collab/artifacts/job-application-2026-10-finebridge-digital-service-planner-fresh/**",
+    "purpose": "write a fresh runtime request, evidence projections, five answer sets, review report, and measured PDF"
+  },
+  "excludedEffects": [
+    "native_artifact_edit",
+    "external_network_mutation",
+    "application_submission",
+    "git_commit_or_push",
+    "identity_publication_without_consent"
+  ],
+  "authorizationBasis": "explicit user request to restart the job-application report operation in a new workspace",
+  "settlement": "only the fresh runtime bundle is mutable; applicant confirmation, acceptance, and submission remain separate"
+}

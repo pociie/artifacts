@@ -1,0 +1,280 @@
+{
+  "kind": "runtime-artifact-bundle/v1",
+  "schemaVersion": 1,
+  "bundleId": "bundle:runtime-loop-agent-artifacts:run-20260814-154700-kst",
+  "workId": "runtime-loop-agent-artifacts",
+  "runId": "run-20260814-154700-kst",
+  "createdAt": "2026-08-14T15:47:00+09:00",
+  "authorityEffect": "none",
+  "sourceSnapshot": {
+    "gitCommit": "cf72044b6d879cf9cc8e0603d85e593ecf49620a",
+    "branchRef": "refs/heads/main",
+    "worktreeRef": "worktree:task-root",
+    "cleanAtStart": true,
+    "governingRefs": [
+      "AGENTS.md",
+      "docs/operations/agent-workflow.md",
+      "docs/plan/artifacts/runtime-loop-agent-artifacts-plan.md"
+    ]
+  },
+  "boundary": {
+    "reusableSourceRoots": [
+      "artifacts/agent-loop",
+      "artifacts/agents"
+    ],
+    "mutableStateRoot": ".collab/memory/runtime-loop-agent-artifacts/run-20260814-154700-kst",
+    "generatedArtifactRoot": ".collab/artifacts/runtime-loop-agent-artifacts/run-20260814-154700-kst",
+    "ignoredByGit": true,
+    "sanitized": true,
+    "containsRawPrompt": false,
+    "containsTranscript": false,
+    "containsPrivateReasoning": false,
+    "containsCredentials": false
+  },
+  "composition": {
+    "loopEntries": [
+      {
+        "id": "runtime-loop-agent-artifacts-loop",
+        "origin": "dynamic_blueprint",
+        "ref": ".collab/artifacts/runtime-loop-agent-artifacts/run-20260814-154700-kst/loops/runtime-loop-agent-artifacts/blueprint.json",
+        "digest": "sha256:b6b7f9128bc6da87046ec071050c24e9f8a57ee154aeaf4b824cf3d40dba526f",
+        "status": "validated"
+      },
+      {
+        "id": "shared-worktree-coordination",
+        "origin": "reusable_source",
+        "ref": "artifacts/agent-loop/operation/shared-worktree-coordination/loop.yaml",
+        "digest": "sha256:0cc7c87224ebfa4d1d89991dc535acfe546dc05cd67cbd9f5e5b184c05f83e54",
+        "status": "selected"
+      },
+      {
+        "id": "post-completion-reconciliation",
+        "origin": "reusable_source",
+        "ref": "artifacts/agent-loop/operation/post-completion-reconciliation/loop.yaml",
+        "digest": "sha256:83f700991d1b9c4d952b8d357c9bb464437136112aa9e2a46161f99d49de10e8",
+        "status": "selected"
+      }
+    ],
+    "agentEntries": [
+      {
+        "id": "document-integration-owner",
+        "origin": "reusable_source",
+        "ref": "artifacts/agents/agent-operation/agents/document-integration-owner.yaml",
+        "digest": "sha256:5d33d5ff9e6af3e3d1445a9b3df09cb0cdc9638c1755b756f624bf8601b41daf",
+        "status": "selected"
+      }
+    ]
+  },
+  "executionTrace": {
+    "workflow": {
+      "id": "workflow:runtime-loop-agent-artifacts",
+      "ref": "docs/plan/artifacts/runtime-loop-agent-artifacts-plan.md",
+      "revision": "plan:runtime-loop-agent-artifacts:v1",
+      "rootLoopId": "runtime-loop-agent-artifacts-loop"
+    },
+    "worktrees": [
+      {
+        "worktreeRef": "worktree:task-root",
+        "branchRef": "refs/heads/main",
+        "baseCommit": "cf72044b6d879cf9cc8e0603d85e593ecf49620a",
+        "headCommit": "cf72044b6d879cf9cc8e0603d85e593ecf49620a",
+        "parentWorktreeRef": null,
+        "purpose": "shared single-writer integration checkout",
+        "status": "active"
+      }
+    ],
+    "assignments": [
+      {
+        "assignmentRef": "assignment:root-document-integration",
+        "loopId": "runtime-loop-agent-artifacts-loop",
+        "agentId": "document-integration-owner",
+        "worktreeRef": "worktree:task-root",
+        "branchRef": "refs/heads/main",
+        "mutableStateRef": ".collab/memory/runtime-loop-agent-artifacts/run-20260814-154700-kst/assignments/root-document-integration.json",
+        "status": "completed",
+        "artifactPaths": [
+          "outputs/root-document-integration/change-summary.json"
+        ]
+      }
+    ],
+    "activities": [
+      {
+        "activityRef": "activity:dynamic-loop-composition",
+        "loopId": "runtime-loop-agent-artifacts-loop",
+        "worktreeRef": "worktree:task-root",
+        "branchRef": "refs/heads/main",
+        "status": "validated",
+        "artifactPaths": [
+          "loops/runtime-loop-agent-artifacts/blueprint.json"
+        ]
+      },
+      {
+        "activityRef": "activity:reuse-resolution",
+        "loopId": "runtime-loop-agent-artifacts-loop",
+        "worktreeRef": "worktree:task-root",
+        "branchRef": "refs/heads/main",
+        "status": "completed",
+        "artifactPaths": [
+          "composition/selection.json"
+        ]
+      },
+      {
+        "activityRef": "activity:contract-validation",
+        "loopId": "runtime-loop-agent-artifacts-loop",
+        "worktreeRef": "worktree:task-root",
+        "branchRef": "refs/heads/main",
+        "status": "validated",
+        "artifactPaths": [
+          "validation/contracts.json"
+        ]
+      },
+      {
+        "activityRef": "activity:source-delivery-settlement",
+        "loopId": "runtime-loop-agent-artifacts-loop",
+        "worktreeRef": "worktree:task-root",
+        "branchRef": "refs/heads/main",
+        "status": "completed",
+        "artifactPaths": [
+          "settlement/resources.json"
+        ]
+      },
+      {
+        "activityRef": "activity:composition-improvement-review",
+        "loopId": "runtime-loop-agent-artifacts-loop",
+        "worktreeRef": "worktree:task-root",
+        "branchRef": "refs/heads/main",
+        "status": "completed",
+        "artifactPaths": [
+          "improvement/composition-review.json"
+        ]
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "loops/runtime-loop-agent-artifacts/blueprint.json",
+      "role": "loop_blueprint",
+      "digest": "sha256:b6b7f9128bc6da87046ec071050c24e9f8a57ee154aeaf4b824cf3d40dba526f",
+      "producerKind": "workflow_activity",
+      "producerRef": "activity:dynamic-loop-composition",
+      "sensitivity": "sanitized_public_metadata",
+      "retention": "retain_with_checkpoint"
+    },
+    {
+      "path": "composition/selection.json",
+      "role": "composition_selection",
+      "digest": "sha256:503e1af5d710f1d2b846c292b79bbe7538d71495123eda6d1f3170ffd3bc4510",
+      "producerKind": "workflow_activity",
+      "producerRef": "activity:reuse-resolution",
+      "sensitivity": "sanitized_public_metadata",
+      "retention": "retain_with_checkpoint"
+    },
+    {
+      "path": "outputs/root-document-integration/change-summary.json",
+      "role": "output",
+      "digest": "sha256:e48d1656e7f87b6d788767b9b1e8fc487b4dae47baab28952721bbc2b9f3b8c6",
+      "producerKind": "assignment",
+      "producerRef": "assignment:root-document-integration",
+      "sensitivity": "sanitized_public_metadata",
+      "retention": "retain_with_checkpoint"
+    },
+    {
+      "path": "validation/contracts.json",
+      "role": "validation",
+      "digest": "sha256:2329ce1ec78bb451143159ba2e5125237ef3fa819fec4687f8cb30908f20fdac",
+      "producerKind": "workflow_activity",
+      "producerRef": "activity:contract-validation",
+      "sensitivity": "sanitized_public_metadata",
+      "retention": "retain_with_checkpoint"
+    },
+    {
+      "path": "settlement/resources.json",
+      "role": "settlement",
+      "digest": "sha256:b5fbffd761bb5306ee5478c86c60014b889dfe017561f821bde879b1bbd1ecdc",
+      "producerKind": "workflow_activity",
+      "producerRef": "activity:source-delivery-settlement",
+      "sensitivity": "runtime_private_reference",
+      "retention": "retain_with_checkpoint"
+    },
+    {
+      "path": "improvement/composition-review.json",
+      "role": "improvement_review",
+      "digest": "sha256:0560fe02b0d908da4671756966700ae129057c27b0877569e32c0bc9455733c5",
+      "producerKind": "workflow_activity",
+      "producerRef": "activity:composition-improvement-review",
+      "sensitivity": "sanitized_public_metadata",
+      "retention": "retain_with_checkpoint"
+    }
+  ],
+  "lifecycle": {
+    "state": "completed",
+    "completionRef": "artifact:validation/contracts",
+    "settlementRef": "artifact:settlement/resources",
+    "retentionDisposition": "retain_with_checkpoint",
+    "retainedUntil": "explicit local retirement after source delivery review",
+    "terminalResources": {
+      "activeCount": 1,
+      "settledRefs": []
+    }
+  },
+  "reuseReview": {
+    "status": "completed",
+    "outputRef": "artifact:improvement/composition-review",
+    "loopCandidates": [
+      {
+        "id": "runtime-loop-agent-artifacts-loop",
+        "disposition": "retain_task_specific",
+        "evidenceRefs": [
+          "evidence:single-run-only"
+        ],
+        "automaticPromotion": false
+      },
+      {
+        "id": "shared-worktree-coordination",
+        "disposition": "reuse_existing",
+        "evidenceRefs": [
+          "evidence:preflight-and-settlement-coverage"
+        ],
+        "automaticPromotion": false
+      },
+      {
+        "id": "post-completion-reconciliation",
+        "disposition": "reuse_existing",
+        "evidenceRefs": [
+          "evidence:completion-axis-coverage"
+        ],
+        "automaticPromotion": false
+      }
+    ],
+    "agentCandidates": [
+      {
+        "id": "document-integration-owner",
+        "disposition": "reuse_existing",
+        "evidenceRefs": [
+          "evidence:bounded-document-output-covered"
+        ],
+        "automaticPromotion": false
+      },
+      {
+        "id": "dynamic-loop-composition-pair",
+        "disposition": "improve_existing",
+        "evidenceRefs": [
+          "evidence:missing-dynamic-loop-author-validator-output-contracts"
+        ],
+        "automaticPromotion": false
+      }
+    ],
+    "skillCandidates": [
+      {
+        "id": "no-new-skill",
+        "disposition": "no_candidate",
+        "evidenceRefs": [],
+        "automaticPromotion": false
+      }
+    ]
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "manifestDigest": "sha256:955d2a647432667c6b387ce0e1bbb84e9780809941c41d5f732ceea5926c9114"
+  }
+}

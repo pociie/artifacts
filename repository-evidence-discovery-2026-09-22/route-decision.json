@@ -1,0 +1,53 @@
+{
+  "kind": "ai-execution-route-decision/v1",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "requestRelation": "new_objective",
+  "historyCoverage": "not_applicable",
+  "sessionBoundary": "same_session",
+  "priorPrimaryMode": "none",
+  "outerObligationState": "none",
+  "priorCompletionEvidence": "not_applicable",
+  "workPurpose": ["research", "design", "implement", "validate"],
+  "operationFamily": "outcome_production",
+  "effectIntent": "local_mutation",
+  "outputShape": "validated_candidate",
+  "temporalShape": "iterative",
+  "contributionShape": "one_owner",
+  "executionSurface": "local_coordinator_only",
+  "uncertainty": "medium",
+  "novelty": "adjacent",
+  "risk": "medium",
+  "reversibility": "reversible",
+  "validationSeparability": "same_owner",
+  "contextPartitionability": "medium",
+  "capabilityReadiness": "verified",
+  "lifecycleReadiness": "verified",
+  "selectedMode": "loop",
+  "rejectedModes": {
+    "communication": "workspace evidence and durable changes are required",
+    "investigation": "the requested outcome includes repository mutation",
+    "single_task": "research, contract design, implementation, and validation require bounded iteration",
+    "orchestration": "the objective has one material contribution and one owner",
+    "session_control": "no session operation is requested"
+  },
+  "loopContract": {
+    "phases": [
+      "bind-operation",
+      "research-current-capabilities",
+      "design-native-owner-change",
+      "implement-bounded-contract",
+      "validate-examples-and-negative-cases"
+    ],
+    "checkpoint": "after native-owner and external-capability evidence are reconciled",
+    "maxRevisionsPerFingerprint": 2,
+    "stopConditions": [
+      "native owner becomes unresolved",
+      "change would overwrite unrelated working-tree edits",
+      "validation repeats an unchanged failure fingerprint",
+      "tool adoption would require ungranted installation or external disclosure"
+    ]
+  },
+  "policyRef": "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/policy/ai-execution-routing.policy.json",
+  "policyDigest": "sha256:f033647afc1803cdf5c86633e3aa5a2c3853d566493c85caed885df3612fe178"
+}

@@ -1,0 +1,315 @@
+{
+  "schemaVersion": "self-introduction-evaluation/v2",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "evaluationDate": "2026-09-07",
+  "targetRole": "AI 서비스 엔지니어",
+  "threshold": {
+    "minimumPercent": 90,
+    "selectionRule": "weighted_score >= 90 and every hard gate passes",
+    "belowThresholdDisposition": "exclude_from_deliverable",
+    "rounding": "nearest_integer",
+    "note": "This is an editorial quality score, not a hiring-probability prediction. Candidate confirmation remains required for first-person contribution and any run-specific result."
+  },
+  "coreNarrative": "AI 기능을 실제 업무 흐름에 연결하고 운영 가능한 서비스로 완성하는 엔지니어",
+  "claimClasses": {
+    "F": "repository or official-source fact; may be stated as an observed present-tense fact",
+    "U": "user-provided context; current project and personal ownership must be confirmed by the applicant",
+    "I": "bounded interpretation; use allows/serves to/indicates rather than proved or guarantees",
+    "P": "personal contribution; requires applicant confirmation and a concrete decision, changed file, or episode",
+    "O": "observed operational result; requires a dated run, metric, incident, or test artifact",
+    "N": "future intent; use would/하겠습니다 and do not present as achieved"
+  },
+  "hardGates": [
+    {
+      "id": "G1",
+      "name": "character_range",
+      "rule": "Every answer is 300-700 Unicode code points",
+      "failure": "exclude"
+    },
+    {
+      "id": "G2",
+      "name": "prompt_coverage",
+      "rule": "Q1 names knowledge/skills and application; Q2 includes project type, scale, role/contribution, process, and learning; Q3 names one value and how it is practiced at the company",
+      "failure": "exclude"
+    },
+    {
+      "id": "G3",
+      "name": "evidence_fidelity",
+      "rule": "Do not invent production users, traffic, metrics, customer outcomes, model training, cloud operations, or personal ownership from repository structure alone",
+      "failure": "exclude"
+    },
+    {
+      "id": "G4",
+      "name": "mechanism_accuracy",
+      "rule": "Do not conflate bounded surfaces: MCP is an external-agent/tool adapter or harness, not a model executor; Dapr is runtime/service invocation evidence, not automatically ETL; Reporting is a separate service boundary from Chat Gateway",
+      "failure": "exclude"
+    },
+    {
+      "id": "G5",
+      "name": "personal_confirmation",
+      "rule": "Before submission, applicant confirms first-person ownership, actual checks performed, and the accuracy of each contribution claim",
+      "failure": "hold_for_confirmation"
+    }
+  ],
+  "axes": [
+    {
+      "id": "A1",
+      "name": "narrative_coherence",
+      "weight": 8,
+      "question": "Does each answer advance the same candidate identity while giving the three questions different narrative jobs?",
+      "levels": {
+        "0": "unrelated fragments or stack list",
+        "1": "a topic exists but transitions are absent",
+        "2": "one central claim is visible",
+        "3": "Q1 capability, Q2 proof, and Q3 working principle form a coherent arc",
+        "4": "the arc is distinctive, context-rich, and naturally connects technology to service value"
+      }
+    },
+    {
+      "id": "A2",
+      "name": "prompt_compliance",
+      "weight": 7,
+      "question": "Are the required elements present without turning the answer into a checklist?",
+      "levels": {
+        "0": "required elements missing",
+        "1": "only one element is recognizable",
+        "2": "most elements are present but implicit",
+        "3": "all required elements are explicit and connected",
+        "4": "required elements are embedded in a persuasive story"
+      }
+    },
+    {
+      "id": "A3",
+      "name": "role_fit",
+      "weight": 12,
+      "question": "Does the writing match AI service API/backend, data flow, platform operation, discovery, and quality work?",
+      "levels": {
+        "0": "no connection to the role",
+        "1": "generic developer fit",
+        "2": "mentions one relevant task",
+        "3": "connects candidate behavior to API/data/operation/quality responsibilities",
+        "4": "shows a clear service-engineering thesis without pretending to be a model-research profile"
+      }
+    },
+    {
+      "id": "A4",
+      "name": "company_business_context",
+      "weight": 6,
+      "question": "Does the answer connect to Lotte Innovate's platform/solution and multi-industry business context without inventing a customer project?",
+      "levels": {
+        "0": "wrong or absent context",
+        "1": "company name only",
+        "2": "generic ICT reference",
+        "3": "connects service quality to business/industry workflow",
+        "4": "shows how the candidate would translate diverse business needs into durable service capability"
+      }
+    },
+    {
+      "id": "A5",
+      "name": "evidence_fidelity_and_attribution",
+      "weight": 12,
+      "nonCompensatory": true,
+      "question": "Can every past-tense technical or outcome claim be classified as official fact, repository fact, user context, personal contribution, observed result, bounded inference, or future intent?",
+      "levels": {
+        "0": "unsupported or contradicted",
+        "1": "dependency/readme presence is treated as personal achievement",
+        "2": "source-backed mechanism but attribution is unclear",
+        "3": "facts, interpretations, personal contributions, and future plans are separated",
+        "4": "claim-level evidence and scope caveats make the sentence defensible"
+      }
+    },
+    {
+      "id": "A6",
+      "name": "context_and_domain_depth",
+      "weight": 7,
+      "question": "Does the answer explain the work situation and why the problem mattered, not only what was built?",
+      "levels": {
+        "0": "no context",
+        "1": "context is a label",
+        "2": "problem context is stated",
+        "3": "context includes user/workflow constraint and system consequence",
+        "4": "context explains business/operational stakes and the trade-off being managed"
+      }
+    },
+    {
+      "id": "A7",
+      "name": "ownership_and_decision",
+      "weight": 8,
+      "question": "Does the answer show what the applicant decided, changed, prioritized, or verified?",
+      "levels": {
+        "0": "only team/system nouns",
+        "1": "participation is vague",
+        "2": "one action is named",
+        "3": "decision and contribution are clear enough for a follow-up",
+        "4": "ownership includes alternatives, scope, and a concrete changed artifact or decision"
+      }
+    },
+    {
+      "id": "A8",
+      "name": "causal_process",
+      "weight": 10,
+      "question": "Is there a causal chain from problem to judgment, mechanism, validation, and learning?",
+      "levels": {
+        "0": "chronological or stack list only",
+        "1": "problem and action are disconnected",
+        "2": "one cause-effect link is clear",
+        "3": "problem → decision → implementation → verification is traceable",
+        "4": "the answer explains trade-offs, failure handling, and why the chosen boundary was appropriate"
+      }
+    },
+    {
+      "id": "A9",
+      "name": "technical_mechanism_accuracy",
+      "weight": 10,
+      "nonCompensatory": true,
+      "question": "Does each technology appear as a causal mechanism with correct layer, input/output, boundary, and failure implication?",
+      "levels": {
+        "0": "category error or wrong layer",
+        "1": "technology is named but its role is vague",
+        "2": "role and boundary are broadly correct",
+        "3": "input/output, selection, transport, persistence, or failure semantics are explained",
+        "4": "framework, adapter, business policy, replacement, cancellation, auth, approval, and observability distinctions are defensible"
+      }
+    },
+    {
+      "id": "A10",
+      "name": "operations_quality_and_risk",
+      "weight": 8,
+      "question": "Does the answer treat tests, health/readiness, auth, trace, failure, deployment, or recovery as service concerns rather than tool names?",
+      "levels": {
+        "0": "no quality or risk awareness",
+        "1": "quality is an adjective",
+        "2": "one check or risk is named",
+        "3": "validation and failure visibility are part of the process",
+        "4": "the answer distinguishes intended controls from measured operational outcomes and proposes a bounded recovery/observation loop"
+      }
+    },
+    {
+      "id": "A11",
+      "name": "outcome_learning_growth",
+      "weight": 6,
+      "question": "Does the answer state what changed in the project/person and how that becomes future capability?",
+      "levels": {
+        "0": "no outcome or learning",
+        "1": "generic lesson",
+        "2": "lesson follows the story",
+        "3": "learning changes the candidate's future behavior",
+        "4": "learning becomes a concrete contribution plan for the target role"
+      }
+    },
+    {
+      "id": "A12",
+      "name": "differentiation_readability_interview_defense",
+      "weight": 6,
+      "question": "Can a reviewer understand the answer quickly and can the applicant defend the mechanism, failure, alternative, and personal scope?",
+      "levels": {
+        "0": "opaque or indefensible",
+        "1": "readable but generic",
+        "2": "one plausible follow-up path",
+        "3": "clear wording and defensible technical follow-ups",
+        "4": "distinctive, concise, and ready for why/how/what-failed/what-measured follow-ups"
+      }
+    }
+  ],
+  "microGates": {
+    "narrative_depth": {
+      "scale": "0-4",
+      "minimum": 2,
+      "meaning": {
+        "0": "stack list",
+        "1": "problem without mechanism",
+        "2": "one technology's role is causal",
+        "3": "three bounded stages plus failure or quality signal",
+        "4": "trade-off, operational signal, and observed result or scoped future plan"
+      }
+    },
+    "mechanism_accuracy": {
+      "scale": "0-4",
+      "minimum_for_technology_paragraph": 3,
+      "hard_fail": ["MCP described as model/executor", "Dapr described as ETL without evidence", "UI described as backend", "conditional provider surfaces described as simultaneously active"]
+    },
+    "evidence_fidelity": {
+      "scale": "0-4",
+      "minimum_for_past_claim": 3,
+      "hard_fail": ["invented metric", "production/customer claim without artifact", "repository presence treated as personal authorship"]
+    },
+    "interview_defensibility": {
+      "scale": "0-4",
+      "minimum": 3,
+      "followUps": ["Which exact handler/port or decision changed?", "What happens when provider/readiness/auth fails?", "How do you know the boundary worked?", "What did you measure or not measure?", "Which claim would you not make?", "What alternative did you reject and why?"]
+    }
+  },
+  "scoreMeaning": {
+    "90-100": "Deliverable-grade editorial draft: a coherent thesis, complete prompts, mechanism/evidence/interview gates, and only minor applicant confirmation remains.",
+    "85-89": "Promising but revise: usually one missing causal link, thin outcome, repetitive question role, or weak mechanism explanation.",
+    "70-84": "Structurally usable but list-like or evidence-thin; do not include in the requested deliverable.",
+    "0-69": "Rewrite from evidence and narrative architecture."
+  },
+  "sets": [
+    {
+      "id": "set-1",
+      "theme": "흐름을 연결해 운영 가능한 AI 서비스로 완성",
+      "questionScores": {"q1": 94, "q2": 95, "q3": 93},
+      "axisLevels": {"A1": 4, "A2": 4, "A3": 4, "A4": 3, "A5": 4, "A6": 4, "A7": 3, "A8": 4, "A9": 3, "A10": 4, "A11": 4, "A12": 4},
+      "weightedScore": 94,
+      "meaning": "가장 균형적인 기본안. 요청·실행·품질·운영의 중심 서사가 뚜렷하며, 리포팅을 별도 경계로 정리한 보수적 기술 설명을 사용한다.",
+      "disposition": "include"
+    },
+    {
+      "id": "set-2",
+      "theme": "경계를 설계해 복잡성을 낮추는 엔지니어",
+      "questionScores": {"q1": 93, "q2": 92, "q3": 90},
+      "axisLevels": {"A1": 4, "A2": 4, "A3": 4, "A4": 3, "A5": 4, "A6": 4, "A7": 3, "A8": 4, "A9": 4, "A10": 3, "A11": 3, "A12": 3},
+      "weightedScore": 92,
+      "meaning": "모듈 경계와 팀 자산화가 강점. 기술 깊이는 높지만, 지원자의 구체적 변경 사례를 면접 전에 보강하면 더 강해진다.",
+      "disposition": "include"
+    },
+    {
+      "id": "set-3",
+      "theme": "운영 가능한 결과와 검증 가능한 근거를 만드는 엔지니어",
+      "questionScores": {"q1": 92, "q2": 91, "q3": 90},
+      "axisLevels": {"A1": 4, "A2": 4, "A3": 4, "A4": 3, "A5": 4, "A6": 3, "A7": 3, "A8": 4, "A9": 4, "A10": 3, "A11": 3, "A12": 4},
+      "weightedScore": 91,
+      "meaning": "검증·운영 언어가 선명한 안. 단, 실제 실행 결과를 제출 사례로 말하려면 날짜가 있는 테스트/배포/장애 근거를 추가 확인해야 한다.",
+      "disposition": "include"
+    },
+    {
+      "id": "set-4",
+      "theme": "불확실한 요구를 검증 가능한 계약으로 바꾸는 엔지니어",
+      "questionScores": {"q1": 94, "q2": 93, "q3": 92},
+      "axisLevels": {"A1": 4, "A2": 4, "A3": 4, "A4": 3, "A5": 4, "A6": 4, "A7": 3, "A8": 4, "A9": 4, "A10": 3, "A11": 3, "A12": 4},
+      "weightedScore": 93,
+      "meaning": "불확실한 요구와 외부 AI 연동을 계약·어댑터·검증으로 번역하는 안. MCP와 실행 SDK를 구분해 기술 정확도가 높다.",
+      "disposition": "include"
+    },
+    {
+      "id": "set-5",
+      "theme": "기술을 고객과 조직의 실제 가치로 연결하는 엔지니어",
+      "questionScores": {"q1": 91, "q2": 90, "q3": 90},
+      "axisLevels": {"A1": 3, "A2": 4, "A3": 4, "A4": 3, "A5": 4, "A6": 3, "A7": 3, "A8": 4, "A9": 4, "A10": 3, "A11": 4, "A12": 4},
+      "weightedScore": 91,
+      "meaning": "고객 가치와 업무 불편 개선을 가장 앞세운 안. 기술 설명보다 사용자 관점이 강하므로 지원자의 실제 사용자/운영 사례를 확인하면 좋다.",
+      "disposition": "include"
+    }
+  ],
+  "excludedClaims": [
+    "Python/PyTorch 모델 학습 또는 파인튜닝",
+    "Kubernetes·AWS·Azure의 실제 운영 경험",
+    "production user/traffic/latency/accuracy/cost-saving/uptime 수치",
+    "Chat Gateway와 Reporting의 직접 동기식 연결을 증명하는 주장",
+    "모든 provider surface가 동시에 활성화되었다는 주장",
+    "MCP를 모델·실행 알고리즘으로 부르는 표현",
+    "저장소 구조만으로 개인의 저자·리더십·성공한 실행을 확정하는 표현"
+  ],
+  "evidenceSources": [
+    "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007",
+    "https://recruit.lotte.co.kr/companylife/affiliate/detail?compcd=30007",
+    "https://recruit.lotte.co.kr/about/hrsystem",
+    "https://github.com/pociie/collab-mono",
+    "/Users/judangs/project/personal/orca/collab-mono/package.json",
+    "/Users/judangs/project/personal/orca/collab-mono/apps/components/core-domain/agent-runtime/README.md",
+    "/Users/judangs/project/personal/orca/collab-mono/apps/components/generic-sub-domain/chat-gateway/README.md",
+    "/Users/judangs/project/personal/orca/collab-mono/apps/components/generic-sub-domain/reporting/README.md"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "harbor-item-route-delta/v1",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "shardId": "population-shard-4",
+  "ordinal": 1,
+  "itemId": "abundant/swe-gen-go",
+  "identityDigest": "sha256:d433b9581efa9cddb7215b07ea429c4c45b397d48061c926dcad10b8fd46cd75",
+  "route": {
+    "mode": "single_task",
+    "architecturePattern": "not_required",
+    "swarmDecision": "no-swarm",
+    "coordinationPolicy": "not_required",
+    "roleContext": "lane-controller",
+    "dynamicArtifact": "terminal-receipt-and-reward-vector",
+    "reassessment": "changed-capability-fingerprint-or-material-runtime-deficiency"
+  },
+  "execution": {
+    "provider": "harbor",
+    "providerVersion": "0.22.0",
+    "dataset": "abundant/swe-gen-go@latest",
+    "taskResolution": "--n-tasks 1",
+    "agent": "codex",
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "credentialInjection": "CODEX_FORCE_AUTH_JSON=1",
+    "verification": "enabled",
+    "subjectTimeoutSeconds": 3600,
+    "attemptKind": "retry_named_failed_identity_after_changed_capability_fingerprint",
+    "exactTaskRef": "abundant/swe-gen-go/prometheus__client_golang-1917",
+    "taskRevision": 1,
+    "taskPackageDigest": "sha256:533504b9b99cfb6fe716b32681612e700b9f7e25cb621ccadbf46713f9bb9368",
+    "taskImagePlatformFingerprintRef": "task-image-platform-fingerprint.r14.json"
+  },
+  "priorEvidence": {
+    "priorStatus": "held",
+    "priorFailureClass": "protected-verifier-compatible-cgo-toolchain-required",
+    "reentryReason": "public-dataset-download-codex-auth-and-gpt-5.6-luna-max-qualified",
+    "preventedEquivalentRetryRef": "item-01-prevented-equivalent-retry.r14.json"
+  },
+  "privacy": {
+    "rawPromptStored": false,
+    "privateReasoningStored": false,
+    "secretsStored": false,
+    "runtimeHandlesStored": false
+  }
+}

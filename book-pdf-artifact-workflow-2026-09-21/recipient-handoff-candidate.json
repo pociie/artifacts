@@ -1,0 +1,92 @@
+{
+  "kind": "sanitized-recipient-handoff-candidate/v1",
+  "handoffId": "recipient-handoff:book-pdf-source-plus-visual",
+  "handoffRevision": "book-pdf-recipient-handoff/2",
+  "status": "candidate_pending_recipient_review",
+  "authorityEffect": "none",
+  "recipient": "recipient:pdf-authorship-owner",
+  "ownership": {
+    "visualContributionOwner": "agent-role:visual-pdf-spec-builder",
+    "ownedPaths": [
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-expression-spec.md",
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/mockups/**",
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/mockup-manifest.json",
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/source-to-claim-packet.json",
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/prototype/**",
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/*visual*",
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/*handoff*",
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/*validation*",
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/*settlement*"
+    ],
+    "excludedWritePaths": [
+      "coordination-v3/**",
+      "AGENTS.md",
+      "artifacts/loop-architecture/**"
+    ]
+  },
+  "collaborationBundle": {
+    "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/collaboration-bundle-v2.json",
+    "revision": "book-pdf-collaboration/2",
+    "digest": "sha256:cb9401da733fbebd267d9fe182219b803f60f517b518e318aebd6cf2d390674a"
+  },
+  "combinedEvidenceBinding": {
+    "revision": "book-pdf-recipient-handoff/2",
+    "algorithm": "sha256 over UTF-8 canonical JSON with sorted keys and a trailing newline",
+    "sourceReviewEvidence": [
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/source-to-claim-packet.json",
+        "digest": "sha256:ae9e1d091f0f671c40181d8037261d943a901dd27bc0af31232e34a1239f4b77",
+        "origin": "sanitized projection of source-session review contribution",
+        "limitations": [
+          "video transcripts were not independently verified",
+          "project source is a third-party reconstruction snapshot with missing-module and build-parity limits"
+        ]
+      }
+    ],
+    "visualEvidence": [
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/mockup-manifest.json",
+        "digest": "sha256:46dd76359fcdc1d4d231609517403569cc6653b588557c25ebc67294c7a66e3d"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-expression-spec.md",
+        "digest": "sha256:61bf97bedc649acfaa8474357716f1dbd9bd7bf5cf7bafe6a26b3f03c0230e23"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/prototype/book-pdf-expression-prototype.pdf",
+        "digest": "sha256:5fcbc6d8825077d8940545aeb9ab9c97b5867d31daff1bdb0b38ce9d60654566"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/prototype/prototype-contact-sheet.png",
+        "digest": "sha256:81b984d1c89dee6f8c65be2667f47220d914e84032a70e06bbe59423bc6ba98c"
+      }
+    ],
+    "combinedDigest": "sha256:a133e3f3235932fc57a8e40064accf4d9fac7d9de8e387a2232252073974295e"
+  },
+  "recommendedEditorialDecision": {
+    "contentSpine": "user event → React snapshot/update queue → message/context → generator turn → streaming → tool/permission/effect → durability/recovery",
+    "narrativePageMode": "VIS-01 Systems Monograph",
+    "evidencePageMode": "VIS-07 Evidence Notebook",
+    "usageRule": "Use Monograph pages to advance understanding and Notebook pages to test source, uncertainty, inference and limitations."
+  },
+  "candidateArtifacts": [
+    ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/domain-reference-matrix.md",
+    ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/registered-profile-lookup.json",
+    ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/dynamic-team-blueprint.json",
+    ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/architecture-selection.json",
+    ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/contact-sheet.png"
+  ],
+  "recipientChecksRequired": [
+    "Verify the combined evidence digest before using the packet.",
+    "Commission an author-independent Fact/Visual Validator against the frozen PDF and source packet.",
+    "Decide whether to activate any candidate role; this handoff does not activate one.",
+    "Do not infer acceptance, publication readiness or promotion from the prototype."
+  ],
+  "activation": "not_performed",
+  "acknowledgement": "not_received",
+  "independentValidation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "pending"
+}
+

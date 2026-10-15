@@ -1,0 +1,131 @@
+{
+  "attemptState": {
+    "commandAttempted": true,
+    "harnessExitCode": 1,
+    "preservedEvidence": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-04-benchflow-skillsbench/harbor-command.log",
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-04-benchflow-skillsbench-terminal-receipt.r16.json",
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-04-benchflow-skillsbench-terminal-reward-vector.r16.json"
+    ],
+    "providerTaskResolved": false,
+    "providerTrialCount": 0,
+    "state": "provider_preflight_failed_no_subject_trial",
+    "subjectTrialStarted": false,
+    "verifierStarted": false,
+    "wrapperSlotAcquired": true
+  },
+  "authorityEffect": "none",
+  "changedFingerprintWakeCondition": {
+    "kind": "harbor-task-filter-fingerprint-transition/v1",
+    "previous": {
+      "datasetRef": "benchflow/skillsbench@latest",
+      "model": "gpt-5.6-luna",
+      "providerVersion": "0.22.0",
+      "reasoningEffort": "max",
+      "taskFilter": "3d-scan-calc",
+      "taskWorkspaceDigest": "sha256:ab8ca13d97f409e7c4e17dbb8b027745f92fb36be6ea78bd8fe09f05fbb4c9e8"
+    },
+    "previousDigest": "sha256:4f28e19f56b4546390771a5ef82d559e4c1bd8a4b5363699dadf73ed190e713d",
+    "required": {
+      "datasetRef": "benchflow/skillsbench@latest",
+      "model": "gpt-5.6-luna",
+      "providerVersion": "0.22.0",
+      "reasoningEffort": "max",
+      "taskFilter": "benchflow/3d-scan-calc",
+      "taskWorkspaceDigest": "sha256:ab8ca13d97f409e7c4e17dbb8b027745f92fb36be6ea78bd8fe09f05fbb4c9e8"
+    },
+    "requiredDigest": "sha256:37b62496014fb5367dd0936890c06f26a76ef12c697ae20529f6f587d758fab6",
+    "transitionObserved": false,
+    "wakeCondition": "retry only after the required provider-qualified task filter is bound; do not repeat the ownerless filter"
+  },
+  "cost": {
+    "cachedInputTokens": null,
+    "costUsd": null,
+    "inputTokens": null,
+    "outputTokens": null
+  },
+  "evaluation": {
+    "benchmarkReward": null,
+    "failureClass": "provider_or_environment_failure",
+    "failureCode": "harbor:provider_or_environment_failure",
+    "protectedVerifierState": "not_scored",
+    "rawVerifierReward": null,
+    "reductionDisposition": "provider_preflight_failed_no_subject_trial",
+    "subjectTrialStarted": false,
+    "terminalPrimaryReward": null,
+    "terminalRewardVectorRef": "item-04-benchflow-skillsbench-terminal-reward-vector.r16.json",
+    "wakeCondition": "changed provider task-filter fingerprint required: bind exact qualified filter benchflow/3d-scan-calc (previous 3d-scan-calc); shared semantic-facts resolver integration must complete before any retry; no equivalent retry"
+  },
+  "evidence": {
+    "jobResultDigest": null,
+    "rewardVectorRef": "item-04-benchflow-skillsbench-terminal-reward-vector.r16.json",
+    "trialResultDigest": null,
+    "verifierOutputDigest": null
+  },
+  "execution": {
+    "activeProviderResourceCountAfterRun": 0,
+    "containerSettlement": "settled_after_evidence_capture",
+    "harnessExitCode": 1,
+    "providerTrialCount": 0,
+    "state": "failed_preflight",
+    "subjectTrialStarted": false,
+    "verifierStarted": false
+  },
+  "identityDigest": "sha256:33b59873b306eec96de41ee4d682bc0d3af91dc807f104cc76755661dc60670d",
+  "itemId": "benchflow/skillsbench",
+  "itemTerminalStatus": "provider_failed_actual_attempt",
+  "kind": "harbor-population-item-terminal-receipt/v2",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "ordinal": 4,
+  "privacy": {
+    "credentialsProjected": false,
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawPromptProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "provider": {
+    "actualAttempt": true,
+    "agent": "codex",
+    "agentVersion": null,
+    "class": "harbor",
+    "credentialInjectionMode": "CODEX_FORCE_AUTH_JSON",
+    "credentialValueProjected": false,
+    "effectiveModel": null,
+    "effectiveReasoningEffort": null,
+    "requestedModel": "gpt-5.6-luna",
+    "requestedReasoningEffort": "max",
+    "requestedVerificationEnabled": true,
+    "subjectTrialStarted": false,
+    "verificationEnabled": false,
+    "version": "0.22.0"
+  },
+  "route": {
+    "architecturePattern": "not_required",
+    "coordinationPolicy": "not_required",
+    "dynamicArtifact": "terminal-receipt-and-reward-vector",
+    "frameworkRevision": "sha256:90e03a443bdf20344c3e51000387814f872df81fb245ecc2934badda28624139",
+    "routeDeltaRef": "item-04-benchflow-skillsbench-route-delta.r16.json",
+    "selectedMode": "single_task",
+    "swarmDecision": "no-swarm"
+  },
+  "selectedTask": {
+    "datasetRef": "benchflow/skillsbench@latest",
+    "taskChecksum": null,
+    "taskDeclaredAgentSeconds": null,
+    "taskDeclaredVerifierSeconds": null,
+    "taskName": null,
+    "taskPageDigest": null,
+    "taskRef": "benchflow/skillsbench/3d-scan-calc",
+    "taskWorkspaceDigest": "sha256:ab8ca13d97f409e7c4e17dbb8b027745f92fb36be6ea78bd8fe09f05fbb4c9e8"
+  },
+  "shardId": "population-shard-4",
+  "terminalDisposition": "provider_preflight_failed_no_subject_trial",
+  "timeouts": {
+    "agentMultiplier": 1.0,
+    "constraintObserved": false,
+    "effectiveSubjectSeconds": null,
+    "effectiveVerifierSeconds": null,
+    "verifierMultiplier": 1.0
+  }
+}

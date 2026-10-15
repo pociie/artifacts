@@ -1,0 +1,254 @@
+{
+  "kind": "sanitized-task-local-shared-environment-binding/v2",
+  "bindingId": "binding:book-pdf-analysis-environment:v2",
+  "status": "informational_candidate_with_validation_failure_and_holds",
+  "supersedes": {
+    "ref": "coordination-v3/shared-environment-binding-v1.json",
+    "sha256": "12c0588f148700803a390c781e92c8a47f1d739a05ef922457e343c86862f7cb",
+    "reason": "The visual owner handoff and independent project-context validation contribution arrived, and the read-only context review identified missing task-local role fields."
+  },
+  "baselineRoot": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21",
+  "baselineSemantics": "shared_read_reference_not_shared_write_surface",
+  "minimalityRule": "observed_and_necessary_only",
+  "evidenceClasses": [
+    "observed_project_fact",
+    "external_background",
+    "project_inference",
+    "unresolved"
+  ],
+  "participatingRoles": [
+    {
+      "roleRef": "agent-role:source-analysis-coordinator",
+      "objective": "Produce a source-bound understanding of the frozen Claude Code source snapshot and coordinate sanitized fan-in without changing source or canonical reusable architecture.",
+      "consumer": [
+        "agent-role:source-analysis-coordinator",
+        "agent-role:visual-pdf-spec-builder"
+      ],
+      "audience": "project reviewers and a later separately authorized target-artifact owner",
+      "projectRevision": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+      "targetArtifact": "coordination-v3/project-analysis-v1/PROJECT-ANALYSIS.md",
+      "evidenceClasses": ["observed_project_fact", "external_background", "project_inference", "unresolved"],
+      "selectedLenses": [
+        {
+          "id": "decisive_algorithm_flow",
+          "competencyQuestion": "Which state transitions and failure-recovery invariants determine a complete turn, effect execution, stream reduction, and session recovery?",
+          "exactEvidenceSurface": "coordination-v3/project-analysis-v1/algorithm-catalog.json",
+          "coverage": "12 source-anchored algorithm cards and 89 exact source references",
+          "impact": "Determines the explanation order and characterization-test priorities.",
+          "limitation": "Static source reading; no production runtime trace.",
+          "nextAction": "Use the catalog as candidate evidence only until independently reviewed."
+        },
+        {
+          "id": "module_boundary_and_coupling",
+          "competencyQuestion": "Which dependency clusters are observed, and what sequence reduces coupling without assuming directory names are module boundaries?",
+          "exactEvidenceSurface": "coordination-v3/project-analysis-v1/module-topology.json",
+          "coverage": "1,884 TS/TSX implementation files and resolved static import topology",
+          "impact": "Supports contract-first modularization instead of broad directory movement.",
+          "limitation": "Runtime-like edges are a syntax heuristic and unresolved imports are lower-bound observations.",
+          "nextAction": "Collect characterization fixtures and bounded runtime traces before extraction."
+        },
+        {
+          "id": "project_operation_and_change_control",
+          "competencyQuestion": "How should claims, work items, validation layers, and module changes be managed when the snapshot is incomplete and conventional tests are not observed?",
+          "exactEvidenceSurface": "coordination-v3/project-analysis-v1/project-operating-model.md",
+          "coverage": "source freeze, prior-work intake, evidence lifecycle, work-item contract, and validation hierarchy",
+          "impact": "Separates observations, hypotheses, and later execution authority.",
+          "limitation": "Proposed analysis operating model, not upstream project governance.",
+          "nextAction": "Select any executable phase through a separate owner and phase contract."
+        }
+      ],
+      "researchHandoff": {
+        "state": "not_required",
+        "reason": "The current source-analysis claims are bounded by local source evidence; no material external-background gap with an admitted result was selected."
+      },
+      "outputContract": "source-bound-project-analysis/v1",
+      "outputRef": "coordination-v3/project-analysis-v1/artifact-manifest.json",
+      "outputSha256": "49400762416b9570b9b9d5db07bbb75cdd19622e2c899dd189e030b3ede17742",
+      "validator": {
+        "ref": "coordination-v3/project-analysis-v1/validation-report.json",
+        "state": "coordinator_checks_pass_with_evidence_holds_independent_acceptance_pending"
+      },
+      "stopConditions": [
+        "source revision or tree changes",
+        "a material claim lacks an exact source reference",
+        "runtime evidence contradicts the static model",
+        "the coordinator write boundary changes"
+      ],
+      "writeBoundary": "coordination-v3/**",
+      "authorityEffect": "none"
+    },
+    {
+      "roleRef": "agent-role:visual-pdf-spec-builder",
+      "objective": "Express prerequisite explanation and semantic continuity without treating page count as a cap, inside existing visual-owned paths.",
+      "consumer": "agent-role:source-analysis-coordinator as fan-in owner",
+      "audience": "future technical-book readers and a separately authorized PDF owner",
+      "projectRevision": "1bf67e8ca1b9806dce130796bc772c1d9a01a4e2",
+      "targetArtifact": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/visual-pagination-continuity-contribution-manifest-v1.json",
+      "evidenceClasses": ["observed_project_fact", "external_background", "project_inference", "unresolved"],
+      "selectedLenses": [
+        {
+          "id": "prerequisite_placement",
+          "competencyQuestion": "Where must prerequisite context and worked examples appear so the reader can understand the next claim?",
+          "exactEvidenceSurface": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-flow-and-continuity-spec-v1.md",
+          "coverage": "dependency and placement guidance for explanation units",
+          "impact": "Prevents semantic compression caused by a fixed page budget.",
+          "limitation": "No admitted successor PDF render or reader study exists.",
+          "nextAction": "Hold actual application until a target PDF revision is separately admitted."
+        },
+        {
+          "id": "semantic_page_continuity",
+          "competencyQuestion": "How are fact, background, inference, why-it-matters, and unresolved state preserved across page breaks?",
+          "exactEvidenceSurface": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-pagination-extension-v1.json",
+          "coverage": "author-side continuity and omission criteria",
+          "impact": "Makes page expansion preferable to information loss.",
+          "limitation": "Independent artifact and reader validation has not occurred.",
+          "nextAction": "Require independent validation after a separately authorized render."
+        }
+      ],
+      "researchHandoff": {
+        "state": "not_required",
+        "reason": "This contribution refines page flow using already observed task-local material; it does not create or consume a new admitted external research result."
+      },
+      "outputContract": "visual-owner-contribution-manifest/v1",
+      "outputRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/visual-pagination-continuity-contribution-manifest-v1.json",
+      "outputSha256": "68267f5d22c98e042c726e6366415b2895979aa2433fea301a06f35349cd7000",
+      "validator": {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pagination-artifact-validation-candidate-v1.json",
+        "state": "author_side_candidate_not_independent"
+      },
+      "stopConditions": [
+        "a hard page limit would remove required meaning",
+        "a target PDF revision or owner is unresolved",
+        "the owner manifest digest changes",
+        "independent validation is mistaken for author-side checking"
+      ],
+      "writeBoundary": "existing_visual_owned_paths_only_coordination_v3_read_only",
+      "authorityEffect": "none"
+    },
+    {
+      "roleRef": "agent-role:project-context-enrichment-producer",
+      "objective": "Provide the already created reusable capability candidate and producer check evidence without writing the book bundle.",
+      "consumer": "agent-role:independent-project-context-enrichment-validator",
+      "audience": "candidate owner and coordinator only",
+      "projectRevision": "1bf67e8ca1b9806dce130796bc772c1d9a01a4e2",
+      "targetArtifact": ".collab/artifacts/project-context-enrichment-validation-2026-09-21/run-v1/source-freeze-manifest.json",
+      "evidenceClasses": ["observed_project_fact", "external_background", "project_inference", "unresolved"],
+      "selectedLenses": {
+        "state": "not_applicable",
+        "reason": "This role produced the generic reusable candidate; it did not apply consumer-specific lenses to the Claude Code analysis target."
+      },
+      "researchHandoff": {
+        "state": "not_required",
+        "reason": "No task-local material background gap or admitted research result was selected in this fan-in."
+      },
+      "outputContract": "frozen-project-context-enrichment-candidate-set",
+      "outputRef": ".collab/artifacts/project-context-enrichment-validation-2026-09-21/run-v1/source-freeze-manifest.json",
+      "outputSha256": "21273c5d9cb50e43482a84476114909df0d0c0f8f785f12c03a2536855311cb9",
+      "validator": {
+        "ref": ".collab/artifacts/project-context-enrichment-validation-2026-09-21/run-v1/contributions/independent-validator-report.json",
+        "sha256": "43a1eb6a24497c31ad2e81c1e91991e47f71aef24839e6570e1f660458f460b4",
+        "state": "completed_overall_fail_with_fitness_hold"
+      },
+      "stopConditions": [
+        "any frozen digest changes",
+        "a repair is attempted without a new owner-authorized operation",
+        "candidate evidence is treated as activation or acceptance"
+      ],
+      "writeBoundary": "existing_candidate_paths_only_book_bundle_forbidden",
+      "authorityEffect": "none"
+    },
+    {
+      "roleRef": "agent-role:independent-project-context-enrichment-validator",
+      "objective": "Independently validate the exact frozen reusable candidate and return one pass/fail/hold contribution.",
+      "consumer": "agent-role:source-analysis-coordinator",
+      "audience": "candidate owner and later acceptance owner",
+      "projectRevision": "1bf67e8ca1b9806dce130796bc772c1d9a01a4e2",
+      "targetArtifact": ".collab/artifacts/project-context-enrichment-validation-2026-09-21/run-v1/contributions/independent-validator-report.json",
+      "evidenceClasses": ["observed_project_fact", "external_background", "project_inference", "unresolved"],
+      "selectedLenses": {
+        "state": "not_applicable",
+        "reason": "The validator evaluated contract dimensions and reference minimality; it did not select explanatory lenses for a downstream artifact."
+      },
+      "researchHandoff": {
+        "state": "not_applicable",
+        "reason": "The Dispatch was manifest-bounded and external search was forbidden."
+      },
+      "outputContract": "project-context-enrichment-independent-validator-contribution/v1",
+      "outputRef": ".collab/artifacts/project-context-enrichment-validation-2026-09-21/run-v1/contributions/independent-validator-report.json",
+      "outputSha256": "43a1eb6a24497c31ad2e81c1e91991e47f71aef24839e6570e1f660458f460b4",
+      "validator": {
+        "state": "independent_contribution_not_self_acceptance",
+        "result": "7_pass_1_fail_1_hold"
+      },
+      "stopConditions": [
+        "frozen-source digest mismatch",
+        "candidate repair would be required",
+        "the single report write boundary would be exceeded",
+        "the result would be represented as acceptance or settlement"
+      ],
+      "resourceDisposition": "worker_done_acknowledged_and_resource_released",
+      "authorityEffect": "none"
+    },
+    {
+      "roleRef": "agent-role:session-context-integrator",
+      "objective": "Observe cross-session role, ref, digest, and state drift and report mismatches without writing artifacts.",
+      "consumer": "agent-role:source-analysis-coordinator",
+      "audience": "coordinator only",
+      "projectRevision": {
+        "state": "not_applicable",
+        "reason": "This role observes coordination state rather than one source revision."
+      },
+      "targetArtifact": "coordination-v3/shared-environment-binding-v1.json",
+      "selectedLenses": {
+        "state": "not_applicable",
+        "reason": "The role provides context drift observations, not project-analysis or artifact-writing judgments."
+      },
+      "evidenceClasses": {
+        "state": "not_applicable",
+        "reason": "The role does not classify project claims or issue validation judgments."
+      },
+      "researchHandoff": {
+        "state": "not_applicable",
+        "reason": "The role cannot start research or own results."
+      },
+      "outputContract": "message-only-context-contribution",
+      "validator": {
+        "state": "not_applicable",
+        "reason": "The role reports mismatch observations and is not an independent artifact validator."
+      },
+      "stopConditions": [
+        "an observation would require a write",
+        "a mismatch would require new work rather than a coordinator decision",
+        "a read-only finding would be treated as acceptance"
+      ],
+      "writeBoundary": null,
+      "authorityEffect": "none"
+    }
+  ],
+  "inactiveDependencies": [
+    {
+      "ownerRef": "artifacts/agents/agent-operation/agents/project-context-enrichment-curator.yaml",
+      "sha256": "50c0e9a2bbfcb0078cab926802291af6d2a9b27c538d2ba8ac0f1201e384de8e",
+      "activationState": "not_activated",
+      "reason": "The independent contribution failed observed-and-necessary reference minimality and repository fitness remains held."
+    }
+  ],
+  "currentFindings": [
+    "The frozen project-context-enrichment candidate passed seven dimensions, failed observed-and-necessary reference minimality, and holds on repository-wide fitness.",
+    "The visual pagination contribution is owner-produced candidate evidence; actual render and independent reader validation remain pending.",
+    "The source-analysis bundle is complete as a coordinator candidate and remains pending independent acceptance."
+  ],
+  "invalidation": [
+    "any referenced digest changes",
+    "a selected lens, consumer, audience, project revision, target artifact, or write boundary changes",
+    "a material background gap and admitted research result appear",
+    "a separately authorized repair, target writer, PDF validator, acceptance, or settlement record appears"
+  ],
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "promotion": "not_performed",
+  "integration": "not_performed",
+  "settlement": "not_performed",
+  "authorityEffect": "none"
+}

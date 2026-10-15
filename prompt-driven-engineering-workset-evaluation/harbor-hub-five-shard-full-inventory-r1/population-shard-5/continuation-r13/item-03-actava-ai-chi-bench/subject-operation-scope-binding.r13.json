@@ -1,0 +1,73 @@
+{
+  "authorityEffect": "none",
+  "blockers": [],
+  "effectivePrimaryMode": "single_task",
+  "excludedScopeKinds": ["ambient", "controller", "coverage"],
+  "kind": "subject-operation-scope-binding-decision/v1",
+  "reasonCodes": [
+    "non_subject_scopes_explicitly_excluded",
+    "selected_subject_topology_content_bound"
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-5:actava-ai/chi-bench:r13:execute-harbor-subject",
+  "routeDecisionSha256": "0233639c74e063aaa301b8056aeb398f53c03e96350a48b7807790c158224a69",
+  "scopeBindings": [
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:62bda4c9767d1120060860d76d98988afdd3e404b7dc30b981be2597a647a182",
+      "disposition": "coverage_stimulus_only",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-03-actava-ai-chi-bench/source-and-plan-binding.r13.json",
+      "scopeId": "coverage:population-shard-5:actava-ai/chi-bench:r13",
+      "scopeKind": "coverage",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:f3d61016dc00d7caaee857ba340e817ee91ac5503b7e09bbe2f3c7940dcfd2e7",
+      "disposition": "context_only",
+      "ref": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-5/working-state.json",
+      "scopeId": "ambient:population-shard-5:actava-ai/chi-bench:r13",
+      "scopeKind": "ambient",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:8f42e7b9950022196d7535ae24af747ff655f54726fde4671eb6886f19376505",
+      "disposition": "control_plane_only",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-03-actava-ai-chi-bench/claim.r13.json",
+      "scopeId": "controller:population-shard-5:actava-ai/chi-bench:r13",
+      "scopeKind": "controller",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": true,
+      "digest": "sha256:826e3cd4d99e0de2b6f8bfbbf47a4c5e4ff54ad5830983a78cc01be563e44bf1",
+      "disposition": "eligible_report_only",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-03-actava-ai-chi-bench/subject-topology-binding.r13.json",
+      "scopeId": "subject-scope:population-shard-5:actava-ai/chi-bench:r13",
+      "scopeKind": "subject",
+      "state": "selected"
+    }
+  ],
+  "scopedMode": "single_task",
+  "segmentMode": null,
+  "status": "ready",
+  "subjectOperation": {
+    "agentArchitectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmDigest": null,
+    "agentSwarmRef": null,
+    "bindingDigest": "sha256:826e3cd4d99e0de2b6f8bfbbf47a4c5e4ff54ad5830983a78cc01be563e44bf1",
+    "bindingRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-03-actava-ai-chi-bench/subject-topology-binding.r13.json",
+    "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "disposition": "eligible_report_only",
+    "scopeId": "subject-scope:population-shard-5:actava-ai/chi-bench:r13",
+    "workflowPatternDigest": "sha256:93bf91356072b399cd3684ea2d482c7fe3afe4ca083e8443e86978b2bdb5d7bd",
+    "workflowPatternId": "pipeline",
+    "workflowPatternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/pipeline/workflow-pattern.json"
+  },
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "topologyRequirementDecisionSha256": "e7c0f326a48d6fed70e7e21914ae876f5d3430be04ace138e5d4a875623c6a8d",
+  "topologySelectionDecisionSha256": "4a15f1b73cf2927e1d1706a3fdac9b7f1f74c939f65eea3621f726460135ec1a"
+}

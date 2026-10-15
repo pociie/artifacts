@@ -1,0 +1,173 @@
+{
+  "kind": "harbor-candidate-probe-projection/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "continuationId": "population-shard-2:continuation-r5",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r5",
+  "sourceBindingRef": "continuation-r5/source-and-plan-binding.json",
+  "resolutionDecisionDigest": "sha256:b1d84a88ae49f897ecdd383ee66b567a4742cf9770b9a2bf77c63cc79b4631e0",
+  "probeBudget": {
+    "declared": 3,
+    "consumed": 3,
+    "disposition": "exhausted_without_qualified_candidate"
+  },
+  "counts": {
+    "candidateRepresentativesDiscovered": 3,
+    "qualified": 0,
+    "executed": 0,
+    "evaluated": 0,
+    "held": 3,
+    "rejected": 0,
+    "settled": 3
+  },
+  "candidates": [
+    {
+      "probeId": "probe-01-ryanmarten-tb-test",
+      "datasetId": "ryanmarten/tb-test",
+      "planIdentityDigest": "sha256:492051d0ef4a11cfea6471d52c531e063e630e979e3d745d26ebc9c1abb5ad29",
+      "scope": "first-materialized-task-only; no dataset-wide hold inferred",
+      "taskId": "ryanmarten/tb-test-medical-claims-processing",
+      "taskDigest": "sha256:f4c468cd438a3c1490bc4a6bcc9be8554c2bbd33fd88b0a737c946e9bfc7d998",
+      "access": "qualified_public_download",
+      "license": "held_unobserved",
+      "platform": "held_amd64_image_on_arm64_host",
+      "network": "qualified_public_only",
+      "route": {
+        "status": "selected",
+        "mode": "single_task",
+        "decisionDigest": "sha256:e4ddedb10841e03d9673d97779640b183654422c3d12b0370dc03ccc7cfa1e10"
+      },
+      "reasoningEnvelope": {
+        "create": "sha256:438a3a4ce8b5f4bb3362fbc7259aa7d5e1b31de74b3de259522fe48b4e99240b",
+        "preExecution": "sha256:6dfe0e92e67c819bf7acdab1703708b9bfaba198e5c73752d95b6d4fbc06efc3"
+      },
+      "artifactReuse": "require_context_no_reusable_artifact",
+      "workflowPattern": "pipeline",
+      "topology": "architecture_only",
+      "architectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+      "swarm": "not_required",
+      "coordination": "hold_provider_curator_unqualified",
+      "otherGates": [
+        "credentials_require_inert_probe",
+        "cost_unqualified",
+        "verifier_not_run",
+        "model_unverified",
+        "effort_unverified",
+        "timeout_unverified"
+      ],
+      "disposition": "held_before_subject_execution",
+      "wakeCondition": "arm64 image or qualified emulation plus missing qualification receipts for license, credentials, cost, verifier, model, effort, and timeout"
+    },
+    {
+      "probeId": "probe-02-harbor-index",
+      "datasetId": "harbor-index/harbor-index",
+      "planIdentityDigest": "sha256:251b4a8c333d25ef724d98c673aa5c043e284a08900a40c1b48f2c537e056cbf",
+      "scope": "first-materialized-task-only; no dataset-wide hold inferred",
+      "taskId": "harbor-index/algotune-optimize-lti-sim",
+      "taskDigest": "sha256:9cd08f31583070c392d4c8f8d67867b40b9e217b36fb5f2340c294d8babf7b99",
+      "access": "qualified_public_download",
+      "license": "held_unobserved",
+      "platform": "held_amd64_image_on_arm64_host",
+      "network": "qualified_public_only",
+      "route": {
+        "status": "selected",
+        "mode": "single_task",
+        "decisionDigest": "sha256:c388bb0c1a679da1c301691c573ce3b2a439b59a3f893e59374dca39493372af"
+      },
+      "reasoningEnvelope": {
+        "create": "sha256:67244e4570b45acffb69d324e3a60698045aa2b15754d15b8404e6e1d52df5a4",
+        "preExecution": "sha256:96a3615c9915066ff68f248d47590fc8419e537c52e9b7bf244220d0432f2127"
+      },
+      "artifactReuse": "require_context_no_reusable_artifact",
+      "workflowPattern": "pipeline",
+      "topology": "architecture_only",
+      "architectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+      "swarm": "not_required",
+      "coordination": "hold_provider_curator_unqualified",
+      "otherGates": [
+        "credentials_require_inert_probe",
+        "cost_unqualified",
+        "verifier_not_run",
+        "model_unverified",
+        "effort_unverified",
+        "timeout_unverified"
+      ],
+      "disposition": "held_before_subject_execution",
+      "wakeCondition": "arm64 image or qualified emulation plus missing qualification receipts for license, credentials, cost, verifier, model, effort, and timeout"
+    },
+    {
+      "probeId": "probe-03-NovitaAI-tb21-file-recovery",
+      "datasetId": "NovitaAI/tb21-file-recovery",
+      "planIdentityDigest": "sha256:a8d0e8edc8cde732d6310c91bb04ca601b31e94881fda04cc6863bbfc3af4fae",
+      "scope": "first-materialized-task-only; no dataset-wide hold inferred",
+      "taskId": "terminal-bench/db-wal-recovery",
+      "taskDigest": "sha256:1cdc2c615e259bc10265efbe71b518332070c1c002e226566399e9788f18d0aa",
+      "access": "qualified_public_download",
+      "license": "held_unobserved",
+      "platform": "held_amd64_image_on_arm64_host",
+      "network": "qualified_public_only",
+      "route": {
+        "status": "selected",
+        "mode": "single_task",
+        "decisionDigest": "sha256:31ad67142a60109aa16ab6500a3ba07a91aee5d3bdb2a162e4e02febd9258576"
+      },
+      "reasoningEnvelope": {
+        "create": "sha256:eb70fecb9ce638e62c9a4b4debe0701884f609278bf659db51d6c0cd3037c4ed",
+        "preExecution": "sha256:6b2ea6713ec158fb707d31cd9a16b99284cd6a7dcea03c869d320ad80e8fdd14"
+      },
+      "artifactReuse": "require_context_no_reusable_artifact",
+      "workflowPattern": "pipeline",
+      "topology": "architecture_only",
+      "architectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+      "swarm": "not_required",
+      "coordination": "hold_provider_curator_unqualified",
+      "otherGates": [
+        "credentials_require_inert_probe",
+        "cost_unqualified",
+        "verifier_not_run",
+        "model_unverified",
+        "effort_unverified",
+        "timeout_unverified"
+      ],
+      "disposition": "held_before_subject_execution",
+      "wakeCondition": "arm64 image or qualified emulation plus missing qualification receipts for license, credentials, cost, verifier, model, effort, and timeout"
+    }
+  ],
+  "qualityInspection": {
+    "currentStructure": "adequate",
+    "communication": "adequate",
+    "policy": "adequate",
+    "algorithm": "adequate",
+    "dynamicArtifactRepresentation": "not_needed",
+    "dynamicCandidates": []
+  },
+  "rewardVector": {
+    "requirementUnderstandingEnvironmentOperability": { "state": "not_scored", "value": null },
+    "sixModeRoutingTransitionReasoningControl": { "state": "diagnostic_only", "value": null },
+    "workflowArchitectureSwarmCoordination": { "state": "diagnostic_only", "value": null },
+    "artifactDiscoveryReuseCreateUpdateSplitMergeRejectionProvenance": {
+      "state": "diagnostic_only",
+      "value": null
+    },
+    "reusableAndDynamicComposition": { "state": "diagnostic_only", "value": null },
+    "evidenceOutcomeEfficiencySettlement": { "state": "partial_observed", "value": null },
+    "representationAlgorithmPolicyContextProviderGaps": { "state": "observed", "value": null }
+  },
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "rawTaskContentProjected": false,
+    "privateReasoningProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "sourceRefs": [
+    "continuation-r5/source-and-plan-binding.json",
+    "continuation-r5/source-drift-observation.json",
+    "continuation-r5/working-memory-binding.json",
+    "artifacts/loop-architecture/components/execution-routing/pre-route-workflow-resolution.md",
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/skill/operate-engineering-workset-simulation/SKILL.md"
+  ],
+  "createdAt": "2026-08-28T13:12:08Z",
+  "digest": "sha256:39b93bd95ba4c6b388809a6f02b4f7fc2e1a6c0826ea8e8b0f505447ea48995f"
+}

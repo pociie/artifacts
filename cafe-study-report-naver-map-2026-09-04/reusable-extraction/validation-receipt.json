@@ -1,0 +1,113 @@
+{
+  "kind": "task-artifact-validation-receipt/v1",
+  "schemaVersion": 1,
+  "status": "complete",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "validatedAt": "2026-09-04",
+  "inventorySnapshotDigest": "5d19a6069fe964f81fdc944ccdaee77ace3353ba033a264df0d51783ea2656bd",
+  "checks": [
+    {
+      "id": "reusable_operation_request",
+      "commandClass": "reusable-artifact-capability-lifecycle request checker",
+      "result": "pass",
+      "findingCount": 0
+    },
+    {
+      "id": "reusable_selection_report",
+      "commandClass": "reusable-artifact-capability-lifecycle report checker",
+      "result": "pass",
+      "findingCount": 0
+    },
+    {
+      "id": "responsibility_card",
+      "commandClass": "reusable-artifact inventory responsibility-card checker",
+      "result": "pass",
+      "findingCount": 0
+    },
+    {
+      "id": "reusable_assessment",
+      "commandClass": "reusable-artifact assessment checker",
+      "result": "pass",
+      "findingCount": 0,
+      "disposition": "require_context"
+    },
+    {
+      "id": "capability_gap",
+      "commandClass": "reusable-artifact capability-gap checker",
+      "result": "pass",
+      "findingCount": 0,
+      "residualGapProven": false,
+      "disposition": "require_context"
+    },
+    {
+      "id": "cafe_report",
+      "commandClass": "task report deterministic validator",
+      "result": "pass",
+      "findingCount": 0,
+      "observations": {
+        "candidateCount": 14,
+        "rawImageCount": 107,
+        "selectedVenueCount": 10,
+        "acceptedImageCount": 53,
+        "excludedVenueCount": 4,
+        "reviewCount": 0,
+        "sourceHosts": ["search.pstatic.net"],
+        "htmlBytes": 93567
+      }
+    },
+    {
+      "id": "json_parse",
+      "commandClass": "all reusable-extraction JSON files",
+      "result": "pass",
+      "findingCount": 0
+    }
+  ],
+  "subjectDigests": [
+    {
+      "ref": "../visual-rubric.json",
+      "digest": "8ee2bccb1e3222b64d8c3e26526159bf6f77597d848217ef0599b1c42ce827dd"
+    },
+    {
+      "ref": "../evaluation.json",
+      "digest": "c3a3c0151f155c903bb109a293348ec259988827eafd51392f59578b2197842f"
+    },
+    {
+      "ref": "../optimized-agent-architecture.json",
+      "digest": "8b2c1612fca198d9a1a741a9c666811e8db477412441d5d7bbb1a650ea3566cb"
+    },
+    {
+      "ref": "../naver-map-cafe-study-report.html",
+      "digest": "55d91088555b66f2f78ff36d44a2ea78515238d914648401ffa850c2ad4c68e5"
+    },
+    {
+      "ref": "visual-evidence-rubric-definition.candidate.json",
+      "digest": "09e93071356acb636ed21793cc83b8ab15945cd619212b253ca8952815a919b7"
+    },
+    {
+      "ref": "visual-evidence-rubric.responsibility-card.json",
+      "digest": "0581f43553b9edaddb0667bf4c18eadb5e3caae707365d2fafd9c026a875ff97"
+    },
+    {
+      "ref": "visual-evidence-rubric.assessment.json",
+      "digest": "7f0946f5f635093a7df3057fe89b0e315f4af76da92cce46e3526a0c569c6881"
+    },
+    {
+      "ref": "visual-evidence-rubric.capability-gap.json",
+      "digest": "4b0f6c11284b3088839180946776d78ee1240569cfbffa6ee9e59b1eb3241af9"
+    },
+    {
+      "ref": "artifact-disposition-matrix.json",
+      "digest": "6cc398bf022df88b39a6eea4d3a8916da273bb17bb48cb9f20bb6f44e77d72dd"
+    },
+    {
+      "ref": "extraction-report.md",
+      "digest": "4e353ff27c1b5573dec902caf767eb44066c1849219e8ea03ae7ab6834bb9cd1"
+    }
+  ],
+  "limitations": [
+    "No source-managed artifacts were promoted or changed.",
+    "No repository-wide fitness run was required because changes are task-local generated artifacts.",
+    "Visual semantic correctness evaluator agreement and field outcome validity remain outside deterministic validation."
+  ]
+}

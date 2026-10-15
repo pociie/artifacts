@@ -1,0 +1,58 @@
+{
+  "kind": "reusable-artifact-agent-operation-boundary/v1",
+  "revision": "2026-09-14.2",
+  "status": "bound",
+  "authorityEffect": "none",
+  "subjectRef": "agent-subject:finebridge-digital-service-planner-answer-projection-fixer",
+  "nativeOwnerRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+  "requestedOutcome": "Separate the applicant-facing self-introduction answer projection from the job-application review loop's report mechanics, and revise the current Finebridge Finance output so the applicant's experience, judgment, and fit remain legible.",
+  "successEvidence": [
+    "the reusable loop names a separate application-answer projection boundary",
+    "the current runtime contains a clean application-ready projection with both complete candidate sets",
+    "the projection has no loop names, workflow bookkeeping, scores, validation receipts, interview notes, confirmation requests, file references, or process commentary",
+    "every projected answer body is byte-identical in meaning and retains the request-bound character counts",
+    "the review report remains separate and its deterministic and publication checks still pass"
+  ],
+  "nonGoals": [
+    "changing applicant facts, values, answer claims, or character limits without evidence",
+    "removing review guidance from the separate review report or runtime records",
+    "submitting the application, accepting a candidate, or inferring a hiring outcome",
+    "adding company facts beyond the user-provided posting",
+    "modifying unrelated reusable artifacts or worktree changes"
+  ],
+  "boundedDiscoverySurface": {
+    "nativeArtifact": "artifacts/agent-loop/document/job-application-report-production",
+    "runtimeBundle": ".collab/artifacts/job-application-2026-10-finebridge-digital-service-planner",
+    "selectedSourceMembers": [
+      "loop.yaml",
+      "contract.md",
+      "job-application-report-production-governance-structure.md",
+      "policy/job-application-report-production.policy.json",
+      "requirements/job-application-report-production.requirement.json",
+      "skill/job-application-report-loop-operation/SKILL.md"
+    ],
+    "applicantEvidence": "existing runtime request/result only",
+    "maximumCandidateCount": 2,
+    "maximumRevisionPasses": 1
+  },
+  "validation": [
+    "native request/result checker",
+    "native package tests and strict package check",
+    "answer-projection metadata boundary and source-to-projection parity checks",
+    "HTML/TXT searchable text, privacy, visible-source, and media checks",
+    "separate semantic review of the unchanged answer content"
+  ],
+  "materialChangeSignals": [
+    "question, character limit, applicant evidence, project evidence, or answer text changes",
+    "application-ready projection includes any review-only or workflow term",
+    "review-report and application-answer artifacts are no longer separate",
+    "the requested effect expands beyond the selected loop source and runtime bundle"
+  ],
+  "stopConditions": [
+    "a question or character rule is missing",
+    "the clean projection requires an unsupported applicant claim",
+    "the source-to-projection answer parity check fails",
+    "the same boundary validation failure repeats without a changed fingerprint",
+    "the change would require external submission, identity publication, or unrelated source edits"
+  ]
+}

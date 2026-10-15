@@ -1,0 +1,91 @@
+{
+  "kind": "six-mode-route-decision/v1",
+  "requestRevision": "coremotion-smart-factory-set3.1",
+  "status": "selected",
+  "selectedMode": "loop",
+  "continuityDecision": {
+    "requestRelation": "new_objective",
+    "objectiveRelation": "new",
+    "historyCoverage": "bounded-current-input",
+    "sessionBoundary": "same_session",
+    "priorPrimaryMode": null,
+    "outerObligationState": "new",
+    "priorCompletionEvidence": "not_applicable",
+    "projectionRef": "projection:coremotion-smart-factory-set3",
+    "executionSurface": "local_coordinator_only",
+    "candidateMode": "loop",
+    "effectivePrimaryMode": "loop",
+    "segmentMode": null,
+    "disposition": "select",
+    "outerObligationAction": "open",
+    "modeCompositionRequired": true
+  },
+  "architectureSelection": {
+    "requirement": "eligible",
+    "selectionStatus": "native-loop-selected",
+    "targetScope": "effective_primary",
+    "effectivePrimaryMode": "loop",
+    "structuralSignals": [
+      "bounded multi-stage drafting and validation",
+      "one material contribution"
+    ],
+    "segmentMode": null,
+    "segmentRequirement": null,
+    "segmentSelectionStatus": null,
+    "segmentStructuralSignals": [],
+    "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json",
+    "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+    "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+    "patternSelectedByRouting": false
+  },
+  "eligibleModes": [
+    "loop"
+  ],
+  "rejectedModes": [
+    {
+      "mode": "communication",
+      "reasonCodes": [
+        "effect_not_none",
+        "output_not_response",
+        "temporal_not_immediate"
+      ]
+    },
+    {
+      "mode": "investigation",
+      "reasonCodes": [
+        "effect_not_read_only",
+        "output_not_information_finding",
+        "mutation_required"
+      ]
+    },
+    {
+      "mode": "single_task",
+      "reasonCodes": [
+        "temporal_not_single_boundary"
+      ]
+    },
+    {
+      "mode": "orchestration",
+      "reasonCodes": [
+        "contribution_not_multi_owner"
+      ]
+    },
+    {
+      "mode": "session_control",
+      "reasonCodes": [
+        "session_revision_not_explicit",
+        "effect_not_session_control"
+      ]
+    }
+  ],
+  "blockers": [],
+  "missingFacts": [],
+  "conflictingFacts": [],
+  "reassessmentTriggers": [
+    "request scope changes",
+    "evidence or publication boundary changes",
+    "effect or authority changes",
+    "revision budget changes"
+  ],
+  "authorityEffect": "none"
+}

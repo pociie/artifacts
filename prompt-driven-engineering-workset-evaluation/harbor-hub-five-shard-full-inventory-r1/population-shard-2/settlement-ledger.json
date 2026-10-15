@@ -1,0 +1,169 @@
+{
+  "kind": "harbor-shard-settlement-ledger/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "shardIndex": 1,
+  "projectedAt": "2026-08-28T12:47:30Z",
+  "settlementState": "complete",
+  "activeProviderResourceCount": 0,
+  "resourceCount": 20,
+  "reconciliation": {
+    "hubPages": "settled_observed_and_released",
+    "ownedDetailPages": "settled_metadata_observed_and_released",
+    "taskMaterialization": "settled_private_runtime_retained",
+    "queueClaims": "settled_none_created_after_hold",
+    "providerJobs": "settled_none_created_after_hold",
+    "taskWorkspaces": "settled_none_created_after_hold",
+    "containers": "settled_none_created_after_hold",
+    "volumes": "settled_none_created_after_hold",
+    "authMaterial": "settled_not_materialized",
+    "temporaryFiles": "settled_none_created_after_hold",
+    "verifierState": "settled_none_created_after_hold"
+  },
+  "resources": [
+    {
+      "resourceClass": "hub-page-01",
+      "resourceRefDigest": "sha256:bc919f6089c59056ca442914258456e8a748049c439c9a0999220408ce0e00f9",
+      "disposition": "observed_and_released",
+      "state": "settled",
+      "evidenceRefs": ["inventory-freeze.json"]
+    },
+    {
+      "resourceClass": "hub-page-02",
+      "resourceRefDigest": "sha256:9c0836c83bbfad199e91bafbb29f95d018ed8716a1d910b182a2d48d1eb4619f",
+      "disposition": "observed_and_released",
+      "state": "settled",
+      "evidenceRefs": ["inventory-freeze.json"]
+    },
+    {
+      "resourceClass": "hub-page-03",
+      "resourceRefDigest": "sha256:3740422afb353bd8061f056ebac3c84e6ed51588ebc62c8bca3b9dc202b59d39",
+      "disposition": "observed_and_released",
+      "state": "settled",
+      "evidenceRefs": ["inventory-freeze.json"]
+    },
+    {
+      "resourceClass": "hub-page-04",
+      "resourceRefDigest": "sha256:c01e2d707ee868f883e07df13769a50257fe65977b81f354a105f8f7c298bac1",
+      "disposition": "observed_and_released",
+      "state": "settled",
+      "evidenceRefs": ["inventory-freeze.json"]
+    },
+    {
+      "resourceClass": "hub-page-05",
+      "resourceRefDigest": "sha256:425ff5213b664ec741e8a823d21e9a2efbae3d52706092c70048b1a9dc6eef2a",
+      "disposition": "observed_and_released",
+      "state": "settled",
+      "evidenceRefs": ["inventory-freeze.json"]
+    },
+    {
+      "resourceClass": "hub-page-06",
+      "resourceRefDigest": "sha256:3e6499bb66323f4205ac977207f6231f0281574a80399504faea6ffd490acc5b",
+      "disposition": "observed_and_released",
+      "state": "settled",
+      "evidenceRefs": ["inventory-freeze.json"]
+    },
+    {
+      "resourceClass": "hub-page-07",
+      "resourceRefDigest": "sha256:fb3ecb5d6caa85556164d1e171013e72ca55bf44bdb02762e1259340fbae996e",
+      "disposition": "observed_and_released",
+      "state": "settled",
+      "evidenceRefs": ["inventory-freeze.json"]
+    },
+    {
+      "resourceClass": "hub-page-08",
+      "resourceRefDigest": "sha256:796f59394231502f346408b89c8efd9907067e7e14ac03d7dc671a0c703bf8a4",
+      "disposition": "observed_and_released",
+      "state": "settled",
+      "evidenceRefs": ["inventory-freeze.json"]
+    },
+    {
+      "resourceClass": "hub-page-09",
+      "resourceRefDigest": "sha256:ec9e2783c410186184540fabe17df6f63da5aa077318f03f89a8052d03689a3c",
+      "disposition": "observed_and_released",
+      "state": "settled",
+      "evidenceRefs": ["inventory-freeze.json"]
+    },
+    {
+      "resourceClass": "hub-page-10",
+      "resourceRefDigest": "sha256:f0446b7d2b5d928aef19be2572f3eb2053b806281e46776cc75769472b2fc55d",
+      "disposition": "observed_and_released",
+      "state": "settled",
+      "evidenceRefs": ["inventory-freeze.json"]
+    },
+    {
+      "resourceClass": "owned-detail-pages",
+      "resourceRefDigest": "sha256:5c92ffd3bfe98976c524da98a86cb32cef7e07d7c6ba253c49b5fe02a96213c6",
+      "disposition": "metadata_observed_and_released",
+      "state": "settled",
+      "evidenceRefs": ["detail-page-observations.json"]
+    },
+    {
+      "resourceClass": "task-materialization",
+      "resourceRefDigest": "sha256:0ab935fc3f07b97b7e4c7f54a7524ac47927060fd554b35c562575c283b7367e",
+      "disposition": "retained_private_runtime_only",
+      "state": "settled",
+      "evidenceRefs": ["simulation-evidence.json"]
+    },
+    {
+      "resourceClass": "queue-claims",
+      "resourceRefDigest": "sha256:7b24acd8d913b5c6fbcb5753ca8d2cf8c329b4fbdc1861744c939242c4689adb",
+      "disposition": "not_created_after_provider_hold",
+      "state": "settled",
+      "evidenceRefs": ["simulation-evidence.json"]
+    },
+    {
+      "resourceClass": "provider-jobs",
+      "resourceRefDigest": "sha256:6c53781382edcc6415d9391772157736404534b8e5c9a9fbafc1fc536dce646b",
+      "disposition": "not_created_after_provider_hold",
+      "state": "settled",
+      "evidenceRefs": ["provider-observation.json"]
+    },
+    {
+      "resourceClass": "task-workspaces",
+      "resourceRefDigest": "sha256:7da260b35c2417fc423da2ac5b33a7b7267506e2a2b3444ec2589cae4ab0b70d",
+      "disposition": "not_created_after_provider_hold",
+      "state": "settled",
+      "evidenceRefs": ["environment-platform-observation.json"]
+    },
+    {
+      "resourceClass": "containers",
+      "resourceRefDigest": "sha256:9b587d9237ea533d38233d7de05c6b60d9de91c1d88d3e6c8cff528387c462b8",
+      "disposition": "not_created_after_provider_hold",
+      "state": "settled",
+      "evidenceRefs": ["environment-platform-observation.json"]
+    },
+    {
+      "resourceClass": "volumes",
+      "resourceRefDigest": "sha256:83b6b85d557327c47a13bf119a2e87a54f366a2757c79546eb3927b2cbce8867",
+      "disposition": "not_created_after_provider_hold",
+      "state": "settled",
+      "evidenceRefs": ["environment-platform-observation.json"]
+    },
+    {
+      "resourceClass": "auth-material",
+      "resourceRefDigest": "sha256:5fc21de9bd764c3e23de61ff2bc0f1227a67ae30a455731787e8bf0019c54190",
+      "disposition": "not_materialized",
+      "state": "settled",
+      "evidenceRefs": ["provider-observation.json"]
+    },
+    {
+      "resourceClass": "temporary-files",
+      "resourceRefDigest": "sha256:7911757bb44e39e5876948bcca5597308dadf5b9cadd541390a55271725467db",
+      "disposition": "not_created_after_provider_hold",
+      "state": "settled",
+      "evidenceRefs": ["provider-observation.json"]
+    },
+    {
+      "resourceClass": "verifier-state",
+      "resourceRefDigest": "sha256:1c5e967c89e9d7e10becfc6866c26d1dc9ddde00273c3040267ac3625c1df3bb",
+      "disposition": "not_created_after_provider_hold",
+      "state": "settled",
+      "evidenceRefs": ["environment-platform-observation.json"]
+    }
+  ],
+  "terminalRewardRoundState": "not_scored_no_executed_candidate",
+  "sourceMemoryRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/settlement-ledger.json",
+  "digest": "sha256:75ae9ac3a235be06a582103adbf768adce02f2c6186022632ab9df7f912c43b3"
+}

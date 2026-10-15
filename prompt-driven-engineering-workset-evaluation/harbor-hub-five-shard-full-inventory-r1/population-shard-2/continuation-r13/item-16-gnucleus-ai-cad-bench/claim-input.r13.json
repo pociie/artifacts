@@ -1,0 +1,83 @@
+{
+  "activeClaims": [],
+  "authorityEffect": "none",
+  "digest": "sha256:978de08eae61ff58d954da48f959747e4d8128d2c064c68c00b44f4efbaf6f8e",
+  "eventCursor": 17,
+  "eventHeadSha256": "sha256:eb2c52ea58fe0d08f8d185a4bef72a99581251ebd8050ba4ddf6b093b34dd3d9",
+  "kind": "atomic-lane-claim-admission-input/v3",
+  "maxConcurrency": 1,
+  "proposals": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 17,
+      "expectedEventHeadSha256": "eb2c52ea58fe0d08f8d185a4bef72a99581251ebd8050ba4ddf6b093b34dd3d9",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:217dd034a067329614307002c8e8b676fee742730669d5fe017c3ef29f05cbea"
+      },
+      "identityDigest": "sha256:ef6b97099bba761f75494068da7e25b4a3fdf03460507837ef33b090c36d7aad",
+      "itemId": "gnucleus-ai/cad-bench",
+      "laneId": "population-shard-2",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-2:gnucleus-ai/cad-bench:r13",
+      "sequence": 16,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-2:r13-controller"
+    }
+  ],
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-2",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-16-gnucleus-ai-cad-bench/queue-reconciliation-before-claim.r13.json",
+  "resolverDecision": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "gnucleus-ai/cad-bench",
+        "laneId": "population-shard-2",
+        "proposalId": "proposal:population-shard-2:gnucleus-ai/cad-bench:r13",
+        "workerId": "worker:harbor-population-shard-2:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 17,
+      "eventHeadSha256": "eb2c52ea58fe0d08f8d185a4bef72a99581251ebd8050ba4ddf6b093b34dd3d9",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 17,
+    "eventHeadSha256": "eb2c52ea58fe0d08f8d185a4bef72a99581251ebd8050ba4ddf6b093b34dd3d9",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-2",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "resolverInputDigest": "sha256:d655b9536ceda52787272c553bb414b97a741da0a851671b38018646a6ef3ecc",
+  "schemaVersion": 3,
+  "terminalReceiptRefs": [
+    "population-shard-2/route-and-gate-evidence.json",
+    "continuation-r5/simulation-evidence-probe-01.json",
+    "continuation-r5/simulation-evidence-probe-02.json",
+    "continuation-r5/simulation-evidence-probe-03.json",
+    "continuation-r9/terminal-item-receipt.r9.json",
+    "continuation-r12/terminal-item-receipt.r12.json",
+    "population-shard-2/continuation-r13/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-05-algotune-algotune/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-06-bencalvert04-programbench/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-07-blobfishai-litigation/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-08-blobfishai-salesbench-100/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-09-cais-swebenchpro/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-10-cmu-refav/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-11-cohere-terminal_bench_aai/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-13-evoeval-evoeval/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-14-featurebench-featurebench-lite/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-15-gabeorlanski-slopcodebench/terminal-item-receipt.r13.json"
+  ]
+}

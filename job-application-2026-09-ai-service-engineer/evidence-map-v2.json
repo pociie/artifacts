@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "self-introduction-evidence-map/v2",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-07",
+  "purpose": "Separate official role facts, repository mechanisms, user context, personal contribution, observed results, bounded interpretations, and future intentions before writing first-person claims.",
+  "legend": {
+    "F": "direct official or repository fact",
+    "U": "user-provided context",
+    "P": "personal contribution; applicant confirmation required",
+    "O": "observed run/result; artifact required",
+    "I": "bounded interpretation",
+    "N": "future intention"
+  },
+  "entries": [
+    {
+      "id": "role-scope",
+      "class": "F",
+      "claim": "The AI service engineer posting covers AI service API/backend, data pipeline, project participation, platform operation/improvement, service discovery/validation, tuning, and quality verification.",
+      "source": "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007",
+      "safeWording": "AI 서비스의 가치는 모델 호출뿐 아니라 API·데이터·운영·품질 검증이 연결될 때 완성된다고 보았습니다.",
+      "avoid": "이 직무가 모델 학습·파인튜닝·GPU 연구 중심이라고 재정의하기"
+    },
+    {
+      "id": "company-context",
+      "class": "F",
+      "claim": "Lotte Innovate presents ICT platform/solution and consulting work across multiple industries using AI, big data, IoT, cloud, and related technologies.",
+      "source": "https://recruit.lotte.co.kr/companylife/affiliate/detail?compcd=30007",
+      "safeWording": "다양한 산업의 업무 요구를 디지털 플랫폼과 서비스로 전환하는 관점에서 기여하겠습니다.",
+      "avoid": "특정 계열사 고객·프로젝트·성과를 본인 경험처럼 쓰기"
+    },
+    {
+      "id": "hr-values",
+      "class": "F",
+      "claim": "Official HR material emphasizes challenge, continuous skill growth, and collaboration/win-win.",
+      "source": "https://recruit.lotte.co.kr/about/hrsystem",
+      "safeWording": "도전·성장·협력을 추상어로 선언하지 않고 작은 검증, 학습, 합의 행동으로 보여주기",
+      "avoid": "인재상 단어를 나열하고 경험과 연결하지 않기"
+    },
+    {
+      "id": "repo-scale",
+      "class": "F",
+      "claim": "The root package manifest declares 28 npm workspaces; the repository includes component domains, agent runtime, web, infrastructure, MCP, governance, and E2E surfaces.",
+      "source": "/Users/judangs/project/personal/orca/collab-mono/package.json and docs/architecture/project-structure.md",
+      "safeWording": "28개 workspace를 포함한 TypeScript 모노레포에서 여러 도메인·웹·인프라·E2E 경계를 다루는 프로젝트",
+      "avoid": "28개 서비스, 28개 팀, 사용자 수, 트래픽, 운영 규모로 확대 해석하기"
+    },
+    {
+      "id": "layered-boundary",
+      "class": "F+I",
+      "claim": "Source structure and operating model define domain/application/adapters/composition dependency direction; this boundary is intended to reduce provider/transport coupling.",
+      "source": "docs/architecture/module-operating-model.md; apps/components/core-domain/agent-runtime/README.md; conversation/chat-gateway/reporting READMEs",
+      "safeWording": "업무 규칙은 핵심 계층에 두고 전송·저장·외부 SDK 변화는 어댑터와 조립 계층에서 흡수하도록 설계했습니다.",
+      "avoid": "경계가 모든 변경·장애를 예방한다고 보장하기"
+    },
+    {
+      "id": "chat-gateway",
+      "class": "F",
+      "claim": "Chat Gateway provides bounded inbound surfaces including Socket.IO/WebSocket and developer-ready smoke/health behavior; source includes authentication and event authorization paths.",
+      "source": "apps/components/generic-sub-domain/chat-gateway/README.md and adapters/inbound/websocket/chat.gateway.ts",
+      "safeWording": "양방향 요청을 전달하는 게이트웨이에서 인증·이벤트 권한·취소·상태 이벤트를 고려했습니다.",
+      "avoid": "개발용 loopback smoke를 production latency/reliability or provider integration proof로 쓰기"
+    },
+    {
+      "id": "agent-runtime",
+      "class": "F+I",
+      "claim": "Agent Runtime has conditional driver selection across provider/host surfaces; OpenAI Agents, Strands, and local CLI are alternative execution surfaces rather than necessarily simultaneous runtime dependencies.",
+      "source": "apps/components/core-domain/agent-runtime/{README.md, application/ports/outbound/agent-runtime-driver.ts, adapters/outbound/model-execution/agent-runtime-driver-factory.ts}",
+      "safeWording": "서로 다른 실행 표면을 선택하는 경계와 provider readiness 조건을 두어 교체 가능성을 관리했습니다.",
+      "avoid": "모든 SDK·CLI·MCP를 동시에 사용했다고 쓰기, 모델 학습/품질 성과를 주장하기"
+    },
+    {
+      "id": "mcp",
+      "class": "F+I",
+      "claim": "The MCP server is a thin inbound/tool adapter that reuses service APIs and carries prompt/reply/approval flows; it is not itself a model executor.",
+      "source": "apps/agent/collab-agent-mcp/README.md and src/tools/chat-tools.ts",
+      "safeWording": "MCP를 외부 에이전트가 기존 서비스 기능에 접근하는 도구 접점으로 분리했습니다.",
+      "avoid": "MCP를 모델·추론 엔진·학습 기술로 부르기"
+    },
+    {
+      "id": "reporting",
+      "class": "F",
+      "claim": "Reporting exposes separate HTTP/gRPC and event-sourced PostgreSQL/Prisma persistence/readiness/authorization surfaces; source search found no direct Chat Gateway package dependency on Reporting.",
+      "source": "apps/components/generic-sub-domain/reporting/README.md and adapters/inbound/grpc/report-grpc-adapter.ts",
+      "safeWording": "실행 trace와 리포팅의 근거·이력 책임을 분리해 각 경계의 입력과 권한을 명확히 했습니다.",
+      "avoid": "사용자 요청이 Chat Gateway에서 Reporting까지 직접 동기식으로 이어진다고 단정하기"
+    },
+    {
+      "id": "dapr",
+      "class": "F+I",
+      "claim": "Dapr profiles and invocation code support bounded local service invocation/runtime composition and health checks.",
+      "source": "apps/infra/dapr and provenance/invocation implementations",
+      "safeWording": "서비스 간 호출과 로컬 실행 구성을 분리해 환경별 조립 책임을 관리했습니다.",
+      "avoid": "Dapr 존재만으로 ETL/data pipeline, Kubernetes, cloud-scale operation을 주장하기"
+    },
+    {
+      "id": "quality-controls",
+      "class": "F",
+      "claim": "The repository defines package typecheck/test/build/lint, E2E, health/readiness, smoke, Woodpecker CI, fitness, and governance checks.",
+      "source": "root package.json, e2e/README.md, .woodpecker/*.yml, governance fitness entrypoints",
+      "safeWording": "변경·통합·준비 상태를 확인하는 다층 검증 기준을 구조에 포함했습니다.",
+      "avoid": "현재 CI가 모두 통과했거나 실제 운영 장애를 해결했다고 쓰기 without dated run evidence"
+    },
+    {
+      "id": "ownership",
+      "class": "U/P",
+      "claim": "The user identifies pociie/collab-mono as a current project; repository source alone cannot prove authorship, leadership, personal implementation, or personal learning.",
+      "source": "user request plus repository; final confirmation required",
+      "safeWording": "본인이 실제로 맡은 모듈·결정·변경 파일을 확인한 뒤 ‘제가 설계/구현했습니다’로 확정하기",
+      "avoid": "저장소의 존재·커밋·README만으로 모든 모듈의 개인 기여를 확정하기"
+    },
+    {
+      "id": "outcomes",
+      "class": "O/N",
+      "claim": "No user-provided production metric, dated test result, customer outcome, or incident artifact was supplied in the current context.",
+      "source": "current task context and inspected repository",
+      "safeWording": "운영 지표·고객 결과는 확인 전까지 미래 계획 또는 구조가 제공하는 관찰 가능성으로 표현하기",
+      "avoid": "성능 향상, 비용 절감, 사용자 수, 무중단, 품질 개선을 수치 없이 과거 성과처럼 쓰기"
+    }
+  ],
+  "sentenceReviewProtocol": [
+    "문장에 문제/업무 맥락 명사를 하나 둔다.",
+    "기술명은 반드시 해결한 제약과 producer→consumer 흐름의 인과 동사와 함께 둔다.",
+    "실패·품질 신호를 하나 둔다: auth, readiness, cancellation, trace, validation, recovery 중 확인 가능한 것.",
+    "과거 사실(F/P/O)과 미래 계획(N)을 시제로 분리한다.",
+    "개인 기여(P)는 변경한 파일·결정·대안·검증 방법 중 하나를 추가로 확인한다.",
+    "한 문단에서 기술 이름이 세 개 이상 이어지면 기술 나열로 분류하고, 문제-메커니즘-영향 문장으로 재작성한다."
+  ],
+  "sources": {
+    "job": "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007",
+    "company": "https://recruit.lotte.co.kr/companylife/affiliate/detail?compcd=30007",
+    "hr": "https://recruit.lotte.co.kr/about/hrsystem",
+    "repo": "https://github.com/pociie/collab-mono"
+  }
+}

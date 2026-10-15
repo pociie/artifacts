@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "self-introduction-render-validation/v4",
+  "status": "passed",
+  "validatedAt": "2026-09-07",
+  "checks": {
+    "jsonArtifactsParse": "passed: 13 v4 JSON/content artifacts parsed",
+    "answerCount": 15,
+    "minimumAnswerLength": 390,
+    "maximumAnswerLength": 475,
+    "allAnswersIn300To700Range": true,
+    "directUserValueInEveryQ3": true,
+    "rubricCriterionCount": 16,
+    "rubricWeightTotal": 100,
+    "rubricArithmetic": "passed: every set score equals sum(weight * rating / 4)",
+    "domainLanguageCoverage": "passed: 7/7 canonical concepts, 0/15 undefined critical-term findings",
+    "sentenceEvidenceTraceability": "passed: 15/15 answer records have sentence address, evidence class and limitation",
+    "protectedGateStatuses": "passed: G1-G9 are status=pass for the draft-review consumer",
+    "allSetsAtOrAbove90": true,
+    "allSetDispositionInclude": true,
+    "htmlPageSections": 11,
+    "pdfPageTreeRootCount": 11,
+    "pdfPageObjects": 11,
+    "pageOverflow": false,
+    "visualInspection": "passed: cover, canonical-language map, project abstraction, rubric, data operations, all five sets and final selection page rendered without visible clipping in representative screenshots",
+    "scoreDisplay": "passed: average 94.6, set scores 94.0/91.0/95.5/98.0/94.5 and PASS gates visible"
+  },
+  "artifacts": {
+    "pdf": "self-introduction-5sets-v4.pdf",
+    "html": "self-introduction-5sets-v4.html",
+    "content": "self-introduction-content-v4.json",
+    "rubric": "evaluation-rubric-v4.json",
+    "assessmentOperation": "assessment-operation-v4.json",
+    "dataOperations": "evaluation-data-operations-v4.json",
+    "evidenceMap": "evidence-map-v4.json",
+    "claimLedger": "claim-ledger-v4.json",
+    "userUnderstanding": "user-understanding-projection-v4.json",
+    "domainLanguage": "domain-language-map-v4.json",
+    "languageCoverage": "domain-language-coverage-v4.json",
+    "projectAbstraction": "project-abstraction-map-v4.json",
+    "researchSources": "research-sources-v4.json",
+    "draftComparison": "draft-comparison-v4.json",
+    "qualityLoop": "quality-loop-v4.json"
+  },
+  "limitations": [
+    "PDF 렌더링과 수치 검증은 글의 구조·산식·표시를 검증할 뿐 사용자 제공 1인칭 기여나 운영 결과의 사실성을 인증하지 않는다.",
+    "단일 평가자라 평가자 간 일치도는 unavailable이며, 독립 재평정 전 score confidence는 editorial_comparison_only이다.",
+    "사용자 의미 확인은 pending이고 제출·면접·채용 결과 연결은 unavailable이다.",
+    "set-1과 set-5는 0.5점의 close pair이므로 수치만으로 선택하지 않고 사용자의 실제 견해와 면접 방어 가능성으로 결정해야 한다."
+  ]
+}

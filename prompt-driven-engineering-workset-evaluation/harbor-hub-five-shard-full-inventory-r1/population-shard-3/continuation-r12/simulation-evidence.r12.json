@@ -1,0 +1,228 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "artifactProjectionDigest": "sha256:c4f484bddaca4a0eeb1f00c3189991d47ba325029079864636b6de565be2594b",
+      "effectiveReasoningEffort": null,
+      "id": "harbor-gpt-5-6-luna-max",
+      "modelRef": "model:gpt-5.6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T15:26:46Z",
+  "digest": "sha256:783a0bfa8d2038ee2752bec603418bc61c565a96ca8131cf2f09a26ffeec05a3",
+  "environment": {
+    "compatibilityState": "failed_image_manifest",
+    "environmentDigest": "sha256:70aca5881dba23be4a339260384bf53d7b7e4ad44386d732c7e25e90a3a3c10e",
+    "hostPlatformRef": "platform:darwin-arm64",
+    "observationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/environment-platform-observation.r12.json",
+    "targetPlatformRef": "platform:linux-arm64"
+  },
+  "evidenceId": "evidence:harbor-hub-five-shard-full-inventory-r1:population-shard-3:continuation-r12:LiteCoder/LiteCoder-rl",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "task-image-linux-arm64-manifest-unavailable",
+      "eligibilityImpact": "execution_and_benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/provider-qualification.r12.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-execution-observation.r12.json"
+      ],
+      "id": "provider-platform",
+      "subjectRef": "item:LiteCoder/LiteCoder-rl"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-effort-timeout-receipt-missing",
+      "eligibilityImpact": "execution_and_benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-subject-operation.r12.json"
+      ],
+      "id": "effective-execution",
+      "subjectRef": "item:LiteCoder/LiteCoder-rl"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-not-started",
+      "eligibilityImpact": "execution_and_benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-subject-operation.r12.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:LiteCoder/LiteCoder-rl"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v2",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "oracle": {
+    "state": "unavailable_before_subject_start",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_environment_setup_failed",
+      "effective_execution_receipt_missing",
+      "protected_verifier_not_started"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": ["task_image_linux_arm64_manifest_unavailable", "protected_verifier_not_started"],
+    "otherMembersDisposition": "not_inferred",
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:15551e2897c253659416936b3980c24ea8f83860995827e88944427e6b88e674"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12"
+  },
+  "provider": {
+    "effectiveModel": null,
+    "effectiveReasoningEffort": null,
+    "effectiveReceiptPresent": false,
+    "effectiveSubjectTimeoutSeconds": null,
+    "qualificationDigest": "sha256:bdb9904d19940a4a365c81799a2a82d91f4769fe238e332c7af8a6c644aadbba",
+    "qualificationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/provider-qualification.r12.json",
+    "requestedModel": "gpt-5.6-luna",
+    "requestedReasoningEffort": "max",
+    "requestedSubjectTimeoutSeconds": 3600,
+    "state": "held_after_environment_setup_failure"
+  },
+  "schemaVersion": 2,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r12",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:53f94530bde56d7c46af28d2731a2c8058d8ba3698969df2f1a641521433a699",
+    "requirementScopeDigest": "sha256:3f2b7a1f00900db29b21ff5a318be74799675e2162a24696cfdd743a4350beba",
+    "sourceDigest": "sha256:d9325a7f671cba0204512fcd0bd579d4a3225d7cfd59fe9cdcedb94f91db303e",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:e185aff8ec6d9dc521d527c67fa959614fefc94514a3a092d00c00b25bb125ab",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7",
+    "workflowPatternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/pipeline/workflow-pattern.json"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/item-resource-settlement.r12.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-subject-operation.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/provider-qualification.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-execution-observation.r12.json"
+        ],
+        "resourceClass": "queue-claim",
+        "resourceRefDigest": "sha256:bfa409f7671518efb1136f3857cfe03ce56c0ae4d0bb361299fb26f166527e16",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-subject-operation.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/provider-qualification.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-execution-observation.r12.json"
+        ],
+        "resourceClass": "task-materialization",
+        "resourceRefDigest": "sha256:91b2f33bb8abd0e0ccc750ce3854f13a6015fa0972463d824874eb83481c4304",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-subject-operation.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/provider-qualification.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-execution-observation.r12.json"
+        ],
+        "resourceClass": "provider-job",
+        "resourceRefDigest": "sha256:eba220a44909046f214c4302afe0dfefcb6967da7436c0ef112805e68c167495",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-subject-operation.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/provider-qualification.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-execution-observation.r12.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:18e5973e58a202b3f97d422759172b9ea50d5158dccd36bccb59b20534fb8cf0",
+        "state": "not_created"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-subject-operation.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/provider-qualification.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-execution-observation.r12.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:225b3b2d5f0130054fc4dac47f08f95a03b5ef524a988285dab752d615f522a4",
+        "state": "not_created"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-subject-operation.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/provider-qualification.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-execution-observation.r12.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:2c1790c809a589001ce003883f180686f42a414e4d16c429f0703a7494d2a525",
+        "state": "not_created"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-subject-operation.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/provider-qualification.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-execution-observation.r12.json"
+        ],
+        "resourceClass": "credential-material",
+        "resourceRefDigest": "sha256:50a31df3b882c3443f9e092f915ed4a28b0c86f11fba4554b9ea347f224c9ea5",
+        "state": "not_created"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-subject-operation.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/provider-qualification.r12.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-execution-observation.r12.json"
+        ],
+        "resourceClass": "generated-evidence",
+        "resourceRefDigest": "sha256:b54a7bb235edb8fd82ac89e8a7c1fa1445328971e826b8469efeb4a18b431336",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "shardId": "population-shard-3",
+  "sourceRefs": [
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/route-decision.r12.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/provider-qualification.r12.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-execution-observation.r12.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/item-resource-settlement.r12.json"
+  ],
+  "status": "held",
+  "trials": [
+    {
+      "resultDigest": "sha256:2da18ecfadb4e966bb07a264c474fbba687cbaf63222d42ae32e82e467ae6bcc",
+      "state": "environment_setup_failed",
+      "subjectStarted": false,
+      "trialId": "harbor-trial:population-shard-3:gdb-reverse-debug-memory-bug:r12",
+      "verifierStarted": false
+    }
+  ],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/working-memory-binding.r12.json",
+    "checkpointRefs": [
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/route-decision.r12.json",
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/artifact-discovery.r12.json",
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/topology-selection-decision.r12.json",
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/item-resource-settlement.r12.json"
+    ],
+    "digest": "sha256:2af9c79cf9305b1d621e58827a373aaeebbff9967ac379786b3f259c164748e8",
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-3:continuation-r12"
+  }
+}

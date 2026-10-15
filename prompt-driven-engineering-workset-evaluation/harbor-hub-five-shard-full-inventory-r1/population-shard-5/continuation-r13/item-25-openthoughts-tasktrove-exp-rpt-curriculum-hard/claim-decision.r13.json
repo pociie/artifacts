@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 25,
+      "expectedEventHeadSha256": "909a7532864092c8fb01a264eb782ea88e946e9d7ed4e395802b5e12b3a0709d",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:8f70cd6d4286e0e5a55e8aaebd1484db2d2c800ec4033553fccd1e1d2a9e65f2"
+      },
+      "identityDigest": "sha256:4e3c21c8fd149e89e9c283781b9a440c29e8531bb694b375b8eae181255e3363",
+      "itemId": "openthoughts/tasktrove-exp-rpt-curriculum-hard",
+      "laneId": "population-shard-5",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-5:openthoughts/tasktrove-exp-rpt-curriculum-hard:r13",
+      "sequence": 25,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-5:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 25,
+    "eventHeadSha256": "sha256:909a7532864092c8fb01a264eb782ea88e946e9d7ed4e395802b5e12b3a0709d",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:f4b10a831f7f45522a452ac91d495d9ac233c22f2b184aaf55c957eb3e182a89",
+  "eventCursor": 25,
+  "eventHeadSha256": "sha256:909a7532864092c8fb01a264eb782ea88e946e9d7ed4e395802b5e12b3a0709d",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-5",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-25-openthoughts-tasktrove-exp-rpt-curriculum-hard/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "openthoughts/tasktrove-exp-rpt-curriculum-hard",
+        "laneId": "population-shard-5",
+        "proposalId": "proposal:population-shard-5:openthoughts/tasktrove-exp-rpt-curriculum-hard:r13",
+        "workerId": "worker:harbor-population-shard-5:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 25,
+      "eventHeadSha256": "909a7532864092c8fb01a264eb782ea88e946e9d7ed4e395802b5e12b3a0709d",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 25,
+    "eventHeadSha256": "909a7532864092c8fb01a264eb782ea88e946e9d7ed4e395802b5e12b3a0709d",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-5",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}

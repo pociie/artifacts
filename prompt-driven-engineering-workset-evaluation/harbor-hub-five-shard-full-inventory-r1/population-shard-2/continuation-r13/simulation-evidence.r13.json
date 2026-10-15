@@ -1,0 +1,56 @@
+{
+  "authorityEffect": "none",
+  "checks": [
+    {
+      "checkId": "frozen-identity-membership",
+      "evidenceRef": "continuation-r13/source-and-plan-binding.r13.json",
+      "state": "passed"
+    },
+    {
+      "checkId": "task-package-integrity",
+      "evidenceRef": "continuation-r13/provider-private/task-package-manifest.r13.json",
+      "state": "passed"
+    },
+    {
+      "checkId": "requested-effective-receipts",
+      "evidenceRef": "continuation-r13/provider-observation.r13.json",
+      "state": "unavailable"
+    },
+    {
+      "checkId": "native-subject-request",
+      "evidenceRef": "continuation-r13/subject-operation-request.r13.json",
+      "state": "materialized"
+    },
+    {
+      "checkId": "execution-structure-admission",
+      "evidenceRef": "continuation-r13/execution-structure-admission.r13.json",
+      "state": "held_at_capability_boundary"
+    },
+    {
+      "checkId": "protected-verifier",
+      "evidenceRef": "continuation-r13/subject-operation.r13.json",
+      "state": "not_run"
+    }
+  ],
+  "claimId": "claim:harbor-hub-five-shard-full-inventory-r1:population-shard-2:abhishek203/task-aw:r13",
+  "controllerProviderEvidenceIsSubjectEvidence": false,
+  "digest": "sha256:c41820c474ba6b47121a37b86f2206b28c573766ebd59e1569bfd575e204cbb0",
+  "evaluationTrials": 0,
+  "executionTrials": 0,
+  "itemId": "abhishek203/task-aw",
+  "kind": "harbor-item-simulation-evidence/v4",
+  "laneId": "population-shard-2",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "providerExecution": {
+    "containerCreated": false,
+    "jobCreated": false,
+    "verifierCreated": false,
+    "workspaceCreated": false
+  },
+  "rawContentProjection": "excluded",
+  "resourceSettlementRequired": true,
+  "schemaVersion": 4,
+  "settled": true,
+  "simulationPhase": "pre-execution-capability-and-resource-check",
+  "status": "settled_with_hold"
+}

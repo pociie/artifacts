@@ -1,0 +1,136 @@
+{
+  "allModesObserved": [
+    "communication",
+    "investigation",
+    "single_task",
+    "loop",
+    "orchestration",
+    "session_control"
+  ],
+  "authorityEffect": "none",
+  "compoundJourneyRef": "artifacts/population-shard-4/continuation-r9/compound-mode-journey.r9.json",
+  "contextReconciliationRef": "memory:harbor-hub-five-shard-full-inventory-r1:context-reconciliation-decision.r9",
+  "decision": {
+    "architectureSelection": {
+      "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+      "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+      "effectivePrimaryMode": "single_task",
+      "patternSelectedByRouting": false,
+      "requirement": "eligible",
+      "segmentMode": null,
+      "segmentRequirement": null,
+      "segmentSelectionStatus": null,
+      "segmentStructuralSignals": [],
+      "selectionStatus": "deferred_to_architecture_components",
+      "structuralSignals": ["one_material_contribution"],
+      "targetScope": "effective_primary",
+      "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json"
+    },
+    "authorityEffect": "none",
+    "blockers": [],
+    "conflictingFacts": [],
+    "continuityDecision": {
+      "candidateMode": "single_task",
+      "disposition": "reaffirm",
+      "effectivePrimaryMode": "single_task",
+      "executionSurface": "local_coordinator_only",
+      "historyCoverage": "complete",
+      "modeCompositionRequired": true,
+      "objectiveRelation": "unchanged",
+      "outerObligationAction": "none",
+      "outerObligationState": "settled",
+      "priorCompletionEvidence": "verified",
+      "priorPrimaryMode": "single_task",
+      "projectionRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:round-r5/settlement.json",
+      "requestRelation": "continue_objective",
+      "segmentMode": null,
+      "sessionBoundary": "cross_session"
+    },
+    "eligibleModes": ["single_task"],
+    "kind": "six-mode-route-decision/v1",
+    "missingFacts": [],
+    "reassessmentTriggers": [
+      "authority_or_instruction_admission_changes",
+      "capability_or_lifecycle_readiness_changes",
+      "dependency_or_contribution_shape_changes",
+      "purpose_effect_or_output_changes",
+      "request_relation_or_history_coverage_changes",
+      "risk_reversibility_or_validation_boundary_changes",
+      "outer_obligation_or_completion_evidence_changes",
+      "execution_surface_changes_contribution_shape"
+    ],
+    "rejectedModes": [
+      {
+        "mode": "communication",
+        "reasonCodes": [
+          "operation_not_direct_response",
+          "effect_not_none",
+          "output_not_response",
+          "temporal_not_immediate",
+          "current_state_evidence_required"
+        ]
+      },
+      {
+        "mode": "investigation",
+        "reasonCodes": [
+          "operation_not_information_acquisition",
+          "effect_not_read_only",
+          "output_not_information_finding",
+          "mutation_required"
+        ]
+      },
+      {
+        "mode": "loop",
+        "reasonCodes": ["temporal_not_iterative", "iteration_not_bounded"]
+      },
+      {
+        "mode": "orchestration",
+        "reasonCodes": [
+          "contribution_not_multi_owner",
+          "capability_not_verified",
+          "lifecycle_not_verified"
+        ]
+      },
+      {
+        "mode": "session_control",
+        "reasonCodes": [
+          "operation_not_session_operation",
+          "effect_not_session_control",
+          "output_not_control_receipt_or_finding",
+          "session_revision_not_explicit"
+        ]
+      }
+    ],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r9:population-shard-4:abundant/swe-gen-go:d433b9581efa9cddb7215b07ea429c4c45b397d48061c926dcad10b8fd46cd75",
+    "selectedMode": "single_task",
+    "status": "selected"
+  },
+  "fresh": true,
+  "itemId": "abundant/swe-gen-go",
+  "kind": "harbor-item-six-mode-route-evidence/v2",
+  "limitations": [
+    "capability and lifecycle readiness remain provider-validation observations; they do not alter the one-owner route",
+    "this route settles only the claimed item and does not classify the remaining shard members"
+  ],
+  "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r9",
+  "operationDecisionDigest": "sha256:5b5fa2713334ff3e1c0451a48291c1343318435f9be3620f8cbfaf6b8ecc6663",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "reassessmentTriggers": [
+    "authority_or_instruction_admission_changes",
+    "capability_or_lifecycle_readiness_changes",
+    "dependency_or_contribution_shape_changes",
+    "purpose_effect_or_output_changes",
+    "request_relation_or_history_coverage_changes",
+    "risk_reversibility_or_validation_boundary_changes",
+    "outer_obligation_or_completion_evidence_changes",
+    "execution_surface_changes_contribution_shape"
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r9:population-shard-4:abundant/swe-gen-go:d433b9581efa9cddb7215b07ea429c4c45b397d48061c926dcad10b8fd46cd75",
+  "routeInputDigest": "sha256:a985623e3a6734a64766ff71d772842fea5b4c4ce8d8d5a7c0c93a62ca133c38",
+  "schemaVersion": 2,
+  "selectedMode": "single_task",
+  "shardId": "population-shard-4",
+  "sourceFreezeRef": "continuation-r9/claim-source-freeze.r9.json",
+  "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:fb88be3a0d69a80d51adda2bc4f6d62e52d5a525fcf33789efb099f474c6eed7",
+  "status": "selected"
+}

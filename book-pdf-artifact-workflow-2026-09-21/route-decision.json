@@ -1,0 +1,40 @@
+{
+  "kind": "sanitized-six-mode-route-decision/v1",
+  "decisionId": "route-decision:book-pdf-artifact-workflow:v1",
+  "requestRelation": "new_objective",
+  "historyCoverage": "not_applicable",
+  "sessionBoundary": "same_session",
+  "priorPrimaryMode": "none",
+  "outerObligationState": "none",
+  "priorCompletionEvidence": "not_applicable",
+  "workPurpose": ["research", "design", "implement", "validate", "deliver"],
+  "operationFamily": "outcome_production",
+  "effectIntent": "local_mutation",
+  "outputShape": "artifact",
+  "temporalShape": "iterative",
+  "contributionShape": "one_owner",
+  "executionSurface": "local_coordinator_only",
+  "uncertainty": "medium",
+  "novelty": "adjacent",
+  "risk": "low",
+  "reversibility": "reversible",
+  "validationSeparability": "same_owner",
+  "contextPartitionability": "high",
+  "capabilityReadiness": "verified",
+  "lifecycleReadiness": "verified",
+  "effectiveMode": "loop",
+  "rejectedModes": {
+    "communication": "Durable project-local artifacts and image files are required.",
+    "investigation": "Research alone cannot satisfy the requested deliverables.",
+    "single_task": "The work needs bounded research, visual exploration, specification, and validation iterations.",
+    "orchestration": "The current operation has one material output owner; collaboration readiness is a designed capability, not an activated multi-writer topology.",
+    "session_control": "No explicit session mutation was requested."
+  },
+  "materialChangeSignals": [
+    "The user selects a different project domain or audience.",
+    "A second material contribution owner or parallel writer is activated.",
+    "The task changes from exploratory mockups to a production PDF with publication acceptance.",
+    "The native reusable-artifact owner or output location changes."
+  ],
+  "authorityEffect": "none"
+}

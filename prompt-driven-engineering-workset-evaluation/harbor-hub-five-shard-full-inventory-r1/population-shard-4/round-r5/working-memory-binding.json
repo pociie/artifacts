@@ -1,0 +1,29 @@
+{
+  "authorityEffect": "none",
+  "checkpointRefs": [
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:round-r5:route",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:round-r5:provider",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:round-r5:settlement"
+  ],
+  "digest": "sha256:9060847eed8d2080f9496a4ec350e2b5e2b5189add74289d890ba74ecaf17616",
+  "expiry": "after coordinator accepts settled round or r5 successor invalidation",
+  "invalidation": [
+    "source_revision_changed",
+    "decision_digest_changed",
+    "population_plan_digest_changed",
+    "material_route_or_topology_change",
+    "round_settled"
+  ],
+  "kind": "working-memory-binding/v1",
+  "memoryClassRefs": [
+    "memory:protected-context",
+    "memory:route-state",
+    "memory:provider-private",
+    "memory:settlement-state"
+  ],
+  "namespaceRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-4/round-r5",
+  "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r5",
+  "retention": "round-scoped; raw Harbor material remains run-private and portable evidence is metadata-only",
+  "sessionCursor": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:round-r5:session-cursor",
+  "source": "memory:harbor-hub-five-shard-full-inventory-r1:context-reconciliation-decision.r5"
+}

@@ -1,0 +1,76 @@
+{
+  "kind": "six-mode-route-decision/v1",
+  "requestRevision": "job-application-nextwave-backend-2026-09-14.1",
+  "status": "selected",
+  "selectedMode": "loop",
+  "continuityDecision": {
+    "requestRelation": "new_objective",
+    "objectiveRelation": "new_application_report",
+    "historyCoverage": "partial_reused_contract_and_prior_user_evidence",
+    "sessionBoundary": "same_session",
+    "priorPrimaryMode": null,
+    "outerObligationState": "new",
+    "priorCompletionEvidence": "not_applicable",
+    "projectionRef": "projection:job-application-nextwave-backend:request-2026-09-14",
+    "executionSurface": "local_coordinator_only",
+    "candidateMode": "loop",
+    "effectivePrimaryMode": "loop",
+    "segmentMode": "investigation",
+    "disposition": "start",
+    "outerObligationAction": "preserve_missing_facts",
+    "modeCompositionRequired": true
+  },
+  "architectureSelection": {
+    "requirement": "eligible",
+    "selectionStatus": "deferred_to_architecture_components",
+    "targetScope": "effective_primary",
+    "effectivePrimaryMode": "loop",
+    "structuralSignals": [
+      "multi_phase_report_production",
+      "one_material_contribution",
+      "bounded_revision_and_validation"
+    ],
+    "segmentMode": "investigation",
+    "segmentRequirement": "progressive_public-source_evidence_collection",
+    "segmentSelectionStatus": "bounded_supporting_segment",
+    "segmentStructuralSignals": ["source_dependent_claims"],
+    "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json",
+    "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+    "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+    "patternSelectedByRouting": false
+  },
+  "eligibleModes": ["loop", "investigation"],
+  "rejectedModes": [
+    {
+      "mode": "communication",
+      "reasonCodes": ["output_not_direct_response", "temporal_not_immediate", "mutation_required"]
+    },
+    {
+      "mode": "single_task",
+      "reasonCodes": ["temporal_not_single_boundary", "bounded_revision_and_publication_validation"]
+    },
+    {
+      "mode": "orchestration",
+      "reasonCodes": ["contribution_not_multi_owner"]
+    },
+    {
+      "mode": "session_control",
+      "reasonCodes": ["operation_not_session_operation", "explicit_session_revision_false"]
+    }
+  ],
+  "blockers": [],
+  "missingFacts": [
+    "official-company-and-posting-verification",
+    "q4-character-limit",
+    "exact-applicant-contribution-and-runtime-outcome"
+  ],
+  "conflictingFacts": [],
+  "reassessmentTriggers": [
+    "posting-or-question-limit-changes",
+    "company-or-role-facts-change",
+    "applicant-correction-changes-contribution-or-result",
+    "quality-profile-or-publication-policy-changes",
+    "effect-or-execution-surface-changes"
+  ],
+  "authorityEffect": "none"
+}

@@ -1,0 +1,89 @@
+{
+  "authorityEffect": "none",
+  "decision": {
+    "authorityEffect": "none",
+    "capabilityGaps": [],
+    "kind": "artifact-reuse-resolution-decision/v1",
+    "rejectedCandidates": [],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-4:abundant/swe-gen-java:dde74a7e707f60a1978399f9af6bea1b45f345e818cbf66aa425b48418b5f650",
+    "selectedArtifacts": [
+      {
+        "artifactKind": "evaluation_contract",
+        "artifactRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+        "capabilityIds": ["privacy_boundary", "task_execution", "verifier_binding"],
+        "coveredConcernIds": ["task-execution-support"]
+      },
+      {
+        "artifactKind": "context_contract",
+        "artifactRef": "artifacts/agent-loop/execution-preparation/context-resolution/loop.yaml",
+        "capabilityIds": ["context_lifetime", "revision_freeze"],
+        "coveredConcernIds": ["context-reconciliation-support"]
+      },
+      {
+        "artifactKind": "routing_contract",
+        "artifactRef": "artifacts/loop-architecture/components/execution-routing/component.json",
+        "capabilityIds": ["reassessment", "six_mode_routing"],
+        "coveredConcernIds": ["routing-support"]
+      }
+    ],
+    "selectedMode": "single_task",
+    "status": "selected",
+    "uncoveredConcernIds": []
+  },
+  "digest": "sha256:1db7e66a2564d4ac8fd337cffe24fa6c803f17a67517c3505a02dbd58ff0a45e",
+  "dynamicComposition": {
+    "automaticPromotion": false,
+    "created": false,
+    "disposition": "not_required",
+    "reason": "qualified reusable coverage left no quality or representation gap; provider capability hold is not an Artifact gap",
+    "required": false,
+    "residualGap": null,
+    "validityWindow": "this_exact_item_round"
+  },
+  "itemId": "abundant/swe-gen-java",
+  "kind": "harbor-reusable-artifact-discovery/v3",
+  "limitations": [
+    "reusable contracts govern boundaries; no tracked reusable source was edited",
+    "no run-private dynamic candidate was created because no residual representation gap was diagnosed"
+  ],
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-4:abundant/swe-gen-java:dde74a7e707f60a1978399f9af6bea1b45f345e818cbf66aa425b48418b5f650",
+  "routeRef": "artifacts/population-shard-4/continuation-r12/route-decision.r12.json",
+  "schemaVersion": 3,
+  "selectedArtifacts": [
+    {
+      "artifactDigest": "sha256:1c54e93f79fc7de79ee77f052b1b482e55fc04e0a1c76fc84d13b1de5ad24703",
+      "artifactRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "coverage": ["task-execution-support"],
+      "disposition": "selected"
+    },
+    {
+      "artifactDigest": "sha256:652b365c188ccae2a529ef6dd39737e9c26ef34d9481b870c5e639e3daa8b148",
+      "artifactRef": "artifacts/agent-loop/execution-preparation/context-resolution/loop.yaml",
+      "coverage": ["context-reconciliation-support"],
+      "disposition": "selected"
+    },
+    {
+      "artifactDigest": "sha256:e2e9fd764b17ce14ba523c3b28891c71702c747294cbce43166837245c169724",
+      "artifactRef": "artifacts/loop-architecture/components/execution-routing/component.json",
+      "coverage": ["routing-support"],
+      "disposition": "selected"
+    }
+  ],
+  "selectedMode": "single_task",
+  "shardId": "population-shard-4",
+  "sourceRefs": [
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+    "artifacts/agent-loop/execution-preparation/context-resolution/loop.yaml",
+    "artifacts/loop-architecture/components/execution-routing/component.json"
+  ],
+  "status": "selected",
+  "taskIdentity": {
+    "identityDigest": "sha256:dde74a7e707f60a1978399f9af6bea1b45f345e818cbf66aa425b48418b5f650",
+    "itemId": "abundant/swe-gen-java",
+    "revision": 1,
+    "taskId": "0022412f-eb94-42e7-919e-f0901d908546",
+    "taskName": "junit-team__junit5-4692",
+    "taskPageDigest": "sha256:6c2ace3000962e29299b58ebe47968f2824d010c7ee3a5f62545d6407db9c20b"
+  }
+}

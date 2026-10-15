@@ -1,0 +1,279 @@
+{
+  "accountingDecision": {
+    "activeItemIds": [],
+    "authorityEffect": "none",
+    "diagnosticCodes": ["population_items_pending"],
+    "eventCursor": 19,
+    "eventHeadSha256": "dd611996910308268dd1aab7fc0fa5bfa4002b5d1c087a92c851cb188cabf194",
+    "kind": "population-settlement-accounting-decision/v1",
+    "nextAction": "continue_claiming",
+    "pendingItemIds": [
+      "openthoughts/tasktrove-exp-rpt-methods2test-large-v3",
+      "openthoughts/tasktrove-exp-rpt-pymethods2test-large",
+      "openthoughts/tasktrove-exp-rpt-stack-bash-withtests-v2",
+      "openthoughts/tasktrove-exp-rpt-stack-csharp-v5",
+      "openthoughts/tasktrove-exp-rpt-stack-go-v4",
+      "openthoughts/tasktrove-exp-rpt-stack-rust-v2",
+      "openthoughts/tasktrove-exp-rpt-unitsyn-python-v3",
+      "openthoughts/tasktrove-mix-h10-reward-staged-v2",
+      "openthoughts/tasktrove-mix-h11-single-skill-only-v2",
+      "openthoughts/tasktrove-mix-h4-binary-easy",
+      "openthoughts/tasktrove-nemotron-gym-identity-following-v2",
+      "openthoughts/tasktrove-nemotron-gym-instruction-following-adversarial-v3",
+      "openthoughts/tasktrove-nemotron-gym-instruction-following-structured",
+      "openthoughts/tasktrove-openswe-tasks-patched-v5-oracle-success",
+      "openthoughts/tasktrove-r2egym-patched-full-oracle",
+      "openthoughts/tasktrove-swe-rebench-v2-patched-oracle",
+      "orca-bench/orca-bench",
+      "polyvorlabs/cyberdefense-bench",
+      "reasoning-gym/reasoning-gym-hard",
+      "red-hat-ai/haiku-hard",
+      "ryanmarten/tb4-preview",
+      "scale-ai/swe-atlas-rf",
+      "snorkel-ai/senior-swe-bench-v2026.06",
+      "strongreject/strongreject",
+      "svgap/svgap-reset-release",
+      "swe-bench/swe-bench-verified",
+      "tencent/autocodebench",
+      "tinycomputerai/bun-server-bench",
+      "vibrantlabsai/itsm-bench",
+      "vmax/vmax-tasks"
+    ],
+    "populationComplete": false,
+    "populationCount": 49,
+    "populationPlanRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/population-shard-plan.json",
+    "populationPlanSha256": "705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-4",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "terminalCounts": {
+      "cancelled": 0,
+      "completed": 1,
+      "failed": 0,
+      "held": 18
+    },
+    "terminalItemIds": [
+      "abundant/swe-gen-go",
+      "abundant/swe-gen-java",
+      "adameubanks/rating-generation-consistency",
+      "benchflow/skillsbench",
+      "bigcode/bigcodebench-hard-complete",
+      "camel-ai/seta-env",
+      "featurebench/featurebench-lite-modal",
+      "frontis/agent-obs-core",
+      "google-deepmind/terminal-bench-science",
+      "gorilla/bfcl",
+      "harbor/hello-world",
+      "lamina/product-bench",
+      "lica-world/gdb",
+      "nl2repobench/nl2repobench",
+      "openai/swe-lancer-diamond-all",
+      "openthoughts/tasktrove-exp-flat25-speed-bonus-v2",
+      "openthoughts/tasktrove-exp-flat25-stackoverflow-v2",
+      "openthoughts/tasktrove-exp-rpt-crosscodeeval-java",
+      "openthoughts/tasktrove-exp-rpt-exercism-python-v2"
+    ]
+  },
+  "accountingRule": "exact active claims plus unique identity-bearing terminal receipts; legacy aggregates are non-authoritative",
+  "authorityEffect": "none",
+  "candidate": {
+    "identityDigest": "sha256:47e25a88d5802f43b573dbfaff77acd239e5ff6d5bd442f63bbb7215ca39584f",
+    "itemId": "openthoughts/tasktrove-exp-rpt-methods2test-large-v3",
+    "materiallyDifferentFingerprint": true,
+    "sequence": 20
+  },
+  "casePreservingIdentity": true,
+  "claimPredicate": "same frozen assignment, no terminal disposition, no active claim, and materially changed capability/task fingerprint",
+  "continuationId": "population-shard-4:continuation-r13-next/item-20-openthoughts-tasktrove-exp-rpt-methods2test-large-v3",
+  "kind": "harbor-population-shard-queue-reconciliation/v4",
+  "legacyAggregate": {
+    "authorityForCurrentAccounting": "rejected_aggregate_without_identity_receipts",
+    "digest": "sha256:78ac543a7b0ed841da79725c9b3b11e299a838a630178aa8e07893920d777437",
+    "reportedCounts": {
+      "discovered": 1,
+      "evaluated": 1,
+      "executed": 0,
+      "held": 1,
+      "qualified": 0,
+      "rejected": 0,
+      "settled": 1
+    },
+    "settlementRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/settlement-ledger.json",
+    "sourceRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-4/lane-operation-report.json",
+    "stateRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/operation-state.json"
+  },
+  "observedAt": "2026-08-28T19:26:21Z",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "preservedTerminalReceipts": [
+    {
+      "itemId": "harbor/hello-world",
+      "itemTerminalStatus": "completed",
+      "overwritten": false,
+      "receiptDigest": "sha256:713cd920129c7f2234a228b0974c8dc56174cf4151875dbfed246b4bad63edc2",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r9/terminal-receipt.harbor-hello-world.r5.json"
+    },
+    {
+      "itemId": "abundant/swe-gen-go",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:06ac16d2d4de9eed96acb4551f5619eba46bbd147a2e1950310578002c986ff3",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r9/terminal-receipt.abundant-swe-gen-go.r9.json"
+    },
+    {
+      "itemId": "abundant/swe-gen-java",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:bacbfb9e66365cdacec06fd66c848b6591772aac0b1919fb41070cd0fbc7ad85",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r12/terminal-receipt.abundant-swe-gen-java.r12.json"
+    },
+    {
+      "itemId": "adameubanks/rating-generation-consistency",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:203dc028d5f54a16bb5df0ff86ebd97423da78ecc13ab22f78f9ab6465bf4591",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13/terminal-receipt.adameubanks-rating-generation-consistency.r13.json"
+    },
+    {
+      "itemId": "benchflow/skillsbench",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:9ca0494e02cdaf902ad9efd392c78ebda4159f89022a1ff556676d87c69f4824",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-04-benchflow-skillsbench/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "bigcode/bigcodebench-hard-complete",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:48c00fa2936db1de722a519d5c8f43555b0f5bc5111879545cd68be8d9020fc8",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-05-bigcode-bigcodebench-hard-complete/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "camel-ai/seta-env",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:1452c31d397b2a0aec5669fb67a1ff55d38bb8e772c598f59a7867735464bbbe",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-06-camel-ai-seta-env/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "featurebench/featurebench-lite-modal",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:3118fb467c115778e8f3037dd57711c0cb72a56b232d2e68d034f0285329fe07",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-07-featurebench-featurebench-lite-modal/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "frontis/agent-obs-core",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:49ab8c26d14bb70060b67a768dfc6edff9e3519bf6b7ce22290d973ae43c8465",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-08-frontis-agent-obs-core/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "google-deepmind/terminal-bench-science",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:87c25a2df4da84ee9e7d6e021a6d5c8cce92d5b6c9aac469f2185ddcefcb0bce",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-09-google-deepmind-terminal-bench-science/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "gorilla/bfcl",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:4e27a6dd5a4e09934aa03ab34106baea3828c94c95e3b08b6c9b790597657fc6",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-10-gorilla-bfcl/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "lamina/product-bench",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:ab983eac78f268679b23ddd48811ef48d95a43645439c51277a6e3d64b9ca36e",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-12-lamina-product-bench/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "lica-world/gdb",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:65e8e553a76b2a8672b4b41d649de5425709e0b4b24451d797a2f0a8fad465db",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-13-lica-world-gdb/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "nl2repobench/nl2repobench",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:f9a7d4a352b40b50050b290bf82350753dbb68692c133fbc849c7c0497f7087c",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-14-nl2repobench-nl2repobench/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openai/swe-lancer-diamond-all",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:13a0482dae7d5420a709bf77099aafc7930bbb9ce637e4fe40c9bd453713c640",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-15-openai-swe-lancer-diamond-all/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-flat25-speed-bonus-v2",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:411fd6cd09251208b388dacf449a97907ccd9fed492769d8ed108bb961dbdfd8",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-16-openthoughts-tasktrove-exp-flat25-speed-bonus-v2/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-flat25-stackoverflow-v2",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:1b78adb5230660af46a70327e57757d0a693267757b6d356e33dd1887fb315d0",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-17-openthoughts-tasktrove-exp-flat25-stackoverflow-v2/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-rpt-crosscodeeval-java",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:c5392771cc49df9da78296b7850e816e0af68d5849e45efc99db94bbd3ee0a4c",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-18-openthoughts-tasktrove-exp-rpt-crosscodeeval-java/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-rpt-exercism-python-v2",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:be8a6accf455253031218a28901dfad0ed586372fc03653fe2c3cdc2bc4a320c",
+      "receiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-19-openthoughts-tasktrove-exp-rpt-exercism-python-v2/terminal-item-receipt.r13.json"
+    }
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true
+  },
+  "queueHeadDigest": "sha256:dd611996910308268dd1aab7fc0fa5bfa4002b5d1c087a92c851cb188cabf194",
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-4",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "queueSnapshotBeforeClaim": {
+    "activeClaims": 0,
+    "eligibleClaimCount": 30,
+    "frozenShardMembers": 49,
+    "identityBearingTerminalReceipts": 19,
+    "pendingWithoutTerminalDisposition": 30,
+    "populationComplete": false,
+    "terminalCompleted": 1,
+    "terminalFailed": 0,
+    "terminalHeld": 18
+  },
+  "reconciliationDigest": "sha256:a3f59b6064fcdf07b6cd51a152f7084954793858acba5b56ddcc3da88152b7e2",
+  "repartitionPerformed": false,
+  "schemaVersion": 4,
+  "shardId": "population-shard-4",
+  "sourceBinding": {
+    "decisionDigest": "sha256:1e7032e238e40d3af281a20c6e3c78d8d95672f86379cc52d5f76bf3f838cd16",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "operationEnvelopeDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "planSha256": "sha256:705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+    "populationDigest": "sha256:3129ad473a1c60f76d7159614e57c251e1fdf0a3ee64c9c347166e3315a1dd69",
+    "requirementScopeDigest": "sha256:7de1fe4160cec4912ba6856743cc115c946cd445cb736f351467a1666a8c50ef",
+    "shardCounts": {
+      "population-shard-1": 60,
+      "population-shard-2": 54,
+      "population-shard-3": 66,
+      "population-shard-4": 49,
+      "population-shard-5": 58
+    },
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656"
+  }
+}

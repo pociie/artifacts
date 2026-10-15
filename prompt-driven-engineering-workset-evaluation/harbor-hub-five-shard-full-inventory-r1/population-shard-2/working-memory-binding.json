@@ -1,0 +1,36 @@
+{
+  "kind": "working-memory-binding-projection/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "shardIndex": 1,
+  "objectiveRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-2",
+  "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2",
+  "sessionCursor": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/cursor-settled",
+  "checkpointRefs": [
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/checkpoint-inventory-freeze.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/checkpoint-settlement.json"
+  ],
+  "retention": "runtime-private-until-lane-settlement-then-sanitized-immutable-projection",
+  "invalidation": [
+    "operation_revision_change",
+    "source_digest_change",
+    "hub_inventory_digest_change",
+    "provider_capability_change",
+    "model_effort_timeout_receipt_change",
+    "settlement_state_change",
+    "privacy_classification_change"
+  ],
+  "source": {
+    "workspaceRef": "workspace:collab-mono",
+    "worktreeRef": "worktree:collab-mono:integration-checkout",
+    "workflowRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/loop.yaml",
+    "workflowSha256": "6b3081f28b6a3dd8bd9688178b6aa3264c0b5332e657b78d65890e19e4ddc253",
+    "compositionRef": "artifacts/loop-architecture/compositions/default-ai-execution-control/composition.json",
+    "compositionSha256": "d47af15b0ef5fe4d0ea11619b8d7df7e741a91ce4c0b2e1d2b7978552150811c"
+  },
+  "bindingDigest": "sha256:b58792e30660e82fed2adc1e534cd5b3fa2e57516bab88c43f61744ae46fb9d9",
+  "sourceMemoryRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/working-memory-binding.json",
+  "projectionPolicy": "metadata-only; no private reasoning, secrets, raw provider output, or runtime handles",
+  "digest": "sha256:210586566145858509c8cb80a302d4e2b69d924e8e3de78e8d7e0b400dc268dc"
+}

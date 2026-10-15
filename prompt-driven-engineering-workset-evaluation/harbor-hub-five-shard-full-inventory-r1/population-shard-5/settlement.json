@@ -1,0 +1,1341 @@
+{
+  "kind": "harbor-hub-shard-settlement/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "shardNumber": 5,
+  "shardIndex": 4,
+  "shardCount": 5,
+  "frozenInventoryDigest": "sha256:315e7ce0c918dda29ca6ef609ebaab8a79b65ed85f87cbf91893d4b688bda9ac",
+  "atomicRule": "Each candidate receives one terminal disposition and all materialized runtime resources are reconciled before the next candidate or final hold.",
+  "counters": {
+    "discovered": 58,
+    "qualified": 2,
+    "executed": 2,
+    "evaluated": 2,
+    "held": 56,
+    "rejected": 0,
+    "settled": 58
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "ordinal": 3,
+      "datasetId": "gpqa-diamond/gpqa-diamond",
+      "state": "settled",
+      "runRef": "population-shard-5/runs/gpqa-10/2026-08-28__21-31-46",
+      "terminalReward": 1,
+      "modelReceipt": {
+        "requested": "openai/gpt-5.6-luna",
+        "effective": "openai/gpt-5.6-luna"
+      },
+      "effortReceipt": {
+        "requested": "max",
+        "effective": null,
+        "status": "unverified"
+      },
+      "timeoutReceipt": {
+        "requestedSubjectSec": 3600,
+        "effectiveSubjectSec": 3600
+      }
+    },
+    {
+      "round": 2,
+      "ordinal": 13,
+      "datasetId": "bauerjustin/tb3-preview-v2",
+      "state": "settled",
+      "runRef": "population-shard-5/runs/tb3-crash-safe-loop/2026-08-28__21-37-10",
+      "terminalReward": 1,
+      "modelReceipt": {
+        "requested": "openai/gpt-5.6-luna",
+        "effective": "openai/gpt-5.6-luna"
+      },
+      "effortReceipt": {
+        "requested": "max",
+        "effective": null,
+        "status": "unverified"
+      },
+      "timeoutReceipt": {
+        "requestedSubjectSec": 3600,
+        "effectiveSubjectSec": 3600
+      }
+    }
+  ],
+  "resources": [
+    {
+      "ordinal": 0,
+      "datasetId": "scale-ai/swe-bench-pro",
+      "taskDigest": "sha256:b7c4b1fd04354e945edf8375e2318d5e09152f0b84adf41e2dd65e7f6e5c707a",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 1,
+      "datasetId": "openthoughts/openthoughts-tblite",
+      "taskDigest": "sha256:fcf8733a356a158e3478a1ca688b6ddd51cc54d7717fa929d601a604a4c09a15",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 2,
+      "datasetId": "vmax-modal/modal-port-v1-eval-patched",
+      "taskDigest": "sha256:67173921e37d703be25d9265323ba96d54ecfb6578568adc535b95c402b79798",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 3,
+      "datasetId": "gpqa-diamond/gpqa-diamond",
+      "taskDigest": "sha256:cbb1e1520a788ce85f2c436b040161cbdaa98be9c055a0dfefb005fe21f76ddb",
+      "disposition": "executed_and_evaluated",
+      "holdCodes": [],
+      "round": 1,
+      "runRef": "population-shard-5/runs/gpqa-10/2026-08-28__21-31-46",
+      "terminalReward": {
+        "state": "observed",
+        "value": 1,
+        "evidenceRef": "population-shard-5/runs/gpqa-10/2026-08-28__21-31-46/result.json"
+      },
+      "resources": [
+        {
+          "resourceClass": "task_materialization",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        },
+        {
+          "resourceClass": "harbor_job",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        },
+        {
+          "resourceClass": "execution_container",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        },
+        {
+          "resourceClass": "verifier_container",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        },
+        {
+          "resourceClass": "auth_materialization",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 4,
+      "datasetId": "abundant/swe-gen-rust",
+      "taskDigest": "sha256:c443e1a0365e088b136700cc53857f37212433f93fb5b66a19c1fa49bfa257c0",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 5,
+      "datasetId": "actava-ai/chi-bench",
+      "taskDigest": "sha256:eafd03a3f9363769db26894140e4b28340f29242627aec1df37c0c964c5ad89b",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "protected_dataset_auth_unavailable"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 6,
+      "datasetId": "quesma/compilebench",
+      "taskDigest": "sha256:7152f4ac62217810140ce2126e03a4b851716ceb13eaff9c5f323241f08ce323",
+      "disposition": "held_before_execution",
+      "holdCodes": ["forced_amd64_on_arm64_host"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 7,
+      "datasetId": "scienceagentbench/scienceagentbench",
+      "taskDigest": "sha256:b5328f844ca2311e68d15992166811f7b49b08c5d87d27ae8b74babd349235bb",
+      "disposition": "held_before_execution",
+      "holdCodes": ["forced_amd64_on_arm64_host", "verifier_timeout_not_exact_3600"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 8,
+      "datasetId": "rounakbende10/rh-swe-bench",
+      "taskDigest": "sha256:d895f10e7b11a4badd2df424cc2ac59a6705ebc029a46ddfa880ac13c4f08d1e",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 9,
+      "datasetId": "userbench/UserBench-train400",
+      "taskDigest": "sha256:e877f618cf2e690cfc681fb5f50b4122205603bff6c86f64089cf86626b4c763",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 10,
+      "datasetId": "meta/mlgym-bench",
+      "taskDigest": "sha256:dca111624f30fa046b1ec2032defafaf96794ffef3bac357a3b84e75e2f7ca08",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "requested_resources_exceed_host_budget"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 11,
+      "datasetId": "reasoning-gym/reasoning-gym-easy",
+      "taskDigest": "sha256:1403d69b1e0cbd10aaa3917f08d8df7d22e372744cb980fba85400481c072dd5",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 12,
+      "datasetId": "theagentcompany/theagentcompany",
+      "taskDigest": "sha256:67cd8005285701c4e99599e745d44a922ee0bc88c64965e971caa0c20212be20",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_exceeds_operation_ceiling"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 13,
+      "datasetId": "bauerjustin/tb3-preview-v2",
+      "taskDigest": "sha256:9d561f23585d87ca49b749692479f9d8bc1f2d77163d168f2a822be9d034b1bb",
+      "disposition": "executed_and_evaluated",
+      "holdCodes": [],
+      "round": 2,
+      "runRef": "population-shard-5/runs/tb3-crash-safe-loop/2026-08-28__21-37-10",
+      "terminalReward": {
+        "state": "observed",
+        "value": 1,
+        "evidenceRef": "population-shard-5/runs/tb3-crash-safe-loop/2026-08-28__21-37-10/result.json"
+      },
+      "resources": [
+        {
+          "resourceClass": "task_materialization",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        },
+        {
+          "resourceClass": "harbor_job",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        },
+        {
+          "resourceClass": "execution_container",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        },
+        {
+          "resourceClass": "verifier_container",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        },
+        {
+          "resourceClass": "auth_materialization",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 14,
+      "datasetId": "yanagiorigami/frontier-cs",
+      "taskDigest": "sha256:7ac44346e5e122ad4e648b27386f07a95f1e052d4e63144dac7b247ec8f879d1",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_exceeds_operation_ceiling", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 15,
+      "datasetId": "aarr/aarri-bench",
+      "taskDigest": "sha256:6305649acfb122e8518374bde36b066e757c0dd185b35bfc3a595d986cb96e68",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 16,
+      "datasetId": "kumo/kumo-parity",
+      "taskDigest": "sha256:105a3a9645e6e4f1d931fc75bc12c002e5544af2968b8c516ac13a67fdb54f9a",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 17,
+      "datasetId": "deveval/deveval",
+      "taskDigest": "sha256:6f35d6b1bd837994d244e8aee1cf5c1145156d1c4a89ac55a2825a58f74ae164",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 18,
+      "datasetId": "gorilla/bfcl_parity",
+      "taskDigest": "sha256:ba053024f2746a4abfc4a207776bd1f64158280554da884ca929286ce8266ad8",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 19,
+      "datasetId": "ale/rsi-post-training",
+      "taskDigest": "sha256:d869f82fe2ac8e3dcca5fd5d19467ebef766b4c5ff7112d106a28df0ac8fa19c",
+      "disposition": "held_before_execution",
+      "holdCodes": [
+        "subject_timeout_exceeds_operation_ceiling",
+        "requested_resources_exceed_host_budget",
+        "model_execution_not_admitted"
+      ],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 20,
+      "datasetId": "futurehouse/bixbench",
+      "taskDigest": "sha256:10cbfd6c121d0c60d665094fe78dad292c5c971d7a754aa4f78f616b9e8e8a39",
+      "disposition": "held_before_execution",
+      "holdCodes": ["requested_memory_reaches_host_budget", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 21,
+      "datasetId": "futurehouse/bixbench-cli",
+      "taskDigest": "sha256:69b8e31991ddd6e83c3be4ba0df4fb452c9cc785eb6f8473928265c52daac3be",
+      "disposition": "held_before_execution",
+      "holdCodes": ["requested_memory_reaches_host_budget", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 22,
+      "datasetId": "stanford/medagentbench",
+      "taskDigest": "sha256:15f326b6d56aa459898e44b76c855d6bdadec613d31b303817feb88c8ee2b616",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 23,
+      "datasetId": "blobfishai/counselbench-100",
+      "taskDigest": "sha256:5b61d2a51fcf18e983ff8901372076f65b1d5192a7336bc1ac6e5999a52e3e75",
+      "disposition": "held_before_execution",
+      "holdCodes": ["verifier_access_network_or_mcp_unqualified"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 24,
+      "datasetId": "crustbench/crustbench",
+      "taskDigest": "sha256:4f5c738cbff08365b3b8b6db2c72a96a610f64d6ab71cb6882ab924f914883d9",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 25,
+      "datasetId": "ineqmath/ineqmath",
+      "taskDigest": "sha256:17ad260849bd470b26ec1c46e6a697ee951ef2bd38b210232b1593e317ead130",
+      "disposition": "held_before_execution",
+      "holdCodes": ["verifier_api_key_unavailable"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 26,
+      "datasetId": "minnesotanlp/aar",
+      "taskDigest": "sha256:baa741abc14afedc9fd196cd39897bbd604e4341d404fb79d290024ea4d1a33f",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 27,
+      "datasetId": "openai/simpleqa",
+      "taskDigest": "sha256:054597a59b396bd740e44976e7bc495a5437ad986b806ecbd86a60855fcccbc1",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 28,
+      "datasetId": "luosuu/SWE-kokkos-bench",
+      "taskDigest": "sha256:54e74b8b18b4b1aac5ebb8ca0872e4f3b7da5ca823540d2ce42d95ec23ea0f71",
+      "disposition": "held_before_execution",
+      "holdCodes": ["requested_resources_exceed_host_budget"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 29,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-curriculum-hard",
+      "taskDigest": "sha256:54ae6db6ad310a3a5f88e9f2e0ffd1bb83ec76b5449ba1600b688b29fee6660b",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 30,
+      "datasetId": "termigen/termigen-environments",
+      "taskDigest": "sha256:919b2e861c554f3f0eaf989907011764a6eb9a4d445fa6eaa86ba62881e53de0",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 31,
+      "datasetId": "xiaoboai/pawbench",
+      "taskDigest": "sha256:4fe571db65d9f1e05f1e7163c96cac59203f0ebce524d0b87a5616847e63a002",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 32,
+      "datasetId": "hack-verifiable-environments/hv-terminal-bench-2-1",
+      "taskDigest": "sha256:480d8243b24f8cd428ca20ab6bd8824bb220742495c3eb316ea971700e2a729b",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 33,
+      "datasetId": "openthoughts/tasktrove-exp-rle-github-issue-v3",
+      "taskDigest": "sha256:088697ac923fdfc6bd889daa5939de297b86a953ab222540eb56ca037ba09fae",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 34,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-ghactions-v3",
+      "taskDigest": "sha256:281a8eb4f66c1425bd7ef9193c10433f895ccd5eef5144a1f0446700c4179a2e",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 35,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-issue",
+      "taskDigest": "sha256:1f2fe2d6c3887f8491d0cc4768fa3b51b1eab5a8fe4a0d8221637b7482bed565",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 36,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-multifile",
+      "taskDigest": "sha256:727eacdfc3dd1b2f414992a9df95d7690bec90cabe56e781de30ab3a33158996",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 37,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-pr-v2",
+      "taskDigest": "sha256:a860e393205b01da646f198869258556072a651c83b111133ef85b3f48572708",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 38,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-pymethods2test-v3",
+      "taskDigest": "sha256:81c9529fc21934634ccc3ffdd7f23108246b6c625e4fd3bd06784a1a0fdfe979",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 39,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-stack-pytest-v2",
+      "taskDigest": "sha256:a5c2a8dfb438c297284140a855cfb1193fd6e8272cf0c849f4e30e72437c718f",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 40,
+      "datasetId": "openthoughts/tasktrove-nemotron-gym-math-advanced-calculations-v3",
+      "taskDigest": "sha256:be2bde017d394dc28ef2c0f2d0aeb1b7b13ab02c55936a23a3b7e4ede67b5088",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 41,
+      "datasetId": "usaco/usaco",
+      "taskDigest": "sha256:543ea18f30b1d71c4474771f8375452dcd6eacd999508f2c365548a59742809d",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "verifier_timeout_exceeds_operation_ceiling"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 42,
+      "datasetId": "grandsmile/unicode",
+      "taskDigest": "sha256:7244ef359c5040a8b0e0d3dc2a66a5993d510f6fb5f8f9a54b91a98fa42afeeb",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 43,
+      "datasetId": "itmo-autods/openpoly-tg-case",
+      "taskDigest": "sha256:ccb2ef347b9c0d43b71fe959ee417233f111eaafbe09c5e948fe57d531553442",
+      "disposition": "held_before_execution",
+      "holdCodes": ["verifier_llm_auth_or_network_unavailable"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 44,
+      "datasetId": "openthoughts/tasktrove-exp-flat25-pseudocode-v2",
+      "taskDigest": "sha256:12f32703f46b6622bc27c253230374852d355d5eff7162a802cd52ca4538e006",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 45,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-stack-junit-v6",
+      "taskDigest": "sha256:93519458e67d466e7b88c72aa6ae517db89a76ec6fc6bea1e5165705a80f9369",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 46,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-stack-php-v2-v6",
+      "taskDigest": "sha256:b94fa92b77242917ff7ea89387d40b8262f2d33be5780231787ca7d6b6bdd7bc",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 47,
+      "datasetId": "openthoughts/tasktrove-inferredbugs-sandboxes-verifier",
+      "taskDigest": "sha256:83ba6939ac4d5821f5af93d199423017d4e9fc5422e03cf2903d3eca381b58cc",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 48,
+      "datasetId": "openthoughts/tasktrove-mix-h1-struggle-zone-v2",
+      "taskDigest": "sha256:9314ad0a7bd2a07d63947272849dadcbac025f64364d5224dd1b14154fad9de2",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 49,
+      "datasetId": "openthoughts/tasktrove-mix-h10-reward-proportional-v2",
+      "taskDigest": "sha256:21549bce2bd2899d56b76167e7675b83b668ddefba8dbd561cb4858ead876cbf",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 50,
+      "datasetId": "openthoughts/tasktrove-mix-h5-skill-diverse-v2",
+      "taskDigest": "sha256:2778d353b0ae380398422cfacd3c07ec823a76e36d16ad30f353881ebabdd556",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 51,
+      "datasetId": "openthoughts/tasktrove-nemotron-gym-instruction-following-v2",
+      "taskDigest": "sha256:4c842823043912ab8d8ff4bab40dfda14208663de76c62dc2afd552d2a69c1b0",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 52,
+      "datasetId": "openthoughts/tasktrove-nemotron-gym-knowledge-web-search-mcqa",
+      "taskDigest": "sha256:19ce2adc502d135c37c96e68b78d1ac6adee8d8e2ad14ccbcc3e21946fd260ba",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 53,
+      "datasetId": "openthoughts/tasktrove-swesmith-oracle-filtered",
+      "taskDigest": "sha256:7067142a596cba1bab5d37f749b89116ba6081b64a6d0738f04a4ae4eb034f6b",
+      "disposition": "held_before_execution",
+      "holdCodes": ["subject_timeout_not_exact_3600", "license_evidence_incomplete"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 54,
+      "datasetId": "tbench-dw3-a-dw3_1784073253_2627946/dw3-dataset",
+      "taskDigest": null,
+      "disposition": "held_before_execution",
+      "holdCodes": ["task_detail_not_found"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 55,
+      "datasetId": "tbench-lbtest-lb_1784071796_2517183/lbtest-dataset",
+      "taskDigest": null,
+      "disposition": "held_before_execution",
+      "holdCodes": ["task_detail_not_found"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 56,
+      "datasetId": "tbench-up3-a-up3_1784108188_141385/up3-dataset",
+      "taskDigest": null,
+      "disposition": "held_before_execution",
+      "holdCodes": ["task_detail_not_found"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    },
+    {
+      "ordinal": 57,
+      "datasetId": "tbench-up4-a-up4_1784108341_146593/up4-dataset",
+      "taskDigest": null,
+      "disposition": "held_before_execution",
+      "holdCodes": ["task_detail_not_found"],
+      "round": null,
+      "runRef": null,
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "resources": [
+        {
+          "resourceClass": "admission_record",
+          "state": "settled",
+          "resourceRefDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+          "evidenceRefs": ["population-shard-5/settlements/settlement.json"]
+        }
+      ]
+    }
+  ],
+  "finalState": "complete",
+  "wakeCondition": "Re-fetch all Hub pages and requalify held ids only after a changed capability fingerprint: exact Subject timeout 3600 admission, license evidence, native platform/resources, task access, or required auth/network/verifier capability.",
+  "noSuccessSimulation": true
+}

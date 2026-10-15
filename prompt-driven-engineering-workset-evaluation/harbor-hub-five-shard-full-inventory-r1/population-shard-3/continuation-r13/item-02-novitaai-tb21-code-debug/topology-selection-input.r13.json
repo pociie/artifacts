@@ -1,0 +1,50 @@
+{
+  "architectureCandidates": [
+    {
+      "architectureId": "agent-architecture:execution-preparation:focused-generator-validator",
+      "artifactRef": "artifacts/agents/execution-preparation/architectures/focused-preparation-generator-validator.json",
+      "availability": "available",
+      "compatibleModes": ["single_task", "loop", "orchestration"],
+      "disqualifiers": [
+        "unbounded_iteration",
+        "validator_must_author_repair",
+        "effect_authority_required"
+      ],
+      "nestedPatterns": ["generator_validator"],
+      "primaryPattern": "pipeline",
+      "requiredSignals": ["one_bounded_preparation_output", "independent_validation_available"],
+      "responsibilityClasses": ["builder", "validator"],
+      "structuralCost": 1
+    }
+  ],
+  "constraints": ["one_owner", "no_parallel_contributions"],
+  "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+  "observedSignals": [
+    "separable_static_responsibilities",
+    "ordered_dependency",
+    "exact_output_contract",
+    "single_aggregation_owner",
+    "one_bounded_preparation_output",
+    "independent_validation_available"
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-3:NovitaAI/tb21-code-debug:r13:execute-harbor-subject",
+  "requiredResponsibilityClasses": ["builder", "validator"],
+  "selectedMode": "single_task",
+  "swarmCandidates": [],
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "topologyRequirementDecision": {
+    "authorityEffect": "none",
+    "blockers": [],
+    "kind": "execution-topology-requirement-decision/v1",
+    "reasonCodes": ["separable_static_responsibilities"],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-3:NovitaAI/tb21-code-debug:r13:execute-harbor-subject",
+    "requiredCapabilityClasses": ["agent_architecture_operation"],
+    "routeDecisionSha256": "44db44660e972c3e881edc723a10181d5d028ed1afd6eb723d36430cca0cd50a",
+    "selectedMode": "single_task",
+    "status": "selected",
+    "targetScope": "effective_primary",
+    "topologyRequirement": "architecture_only"
+  },
+  "workflowPatternId": "pipeline"
+}

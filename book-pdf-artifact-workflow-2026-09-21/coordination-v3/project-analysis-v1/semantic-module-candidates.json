@@ -1,0 +1,90 @@
+{
+  "kind": "semantic-module-candidate-set/v1",
+  "candidateSetId": "semantic-modules:claude-code-source:v1",
+  "sourceRevision": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+  "lifecycleState": "candidate",
+  "basis": "responsibility clusters derived from source flow and import topology; not asserted upstream bounded contexts",
+  "candidates": [
+    {
+      "id": "M1",
+      "name": "composition-routing",
+      "responsibility": "bootstrap runtime, select commands/tools/surfaces, and assemble the interactive or headless application",
+      "sourcePaths": ["src/main.tsx", "src/tools.ts", "src/commands.ts", "src/bootstrap/**", "src/entrypoints/**"],
+      "dependsOn": ["M2", "M3", "M4", "M6", "M7", "M8"],
+      "extractionRisk": "high_root_composition_fan_out"
+    },
+    {
+      "id": "M2",
+      "name": "turn-engine",
+      "responsibility": "own a user turn, model iteration, continuation state, tool-result reinjection, limits, and terminal result projection",
+      "sourcePaths": ["src/query.ts", "src/QueryEngine.ts", "src/utils/queryHelpers.ts", "src/context.ts"],
+      "dependsOn": ["M3", "M5", "M8"],
+      "extractionRisk": "high_state_and_cross_cutting_context"
+    },
+    {
+      "id": "M3",
+      "name": "effect-runtime",
+      "responsibility": "interpret tool proposals through schema, hooks, permission decisions, concurrency policy, execution, and result normalization",
+      "sourcePaths": ["src/services/tools/**", "src/hooks/**", "src/Tool.ts"],
+      "dependsOn": ["M4", "M8"],
+      "extractionRisk": "high_authority_and_context_coupling"
+    },
+    {
+      "id": "M4",
+      "name": "built-in-effects-and-presenters",
+      "responsibility": "implement built-in tools and their UI or terminal presentation contracts",
+      "sourcePaths": ["src/tools/**", "src/components/**", "src/ink/**"],
+      "dependsOn": ["M3", "M8"],
+      "extractionRisk": "medium_large_surface_area"
+    },
+    {
+      "id": "M5",
+      "name": "session-recovery",
+      "responsibility": "persist append-only transcripts, reconstruct parent-linked conversation state, compact context, and repair resume topology",
+      "sourcePaths": ["src/utils/sessionStorage.ts", "src/services/compact/**", "src/services/SessionMemory/**"],
+      "dependsOn": ["M2", "M8"],
+      "extractionRisk": "high_round_trip_and_migration_semantics"
+    },
+    {
+      "id": "M6",
+      "name": "extension-runtime",
+      "responsibility": "discover and host plugins, skills, MCP capabilities, and hook extensions",
+      "sourcePaths": ["src/plugins/**", "src/skills/**", "src/services/mcpClient*", "src/hooks/**"],
+      "dependsOn": ["M3", "M8"],
+      "extractionRisk": "high_feature_gate_and_provider_variance"
+    },
+    {
+      "id": "M7",
+      "name": "surface-adapters",
+      "responsibility": "adapt CLI, bridge, remote, SDK, and server transports to core turn and effect semantics",
+      "sourcePaths": ["src/cli/**", "src/bridge/**", "src/remote/**", "src/server/**"],
+      "dependsOn": ["M1", "M2", "M3", "M5", "M8"],
+      "extractionRisk": "medium_transport_specific"
+    },
+    {
+      "id": "M8",
+      "name": "platform-adapters",
+      "responsibility": "provide filesystem, process, configuration, telemetry, permission, OS, and provider integration mechanisms",
+      "sourcePaths": ["src/utils/**", "src/services/api/**", "src/services/analytics/**", "src/native-ts/**"],
+      "dependsOn": [],
+      "extractionRisk": "high_utils_is_not_a_cohesive_boundary"
+    }
+  ],
+  "forbiddenInterpretations": [
+    "Do not treat these candidates as current package boundaries.",
+    "Do not infer safe extraction order from directory names alone.",
+    "Do not treat a cycle as proof that every participating edge is harmful."
+  ],
+  "recommendedSequence": [
+    "characterize observable behavior and round-trip invariants",
+    "introduce leaf contracts and compatibility facades",
+    "separate pure codecs and policies from filesystem, provider, and UI adapters",
+    "invert one concrete dependency at a time",
+    "move one vertical extension or surface at a time",
+    "retire barrels and shims only after differential validation"
+  ],
+  "evidenceRefs": ["module-topology.json", "../source-analysis-contribution-packet.json"],
+  "limitations": ["missing feature-gated modules", "no runtime trace", "no official ownership map"],
+  "invalidatedBy": ["source revision change", "runtime evidence contradicts responsibility mapping", "official ownership evidence arrives"],
+  "authorityEffect": "none"
+}

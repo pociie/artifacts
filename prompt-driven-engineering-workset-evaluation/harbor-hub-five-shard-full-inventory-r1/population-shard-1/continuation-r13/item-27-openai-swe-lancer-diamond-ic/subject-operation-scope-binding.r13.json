@@ -1,0 +1,73 @@
+{
+  "authorityEffect": "none",
+  "blockers": [],
+  "effectivePrimaryMode": "single_task",
+  "excludedScopeKinds": ["ambient", "controller", "coverage"],
+  "kind": "subject-operation-scope-binding-decision/v1",
+  "reasonCodes": [
+    "non_subject_scopes_explicitly_excluded",
+    "selected_subject_topology_content_bound"
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-1:openai/swe-lancer-diamond-ic:r13:execute-harbor-subject",
+  "routeDecisionSha256": "4e2cf44488c8539f0bc248114c6676008830764e8da5d84cbf7e6e7d8f8c557a",
+  "scopeBindings": [
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:1a57c787f6e398f545e3b2f3a644a5c0b332721782a01449e5c0b2a25c7a1efb",
+      "disposition": "coverage_stimulus_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-27-openai-swe-lancer-diamond-ic/source-and-plan-binding.r13.json",
+      "scopeId": "coverage:population-shard-1:openai/swe-lancer-diamond-ic:r13",
+      "scopeKind": "coverage",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:69cdc2489576d3d2dd2ce16f62ea9e948316b53e79cc755a4dc482a04514921b",
+      "disposition": "context_only",
+      "ref": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/environment-platform-observation.json",
+      "scopeId": "ambient:population-shard-1:openai/swe-lancer-diamond-ic:r13",
+      "scopeKind": "ambient",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:233d7afc21d172e648cc36f7b3ff37ffaf42ce60741bb562e45ad98881d2f4bb",
+      "disposition": "control_plane_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-27-openai-swe-lancer-diamond-ic/claim.r13.json",
+      "scopeId": "controller:population-shard-1:openai/swe-lancer-diamond-ic:r13",
+      "scopeKind": "controller",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": true,
+      "digest": "sha256:73761d2d1ee7e0a17bc03d8b67c13c22ceed07d76cb3841f57323d1abd0474c9",
+      "disposition": "eligible_report_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-27-openai-swe-lancer-diamond-ic/subject-topology-binding.r13.json",
+      "scopeId": "subject-scope:population-shard-1:openai/swe-lancer-diamond-ic:r13",
+      "scopeKind": "subject",
+      "state": "selected"
+    }
+  ],
+  "scopedMode": "single_task",
+  "segmentMode": null,
+  "status": "ready",
+  "subjectOperation": {
+    "agentArchitectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmDigest": null,
+    "agentSwarmRef": null,
+    "bindingDigest": "sha256:73761d2d1ee7e0a17bc03d8b67c13c22ceed07d76cb3841f57323d1abd0474c9",
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-27-openai-swe-lancer-diamond-ic/subject-topology-binding.r13.json",
+    "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "disposition": "eligible_report_only",
+    "scopeId": "subject-scope:population-shard-1:openai/swe-lancer-diamond-ic:r13",
+    "workflowPatternDigest": "sha256:93bf91356072b399cd3684ea2d482c7fe3afe4ca083e8443e86978b2bdb5d7bd",
+    "workflowPatternId": "pipeline",
+    "workflowPatternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/pipeline/workflow-pattern.json"
+  },
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "topologyRequirementDecisionSha256": "8a4202c406f6c3f34020fd2505fdc9422daa616fc09bc96ffff2a817f0e31754",
+  "topologySelectionDecisionSha256": "916acb0c97e0fae576b3d64dedc9b4bf606252ce469b57b86912e7188cce0432"
+}

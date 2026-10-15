@@ -1,0 +1,70 @@
+{
+  "kind": "job-application-report-comparative-audit/v1",
+  "status": "complete",
+  "authority_effect": "none",
+  "subjects": {
+    "reference_report": ".collab/artifacts/job-application-2026-09-ai-service-engineer/self-introduction-5sets-v6.pdf",
+    "initial_target_report": ".collab/artifacts/job-application-2026-10-finebridge-digital-service-planner-fresh/finebridge-digital-service-planner-report.pdf"
+  },
+  "root_findings": [
+    {
+      "id": "finding:lexical-metrics-missed-argument-collapse",
+      "observation": "The initial Finebridge answers had low n-gram overlap and no repeated long sentences, but all five candidates reused one question-level controlling idea, evidence order, and review takeaway.",
+      "reader_effect": "Candidates appeared to be paraphrases of one answer even when wording differed.",
+      "artifact_change": "Require unique candidate-question claims and reviewed rhetorical realizations, and make semantic pattern collapse non-compensatory."
+    },
+    {
+      "id": "finding:generator-caveats-entered-answers",
+      "observation": "Application answers contained report-writer phrases about facts that still needed confirmation or later supplementation.",
+      "reader_effect": "The applicant voice was interrupted by document-production commentary.",
+      "artifact_change": "Omit unsupported claims or narrow them in answers; move evidence requests to the expert report unless uncertainty itself demonstrates judgment."
+    },
+    {
+      "id": "finding:report-sections-separated-one-candidate-decision",
+      "observation": "Answers, scores, expert review, and interview preparation were separated into different report sections and no explanatory raster assets were used.",
+      "reader_effect": "A user had to move between distant pages to judge one candidate and the report lacked the accepted reference's visual explanation layer.",
+      "artifact_change": "Bind the reusable editorial stylesheet, require purposeful PNG assets, keep one candidate's score, thesis, answers, review, and interview prompts adjacent, and split before shrinking text."
+    }
+  ],
+  "research_application": [
+    {
+      "source": "https://owl.purdue.edu/owl/graduate_writing/introduction_to_writing/documents/revising-and-editing/sentence-structure-activity.pdf",
+      "applied_principle": "Sentence variation is used to change emphasis and relationships rather than decorate a copied argument."
+    },
+    {
+      "source": "https://careerservices.fas.harvard.edu/resources/interviewing/",
+      "applied_principle": "Experience answers retain specific context, applicant action, result or boundary, and employer relevance."
+    },
+    {
+      "source": "https://www.korean.go.kr/nkview/nknews/200011/28_1.htm",
+      "applied_principle": "Long Korean sentences are split when actor-action or subject-predicate relationships become hard to follow."
+    },
+    {
+      "source": "https://design-system.service.gov.uk/styles/headings/",
+      "applied_principle": "The PDF uses a consistent heading hierarchy tied to reader decisions."
+    },
+    {
+      "source": "https://www.nngroup.com/articles/formatting-long-form-content/",
+      "applied_principle": "Long report content is chunked with descriptive headings and an overview before detailed candidate sections."
+    }
+  ],
+  "post_change_expression_evidence": {
+    "question_count": 4,
+    "candidate_count": 5,
+    "unique_primary_claims_per_question": 5,
+    "distinct_move_sequences_per_question": 5,
+    "distinct_opening_modes_per_question": 5,
+    "minimum_distinct_closing_modes_per_question": 4,
+    "maximum_pairwise_five_gram_jaccard_by_question": {
+      "question-collaboration": 0.028,
+      "question-preparation": 0.015,
+      "question-value-formation": 0.029,
+      "question-three-to-five-year-goal": 0.023
+    },
+    "repeated_long_sentence_count": 0
+  },
+  "limitations": [
+    "The supplied Finebridge company and posting locators use example domains, so company-specific products, strategy, and complete qualification details remain unverified.",
+    "Collaboration detail, applied GA4 or SQL evidence, post-change inquiry magnitude, and the applicant's preferred finance area still require applicant confirmation."
+  ]
+}

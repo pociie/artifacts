@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "e1783e481a00e0677186ed819215b197844765deb09d41004e66adcc1ce7d4c6",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-38-openthoughts-tasktrove-nemotron-gym-instruction-following-v2/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-38-openthoughts-tasktrove-nemotron-gym-instruction-following-v2/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "1aea279ef74c50783ee97e9a3056306a7faf2fed9f8ab444446a83150c0b1b2a",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "308874d5b13be408f8cab55628b8f73bf188b2a4206e5361cf7a190a14ad97df",
+      "topologySelectionDecisionSha256": "d348ed9c103e8de4789c51f0a4d3cf4f73e819131b44718bac7eb3e712935d1a"
+    },
+    {
+      "coordinationPlanDecisionSha256": "e1783e481a00e0677186ed819215b197844765deb09d41004e66adcc1ce7d4c6",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-38-openthoughts-tasktrove-nemotron-gym-instruction-following-v2/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-38-openthoughts-tasktrove-nemotron-gym-instruction-following-v2/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "1aea279ef74c50783ee97e9a3056306a7faf2fed9f8ab444446a83150c0b1b2a",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "308874d5b13be408f8cab55628b8f73bf188b2a4206e5361cf7a190a14ad97df",
+      "topologySelectionDecisionSha256": "d348ed9c103e8de4789c51f0a4d3cf4f73e819131b44718bac7eb3e712935d1a"
+    },
+    {
+      "coordinationPlanDecisionSha256": "e1783e481a00e0677186ed819215b197844765deb09d41004e66adcc1ce7d4c6",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-38-openthoughts-tasktrove-nemotron-gym-instruction-following-v2/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-38-openthoughts-tasktrove-nemotron-gym-instruction-following-v2/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "1aea279ef74c50783ee97e9a3056306a7faf2fed9f8ab444446a83150c0b1b2a",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "308874d5b13be408f8cab55628b8f73bf188b2a4206e5361cf7a190a14ad97df",
+      "topologySelectionDecisionSha256": "d348ed9c103e8de4789c51f0a4d3cf4f73e819131b44718bac7eb3e712935d1a"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

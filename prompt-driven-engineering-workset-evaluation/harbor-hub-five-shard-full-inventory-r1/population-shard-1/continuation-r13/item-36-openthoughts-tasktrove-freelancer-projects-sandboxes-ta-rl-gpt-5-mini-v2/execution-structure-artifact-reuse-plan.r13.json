@@ -1,0 +1,119 @@
+{
+  "authorityEffect": "none",
+  "decision": {
+    "authorityEffect": "none",
+    "capabilityGaps": [
+      {
+        "allowedFallbackKinds": ["hold"],
+        "concernId": "item-effective-provider-receipt",
+        "requiredCapabilityIds": ["effective_provider_receipt"]
+      }
+    ],
+    "kind": "artifact-reuse-resolution-decision/v1",
+    "rejectedCandidates": [
+      {
+        "artifactRef": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md",
+        "reasons": ["no_required_coverage"]
+      },
+      {
+        "artifactRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+        "reasons": ["no_required_coverage"]
+      },
+      {
+        "artifactRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+        "reasons": ["no_required_coverage"]
+      }
+    ],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2:artifact-reuse",
+    "selectedArtifacts": [
+      {
+        "artifactKind": "context-projection",
+        "artifactRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json",
+        "capabilityIds": ["r13_context_binding"],
+        "coveredConcernIds": ["r13-context-projection"]
+      }
+    ],
+    "selectedMode": "single_task",
+    "status": "require_context",
+    "uncoveredConcernIds": ["item-effective-provider-receipt"]
+  },
+  "digest": "sha256:491353bb4b92af0dd15f033c98bb5fe8ec5eb82c327dd869ea8160bd4fc119f6",
+  "identityDigest": "sha256:6038c34a4843efec906328487e3a7e79543170b7193d21c82f22dfc11ff5233e",
+  "itemId": "openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2",
+  "kind": "harbor-item-artifact-reuse-evidence/v2",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawTaskContentProjected": false
+  },
+  "request": {
+    "allowedFallbackKinds": ["hold"],
+    "candidates": [
+      {
+        "artifactKind": "context-projection",
+        "artifactRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json",
+        "availability": "available",
+        "capabilityIds": ["r13_context_binding"],
+        "compatibleModes": ["single_task"],
+        "coversConcernIds": ["r13-context-projection"],
+        "qualification": "qualified",
+        "structuralCost": 1
+      },
+      {
+        "artifactKind": "simulation-contract",
+        "artifactRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+        "availability": "available",
+        "capabilityIds": ["simulation_contract"],
+        "compatibleModes": ["single_task"],
+        "coversConcernIds": [],
+        "qualification": "qualified",
+        "structuralCost": 1
+      },
+      {
+        "artifactKind": "provider-adapter-contract",
+        "artifactRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+        "availability": "available",
+        "capabilityIds": ["provider_contract"],
+        "compatibleModes": ["single_task"],
+        "coversConcernIds": ["item-effective-provider-receipt"],
+        "qualification": "qualified",
+        "structuralCost": 2
+      },
+      {
+        "artifactKind": "terminal-reward-contract",
+        "artifactRef": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md",
+        "availability": "available",
+        "capabilityIds": ["terminal_reward_contract"],
+        "compatibleModes": ["single_task"],
+        "coversConcernIds": [],
+        "qualification": "qualified",
+        "structuralCost": 2
+      }
+    ],
+    "concerns": [
+      {
+        "acceptedArtifactKinds": ["context-projection"],
+        "id": "r13-context-projection",
+        "requiredCapabilityIds": ["r13_context_binding"]
+      },
+      {
+        "acceptedArtifactKinds": ["provider-adapter-contract"],
+        "id": "item-effective-provider-receipt",
+        "requiredCapabilityIds": ["effective_provider_receipt"]
+      }
+    ],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2:artifact-reuse",
+    "selectedMode": "single_task"
+  },
+  "residualGapRef": "gap:item-effective-provider-receipt",
+  "schemaVersion": 2,
+  "selectedReusableArtifactBindings": [
+    {
+      "digest": "sha256:68812a487135db628c34c709cbc1d3c8e4407b118fcdbfde8a1295a4dd01400a",
+      "qualified": true,
+      "ref": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json"
+    }
+  ],
+  "sourceMutation": false
+}

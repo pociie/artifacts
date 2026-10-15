@@ -1,0 +1,107 @@
+{
+  "kind": "claim-led-report-authoring-loop/v1",
+  "loopId": "loop:book-pdf-claim-led-authoring",
+  "revision": "book-pdf-authoring-loop/1",
+  "status": "candidate_not_activated",
+  "authorityEffect": "none",
+  "objective": "Produce a high-context technical book report whose argument remains understandable without relying on keyword emphasis or framework familiarity.",
+  "ownedResponsibility": [
+    "ordered authoring phases",
+    "phase entry and exit evidence",
+    "revision triggers",
+    "quality hold conditions",
+    "handoff packet shape"
+  ],
+  "mustNotOwn": [
+    "source truth acceptance",
+    "agent activation or assignment",
+    "visual or factual self-acceptance",
+    "publication",
+    "settlement"
+  ],
+  "inputs": [
+    "bounded objective, reader and decision",
+    "source-to-claim packet",
+    "writing-quality-contract-v1",
+    "pdf-expression-spec-v2",
+    "dynamic-artifact-capability-bindings-v2",
+    "editorial-quality-rubric-v1"
+  ],
+  "phases": [
+    {
+      "id": "phase:reader-and-decision-frame",
+      "ownerRole": "role:technical-editorial-writer",
+      "action": "State what the reader should understand or decide, prior knowledge, non-scope and source limits.",
+      "exitEvidence": ["reader question", "desired conceptual transfer", "non-scope", "source limitation"],
+      "holdWhen": ["reader or decision is unresolved", "the report is only a directory tour"]
+    },
+    {
+      "id": "phase:conceptual-model",
+      "ownerRole": "role:technical-editorial-writer",
+      "action": "Model the topic with high-level concepts such as state ownership, time, control, effect and durability before naming project mechanisms.",
+      "exitEvidence": ["concept map", "causal spine", "keyword-decoupling draft"],
+      "holdWhen": ["the outline is a list of technologies", "chapter order follows folders instead of reader causality"]
+    },
+    {
+      "id": "phase:claim-and-source-binding",
+      "ownerRole": "role:source-investigator-context-curator",
+      "action": "Bind each material claim to observed source fact, external background or project inference and retain limitations.",
+      "exitEvidence": ["claim refs", "source refs", "inference labels", "unknowns"],
+      "holdWhen": ["a material claim has no source or inference disposition", "external background is presented as project observation"]
+    },
+    {
+      "id": "phase:manuscript-composition",
+      "ownerRole": "role:technical-editorial-writer",
+      "action": "Write each section as reader question, context, thesis, causal explanation, worked trace, failure path, limitation and transition.",
+      "exitEvidence": ["continuous prose manuscript", "worked traces", "failure paths", "chapter transitions"],
+      "holdWhen": ["headings or bullets carry the argument", "removing keywords destroys comprehension", "prose hides missing evidence"]
+    },
+    {
+      "id": "phase:content-function-design",
+      "ownerRole": "role:pdf-information-visual-designer",
+      "action": "Choose Monograph for explanatory progress and Notebook for evidence review, then map only argument-supporting diagrams and notes.",
+      "exitEvidence": ["page-mode decisions", "diagram questions and conclusions", "layout source"],
+      "holdWhen": ["design alternates styles mechanically", "cards fragment causal prose", "visual emphasis adds unsupported meaning"]
+    },
+    {
+      "id": "phase:paged-media-render",
+      "ownerRole": "role:pdf-information-visual-designer",
+      "action": "Render frozen HTML/CSS into selectable-text A4 PDF and page previews.",
+      "exitEvidence": ["PDF digest", "page previews", "page count", "extractable text", "overflow audit"],
+      "holdWhen": ["text is rasterized", "page overflow exists", "expected pages are missing"]
+    },
+    {
+      "id": "phase:author-side-quality-review",
+      "ownerRole": "role:pdf-information-visual-designer",
+      "action": "Apply the editorial rubric and contact-sheet review without claiming independence or acceptance.",
+      "exitEvidence": ["rubric candidate", "known limitations", "revision decision"],
+      "holdWhen": ["keyword coupling remains", "chapter rhythm resembles slides", "source labels are visually ambiguous"]
+    },
+    {
+      "id": "phase:independent-fact-visual-validation",
+      "ownerRole": "role:independent-fact-visual-validator",
+      "action": "Validate frozen facts and visual expression without mutation.",
+      "exitEvidence": ["independent validation report or explicit pending disposition"],
+      "holdWhen": ["validator is not independent", "candidate or criteria changed", "recipient acknowledgement is absent when required"]
+    }
+  ],
+  "revisionTriggers": [
+    "reader or decision changes",
+    "source revision or limitation changes",
+    "keyword-decoupling or transfer test fails",
+    "page mode does not match content function",
+    "rendered PDF changes",
+    "independent validator requests revision"
+  ],
+  "stopConditions": [
+    "required source is unavailable",
+    "a material claim cannot be separated from unsupported inference",
+    "the same keyword-led structure fails twice without a changed conceptual model",
+    "a decision belongs to an external acceptance or publication owner"
+  ],
+  "currentExecution": "not_activated",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}
+

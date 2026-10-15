@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "self-introduction-research-sources/v4",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-07",
+  "purpose": "직무·사용자 중심 서사와 수치 평가체계를 구성할 때 사용할 공신력 있는 기준을 분리하고, 자료에서 직접 말하는 내용과 현재 작업에 적용한 해석을 구분한다.",
+  "sources": [
+    {"id": "lotte-job", "type": "official-recruitment", "url": "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007", "supports": ["AI service API/backend", "data pipeline", "AI project support", "platform operation/improvement", "service discovery/validation", "quality verification", "300-character minimum"], "application": "Q1 직무 연결과 Q2의 서비스 엔지니어 관점 구성", "boundary": "지원자의 실제 경력이나 채용 결과를 설명하지 않음"},
+    {"id": "lotte-company", "type": "official-company-context", "url": "https://recruit.lotte.co.kr/companylife/affiliate/detail?compcd=30007", "supports": ["ICT platform, solution and consulting context across industries"], "application": "특정 고객 성과를 꾸미지 않고 여러 업무 요구를 서비스로 번역하는 서사 구성"},
+    {"id": "lotte-hr", "type": "official-hr-context", "url": "https://recruit.lotte.co.kr/about/hrsystem", "supports": ["challenge", "continuous growth", "collaboration"], "application": "가치관을 검증·학습·합의 행동으로 표현"},
+    {"id": "iso-9241-210", "type": "international-standard", "url": "https://www.iso.org/standard/77520.html", "supports": ["human-centred design principles and activities throughout the lifecycle of interactive systems"], "application": "사용자 목표와 사용 맥락을 기획·설계·검증·개선의 중심에 둠", "boundary": "자기소개서의 사용자 관점은 지원자 확인이 필요한 초안 해석"},
+    {"id": "iso-25010", "type": "international-standard", "url": "https://www.iso.org/standard/78176.html", "supports": ["a product quality model that supports specifying, measuring and evaluating quality across a lifecycle", "common quality terminology"], "application": "자소서 평가에서 구성개념·관찰 기준·품질 목적·한계를 먼저 정의"},
+    {"id": "iso-25022", "type": "international-standard", "url": "https://www.iso.org/standard/35746.html", "supports": ["quality-in-use measures, context coverage, measurement and evaluation concepts"], "application": "점수의 분모·적용 맥락·관찰 단위를 분리하고 운영 지표를 기록"},
+    {"id": "nist-ai-rmf", "type": "government-framework", "url": "https://www.nist.gov/itl/ai-risk-management-framework", "supports": ["trustworthiness considerations across AI design, development, use and evaluation", "Govern, Map, Measure and Manage lifecycle"], "application": "AI를 모델 출력이 아닌 서비스·운영·평가를 포함한 사회기술적 흐름으로 설명"},
+    {"id": "nist-airc-measure", "type": "government-guidance", "url": "https://airc.nist.gov/airmf-resources/playbook/measure/", "supports": ["measurement context, validity, reliability, monitoring, feedback and limitations"], "application": "구성개념·측정 맥락·미측정 영역·피드백을 평가 데이터에 분리 기록"},
+    {"id": "nist-genai-profile", "type": "government-framework", "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf", "supports": ["measurement error, statistical variation, domain expertise, feedback, validity and reliability, documenting what cannot be measured"], "application": "숫자를 성과로 과장하지 않고 불확실성·도메인 검토·후속 확인을 별도 축으로 관리"},
+    {"id": "microsoft-word-choice", "type": "technical-style-guidance", "url": "https://learn.microsoft.com/en-us/style-guide/word-choice/", "supports": ["familiar terms, one term for one concept, context definitions, consistent terminology"], "application": "프로젝트 고유어보다 보편 용어를 우선하고 핵심 용어의 대응을 고정"},
+    {"id": "microsoft-avoid-jargon", "type": "technical-style-guidance", "url": "https://learn.microsoft.com/en-us/style-guide/word-choice/avoid-jargon", "supports": ["avoid unnecessary jargon and explain technical terms for the audience"], "application": "채용 담당자가 저장소 내부 의미를 추론하지 않도록 기술을 사용자·업무 결과와 함께 표현"},
+    {"id": "fowler-ubiquitous-language", "type": "software-design-guidance", "url": "https://martinfowler.com/bliki/UbiquitousLanguage.html", "supports": ["a common rigorous language between domain experts and developers, tested with domain experts"], "application": "도메인 공통 용어의 필요성을 참고하되 팀 고유어를 그대로 보편어로 취급하지 않음"},
+    {"id": "testing-standards", "type": "measurement-standard", "url": "https://www.testingstandards.net/", "supports": ["validity, reliability and fairness as central concerns of educational and psychological testing"], "application": "편집 점수의 타당도·신뢰도·공정성을 점수와 별도 운영 데이터로 보존"},
+    {"id": "ets-reliability", "type": "measurement-guidance", "url": "https://www.ets.org/research/policy_research_reports/publications/report/2018/jysw.html", "supports": ["reliability as consistency across occasions, forms and raters; inter-rater reliability and measurement error"], "application": "단일 평가자의 점수는 editorial comparison only로 제한하고 독립 평가 후 일치도를 산출"},
+    {"id": "aera-rubric-guidance", "type": "measurement-standard", "url": "https://www.testingstandards.net/uploads/7/6/6/4/76643089/9780935302356.pdf", "supports": ["scorer training, agreement and accuracy procedures should be documented when scoring is used"], "application": "rubric anchor·counter-evidence·독립 재평정 절차를 기록"}
+  ],
+  "methodSynthesis": [
+    {"principle": "construct validity", "implementation": "평가하려는 것을 편집 적합도로 제한하고 실제 실력·채용 결과와 분리"},
+    {"principle": "content validity", "implementation": "문항 요구·공고 직무·사용자 관점·프로젝트 근거·공통 용어를 rubric에 직접 매핑"},
+    {"principle": "reliability", "implementation": "공통 0~4 anchor, counter-evidence, 동일 입력 재평정, 독립 평가자 일치도 예정"},
+    {"principle": "measurement uncertainty", "implementation": "unavailable·pending_user_review를 0점으로 대체하지 않고 점수와 별도 보존"},
+    {"principle": "sensitivity and discrimination", "implementation": "criterion spread·pairwise separation·close pair·가중치 시나리오별 순위 안정성을 함께 확인"},
+    {"principle": "plain language", "implementation": "보편 용어와 행위자·대상·기준·다음 행동을 문장에 고정"}
+  ],
+  "inferenceBoundary": "위 자료는 설계·평가 원칙을 제공한다. v4 rubric의 가중치, 세트 점수, 사용자 견해에 대한 문장 표현은 현재 지원서 작업을 위한 제한된 편집 설계이며 자료가 지원자의 역량이나 성격을 증명한다는 뜻이 아니다."
+}

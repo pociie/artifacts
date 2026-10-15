@@ -1,0 +1,593 @@
+{
+  "kind": "job-application-report-request/v1",
+  "schema_version": 1,
+  "request_id": "coremotion-smart-factory-five-set-pdf",
+  "revision": "revision:2026-09-14.2",
+  "application": {
+    "company_name": "코어모션 인더스트리",
+    "role_title": "스마트팩토리 시스템 엔지니어",
+    "language": "한국어",
+    "official_posting_source_ids": [
+      "source:job-posting"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:job-posting",
+      "source_type": "official_posting",
+      "locator": "https://jobs.coremotion.example/smart-factory-engineer",
+      "authority": "primary",
+      "observed_at": "2026-09-14T12:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:company-domain",
+      "source_type": "official_company",
+      "locator": "https://www.coremotion.example",
+      "authority": "primary",
+      "observed_at": "2026-09-14T12:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    },
+    {
+      "id": "source:applicant-profile",
+      "source_type": "applicant_statement",
+      "locator": "user-provided-profile-summary",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-14T12:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    },
+    {
+      "id": "source:applicant-experiences",
+      "source_type": "applicant_statement",
+      "locator": "user-provided-experience-summary",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-14T12:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    },
+    {
+      "id": "source:applicant-field-note",
+      "source_type": "applicant_statement",
+      "locator": "user-provided-field-practice-note",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-14T12:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    }
+  ],
+  "questions": [
+    {
+      "id": "question-1-goal",
+      "prompt": "스스로 목표를 설정하고 끝까지 실행하여 성과를 만들어 낸 경험을 설명해 주세요.",
+      "min_chars": 1,
+      "max_chars": 800,
+      "required_contents": [
+        "스스로 설정한 목표",
+        "실행 과정",
+        "성과와 배운 점"
+      ],
+      "focus": {
+        "primary_claim": "데이터와 현장 확인을 반복해 문제를 분석 목표에서 개선 근거로 전환한 실행력",
+        "reviewer_need": "목표를 세우고 끝까지 확인해 결과를 만든 방식",
+        "evidence_function": "6개월 설비·생산 데이터 분석과 작업자 인터뷰의 인과를 보여준다",
+        "non_overlap_boundary": "직무 지원 동기나 일반적인 장단점이 아니라 목표 설정과 실행 지속성을 중심으로 쓴다"
+      },
+      "user_confirmation_ids": []
+    },
+    {
+      "id": "question-2-motivation-fit",
+      "prompt": "코어모션 인더스트리를 선택한 이유와 스마트팩토리 시스템 엔지니어 직무에 적합하다고 생각하는 이유를 작성해 주세요.",
+      "min_chars": 1,
+      "max_chars": 600,
+      "required_contents": [
+        "회사 선택 이유",
+        "직무 적합성",
+        "관련 경험과 기여 방향"
+      ],
+      "focus": {
+        "primary_claim": "제조 데이터와 현장 개선을 연결하는 역할에 대한 지원 동기와 준비도",
+        "reviewer_need": "공고의 업무가 지원자의 경험과 어떻게 맞물리는지",
+        "evidence_function": "공고 업무와 제조 데이터·공정 개선·현장 소통 경험을 직접 연결한다",
+        "non_overlap_boundary": "과거 프로젝트의 상세 서사보다 회사·직무를 고른 이유와 입사 후 기여 방향을 앞세운다"
+      },
+      "user_confirmation_ids": []
+    },
+    {
+      "id": "question-3-strength-gap",
+      "prompt": "본인의 장점과 보완할 점을 각각 설명하고 업무나 프로젝트에서 이를 어떻게 관리했는지 작성해 주세요.",
+      "min_chars": 1,
+      "max_chars": 700,
+      "required_contents": [
+        "장점",
+        "보완할 점",
+        "관리 방법과 실제 적용"
+      ],
+      "focus": {
+        "primary_claim": "수치와 현장을 함께 보는 장점을 절차로 강화하고 데이터 편향을 보완한 자기관리",
+        "reviewer_need": "자기 인식이 실제 업무 행동과 관리 방식으로 이어지는지",
+        "evidence_function": "데이터만으로 판단했던 한계와 3단계 문제 접근법을 보여준다",
+        "non_overlap_boundary": "특정 성과를 재현하는 이야기보다 일하는 습관과 보완 시스템을 중심으로 쓴다"
+      },
+      "user_confirmation_ids": []
+    },
+    {
+      "id": "question-4-process-improvement",
+      "prompt": "기존 프로세스나 시스템의 문제를 발견하여 더 효율적인 방법으로 개선했던 경험을 설명해 주세요.",
+      "min_chars": 1,
+      "max_chars": 800,
+      "required_contents": [
+        "기존 문제",
+        "개선 방법",
+        "검증 결과와 한계"
+      ],
+      "focus": {
+        "primary_claim": "검사 단계의 대기 병목을 찾아 작업 순서를 시뮬레이션하고 공정 흐름을 개선한 경험",
+        "reviewer_need": "문제 발견부터 대안 검증까지의 개선 논리와 결과",
+        "evidence_function": "공정 시간 측정, 순서 변경 시뮬레이션, 11% 감소 결과를 연결한다",
+        "non_overlap_boundary": "개인의 장단점이나 지원 동기 대신 프로세스의 병목과 개선 효과를 구체화한다"
+      },
+      "user_confirmation_ids": []
+    }
+  ],
+  "application_analysis": {
+    "company_context": [
+      {
+        "id": "company-context:manufacturing-data",
+        "observation": "사용자 제공 공고는 제조 데이터 수집 및 분석을 직무 핵심 업무로 제시한다.",
+        "evidence_refs": [
+          "source:job-posting"
+        ],
+        "writing_implication": "지원 동기를 제조 데이터가 현장 의사결정과 개선으로 이어지는 흐름에 연결한다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "company-context:connected-factory",
+        "observation": "사용자 제공 공고에는 생산 설비 시스템 연동과 공정 자동화가 포함되어 있다.",
+        "evidence_refs": [
+          "source:job-posting"
+        ],
+        "writing_implication": "기술 목록보다 설비·공정·데이터를 연결하는 책임을 강조한다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "company-context:field-productivity",
+        "observation": "사용자 제공 공고는 제조 시스템 모니터링, 생산성 개선, 현장 문제 분석 및 해결을 함께 요구한다.",
+        "evidence_refs": [
+          "source:job-posting"
+        ],
+        "writing_implication": "분석 결과를 실제 작업 조건과 확인 기준으로 검증하는 태도를 지원 이유로 삼는다.",
+        "certainty": "fact"
+      }
+    ],
+    "role_domain_concerns": [
+      {
+        "id": "role-concern:data-to-action",
+        "observation": "스마트팩토리 시스템 엔지니어는 수집된 제조 데이터를 운영 개선에 사용할 수 있는 정보로 바꿔야 한다.",
+        "evidence_refs": [
+          "source:job-posting"
+        ],
+        "writing_implication": "센서 데이터 분석과 공정 개선 경험을 데이터 해석에서 현장 행동으로 이어지는 사례로 배치한다.",
+        "certainty": "inference"
+      },
+      {
+        "id": "role-concern:integration-monitoring",
+        "observation": "설비 시스템 연동과 모니터링은 데이터 흐름뿐 아니라 현장 사용 조건과 예외를 확인하는 책임을 포함한다.",
+        "evidence_refs": [
+          "source:job-posting",
+          "source:applicant-field-note"
+        ],
+        "writing_implication": "작업자 인터뷰와 기록에 없는 조건을 확인한 경험을 시스템 운영 관점으로 번역한다.",
+        "certainty": "inference"
+      },
+      {
+        "id": "role-concern:field-problem-solving",
+        "observation": "공고의 현장 문제 해결 요구에는 분석 결과를 실제 공정 상황에서 검증하는 태도가 중요하다.",
+        "evidence_refs": [
+          "source:job-posting",
+          "source:applicant-experiences"
+        ],
+        "writing_implication": "입사 후 기여를 현장 확인, 개선안 검증, 생산성 확인의 순서로 제시한다.",
+        "certainty": "inference"
+      }
+    ],
+    "fit_hypotheses": [
+      {
+        "id": "fit:data-analysis-to-role",
+        "statement": "Python·SQL·Pandas를 활용한 제조 데이터 분석 경험은 공고의 제조 데이터 수집 및 분석 업무와 연결될 가능성이 있다.",
+        "evidence_refs": [
+          "source:job-posting",
+          "source:applicant-profile",
+          "source:applicant-experiences"
+        ],
+        "confirmation_required": true
+      },
+      {
+        "id": "fit:process-improvement-to-role",
+        "statement": "공정 대기시간 분석과 시뮬레이션 경험은 생산성 개선 업무에 전이될 가능성이 있다.",
+        "evidence_refs": [
+          "source:job-posting",
+          "source:applicant-experiences"
+        ],
+        "confirmation_required": true
+      },
+      {
+        "id": "fit:field-validation-to-role",
+        "statement": "작업자 인터뷰로 기록되지 않은 조건을 확인한 경험은 현장 문제 분석과 시스템 모니터링 업무에 연결될 가능성이 있다.",
+        "evidence_refs": [
+          "source:job-posting",
+          "source:applicant-field-note",
+          "source:applicant-experiences"
+        ],
+        "confirmation_required": true
+      }
+    ]
+  },
+  "applicant_evidence": {
+    "facts": [
+      {
+        "id": "fact:education",
+        "statement": "이도현은 한국산업대학교 산업공학과를 졸업한 신입 지원자다.",
+        "source_refs": [
+          "source:applicant-profile"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-2-motivation-fit",
+          "question-3-strength-gap"
+        ]
+      },
+      {
+        "id": "fact:data-tools",
+        "statement": "Python, SQL, Pandas, Power BI, PLC 기초, MES 개념, 데이터 분석, 공정 분석 역량을 보유하고 있다.",
+        "source_refs": [
+          "source:applicant-profile"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-1-goal",
+          "question-2-motivation-fit",
+          "question-4-process-improvement"
+        ]
+      },
+      {
+        "id": "fact:entry-level-target",
+        "statement": "스마트팩토리 및 제조 IT 직무를 희망한다.",
+        "source_refs": [
+          "source:applicant-profile"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-2-motivation-fit"
+        ]
+      }
+    ],
+    "value_statements": [
+      {
+        "id": "value:field-and-data",
+        "statement": "수치만으로 판단하지 않고 데이터 분석, 현장 확인, 개선안 검증의 순서로 문제를 접근한다.",
+        "source_refs": [
+          "source:applicant-field-note",
+          "source:applicant-experiences"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-1-goal",
+          "question-3-strength-gap",
+          "question-4-process-improvement"
+        ]
+      },
+      {
+        "id": "value:worker-context",
+        "statement": "현장 작업자의 경험과 데이터에 기록되지 않은 작업 조건을 함께 확인해야 한다고 배웠다.",
+        "source_refs": [
+          "source:applicant-field-note"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-1-goal",
+          "question-3-strength-gap",
+          "question-4-process-improvement"
+        ]
+      }
+    ],
+    "unknowns": [
+      {
+        "id": "unknown:company-context",
+        "needed_fact": "코어모션 인더스트리의 실제 사업·제품·현장 적용 맥락",
+        "affected_question_ids": [
+          "question-2-motivation-fit"
+        ],
+        "why_material": "공고 요약을 넘어선 회사 선택 이유를 쓰면 확인되지 않은 회사 사실을 만들 위험이 있다.",
+        "acceptable_evidence": "회사 공식 소개, 실제 사업 페이지, 또는 지원자가 확인한 제품·현장 정보"
+      },
+      {
+        "id": "unknown:field-result",
+        "needed_fact": "분석 또는 공정 개선안을 현장에 적용한 뒤의 실제 변화 수치와 확인 시점",
+        "affected_question_ids": [
+          "question-1-goal",
+          "question-4-process-improvement"
+        ],
+        "why_material": "시뮬레이션과 분석 결과를 실제 운영 성과로 과장하지 않고 성과 범위를 명확히 해야 한다.",
+        "acceptable_evidence": "적용 후 불량률·대기시간·처리량 변화, 검증 기록, 또는 시뮬레이션 결과의 조건표"
+      },
+      {
+        "id": "unknown:attachment-verification",
+        "needed_fact": "제공된 분석 코드·데이터·보고서에서 본인이 직접 수행한 세부 범위",
+        "affected_question_ids": [
+          "question-1-goal",
+          "question-3-strength-gap",
+          "question-4-process-improvement"
+        ],
+        "why_material": "면접에서 도구 사용과 기여 범위를 구체적으로 설명하려면 직접 수행한 작업을 확인해야 한다.",
+        "acceptable_evidence": "본인이 작성하거나 수정한 코드·표·시뮬레이션 설정·발표 자료의 담당 부분"
+      }
+    ]
+  },
+  "project_evidence": [
+    {
+      "id": "project:manufacturing-data",
+      "kind": "산학협력 제조 데이터 분석 프로젝트",
+      "scale": "약 6개월 분량의 센서 데이터와 생산 기록",
+      "applicant_role": "생산설비 데이터를 분석하고 불량 패턴의 원인을 탐색한 프로젝트 참여자",
+      "contribution": "Python·SQL·Pandas로 데이터를 정리하고 설비·시간대별 불량 발생 패턴을 비교했다.",
+      "process": "데이터 분석으로 이상 시간대를 좁힌 뒤 작업자 인터뷰로 기록되지 않은 조건을 확인하고 해석을 보완했다.",
+      "learning": "데이터 분석 결과를 현장 확인과 개선안 검증으로 이어야 문제를 실제 업무 맥락에서 설명할 수 있다는 점을 배웠다.",
+      "claims": [
+        {
+          "id": "claim:data-window-found",
+          "statement": "약 6개월치 센서 데이터와 생산 기록을 분석해 특정 설비의 불량 발생률이 상대적으로 높은 시간대를 발견했다.",
+          "source_refs": [
+            "source:applicant-experiences"
+          ],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "후속 현장 적용 후 불량률 변화 수치는 제공되지 않았다."
+        },
+        {
+          "id": "claim:unrecorded-condition",
+          "statement": "작업자 인터뷰로 데이터에 기록되지 않은 작업 조건과 제품 교체 순서가 반복 문제와 함께 나타나는 것을 확인했다.",
+          "source_refs": [
+            "source:applicant-field-note",
+            "source:applicant-experiences"
+          ],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "인터뷰 이후의 설비 개선 적용 결과는 확인되지 않았다."
+        },
+        {
+          "id": "claim:analysis-field-validation",
+          "statement": "데이터 분석, 현장 확인, 개선안 검증의 순서로 문제에 접근하는 방식을 정리했다.",
+          "source_refs": [
+            "source:applicant-experiences"
+          ],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "이 방식이 여러 프로젝트에서 반복 적용되었다는 별도 기록은 없다."
+        }
+      ],
+      "language_translations": [
+        {
+          "internal_term": "센서 데이터와 생산 기록 분석",
+          "universal_term": "설비 상태와 생산 결과를 연결해 이상 조건을 찾는 분석",
+          "use_condition": "기술 나열보다 제조 시스템 엔지니어의 데이터 해석 책임을 설명할 때 사용한다."
+        },
+        {
+          "internal_term": "작업자 인터뷰",
+          "universal_term": "현장 사용 조건 확인",
+          "use_condition": "모니터링 데이터의 누락과 예외를 보완한 행동을 설명할 때 사용한다."
+        }
+      ]
+    },
+    {
+      "id": "project:process-improvement",
+      "kind": "생산 공정 개선 프로젝트",
+      "scale": "공정별 소요 시간 측정과 작업 순서 변경 시뮬레이션",
+      "applicant_role": "검사 단계의 대기 병목을 분석하고 공정 흐름 개선안을 제안한 참여자",
+      "contribution": "평균 대기 시간이 긴 검사 단계를 찾고 작업 순서를 바꾼 시뮬레이션을 수행했다.",
+      "process": "공정별 시간을 측정하고 병목을 정의한 뒤 대안을 시뮬레이션해 전체 공정 시간 변화를 비교했다.",
+      "learning": "개선안은 직관이 아니라 비교 가능한 기준과 검증 조건을 함께 제시해야 설득력을 갖는다는 점을 배웠다.",
+      "claims": [
+        {
+          "id": "claim:inspection-wait-bottleneck",
+          "statement": "공정별 소요 시간을 측정해 특정 검사 단계의 평균 대기 시간이 과도하게 긴 문제를 발견했다.",
+          "source_refs": [
+            "source:applicant-experiences"
+          ],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "현장 적용 전의 분석 및 시뮬레이션 단계 경험이다."
+        },
+        {
+          "id": "claim:process-time-reduction",
+          "statement": "작업 순서를 변경하는 시뮬레이션을 수행한 결과 시뮬레이션 기준 전체 공정 시간이 약 11% 감소했다.",
+          "source_refs": [
+            "source:applicant-experiences"
+          ],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "약 11%는 시뮬레이션 기준이며 실제 생산라인 적용 성과로 확대할 수 없다."
+        }
+      ],
+      "language_translations": [
+        {
+          "internal_term": "검사 단계 대기시간",
+          "universal_term": "공정 병목과 대기 손실",
+          "use_condition": "생산성 개선과 공정 자동화 관점에서 문제를 설명할 때 사용한다."
+        },
+        {
+          "internal_term": "작업 순서 변경 시뮬레이션",
+          "universal_term": "대안을 비교하는 사전 검증",
+          "use_condition": "개선안의 효과와 적용 한계를 동시에 제시할 때 사용한다."
+        }
+      ]
+    }
+  ],
+  "output_profile": {
+    "candidate_count": 5,
+    "report_format": "pdf",
+    "audiences": [
+      "지원자 본인",
+      "면접 준비를 돕는 첨삭 검토자"
+    ],
+    "required_sections": [
+      "application-overview",
+      "company-role-analysis",
+      "question-map",
+      "candidate-answers",
+      "candidate-evaluation",
+      "expert-review",
+      "interview-preparation",
+      "material-requests",
+      "publication-validation"
+    ],
+    "design": {
+      "tone": "차분하고 구체적인 제조 현장 중심의 편집 문서",
+      "comparison_layout": "vertical",
+      "avoid_patterns": [
+        "확인되지 않은 회사 홍보 문구",
+        "실제 적용으로 오해될 수 있는 시뮬레이션 성과",
+        "기술 목록의 단순 나열"
+      ],
+      "raster_policy": "allowed"
+    },
+    "publication": {
+      "searchable_text_required": true,
+      "overflow_policy": "no_clipped_content",
+      "visible_source_policy": "allowlisted_only",
+      "content_policies": [
+        {
+          "id": "exclude-internal-bookkeeping",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {
+            "type": "literal_any",
+            "values": [
+              ".collab",
+              "request.json",
+              "result.json",
+              "프롬프트",
+              "private reasoning"
+            ]
+          },
+          "rationale": "지원자가 읽는 문서에는 내부 운영 파일이나 작성 지시를 노출하지 않는다."
+        },
+        {
+          "id": "exclude-local-absolute-path",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {
+            "type": "regex_any",
+            "values": [
+              "(?:^|\\s)/(?:Users|tmp|home)/"
+            ]
+          },
+          "rationale": "로컬 경로와 실행 환경 정보를 공개 문서에서 제거한다."
+        },
+        {
+          "id": "require-reader-sections",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "present",
+          "matcher": {
+            "type": "literal_any",
+            "values": [
+              "지원 답안",
+              "면접 준비",
+              "제출 전 확인"
+            ]
+          },
+          "rationale": "지원자가 결과를 바로 검토하고 다음 행동을 정할 수 있도록 핵심 섹션을 유지한다."
+        }
+      ]
+    },
+    "profile_ref": "profiles/five-set-pdf-report.profile.json"
+  },
+  "quality_profile": {
+    "policy_ref": "artifacts/agent-loop/document/job-application-report-production/vocabularies/job-application-report-quality-policy.json",
+    "mandatory_gate_ids": [
+      "request-and-question-coverage",
+      "source-and-freshness-boundary",
+      "applicant-attribution-and-confirmation",
+      "project-evidence-and-causality",
+      "role-domain-language-clarity",
+      "publication-and-privacy-safety"
+    ],
+    "dimensions": [
+      {
+        "id": "question-fit-and-differentiation",
+        "weight": 20
+      },
+      {
+        "id": "role-and-domain-alignment",
+        "weight": 20
+      },
+      {
+        "id": "applicant-viewpoint-and-values",
+        "weight": 18
+      },
+      {
+        "id": "evidence-causality-and-attribution",
+        "weight": 18
+      },
+      {
+        "id": "project-abstraction-and-transfer",
+        "weight": 14
+      },
+      {
+        "id": "clarity-and-interview-defensibility",
+        "weight": 10
+      }
+    ],
+    "rating_min": 1,
+    "rating_max": 5,
+    "qualification_threshold": 80,
+    "score_meaning": "editing_fitness_not_hiring_probability",
+    "revision_passes": 1,
+    "content_quality": {
+      "target_fill_ratio": 0.82,
+      "minimum_fill_ratio": 0.72,
+      "unit": "unicode_code_point_ratio",
+      "required_depth_signals": [
+        "claim",
+        "evidence",
+        "decision_or_reason",
+        "result_or_limit",
+        "transfer_or_next_action"
+      ],
+      "underfill_action": "expand_with_evidence_or_specificity",
+      "unknown_limit_policy": "working_bound_marked_provisional"
+    }
+  },
+  "source_policy": {
+    "as_of": "2026-09-14",
+    "prefer_primary": true,
+    "allowed_source_ids": [
+      "source:job-posting",
+      "source:company-domain",
+      "source:applicant-profile",
+      "source:applicant-experiences",
+      "source:applicant-field-note"
+    ],
+    "visible_source_ids": [
+      "source:job-posting"
+    ],
+    "missing_evidence_policy": "preserve_unknown"
+  },
+  "privacy_boundary": {
+    "public_evidence_ids": [
+      "source:job-posting"
+    ],
+    "prohibited_content_categories": [
+      "age",
+      "contact",
+      "local-path",
+      "private-runtime-record"
+    ],
+    "identity_handling": "explicit_consent_only"
+  },
+  "stop_budget": {
+    "max_research_rounds": 1,
+    "max_revision_passes": 1,
+    "unchanged_failure_limit": 1
+  }
+}

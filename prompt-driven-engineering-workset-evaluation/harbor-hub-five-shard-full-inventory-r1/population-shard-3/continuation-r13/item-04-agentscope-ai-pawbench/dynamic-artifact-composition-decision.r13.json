@@ -1,0 +1,139 @@
+{
+  "authorityEffect": "none",
+  "automaticPromotion": false,
+  "decision": {
+    "authorityEffect": "none",
+    "automaticPromotion": false,
+    "dynamicCompositionEvaluationEligible": true,
+    "kind": "dynamic-artifact-composition-resolution-decision/v1",
+    "nativeTopologyEvidenceDisposition": "not_required_not_claimed",
+    "nativeTopologyReceiptBinding": null,
+    "rejectedDynamicCandidates": [],
+    "remainingGapIds": [],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-02-novitaai-tb21-code-debug/agentscope-ai/pawbench:dynamic-composition",
+    "residualGapIds": ["gap:item-effective-provider-receipt", "gap:r13-context-projection"],
+    "selectedDynamicArtifacts": [
+      {
+        "artifactKind": "construct",
+        "artifactRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-04-agentscope-ai-pawbench/dynamic-candidate.r13.json",
+        "componentRefs": [
+          "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+          "artifacts/loop-architecture/components/execution-routing/component.json",
+          "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+        ],
+        "coveredGapIds": ["gap:item-effective-provider-receipt"],
+        "digest": "sha256:be814ed2d2870f6f4b7609a0c3e135c01978a215f7137a7ab6fb5206890abc14",
+        "expiryConditionRefs": [
+          "item-terminal-settlement",
+          "operation-revision-successor",
+          "provider-receipt-observed"
+        ],
+        "fallbackRef": "fallback:hold:population-shard-3:agentscope-ai/pawbench:until-effective-provider-receipt",
+        "invalidationConditionRefs": [
+          "capability-fingerprint-change",
+          "requirement-scope-change",
+          "source-binding-change"
+        ],
+        "operationEvidenceContractRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+        "topologyBearing": false,
+        "validationEvidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-04-agentscope-ai-pawbench/artifact-reuse-decision.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-04-agentscope-ai-pawbench/candidate-probe.r13.json"
+        ],
+        "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-3:continuation-r13/item-04-agentscope-ai-pawbench:agentscope-ai/pawbench"
+      }
+    ],
+    "selectedMode": "single_task",
+    "selectedReusableArtifactBindings": [
+      {
+        "artifactRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json",
+        "coveredGapIds": ["gap:r13-context-projection"],
+        "digest": "sha256:68812a487135db628c34c709cbc1d3c8e4407b118fcdbfde8a1295a4dd01400a"
+      }
+    ],
+    "selectedReusableArtifactRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json"
+    ],
+    "status": "selected"
+  },
+  "digest": "sha256:1e8e48c69dc1f9cc3c0ec397c40fe67be0a2d93db9267a7b9ba0d140a4fd85bb",
+  "identityDigest": "sha256:c8217ff8eba06a21f8c958bffe3642fa5dc5dd22774947372f399b13bbe62497",
+  "itemId": "agentscope-ai/pawbench",
+  "kind": "harbor-item-dynamic-artifact-composition-evidence/v2",
+  "nativeTopologyReceiptInferred": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "runPrivateCandidateOnly": true
+  },
+  "request": {
+    "dynamicCandidates": [
+      {
+        "artifactKind": "construct",
+        "artifactRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-04-agentscope-ai-pawbench/dynamic-candidate.r13.json",
+        "capabilityIds": ["effective_provider_receipt"],
+        "compatibleModes": ["single_task"],
+        "componentRefs": [
+          "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+          "artifacts/loop-architecture/components/execution-routing/component.json",
+          "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+        ],
+        "coveredGapIds": ["gap:item-effective-provider-receipt"],
+        "digest": "sha256:be814ed2d2870f6f4b7609a0c3e135c01978a215f7137a7ab6fb5206890abc14",
+        "expiryConditionRefs": [
+          "item-terminal-settlement",
+          "operation-revision-successor",
+          "provider-receipt-observed"
+        ],
+        "fallbackRef": "fallback:hold:population-shard-3:agentscope-ai/pawbench:until-effective-provider-receipt",
+        "invalidationConditionRefs": [
+          "source-binding-change",
+          "requirement-scope-change",
+          "capability-fingerprint-change"
+        ],
+        "operationEvidenceContractRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+        "runPrivate": true,
+        "structuralCost": 1,
+        "topologyBearing": false,
+        "validated": true,
+        "validationEvidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-04-agentscope-ai-pawbench/artifact-reuse-decision.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-04-agentscope-ai-pawbench/candidate-probe.r13.json"
+        ],
+        "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-3:continuation-r13/item-04-agentscope-ai-pawbench:agentscope-ai/pawbench"
+      }
+    ],
+    "nativeTopologyReceiptAvailable": false,
+    "nativeTopologyReceiptDigest": null,
+    "nativeTopologyReceiptRef": null,
+    "requestRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-02-novitaai-tb21-code-debug/agentscope-ai/pawbench:dynamic-composition",
+    "residualGaps": [
+      {
+        "allowedDynamicKinds": ["context_projection"],
+        "id": "gap:r13-context-projection",
+        "requiredCapabilityIds": ["r13_context_binding"]
+      },
+      {
+        "allowedDynamicKinds": ["construct"],
+        "id": "gap:item-effective-provider-receipt",
+        "requiredCapabilityIds": ["effective_provider_receipt"]
+      }
+    ],
+    "reusableArtifacts": [
+      {
+        "artifactRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json",
+        "coveredGapIds": ["gap:r13-context-projection"],
+        "digest": "sha256:68812a487135db628c34c709cbc1d3c8e4407b118fcdbfde8a1295a4dd01400a",
+        "qualified": true
+      },
+      {
+        "artifactRef": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md",
+        "coveredGapIds": [],
+        "digest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18",
+        "qualified": true
+      }
+    ],
+    "selectedMode": "single_task"
+  },
+  "schemaVersion": 2
+}

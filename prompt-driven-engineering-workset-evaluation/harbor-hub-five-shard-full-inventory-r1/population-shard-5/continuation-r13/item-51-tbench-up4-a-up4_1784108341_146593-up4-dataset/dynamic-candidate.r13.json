@@ -1,0 +1,47 @@
+{
+  "artifactKind": "construct",
+  "authorityEffect": "none",
+  "automaticPromotion": false,
+  "candidateRole": "bounded_effective_provider_receipt_projection",
+  "capabilityIds": ["effective_provider_receipt"],
+  "compatibleModes": ["single_task"],
+  "componentRefs": [
+    "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+    "artifacts/loop-architecture/components/execution-routing/component.json",
+    "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+  ],
+  "coveredGapIds": ["gap:item-effective-provider-receipt"],
+  "expiryConditionRefs": [
+    "item-terminal-settlement",
+    "operation-revision-successor",
+    "provider-receipt-observed"
+  ],
+  "fallbackRef": "fallback:hold:population-shard-5:tbench-up4-a-up4_1784108341_146593/up4-dataset:until-effective-provider-receipt",
+  "identityDigest": "sha256:bfd505764168d0aadc04a432866fa685a7b7d1e159a62c86c3f268b0a82dcf2b",
+  "invalidationConditionRefs": [
+    "source-binding-change",
+    "requirement-scope-change",
+    "capability-fingerprint-change"
+  ],
+  "itemId": "tbench-up4-a-up4_1784108341_146593/up4-dataset",
+  "kind": "dynamic-artifact-candidate/v1",
+  "operationEvidenceContractRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "runPrivate": true,
+  "schemaVersion": 1,
+  "structuralCost": 1,
+  "topologyBearing": false,
+  "validated": true,
+  "validationEvidenceRefs": [
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-51-tbench-up4-a-up4_1784108341_146593-up4-dataset/artifact-reuse-decision.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-51-tbench-up4-a-up4_1784108341_146593-up4-dataset/candidate-probe.r13.json"
+  ],
+  "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-5:continuation-r13/item-51-tbench-up4-a-up4_1784108341_146593-up4-dataset:tbench-up4-a-up4_1784108341_146593/up4-dataset"
+}

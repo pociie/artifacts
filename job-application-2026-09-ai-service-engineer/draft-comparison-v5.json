@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "self-introduction-draft-comparison/v5",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "comparisonPurpose": "점수 순위만으로 선택하지 않고 세트별 주제·문항별 소유 관점·방어 가능성을 구별한다.",
+  "sets": [
+    {"id": "set-1", "theme": "사람의 판단을 돕는 AI 서비스", "lens": "최종 확인과 다음 행동", "bestWhen": "사람 중심 AI 서비스 관점을 균형 있게 전달할 때", "watch": "set-5와 시간·판단 언어가 가까워질 수 있음", "postScore": 95.5},
+    {"id": "set-2", "theme": "요구를 공통 언어와 책임 기준으로 번역하는 엔지니어", "lens": "역할 간 공통 기준과 합의", "bestWhen": "모호한 요구를 구조화하고 협업 기준을 세운 경험을 강조할 때", "watch": "실제 협업 상대·합의 산출물을 면접에서 확인받을 수 있어야 함", "postScore": 94.63},
+    {"id": "set-3", "theme": "결과 확인까지 책임지는 서비스 완수", "lens": "재현·원인 설명·변화 확인", "bestWhen": "프로젝트 완수 기준과 품질 검증 태도를 강조할 때", "watch": "실제 오류 사례와 실행 증거를 추가하면 방어력이 높아짐", "postScore": 97.88},
+    {"id": "set-4", "theme": "AI 결과의 한계와 확인 책임을 함께 관리하는 서비스", "lens": "오류 가능성·적용 범위·사람 확인", "bestWhen": "공고의 서비스 발굴·검증과 품질 검증을 가장 직접 연결할 때", "watch": "실제 운영·사용자 피드백을 경험처럼 말하지 않도록 주의", "postScore": 98.5},
+    {"id": "set-5", "theme": "반복과 우회 부담을 줄이는 서비스 개선", "lens": "사용자의 시간과 처리 단계", "bestWhen": "불편함 개선 가치관을 사용자 업무 부담으로 구체화할 때", "watch": "set-1과 최종 판단 보존 표현이 겹치지 않는지 확인", "postScore": 95.5}
+  ],
+  "pairwise": [
+    {"pair": ["set-1", "set-2"], "relation": "distinct", "reason": "최종 확인과 공통 언어·합의가 다름"},
+    {"pair": ["set-1", "set-3"], "relation": "distinct", "reason": "사용자 판단과 검증 가능한 완수 기준이 다름"},
+    {"pair": ["set-1", "set-4"], "relation": "distinct", "reason": "사람의 다음 행동과 AI 결과의 한계 관리가 다름"},
+    {"pair": ["set-1", "set-5"], "relation": "close", "reason": "사람의 판단 보존과 시간 부담이 함께 등장; 실제 가치관으로 선택"},
+    {"pair": ["set-2", "set-3"], "relation": "distinct", "reason": "협업 기준과 오류 원인 설명이 다름"},
+    {"pair": ["set-2", "set-4"], "relation": "distinct", "reason": "역할 합의와 AI 한계·확인 책임이 다름"},
+    {"pair": ["set-2", "set-5"], "relation": "distinct", "reason": "공통 기준과 사용자 처리 단계가 다름"},
+    {"pair": ["set-3", "set-4"], "relation": "distinct", "reason": "일반 품질 검증과 AI 적용 범위·사람 확인이 다름"},
+    {"pair": ["set-3", "set-5"], "relation": "distinct_but_review", "reason": "완수 기준과 시간 부담이 모두 핵심 흐름을 언급하므로 Q2의 선택 문장을 확인"},
+    {"pair": ["set-4", "set-5"], "relation": "distinct", "reason": "한계 관리와 반복·우회 개선이 다름"}
+  ],
+  "decisionGuidance": {
+    "defaultCandidate": "set-4",
+    "why": "현재 공고의 서비스 발굴·검증·품질 검증과 가장 직접적으로 맞고, Q1/Q2/Q3의 주어 분리가 선명함",
+    "doNotAutoSubmit": "점수 1위는 사용자 관점의 진정성이나 실제 프로젝트 방어력을 대신하지 않음",
+    "authenticityTieBreak": "set-1 vs set-5는 사용자가 ‘최종 판단’과 ‘시간·단계 부담’ 중 실제로 더 자주 문제로 삼았던 관점을 기준으로 선택",
+    "expertReviewAsk": "각 세트의 Q2에서 문제·선택·확인 상태가 한 사건으로 방어되는지 문장 인용으로 검토 요청"
+  },
+  "sensitivity": {
+    "scenarios": [
+      {"name": "question-fit +5", "winner": "set-4", "rankOrder": ["set-4", "set-3", "set-1", "set-5", "set-2"]},
+      {"name": "clarity +5", "winner": "set-4", "rankOrder": ["set-4", "set-3", "set-1", "set-5", "set-2"]},
+      {"name": "evidence +5", "winner": "set-4", "rankOrder": ["set-4", "set-3", "set-1", "set-5", "set-2"]},
+      {"name": "set-1/set-5 authenticity tie-break", "winner": "user_choice", "rankOrder": ["set-4", "set-3", "set-1_or_set-5", "set-2"]}
+    ],
+    "interpretation": "순위는 세트 구성 비교에서 안정적이지만 close pair는 사용자 의미와 면접 방어로 결정한다."
+  }
+}

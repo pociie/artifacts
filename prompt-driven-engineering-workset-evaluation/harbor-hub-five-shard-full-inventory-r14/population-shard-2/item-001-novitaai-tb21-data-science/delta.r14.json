@@ -1,0 +1,201 @@
+{
+  "candidateSpaceRefs": {
+    "architecturePatterns": [
+      "expert-pool",
+      "fan-out-fan-in",
+      "generator-validator",
+      "hierarchical-delegation",
+      "pipeline",
+      "supervisor"
+    ],
+    "reusableSwarmPatterns": [
+      "adaptive-supervision",
+      "bounded-revision",
+      "capability-route-selection",
+      "hierarchical-synthesis",
+      "independent-fan-in",
+      "ordered-handoff"
+    ],
+    "routingModes": [
+      "communication",
+      "investigation",
+      "single_task",
+      "loop",
+      "orchestration",
+      "session_control"
+    ]
+  },
+  "frameworkRevision": "sha256:ec23c40270733d0a9ffd336abcd2f51c084fbb439acd73ccd67d2e0c7fdc5d68",
+  "identity": {
+    "datasetId": "NovitaAI/tb21-data-science",
+    "datasetVersion": "latest",
+    "identityDigest": "sha256:bd8bce739f7ae64c133d986af741e72ea5c40da0ede132437d39eaec8f32c1e3",
+    "inventoryTaskCount": 26,
+    "providerCasePreserved": true,
+    "visibility": "Public"
+  },
+  "lane": "population-shard-2",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "ordinal": 1,
+  "priorEvidence": {
+    "operationAttempted": false,
+    "reentryReason": "changed-capability-fingerprint",
+    "sourceEvidence": "continuation-r13-held-or-missing",
+    "state": "held"
+  },
+  "providerOperation": {
+    "agent": "codex",
+    "authMode": "CODEX_FORCE_AUTH_JSON=1",
+    "datasetRef": "NovitaAI/tb21-data-science@latest",
+    "execution": "local",
+    "hostedLaunch": false,
+    "installOnly": false,
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "resolvedTaskContent": {
+      "bindingState": "exact_prior_task",
+      "contentDomain": "molecular-biology-and-bioinformatics",
+      "contentShape": "scientific-artifact-generation-with-protected-verifier",
+      "qualificationState": "qualified",
+      "rawPromptExcluded": true,
+      "source": "exact-prior-task-binding-and-provider-workspace-contract",
+      "taskDigest": "sha256:7b571544b64d9be1c91526837e5d805c2181afe0e6fd57a7f0676bba36c868d7",
+      "taskId": "terminal-bench/dna-assembly"
+    },
+    "selection": {
+      "kind": "exact_prior_task_binding",
+      "task": "terminal-bench/dna-assembly",
+      "taskDigest": "sha256:7b571544b64d9be1c91526837e5d805c2181afe0e6fd57a7f0676bba36c868d7"
+    },
+    "slotCount": 3,
+    "slotWrapper": ".collab/runtime/prompt-driven-engineering-workset-evaluation/harbor-hub-r14/with_harbor_slot.py",
+    "subjectAdapter": {
+      "executionSurface": "local-subject-adapter",
+      "name": "harbor",
+      "topologyAttribution": "not-claimed-topology-none",
+      "version": "0.22.0"
+    },
+    "subjectTimeoutCeilingSeconds": 3600,
+    "taskFacts": {
+      "contentDomain": "molecular-biology-and-bioinformatics",
+      "contentShape": "scientific-artifact-generation-with-protected-verifier",
+      "contributionShape": "one_owner",
+      "executionSurface": "delegated_single_writer",
+      "instructionState": "private-not-retained",
+      "nativeSubjectOperationRequired": false,
+      "probeOutputDigest": null,
+      "qualificationState": "qualified",
+      "rawTaskInstructionStored": false,
+      "reassessmentTrigger": "material task-content, workspace, verifier, capability, or runtime-shape change",
+      "source": "exact-prior-task-binding-and-provider-workspace-contract",
+      "taskBinding": "exact_prior_task",
+      "taskDigest": "sha256:7b571544b64d9be1c91526837e5d805c2181afe0e6fd57a7f0676bba36c868d7",
+      "taskId": "terminal-bench/dna-assembly",
+      "workspaceObligations": {
+        "dynamicMembershipRequired": false,
+        "independentMaterialContributors": false,
+        "independentValidationRequired": false,
+        "requiredResponsibilityClasses": [
+          "single-Harbor-subject"
+        ],
+        "scope": "one deterministic representative provider task",
+        "separableRoleCount": 1,
+        "shape": "single-task Harbor workspace",
+        "validationBoundary": "protected-Harbor-verifier-not-a-Subject-role"
+      }
+    },
+    "verification": "enabled"
+  },
+  "queueAdmission": {
+    "authorityEffect": "none",
+    "claimBoundary": "refresh-before-each-item",
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r14:population-shard-2",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r14"
+  },
+  "routeJourney": {
+    "architecture": "not_required",
+    "candidateModesInspected": [
+      "communication",
+      "investigation",
+      "single_task",
+      "loop",
+      "orchestration",
+      "session_control"
+    ],
+    "coordinationPolicy": "not_required",
+    "dynamicArtifactComposition": [
+      "route-decision",
+      "workflow-decision",
+      "topology-selection",
+      "architecture-selection",
+      "swarm-decision",
+      "coordination-policy",
+      "subject-operation",
+      "terminal-reward",
+      "terminal-receipt"
+    ],
+    "frameworkRevision": "sha256:ec23c40270733d0a9ffd336abcd2f51c084fbb439acd73ccd67d2e0c7fdc5d68",
+    "reasoningEnvelope": {
+      "bounded": true,
+      "reasoningEffort": "max",
+      "stopCondition": "one representative task reaches terminal Harbor result"
+    },
+    "roleContext": "lane-controller-admits-one-content-bound-Harbor-subject-and-settles-one-vector-reward",
+    "selectedMode": "single_task",
+    "swarmDecision": {
+      "reason": "topologyRequirement=none after task/workspace qualification; one material Subject contribution requires no Agent Swarm",
+      "selected": null,
+      "status": "not_required"
+    },
+    "taskContentBinding": {
+      "bindingState": "exact_prior_task",
+      "contentDomain": "molecular-biology-and-bioinformatics",
+      "contentShape": "scientific-artifact-generation-with-protected-verifier",
+      "qualificationState": "qualified",
+      "rawPromptExcluded": true,
+      "source": "exact-prior-task-binding-and-provider-workspace-contract",
+      "taskDigest": "sha256:7b571544b64d9be1c91526837e5d805c2181afe0e6fd57a7f0676bba36c868d7",
+      "taskId": "terminal-bench/dna-assembly"
+    },
+    "taskFacts": {
+      "contentDomain": "molecular-biology-and-bioinformatics",
+      "contentShape": "scientific-artifact-generation-with-protected-verifier",
+      "contributionShape": "one_owner",
+      "executionSurface": "delegated_single_writer",
+      "instructionState": "private-not-retained",
+      "nativeSubjectOperationRequired": false,
+      "probeOutputDigest": null,
+      "qualificationState": "qualified",
+      "rawTaskInstructionStored": false,
+      "reassessmentTrigger": "material task-content, workspace, verifier, capability, or runtime-shape change",
+      "source": "exact-prior-task-binding-and-provider-workspace-contract",
+      "taskBinding": "exact_prior_task",
+      "taskDigest": "sha256:7b571544b64d9be1c91526837e5d805c2181afe0e6fd57a7f0676bba36c868d7",
+      "taskId": "terminal-bench/dna-assembly",
+      "workspaceObligations": {
+        "dynamicMembershipRequired": false,
+        "independentMaterialContributors": false,
+        "independentValidationRequired": false,
+        "requiredResponsibilityClasses": [
+          "single-Harbor-subject"
+        ],
+        "scope": "one deterministic representative provider task",
+        "separableRoleCount": 1,
+        "shape": "single-task Harbor workspace",
+        "validationBoundary": "protected-Harbor-verifier-not-a-Subject-role"
+      }
+    },
+    "topologyDecision": {
+      "missingFacts": [],
+      "nativeTopologyReceipt": "not_required",
+      "reason": "task/workspace obligations qualify one-owner execution; protected Harbor verifier is an evaluation boundary",
+      "selected": "none",
+      "status": "selected",
+      "subjectOperationScopeDisposition": "not_required"
+    },
+    "topologyRequirement": "none",
+    "workflow": "single-item-native-harbor-execution"
+  },
+  "schemaVersion": "harbor-hub-r14-item-delta/v2",
+  "terminalState": "admitted-not-started"
+}

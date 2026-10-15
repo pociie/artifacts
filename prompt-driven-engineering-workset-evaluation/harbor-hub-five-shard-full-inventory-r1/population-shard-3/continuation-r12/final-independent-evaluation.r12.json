@@ -1,0 +1,67 @@
+{
+  "authorityEffect": "none",
+  "checks": [
+    {
+      "checkId": "item-identity",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/claim-source-freeze.r12.json"
+      ],
+      "state": "supported"
+    },
+    {
+      "checkId": "population-accounting",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/queue-reconciliation-after-settlement.r12.json"
+      ],
+      "state": "supported"
+    },
+    {
+      "checkId": "resource-settlement",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/item-resource-settlement.r12.json"
+      ],
+      "state": "supported"
+    },
+    {
+      "checkId": "effective-execution-receipt",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/harbor-subject-operation.r12.json"
+      ],
+      "state": "unavailable"
+    },
+    {
+      "checkId": "protected-outcome-validation",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/simulation-evidence.r12.json"
+      ],
+      "state": "unavailable"
+    }
+  ],
+  "digest": "sha256:f1fdf2f8c12d8f1c7dccdcb51db090e31e00bded5f4faeb850e0912fd3fe965c",
+  "disposition": "require_context",
+  "evaluatorKind": "deterministic",
+  "final": true,
+  "identityDigest": "sha256:6c9c5a99c1e698460064925c35d37f2fd005c8455ab6e2f2f43b081c1a58c3fd",
+  "itemId": "LiteCoder/LiteCoder-rl",
+  "kind": "engineering-evaluation-report/v2",
+  "limitations": [
+    "task environment setup failed before Subject start",
+    "protected verifier did not start",
+    "effective model, reasoning effort, and Subject timeout receipt unavailable",
+    "no scorable task outcome was produced"
+  ],
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawTaskContentProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "promotionEligible": false,
+  "reportId": "evaluation:harbor-hub-five-shard-full-inventory-r1:population-shard-3:continuation-r12:LiteCoder/LiteCoder-rl",
+  "schemaVersion": 2,
+  "shardId": "population-shard-3",
+  "simulationEvidenceDigest": "sha256:783a0bfa8d2038ee2752bec603418bc61c565a96ca8131cf2f09a26ffeec05a3",
+  "simulationEvidenceRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/simulation-evidence.r12.json",
+  "status": "complete"
+}

@@ -1,0 +1,163 @@
+{
+  "authorityEffect": "none",
+  "componentCoverage": [
+    {
+      "componentId": "gangdong-evidence-collection",
+      "disposition": "planned",
+      "laneId": "lane:gangdong-evidence-collection"
+    },
+    {
+      "componentId": "jungnang-evidence-collection",
+      "disposition": "planned",
+      "laneId": "lane:jungnang-evidence-collection"
+    },
+    {
+      "componentId": "rubric-and-classification",
+      "disposition": "planned",
+      "laneId": "lane:rubric-and-classification"
+    }
+  ],
+  "conflictEdges": [],
+  "decision": "execute_bounded_parallel",
+  "effectiveCapacity": {
+    "contextTokensPerWave": 20000,
+    "parallelLanes": 3,
+    "parallelWriters": 1,
+    "totalContextTokens": 18000
+  },
+  "fanIn": {
+    "integrationLaneId": "lane:integration-owner",
+    "synthesisOwnerRef": "agent:root-coordinator",
+    "validatorLaneId": "lane:independent-validator"
+  },
+  "hitlRequests": [],
+  "lanes": [
+    {
+      "componentIds": [
+        "gangdong-evidence-collection"
+      ],
+      "contextTokens": 6000,
+      "dependsOn": [],
+      "kind": "read_only",
+      "laneId": "lane:gangdong-evidence-collection",
+      "mutableResources": [],
+      "outputContract": "raw-evidence-manifest-without-scores",
+      "ownerRef": "agent:gangdong-cafe-evidence-collector",
+      "placementReason": "read_only_lane_uses_shared_task_root",
+      "semanticDomains": [
+        "gangdong-cafe-review-and-image-evidence"
+      ],
+      "validationRefs": [
+        "validation:source-url-image-url-venue-identity"
+      ],
+      "worktreePlacement": "task_root",
+      "writePaths": []
+    },
+    {
+      "componentIds": [
+        "jungnang-evidence-collection"
+      ],
+      "contextTokens": 6000,
+      "dependsOn": [],
+      "kind": "read_only",
+      "laneId": "lane:jungnang-evidence-collection",
+      "mutableResources": [],
+      "outputContract": "raw-evidence-manifest-without-scores",
+      "ownerRef": "agent:jungnang-cafe-evidence-collector",
+      "placementReason": "read_only_lane_uses_shared_task_root",
+      "semanticDomains": [
+        "jungnang-cafe-review-and-image-evidence"
+      ],
+      "validationRefs": [
+        "validation:source-url-image-url-venue-identity"
+      ],
+      "worktreePlacement": "task_root",
+      "writePaths": []
+    },
+    {
+      "componentIds": [
+        "rubric-and-classification"
+      ],
+      "contextTokens": 6000,
+      "dependsOn": [],
+      "kind": "read_only",
+      "laneId": "lane:rubric-and-classification",
+      "mutableResources": [],
+      "outputContract": "frozen-rubric-and-independent-evaluation",
+      "ownerRef": "agent:cafe-evaluation-specialist",
+      "placementReason": "read_only_lane_uses_shared_task_root",
+      "semanticDomains": [
+        "cafe-rubric-and-independent-image-classification"
+      ],
+      "validationRefs": [
+        "validation:rubric-coverage-arithmetic-evidence"
+      ],
+      "worktreePlacement": "task_root",
+      "writePaths": []
+    },
+    {
+      "componentIds": [],
+      "contextTokens": 0,
+      "dependsOn": [
+        "lane:gangdong-evidence-collection",
+        "lane:jungnang-evidence-collection",
+        "lane:rubric-and-classification"
+      ],
+      "kind": "validator",
+      "laneId": "lane:independent-validator",
+      "mutableResources": [],
+      "outputContract": "cafe-evaluation-and-html-validation-report",
+      "ownerRef": "agent:cafe-evaluation-specialist",
+      "placementReason": "read_only_exact_candidate_validation",
+      "semanticDomains": [],
+      "validationRefs": [
+        "validation:integrated-candidate"
+      ],
+      "worktreePlacement": "task_root",
+      "writePaths": []
+    },
+    {
+      "componentIds": [],
+      "contextTokens": 0,
+      "dependsOn": [
+        "lane:independent-validator"
+      ],
+      "kind": "integration",
+      "laneId": "lane:integration-owner",
+      "mutableResources": [],
+      "outputContract": "single-interactive-html-cafe-study-report",
+      "ownerRef": "agent:root-coordinator",
+      "placementReason": "single_serialized_integration_owner",
+      "semanticDomains": [],
+      "validationRefs": [
+        "validation:delivery-boundary"
+      ],
+      "worktreePlacement": "task_root",
+      "writePaths": []
+    }
+  ],
+  "objectiveRef": "objective:cafe-study-evidence-report-2026-09-04",
+  "phase": {
+    "digest": "2906632c70914e34b50f99b6e5df956c51a4a2edd85daee24e6d7ed18cce1ffa",
+    "ref": "phase:cafe-evidence-and-report",
+    "revision": 2
+  },
+  "reasonCodes": [
+    "component_inventory_covered",
+    "explicit_validator_and_integration_fan_in",
+    "bounded_parallel_waves_ready"
+  ],
+  "runtimeMutation": false,
+  "schemaVersion": "bounded-lane-plan-decision/v1",
+  "waves": [
+    {
+      "contextTokens": 18000,
+      "laneIds": [
+        "lane:gangdong-evidence-collection",
+        "lane:jungnang-evidence-collection",
+        "lane:rubric-and-classification"
+      ],
+      "waveId": "wave:1"
+    }
+  ]
+}

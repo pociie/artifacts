@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 38,
+      "expectedEventHeadSha256": "3e7073494d7290387f5f643e5eca3e4e2d4bd5628c3519128e91275590247207",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:091cde6ebce590610148343b79d47d864f560caf1f2a1c5e35829bfbd90ff6fb"
+      },
+      "identityDigest": "sha256:6038c34a4843efec906328487e3a7e79543170b7193d21c82f22dfc11ff5233e",
+      "itemId": "openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2",
+      "laneId": "population-shard-1",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-1:openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2:r13",
+      "sequence": 38,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-1:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 38,
+    "eventHeadSha256": "sha256:3e7073494d7290387f5f643e5eca3e4e2d4bd5628c3519128e91275590247207",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:0faabc99ef7e4b281cb7fef062c6c3301bc0b5da9f3da02233e1423ce2d86a7a",
+  "eventCursor": 38,
+  "eventHeadSha256": "sha256:3e7073494d7290387f5f643e5eca3e4e2d4bd5628c3519128e91275590247207",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-1",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2",
+        "laneId": "population-shard-1",
+        "proposalId": "proposal:population-shard-1:openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2:r13",
+        "workerId": "worker:harbor-population-shard-1:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 38,
+      "eventHeadSha256": "3e7073494d7290387f5f643e5eca3e4e2d4bd5628c3519128e91275590247207",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 38,
+    "eventHeadSha256": "3e7073494d7290387f5f643e5eca3e4e2d4bd5628c3519128e91275590247207",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-1",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}

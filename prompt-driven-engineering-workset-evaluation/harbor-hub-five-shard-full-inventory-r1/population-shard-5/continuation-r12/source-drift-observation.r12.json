@@ -1,0 +1,57 @@
+{
+  "kind": "harbor-source-drift-observation/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "shardId": "population-shard-5",
+  "continuationId": "continuation-r12",
+  "itemId": "aarr/aarri-bench",
+  "observedAt": "2026-08-29T00:37:01+09:00",
+  "claimBoundary": {
+    "sourceBindingRef": "continuation-r12/source-and-plan-binding.r12.json",
+    "sourceBindingDigest": "sha256:075f327d9f67eb5a3220ba11b2845fe6bb55012b9bc2242e272bb2e463fb7496",
+    "operationEnvelopeDigest": "sha256:d9325a7f671cba0204512fcd0bd579d4a3225d7cfd59fe9cdcedb94f91db303e",
+    "activePhaseContractDigest": "sha256:830efd51eeb0e08dba9339ace4fd07fb3e68b5aabd4d68cc138f380d43861f91"
+  },
+  "documentBindings": {
+    "consumedAtClaim": {
+      "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/00-roadmap.md": "sha256:470952592ad69dc3081016043e4795bb6c31e2004ddaf5b3f863233837086210",
+      "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/01-default-reusable-operating-structure.md": "sha256:c458c38051ace436b904101d6a767c93e16f937210347e97d812db9e7e3c4ed3",
+      "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/03-reusable-plan-operation-extraction.md": "sha256:fe85339d5afa1923611bdf683d7e8fda6cad8a08525da51a6374461ee36a325a",
+      "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/04-current-harbor-hub-five-shard-operation.md": "sha256:830efd51eeb0e08dba9339ace4fd07fb3e68b5aabd4d68cc138f380d43861f91"
+    },
+    "currentlyObserved": {
+      "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/00-roadmap.md": "sha256:ff3aa96cd8598745faabb23bf40c35ccd5f3e3e400c800755e5d88c2f7b98e63",
+      "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/01-default-reusable-operating-structure.md": "sha256:c458c38051ace436b904101d6a767c93e16f937210347e97d812db9e7e3c4ed3",
+      "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/03-reusable-plan-operation-extraction.md": "sha256:fe85339d5afa1923611bdf683d7e8fda6cad8a08525da51a6374461ee36a325a",
+      "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/04-current-harbor-hub-five-shard-operation.md": "sha256:4e33207898cf8756418a098da9bfd75ed7360c67b1ee06e60cbffa7288dc6e63"
+    }
+  },
+  "drift": {
+    "detectedAfterClaim": true,
+    "material": true,
+    "changedDocumentRefs": [
+      "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/00-roadmap.md",
+      "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/04-current-harbor-hub-five-shard-operation.md"
+    ],
+    "reasonCode": "source:active-plan-document-digests-do-not-match-claim-boundary",
+    "envelopeConflict": {
+      "envelopeActivePhaseContractDigest": "sha256:830efd51eeb0e08dba9339ace4fd07fb3e68b5aabd4d68cc138f380d43861f91",
+      "currentOperationDocumentDigest": "sha256:4e33207898cf8756418a098da9bfd75ed7360c67b1ee06e60cbffa7288dc6e63"
+    },
+    "reassessmentRequiredBeforeSuccessorClaim": true,
+    "itemExecutionImpact": "current_item_remains_held_and_no_subject_or_verifier_execution_was_admitted",
+    "successorClaimPermitted": false,
+    "queueMutation": false,
+    "preservedClaimBoundary": true
+  },
+  "decision": "preserve_claim_boundary_hold_successor_until_source_rebind",
+  "privacy": {
+    "metadataOnly": true,
+    "rawPromptStored": false,
+    "privateReasoningStored": false,
+    "runtimeHandlesStored": false,
+    "credentialValuesStored": false
+  },
+  "digest": "sha256:3227849cf3b125997e6799bafafd7df154ff523042390efe553b4d6271205fd9"
+}

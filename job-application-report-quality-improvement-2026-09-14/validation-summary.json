@@ -1,0 +1,38 @@
+{
+  "kind": "job-application-report-artifact-improvement-validation/v1",
+  "observed_at": "2026-09-14",
+  "subject": "artifacts/agent-loop/document/job-application-report-production",
+  "checks": [
+    {
+      "id": "behavior-tests",
+      "status": "pass",
+      "evidence": "22 tests passed, including shared suffix, wrong question family, semantic process leakage, raw criterion label, projection metadata, and projection text-drift failures."
+    },
+    {
+      "id": "loop-package-strict",
+      "status": "pass",
+      "evidence": "0 issues and 0 warnings."
+    },
+    {
+      "id": "skill-validation",
+      "status": "pass",
+      "evidence": "skill-creator quick validation passed."
+    },
+    {
+      "id": "json-syntax",
+      "status": "pass",
+      "evidence": "All JSON files in the reusable package and task-local evidence directory parsed successfully."
+    },
+    {
+      "id": "repository-wide-governance-fitness",
+      "status": "not_completed",
+      "evidence": "The command produced no output for approximately 150 seconds and was interrupted; package-scoped validation completed independently."
+    }
+  ],
+  "limitations": [
+    "Historical outputs are diagnostic evidence and were not rewritten in this operation.",
+    "Independent semantic review remains necessary because lexical and similarity measurements cannot establish meaning quality on their own.",
+    "The reusable artifact remains report-only and no RSI promotion or broad adoption claim is made."
+  ],
+  "authority_effect": "none"
+}

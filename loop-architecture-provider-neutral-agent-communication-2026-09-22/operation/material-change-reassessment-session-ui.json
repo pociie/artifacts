@@ -1,0 +1,43 @@
+{
+  "kind": "reusable-artifact-material-change-reassessment/v1",
+  "schemaVersion": 1,
+  "status": "compatible_with_bounded_component_enrichment_and_adjacent_handoff",
+  "authorityEffect": "none",
+  "runtimeEffect": "none",
+  "requestRef": ".collab/artifacts/loop-architecture-provider-neutral-agent-communication-2026-09-22/operation/reusable-artifact-operation-request.json",
+  "requestRevision": "revision:v1",
+  "materialChange": {
+    "class": "public_contract",
+    "description": "Add a provider-neutral session UI projection and keep UI observation separate from requested control intent."
+  },
+  "unchangedBindings": {
+    "artifactId": "loop-architecture-component:agent-architecture-coordination",
+    "nativeOwnerRef": "owner:loop-architecture-coordination",
+    "subjectRef": "agent-subject:provider-neutral-agent-communication-builder",
+    "effectiveMode": "loop",
+    "lifecycleIntent": "improve_existing"
+  },
+  "admittedChange": [
+    "Extend the in-flight human communication projection with provider-neutral session title, worker label, activity, and handoff display metadata.",
+    "Keep UI observation evidence separate from abstract control intent and reject terminal text as UI control evidence.",
+    "Leave every provider command, capability selection, effect, and fallback outside Loop Architecture."
+  ],
+  "adjacentOwnerDisposition": {
+    "state": "successor_handoff_only",
+    "reason": "Workspace Agent Operations is an untracked candidate owned by another in-flight change, and Tool Capability Resolution has overlapping modified files.",
+    "handoffRef": ".collab/artifacts/loop-architecture-provider-neutral-agent-communication-2026-09-22/session-ui-adapter-successor-handoff.json"
+  },
+  "compositionDisposition": {
+    "state": "successor_handoff_only",
+    "reason": "The default composition has a pre-existing in-flight modification from another owner.",
+    "handoffRef": ".collab/artifacts/loop-architecture-provider-neutral-agent-communication-2026-09-22/default-composition-successor-handoff.json"
+  },
+  "protectedBoundaries": [
+    "AGENTS.md remains unchanged.",
+    "The coordination-v3 bundle remains unchanged.",
+    "Visual-owned files remain unchanged.",
+    "No provider session is activated or controlled.",
+    "No new reusable Agent, Component, supervised Run, or UI preflight is created."
+  ],
+  "decision": "continue_current_component_revision_and_report_adjacent_mapping_to_existing_successor"
+}

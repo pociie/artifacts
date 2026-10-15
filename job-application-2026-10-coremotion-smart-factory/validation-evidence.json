@@ -1,0 +1,70 @@
+{
+  "record_kind": "job-application-report-validation/v1",
+  "status": "report_only_complete",
+  "authority_effect": "none",
+  "validated_at": "2026-09-14T12:00:00+09:00",
+  "request": {
+    "path": "request.json",
+    "digest": "92edaa2229426d26d4eb4389d1c27625728e19f37f54d14654269767889816c9"
+  },
+  "result": {
+    "path": "result.json",
+    "digest": "28c9d21761f846f3a7421269dedf3b0476bd113bd1d04f000ff058d0087c1a40"
+  },
+  "checks": [
+    {
+      "id": "request-result-deterministic-check",
+      "command": "node ../../../artifacts/agent-loop/document/job-application-report-production/scripts/check_job_application_report.mjs --request request.json --result result.json",
+      "status": "pass",
+      "finding": "OK job-application-report request/result"
+    },
+    {
+      "id": "loop-package-strict-check",
+      "command": "python3 artifacts/agent-loop/spec/scripts/check_loop_package.py artifacts/agent-loop/document/job-application-report-production --strict",
+      "status": "pass",
+      "finding": "issues: 0; warnings: 0"
+    },
+    {
+      "id": "loop-contract-tests",
+      "command": "node --test artifacts/agent-loop/document/job-application-report-production/scripts/test_job_application_report.mjs",
+      "status": "pass",
+      "finding": "11 tests passed"
+    },
+    {
+      "id": "javascript-and-json-syntax",
+      "command": "node --check build-set3.mjs && jq empty request.json && jq empty result.json",
+      "status": "pass",
+      "finding": "syntax and JSON parsing passed"
+    }
+  ],
+  "character_counts": {
+    "question-1-goal": 555,
+    "question-2-motivation-fit": 516,
+    "question-3-strength-gap": 520,
+    "question-4-process-improvement": 508
+  },
+  "qualification": {
+    "candidate_id": "candidate:set3",
+    "score": 92.65,
+    "threshold": 80,
+    "qualified_for_applicant_review": true,
+    "meaning": "editing fitness only; not hiring probability, applicant certification, submission approval, or hiring outcome"
+  },
+  "publication": {
+    "markdown_digest": "74b2f4fe47f1f0b67dc4f72d8ea49bb66fb85222d4b54f681ac8192e93c4c985",
+    "text_extract_digest": "42b085b397dd31e3e8f178dd40d66df93e540911aadfb698f539958df35f2aee",
+    "searchable_text": "pass",
+    "raster_policy": "not_required",
+    "overflow": "pass",
+    "visible_sources": [
+      "source:job-posting"
+    ],
+    "privacy": "pass",
+    "content_policies": "pass"
+  },
+  "limitations": [
+    "example 도메인 URL은 외부 확인되지 않아 회사 고유 사업·제품 정보는 사용자 제공 공고 요약만 반영했다.",
+    "11% 감소는 시뮬레이션 기준이며 실제 생산라인 적용 성과로 확장하지 않았다.",
+    "원본 첨부자료와 직접 수행 범위는 제출 전 지원자가 확인해야 한다."
+  ]
+}

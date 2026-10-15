@@ -1,0 +1,57 @@
+{
+  "amendmentId": "amendment:harbor-hub-five-shard-full-inventory-r1:population-shard-4:r13-dispatch-scope",
+  "authorityEffect": "none",
+  "baselineFingerprint": "sha256:11208e61301739142da6a2712b916ba4fc290532c69de78742d5b909fded6259",
+  "bounded": {
+    "affectedCapabilities": ["queue_claim", "provider_capability_hold", "item_settlement"],
+    "laneId": "population-shard-4",
+    "maximumRevisions": 1
+  },
+  "candidateFingerprint": "sha256:101b0d7630bce0429342839b7b57b82933a696025ac1b4e71d4e2f3304030fb5",
+  "controllerRoleId": "controller",
+  "digest": "sha256:dedcac4290100aca89da346cfde4ba3f495413c6f522c7a221511cdd2a556791",
+  "dispatchPolicy": {
+    "inputContractRefs": [
+      "artifacts/loop-architecture/components/work-queue-coordination/algorithms/persistent-work-queue-frontier/schemas/output.schema.json",
+      "artifacts/workflows/engineering-evaluation/workset-terminal-reward-round/workflow.json"
+    ],
+    "maximumRevisions": 1,
+    "outputContractKinds": [
+      "persistent-engineering-workset-lane-coordination/v1",
+      "engineering-workset-lane-terminal-settlement/v1",
+      "engineering-workset-lane-settlement-review/v1"
+    ],
+    "scheduling": "bounded_parallel",
+    "unchangedFailurePolicy": "replan",
+    "unchangedFailureScope": "same_work_item_and_capability"
+  },
+  "kind": "dispatch-policy-amendment/v1",
+  "materializedAt": "2026-08-28T15:56:43Z",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationRevision": "r13",
+  "preservedPriorReceiptDigest": "sha256:203dc028d5f54a16bb5df0ff86ebd97423da78ecc13ab22f78f9ab6465bf4591",
+  "preservedPriorReceiptRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13:terminal-receipt.adameubanks-rating-generation-consistency.r13.json",
+  "privateReasoningStored": false,
+  "schemaVersion": 1,
+  "scope": "run_private_lane",
+  "shardId": "population-shard-4",
+  "sourceDispatchPolicy": {
+    "inputContractRefs": [
+      "artifacts/loop-architecture/components/work-queue-coordination/algorithms/persistent-work-queue-frontier/schemas/output.schema.json",
+      "artifacts/workflows/engineering-evaluation/workset-terminal-reward-round/workflow.json"
+    ],
+    "maximumRevisions": 1,
+    "outputContractKinds": [
+      "persistent-engineering-workset-lane-coordination/v1",
+      "engineering-workset-lane-terminal-settlement/v1",
+      "engineering-workset-lane-settlement-review/v1"
+    ],
+    "scheduling": "bounded_parallel",
+    "unchangedFailurePolicy": "replan"
+  },
+  "sourcePolicyDigest": "sha256:44d00de050ca3fe05b9dea24311787dd17c348bd8fcd00fa835ec206a37b8f1c",
+  "sourcePolicyRef": "artifacts/agent-swarms/evidence-governance/persistent-engineering-workset-lanes/swarm.json",
+  "status": "report_only",
+  "trackedReusableSourceEdited": false,
+  "unchangedFailureScope": "same_work_item_and_capability"
+}

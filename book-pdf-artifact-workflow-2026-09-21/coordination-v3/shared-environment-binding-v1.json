@@ -1,0 +1,62 @@
+{
+  "kind": "sanitized-shared-environment-binding/v1",
+  "bindingId": "binding:book-pdf-analysis-environment:v1",
+  "status": "informational_in_force_with_holds",
+  "baselineRoot": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21",
+  "baselineSemantics": "shared_read_reference_not_shared_write_surface",
+  "roleContracts": [
+    {
+      "roleRef": "agent-role:source-analysis-coordinator",
+      "writeBoundary": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/**",
+      "responsibility": "fan-in, sanitized environment binding, and coordinator-owned successor manifests"
+    },
+    {
+      "roleRef": "agent-role:visual-pdf-spec-builder",
+      "writeBoundary": "existing visual-owned paths under the baseline root",
+      "readOnlyBoundary": "coordination-v3/**",
+      "checkpointHandoff": "exact visual manifest and digest after the current natural checkpoint"
+    },
+    {
+      "roleRef": "agent-role:project-context-enrichment-producer",
+      "writeBoundary": "artifacts/agents/agent-operation/skill/project-context-enrichment/** and the existing linked Agent profile candidate",
+      "bookBundleWrite": "forbidden",
+      "handoff": "source-freeze-manifest exact ref and digest only"
+    },
+    {
+      "roleRef": "agent-role:independent-project-context-enrichment-validator",
+      "writeBoundary": ".collab/artifacts/project-context-enrichment-validation-2026-09-21/run-v1/contributions/independent-validator-report.json",
+      "bookBundleWrite": "forbidden",
+      "handoff": "worker_done plus exact report ref and digest"
+    },
+    {
+      "roleRef": "agent-role:session-context-integrator",
+      "writeBoundary": null,
+      "responsibility": "read-only environment and session-context integration"
+    }
+  ],
+  "coordinationRules": [
+    "No existing session is adopted, reassigned, or overlaid with a new role.",
+    "Every participant reads the shared baseline and retains only its pre-existing write boundary.",
+    "A mismatch creates hold/reassess at the next natural checkpoint; it does not create new work implicitly.",
+    "Mutable assignment, acknowledgement, and terminal handles remain in .collab/memory.",
+    "External candidate and validation artifacts remain in place and are connected only by exact ref and digest.",
+    "Runtime activation receipts are not artifact activation or acceptance records."
+  ],
+  "protectedHolds": [
+    "visual digest handoff pending",
+    "independent project-context-enrichment validation pending",
+    "source-analysis contribution remains candidate pending independent acceptance",
+    "no manuscript writer, PDF editor, publisher, or settlement owner activated"
+  ],
+  "invalidation": [
+    "baseline root changes without an owner-specific digest handoff",
+    "role, write boundary, source revision, or artifact ref changes",
+    "a pending independent report or visual manifest materializes",
+    "any linked digest mismatch"
+  ],
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_performed",
+  "authorityEffect": "none"
+}

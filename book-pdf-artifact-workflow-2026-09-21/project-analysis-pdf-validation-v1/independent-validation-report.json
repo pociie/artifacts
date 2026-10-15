@@ -1,0 +1,517 @@
+{
+  "kind": "project-analysis-pdf-independent-validation-report/v1",
+  "status": "complete",
+  "overall": "fail",
+  "validatedAt": "2026-09-20T23:53:09Z",
+  "authorityEffect": "none",
+  "validator": {
+    "identity": "orca-dispatched-worker:ctx_b038ad2fd4bd",
+    "role": "independent_fact_visual_reader_validator",
+    "runId": "run_837aab6bfcd6",
+    "taskId": "task_012d12037607",
+    "dispatchId": "ctx_b038ad2fd4bd",
+    "independentOfProducer": true,
+    "producerTaskId": "task_5e82c5f63e3e",
+    "producerDispatchId": "ctx_6d065818bb96"
+  },
+  "executionRoute": {
+    "effectivePrimaryMode": "orchestration",
+    "segmentMode": "single_task",
+    "requestRelation": "validate_current_outcome",
+    "workPurpose": "validate",
+    "operationFamily": "criteria_evaluation",
+    "effectIntent": "local_mutation",
+    "outputShape": "validation_report",
+    "contributionShape": "one_owner",
+    "executionSurface": "delegated_single_writer",
+    "validationSeparability": "independent",
+    "scopeNote": "All candidate, predecessor, frozen-input, and source-clone paths were read-only. The only owned mutation was this report.",
+    "authorityEffect": "none"
+  },
+  "target": {
+    "outputFreeze": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/pdf-delivery-v1/author-output-freeze.json",
+      "expectedSha256": "0fb5223acd3dd16cbcf1efd00050547355334890e013c9791f584b3c60af635d",
+      "observedSha256": "0fb5223acd3dd16cbcf1efd00050547355334890e013c9791f584b3c60af635d",
+      "bytes": 3977,
+      "status": "pass"
+    },
+    "handoff": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v1/recipient-handoff-manifest.json",
+      "expectedSha256": "770d1aff85feaccea6b4f51257ac3ab6fdbfefbd9d1469f8b265cebdb20e916c",
+      "observedSha256": "770d1aff85feaccea6b4f51257ac3ab6fdbfefbd9d1469f8b265cebdb20e916c",
+      "bytes": 16763,
+      "status": "pass"
+    },
+    "authoringInputFreeze": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/pdf-delivery-v1/authoring-input-freeze.json",
+      "expectedSha256": "1fe79995a7160c2bb20fc8b46e16d4e0669daf57ca48be32a16ad7689baf2d4e",
+      "observedSha256": "1fe79995a7160c2bb20fc8b46e16d4e0669daf57ca48be32a16ad7689baf2d4e",
+      "bytes": 4062,
+      "status": "pass"
+    },
+    "sourceRevision": {
+      "sourceRoot": ".collab/sources/stupidhumans/claude-code-source-code",
+      "expectedCommit": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+      "observedCommit": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+      "expectedTree": "1b6b4ab07d0d7b795129852183137c28099c5550",
+      "observedTree": "1b6b4ab07d0d7b795129852183137c28099c5550",
+      "worktreeStatus": "clean",
+      "status": "pass"
+    }
+  },
+  "immutableCandidate": {
+    "root": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v1",
+    "digestRecipe": "sha256 of sorted UTF-8 lines: <file-sha256> <bytes> <relative-path>\\n",
+    "before": {
+      "fileCount": 45,
+      "totalBytes": 12259317,
+      "treeDigest": "fd19d959b6e34722da6f19ee5f85fdc038943c5cece1c3356d273eba142dbf90"
+    },
+    "after": {
+      "fileCount": 45,
+      "totalBytes": 12259317,
+      "treeDigest": "fd19d959b6e34722da6f19ee5f85fdc038943c5cece1c3356d273eba142dbf90"
+    },
+    "unchanged": true,
+    "status": "pass"
+  },
+  "digestAndByteValidation": {
+    "directFreezeHandoffAndSourceManifestReferences": {
+      "rawReferences": 85,
+      "uniquePathDigestChecks": 76,
+      "uniqueByteCountChecks": 44,
+      "missingPaths": 0,
+      "digestMismatches": 0,
+      "byteCountMismatches": 0,
+      "status": "pass"
+    },
+    "sourceAnalysisTransitiveReferences": {
+      "priorAnalysisDocumentChecks": 5,
+      "workExecutionBoundReferenceChecks": 2,
+      "mismatches": 0,
+      "status": "pass"
+    },
+    "requiredVisualContinuityInputReferences": {
+      "manifestPath": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/visual-pagination-continuity-contribution-manifest-v1.json",
+      "manifestExpectedSha256": "68267f5d22c98e042c726e6366415b2895979aa2433fea301a06f35349cd7000",
+      "manifestObservedSha256": "68267f5d22c98e042c726e6366415b2895979aa2433fea301a06f35349cd7000",
+      "pathDigestChecks": 10,
+      "mismatches": [
+        {
+          "path": "artifacts/agents/agent-operation/skill/project-context-enrichment/SKILL.md",
+          "expectedSha256": "f2cca2fd15eca3e0498a17b575d5d6ba94344f05d044ffecbad4e1b11ae0df7d",
+          "observedSha256": "c816fbe64b45689273bd06b56653964326d1b16a2c67c055dee44d7534ef7887",
+          "observedBytes": 6077,
+          "attribution": "The required visual-continuity manifest retains an older digest for a mutable shared quality reference; the current path is the corrected project-context-enrichment revision. The visual manifest itself still matches its freeze digest."
+        },
+        {
+          "path": "artifacts/agents/agent-operation/skill/project-context-enrichment/references/enrichment-packet.md",
+          "expectedSha256": "efdada7520c1b35c747b10ef0e1be8e6c10b1a898d99c6d201ab0cb045042cbf",
+          "observedSha256": "90338fa9f24139829fd408ee6d3fb3ed61d70f9cb62850e71845c64a20b3fb21",
+          "observedBytes": 4260,
+          "attribution": "The required visual-continuity manifest retains an older digest for a mutable shared quality reference; the current path is the corrected project-context-enrichment revision. The visual manifest itself still matches its freeze digest."
+        }
+      ],
+      "combinedContributionExpectedSha256": "a20a02a08c60738a1f67edc2e6e100848291190aa5c175929d593b6b52914ee3",
+      "combinedContributionObservedSha256": "a20a02a08c60738a1f67edc2e6e100848291190aa5c175929d593b6b52914ee3",
+      "status": "fail"
+    },
+    "limitedPredecessorHandoffReferences": {
+      "pathDigestChecks": 14,
+      "mismatches": 0,
+      "combinedExpectedSha256": "d14439276a261a76996969387a60d023fd4c8d4072fc01c864af7ea50f568f41",
+      "combinedObservedSha256": "d14439276a261a76996969387a60d023fd4c8d4072fc01c864af7ea50f568f41",
+      "status": "pass"
+    },
+    "limitedContextEnrichmentInputReferences": {
+      "pathDigestChecks": 11,
+      "mismatches": 0,
+      "status": "pass"
+    },
+    "combinedEvidenceRevision": {
+      "recipe": "UTF-8 lines terminated by LF: revision=<value>, sourceReviewManifest=<sha256>, visualContinuityContribution=<sha256>, authorValidation=<sha256>, readerPdf=<sha256>",
+      "expectedSha256": "e20361c9a24797aa7aacb0a478a416c5bf655eb28dd73ec3d46015f262f49680",
+      "observedSha256": "e20361c9a24797aa7aacb0a478a416c5bf655eb28dd73ec3d46015f262f49680",
+      "status": "pass"
+    },
+    "unboundRequestDigest": {
+      "digest": "173053b4a42dae7829fbd189ddf5fb125a600cf1cee94a3030b0f45066c910ee",
+      "status": "hold",
+      "reason": "The raw request body is intentionally not retained in tracked artifacts, so this opaque request digest cannot be independently re-derived from the frozen bundle."
+    },
+    "overall": "fail"
+  },
+  "sourceAndClaimValidation": {
+    "sourceIdentity": {
+      "commitAndTree": "pass",
+      "cleanWorktree": "pass",
+      "trackedFiles": {
+        "expected": 1952,
+        "observed": 1952,
+        "status": "pass"
+      },
+      "implementationTypeScriptFiles": {
+        "expected": 1884,
+        "observed": 1884,
+        "status": "pass"
+      },
+      "physicalTypeScriptNewlines": {
+        "expected": 512664,
+        "observed": 512664,
+        "status": "pass",
+        "note": "The frozen figure is reproducible as newline count; split-line count including final unterminated segments is 514548."
+      },
+      "packageIdentity": {
+        "name": "@anthropic-ai/claude-code-source",
+        "version": "2.1.88",
+        "private": true,
+        "runtime": "node >=18.0.0",
+        "status": "pass"
+      },
+      "commitCount": {
+        "claimed": 15,
+        "locallyObservable": 1,
+        "status": "hold",
+        "reason": "The supplied source clone is shallow/grafted at the exact commit and tree; git rev-list --count HEAD and --all both return 1, so the source-state commitCount of 15 is not locally reproducible. This ancillary count is not used in the reader PDF."
+      }
+    },
+    "topology": {
+      "reproducedOutputSha256": "0f399a07cf5c43be5d187af187219dbacf20c5df22399c91d5bb0f70da143630",
+      "storedOutputSha256": "0f399a07cf5c43be5d187af187219dbacf20c5df22399c91d5bb0f70da143630",
+      "facts": {
+        "implementationFiles": 1884,
+        "resolvedImportOccurrences": 13219,
+        "crossGroupOccurrencePercent": 65.25,
+        "groupsInCyclicComponents": 35,
+        "topLevelGroups": 36,
+        "largestTypeInclusiveFileScc": 1433,
+        "largestRuntimeLikeFileScc": 591,
+        "unresolvedInternalImportOccurrences": 617,
+        "unresolvedRawSpecifiers": 250
+      },
+      "status": "pass"
+    },
+    "materialClaims": {
+      "count": 64,
+      "classCounts": {
+        "observed_project_fact": 37,
+        "external_background": 3,
+        "project_inference": 19,
+        "unresolved": 5
+      },
+      "allowedClassesOnly": true,
+      "duplicateClaimIds": [],
+      "sourceReferenceChecks": 103,
+      "sourceReferenceFailures": 0,
+      "classificationDistinction": "pass",
+      "status": "pass"
+    },
+    "factualAndSourceCoverage": {
+      "status": "pass",
+      "note": "All 64 material claim bindings resolve through the frozen analysis bundle or limited background packet. Material reader facts checked against the exact source tree and reproduced topology output are consistent; official/current-product parity is not claimed."
+    }
+  },
+  "algorithmCards": [
+    {
+      "id": "ALG-TURN-LOOP",
+      "page": 9,
+      "evidenceRefCount": 9,
+      "fields": {"trigger": "pass", "state": "pass", "transition": "pass", "invariant": "pass", "failure": "pass", "recovery": "pass", "exactEvidence": "pass", "readerSignificance": "pass"},
+      "status": "pass"
+    },
+    {
+      "id": "ALG-EFFECT-INTERPRETER",
+      "page": 10,
+      "evidenceRefCount": 8,
+      "fields": {"trigger": "pass", "state": "pass", "transition": "pass", "invariant": "pass", "failure": "pass", "recovery": "pass", "exactEvidence": "pass", "readerSignificance": "pass"},
+      "status": "pass"
+    },
+    {
+      "id": "ALG-STREAM-REDUCER",
+      "page": 11,
+      "evidenceRefCount": 7,
+      "fields": {"trigger": "pass", "state": "pass", "transition": "pass", "invariant": "pass", "failure": "pass", "recovery": "pass", "exactEvidence": "pass", "readerSignificance": "pass"},
+      "status": "pass"
+    },
+    {
+      "id": "ALG-TRANSCRIPT-APPEND",
+      "page": 12,
+      "evidenceRefCount": 7,
+      "fields": {"trigger": "pass", "state": "pass", "transition": "pass", "invariant": "pass", "failure": "pass", "recovery": "pass", "exactEvidence": "pass", "readerSignificance": "pass"},
+      "status": "pass"
+    },
+    {
+      "id": "ALG-RESUME-GRAPH",
+      "page": 13,
+      "evidenceRefCount": 7,
+      "fields": {"trigger": "pass", "state": "pass", "transition": "pass", "invariant": "pass", "failure": "pass", "recovery": "pass", "exactEvidence": "pass", "readerSignificance": "pass"},
+      "status": "pass"
+    },
+    {
+      "id": "ALG-API-NORMALIZATION",
+      "page": 14,
+      "evidenceRefCount": 6,
+      "fields": {"trigger": "pass", "state": "pass", "transition": "pass", "invariant": "pass", "failure": "pass", "recovery": "pass", "exactEvidence": "pass", "readerSignificance": "pass"},
+      "status": "pass"
+    },
+    {
+      "id": "ALG-TOOL-SCHEDULER",
+      "page": 15,
+      "evidenceRefCount": 6,
+      "fields": {"trigger": "pass", "state": "pass", "transition": "pass", "invariant": "pass", "failure": "pass", "recovery": "pass", "exactEvidence": "pass", "readerSignificance": "pass"},
+      "status": "pass"
+    },
+    {
+      "id": "ALG-COMPACTION-MIGRATION",
+      "page": 16,
+      "evidenceRefCount": 7,
+      "fields": {"trigger": "pass", "state": "pass", "transition": "pass", "invariant": "pass", "failure": "pass", "recovery": "pass", "exactEvidence": "pass", "readerSignificance": "pass"},
+      "status": "pass"
+    },
+    {
+      "id": "ALG-FILE-EDIT-COMMIT",
+      "page": 17,
+      "evidenceRefCount": 9,
+      "fields": {"trigger": "pass", "state": "pass", "transition": "pass", "invariant": "pass", "failure": "pass", "recovery": "pass", "exactEvidence": "pass", "readerSignificance": "pass"},
+      "status": "pass"
+    },
+    {
+      "id": "ALG-QUERY-ENGINE-PROJECTION",
+      "page": 18,
+      "evidenceRefCount": 8,
+      "fields": {"trigger": "pass", "state": "pass", "transition": "pass", "invariant": "pass", "failure": "pass", "recovery": "pass", "exactEvidence": "pass", "readerSignificance": "pass"},
+      "status": "pass"
+    },
+    {
+      "id": "ALG-INPUT-DISPATCH",
+      "page": 19,
+      "evidenceRefCount": 7,
+      "fields": {"trigger": "pass", "state": "pass", "transition": "pass", "invariant": "pass", "failure": "pass", "recovery": "pass", "exactEvidence": "pass", "readerSignificance": "pass"},
+      "status": "pass"
+    },
+    {
+      "id": "ALG-REMOTE-RECONNECT",
+      "page": 20,
+      "evidenceRefCount": 8,
+      "fields": {"trigger": "pass", "state": "pass", "transition": "pass", "invariant": "pass", "failure": "pass", "recovery": "pass", "exactEvidence": "pass", "readerSignificance": "pass"},
+      "status": "pass"
+    }
+  ],
+  "algorithmSummary": {
+    "catalogCards": 12,
+    "renderedCards": 12,
+    "checkedEvidenceRefs": 89,
+    "uniqueEvidenceRefs": 89,
+    "missingFiles": 0,
+    "outOfRangeLines": 0,
+    "catalogToReaderReferenceMismatches": 0,
+    "fieldFailures": 0,
+    "status": "pass"
+  },
+  "coverage": [
+    {"area": "project_status_provenance_and_limitations", "pages": [1, 2, 37], "status": "pass"},
+    {"area": "code_and_system_execution_flow", "pages": [5, 6, 7, 8], "status": "pass"},
+    {"area": "runtime_algorithms", "pages": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "status": "pass"},
+    {"area": "physical_topology", "pages": [22, 23], "status": "pass"},
+    {"area": "semantic_module_candidates", "pages": [24, 25, 26], "status": "pass"},
+    {"area": "project_management", "pages": [27], "status": "pass"},
+    {"area": "evidence_governance", "pages": [28], "status": "pass"},
+    {"area": "incremental_modularization", "pages": [29], "status": "pass"},
+    {"area": "roadmap", "pages": [30, 31], "status": "pass"},
+    {"area": "explicit_unknowns", "pages": [32, 37], "status": "pass"}
+  ],
+  "pdfValidation": {
+    "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v1/claude-code-project-analysis.pdf",
+    "sha256": "cd169341ef3bb78bee28f7a158e09332ad2c1957dfaa37de75ca2c9d62612f79",
+    "bytes": 4681612,
+    "pageCount": {
+      "expected": 37,
+      "observedByPdfKit": 37,
+      "status": "pass"
+    },
+    "pageSizePoints": "594.96x841.92",
+    "pageSize": "A4",
+    "selectableText": {
+      "perPageCharacterSum": 44752,
+      "documentStringLengthIncludingInterPageSeparators": 44788,
+      "emptyTextPages": [],
+      "minimumPageCharacters": 379,
+      "maximumPageCharacters": 2446,
+      "status": "pass"
+    },
+    "searchableText": {
+      "status": "fail",
+      "defectId": "DEFECT-PDF-TEXT-ORDER-001",
+      "finding": "The PDF contains selectable glyph text on every page, but PDFKit extracts and searches many visually normal grid/column body blocks in reverse character order. Therefore the handoff claim searchable=true is not valid for material visible phrases.",
+      "fingerprint": {
+        "pdfSha256": "cd169341ef3bb78bee28f7a158e09332ad2c1957dfaa37de75ca2c9d62612f79",
+        "engine": "macOS PDFKit via JavaScript for Automation",
+        "queries": [
+          {"visibleQuery": "worker_done", "normalHits": 0, "reversedQuery": "enod_rekrow", "reversedHits": 2},
+          {"visibleQuery": "Phase A", "normalHits": 0, "reversedQuery": "A esahP", "reversedHits": 2},
+          {"visibleQuery": "공식 module owner", "normalHits": 0, "reversedQuery": "renwo eludom 식공", "reversedHits": 2},
+          {"visibleQuery": "tool_result", "normalHits": 1, "reversedQuery": "tluser_loot", "reversedHits": 11}
+        ],
+        "representativePages": [2, 5, 10, 16, 18, 24, 27, 28, 29, 30, 31, 32, 37],
+        "attribution": "Candidate PDF logical text order/search index produced by the author render. Visual raster appearance remains correct."
+      }
+    },
+    "previewSet": {
+      "count": 37,
+      "sequenceFailures": [],
+      "dimensions": {"794x1123": 18, "794x1124": 19},
+      "invalidPngSignatures": [],
+      "contactSheetDimensions": "1900x4294",
+      "status": "pass"
+    },
+    "layout": {
+      "independentDomPageCount": 37,
+      "horizontalOverflowPages": [],
+      "verticalOverflowPages": [],
+      "clippedSemanticUnits": [],
+      "folioOverlapUnits": [],
+      "missingFolios": [],
+      "folioSequence": "001-037",
+      "status": "pass"
+    },
+    "continuations": {
+      "groups": [
+        {"id": "TRACE-E2E", "pages": [7, 8], "ranges": ["1-5", "6-10"], "status": "pass"},
+        {"id": "SEMANTIC-MODULES", "pages": [24, 25], "ranges": ["M1-M4", "M5-M8"], "status": "pass"},
+        {"id": "ROADMAP", "pages": [30, 31], "ranges": ["A-B", "C-E"], "status": "pass"},
+        {"id": "ALGORITHM-INDEX", "pages": [33, 34], "ranges": ["1-6", "7-12"], "status": "pass"}
+      ],
+      "failures": 0,
+      "status": "pass"
+    },
+    "links": {
+      "htmlAnchors": 181,
+      "invalidHtmlAnchors": 0,
+      "sourceAnchors": 178,
+      "unpinnedSourceAnchors": 0,
+      "pdfLinkAnnotations": 268,
+      "pdfUniqueUrls": 92,
+      "pdfInvalidSchemes": 0,
+      "syntaxAndBindingStatus": "pass",
+      "externalReachabilityStatus": "hold",
+      "externalReachabilityReason": "Network reachability was intentionally not exercised."
+    },
+    "taggedPdfAccessibility": {
+      "status": "hold",
+      "finding": "No StructTreeRoot, MarkInfo, or /Lang marker was observed in the PDF bytes; assistive-technology reading order was not tested."
+    },
+    "physicalPrintAndGrayscale": {
+      "status": "hold",
+      "reason": "No physical A4 print or grayscale proof was supplied or performed."
+    }
+  },
+  "visualInspection": {
+    "contactSheet": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v1/contact-sheet.png",
+      "status": "pass",
+      "finding": "All 37 thumbnails are present in sequence with stable page system, no visible blank page, and no obvious page-edge clipping."
+    },
+    "pagesInspected": [1, 5, 6, 7, 8, 9, 14, 20, 22, 23, 24, 25, 28, 30, 31, 33, 34, 37],
+    "pagePurposes": {
+      "1": "cover",
+      "5": "system model",
+      "6": "end-to-end system flow",
+      "7": "worked trace start",
+      "8": "worked trace continuation",
+      "9": "algorithm turn loop",
+      "14": "algorithm API normalization",
+      "20": "algorithm remote reconnect",
+      "22": "physical topology",
+      "23": "topology evidence and unresolved interpretation",
+      "24": "semantic modules M1-M4",
+      "25": "semantic modules M5-M8 continuation",
+      "28": "evidence governance",
+      "30": "roadmap phases A-B",
+      "31": "roadmap phases C-E continuation",
+      "33": "algorithm evidence index 1-6",
+      "34": "algorithm evidence index 7-12 continuation",
+      "37": "sources and final limitations"
+    },
+    "legibility": "pass",
+    "visualOverflowOrClipping": "pass",
+    "continuationMarkers": "pass",
+    "folioPlacement": "pass",
+    "status": "pass"
+  },
+  "dimensionResults": [
+    {"dimension": "output_freeze_identity", "status": "pass", "attribution": "Exact user-supplied digest matches."},
+    {"dimension": "handoff_identity", "status": "pass", "attribution": "Exact handoff digest matches."},
+    {"dimension": "direct_digest_and_byte_counts", "status": "pass", "attribution": "76 unique path/digest and 44 unique byte-count checks match."},
+    {"dimension": "frozen_input_reference_closure", "status": "fail", "attribution": "Two transitive mutable quality-reference paths in the required visual-continuity input no longer match their frozen digests."},
+    {"dimension": "source_revision", "status": "pass", "attribution": "Local source HEAD/tree and cleanliness match."},
+    {"dimension": "ancillary_commit_history_count", "status": "hold", "attribution": "The shallow/grafted clone cannot reproduce the source-state count of 15."},
+    {"dimension": "factual_and_source_coverage", "status": "pass", "attribution": "64 claims and 103 source-reference tokens resolve; topology and material source facts reproduce."},
+    {"dimension": "algorithm_cards", "status": "pass", "attribution": "All 12 cards contain every required field and 89 exact source locators resolve."},
+    {"dimension": "evidence_class_distinction", "status": "pass", "attribution": "All claims use exactly the four required classes with explicit labels and source bindings."},
+    {"dimension": "required_topic_coverage", "status": "pass", "attribution": "All ten required areas are represented on mapped pages."},
+    {"dimension": "pdf_page_count", "status": "pass", "attribution": "PDFKit observes 37 A4 pages."},
+    {"dimension": "pdf_selectable_text", "status": "pass", "attribution": "Every page exposes text; per-page sum is 44752 characters."},
+    {"dimension": "pdf_searchable_text", "status": "fail", "attribution": "Material visible phrases are indexed in reverse character order on multiple pages; see DEFECT-PDF-TEXT-ORDER-001."},
+    {"dimension": "empty_pages", "status": "pass", "attribution": "No empty text page or visually blank page observed."},
+    {"dimension": "preview_count_and_dimensions", "status": "pass", "attribution": "37 sequential PNGs at 794x1123/1124 and a 1900x4294 contact sheet."},
+    {"dimension": "overflow_and_clipping", "status": "pass", "attribution": "Independent DOM geometry and visual inspection found no overflow, clipped semantic unit, or folio overlap."},
+    {"dimension": "continuation", "status": "pass", "attribution": "Four multi-page groups preserve start/continued identity and ranges."},
+    {"dimension": "folios", "status": "pass", "attribution": "All folios are present and sequential 001-037."},
+    {"dimension": "link_syntax_and_pdf_annotations", "status": "pass", "attribution": "HTML targets and PDF https annotations are valid and source URLs are commit-pinned."},
+    {"dimension": "external_link_reachability", "status": "hold", "attribution": "Network reachability not checked."},
+    {"dimension": "visual_reader_quality", "status": "pass", "attribution": "Contact sheet and 18 representative pages are legible and visually complete."},
+    {"dimension": "physical_print_and_grayscale", "status": "hold", "attribution": "Not evidenced."},
+    {"dimension": "tagged_pdf_accessibility", "status": "hold", "attribution": "No tagged-PDF structure evidence and no assistive-technology test."},
+    {"dimension": "reconstructed_source_runtime_execution", "status": "hold", "attribution": "Build/runtime parity was outside the read-only source-analysis boundary."}
+  ],
+  "defects": [
+    {
+      "id": "DEFECT-PDF-TEXT-ORDER-001",
+      "severity": "blocking",
+      "status": "fail",
+      "candidateAttribution": true,
+      "summary": "The visually correct PDF is not reliably searchable because many body blocks have reversed logical character order in the PDF text layer.",
+      "reproduction": "Open the frozen PDF with macOS PDFKit and compare findString results for worker_done/enod_rekrow, Phase A/A esahP, 공식 module owner/renwo eludom 식공, and tool_result/tluser_loot."
+    },
+    {
+      "id": "DEFECT-FROZEN-INPUT-REFERENCE-DRIFT-001",
+      "severity": "blocking_for_reference_closure",
+      "status": "fail",
+      "candidateAttribution": false,
+      "summary": "A required frozen visual-continuity input has two path-bound quality-reference digests that no longer match the current shared paths.",
+      "reproduction": "Hash the two paths listed in digestAndByteValidation.requiredVisualContinuityInputReferences.mismatches and compare them with the digests in visual-pagination-continuity-contribution-manifest-v1.json.",
+      "attribution": "Frozen-input provenance/shared-reference drift, not mutation under project-analysis-pdf-v1."
+    }
+  ],
+  "holds": [
+    "External URL network reachability was not checked.",
+    "Physical print and grayscale proofing were not performed.",
+    "Tagged-PDF and assistive-technology accessibility were not validated; no structural tags were observed.",
+    "Build and runtime execution of the reconstructed source snapshot were not performed.",
+    "The shallow/grafted source clone does not independently reproduce the ancillary source-state commitCount of 15.",
+    "The opaque request digest cannot be re-derived because the raw request is intentionally not retained."
+  ],
+  "targetedCommandResults": [
+    {"commandClass": "shasum/stat/jq", "result": "Output-freeze digest matched 0fb5223a...; handoff and direct frozen artifacts matched."},
+    {"commandClass": "recursive Node digest and byte verifier", "result": "85 raw references, 76 unique path/digest checks, 44 unique byte checks, zero direct mismatch."},
+    {"commandClass": "nested manifest digest verifier", "result": "Predecessor and context-enrichment suites matched; required visual-continuity suite exposed two shared-path digest mismatches."},
+    {"commandClass": "git rev-parse/status/cat-file", "result": "HEAD 2ca5ddab..., tree 1b6b4ab..., commit and tree objects present, source worktree clean."},
+    {"commandClass": "module-topology-analyzer stdout hash", "result": "Reproduced module-topology.json digest 0f399a07... without writing output."},
+    {"commandClass": "read-only Playwright DOM evaluation", "result": "37 pages, no overflow/clipping/folio overlap, 64 claims, 12 algorithm cards, 181 valid HTML anchors, four valid continuation groups."},
+    {"commandClass": "macOS PDFKit read-only inspection", "result": "37 pages, 44752 per-page text characters, no empty page, 268 https link annotations, and the blocking reverse-order search fingerprint."},
+    {"commandClass": "PNG IHDR inspection", "result": "37 sequential previews at 794x1123/1124 and contact sheet at 1900x4294."},
+    {"commandClass": "local image inspection", "result": "Contact sheet plus pages 1, 5, 6, 7, 8, 9, 14, 20, 22, 23, 24, 25, 28, 30, 31, 33, 34, and 37 inspected."}
+  ],
+  "decision": {
+    "overall": "fail",
+    "reason": "The validation work completed, but the candidate cannot pass because its PDF text layer is not reliably searchable and the required frozen-input reference closure contains two reproducible digest mismatches. Visual composition, page geometry, claim/source coverage, algorithm completeness, topic coverage, folios, continuations, preview integrity, and direct output digests otherwise pass.",
+    "activation": "not_performed",
+    "formalAcceptance": "not_performed",
+    "publication": "not_performed",
+    "promotion": "not_performed",
+    "integration": "not_performed",
+    "settlement": "not_performed",
+    "authorityEffect": "none"
+  }
+}

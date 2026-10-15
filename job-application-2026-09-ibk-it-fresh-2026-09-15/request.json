@@ -1,0 +1,804 @@
+{
+  "kind": "job-application-report-request/v1",
+  "schema_version": 1,
+  "request_id": "request:ibk:it:2026-h2:contextual-report",
+  "revision": "contextual-five-set-pdf",
+  "application": {
+    "company_name": "IBK기업은행",
+    "role_title": "IT 신입행원",
+    "language": "ko-KR",
+    "official_posting_source_ids": [
+      "source-ibk-posting",
+      "source-ibk-question-endpoint",
+      "source-ibk-alio"
+    ]
+  },
+  "questions": [
+    {
+      "id": "question-motivation",
+      "prompt": "지원자님을 환영합니다! 수많은 회사 중에서 IBK기업은행을 선택해 주신 이유와, 앞으로 IBK에서 이루고 싶은 모습에 대해 편안하게 이야기해주세요.",
+      "min_chars": 1,
+      "max_chars": 1000,
+      "required_contents": [
+        "IBK기업은행을 선택한 이유",
+        "앞으로 IBK에서 이루고 싶은 모습",
+        "개인 경험 또는 관심과의 연결"
+      ],
+      "focus": {
+        "family_id": "motivation-and-company-fit",
+        "primary_claim": "금융 시스템의 전 과정을 책임지는 IT 역할과 백엔드·이벤트 처리 중심의 준비가 만나 IBK를 선택했다.",
+        "reader_takeaway": "공고의 IT 책임 범위를 읽고 자신의 기술 관심을 금융 시스템의 신뢰성으로 연결한 지원자다.",
+        "reviewer_need": "왜 IBK의 IT 직무인지, 입행 후 어떤 책임으로 기여할지 확인한다.",
+        "evidence_function": "공고의 금융 시스템 개발·운영 범위와 지원자의 핀테크 백엔드·이벤트 처리 포트폴리오를 선택 이유와 미래상에 연결한다.",
+        "rhetorical_move_ids": [
+          "direct-answer",
+          "company-role-connection",
+          "choice-or-action",
+          "relevant-context",
+          "future-direction"
+        ],
+        "voice_evidence_ids": [
+          "applicant-fact-payment-project",
+          "applicant-value-user-next-action",
+          "applicant-value-improvement"
+        ],
+        "closing_function": "specific-next-responsibility",
+        "non_overlap_boundary": "회사 칭찬이나 막연한 포부가 아니라 공고의 IT 책임 범위와 개인 기술 준비가 만나는 현재의 선택을 중심으로 쓴다."
+      },
+      "user_confirmation_ids": [
+        "unknown-personal-ibk-motivation"
+      ]
+    },
+    {
+      "id": "question-strength",
+      "prompt": "지원자님의 여러 강점 중에서 ‘이것만큼은 내가 자신 있다’고 말할 수 있는 것은 무엇인가요? 그리고 이를 발휘하여 성과를 낸 경험에 대해 들려주세요.",
+      "min_chars": 1,
+      "max_chars": 1000,
+      "required_contents": [
+        "가장 자신 있는 강점",
+        "강점을 발휘한 구체적 경험",
+        "본인의 행동",
+        "성과 또는 확인 가능한 결과"
+      ],
+      "focus": {
+        "family_id": "strength-and-work-style",
+        "primary_claim": "복잡한 기술 흐름을 책임 경계와 확인 가능한 결과로 구조화하는 힘이 가장 큰 강점이다.",
+        "reader_takeaway": "기술을 나열하는 대신 흐름·경계·결과를 묶어 설명하고 구현하는 지원자다.",
+        "reviewer_need": "강점이 자기평가가 아니라 반복 가능한 행동과 결과로 드러나는지 확인한다.",
+        "evidence_function": "공개 핀테크 MSA 저장소, Kafka 학습 기록, 정적 분석 도구, 알고리즘 기록에서 강점이 드러나는 구조적 선택과 산출물을 사용한다.",
+        "rhetorical_move_ids": [
+          "direct-answer",
+          "value-in-action",
+          "result-or-boundary",
+          "relevant-context",
+          "choice-or-action",
+          "company-role-connection"
+        ],
+        "voice_evidence_ids": [
+          "applicant-fact-backend-responsibility",
+          "project-claim-payment-end-to-end",
+          "project-claim-reusable-contracts"
+        ],
+        "closing_function": "role-relevance",
+        "non_overlap_boundary": "지원동기나 포부를 반복하지 않고 하나의 강점이 실제 작업 방식과 확인 가능한 산출물로 어떻게 나타났는지에 집중한다."
+      },
+      "user_confirmation_ids": [
+        "unknown-project-observable-outcome"
+      ]
+    },
+    {
+      "id": "question-growth",
+      "prompt": "결과에 관계없이 지원자님을 한 단계 성장시킨 경험이 궁금합니다. 그 과정에서 몸소 느꼈거나 배운 점, 그리고 이후 ‘변화된 나’에 대해서 솔직하게 들려주세요.",
+      "min_chars": 1,
+      "max_chars": 1000,
+      "required_contents": [
+        "성장시킨 경험",
+        "과정에서 느끼거나 배운 점",
+        "이후 변화된 모습",
+        "결과와 무관한 성장의 의미"
+      ],
+      "focus": {
+        "family_id": "project-problem-and-achievement",
+        "primary_claim": "기술적 결과보다 실패 경로와 검증 과정을 설계하는 태도를 배우며 문제를 대하는 방식이 바뀌었다.",
+        "reader_takeaway": "결과를 과장하지 않고 복잡한 문제에서 선택·검증·학습을 반복하는 엔지니어다.",
+        "reviewer_need": "성장 경험의 긴장과 선택, 배운 점, 이후 행동 변화가 인과적으로 이어지는지 확인한다.",
+        "evidence_function": "정적 분석·Kafka·알고리즘 학습 과정에서 단순 구현을 넘어 경계조건, 전달 보장, 재현 가능한 확인을 고민하게 된 경험을 사용한다.",
+        "rhetorical_move_ids": [
+          "relevant-context",
+          "choice-or-action",
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "learning-or-change",
+          "direct-answer"
+        ],
+        "voice_evidence_ids": [
+          "project-claim-alternative-refinement",
+          "project-claim-feedback-refinement",
+          "applicant-value-improvement"
+        ],
+        "closing_function": "changed-practice",
+        "non_overlap_boundary": "현재 강점의 증명보다 한 경험에서 관점이 어떻게 바뀌었고 이후 문제 해결 습관이 어떻게 달라졌는지를 중심으로 쓴다."
+      },
+      "user_confirmation_ids": [
+        "unknown-project-observable-outcome",
+        "unknown-collaboration-scope"
+      ]
+    },
+    {
+      "id": "question-it-capability",
+      "prompt": "지원자님이 지닌 디지털·IT 역량 중 IBK에서 가장 잘 활용할 수 있다고 생각하는 역량은 무엇인지 본인만의 차별화된 스토리로 저희에게 이야기해주세요.",
+      "min_chars": 1,
+      "max_chars": 1000,
+      "required_contents": [
+        "가장 잘 활용할 디지털·IT 역량",
+        "차별화된 경험 또는 스토리",
+        "IBK에서의 활용 방식",
+        "역량의 한계와 확장 방향"
+      ],
+      "focus": {
+        "family_id": "capability-and-contribution",
+        "primary_claim": "Java·Spring 백엔드와 이벤트·데이터 흐름을 함께 보며 금융 시스템의 처리 신뢰성을 높이는 역량을 활용할 수 있다.",
+        "reader_takeaway": "애플리케이션 기능만이 아니라 인증·결제·이벤트·DB·운영 경계를 함께 읽는 IT 지원자다.",
+        "reviewer_need": "보유 기술이 공고의 금융 시스템·애플리케이션·데이터·운영 책임에 어떻게 쓰일지 확인한다.",
+        "evidence_function": "Spring 핀테크 MSA 저장소, Kafka 학습 기록, 프로그램 분석 경험을 하나의 처리 흐름 관점으로 묶어 IBK IT 기여를 설명한다.",
+        "rhetorical_move_ids": [
+          "direct-answer",
+          "choice-or-action",
+          "company-role-connection",
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "future-direction"
+        ],
+        "voice_evidence_ids": [
+          "applicant-fact-payment-project",
+          "applicant-fact-loop-design",
+          "applicant-value-responsibility"
+        ],
+        "closing_function": "concrete-contribution",
+        "non_overlap_boundary": "기술 목록을 반복하지 않고 하나의 핵심 역량이 금융 업무 흐름의 안정성·추적성·유지보수성에 기여하는 방식을 중심으로 쓴다."
+      },
+      "user_confirmation_ids": [
+        "unknown-production-operation"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-ibk-posting",
+      "source_type": "official_posting",
+      "locator": "https://ibk.incruit.com/hire/viewhire.asp?projectid=128",
+      "authority": "primary",
+      "observed_at": "2026-09-15T20:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-ibk-question-endpoint",
+      "source_type": "official_posting",
+      "locator": "https://secure.jasoseol.com/employment/employment_question.json?employment_id=427724",
+      "authority": "primary",
+      "observed_at": "2026-09-15T20:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    },
+    {
+      "id": "source-ibk-alio",
+      "source_type": "official_posting",
+      "locator": "https://job.alio.go.kr/recruitview.do?idx=304338",
+      "authority": "primary",
+      "observed_at": "2026-09-15T20:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    },
+    {
+      "id": "source-ibk-strategy",
+      "source_type": "official_company",
+      "locator": "https://global.ibk.co.kr/en/company/Strategy",
+      "authority": "primary",
+      "observed_at": "2026-09-15T20:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-ibk-ceo-2026",
+      "source_type": "official_company",
+      "locator": "https://research.ibk.co.kr/fup/research/ceo/2026030914183228846181017803886.pdf",
+      "authority": "primary",
+      "observed_at": "2026-09-15T20:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-basel-operational-resilience",
+      "source_type": "official_documentation",
+      "locator": "https://www.bis.org/committees/bcbs/basel-consolidated-guidelines/module/orr/20",
+      "authority": "primary",
+      "observed_at": "2026-09-15T20:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    },
+    {
+      "id": "source-applicant-statements",
+      "source_type": "applicant_statement",
+      "locator": "runtime:applicant-provided-statements",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-15T20:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    },
+    {
+      "id": "source-collab-mono",
+      "source_type": "project_repository",
+      "locator": "https://github.com/pociie/collab-mono",
+      "authority": "project_observation",
+      "observed_at": "2026-09-15T20:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    }
+  ],
+  "application_analysis": {
+    "company_context": [
+      {
+        "id": "company-context-ibk-mission",
+        "observation": "IBK기업은행은 중소기업과 고객의 성장을 금융으로 연결하는 정체성을 공식 전략에서 제시한다.",
+        "evidence_refs": [
+          "source-ibk-strategy",
+          "source-ibk-ceo-2026"
+        ],
+        "writing_implication": "지원동기는 은행 규모나 안정성의 일반론보다 기업 고객의 중요한 선택을 지속시키는 IT 책임과 연결한다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "company-context-ibk-digital-direction",
+        "observation": "IBK는 디지털과 AI 역량을 고객 가치와 생산적 금융의 실행 수단으로 다룬다.",
+        "evidence_refs": [
+          "source-ibk-ceo-2026"
+        ],
+        "writing_implication": "기술 자체를 목표로 제시하지 않고 업무 판단의 정확성, 처리 연속성, 개선 속도를 높이는 수단으로 설명한다.",
+        "certainty": "fact"
+      }
+    ],
+    "role_domain_concerns": [
+      {
+        "id": "role-concern-it-lifecycle",
+        "observation": "공고의 IT 직무는 금융 시스템과 애플리케이션의 개발 및 유지보수를 포함해 데이터, 보안, 인프라와 맞닿은 책임을 요구한다.",
+        "evidence_refs": [
+          "source-ibk-posting",
+          "source-ibk-alio"
+        ],
+        "writing_implication": "한 기능의 구현보다 요청이 처리되고 기록되며 복구되는 전체 책임을 지원자의 경험으로 설명한다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "role-concern-cross-function",
+        "observation": "금융 IT 결과는 개발 코드만으로 완성되지 않고 업무 규칙, 데이터 상태, 접근 권한, 운영 확인이 함께 맞아야 한다.",
+        "evidence_refs": [
+          "source-ibk-posting",
+          "source-basel-operational-resilience"
+        ],
+        "writing_implication": "협업은 추상적인 소통이 아니라 책임과 완료 기준을 합의하는 방식으로 표현한다.",
+        "certainty": "inference"
+      }
+    ],
+    "domain_stakes": [
+      {
+        "id": "domain-stake-continuity",
+        "observation": "금융 서비스의 핵심 업무는 장애 상황에서도 식별되고 보호되며 복구될 수 있어야 한다.",
+        "evidence_refs": [
+          "source-basel-operational-resilience"
+        ],
+        "writing_implication": "속도 중심의 포부보다 고객이 처리 상태를 확인하고 업무를 이어 갈 수 있는 연속성 관점을 채택한다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "domain-stake-integrity",
+        "observation": "결제와 자산 정보는 처리 성공 여부뿐 아니라 상태의 정확성과 사후 설명 가능성이 사용자 신뢰를 좌우한다.",
+        "evidence_refs": [
+          "source-basel-operational-resilience",
+          "source-applicant-statements"
+        ],
+        "writing_implication": "백엔드 역량을 데이터 흐름, 오류 확인, 재처리 판단까지 이어지는 책임으로 구체화한다.",
+        "certainty": "inference"
+      }
+    ],
+    "fit_hypotheses": [
+      {
+        "id": "fit-payment-service-flow",
+        "statement": "결제 및 자산 관리 백엔드를 요구 분석부터 배포까지 수행한 경험은 금융 업무를 안정적인 처리 흐름으로 바꾸는 역할과 연결된다.",
+        "evidence_refs": [
+          "applicant-fact-payment-project",
+          "project-claim-payment-end-to-end"
+        ],
+        "confirmation_required": false
+      },
+      {
+        "id": "fit-reusable-work-design",
+        "statement": "재사용 가능한 작업 구조와 검증 기준을 설계한 경험은 반복되는 개발·검토 업무의 품질을 일관되게 만드는 태도를 보여준다.",
+        "evidence_refs": [
+          "applicant-fact-loop-design",
+          "project-claim-reusable-contracts"
+        ],
+        "confirmation_required": false
+      }
+    ],
+    "question_writing_implications": [
+      {
+        "id": "writing-implication-motivation",
+        "question_id": "question-motivation",
+        "context_claim": "IBK를 선택한 이유는 중소기업과 고객의 중요한 업무를 디지털 서비스로 지속시키는 책임에서 찾아야 한다.",
+        "writing_implication": "개인 프로젝트에서 형성된 금융 서비스 관점을 출발점으로 삼고, 입행 후 첫 책임과 성장 방향을 단계적으로 제시한다.",
+        "evidence_refs": [
+          "company-context-ibk-mission",
+          "company-context-ibk-digital-direction"
+        ],
+        "applicant_relevance_refs": [
+          "applicant-fact-payment-project",
+          "applicant-value-user-next-action"
+        ],
+        "exclusion_boundary": "회사 칭찬, 안정성 일반론, 근거 없는 개인적 추억은 제외한다."
+      },
+      {
+        "id": "writing-implication-strength",
+        "question_id": "question-strength",
+        "context_claim": "강점 문항은 반복 가능한 행동이 실제 산출물이나 완료 상태를 만든 경험을 요구한다.",
+        "writing_implication": "한 경험에서 문제 인식, 본인 판단, 수행, 확인 가능한 결과를 연결하고 미래 기여는 짧게 남긴다.",
+        "evidence_refs": [
+          "role-concern-it-lifecycle"
+        ],
+        "applicant_relevance_refs": [
+          "project-claim-payment-end-to-end",
+          "project-claim-reusable-contracts"
+        ],
+        "exclusion_boundary": "기술 목록과 다른 문항의 포부를 성과 대신 사용하지 않는다."
+      },
+      {
+        "id": "writing-implication-growth",
+        "question_id": "question-growth",
+        "context_claim": "성장 문항은 성공 규모보다 이전 판단과 이후 행동이 어떻게 달라졌는지를 묻는다.",
+        "writing_implication": "막힌 지점과 선택의 이유를 보여준 뒤 현재의 작업 습관으로 변화가 이어졌음을 설명한다.",
+        "evidence_refs": [
+          "role-concern-cross-function"
+        ],
+        "applicant_relevance_refs": [
+          "project-claim-alternative-refinement",
+          "project-claim-reusable-contracts"
+        ],
+        "exclusion_boundary": "프로젝트 기능 요약이나 현재 강점의 반복은 제외한다."
+      },
+      {
+        "id": "writing-implication-capability",
+        "question_id": "question-it-capability",
+        "context_claim": "IT 역량은 금융 업무의 처리 연속성, 상태 정확성, 협업 가능한 책임으로 번역되어야 한다.",
+        "writing_implication": "핵심 역량 하나를 선택해 경험에서 형성된 판단 기준과 IBK에서의 초기 활용 장면을 연결한다.",
+        "evidence_refs": [
+          "domain-stake-continuity",
+          "domain-stake-integrity"
+        ],
+        "applicant_relevance_refs": [
+          "applicant-fact-payment-project",
+          "applicant-fact-loop-design"
+        ],
+        "exclusion_boundary": "프레임워크 이름의 나열과 경험하지 않은 운영 성과는 제외한다."
+      }
+    ]
+  },
+  "applicant_evidence": {
+    "facts": [
+      {
+        "id": "applicant-fact-payment-project",
+        "statement": "개인 프로젝트로 결제 및 자산 관리 기능을 포함한 백엔드 애플리케이션을 요구 분석, 구조 설계, 구현, 배포까지 주도했다.",
+        "source_refs": [
+          "source-applicant-statements"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-motivation",
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ]
+      },
+      {
+        "id": "applicant-fact-loop-design",
+        "statement": "collab-mono 프로젝트에서 재사용 가능한 아티팩트와 작업 구조의 설계 경험을 쌓았다.",
+        "source_refs": [
+          "source-applicant-statements",
+          "source-collab-mono"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ]
+      },
+      {
+        "id": "applicant-fact-backend-responsibility",
+        "statement": "서비스 흐름을 분석하고 관련 책임을 나눈 뒤 대안을 검토해 구조를 다듬는 방식으로 백엔드 문제를 해결한다.",
+        "source_refs": [
+          "source-applicant-statements"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ]
+      }
+    ],
+    "value_statements": [
+      {
+        "id": "applicant-value-improvement",
+        "statement": "반복되는 불편과 비효율을 당연하게 두지 않고 더 나은 흐름을 찾으려 한다.",
+        "source_refs": [
+          "source-applicant-statements"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-motivation",
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ]
+      },
+      {
+        "id": "applicant-value-user-next-action",
+        "statement": "서비스의 완료는 기능 실행이 아니라 사용자가 결과를 이해하고 다음 행동을 할 수 있는 상태까지 포함한다고 본다.",
+        "source_refs": [
+          "source-applicant-statements"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-motivation",
+          "question-strength",
+          "question-it-capability"
+        ]
+      },
+      {
+        "id": "applicant-value-responsibility",
+        "statement": "협업에서는 각 업무의 책임 범위와 확인 기준을 분명히 하고 대안을 함께 검토하는 태도를 중요하게 여긴다.",
+        "source_refs": [
+          "source-applicant-statements"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ]
+      }
+    ],
+    "unknowns": [
+      {
+        "id": "unknown-personal-ibk-motivation",
+        "needed_fact": "IBK를 선택하게 만든 개인적 사건이나 서비스 접점",
+        "affected_question_ids": [
+          "question-motivation"
+        ],
+        "why_material": "현재 답안은 프로젝트 관심과 기업 방향의 논리적 연결은 충분하지만 개인적 계기가 추가되면 고유성이 더 높아진다.",
+        "acceptable_evidence": "직접 사용한 서비스, 관심을 갖게 된 기사나 수업, 중소기업 고객과의 접점 중 실제 경험 한 가지",
+        "resolution": "narrow_to_confirmed_scope"
+      },
+      {
+        "id": "unknown-project-observable-outcome",
+        "needed_fact": "결제·자산 관리 프로젝트의 사용자 수, 테스트 결과, 오류 감소 등 관찰 가능한 결과",
+        "affected_question_ids": [
+          "question-strength",
+          "question-growth"
+        ],
+        "why_material": "현재는 완성·배포와 구조적 결과까지 말할 수 있으나 성과의 설득력을 높일 수치나 전후 비교가 부족하다.",
+        "acceptable_evidence": "테스트 리포트, 배포 화면, 성능 측정, 해결한 오류의 재현 기록, 사용 피드백 중 하나",
+        "resolution": "narrow_to_confirmed_scope"
+      },
+      {
+        "id": "unknown-collaboration-scope",
+        "needed_fact": "collab-mono에서 함께 일한 인원, 본인 소유 범위, 실제 사용자 또는 적용 사례",
+        "affected_question_ids": [
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ],
+        "why_material": "설계 경험은 확인되지만 팀 협업 성과로 확대하려면 참여 구조와 적용 결과가 필요하다.",
+        "acceptable_evidence": "담당 범위, 주요 결정 기록, 다른 사용자의 피드백, 적용 전후 비교",
+        "resolution": "narrow_to_confirmed_scope"
+      },
+      {
+        "id": "unknown-production-operation",
+        "needed_fact": "실사용 금융 서비스에서의 운영, 장애 대응, 보안 점검 경험 범위",
+        "affected_question_ids": [
+          "question-it-capability"
+        ],
+        "why_material": "학습 및 개인 배포 경험과 금융기관 운영 책임을 구분하기 위해 필요하다.",
+        "acceptable_evidence": "모니터링 기록, 장애 회고, 보안 점검, 실제 운영 기간과 담당 범위",
+        "resolution": "omit_from_answer"
+      }
+    ]
+  },
+  "project_evidence": [
+    {
+      "id": "project-payment-asset-backend",
+      "kind": "결제 및 자산 관리 개인 백엔드 프로젝트",
+      "scale": "요구 분석부터 배포까지 개인이 수행한 백엔드 애플리케이션",
+      "applicant_role": "서비스 흐름 분석, 책임 설계, 구현, 검증, 배포를 주도한 개발자",
+      "contribution": "결제와 자산 관리 요구를 업무 흐름으로 해석하고 각 책임의 경계를 정해 동작 가능한 애플리케이션으로 완성했다.",
+      "process": "문제를 먼저 정의하고 가능한 대안을 검토한 뒤 현재 제약에 맞는 구조로 다듬었다.",
+      "learning": "좋은 백엔드 구조는 기능 수가 아니라 업무 책임과 변경 영향을 설명할 수 있어야 한다는 관점을 얻었다.",
+      "claims": [
+        {
+          "id": "project-claim-payment-end-to-end",
+          "statement": "결제 및 자산 관리 요구를 분석해 구조를 설계하고 코드 구현과 배포까지 전 과정을 수행했다.",
+          "source_refs": [
+            "source-applicant-statements"
+          ],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "사용자 규모와 정량 성능은 확인되지 않아 동작 가능한 애플리케이션 완성과 배포까지만 결과로 사용한다."
+        },
+        {
+          "id": "project-claim-alternative-refinement",
+          "statement": "문제 상황을 정의하고 가능한 대안을 탐색한 뒤 현재 조건에 맞는 설계로 다듬었다.",
+          "source_refs": [
+            "source-applicant-statements"
+          ],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "비교한 대안의 구체적 이름과 선택 지표는 면접 전 보강이 필요하다."
+        }
+      ],
+      "language_translations": [
+        {
+          "internal_term": "모듈 책임",
+          "universal_term": "업무 규칙, 데이터 처리, 외부 연결이 맡는 책임",
+          "use_condition": "구조 이름보다 각 부분이 지키는 결과를 설명할 때 사용한다."
+        }
+      ]
+    },
+    {
+      "id": "project-collab-reusable-artifacts",
+      "kind": "재사용 가능한 개발·문서 작업 구조 설계 프로젝트",
+      "scale": "다양한 작업을 일관된 절차와 검증 기준으로 실행하기 위한 개인 설계 프로젝트",
+      "applicant_role": "작업 경계, 입력·출력 계약, 검토 기준, 반복 개선 구조를 설계한 작성자",
+      "contribution": "작업마다 달라지는 요구를 보존하면서도 누락과 품질 편차를 줄일 수 있는 재사용 구조를 설계했다.",
+      "process": "운영 중 발견된 중복과 누수를 규칙으로만 막지 않고 자료 조사, 역할 분리, 검사, 피드백 반영의 관계로 재구성했다.",
+      "learning": "재사용은 같은 문장을 반복하는 일이 아니라 판단 근거와 검증 방법을 공유하면서 현재 맥락에 맞게 달라질 수 있어야 한다.",
+      "claims": [
+        {
+          "id": "project-claim-reusable-contracts",
+          "statement": "collab-mono에는 재사용 가능한 작업 단위의 경계와 검증 기준을 다루는 구조가 존재하며 지원자는 그 설계 경험을 보유한다.",
+          "source_refs": [
+            "source-applicant-statements",
+            "source-collab-mono"
+          ],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "외부 사용자 수와 조직 성과는 확인되지 않아 설계 산출물과 반복 실행 가능성까지만 사용한다."
+        },
+        {
+          "id": "project-claim-feedback-refinement",
+          "statement": "산출물을 검토한 뒤 누락, 표현 반복, 내부 지침 노출 문제를 다음 설계와 검사에 반영했다.",
+          "source_refs": [
+            "source-applicant-statements",
+            "source-collab-mono"
+          ],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "개선 폭을 나타내는 외부 품질 지표는 별도 확인이 필요하다."
+        }
+      ],
+      "language_translations": [
+        {
+          "internal_term": "artifact loop architecture",
+          "universal_term": "반복 업무의 입력, 역할, 검토, 산출물을 연결하는 재사용 가능한 작업 구조",
+          "use_condition": "프로젝트 내부 명칭보다 해결한 운영 문제와 판단 방식을 설명할 때 사용한다."
+        }
+      ]
+    }
+  ],
+  "source_policy": {
+    "as_of": "2026-09-15",
+    "prefer_primary": true,
+    "allowed_source_ids": [
+      "source-ibk-posting",
+      "source-ibk-question-endpoint",
+      "source-ibk-alio",
+      "source-ibk-strategy",
+      "source-ibk-ceo-2026",
+      "source-basel-operational-resilience",
+      "source-applicant-statements",
+      "source-collab-mono"
+    ],
+    "visible_source_ids": [
+      "source-ibk-posting",
+      "source-ibk-strategy",
+      "source-ibk-ceo-2026"
+    ],
+    "public_source_scope": "explicit_allowlist",
+    "missing_evidence_policy": "preserve_unknown"
+  },
+  "quality_profile": {
+    "policy_ref": "artifacts/agent-loop/document/job-application-report-production/vocabularies/job-application-report-quality-policy.json",
+    "mandatory_gate_ids": [
+      "request-and-question-coverage",
+      "source-and-freshness-boundary",
+      "context-research-and-writing-implication",
+      "applicant-attribution-and-confirmation",
+      "project-evidence-and-causality",
+      "contextual-synthesis-and-applicant-authorship",
+      "role-domain-language-clarity",
+      "publication-and-privacy-safety"
+    ],
+    "dimensions": [
+      {
+        "id": "question-fit-and-differentiation",
+        "weight": 20
+      },
+      {
+        "id": "role-and-domain-alignment",
+        "weight": 20
+      },
+      {
+        "id": "applicant-viewpoint-and-values",
+        "weight": 18
+      },
+      {
+        "id": "evidence-causality-and-attribution",
+        "weight": 18
+      },
+      {
+        "id": "expression-specificity-and-coherence",
+        "weight": 14
+      },
+      {
+        "id": "clarity-and-interview-defensibility",
+        "weight": 10
+      }
+    ],
+    "rating_min": 0,
+    "rating_max": 4,
+    "qualification_threshold": 90,
+    "score_meaning": "editing_fitness_not_hiring_probability",
+    "revision_passes": 1
+  },
+  "output_profile": {
+    "profile_ref": "artifacts/agent-loop/document/job-application-report-production/profiles/five-set-pdf-report.profile.json",
+    "candidate_count": 5,
+    "report_format": "pdf",
+    "audiences": [
+      "IT 직군 지원자",
+      "커리어 조언자"
+    ],
+    "required_sections": [
+      "application-overview",
+      "company-role-analysis",
+      "question-analysis",
+      "candidate-answers",
+      "candidate-evaluation",
+      "expert-review",
+      "interview-preparation",
+      "material-requests"
+    ],
+    "design": {
+      "tone": "절제된 편집 보고서",
+      "comparison_layout": "editorial_sequence",
+      "avoid_patterns": [
+        "회사 일반론",
+        "경험과 기술의 나열",
+        "생성 절차 설명",
+        "반복되는 답안 전개",
+        "근거 없는 운영 성과"
+      ],
+      "raster_policy": "allowed"
+    },
+    "publication": {
+      "searchable_text_required": true,
+      "overflow_policy": "no_clipped_content",
+      "visible_source_policy": "allowlisted_only",
+      "content_policies": [
+        {
+          "id": "exclude-local-absolute-path",
+          "category": "privacy_path_exclusion",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {
+            "type": "regex_any",
+            "values": [
+              "/Users/",
+              "/private/",
+              "file:",
+              "\\.collab/",
+              "node_modules"
+            ]
+          },
+          "rationale": "공개 보고서에 로컬 경로와 실행 환경을 노출하지 않는다."
+        },
+        {
+          "id": "exclude-internal-bookkeeping",
+          "category": "internal_process_exclusion",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {
+            "type": "literal_any",
+            "values": [
+              "request.json",
+              "result.json",
+              "candidate_id",
+              "authority_effect",
+              "Loop Architecture",
+              "보상학습",
+              "닫는 방식",
+              "IBK IT PREP"
+            ]
+          },
+          "rationale": "독자가 판단하는 데 필요하지 않은 생성·검사 용어를 제외한다."
+        },
+        {
+          "id": "reader-language-no-cover-filler",
+          "category": "request_specific_exclusion",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {
+            "type": "literal_any",
+            "values": [
+              "공개 포트폴리오 기반",
+              "다섯 가지 답안 전략",
+              "검색 가능한 PDF 검토본"
+            ]
+          },
+          "rationale": "표지와 본문을 산출 방식이 아니라 지원 판단에 필요한 내용으로 구성한다."
+        },
+        {
+          "id": "answer-language-no-generator-caveat",
+          "category": "request_specific_exclusion",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {
+            "type": "literal_any",
+            "values": [
+              "확인이 필요하므로",
+              "과장하지 않겠습니다",
+              "더 확인해야 하지만"
+            ]
+          },
+          "rationale": "지원 답안에는 생성자의 방어 문장을 넣지 않고 한계와 추가 자료는 검토 영역에서 설명한다."
+        },
+        {
+          "id": "require-reader-sections",
+          "category": "reader_navigation_presence",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "present",
+          "matcher": {
+            "type": "literal_any",
+            "values": [
+              "지원 답안",
+              "면접 준비",
+              "추가 자료"
+            ]
+          },
+          "rationale": "답안 선택과 다음 준비에 필요한 핵심 영역이 공개 보고서에 존재해야 한다."
+        }
+      ]
+    }
+  },
+  "privacy_boundary": {
+    "public_evidence_ids": [
+      "source-ibk-posting",
+      "source-ibk-strategy",
+      "source-ibk-ceo-2026"
+    ],
+    "prohibited_content_categories": [
+      "private-reasoning",
+      "raw-prompt",
+      "runtime-handle",
+      "secret",
+      "absolute-path",
+      "unconfirmed-personal-fact"
+    ],
+    "identity_handling": "runtime_private"
+  },
+  "stop_budget": {
+    "max_research_rounds": 2,
+    "max_revision_passes": 1,
+    "unchanged_failure_limit": 1
+  }
+}

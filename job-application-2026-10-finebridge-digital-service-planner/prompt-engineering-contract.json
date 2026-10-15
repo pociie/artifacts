@@ -1,0 +1,119 @@
+{
+  "kind": "prompt-engineering-contract/v1",
+  "schemaVersion": 1,
+  "contractId": "finebridge-digital-service-planner-report-builder",
+  "revision": "set-2-r1",
+  "status": "candidate",
+  "authorityEffect": "none",
+  "consumer": {
+    "kind": "generated_loop",
+    "consumerRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+    "riskClass": "moderate",
+    "runtimeInstructionRef": "runtime-private:finebridge-set-2/instruction-envelope",
+    "outputContractRef": "artifacts/agent-loop/document/job-application-report-production/schemas/job-application-report-result.schema.json"
+  },
+  "objective": {
+    "objectiveRef": "agent-operation-boundary.json",
+    "successCriteriaRefs": ["request.json", "frozen-findings.json", "result.json"],
+    "nonScopeRefs": ["effect-admission.json", "artifact-use-binding.json"]
+  },
+  "instructionLayers": [
+    { "order": 0, "kind": "framework_authority", "sourceRef": "artifacts/agent-loop/document/job-application-report-production/governance.md", "sourceDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000", "trusted": true, "mayWidenAuthority": false },
+    { "order": 1, "kind": "responsibility_profile", "sourceRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml", "sourceDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000", "trusted": true, "mayWidenAuthority": false },
+    { "order": 2, "kind": "knowledge_projection", "sourceRef": "context-projection.json", "sourceDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000", "trusted": true, "mayWidenAuthority": false },
+    { "order": 3, "kind": "consumer_specialization", "sourceRef": "artifacts/agent-loop/document/job-application-report-production/skill/job-application-report-loop-operation/SKILL.md", "sourceDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000", "trusted": true, "mayWidenAuthority": false },
+    { "order": 4, "kind": "task_objective", "sourceRef": "request.json", "sourceDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000", "trusted": true, "mayWidenAuthority": false },
+    { "order": 5, "kind": "runtime_narrowing", "sourceRef": "effect-admission.json", "sourceDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000", "trusted": true, "mayWidenAuthority": false }
+  ],
+  "methods": [
+    {
+      "id": "direct_zero_shot",
+      "activationEvidenceRefs": ["evidence:clear-four-question-contract"],
+      "budget": { "maxSamples": 1, "maxBranches": 1, "maxDepth": 1, "maxRevisions": 0, "maxToolCalls": 0, "maxOptimizationIterations": 0 },
+      "failureModeRefs": ["failure:generic-or-undifferentiated-answer"],
+      "mitigationRefs": ["mitigation:question-map-and-evidence-binding"]
+    },
+    {
+      "id": "retrieval_grounding",
+      "activationEvidenceRefs": ["evidence:posting-and-applicant-source-boundary"],
+      "budget": { "maxSamples": 1, "maxBranches": 1, "maxDepth": 1, "maxRevisions": 0, "maxToolCalls": 0, "maxOptimizationIterations": 0 },
+      "failureModeRefs": ["failure:unverified-company-claim-or-evidence-mix"],
+      "mitigationRefs": ["mitigation:source-policy-and-context-projection"],
+      "projectionRef": "context-projection.json",
+      "protectedClaimRefs": ["company-context-role-brief", "role-user-analysis", "role-flow-and-requirements", "role-cross-functional-data"]
+    },
+    {
+      "id": "structured_output",
+      "activationEvidenceRefs": ["evidence:request-result-schema-required"],
+      "budget": { "maxSamples": 1, "maxBranches": 1, "maxDepth": 1, "maxRevisions": 0, "maxToolCalls": 0, "maxOptimizationIterations": 0 },
+      "failureModeRefs": ["failure:character-count-or-reference-drift"],
+      "mitigationRefs": ["mitigation:deterministic-job-application-checker"],
+      "semanticValidatorRefs": ["artifacts/agent-loop/document/job-application-report-production/scripts/check_job_application_report.mjs"]
+    },
+    {
+      "id": "external_feedback_revision",
+      "activationEvidenceRefs": ["evidence:frozen-criterion-findings"],
+      "budget": { "maxSamples": 1, "maxBranches": 1, "maxDepth": 1, "maxRevisions": 1, "maxToolCalls": 0, "maxOptimizationIterations": 0 },
+      "failureModeRefs": ["failure:unchanged-or-unsupported-revision"],
+      "mitigationRefs": ["mitigation:one-revision-and-fingerprint-stop"],
+      "feedbackSourceRefs": ["frozen-findings.json", "result.json"],
+      "unchangedFingerprintRouteRef": "route:request-context-on-repeat"
+    }
+  ],
+  "context": {
+    "projectionRef": "context-projection.json",
+    "protectedClaimRefs": ["company-context-role-brief", "role-user-analysis", "role-flow-and-requirements", "role-cross-functional-data", "applicant-value-stage-clarity"],
+    "maxInputTokens": 16000,
+    "maxItems": 32,
+    "placementPolicyRef": "policy:protected-claims-first-and-last",
+    "compaction": { "maxCompactions": 1, "preserveRefs": ["request.json", "question-map.json", "frozen-findings.json"], "onProtectedClaimLoss": "stop" }
+  },
+  "toolPolicy": {
+    "capabilityRefs": ["capability:bounded-local-write", "capability:validation-execute"],
+    "effectPolicyRef": "effect-policy:runtime-artifact-root-only",
+    "targetSelectionRef": "target-policy:exact-finebridge-runtime-directory",
+    "preEffectCheckRef": "effect-admission.json",
+    "postEffectReceiptRef": "validation.json",
+    "onUncertainEffect": "reread_then_stop",
+    "maxAttempts": 1
+  },
+  "evaluation": {
+    "candidateBindingRefs": ["request.json", "initial-candidates.json", "frozen-findings.json", "result.json"],
+    "baselineRef": "baseline:direct-evidence-bound-answer",
+    "datasetRefs": ["dataset:four-question-finebridge-brief"],
+    "evaluatorRefs": ["artifacts/agent-loop/document/job-application-report-production/scripts/check_job_application_report.mjs", "review:separate-frozen-result-pass"],
+    "caseClasses": ["typical", "edge", "adversarial", "stale_context", "ambiguous_instruction", "tool_failure", "uncertain_effect"],
+    "dimensions": ["task_success", "instruction_following", "grounding", "semantic_validity", "safety_authority", "privacy", "latency", "token_cost", "tool_efficiency"],
+    "nonCompensatoryDimensions": ["grounding", "semantic_validity", "safety_authority", "privacy"],
+    "promotionRuleRef": "promotion:none-report-only-runtime-candidate",
+    "humanCalibrationRef": "calibration:applicant-confirmation-required"
+  },
+  "stopping": {
+    "maxToolCalls": 0,
+    "maxWaitsPerFingerprint": 1,
+    "maxCompactions": 1,
+    "maxRevisions": 1,
+    "repeatedFingerprintAction": "ask_authorized_owner",
+    "terminalEvidenceRefs": ["validation.json", "independent-review.json"],
+    "noProgressWindowRef": "stop:unchanged-validation-fingerprint"
+  },
+  "privacy": {
+    "storePromptBodies": false,
+    "storePrivateReasoning": false,
+    "storeTranscripts": false,
+    "redactionPolicyRef": "privacy:explicit-consent-only-identity",
+    "retentionPolicyRef": "privacy:reference-and-evidence-summary-only",
+    "permittedEvidenceRefs": ["request.json", "context-projection.json", "frozen-findings.json", "validation.json"]
+  },
+  "externalControls": {
+    "authorityPolicyRef": "effect-admission.json",
+    "gitPreflightRef": "preflight:unrelated-dirty-state-preserved",
+    "effectReconciliationRef": "reconciliation:reread-written-artifacts",
+    "settlementRef": "settlement:runtime-artifact-only",
+    "approvalPolicyRef": "approval:requester-owns-final-use"
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "3292c2148f1a858d09016b8b9e2f9298f1cb55edb6f51c84b1380d12c1c5dbac"
+  }
+}

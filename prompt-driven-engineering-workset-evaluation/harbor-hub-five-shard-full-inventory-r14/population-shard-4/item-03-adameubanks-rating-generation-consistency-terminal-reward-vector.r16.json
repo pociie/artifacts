@@ -1,0 +1,144 @@
+{
+  "artifactLifecycleDimensions": {
+    "containerSettled": 1.0,
+    "privateRawRuntimeRetained": 1.0,
+    "privateReasoningProjection": 0.0,
+    "rawPromptProjection": 0.0,
+    "sanitizedReceiptMaterialized": 1.0,
+    "sanitizedRewardMaterialized": 1.0,
+    "secretProjection": 0.0
+  },
+  "authorityEffect": "none",
+  "changedFingerprintWakeCondition": {
+    "kind": "harbor-task-filter-fingerprint-transition/v1",
+    "previous": {
+      "datasetRef": "adameubanks/rating-generation-consistency@latest",
+      "model": "gpt-5.6-luna",
+      "providerVersion": "0.22.0",
+      "reasoningEffort": "max",
+      "taskFilter": "restaurant-etiquette-zero-ten-t5",
+      "taskWorkspaceDigest": "sha256:0e07cede2f69f49bb2c0190e2455385189cc94987ddf7c5139f878c37abb1bd9"
+    },
+    "previousDigest": "sha256:11ad1c74574d5554db8af73c7782ba5cd4ed9807ae35e9dad0c350e23df05b29",
+    "required": {
+      "datasetRef": "adameubanks/rating-generation-consistency@latest",
+      "model": "gpt-5.6-luna",
+      "providerVersion": "0.22.0",
+      "reasoningEffort": "max",
+      "taskFilter": "adameubanks/restaurant-etiquette-zero-ten-t5",
+      "taskWorkspaceDigest": "sha256:0e07cede2f69f49bb2c0190e2455385189cc94987ddf7c5139f878c37abb1bd9"
+    },
+    "requiredDigest": "sha256:e57064f2e5e3d97a45d735ae16dbe2b2352d8fab83ee6917cb8804d805940fb5",
+    "transitionObserved": false,
+    "wakeCondition": "retry only after the required provider-qualified task filter is bound; do not repeat the ownerless filter"
+  },
+  "cost": {
+    "cachedInputTokens": null,
+    "costUsd": null,
+    "elapsedMs": null,
+    "inputTokens": null,
+    "outputTokens": null
+  },
+  "deterministicGates": {
+    "actualHarborAttempt": 1,
+    "frozenIdentityMatch": 1,
+    "harborVersionObserved": 1,
+    "modelObserved": 0,
+    "reasoningEffortRequested": 1,
+    "subjectTimeoutAtMost3600": 0,
+    "taskResolved": 0,
+    "verificationEnabled": 0
+  },
+  "diagnosticRewardVector": {
+    "artifactEvidenceCompleteness": 1.0,
+    "costEvidenceCompleteness": 0.0,
+    "dynamicCompositionQuality": 1.0,
+    "protectedVerifierExecution": 0.0,
+    "protectedVerifierOutcome": 0.0,
+    "providerAvailability": 1.0,
+    "reusableCompositionQuality": 1.0,
+    "subjectProcessCompletion": 0.0,
+    "taskResolution": 0.0
+  },
+  "evidence": {
+    "commandLogDigest": "sha256:bd54f1e8f2e579ee93be55254d5786adf54fb56c042c8c8d4aa489b910bca589",
+    "jobResultDigest": null,
+    "trialResultDigest": null,
+    "verifierOutputDigest": null,
+    "verifierRewardDigest": null
+  },
+  "findings": {
+    "attemptState": "provider_preflight_failed_no_subject_trial",
+    "failureClass": "provider_or_environment_failure",
+    "failureCode": "harbor:provider_or_environment_failure",
+    "protectedVerifierState": "not_scored",
+    "retryPolicy": "do_not_repeat_without_changed_task_filter_fingerprint",
+    "subjectTrialStarted": false,
+    "wakeCondition": "changed provider task-filter fingerprint required: bind exact qualified filter adameubanks/restaurant-etiquette-zero-ten-t5 (previous restaurant-etiquette-zero-ten-t5); shared semantic-facts resolver integration must complete before any retry; no equivalent retry"
+  },
+  "frameworkRevision": "sha256:90e03a443bdf20344c3e51000387814f872df81fb245ecc2934badda28624139",
+  "identityDigest": "sha256:6f425580e941b7de0d2e5a4e1a2fd0f096d570068d4d32efb2e9ac7fbceb1a83",
+  "itemId": "adameubanks/rating-generation-consistency",
+  "kind": "harbor-terminal-reward-vector/v1",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "ordinal": 3,
+  "outcomeRewards": {
+    "benchmarkReward": null,
+    "promotionEligible": false,
+    "rawVerifierReward": null,
+    "terminalPrimaryReward": null
+  },
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawPromptStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "processRewards": {
+    "providerAttempt": 1.0,
+    "resourcesSettled": 1.0,
+    "subjectCompleted": 0.0,
+    "verificationCompleted": 0.0
+  },
+  "routeResolution": {
+    "admission": "admit_generic_codex",
+    "selectedMode": "single_task",
+    "topologyRequirement": "none"
+  },
+  "settlementBinding": {
+    "actualAttempt": true,
+    "attemptState": "provider_preflight_failed_no_subject_trial",
+    "changedFingerprintWakeCondition": {
+      "kind": "harbor-task-filter-fingerprint-transition/v1",
+      "previous": {
+        "datasetRef": "adameubanks/rating-generation-consistency@latest",
+        "model": "gpt-5.6-luna",
+        "providerVersion": "0.22.0",
+        "reasoningEffort": "max",
+        "taskFilter": "restaurant-etiquette-zero-ten-t5",
+        "taskWorkspaceDigest": "sha256:0e07cede2f69f49bb2c0190e2455385189cc94987ddf7c5139f878c37abb1bd9"
+      },
+      "previousDigest": "sha256:11ad1c74574d5554db8af73c7782ba5cd4ed9807ae35e9dad0c350e23df05b29",
+      "required": {
+        "datasetRef": "adameubanks/rating-generation-consistency@latest",
+        "model": "gpt-5.6-luna",
+        "providerVersion": "0.22.0",
+        "reasoningEffort": "max",
+        "taskFilter": "adameubanks/restaurant-etiquette-zero-ten-t5",
+        "taskWorkspaceDigest": "sha256:0e07cede2f69f49bb2c0190e2455385189cc94987ddf7c5139f878c37abb1bd9"
+      },
+      "requiredDigest": "sha256:e57064f2e5e3d97a45d735ae16dbe2b2352d8fab83ee6917cb8804d805940fb5",
+      "transitionObserved": false,
+      "wakeCondition": "retry only after the required provider-qualified task filter is bound; do not repeat the ownerless filter"
+    },
+    "providerTaskResolved": false,
+    "providerTrialAccepted": false,
+    "subjectTrialStarted": false,
+    "terminalDecision": "provider_failed_actual_attempt",
+    "trialState": "not_observed",
+    "verifierExecuted": false
+  },
+  "shardId": "population-shard-4",
+  "taskRef": null
+}

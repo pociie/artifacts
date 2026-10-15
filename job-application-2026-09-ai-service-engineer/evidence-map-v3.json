@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "self-introduction-evidence-map/v3",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-07",
+  "purpose": "자기소개서 문장을 사용자·공식 공고·저장소 근거·제한된 해석·미래 계획으로 분리하고 상위 서비스 추상화의 범위를 고정한다.",
+  "legend": {
+    "F": "official or repository fact",
+    "U": "user-provided context",
+    "P": "personal contribution; applicant confirmation required",
+    "I": "bounded interpretation",
+    "N": "future intention",
+    "M": "measurement or lifecycle limitation"
+  },
+  "entries": [
+    {
+      "id": "role-scope",
+      "class": "F",
+      "claim": "공고는 AI 서비스 API·백엔드, 데이터 파이프라인, AI 프로젝트 지원, 플랫폼 운영·고도화, 서비스 발굴·검증, 튜닝·품질 검증을 업무로 제시한다.",
+      "source": "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007",
+      "safeWording": "AI 기능을 업무 흐름에 편입하고 API·데이터·운영·검증을 연결하는 서비스 엔지니어로 기여하겠습니다.",
+      "avoid": "모델 연구·학습 중심 직무로 공고를 재정의하기"
+    },
+    {
+      "id": "company-context",
+      "class": "F",
+      "claim": "공식 회사 소개는 롯데이노베이트를 다양한 산업의 문제를 ICT 플랫폼·솔루션·컨설팅으로 전환하는 회사 맥락에서 설명한다.",
+      "source": "https://recruit.lotte.co.kr/companylife/affiliate/detail?compcd=30007",
+      "safeWording": "다양한 업무 요구를 서비스로 번역하고 오래 사용되는 운영 기준으로 발전시키겠습니다.",
+      "avoid": "특정 고객·계열사 프로젝트·성과를 본인 경험처럼 확정하기"
+    },
+    {
+      "id": "hr-context",
+      "class": "F",
+      "claim": "공식 인사 맥락은 도전·성장·협력의 행동을 중시한다.",
+      "source": "https://recruit.lotte.co.kr/about/hrsystem",
+      "safeWording": "작은 검증과 학습, 합의 가능한 기준을 통해 도전·성장·협력을 행동으로 보여주겠습니다.",
+      "avoid": "인재상 단어만 반복하고 경험과 연결하지 않기"
+    },
+    {
+      "id": "project-purpose",
+      "class": "F+I",
+      "claim": "collab-mono는 문서·협업 맥락을 실행과 결과 기록으로 연결하는 AI 협업 서비스 구조를 실험한다.",
+      "source": "packages/shared/README.md; apps/components/core-domain/agent-runtime/README.md; project-abstraction-map-v3.json",
+      "safeWording": "사람의 의도를 실행 가능한 맥락으로 만들고 결과를 검토·개선으로 되돌리는 서비스 흐름을 설계했습니다.",
+      "avoid": "모델 자체의 지능·학습 성과 또는 모든 실행 표면의 동시 활성화를 주장하기"
+    },
+    {
+      "id": "project-scale",
+      "class": "F",
+      "claim": "root package manifest는 28개 npm workspace를 선언하고 저장소는 도메인·웹·인프라·외부 접점·E2E 경계를 포함한다.",
+      "source": "package.json; docs/architecture/project-structure.md",
+      "safeWording": "범위가 넓은 TypeScript 모노레포에서 핵심 사용자 여정을 먼저 정하고 주변 흐름을 확장했습니다.",
+      "avoid": "28개 서비스·팀·사용자 규모·트래픽으로 확대 해석하기"
+    },
+    {
+      "id": "project-contribution",
+      "class": "U+P",
+      "claim": "사용자는 현재 진행 중인 개인 프로젝트로 제시하고 요구 분석·구조 설계·코드 구현·배포 경험을 설명했다. 세부 변경 범위와 실행 결과는 제출 전 확인이 필요하다.",
+      "source": "user-provided-project-description; self-introduction-content-v3.json",
+      "safeWording": "개인 프로젝트로 요구 분석부터 설계·구현·검증·배포 구성을 연결했습니다.",
+      "avoid": "저장소 구조만으로 모든 영역의 단독 구현·운영 성과를 확정하기"
+    },
+    {
+      "id": "project-outcome-limit",
+      "class": "M",
+      "claim": "현재 맥락에는 생산 환경 사용자·고객 결과·성능·비용·가동률·장애·날짜가 있는 실행 증거가 제공되지 않았다.",
+      "source": "current-task-context; project-abstraction-map-v3.json",
+      "safeWording": "구조가 제공하는 검증 가능성과 향후 관찰 계획으로 표현하고 실제 성과는 확인 후 추가한다.",
+      "avoid": "성능 향상·비용 절감·운영 안정성·사용자 만족을 과거 성과로 쓰기"
+    },
+    {
+      "id": "user-value",
+      "class": "U",
+      "claim": "사용자는 불편함을 발견하면 개선하려 노력하는 것을 삶의 가치관으로 직접 제시했다.",
+      "source": "user-provided-existing-answer-q3",
+      "safeWording": "불편을 사람의 판단 부담과 조직의 반복 비용을 줄이는 개선으로 연결하겠습니다.",
+      "avoid": "이 한 문장만으로 안정적 성격·협업 능력·전문성을 증명했다고 확정하기"
+    },
+    {
+      "id": "human-centered-viewpoint",
+      "class": "I",
+      "claim": "사람의 판단과 책임을 보존하면서 AI가 다음 행동을 돕는다는 관점은 사용자 요구·공식 직무 맥락·인간중심 AI 자료를 결합한 초안 가설이다.",
+      "source": "user-understanding-projection-v3.json; research-sources-v3.json",
+      "safeWording": "기술의 가치는 사람의 판단을 더 정확하게 돕는 데 있다고 생각합니다.",
+      "avoid": "사용자 확인 전 이 문장을 사용자의 확정된 성격 또는 보편적 신념으로 일반화하기"
+    }
+  ],
+  "sentenceReviewProtocol": [
+    "문장마다 사람의 목적·업무 맥락·서비스 영향 중 하나를 먼저 둔다.",
+    "기술은 그것이 바꾼 책임·흐름·검증·사용자 경험과 함께만 사용한다.",
+    "과거 사실·제한된 해석·미래 계획의 시제를 분리한다.",
+    "개인 기여는 사용자 제공 근거로 쓰되 실제 변경 범위와 실행 결과를 확인 전제로 둔다.",
+    "구현 단위가 문단의 중심이 되면 intent/context/execution/evidence/improvement 흐름으로 다시 쓴다."
+  ]
+}

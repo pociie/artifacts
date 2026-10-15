@@ -1,0 +1,145 @@
+{
+  "schemaVersion": "rubric-operation/v3",
+  "operationId": "assessment:job-application-ai-service-engineer:v5",
+  "status": "evaluated",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "purpose": "v4 기준선에 대해 각 5세트를 한 차례 첨삭한 뒤 동일 rubric으로 재평가하고, 문항별 적합성과 점수 변화의 의미를 보존한다.",
+  "bindings": {
+    "content": "self-introduction-content-v5.json",
+    "rubric": "evaluation-rubric-v5.json",
+    "questionContract": "question-differentiation-v5.json",
+    "revisionPlan": "revision-plan-v5.json",
+    "evidence": "evidence-map-v5.json",
+    "claims": "claim-ledger-v5.json"
+  },
+  "protocol": {
+    "baseline": "v4",
+    "revisionPasses": 1,
+    "sameEvaluator": true,
+    "sameScale": true,
+    "unknownTreatment": "preserve as unknown or pending_user_review; never convert to zero",
+    "threshold": 90,
+    "selection": "score >= 90 and all protected gates pass",
+    "rewardLearningBoundary": "feedback-guided editorial revision only; no model training, reward model, RLHF or DPO execution"
+  },
+  "assessments": [
+    {
+      "setId": "set-1",
+      "theme": "사람의 판단을 돕는 AI 서비스",
+      "preRevision": {"score": 94.0, "rank": 4, "weakness": "Q1 가치 선언과 Q2 상위 흐름이 겹치고 Q3가 set-5와 가까움"},
+      "postRevision": {
+        "score": 95.5,
+        "rank": 3,
+        "gateStatus": "pass",
+        "domainScores": {"question_fit_and_distinctness": 20.0, "role_domain_alignment": 18.75, "user_viewpoint_and_value": 18.0, "evidence_causal_integrity": 16.875, "project_design_abstraction": 13.125, "clarity_and_defensibility": 8.75},
+        "questionFitScores": {"q1": 3.8, "q2": 3.8, "q3": 3.9},
+        "delta": 1.5
+      },
+      "revisionChange": "Q1에 API·데이터·확인 기준을 넣고 Q2에 핵심 흐름을 먼저 선택한 이유를 보강했으며 Q3를 최종 판단 보존으로 분리",
+      "distinguishingEvidence": "사람의 최종 확인과 다음 행동을 AI 서비스의 사용자 책임으로 설명",
+      "remainingUncertainty": ["실제 변경 파일·검증 명령·시점·배포 결과는 사용자 확인 필요", "확장된 AI 사용자 관점은 최종 의미 확인 필요"]
+    },
+    {
+      "setId": "set-2",
+      "theme": "요구를 공통 언어와 책임 기준으로 번역하는 엔지니어",
+      "preRevision": {"score": 91.0, "rank": 5, "weakness": "공통 용어와 책임 목록이 실제 변경·확인 사건보다 앞섬"},
+      "postRevision": {
+        "score": 94.63,
+        "rank": 5,
+        "gateStatus": "pass",
+        "domainScores": {"question_fit_and_distinctness": 20.0, "role_domain_alignment": 18.75, "user_viewpoint_and_value": 18.0, "evidence_causal_integrity": 16.875, "project_design_abstraction": 12.25, "clarity_and_defensibility": 8.75},
+        "questionFitScores": {"q1": 3.9, "q2": 3.8, "q3": 3.8},
+        "delta": 3.63
+      },
+      "revisionChange": "공통 언어를 정의로 반복하지 않고 요구 변경 시 책임·입력·결과·확인 기준을 나눈 설계 판단으로 바꾸고, Q3에 합의·공유 행동을 추가",
+      "distinguishingEvidence": "역할 간 해석 차이를 같은 사례와 확인 기준으로 좁히는 협업 관점",
+      "remainingUncertainty": ["실제 협업 상대·합의 산출물은 개인 프로젝트 사실로 확정하지 않음", "개인 기여의 구체 변경 범위는 사용자 확인 필요"]
+    },
+    {
+      "setId": "set-3",
+      "theme": "결과 확인까지 책임지는 서비스 완수",
+      "preRevision": {"score": 95.5, "rank": 2, "weakness": "Q1·Q2의 검증 표현이 겹치고 실제 실패 사건이 추상적임"},
+      "postRevision": {
+        "score": 97.88,
+        "rank": 2,
+        "gateStatus": "pass",
+        "domainScores": {"question_fit_and_distinctness": 20.0, "role_domain_alignment": 20.0, "user_viewpoint_and_value": 18.0, "evidence_causal_integrity": 18.0, "project_design_abstraction": 13.125, "clarity_and_defensibility": 8.75},
+        "questionFitScores": {"q1": 4.0, "q2": 3.9, "q3": 3.9},
+        "delta": 2.38
+      },
+      "revisionChange": "Q2에서 정상 동작과 전체 완수를 분리하고 입력 정보·책임 경계·처리 상태를 기준으로 원인을 좁히는 과정을 전면화했으며 Q3를 미확인 공유로 이동",
+      "distinguishingEvidence": "완수의 기준을 구현 완료가 아닌 재현·원인 설명·수정 후 변화 확인으로 정의",
+      "remainingUncertainty": ["실제 오류 재현 명령과 수정 후 결과는 사용자 확인 필요", "설계 기준과 실제 실행 결과를 혼동하지 않도록 면접에서 범위 설명 필요"]
+    },
+    {
+      "setId": "set-4",
+      "theme": "AI 결과의 한계와 확인 책임을 함께 관리하는 서비스",
+      "preRevision": {"score": 98.0, "rank": 1, "weakness": "Q1·Q2·Q3에서 오류 가능성·적용 범위·사람 확인 목록이 반복됨"},
+      "postRevision": {
+        "score": 98.5,
+        "rank": 1,
+        "gateStatus": "pass",
+        "domainScores": {"question_fit_and_distinctness": 20.0, "role_domain_alignment": 20.0, "user_viewpoint_and_value": 18.0, "evidence_causal_integrity": 18.0, "project_design_abstraction": 13.125, "clarity_and_defensibility": 9.375},
+        "questionFitScores": {"q1": 4.0, "q2": 3.9, "q3": 4.0},
+        "delta": 0.5
+      },
+      "revisionChange": "Q1은 품질 검증 역량, Q2는 환경 차이에도 기준을 보존한 설계 선택, Q3는 보류·에스컬레이션·피드백이라는 서로 다른 동사로 분리",
+      "distinguishingEvidence": "오류 가능성·적용 범위·사람 확인을 AI 서비스 품질의 일부로 가장 직접적으로 연결",
+      "remainingUncertainty": ["실제 사용자 피드백·운영 검증 사례는 제공되지 않음", "높은 점수는 주제 적합도와 표현 명료성에 대한 편집 판단임"]
+    },
+    {
+      "setId": "set-5",
+      "theme": "반복과 우회 부담을 줄이는 서비스 개선",
+      "preRevision": {"score": 94.5, "rank": 3, "weakness": "set-1·set-3과 핵심 흐름·완수 표현이 가깝고 추상 결과어가 있음"},
+      "postRevision": {
+        "score": 95.5,
+        "rank": 3,
+        "gateStatus": "pass",
+        "domainScores": {"question_fit_and_distinctness": 20.0, "role_domain_alignment": 18.75, "user_viewpoint_and_value": 18.0, "evidence_causal_integrity": 16.875, "project_design_abstraction": 13.125, "clarity_and_defensibility": 8.75},
+        "questionFitScores": {"q1": 3.8, "q2": 3.9, "q3": 3.9},
+        "delta": 1.0
+      },
+      "revisionChange": "Q1의 조직 신뢰·경쟁력 같은 결과어를 처리 단계와 데이터 흐름으로 낮추고, Q2에 보류한 범위·핵심 흐름 선택, Q3에 단계·대기·오류·재문의 신호를 추가",
+      "distinguishingEvidence": "반복 입력·우회·대기를 사용자의 시간과 처리 단계로 구체화하면서 최종 판단을 보존",
+      "remainingUncertainty": ["처리 단계·대기·오류·재문의 수치는 입사 후 관찰 계획이지 과거 성과가 아님", "set-1과 가까운 가치관이므로 실제 본인 관점으로 선택해야 함"]
+    }
+  ],
+  "gateAssessment": {
+    "G1_length": {"status": "pass", "value": "15/15 answers in 300~700 characters"},
+    "G2_question_required": {"status": "pass", "value": "Q1 5/5, Q2 5/5, Q3 5/5"},
+    "G3_attribution": {"status": "pass", "value": "facts, user context, interpretation, future plan separated"},
+    "G4_no_outcome_inflation": {"status": "pass", "value": "unsupported past outcome claims = 0"},
+    "G5_question_boundary": {"status": "pass", "value": "primary subject differs by question"},
+    "G6_project_abstraction": {"status": "pass", "value": "low-level implementation terms not central"},
+    "G7_universal_language": {"status": "pass", "value": "canonical concept coverage 10/10"},
+    "G8_traceability": {"status": "pass", "value": "15/15 answer records bind evidence and limitations"},
+    "G9_user_boundary": {"status": "pass", "value": "direct value retained; extended viewpoint pending confirmation"}
+  },
+  "additionalCriteriaAssessment": {
+    "personal_contribution_confirmation": {"status": "pending_user_review", "effect": "not imputed; preserve P claims"},
+    "reader_restatement": {"status": "editorial_design_check", "effect": "included in clarity diagnostic"},
+    "counterevidence_and_boundary": {"status": "pass_with_limitations", "effect": "claim ledger retains M and remaining uncertainty"},
+    "revision_no_regression": {"status": "pass", "effect": "no new unsupported past outcome; gates retained"},
+    "distinct_viewpoint": {"status": "pass_with_close_pair", "effect": "set-1/set-5 require authentic user tie-break"},
+    "rater_agreement": {"status": "unavailable_single_rater", "effect": "not added to score"},
+    "accepted_outcome_join": {"status": "unavailable", "effect": "not added to score or recommendation"}
+  },
+  "summary": {
+    "setCount": 5,
+    "answerCount": 15,
+    "thresholdPassCount": 5,
+    "averagePre": 94.6,
+    "averagePost": 96.4,
+    "averageDelta": 1.8,
+    "rankOrder": ["set-4", "set-3", "set-1", "set-5", "set-2"],
+    "closePairs": ["set-1 vs set-5 (same post score; choose by authentic viewpoint)", "set-3 vs set-5 (2.38 point difference; both distinct but review)"],
+    "interpretation": "v4 대비 평균 편집 점수는 상승했지만, 사용자의 실제 기여·의미 확인·독립 평가·제출 결과는 별도로 남아 있다."
+  },
+  "limitations": [
+    "단일 평가자라 inter-rater reliability를 계산하지 않음",
+    "평가 데이터와 실제 제출·면접·채용 결과를 연결하지 않음",
+    "개인 프로젝트의 실행·배포·운영 성과를 점수에 포함하지 않음",
+    "점수는 상위수준 서사의 편집 적합도를 나타내며 기술 역량을 인증하지 않음"
+  ]
+}

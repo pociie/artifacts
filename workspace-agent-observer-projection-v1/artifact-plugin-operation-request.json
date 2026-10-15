@@ -1,0 +1,33 @@
+{
+  "kind": "artifact-plugin-operation-request/v1",
+  "schemaVersion": 1,
+  "requestId": "request:artifact-plugin-management:workspace-agent-observer-projection",
+  "operation": "update",
+  "pluginsRootRef": "artifacts/plugins",
+  "target": {
+    "pluginId": "tooling/workspace-agent-operations",
+    "packageRef": "artifacts/plugins/tooling/workspace-agent-operations",
+    "expectedVersion": "0.2.0"
+  },
+  "constraints": {
+    "maxCandidates": 1,
+    "requiredCapabilityKinds": [
+      "skill",
+      "tool"
+    ],
+    "requiredHostIds": [
+      "codex"
+    ],
+    "requirePackageLocalContracts": true,
+    "allowSourceMutation": false
+  },
+  "evidenceRefs": [
+    ".collab/artifacts/workspace-agent-observer-projection-v1/route-decision.json",
+    ".collab/artifacts/workspace-agent-observer-projection-v1/agent-binding.json",
+    ".collab/artifacts/workspace-agent-observer-projection-v1/reusable-artifact-operation-request.json",
+    "artifacts/plugins/tooling/workspace-agent-operations/plugin.md"
+  ],
+  "workingMemoryBindingRef": ".collab/artifacts/workspace-agent-observer-projection-v1/reusable-artifact-operation-request.json",
+  "authorityEffect": "none",
+  "requestDigest": "sha256:fd6998e363781c917321fe2d72af7f1fcf1ccc385a947c4d3fe0fb8b35a0abeb"
+}

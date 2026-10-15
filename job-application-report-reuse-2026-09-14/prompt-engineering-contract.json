@@ -1,0 +1,278 @@
+{
+  "kind": "prompt-engineering-contract/v1",
+  "schemaVersion": 1,
+  "contractId": "job-application-report-loop-operation.instruction-quality",
+  "revision": "v1",
+  "status": "candidate",
+  "authorityEffect": "none",
+  "consumer": {
+    "kind": "reusable_component",
+    "consumerRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+    "riskClass": "high",
+    "runtimeInstructionRef": "artifacts/agent-loop/document/job-application-report-production/skill/job-application-report-loop-operation/SKILL.md",
+    "outputContractRef": "artifacts/agent-loop/document/job-application-report-production/contract.md"
+  },
+  "objective": {
+    "objectiveRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/agent-operation-boundary.json",
+    "successCriteriaRefs": [
+      "artifacts/agent-loop/document/job-application-report-production/requirements/job-application-report-production.requirement.json",
+      ".collab/artifacts/job-application-report-reuse-2026-09-14/validation-evidence.json"
+    ],
+    "nonScopeRefs": [
+      ".collab/artifacts/job-application-report-reuse-2026-09-14/agent-operation-boundary.json#nonGoals",
+      "artifacts/agent-loop/document/job-application-report-production/governance.md#governance"
+    ]
+  },
+  "instructionLayers": [
+    {
+      "order": 0,
+      "kind": "framework_authority",
+      "sourceRef": "AGENTS.md",
+      "sourceDigest": "sha256:b6e34ca96e26b1dcd4cf28cc7eaab603dc87c31ccf820374f8c82b9d2bf10120",
+      "trusted": true,
+      "mayWidenAuthority": false
+    },
+    {
+      "order": 1,
+      "kind": "responsibility_profile",
+      "sourceRef": "artifacts/agents/requirement-realization/agents/artifact-builder.yaml",
+      "sourceDigest": "sha256:06ebe77c9b1b5754e6f2e749c470d9129854abe04690022b3156705f6f10410d",
+      "trusted": true,
+      "mayWidenAuthority": false
+    },
+    {
+      "order": 2,
+      "kind": "knowledge_projection",
+      "sourceRef": "artifacts/knowledge/ai/prompt-design-and-quality-engineering.md",
+      "sourceDigest": "sha256:135dc8ba0f03f0c44e08472d347827d8356050033c1075e28bf12153b0a8c233",
+      "trusted": true,
+      "mayWidenAuthority": false
+    },
+    {
+      "order": 3,
+      "kind": "consumer_specialization",
+      "sourceRef": "artifacts/agent-loop/document/job-application-report-production/skill/job-application-report-loop-operation/SKILL.md",
+      "sourceDigest": "sha256:464ad8260bf599033908fe8adcacf7be4434222ef3f14073cfed54f695fee348",
+      "trusted": true,
+      "mayWidenAuthority": false
+    },
+    {
+      "order": 4,
+      "kind": "task_objective",
+      "sourceRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/agent-operation-boundary.json",
+      "sourceDigest": "sha256:e1dc68a23d1b6d7975c08ab9635f3a1a003c8a654b87e5d1439e93b0e317afa4",
+      "trusted": true,
+      "mayWidenAuthority": false
+    },
+    {
+      "order": 5,
+      "kind": "runtime_narrowing",
+      "sourceRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/effect-admission.json",
+      "sourceDigest": "sha256:75a73233f9ec7834ba527c500ec308b3864912e98c2d151bb65465338fc0d7c4",
+      "trusted": true,
+      "mayWidenAuthority": false
+    }
+  ],
+  "methods": [
+    {
+      "id": "direct_zero_shot",
+      "activationEvidenceRefs": ["criterion:bounded-contract-is-explicit"],
+      "budget": {
+        "maxSamples": 1,
+        "maxBranches": 1,
+        "maxDepth": 1,
+        "maxRevisions": 0,
+        "maxToolCalls": 0,
+        "maxOptimizationIterations": 0
+      },
+      "failureModeRefs": ["failure:runtime-facts-enter-reusable-source"],
+      "mitigationRefs": ["mitigation:stable-semantics-runtime-input-separation"]
+    },
+    {
+      "id": "decomposition",
+      "activationEvidenceRefs": ["criterion:multi-stage-report-responsibility"],
+      "budget": {
+        "maxSamples": 1,
+        "maxBranches": 1,
+        "maxDepth": 3,
+        "maxRevisions": 0,
+        "maxToolCalls": 0,
+        "maxOptimizationIterations": 0
+      },
+      "failureModeRefs": ["failure:question-evidence-evaluation-publication-conflation"],
+      "mitigationRefs": ["mitigation:typed-stage-and-port-contracts"],
+      "dependencyRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml#localWorkflow",
+      "intermediateValidatorRefs": [
+        "artifacts/agent-loop/document/job-application-report-production/scripts/check_job_application_report.mjs"
+      ]
+    },
+    {
+      "id": "retrieval_grounding",
+      "activationEvidenceRefs": ["criterion:source-dependent-company-role-and-project-claims"],
+      "budget": {
+        "maxSamples": 1,
+        "maxBranches": 1,
+        "maxDepth": 1,
+        "maxRevisions": 0,
+        "maxToolCalls": 0,
+        "maxOptimizationIterations": 0
+      },
+      "failureModeRefs": ["failure:stale-unsupported-or-unattributed-claim"],
+      "mitigationRefs": ["mitigation:source-policy-and-explicit-unknown"],
+      "projectionRef": "artifacts/agent-loop/execution-preparation/context-resolution/loop.yaml#port:context-projection",
+      "protectedClaimRefs": [
+        "artifacts/agent-loop/document/job-application-report-production/contract.md#invariants"
+      ]
+    },
+    {
+      "id": "structured_output",
+      "activationEvidenceRefs": ["criterion:machine-validated-request-and-result"],
+      "budget": {
+        "maxSamples": 1,
+        "maxBranches": 1,
+        "maxDepth": 1,
+        "maxRevisions": 0,
+        "maxToolCalls": 0,
+        "maxOptimizationIterations": 0
+      },
+      "failureModeRefs": ["failure:schema-valid-but-semantically-inconsistent-result"],
+      "mitigationRefs": ["mitigation:cross-record-and-independent-validation"],
+      "semanticValidatorRefs": [
+        "artifacts/agent-loop/document/job-application-report-production/scripts/check_job_application_report.mjs",
+        "artifacts/agents/requirement-realization/agents/independent-validator.yaml"
+      ]
+    },
+    {
+      "id": "external_feedback_revision",
+      "activationEvidenceRefs": ["criterion:one-bounded-evidence-based-edit"],
+      "budget": {
+        "maxSamples": 1,
+        "maxBranches": 1,
+        "maxDepth": 1,
+        "maxRevisions": 1,
+        "maxToolCalls": 0,
+        "maxOptimizationIterations": 0
+      },
+      "failureModeRefs": ["failure:unchanged-review-fingerprint"],
+      "mitigationRefs": ["mitigation:stop-and-request-smallest-context"],
+      "feedbackSourceRefs": [
+        "artifacts/agent-loop/assessment/agent-review/loop.yaml",
+        "artifacts/agent-loop/assessment/rubric-management/loop.yaml"
+      ],
+      "unchangedFingerprintRouteRef": "artifacts/agent-loop/document/job-application-report-production/contract.md#settlement"
+    }
+  ],
+  "context": {
+    "projectionRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/extraction-decision.json",
+    "protectedClaimRefs": [
+      "artifacts/agent-loop/document/job-application-report-production/contract.md#invariants",
+      ".collab/artifacts/job-application-report-reuse-2026-09-14/agent-operation-boundary.json#nonGoals"
+    ],
+    "maxInputTokens": 48000,
+    "maxItems": 24,
+    "placementPolicyRef": "artifacts/knowledge/ai/prompt-design-and-quality-engineering.md#instruction-architecture",
+    "compaction": {
+      "maxCompactions": 2,
+      "preserveRefs": [
+        ".collab/artifacts/job-application-report-reuse-2026-09-14/agent-operation-boundary.json",
+        "artifacts/agent-loop/document/job-application-report-production/requirements/job-application-report-production.requirement.json",
+        "artifacts/agent-loop/document/job-application-report-production/contract.md",
+        "artifacts/agent-loop/document/job-application-report-production/vocabularies/job-application-report-quality-policy.json"
+      ],
+      "onProtectedClaimLoss": "reconstruct_then_validate"
+    }
+  },
+  "toolPolicy": {
+    "capabilityRefs": [
+      "tools:apply-patch",
+      "tools:local-read-only-validation"
+    ],
+    "effectPolicyRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/effect-admission.json",
+    "targetSelectionRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/agent-operation-boundary.json",
+    "preEffectCheckRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/reusable-artifact-selection-report.json",
+    "postEffectReceiptRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/candidate-freeze.json",
+    "onUncertainEffect": "reread_then_stop",
+    "maxAttempts": 2
+  },
+  "evaluation": {
+    "candidateBindingRefs": [
+      ".collab/artifacts/job-application-report-reuse-2026-09-14/candidate-freeze.json",
+      "artifacts/agent-loop/document/job-application-report-production/skill/job-application-report-loop-operation/SKILL.md"
+    ],
+    "baselineRef": ".collab/artifacts/job-application-2026-09-ai-service-engineer/publication-assessment-v6.json",
+    "datasetRefs": [
+      "artifacts/agent-loop/document/job-application-report-production/examples/job-application-report-request.example.json",
+      "artifacts/agent-loop/document/job-application-report-production/examples/job-application-report-result.example.json",
+      "artifacts/agent-loop/document/job-application-report-production/scripts/test_job_application_report.mjs"
+    ],
+    "evaluatorRefs": [
+      "artifacts/agent-loop/document/job-application-report-production/scripts/check_job_application_report.mjs",
+      "artifacts/agent-loop/spec/scripts/check_agent_loops.cjs",
+      "unavailable:independent-semantic-reviewer"
+    ],
+    "caseClasses": [
+      "typical",
+      "edge",
+      "adversarial",
+      "stale_context",
+      "ambiguous_instruction",
+      "tool_failure",
+      "uncertain_effect"
+    ],
+    "dimensions": [
+      "task_success",
+      "instruction_following",
+      "grounding",
+      "semantic_validity",
+      "safety_authority",
+      "privacy",
+      "latency",
+      "token_cost",
+      "tool_efficiency"
+    ],
+    "nonCompensatoryDimensions": [
+      "grounding",
+      "semantic_validity",
+      "safety_authority",
+      "privacy"
+    ],
+    "promotionRuleRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/reusable-artifact-assessment.json#nextReviewTrigger",
+    "humanCalibrationRef": "unavailable:independent-semantic-review"
+  },
+  "stopping": {
+    "maxToolCalls": 60,
+    "maxWaitsPerFingerprint": 1,
+    "maxCompactions": 2,
+    "maxRevisions": 1,
+    "repeatedFingerprintAction": "stop",
+    "terminalEvidenceRefs": [
+      ".collab/artifacts/job-application-report-reuse-2026-09-14/candidate-freeze.json",
+      ".collab/artifacts/job-application-report-reuse-2026-09-14/validation-evidence.json",
+      ".collab/artifacts/job-application-report-reuse-2026-09-14/reusable-artifact-assessment.json"
+    ],
+    "noProgressWindowRef": "artifacts/agent-loop/document/job-application-report-production/contract.md#settlement"
+  },
+  "privacy": {
+    "storePromptBodies": false,
+    "storePrivateReasoning": false,
+    "storeTranscripts": false,
+    "redactionPolicyRef": "artifacts/agent-loop/document/job-application-report-production/policy/job-application-report-production.policy.json#reader-facing-projection",
+    "retentionPolicyRef": "artifacts/agent-loop/document/job-application-report-production/governance.md#governance",
+    "permittedEvidenceRefs": [
+      ".collab/artifacts/job-application-report-reuse-2026-09-14/session-chronology.json",
+      ".collab/artifacts/job-application-report-reuse-2026-09-14/candidate-freeze.json",
+      ".collab/artifacts/job-application-report-reuse-2026-09-14/validation-evidence.json"
+    ]
+  },
+  "externalControls": {
+    "authorityPolicyRef": "artifacts/agents/agent-authority-map.json",
+    "gitPreflightRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/agent-operation-boundary.json",
+    "effectReconciliationRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/effect-admission.json",
+    "settlementRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/reusable-artifact-assessment.json",
+    "approvalPolicyRef": "AGENTS.md"
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "00df440cd5296e190ec7d347612fd2f55633a30937c1c6c04e834783cdba0354"
+  }
+}

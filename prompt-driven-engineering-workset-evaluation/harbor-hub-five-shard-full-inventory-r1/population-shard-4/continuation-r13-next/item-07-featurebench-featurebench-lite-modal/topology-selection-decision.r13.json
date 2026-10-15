@@ -1,0 +1,211 @@
+{
+  "architectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+  "authorityEffect": "none",
+  "digest": "sha256:7459da484d60cb3d5f6f0b7ca78eacbd6f30c2d3e8cac2f5ecff87f40457ba4f",
+  "identityDigest": "sha256:760c24550135cfa1d736f63099aabbe074ab591be0fafc410dbe2553e70010d3",
+  "itemId": "featurebench/featurebench-lite-modal",
+  "kind": "harbor-item-topology-and-architecture-evidence/v2",
+  "laneIdentitySelectsArchitecture": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "optionalSwarm": {
+    "reason": "architecture_only_topology_requirement",
+    "required": false,
+    "selectedRef": null,
+    "status": "not_required"
+  },
+  "schemaVersion": 2,
+  "topologyRequirementDecision": {
+    "authorityEffect": "none",
+    "blockers": [],
+    "kind": "execution-topology-requirement-decision/v1",
+    "reasonCodes": ["separable_static_responsibilities"],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:featurebench/featurebench-lite-modal:r13:execute-harbor-subject",
+    "requiredCapabilityClasses": ["agent_architecture_operation"],
+    "routeDecisionSha256": "4758d795f1143271c22afb3121ccbdbb67f170bfec925945b5dbb76bb3fe0bdb",
+    "selectedMode": "single_task",
+    "status": "selected",
+    "targetScope": "effective_primary",
+    "topologyRequirement": "architecture_only"
+  },
+  "topologyRequirementInput": {
+    "constraints": ["no_swarm", "no_unbounded_revision", "no_criteria_mutation"],
+    "contributionShape": "one_owner",
+    "dynamicMembershipRequired": false,
+    "executionSurface": "delegated_single_writer",
+    "independentValidationRequired": true,
+    "operationCapabilities": {
+      "agentArchitecture": true,
+      "agentSwarm": true
+    },
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:featurebench/featurebench-lite-modal:r13:execute-harbor-subject",
+    "requiredResponsibilityClasses": ["orchestrator", "specialist", "validator"],
+    "routeDecision": {
+      "architectureSelection": {
+        "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+        "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+        "effectivePrimaryMode": "single_task",
+        "patternSelectedByRouting": false,
+        "requirement": "eligible",
+        "segmentMode": null,
+        "segmentRequirement": null,
+        "segmentSelectionStatus": null,
+        "segmentStructuralSignals": [],
+        "selectionStatus": "deferred_to_architecture_components",
+        "structuralSignals": ["one_material_contribution"],
+        "targetScope": "effective_primary",
+        "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json"
+      },
+      "authorityEffect": "none",
+      "blockers": [],
+      "conflictingFacts": [],
+      "continuityDecision": {
+        "candidateMode": "single_task",
+        "disposition": "reaffirm",
+        "effectivePrimaryMode": "single_task",
+        "executionSurface": "delegated_single_writer",
+        "historyCoverage": "complete",
+        "modeCompositionRequired": true,
+        "objectiveRelation": "unchanged",
+        "outerObligationAction": "preserve",
+        "outerObligationState": "active",
+        "priorCompletionEvidence": "missing",
+        "priorPrimaryMode": "single_task",
+        "projectionRef": "memory:harbor-hub-five-shard-full-inventory-r1:operation-resolution-r13",
+        "requestRelation": "continue_objective",
+        "segmentMode": null,
+        "sessionBoundary": "same_session"
+      },
+      "eligibleModes": ["single_task"],
+      "kind": "six-mode-route-decision/v1",
+      "missingFacts": [],
+      "reassessmentTriggers": [
+        "authority_or_instruction_admission_changes",
+        "capability_or_lifecycle_readiness_changes",
+        "dependency_or_contribution_shape_changes",
+        "purpose_effect_or_output_changes",
+        "request_relation_or_history_coverage_changes",
+        "risk_reversibility_or_validation_boundary_changes",
+        "outer_obligation_or_completion_evidence_changes",
+        "execution_surface_changes_contribution_shape"
+      ],
+      "rejectedModes": [
+        {
+          "mode": "communication",
+          "reasonCodes": [
+            "operation_not_direct_response",
+            "effect_not_none",
+            "output_not_response",
+            "temporal_not_immediate",
+            "current_state_evidence_required"
+          ]
+        },
+        {
+          "mode": "investigation",
+          "reasonCodes": ["operation_not_information_acquisition", "output_not_information_finding"]
+        },
+        {
+          "mode": "loop",
+          "reasonCodes": ["temporal_not_iterative", "iteration_not_bounded"]
+        },
+        {
+          "mode": "orchestration",
+          "reasonCodes": [
+            "contribution_not_multi_owner",
+            "capability_not_verified",
+            "lifecycle_not_verified"
+          ]
+        },
+        {
+          "mode": "session_control",
+          "reasonCodes": [
+            "operation_not_session_operation",
+            "output_not_control_receipt_or_finding",
+            "session_revision_not_explicit"
+          ]
+        }
+      ],
+      "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:featurebench/featurebench-lite-modal:r13:execute-harbor-subject",
+      "selectedMode": "single_task",
+      "status": "selected"
+    },
+    "selectedMode": "single_task",
+    "separableRoleCount": 3,
+    "targetScope": "effective_primary"
+  },
+  "topologySelectionDecision": {
+    "authorityEffect": "none",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "kind": "agent-execution-topology-selection-decision/v1",
+    "rejectedPairs": [],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:featurebench/featurebench-lite-modal:r13:execute-harbor-subject",
+    "requiredResponsibilityClasses": ["orchestrator", "specialist", "validator"],
+    "routeDecisionSha256": "4758d795f1143271c22afb3121ccbdbb67f170bfec925945b5dbb76bb3fe0bdb",
+    "selectedAgentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "selectedAgentSwarmRef": null,
+    "selectedAgreementPolicySha256": null,
+    "selectedMode": "single_task",
+    "status": "selected",
+    "targetScope": "effective_primary",
+    "topologyRequirement": "architecture_only",
+    "topologyRequirementDecisionSha256": "afdee7ad47b624e63ad615dcd7b94edf6b60b7f238cae5fd33b63af6161acc71",
+    "workflowPatternId": "pipeline"
+  },
+  "topologySelectionInput": {
+    "architectureCandidates": [
+      {
+        "architectureId": "agent-architecture:engineering-workset-simulation-pipeline",
+        "artifactRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+        "availability": "available",
+        "compatibleModes": ["single_task", "loop", "orchestration"],
+        "disqualifiers": [
+          "provider_as_architecture_owner",
+          "license_or_revision_gap",
+          "reward_as_artifact_quality",
+          "unbounded_cost_or_population",
+          "missing_cleanup_owner"
+        ],
+        "nestedPatterns": [],
+        "primaryPattern": "pipeline",
+        "requiredSignals": [
+          "revision_bound_workset",
+          "external_simulation_needed",
+          "closed_population_rule",
+          "separate_verifier_and_evidence_review"
+        ],
+        "responsibilityClasses": ["orchestrator", "specialist", "validator"],
+        "structuralCost": 1
+      }
+    ],
+    "constraints": ["no_swarm", "no_unbounded_revision", "no_criteria_mutation"],
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "observedSignals": [
+      "revision_bound_workset",
+      "external_simulation_needed",
+      "closed_population_rule",
+      "separate_verifier_and_evidence_review",
+      "ordered_dependency",
+      "exact_output_contract",
+      "single_aggregation_owner"
+    ],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:featurebench/featurebench-lite-modal:r13:execute-harbor-subject",
+    "requiredResponsibilityClasses": ["orchestrator", "specialist", "validator"],
+    "selectedMode": "single_task",
+    "swarmCandidates": [],
+    "targetScope": "effective_primary",
+    "topologyRequirement": "architecture_only",
+    "topologyRequirementDecision": {
+      "authorityEffect": "none",
+      "blockers": [],
+      "kind": "execution-topology-requirement-decision/v1",
+      "reasonCodes": ["separable_static_responsibilities"],
+      "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:featurebench/featurebench-lite-modal:r13:execute-harbor-subject",
+      "requiredCapabilityClasses": ["agent_architecture_operation"],
+      "routeDecisionSha256": "4758d795f1143271c22afb3121ccbdbb67f170bfec925945b5dbb76bb3fe0bdb",
+      "selectedMode": "single_task",
+      "status": "selected",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only"
+    },
+    "workflowPatternId": "pipeline"
+  }
+}

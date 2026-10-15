@@ -1,0 +1,2195 @@
+{
+  "kind": "job-application-writing-quality-review/v1",
+  "schema_version": 1,
+  "request_ref": {
+    "path": ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15/request.json",
+    "digest": "47f57a8fbe12972f456e2cc347d5d724670682012ca30fd7929882a25815b6ea"
+  },
+  "result_ref": {
+    "path": ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15/result.json",
+    "digest": "b5502b8f42ba0deec8c4cce88818f5546ed9bf4b68986565edc2c0a5567e05d7"
+  },
+  "research_review": {
+    "status": "pass",
+    "company_identity_status": "pass",
+    "role_responsibility_status": "pass",
+    "domain_stakes_status": "pass",
+    "applicant_relevance_status": "pass",
+    "question_implication_status": "pass",
+    "source_ids": [
+      "source-ibk-posting",
+      "source-ibk-question-endpoint",
+      "source-ibk-alio",
+      "source-ibk-strategy",
+      "source-ibk-ceo-2026",
+      "source-basel-operational-resilience",
+      "source-applicant-statements",
+      "source-collab-mono"
+    ],
+    "observations": [
+      {
+        "dimension": "company_identity",
+        "status": "pass",
+        "evidence_refs": [
+          "company-context-ibk-mission",
+          "source-ibk-strategy"
+        ],
+        "evidence": "IBK의 중소기업 지원 정체성이 공식 자료로 확인됩니다.",
+        "writing_effect": "지원동기의 기업 선택 이유를 고객 업무의 지속성으로 좁혔습니다."
+      },
+      {
+        "dimension": "role_responsibility",
+        "status": "pass",
+        "evidence_refs": [
+          "role-concern-it-lifecycle",
+          "source-ibk-posting"
+        ],
+        "evidence": "IT 직무의 개발·유지보수와 인접 책임이 공고에서 확인됩니다.",
+        "writing_effect": "기능 구현보다 변경과 결과 확인까지 이어지는 책임을 강조했습니다."
+      },
+      {
+        "dimension": "domain_stakes",
+        "status": "pass",
+        "evidence_refs": [
+          "domain-stake-continuity",
+          "source-basel-operational-resilience"
+        ],
+        "evidence": "금융 서비스의 핵심 업무를 식별하고 장애에도 지속·복구해야 한다는 원칙을 확인했습니다.",
+        "writing_effect": "속도 일반론 대신 연속성, 정확성, 설명 가능성을 기여 기준으로 사용했습니다."
+      },
+      {
+        "dimension": "applicant_relevance",
+        "status": "pass",
+        "evidence_refs": [
+          "applicant-fact-payment-project",
+          "project-claim-reusable-contracts"
+        ],
+        "evidence": "금융 백엔드와 재사용 구조 설계 경험이 지원자 진술과 프로젝트에서 확인됩니다.",
+        "writing_effect": "문항별로 한 가지 경험과 판단을 선택해 지원자 관점을 드러냈습니다."
+      },
+      {
+        "dimension": "question_implication",
+        "status": "pass",
+        "evidence_refs": [
+          "writing-implication-motivation",
+          "writing-implication-strength",
+          "writing-implication-growth",
+          "writing-implication-capability"
+        ],
+        "evidence": "네 문항의 평가 목적과 제외 경계가 각각 정의되어 있습니다.",
+        "writing_effect": "같은 경험을 사용해도 선택, 행동, 변화, 기여의 역할이 겹치지 않게 했습니다."
+      }
+    ],
+    "limitations": [
+      "개인적 IBK 접점과 프로젝트의 정량 성과는 지원자 추가 자료가 있어야 확장할 수 있습니다."
+    ]
+  },
+  "expert_panel": [
+    {
+      "reviewer_id": "company-context-reviewer",
+      "runtime_specialization": "IBK의 중소기업 지원 정체성과 디지털 방향이 답안 선택에 미친 영향을 검토",
+      "source_ids": [
+        "source-ibk-posting",
+        "source-ibk-strategy",
+        "source-ibk-ceo-2026"
+      ],
+      "review_scope": "기업 설명이 지원자 경험과 기여 방향을 실제로 구체화하는지 확인",
+      "status": "pass",
+      "limitation": "지원자의 개인적 IBK 접점은 별도 자료가 필요합니다."
+    },
+    {
+      "reviewer_id": "domain-responsibility-reviewer",
+      "runtime_specialization": "금융 서비스의 연속성, 상태 정확성, 복구 가능성 관점 검토",
+      "source_ids": [
+        "source-ibk-posting",
+        "source-basel-operational-resilience"
+      ],
+      "review_scope": "일반적인 안정성 표현을 구체적인 업무 책임으로 바꾸었는지 확인",
+      "status": "pass",
+      "limitation": "공식 원칙을 지원자의 실무 경험으로 확대하지 않았습니다."
+    },
+    {
+      "reviewer_id": "applicant-evidence-reviewer",
+      "runtime_specialization": "결제·자산 관리 백엔드와 재사용 구조 설계의 기여 귀속 검토",
+      "source_ids": [
+        "source-applicant-statements",
+        "source-collab-mono"
+      ],
+      "review_scope": "지원자 행동, 결과, 한계가 확인된 범위 안에서 연결되는지 확인",
+      "status": "pass",
+      "limitation": "정량 성과와 협업 규모는 추가 자료가 필요합니다."
+    },
+    {
+      "reviewer_id": "question-expression-reviewer",
+      "runtime_specialization": "네 문항의 역할 분리와 다섯 세트의 표현 다양성 검토",
+      "source_ids": [
+        "source-ibk-question-endpoint",
+        "source-applicant-statements"
+      ],
+      "review_scope": "나열, 반복 서사, 생성 절차 문장이 지원 답안에 남지 않았는지 확인",
+      "status": "pass",
+      "limitation": "최종 제출 입력창의 글자 수 계산은 다시 확인해야 합니다."
+    },
+    {
+      "reviewer_id": "interview-defensibility-reviewer",
+      "runtime_specialization": "주장별 후속 질문과 보강 자료의 면접 방어 가능성 검토",
+      "source_ids": [
+        "source-ibk-posting",
+        "source-applicant-statements",
+        "source-collab-mono"
+      ],
+      "review_scope": "핵심 결정과 결과를 실제 장면으로 확장할 수 있는지 확인",
+      "status": "pass",
+      "limitation": "사용자가 실제 사례를 말로 재현하는 최종 확인은 보고서 밖에서 수행합니다."
+    }
+  ],
+  "swarm_review": {
+    "protocol_ref": "vocabularies/job-application-expert-review-swarm-policy.json",
+    "execution_mode": "supervised_multi_agent",
+    "logical_reviewer_ids": [
+      "company-context-reviewer",
+      "domain-responsibility-reviewer",
+      "applicant-evidence-reviewer",
+      "question-expression-reviewer",
+      "interview-defensibility-reviewer"
+    ],
+    "proposal_rounds": 1,
+    "challenge_rounds": 1,
+    "proposals": [
+      {
+        "reviewer_id": "company-context-reviewer",
+        "scope": "기업 맥락",
+        "finding": "회사 설명은 개인 경험과 초기 책임을 구체화하는 범위에서만 유지해야 합니다.",
+        "evidence_refs": [
+          "company-context-ibk-mission",
+          "source-ibk-strategy"
+        ],
+        "proposed_disposition": "revise"
+      },
+      {
+        "reviewer_id": "domain-responsibility-reviewer",
+        "scope": "금융 도메인",
+        "finding": "신뢰라는 추상어를 연속성, 상태 정확성, 복구 가능성으로 풀어야 합니다.",
+        "evidence_refs": [
+          "domain-stake-continuity",
+          "domain-stake-integrity"
+        ],
+        "proposed_disposition": "revise"
+      },
+      {
+        "reviewer_id": "applicant-evidence-reviewer",
+        "scope": "지원자 근거",
+        "finding": "답안별 핵심 경험을 두 개 이하로 줄이고 본인의 판단을 중심에 둬야 합니다.",
+        "evidence_refs": [
+          "project-claim-payment-end-to-end",
+          "project-claim-reusable-contracts"
+        ],
+        "proposed_disposition": "revise"
+      },
+      {
+        "reviewer_id": "question-expression-reviewer",
+        "scope": "문항과 표현",
+        "finding": "같은 프로젝트를 사용해도 네 문항의 평가 목적과 마무리 기능이 달라야 합니다.",
+        "evidence_refs": [
+          "writing-implication-motivation",
+          "writing-implication-strength",
+          "writing-implication-growth",
+          "writing-implication-capability"
+        ],
+        "proposed_disposition": "revise"
+      },
+      {
+        "reviewer_id": "interview-defensibility-reviewer",
+        "scope": "면접 방어",
+        "finding": "정량 성과가 없는 경험은 실제 결정과 확인 가능한 산출물로 범위를 좁혀야 합니다.",
+        "evidence_refs": [
+          "unknown-project-observable-outcome",
+          "project-claim-payment-end-to-end"
+        ],
+        "proposed_disposition": "request-evidence"
+      }
+    ],
+    "challenges": [
+      {
+        "challenger_id": "domain-responsibility-reviewer",
+        "target_reviewer_id": "company-context-reviewer",
+        "issue": "기업 목적만 강조하면 금융 IT의 복구 책임이 약해질 수 있습니다.",
+        "evidence_refs": [
+          "domain-stake-continuity"
+        ],
+        "outcome": "resolved"
+      },
+      {
+        "challenger_id": "applicant-evidence-reviewer",
+        "target_reviewer_id": "domain-responsibility-reviewer",
+        "issue": "금융 도메인 원칙을 지원자의 실제 운영 경험처럼 읽히게 해서는 안 됩니다.",
+        "evidence_refs": [
+          "unknown-production-operation"
+        ],
+        "outcome": "resolved"
+      },
+      {
+        "challenger_id": "question-expression-reviewer",
+        "target_reviewer_id": "applicant-evidence-reviewer",
+        "issue": "근거를 줄이는 과정에서 문항의 성장 변화나 미래 기여가 사라지지 않아야 합니다.",
+        "evidence_refs": [
+          "writing-implication-growth",
+          "writing-implication-capability"
+        ],
+        "outcome": "resolved"
+      },
+      {
+        "challenger_id": "interview-defensibility-reviewer",
+        "target_reviewer_id": "question-expression-reviewer",
+        "issue": "표현 차이만으로 세트가 구분되면 면접에서 같은 답으로 수렴할 수 있습니다.",
+        "evidence_refs": [
+          "question-strength",
+          "question-growth"
+        ],
+        "outcome": "resolved"
+      },
+      {
+        "challenger_id": "company-context-reviewer",
+        "target_reviewer_id": "interview-defensibility-reviewer",
+        "issue": "근거 한계 설명이 지원 답안 안에 반복되면 지원동기의 설득력이 약해집니다.",
+        "evidence_refs": [
+          "writing-implication-motivation"
+        ],
+        "outcome": "resolved"
+      }
+    ],
+    "reconciliations": [
+      {
+        "issue": "회사·도메인 맥락과 지원자 경험의 비중",
+        "evidence_precedence": "지원자 확인 사실을 중심에 두고 공식 기업·도메인 자료는 경험 선택과 기여 범위를 바꾸는 데만 사용했습니다.",
+        "decision": "답안마다 지원자 관점 하나와 핵심 경험 한 건을 먼저 배치한 뒤 기업·도메인 결과를 연결했습니다.",
+        "affected_question_ids": [
+          "question-motivation",
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ]
+      },
+      {
+        "issue": "근거 한계와 답안의 자신감",
+        "evidence_precedence": "지원 답안에는 확인된 범위만 단정하고 부족한 자료는 검토 영역에서 요청했습니다.",
+        "decision": "생성자의 방어 문장을 삭제하고 면접 준비와 추가 자료에 구체적인 보강 방법을 제공했습니다.",
+        "affected_question_ids": [
+          "question-motivation",
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ]
+      }
+    ],
+    "unresolved_material_dissent": [],
+    "final_validator_status": "pass",
+    "status": "pass"
+  },
+  "question_reviews": [
+    {
+      "candidate_id": "candidate-a",
+      "question_id": "question-motivation",
+      "family_id": "motivation-and-company-fit",
+      "observed_move_ids": [
+        "direct-answer",
+        "company-role-connection",
+        "choice-or-action",
+        "relevant-context",
+        "future-direction"
+      ],
+      "controlling_idea": "사용자가 결과를 이해하고 다음 판단을 할 수 있는 금융 서비스를 IBK에서 만들고 싶다.",
+      "reader_takeaway": "사용자가 결과를 이해하고 다음 판단을 할 수 있는 금융 서비스를 IBK에서 만들고 싶다. 처리가 끝난 시점보다 고객이 결과를 이해하고 업무를 계속할 수 있는 상태를 중심에 둡니다.",
+      "realization": {
+        "opening_mode": "direct-claim",
+        "move_sequence": [
+          "direct-answer",
+          "company-role-connection",
+          "choice-or-action",
+          "relevant-context",
+          "future-direction"
+        ],
+        "evidence_emphasis": "사용자의 다음 판단까지 이어지는 금융 IT의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "role-contribution",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "사용자가 결과를 이해하고 다음 판단을 할 수 있는 금융 서비스를 IBK에서 만들고 싶다.",
+        "primary_evidence_refs": [
+          "applicant-fact-payment-project"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "IBK의 기업 고객 지원 목적을 지원자의 금융 서비스 관심과 단계적 성장 방향으로 연결합니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant-fact-payment-project"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-motivation"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "company_context",
+          "evidence_refs": [
+            "company-context-ibk-mission"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-a",
+      "question_id": "question-strength",
+      "family_id": "strength-and-work-style",
+      "observed_move_ids": [
+        "direct-answer",
+        "value-in-action",
+        "result-or-boundary",
+        "relevant-context",
+        "choice-or-action",
+        "company-role-connection"
+      ],
+      "controlling_idea": "완료 상태를 먼저 정의해 요구와 구현을 같은 방향으로 연결하는 것이 강점이다.",
+      "reader_takeaway": "완료 상태를 먼저 정의해 요구와 구현을 같은 방향으로 연결하는 것이 강점이다. 처리가 끝난 시점보다 고객이 결과를 이해하고 업무를 계속할 수 있는 상태를 중심에 둡니다.",
+      "realization": {
+        "opening_mode": "direct-claim",
+        "move_sequence": [
+          "direct-answer",
+          "value-in-action",
+          "result-or-boundary",
+          "relevant-context",
+          "choice-or-action",
+          "company-role-connection"
+        ],
+        "evidence_emphasis": "사용자의 다음 판단까지 이어지는 금융 IT의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "role-contribution",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "완료 상태를 먼저 정의해 요구와 구현을 같은 방향으로 연결하는 것이 강점이다.",
+        "primary_evidence_refs": [
+          "project-claim-payment-end-to-end"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "반복 가능한 행동이 금융 시스템의 정확한 변경과 유지보수에 어떤 도움을 주는지 보여 줍니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "project-claim-payment-end-to-end"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-strength"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-a",
+      "question_id": "question-growth",
+      "family_id": "project-problem-and-achievement",
+      "observed_move_ids": [
+        "relevant-context",
+        "choice-or-action",
+        "reason-or-tradeoff",
+        "result-or-boundary",
+        "learning-or-change",
+        "direct-answer"
+      ],
+      "controlling_idea": "기록과 검증을 다음 판단을 위한 설계로 바라보게 됐다.",
+      "reader_takeaway": "기록과 검증을 다음 판단을 위한 설계로 바라보게 됐다. 처리가 끝난 시점보다 고객이 결과를 이해하고 업무를 계속할 수 있는 상태를 중심에 둡니다.",
+      "realization": {
+        "opening_mode": "direct-claim",
+        "move_sequence": [
+          "relevant-context",
+          "choice-or-action",
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "learning-or-change",
+          "direct-answer"
+        ],
+        "evidence_emphasis": "사용자의 다음 판단까지 이어지는 금융 IT의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "role-contribution",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "기록과 검증을 다음 판단을 위한 설계로 바라보게 됐다.",
+        "primary_evidence_refs": [
+          "project-claim-feedback-refinement"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "새 근거에 따라 판단을 바꾸는 태도가 복잡한 금융 업무를 안전하게 배우는 기반이 됩니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "project-claim-feedback-refinement"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-growth"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-a",
+      "question_id": "question-it-capability",
+      "family_id": "capability-and-contribution",
+      "observed_move_ids": [
+        "direct-answer",
+        "choice-or-action",
+        "company-role-connection",
+        "reason-or-tradeoff",
+        "result-or-boundary",
+        "future-direction"
+      ],
+      "controlling_idea": "업무 요구를 정확하고 추적 가능한 백엔드 처리 흐름으로 바꿀 수 있다.",
+      "reader_takeaway": "업무 요구를 정확하고 추적 가능한 백엔드 처리 흐름으로 바꿀 수 있다. 처리가 끝난 시점보다 고객이 결과를 이해하고 업무를 계속할 수 있는 상태를 중심에 둡니다.",
+      "realization": {
+        "opening_mode": "direct-claim",
+        "move_sequence": [
+          "direct-answer",
+          "choice-or-action",
+          "company-role-connection",
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "future-direction"
+        ],
+        "evidence_emphasis": "사용자의 다음 판단까지 이어지는 금융 IT의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "role-contribution",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "업무 요구를 정확하고 추적 가능한 백엔드 처리 흐름으로 바꿀 수 있다.",
+        "primary_evidence_refs": [
+          "applicant-fact-payment-project"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "백엔드 경험을 처리 연속성과 상태 정확성을 지키는 초기 실무 행동으로 번역합니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant-fact-payment-project"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-capability"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-b",
+      "question_id": "question-motivation",
+      "family_id": "motivation-and-company-fit",
+      "observed_move_ids": [
+        "company-role-connection",
+        "choice-or-action",
+        "relevant-context",
+        "future-direction",
+        "direct-answer"
+      ],
+      "controlling_idea": "기업과 고객의 금융 판단을 지탱하는 시스템의 원인 설명 책임을 배우고 싶다.",
+      "reader_takeaway": "기업과 고객의 금융 판단을 지탱하는 시스템의 원인 설명 책임을 배우고 싶다. 이상 현상을 빠르게 덮기보다 관찰 가능한 상태를 따라 원인과 복구 범위를 좁히는 태도를 보여 줍니다.",
+      "realization": {
+        "opening_mode": "scene",
+        "move_sequence": [
+          "company-role-connection",
+          "choice-or-action",
+          "relevant-context",
+          "future-direction",
+          "direct-answer"
+        ],
+        "evidence_emphasis": "원인을 설명할 수 있는 시스템을 만드는 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "earned-learning",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "기업과 고객의 금융 판단을 지탱하는 시스템의 원인 설명 책임을 배우고 싶다.",
+        "primary_evidence_refs": [
+          "applicant-fact-payment-project"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "IBK의 기업 고객 지원 목적을 지원자의 금융 서비스 관심과 단계적 성장 방향으로 연결합니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant-fact-payment-project"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-motivation"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "company_context",
+          "evidence_refs": [
+            "company-context-ibk-mission"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-b",
+      "question_id": "question-strength",
+      "family_id": "strength-and-work-style",
+      "observed_move_ids": [
+        "value-in-action",
+        "result-or-boundary",
+        "relevant-context",
+        "choice-or-action",
+        "company-role-connection",
+        "direct-answer"
+      ],
+      "controlling_idea": "증상과 원인을 분리하고 처음 달라진 지점부터 좁히는 문제 해결이 강점이다.",
+      "reader_takeaway": "증상과 원인을 분리하고 처음 달라진 지점부터 좁히는 문제 해결이 강점이다. 이상 현상을 빠르게 덮기보다 관찰 가능한 상태를 따라 원인과 복구 범위를 좁히는 태도를 보여 줍니다.",
+      "realization": {
+        "opening_mode": "scene",
+        "move_sequence": [
+          "value-in-action",
+          "result-or-boundary",
+          "relevant-context",
+          "choice-or-action",
+          "company-role-connection",
+          "direct-answer"
+        ],
+        "evidence_emphasis": "원인을 설명할 수 있는 시스템을 만드는 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "earned-learning",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "증상과 원인을 분리하고 처음 달라진 지점부터 좁히는 문제 해결이 강점이다.",
+        "primary_evidence_refs": [
+          "project-claim-payment-end-to-end"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "반복 가능한 행동이 금융 시스템의 정확한 변경과 유지보수에 어떤 도움을 주는지 보여 줍니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "project-claim-payment-end-to-end"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-strength"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-b",
+      "question_id": "question-growth",
+      "family_id": "project-problem-and-achievement",
+      "observed_move_ids": [
+        "choice-or-action",
+        "reason-or-tradeoff",
+        "result-or-boundary",
+        "learning-or-change",
+        "direct-answer",
+        "relevant-context"
+      ],
+      "controlling_idea": "전달 성공과 업무 완료를 구분하며 실패 뒤의 상태를 설계하게 됐다.",
+      "reader_takeaway": "전달 성공과 업무 완료를 구분하며 실패 뒤의 상태를 설계하게 됐다. 이상 현상을 빠르게 덮기보다 관찰 가능한 상태를 따라 원인과 복구 범위를 좁히는 태도를 보여 줍니다.",
+      "realization": {
+        "opening_mode": "scene",
+        "move_sequence": [
+          "choice-or-action",
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "learning-or-change",
+          "direct-answer",
+          "relevant-context"
+        ],
+        "evidence_emphasis": "원인을 설명할 수 있는 시스템을 만드는 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "earned-learning",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "전달 성공과 업무 완료를 구분하며 실패 뒤의 상태를 설계하게 됐다.",
+        "primary_evidence_refs": [
+          "project-claim-feedback-refinement"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "새 근거에 따라 판단을 바꾸는 태도가 복잡한 금융 업무를 안전하게 배우는 기반이 됩니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "project-claim-feedback-refinement"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-growth"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-b",
+      "question_id": "question-it-capability",
+      "family_id": "capability-and-contribution",
+      "observed_move_ids": [
+        "choice-or-action",
+        "company-role-connection",
+        "reason-or-tradeoff",
+        "result-or-boundary",
+        "future-direction",
+        "direct-answer"
+      ],
+      "controlling_idea": "서로 다른 시스템 신호를 연결해 문제 범위와 복구 조건을 좁힐 수 있다.",
+      "reader_takeaway": "서로 다른 시스템 신호를 연결해 문제 범위와 복구 조건을 좁힐 수 있다. 이상 현상을 빠르게 덮기보다 관찰 가능한 상태를 따라 원인과 복구 범위를 좁히는 태도를 보여 줍니다.",
+      "realization": {
+        "opening_mode": "scene",
+        "move_sequence": [
+          "choice-or-action",
+          "company-role-connection",
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "future-direction",
+          "direct-answer"
+        ],
+        "evidence_emphasis": "원인을 설명할 수 있는 시스템을 만드는 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "earned-learning",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "서로 다른 시스템 신호를 연결해 문제 범위와 복구 조건을 좁힐 수 있다.",
+        "primary_evidence_refs": [
+          "applicant-fact-payment-project"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "백엔드 경험을 처리 연속성과 상태 정확성을 지키는 초기 실무 행동으로 번역합니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant-fact-payment-project"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-capability"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-c",
+      "question_id": "question-motivation",
+      "family_id": "motivation-and-company-fit",
+      "observed_move_ids": [
+        "choice-or-action",
+        "relevant-context",
+        "future-direction",
+        "direct-answer",
+        "company-role-connection"
+      ],
+      "controlling_idea": "기업 고객의 업무 목적을 시스템이 지켜야 할 책임으로 번역하는 개발자가 되고 싶다.",
+      "reader_takeaway": "기업 고객의 업무 목적을 시스템이 지켜야 할 책임으로 번역하는 개발자가 되고 싶다. 현업의 기대를 기술 이름으로 치환하지 않고 책임, 상태, 확인 기준으로 풀어내는 설계 능력을 강조합니다.",
+      "realization": {
+        "opening_mode": "evidence-first",
+        "move_sequence": [
+          "choice-or-action",
+          "relevant-context",
+          "future-direction",
+          "direct-answer",
+          "company-role-connection"
+        ],
+        "evidence_emphasis": "업무 목적을 구현 가능한 책임으로 번역하는 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "repeatable-practice",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "기업 고객의 업무 목적을 시스템이 지켜야 할 책임으로 번역하는 개발자가 되고 싶다.",
+        "primary_evidence_refs": [
+          "applicant-fact-payment-project"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "IBK의 기업 고객 지원 목적을 지원자의 금융 서비스 관심과 단계적 성장 방향으로 연결합니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant-fact-payment-project"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-motivation"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "company_context",
+          "evidence_refs": [
+            "company-context-ibk-mission"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-c",
+      "question_id": "question-strength",
+      "family_id": "strength-and-work-style",
+      "observed_move_ids": [
+        "result-or-boundary",
+        "relevant-context",
+        "choice-or-action",
+        "company-role-connection",
+        "direct-answer",
+        "value-in-action"
+      ],
+      "controlling_idea": "모호한 요구를 사용자 결과와 시스템 책임으로 다시 정의하는 것이 강점이다.",
+      "reader_takeaway": "모호한 요구를 사용자 결과와 시스템 책임으로 다시 정의하는 것이 강점이다. 현업의 기대를 기술 이름으로 치환하지 않고 책임, 상태, 확인 기준으로 풀어내는 설계 능력을 강조합니다.",
+      "realization": {
+        "opening_mode": "evidence-first",
+        "move_sequence": [
+          "result-or-boundary",
+          "relevant-context",
+          "choice-or-action",
+          "company-role-connection",
+          "direct-answer",
+          "value-in-action"
+        ],
+        "evidence_emphasis": "업무 목적을 구현 가능한 책임으로 번역하는 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "repeatable-practice",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "모호한 요구를 사용자 결과와 시스템 책임으로 다시 정의하는 것이 강점이다.",
+        "primary_evidence_refs": [
+          "project-claim-payment-end-to-end"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "반복 가능한 행동이 금융 시스템의 정확한 변경과 유지보수에 어떤 도움을 주는지 보여 줍니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "project-claim-payment-end-to-end"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-strength"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-c",
+      "question_id": "question-growth",
+      "family_id": "project-problem-and-achievement",
+      "observed_move_ids": [
+        "reason-or-tradeoff",
+        "result-or-boundary",
+        "learning-or-change",
+        "direct-answer",
+        "relevant-context",
+        "choice-or-action"
+      ],
+      "controlling_idea": "일관성을 같은 답이 아니라 같은 근거로 판단하는 능력으로 이해하게 됐다.",
+      "reader_takeaway": "일관성을 같은 답이 아니라 같은 근거로 판단하는 능력으로 이해하게 됐다. 현업의 기대를 기술 이름으로 치환하지 않고 책임, 상태, 확인 기준으로 풀어내는 설계 능력을 강조합니다.",
+      "realization": {
+        "opening_mode": "evidence-first",
+        "move_sequence": [
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "learning-or-change",
+          "direct-answer",
+          "relevant-context",
+          "choice-or-action"
+        ],
+        "evidence_emphasis": "업무 목적을 구현 가능한 책임으로 번역하는 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "repeatable-practice",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "일관성을 같은 답이 아니라 같은 근거로 판단하는 능력으로 이해하게 됐다.",
+        "primary_evidence_refs": [
+          "project-claim-feedback-refinement"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "새 근거에 따라 판단을 바꾸는 태도가 복잡한 금융 업무를 안전하게 배우는 기반이 됩니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "project-claim-feedback-refinement"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-growth"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-c",
+      "question_id": "question-it-capability",
+      "family_id": "capability-and-contribution",
+      "observed_move_ids": [
+        "company-role-connection",
+        "reason-or-tradeoff",
+        "result-or-boundary",
+        "future-direction",
+        "direct-answer",
+        "choice-or-action"
+      ],
+      "controlling_idea": "업무 언어와 기술 언어 사이의 간격을 줄이는 백엔드 설계 역량이 있다.",
+      "reader_takeaway": "업무 언어와 기술 언어 사이의 간격을 줄이는 백엔드 설계 역량이 있다. 현업의 기대를 기술 이름으로 치환하지 않고 책임, 상태, 확인 기준으로 풀어내는 설계 능력을 강조합니다.",
+      "realization": {
+        "opening_mode": "evidence-first",
+        "move_sequence": [
+          "company-role-connection",
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "future-direction",
+          "direct-answer",
+          "choice-or-action"
+        ],
+        "evidence_emphasis": "업무 목적을 구현 가능한 책임으로 번역하는 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "repeatable-practice",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "업무 언어와 기술 언어 사이의 간격을 줄이는 백엔드 설계 역량이 있다.",
+        "primary_evidence_refs": [
+          "applicant-fact-payment-project"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "백엔드 경험을 처리 연속성과 상태 정확성을 지키는 초기 실무 행동으로 번역합니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant-fact-payment-project"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-capability"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-d",
+      "question_id": "question-motivation",
+      "family_id": "motivation-and-company-fit",
+      "observed_move_ids": [
+        "relevant-context",
+        "future-direction",
+        "direct-answer",
+        "company-role-connection",
+        "choice-or-action"
+      ],
+      "controlling_idea": "고객과 직원의 반복되는 불편을 안전한 개선으로 바꾸고 싶다.",
+      "reader_takeaway": "고객과 직원의 반복되는 불편을 안전한 개선으로 바꾸고 싶다. 반복되는 수작업과 품질 편차를 발견하고, 개인의 주의가 아닌 재사용 가능한 구조로 해결하는 가치관을 담습니다.",
+      "realization": {
+        "opening_mode": "contrast",
+        "move_sequence": [
+          "relevant-context",
+          "future-direction",
+          "direct-answer",
+          "company-role-connection",
+          "choice-or-action"
+        ],
+        "evidence_emphasis": "작은 불편을 지속 가능한 개선으로 바꾸는 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "staged-growth",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "고객과 직원의 반복되는 불편을 안전한 개선으로 바꾸고 싶다.",
+        "primary_evidence_refs": [
+          "applicant-fact-payment-project"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "IBK의 기업 고객 지원 목적을 지원자의 금융 서비스 관심과 단계적 성장 방향으로 연결합니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant-fact-payment-project"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-motivation"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "company_context",
+          "evidence_refs": [
+            "company-context-ibk-mission"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-d",
+      "question_id": "question-strength",
+      "family_id": "strength-and-work-style",
+      "observed_move_ids": [
+        "relevant-context",
+        "choice-or-action",
+        "company-role-connection",
+        "direct-answer",
+        "value-in-action",
+        "result-or-boundary"
+      ],
+      "controlling_idea": "개인의 주의에 의존하는 반복 문제를 재사용 가능한 구조로 바꾸는 것이 강점이다.",
+      "reader_takeaway": "개인의 주의에 의존하는 반복 문제를 재사용 가능한 구조로 바꾸는 것이 강점이다. 반복되는 수작업과 품질 편차를 발견하고, 개인의 주의가 아닌 재사용 가능한 구조로 해결하는 가치관을 담습니다.",
+      "realization": {
+        "opening_mode": "contrast",
+        "move_sequence": [
+          "relevant-context",
+          "choice-or-action",
+          "company-role-connection",
+          "direct-answer",
+          "value-in-action",
+          "result-or-boundary"
+        ],
+        "evidence_emphasis": "작은 불편을 지속 가능한 개선으로 바꾸는 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "staged-growth",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "개인의 주의에 의존하는 반복 문제를 재사용 가능한 구조로 바꾸는 것이 강점이다.",
+        "primary_evidence_refs": [
+          "project-claim-payment-end-to-end"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "반복 가능한 행동이 금융 시스템의 정확한 변경과 유지보수에 어떤 도움을 주는지 보여 줍니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "project-claim-payment-end-to-end"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-strength"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-d",
+      "question_id": "question-growth",
+      "family_id": "project-problem-and-achievement",
+      "observed_move_ids": [
+        "result-or-boundary",
+        "learning-or-change",
+        "direct-answer",
+        "relevant-context",
+        "choice-or-action",
+        "reason-or-tradeoff"
+      ],
+      "controlling_idea": "처음의 선택을 지키기보다 새 근거에 따라 설계를 수정하는 개발자로 바뀌었다.",
+      "reader_takeaway": "처음의 선택을 지키기보다 새 근거에 따라 설계를 수정하는 개발자로 바뀌었다. 반복되는 수작업과 품질 편차를 발견하고, 개인의 주의가 아닌 재사용 가능한 구조로 해결하는 가치관을 담습니다.",
+      "realization": {
+        "opening_mode": "contrast",
+        "move_sequence": [
+          "result-or-boundary",
+          "learning-or-change",
+          "direct-answer",
+          "relevant-context",
+          "choice-or-action",
+          "reason-or-tradeoff"
+        ],
+        "evidence_emphasis": "작은 불편을 지속 가능한 개선으로 바꾸는 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "staged-growth",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "처음의 선택을 지키기보다 새 근거에 따라 설계를 수정하는 개발자로 바뀌었다.",
+        "primary_evidence_refs": [
+          "project-claim-feedback-refinement"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "새 근거에 따라 판단을 바꾸는 태도가 복잡한 금융 업무를 안전하게 배우는 기반이 됩니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "project-claim-feedback-refinement"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-growth"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-d",
+      "question_id": "question-it-capability",
+      "family_id": "capability-and-contribution",
+      "observed_move_ids": [
+        "reason-or-tradeoff",
+        "result-or-boundary",
+        "future-direction",
+        "direct-answer",
+        "choice-or-action",
+        "company-role-connection"
+      ],
+      "controlling_idea": "업무 불편을 관찰하고 전후 상태를 검증할 수 있는 개선으로 연결할 수 있다.",
+      "reader_takeaway": "업무 불편을 관찰하고 전후 상태를 검증할 수 있는 개선으로 연결할 수 있다. 반복되는 수작업과 품질 편차를 발견하고, 개인의 주의가 아닌 재사용 가능한 구조로 해결하는 가치관을 담습니다.",
+      "realization": {
+        "opening_mode": "contrast",
+        "move_sequence": [
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "future-direction",
+          "direct-answer",
+          "choice-or-action",
+          "company-role-connection"
+        ],
+        "evidence_emphasis": "작은 불편을 지속 가능한 개선으로 바꾸는 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "staged-growth",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "업무 불편을 관찰하고 전후 상태를 검증할 수 있는 개선으로 연결할 수 있다.",
+        "primary_evidence_refs": [
+          "applicant-fact-payment-project"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "백엔드 경험을 처리 연속성과 상태 정확성을 지키는 초기 실무 행동으로 번역합니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant-fact-payment-project"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-capability"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-e",
+      "question_id": "question-motivation",
+      "family_id": "motivation-and-company-fit",
+      "observed_move_ids": [
+        "future-direction",
+        "direct-answer",
+        "company-role-connection",
+        "choice-or-action",
+        "relevant-context"
+      ],
+      "controlling_idea": "명확한 책임과 협업이 금융 서비스의 신뢰로 이어지게 만들고 싶다.",
+      "reader_takeaway": "명확한 책임과 협업이 금융 서비스의 신뢰로 이어지게 만들고 싶다. 혼자 수행한 설계 경험을 팀 성과로 포장하지 않고, 협업을 가능하게 만드는 책임과 확인 기준의 중요성으로 확장합니다.",
+      "realization": {
+        "opening_mode": "decision-point",
+        "move_sequence": [
+          "future-direction",
+          "direct-answer",
+          "company-role-connection",
+          "choice-or-action",
+          "relevant-context"
+        ],
+        "evidence_emphasis": "명확한 책임 경계로 신뢰를 쌓는 백엔드 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "responsibility-boundary",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "명확한 책임과 협업이 금융 서비스의 신뢰로 이어지게 만들고 싶다.",
+        "primary_evidence_refs": [
+          "applicant-fact-payment-project"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "IBK의 기업 고객 지원 목적을 지원자의 금융 서비스 관심과 단계적 성장 방향으로 연결합니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant-fact-payment-project"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-motivation"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "company_context",
+          "evidence_refs": [
+            "company-context-ibk-mission"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-e",
+      "question_id": "question-strength",
+      "family_id": "strength-and-work-style",
+      "observed_move_ids": [
+        "choice-or-action",
+        "company-role-connection",
+        "direct-answer",
+        "value-in-action",
+        "result-or-boundary",
+        "relevant-context"
+      ],
+      "controlling_idea": "기능을 책임과 협력 관계로 풀어 변경 영향을 설명하는 것이 강점이다.",
+      "reader_takeaway": "기능을 책임과 협력 관계로 풀어 변경 영향을 설명하는 것이 강점이다. 혼자 수행한 설계 경험을 팀 성과로 포장하지 않고, 협업을 가능하게 만드는 책임과 확인 기준의 중요성으로 확장합니다.",
+      "realization": {
+        "opening_mode": "decision-point",
+        "move_sequence": [
+          "choice-or-action",
+          "company-role-connection",
+          "direct-answer",
+          "value-in-action",
+          "result-or-boundary",
+          "relevant-context"
+        ],
+        "evidence_emphasis": "명확한 책임 경계로 신뢰를 쌓는 백엔드 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "responsibility-boundary",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "기능을 책임과 협력 관계로 풀어 변경 영향을 설명하는 것이 강점이다.",
+        "primary_evidence_refs": [
+          "project-claim-payment-end-to-end"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "반복 가능한 행동이 금융 시스템의 정확한 변경과 유지보수에 어떤 도움을 주는지 보여 줍니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "project-claim-payment-end-to-end"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-strength"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-e",
+      "question_id": "question-growth",
+      "family_id": "project-problem-and-achievement",
+      "observed_move_ids": [
+        "learning-or-change",
+        "direct-answer",
+        "relevant-context",
+        "choice-or-action",
+        "reason-or-tradeoff",
+        "result-or-boundary"
+      ],
+      "controlling_idea": "아키텍처를 코드를 나누는 기술이 아니라 책임을 전달하는 언어로 보게 됐다.",
+      "reader_takeaway": "아키텍처를 코드를 나누는 기술이 아니라 책임을 전달하는 언어로 보게 됐다. 혼자 수행한 설계 경험을 팀 성과로 포장하지 않고, 협업을 가능하게 만드는 책임과 확인 기준의 중요성으로 확장합니다.",
+      "realization": {
+        "opening_mode": "decision-point",
+        "move_sequence": [
+          "learning-or-change",
+          "direct-answer",
+          "relevant-context",
+          "choice-or-action",
+          "reason-or-tradeoff",
+          "result-or-boundary"
+        ],
+        "evidence_emphasis": "명확한 책임 경계로 신뢰를 쌓는 백엔드 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "responsibility-boundary",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "아키텍처를 코드를 나누는 기술이 아니라 책임을 전달하는 언어로 보게 됐다.",
+        "primary_evidence_refs": [
+          "project-claim-feedback-refinement"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "새 근거에 따라 판단을 바꾸는 태도가 복잡한 금융 업무를 안전하게 배우는 기반이 됩니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "project-claim-feedback-refinement"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-growth"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate-e",
+      "question_id": "question-it-capability",
+      "family_id": "capability-and-contribution",
+      "observed_move_ids": [
+        "result-or-boundary",
+        "future-direction",
+        "direct-answer",
+        "choice-or-action",
+        "company-role-connection",
+        "reason-or-tradeoff"
+      ],
+      "controlling_idea": "백엔드 책임 경계를 설계하고 서로 다른 담당자가 변경 영향을 함께 확인하게 할 수 있다.",
+      "reader_takeaway": "백엔드 책임 경계를 설계하고 서로 다른 담당자가 변경 영향을 함께 확인하게 할 수 있다. 혼자 수행한 설계 경험을 팀 성과로 포장하지 않고, 협업을 가능하게 만드는 책임과 확인 기준의 중요성으로 확장합니다.",
+      "realization": {
+        "opening_mode": "decision-point",
+        "move_sequence": [
+          "result-or-boundary",
+          "future-direction",
+          "direct-answer",
+          "choice-or-action",
+          "company-role-connection",
+          "reason-or-tradeoff"
+        ],
+        "evidence_emphasis": "명확한 책임 경계로 신뢰를 쌓는 백엔드 개발자의 중심 경험을 한 가지 장면과 판단으로 좁혔습니다.",
+        "judgment_emphasis": "행동의 이유와 이후 달라진 책임 기준을 중심으로 읽힙니다.",
+        "closing_mode": "responsibility-boundary",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "백엔드 책임 경계를 설계하고 서로 다른 담당자가 변경 영향을 함께 확인하게 할 수 있다.",
+        "primary_evidence_refs": [
+          "applicant-fact-payment-project"
+        ],
+        "evidence_interpretation": "경험을 기능 요약으로 사용하지 않고 지원자가 무엇을 완료로 보며 어떤 기준으로 선택하는지를 설명하는 근거로 사용했습니다.",
+        "company_or_domain_consequence": "백엔드 경험을 처리 연속성과 상태 정확성을 지키는 초기 실무 행동으로 번역합니다.",
+        "excluded_material": [
+          "기술 이름의 연속 나열",
+          "경험하지 않은 운영 성과",
+          "생성 절차에 관한 설명"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant-fact-payment-project"
+          ],
+          "assessment": "지원자의 행동과 판단이 확인된 프로젝트 범위 안에서 드러납니다.",
+          "why_it_matters": "경험의 소유와 기여 범위를 면접에서 구체적으로 방어할 수 있습니다.",
+          "action": "핵심 결정 한 건의 조건, 대안, 결과를 말로 재현합니다.",
+          "interview_probe": "본인이 직접 내린 결정과 그 결정이 바꾼 결과는 무엇입니까?"
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "writing-implication-capability"
+          ],
+          "assessment": "문항이 요구하는 판단 하나를 중심으로 답안의 역할을 분리했습니다.",
+          "why_it_matters": "같은 프로젝트를 쓰더라도 네 문항이 반복처럼 읽히지 않습니다.",
+          "action": "다른 문항의 포부나 기능 설명을 추가하지 않습니다.",
+          "interview_probe": "이 답안의 핵심을 한 문장으로 다시 말하면 무엇입니까?"
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "domain-stake-integrity"
+          ],
+          "assessment": "기업 또는 금융 도메인 맥락이 경험 선택과 기여 범위를 구체화합니다.",
+          "why_it_matters": "회사 정보가 장식이 아니라 지원자의 책임 판단으로 작동합니다.",
+          "action": "기업 설명은 현재 수준을 유지하고 개인 장면을 보강합니다.",
+          "interview_probe": "이 관점이 IBK의 어떤 고객 또는 업무 결과와 연결됩니까?"
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "cross_candidate_reviews": [
+    {
+      "question_id": "question-motivation",
+      "max_pairwise_ngram_jaccard": 0.012,
+      "repeated_long_sentence_hashes": [],
+      "justified_repetitions": [],
+      "strategy_distinction": "다섯 세트는 사용자 결과, 원인 추적, 업무 번역, 개선, 책임 경계의 서로 다른 판단을 중심에 둡니다.",
+      "status": "pass"
+    },
+    {
+      "question_id": "question-strength",
+      "max_pairwise_ngram_jaccard": 0.006,
+      "repeated_long_sentence_hashes": [],
+      "justified_repetitions": [],
+      "strategy_distinction": "다섯 세트는 사용자 결과, 원인 추적, 업무 번역, 개선, 책임 경계의 서로 다른 판단을 중심에 둡니다.",
+      "status": "pass"
+    },
+    {
+      "question_id": "question-growth",
+      "max_pairwise_ngram_jaccard": 0.012,
+      "repeated_long_sentence_hashes": [],
+      "justified_repetitions": [],
+      "strategy_distinction": "다섯 세트는 사용자 결과, 원인 추적, 업무 번역, 개선, 책임 경계의 서로 다른 판단을 중심에 둡니다.",
+      "status": "pass"
+    },
+    {
+      "question_id": "question-it-capability",
+      "max_pairwise_ngram_jaccard": 0.025,
+      "repeated_long_sentence_hashes": [],
+      "justified_repetitions": [],
+      "strategy_distinction": "다섯 세트는 사용자 결과, 원인 추적, 업무 번역, 개선, 책임 경계의 서로 다른 판단을 중심에 둡니다.",
+      "status": "pass"
+    }
+  ],
+  "editorial_review": {
+    "status": "pass",
+    "audience_separation": "pass",
+    "information_hierarchy": "pass",
+    "comparison_structure": "pass",
+    "page_economy": "pass",
+    "public_labels": "pass",
+    "cover_purpose": "pass",
+    "cover_restraint": "pass",
+    "heading_nonredundancy": "pass",
+    "candidate_score_visibility": "pass",
+    "pagination_coherence": "pass",
+    "visual_integration": "pass",
+    "source_link_usability": "pass",
+    "single_stylesheet_integrity": "pass",
+    "design_consistency": "pass",
+    "reviewed_page_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "reviewed_candidate_ids": [
+      "candidate-a",
+      "candidate-b",
+      "candidate-c",
+      "candidate-d",
+      "candidate-e"
+    ],
+    "observations": [
+      {
+        "dimension": "audience_separation",
+        "status": "pass",
+        "evidence": "지원 답안과 검토 의견을 페이지와 제목으로 분리했습니다."
+      },
+      {
+        "dimension": "information_hierarchy",
+        "status": "pass",
+        "evidence": "기업·작성자 이해, 세트 비교, 보강 자료, 전체 답안 순으로 읽게 했습니다."
+      },
+      {
+        "dimension": "comparison_structure",
+        "status": "pass",
+        "evidence": "세트별 총점과 평가 차원을 같은 수직 행 구조로 비교합니다."
+      },
+      {
+        "dimension": "page_economy",
+        "status": "pass",
+        "evidence": "각 페이지가 하나의 독자 판단을 맡고 불필요한 생성 설명을 제거했습니다."
+      },
+      {
+        "dimension": "public_labels",
+        "status": "pass",
+        "evidence": "독자가 바로 이해할 문항명과 평가명을 사용했습니다."
+      },
+      {
+        "dimension": "cover_purpose",
+        "status": "pass",
+        "evidence": "표지는 지원 대상과 보고서의 판단 목적만 설명합니다."
+      },
+      {
+        "dimension": "cover_restraint",
+        "status": "pass",
+        "evidence": "표지에서 산출 방식, 후보 수, 검증 방식, 장식 이미지를 제외했습니다."
+      },
+      {
+        "dimension": "heading_nonredundancy",
+        "status": "pass",
+        "evidence": "후보 제목은 한 번만 표시하고 이어지는 페이지에는 기능이 다른 제목을 사용했습니다."
+      },
+      {
+        "dimension": "candidate_score_visibility",
+        "status": "pass",
+        "evidence": "모든 후보 시작 페이지에 총점과 여섯 평가 차원의 점수·설명을 표시했습니다."
+      },
+      {
+        "dimension": "pagination_coherence",
+        "status": "pass",
+        "evidence": "각 후보의 두 페이지를 인접 배치하고 답안과 검토 의견을 페이지 안에서 완결했습니다."
+      },
+      {
+        "dimension": "visual_integration",
+        "status": "pass",
+        "evidence": "세 개의 PNG를 기업 맥락, 문항 구분, 후보 비교에 각각 연결했습니다."
+      },
+      {
+        "dimension": "source_link_usability",
+        "status": "pass",
+        "evidence": "공식 출처는 짧고 의미가 분명한 링크 문구로 제공했습니다."
+      },
+      {
+        "dimension": "single_stylesheet_integrity",
+        "status": "pass",
+        "evidence": "보고서는 프로필이 지정한 하나의 스타일시트만 연결합니다."
+      },
+      {
+        "dimension": "design_consistency",
+        "status": "pass",
+        "evidence": "절제된 색상, 행 구분, 타이포그래피, 여백 체계를 전 페이지에 유지했습니다."
+      }
+    ],
+    "findings": []
+  },
+  "overall_status": "pass",
+  "limitations": [
+    "독립 검토는 제출 승인이나 채용 판단을 대신하지 않습니다.",
+    "개인적 계기와 정량 결과는 사용자가 실제 자료로 최종 확인해야 합니다."
+  ],
+  "authority_effect": "none"
+}

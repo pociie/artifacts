@@ -1,0 +1,147 @@
+{
+  "affectedRoles": ["coordinator", "population-curator", "provider-curator", "validator"],
+  "amendmentId": "dispatch-policy-amendment:harbor-hub-five-shard-full-inventory-r1:population-shard-2:r13",
+  "appliedAtBoundary": "post-settlement_pre-next-claim",
+  "appliedBeforeClaimItemId": "algotune/algotune",
+  "authorityEffect": "none",
+  "baselineExecutionStructureFingerprint": "sha256:116f9b60555cef948a5c013d2623460ba578d5e90748a1607606e43cbdbe51ce",
+  "changedExecutionStructureFingerprint": "sha256:18cf7f3f10b0a12880c8c90d0bbfcac34538df1f50083db2a40d9ec175e8ad5d",
+  "changedFingerprint": true,
+  "continueOnlyOnChangedItemOrCapabilityFingerprint": true,
+  "controller": {
+    "architectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+    "architectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "privateReasoningAccess": false,
+    "roleId": "coordinator"
+  },
+  "controllerProviderEvidenceNotSubjectEvidence": true,
+  "digest": "sha256:9c95bb5d1eb3c381b0f479dcdd735c4f643efe18bca68bd57cba7edb1a433da8",
+  "dispatchPolicy": {
+    "claimPredicate": "same frozen assignment, no terminal disposition, no active claim, and changed item or capability fingerprint",
+    "continueNextPlanOrderItem": true,
+    "laneStopOnItemHold": false,
+    "maxInterventions": 1,
+    "qualificationFailureDisposition": "unique_held_terminal_receipt",
+    "sourceScope": "run_private",
+    "unchangedFailureScope": "same_work_item_and_capability"
+  },
+  "independentValidation": {
+    "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dispatch-policy-amendment-independent-validation.r13.json",
+    "selfDigest": "sha256:1c0d7842a3494242a610d573d31cba699a5e07c539fc4079648fad85ba0bbe91",
+    "sha256": "2a91b1639ba51ee3a7ab4023e300ed170adfa35d38317470400dac2ff98f6936",
+    "status": "passed"
+  },
+  "itemHoldDoesNotStopLane": true,
+  "kind": "dispatch-policy-amendment/v1",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+  "preservedPriorTerminalReceipts": [
+    {
+      "claimFrameworkRevision": "harbor-context-and-compound-routing-r5",
+      "claimWorkerRef": "worker:harbor-population-shard-2:r5-controller",
+      "itemId": "datacurve/deep-swe-1-1",
+      "itemTerminalStatus": "held",
+      "laneId": "population-shard-2",
+      "terminalReceiptRef": "population-shard-2/route-and-gate-evidence.json",
+      "terminalReceiptSha256": "62b268916e55b05063a81c7142a31a0cfb23e126af8dae71e5d088165422acc9"
+    },
+    {
+      "claimFrameworkRevision": "harbor-context-and-compound-routing-r5",
+      "claimWorkerRef": "worker:harbor-population-shard-2:r5-controller",
+      "itemId": "ryanmarten/tb-test",
+      "itemTerminalStatus": "held",
+      "laneId": "population-shard-2",
+      "terminalReceiptRef": "continuation-r5/simulation-evidence-probe-01.json",
+      "terminalReceiptSha256": "7aa6dc9b1f07037ba169e4b3f004f63bc5ac233cadce04477e296819c27c1b30"
+    },
+    {
+      "claimFrameworkRevision": "harbor-context-and-compound-routing-r5",
+      "claimWorkerRef": "worker:harbor-population-shard-2:r5-controller",
+      "itemId": "harbor-index/harbor-index",
+      "itemTerminalStatus": "held",
+      "laneId": "population-shard-2",
+      "terminalReceiptRef": "continuation-r5/simulation-evidence-probe-02.json",
+      "terminalReceiptSha256": "b95fdee281a666d651c38379caf08f6f9b69481208afe3f57c69766df1ebac3d"
+    },
+    {
+      "claimFrameworkRevision": "harbor-context-and-compound-routing-r5",
+      "claimWorkerRef": "worker:harbor-population-shard-2:r5-controller",
+      "itemId": "NovitaAI/tb21-file-recovery",
+      "itemTerminalStatus": "held",
+      "laneId": "population-shard-2",
+      "terminalReceiptRef": "continuation-r5/simulation-evidence-probe-03.json",
+      "terminalReceiptSha256": "1b077b6c60b771bd748a131398553d72b3c83bfa7263a122ada88348a379ffac"
+    },
+    {
+      "claimFrameworkRevision": "harbor-context-and-compound-routing-r9",
+      "claimWorkerRef": "worker:harbor-population-shard-2:r9-controller",
+      "itemId": "NovitaAI/tb21-data-science",
+      "itemTerminalStatus": "held",
+      "laneId": "population-shard-2",
+      "terminalReceiptRef": "continuation-r9/terminal-item-receipt.r9.json",
+      "terminalReceiptSha256": "9f4546caf0a71a4ee9ec91468f5e1e5ee537e143476e3446afd52a8722a842f3"
+    },
+    {
+      "claimFrameworkRevision": "harbor-context-and-compound-routing-r12",
+      "claimWorkerRef": "worker:harbor-population-shard-2:r12-controller",
+      "itemId": "NovitaAI/tb21-systems-security",
+      "itemTerminalStatus": "held",
+      "laneId": "population-shard-2",
+      "terminalReceiptRef": "continuation-r12/terminal-item-receipt.r12.json",
+      "terminalReceiptSha256": "693c99e268a2809238a8af6065644ff962895806006060c1f1d621d6534b0890"
+    },
+    {
+      "claimFrameworkRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "claimWorkerRef": "worker:harbor-population-shard-2:r13-controller",
+      "itemId": "abhishek203/task-aw",
+      "itemTerminalStatus": "held",
+      "laneId": "population-shard-2",
+      "terminalReceiptRef": "population-shard-2/continuation-r13/terminal-item-receipt.r13.json",
+      "terminalReceiptSha256": "b25375022a80dc9fe21cdc2659c7f3336513f70fabe37d25dc50af3fb2bbc514"
+    }
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "qualificationFailureDisposition": "unique_held_terminal_receipt",
+  "qualificationFailureIsItemScoped": true,
+  "roleAcknowledgements": [
+    {
+      "acknowledgementId": "ack:dispatch-policy-amendment:harbor-hub-five-shard-full-inventory-r1:population-shard-2:r13:coordinator",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dispatch-policy-role-ack-coordinator.r13.json",
+      "roleId": "coordinator",
+      "selfDigest": "sha256:561d7757171fed2cd8e4bb086a3d05288980bf49f58fd78b7dd2922ff317d22f",
+      "sha256": "4f172f401568576799c6e2acc8538b252e8c9ab7868567a15b39e889c8c5dc9b"
+    },
+    {
+      "acknowledgementId": "ack:dispatch-policy-amendment:harbor-hub-five-shard-full-inventory-r1:population-shard-2:r13:population-curator",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dispatch-policy-role-ack-population-curator.r13.json",
+      "roleId": "population-curator",
+      "selfDigest": "sha256:c0d17758673c01a13940c8cb95642a607e02125a2459d4e518b71f29732070fb",
+      "sha256": "a739e26dfd1822af191900cfc55d9db3759784768681ef3039ae4b478e01ec7c"
+    },
+    {
+      "acknowledgementId": "ack:dispatch-policy-amendment:harbor-hub-five-shard-full-inventory-r1:population-shard-2:r13:provider-curator",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dispatch-policy-role-ack-provider-curator.r13.json",
+      "roleId": "provider-curator",
+      "selfDigest": "sha256:2c891d4e23a2d082d8e2e5524ee953df1eeb8a7dbc150e26833121dafabc6593",
+      "sha256": "cacd4551af85f184f315c2b59b8ab86da58e34d9ffaebed5ce73d48de98b5e28"
+    },
+    {
+      "acknowledgementId": "ack:dispatch-policy-amendment:harbor-hub-five-shard-full-inventory-r1:population-shard-2:r13:validator",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dispatch-policy-role-ack-validator.r13.json",
+      "roleId": "validator",
+      "selfDigest": "sha256:4fdcfceffb85027d66b871a70e2fe963132c64c97d2b0cd0783cb288420327b3",
+      "sha256": "9071426804d586e3d318c7a1e787ed80912a48370c548299b7e1a3e2bfb813f3"
+    }
+  ],
+  "schemaVersion": 1,
+  "shardId": "population-shard-2",
+  "sourceScope": "run_private",
+  "status": "report_only",
+  "trackedReusableSourceMutation": false,
+  "unchangedFailureScope": "same_work_item_and_capability"
+}

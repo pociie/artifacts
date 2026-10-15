@@ -1,0 +1,774 @@
+{
+  "artifactLifecycle": {
+    "dynamicComposition": {
+      "automaticPromotion": false,
+      "componentRefs": [
+        "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+        "artifacts/loop-architecture/components/execution-routing/component.json",
+        "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+      ],
+      "disposition": "operated",
+      "dynamicArtifactRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-candidate.r13.json"
+      ],
+      "expiryConditionRefs": [
+        "item-terminal-settlement",
+        "operation-revision-successor",
+        "provider-receipt-observed"
+      ],
+      "fallbackRef": "fallback:hold:population-shard-5:openthoughts/tasktrove-exp-rpt-stack-junit-v6:until-effective-provider-receipt",
+      "operationEvidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/artifact-reuse-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-artifact-composition-decision.r13.json"
+      ],
+      "outcomeEvidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/harbor-subject-operation.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/final-independent-evaluation.r13.json"
+      ],
+      "required": true,
+      "residualGapRef": "gap:item-effective-provider-receipt",
+      "reusableArtifactRefs": [
+        ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json",
+        "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+      ],
+      "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-5:continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6:openthoughts/tasktrove-exp-rpt-stack-junit-v6"
+    },
+    "operations": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/artifact-reuse-decision.r13.json"
+        ],
+        "limitations": [],
+        "operationId": "discover",
+        "state": "operated"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/artifact-reuse-decision.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/source-and-plan-binding.r13.json"
+        ],
+        "limitations": [],
+        "operationId": "reuse",
+        "state": "operated"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-candidate.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "limitations": [],
+        "operationId": "create",
+        "state": "operated"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/source-and-plan-binding.r13.json"
+        ],
+        "limitations": ["no_tracked_reusable_source_mutation_authorized"],
+        "operationId": "update",
+        "state": "rejected"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/source-and-plan-binding.r13.json"
+        ],
+        "limitations": ["one_exact_item_scope_has_no_split_responsibility"],
+        "operationId": "split",
+        "state": "rejected"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "limitations": ["no_semantic_merge_was_authorized_or_needed"],
+        "operationId": "merge",
+        "state": "rejected"
+      }
+    ],
+    "requestedOperationIds": ["discover", "reuse", "create", "update", "split", "merge"]
+  },
+  "assessmentId": "assessment:harbor-hub-five-shard-full-inventory-r1:population-shard-5:continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6:openthoughts/tasktrove-exp-rpt-stack-junit-v6",
+  "assessmentRevision": 4,
+  "authorityEffect": "none",
+  "bindings": {
+    "evaluationReport": {
+      "digest": "sha256:88bcec57c9baa97468222cba1596c2ce1424c229e1c2904633a1398081afcaf5",
+      "final": true,
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/final-independent-evaluation.r13.json",
+      "simulationEvidenceDigest": "sha256:a37bb3ed58eac3f7d8802e472619b26cdf05e3f8f7fc7e0eb6c0ab2dcf5f49e9"
+    },
+    "evaluator": {
+      "digest": "sha256:4fc5529049a7c484b4f8fb2eea9688c0f8622927fdb9a5848372725bd49717eb",
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/contract.md"
+    },
+    "profile": {
+      "digest": "sha256:ca1e8d48eff7e065cf4cf1f2e4be5ec86778f97509df137e2de6308bdc0632bf",
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/profiles/workset-terminal-reward.profile.json"
+    },
+    "rubric": {
+      "digest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18",
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    },
+    "simulationEvidence": {
+      "digest": "sha256:a37bb3ed58eac3f7d8802e472619b26cdf05e3f8f7fc7e0eb6c0ab2dcf5f49e9",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/simulation-evidence.r13.json",
+      "settled": true
+    }
+  },
+  "calibration": {
+    "evidenceRefs": [],
+    "humanLabelPopulationRef": null,
+    "metrics": {
+      "abstentionRate": null,
+      "chanceCorrectedAgreement": null,
+      "falseAllowRate": null,
+      "falseBlockRate": null
+    },
+    "ownerThresholds": {
+      "maxAbstentionRate": 0.1,
+      "maxFalseAllowRate": 0.05,
+      "maxFalseBlockRate": 0.05,
+      "minChanceCorrectedAgreement": 0.8
+    },
+    "state": "pending"
+  },
+  "criterionObservations": [
+    {
+      "criterionId": "gate.binding.final_evaluation",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/final-independent-evaluation.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.boundary.authority_privacy",
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/preclaim-verification.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/source-and-plan-binding.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/compound-mode-journey.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/mode-reasoning-envelope.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/artifact-reuse-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-artifact-composition-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/workflow-pattern-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/topology-selection-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/coordination-closure-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/execution-structure-21-output-bundle.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/subject-operation-request.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/native-subject-topology-operation-receipt.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/native-subject-topology-operation-observation.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/item-resource-settlement.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.lifecycle.terminal_settlement",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/item-resource-settlement.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.lifecycle.population_disposition_integrity",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/queue-reconciliation-before-claim.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.context.requirement_scope_lifetime_integrity",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/source-and-plan-binding.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/mode-reasoning-envelope.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.routing.compound_obligation_coverage",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/compound-mode-journey.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/mode-reasoning-envelope.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.validation.reward_hacking",
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/algorithms/workset-terminal-reward-reduction/tests/test_implementation.py"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.outcome.required_validation",
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/simulation-evidence.r13.json"
+      ],
+      "limitations": ["effective_execution_or_outcome_evidence_unavailable"],
+      "score": null,
+      "state": "unavailable"
+    },
+    {
+      "criterionId": "gate.artifact.lifecycle_coverage",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/terminal-reward-assessment.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.artifact.reuse_before_dynamic",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/artifact-reuse-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-artifact-composition-decision.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.artifact.dynamic_residual_gap",
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-candidate.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.artifact.dynamic_binding_integrity",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-artifact-composition-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/final-independent-evaluation.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.requirement_understanding",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/preclaim-verification.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/source-and-plan-binding.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.operability",
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/candidate-probe.r13.json"
+      ],
+      "limitations": ["effective_execution_or_outcome_evidence_unavailable"],
+      "score": null,
+      "state": "unavailable"
+    },
+    {
+      "criterionId": "reward.routing",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/route-decision.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.reasoning_control",
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/mode-reasoning-control-decision.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.context_adaptation",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/source-and-plan-binding.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.workflow",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/workflow-pattern-decision.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.agent_architecture",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/topology-selection-decision.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.agent_swarm",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/topology-selection-decision.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.artifact.discover",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/artifact-reuse-decision.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.artifact.reuse",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/artifact-reuse-decision.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.artifact.create",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-candidate.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.artifact.update",
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/source-and-plan-binding.r13.json"
+      ],
+      "limitations": ["no_tracked_reusable_source_mutation_authorized"],
+      "score": null,
+      "state": "unavailable"
+    },
+    {
+      "criterionId": "reward.artifact.split",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/source-and-plan-binding.r13.json"
+      ],
+      "limitations": ["one_exact_item_scope_has_no_split_responsibility"],
+      "score": null,
+      "state": "unavailable"
+    },
+    {
+      "criterionId": "reward.artifact.merge",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-artifact-composition-decision.r13.json"
+      ],
+      "limitations": ["no_semantic_merge_was_authorized_or_needed"],
+      "score": null,
+      "state": "unavailable"
+    },
+    {
+      "criterionId": "reward.artifact.dynamic_composition",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-artifact-composition-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/harbor-subject-operation.r13.json"
+      ],
+      "limitations": ["effective_execution_or_outcome_evidence_unavailable"],
+      "score": null,
+      "state": "partial"
+    },
+    {
+      "criterionId": "reward.loop_architecture_quality",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/mode-reasoning-envelope.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/workflow-pattern-decision.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.evidence_quality",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/preclaim-verification.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/source-and-plan-binding.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/compound-mode-journey.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/mode-reasoning-envelope.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/artifact-reuse-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/dynamic-artifact-composition-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/workflow-pattern-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/topology-selection-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/coordination-closure-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/execution-structure-21-output-bundle.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/subject-operation-request.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/native-subject-topology-operation-receipt.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/native-subject-topology-operation-observation.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/item-resource-settlement.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.outcome_quality",
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/final-independent-evaluation.r13.json"
+      ],
+      "limitations": ["effective_execution_or_outcome_evidence_unavailable"],
+      "score": null,
+      "state": "unavailable"
+    },
+    {
+      "criterionId": "reward.efficiency",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/harbor-subject-operation.r13.json"
+      ],
+      "limitations": ["effective_execution_or_outcome_evidence_unavailable"],
+      "score": null,
+      "state": "unavailable"
+    }
+  ],
+  "declaredDecision": {
+    "diagnosticReward": null,
+    "dimensionRewards": [
+      {
+        "dimensionId": "requirement_understanding",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "operability",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "routing",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "reasoning_control",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "context_adaptation",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "workflow",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "agent_architecture",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "agent_swarm",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_discovery",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_reuse",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_creation",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_update",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "artifact_split",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "artifact_merge",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "dynamic_artifact_composition",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "loop_architecture_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "evidence_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "outcome_quality",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "efficiency",
+        "reward": null,
+        "state": "unavailable"
+      }
+    ],
+    "disposition": "require_context",
+    "findings": [
+      {
+        "criterionId": "gate.outcome.required_validation",
+        "findingType": "protected_gate_failure",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "critical"
+      },
+      {
+        "criterionId": "reward.operability",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ENVIRONMENT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.update",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ARTIFACT_UPDATE_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.split",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ARTIFACT_SPLIT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.merge",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ARTIFACT_MERGE_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.dynamic_composition",
+        "findingType": "evidence_gap",
+        "ownerRoute": "DYNAMIC_ARTIFACT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.outcome_quality",
+        "findingType": "evidence_gap",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "major"
+      }
+    ],
+    "improvementTargetCriterionIds": [
+      "gate.outcome.required_validation",
+      "reward.operability",
+      "reward.artifact.update",
+      "reward.artifact.split",
+      "reward.artifact.merge",
+      "reward.artifact.dynamic_composition",
+      "reward.outcome_quality"
+    ],
+    "primaryReward": 0.0,
+    "promotionEligible": false,
+    "reasonCodes": [
+      "protected_criterion_unresolved",
+      "qualifying_criterion_unresolved",
+      "required_active_dimension_unavailable"
+    ],
+    "useClass": "workset_terminal"
+  },
+  "dimensionThresholds": [
+    {
+      "dimensionId": "requirement_understanding",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "operability",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "routing",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "reasoning_control",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "context_adaptation",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "workflow",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "agent_architecture",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "agent_swarm",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "artifact_discovery",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "artifact_reuse",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "artifact_creation",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "artifact_update",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "artifact_split",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "artifact_merge",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "dynamic_artifact_composition",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "loop_architecture_quality",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "evidence_quality",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "outcome_quality",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "efficiency",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    }
+  ],
+  "freeze": {
+    "activationDigest": "sha256:2d95235ec038aef16ccc46b21c3266877c336acc8e25cd6a489ad8bbcba61d44",
+    "environmentDigest": "sha256:42351148a2e5ca6e3dc50fb08673c5864f61a45703e84ab3b83d279c78b84520",
+    "frozenBeforeExecution": true,
+    "rubricDigest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18",
+    "taskDigest": "sha256:f9331e5b4bdffee95b0a98ed8a42d5d8cd91076eaab456b6e0ac8ede2569623e",
+    "thresholdsDigest": "sha256:0a1812843c9a9da96751a36a1b027ff0998fc6d13044fd8a1c87f359d483c256"
+  },
+  "integrity": {
+    "algorithm": "canonical-json-sha256/v1",
+    "digest": "sha256:c6fda93c00af8f68f71a50f018c5d9afd710dfe7138c925ff28cc936ebd7c901"
+  },
+  "kind": "workset-terminal-reward-assessment/v1",
+  "roles": {
+    "evaluatorRef": "evaluator:independent-structural",
+    "independentValidatorRef": "validator:protected-gates",
+    "oracleOwnerRef": "oracle:provider-verifier",
+    "rewardReducerRef": "reducer:workset-terminal-reward-v4",
+    "subjectAgentRef": "subject:harbor:gpt-5.6-luna"
+  },
+  "schemaVersion": 1,
+  "settlement": {
+    "evidenceRefs": [
+      ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/item-resource-settlement.r13.json",
+      ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/terminal-item-receipt.r13.json"
+    ],
+    "state": "complete"
+  },
+  "status": "report_only",
+  "workset": {
+    "environmentRef": "environment:harbor@0.22.0:unqualified",
+    "split": "development",
+    "taskRef": "item:openthoughts/tasktrove-exp-rpt-stack-junit-v6",
+    "taskRevision": "openthoughts/tasktrove-exp-rpt-stack-junit-v6@metadata-only-r13"
+  }
+}

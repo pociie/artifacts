@@ -1,0 +1,144 @@
+{
+  "artifactLifecycleDimensions": {
+    "containerSettled": 1.0,
+    "privateRawRuntimeRetained": 1.0,
+    "privateReasoningProjection": 0.0,
+    "rawPromptProjection": 0.0,
+    "sanitizedReceiptMaterialized": 1.0,
+    "sanitizedRewardMaterialized": 1.0,
+    "secretProjection": 0.0
+  },
+  "authorityEffect": "none",
+  "changedFingerprintWakeCondition": {
+    "kind": "harbor-task-filter-fingerprint-transition/v1",
+    "previous": {
+      "datasetRef": "bigcode/bigcodebench-hard-complete@latest",
+      "model": "gpt-5.6-luna",
+      "providerVersion": "0.22.0",
+      "reasoningEffort": "max",
+      "taskFilter": "bigcodebench_100",
+      "taskWorkspaceDigest": "sha256:4b07d69263eb4dc8870c15b70acc80531ebd58e97c94d5772cf4ad19d58246f0"
+    },
+    "previousDigest": "sha256:f35304a8cccc02651fd5406a903b9368ef51b54f975c4382c414d87a2803b42b",
+    "required": {
+      "datasetRef": "bigcode/bigcodebench-hard-complete@latest",
+      "model": "gpt-5.6-luna",
+      "providerVersion": "0.22.0",
+      "reasoningEffort": "max",
+      "taskFilter": "bigcode/bigcodebench_100",
+      "taskWorkspaceDigest": "sha256:4b07d69263eb4dc8870c15b70acc80531ebd58e97c94d5772cf4ad19d58246f0"
+    },
+    "requiredDigest": "sha256:60f3a942a7abee3888914a2285e857d32094f807c34cc446605d0273b82bcb10",
+    "transitionObserved": false,
+    "wakeCondition": "retry only after the required provider-qualified task filter is bound; do not repeat the ownerless filter"
+  },
+  "cost": {
+    "cachedInputTokens": null,
+    "costUsd": null,
+    "elapsedMs": null,
+    "inputTokens": null,
+    "outputTokens": null
+  },
+  "deterministicGates": {
+    "actualHarborAttempt": 1,
+    "frozenIdentityMatch": 1,
+    "harborVersionObserved": 1,
+    "modelObserved": 0,
+    "reasoningEffortRequested": 1,
+    "subjectTimeoutAtMost3600": 0,
+    "taskResolved": 0,
+    "verificationEnabled": 0
+  },
+  "diagnosticRewardVector": {
+    "artifactEvidenceCompleteness": 1.0,
+    "costEvidenceCompleteness": 0.0,
+    "dynamicCompositionQuality": 1.0,
+    "protectedVerifierExecution": 0.0,
+    "protectedVerifierOutcome": 0.0,
+    "providerAvailability": 1.0,
+    "reusableCompositionQuality": 1.0,
+    "subjectProcessCompletion": 0.0,
+    "taskResolution": 0.0
+  },
+  "evidence": {
+    "commandLogDigest": "sha256:57cc027774080c6ea1b28a5d62befd1d15a07c78aa2e2665369353a410ac62c4",
+    "jobResultDigest": null,
+    "trialResultDigest": null,
+    "verifierOutputDigest": null,
+    "verifierRewardDigest": null
+  },
+  "findings": {
+    "attemptState": "provider_preflight_failed_no_subject_trial",
+    "failureClass": "provider_or_environment_failure",
+    "failureCode": "harbor:provider_or_environment_failure",
+    "protectedVerifierState": "not_scored",
+    "retryPolicy": "do_not_repeat_without_changed_task_filter_fingerprint",
+    "subjectTrialStarted": false,
+    "wakeCondition": "changed provider task-filter fingerprint required: bind exact qualified filter bigcode/bigcodebench_100 (previous bigcodebench_100); shared semantic-facts resolver integration must complete before any retry; no equivalent retry"
+  },
+  "frameworkRevision": "sha256:90e03a443bdf20344c3e51000387814f872df81fb245ecc2934badda28624139",
+  "identityDigest": "sha256:e4f745d8aa0edc814791b1dfb9e1791c184c728c7585e7a7cd8b7534e76a54f3",
+  "itemId": "bigcode/bigcodebench-hard-complete",
+  "kind": "harbor-terminal-reward-vector/v1",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "ordinal": 5,
+  "outcomeRewards": {
+    "benchmarkReward": null,
+    "promotionEligible": false,
+    "rawVerifierReward": null,
+    "terminalPrimaryReward": null
+  },
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawPromptStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "processRewards": {
+    "providerAttempt": 1.0,
+    "resourcesSettled": 1.0,
+    "subjectCompleted": 0.0,
+    "verificationCompleted": 0.0
+  },
+  "routeResolution": {
+    "admission": "admit_generic_codex",
+    "selectedMode": "single_task",
+    "topologyRequirement": "none"
+  },
+  "settlementBinding": {
+    "actualAttempt": true,
+    "attemptState": "provider_preflight_failed_no_subject_trial",
+    "changedFingerprintWakeCondition": {
+      "kind": "harbor-task-filter-fingerprint-transition/v1",
+      "previous": {
+        "datasetRef": "bigcode/bigcodebench-hard-complete@latest",
+        "model": "gpt-5.6-luna",
+        "providerVersion": "0.22.0",
+        "reasoningEffort": "max",
+        "taskFilter": "bigcodebench_100",
+        "taskWorkspaceDigest": "sha256:4b07d69263eb4dc8870c15b70acc80531ebd58e97c94d5772cf4ad19d58246f0"
+      },
+      "previousDigest": "sha256:f35304a8cccc02651fd5406a903b9368ef51b54f975c4382c414d87a2803b42b",
+      "required": {
+        "datasetRef": "bigcode/bigcodebench-hard-complete@latest",
+        "model": "gpt-5.6-luna",
+        "providerVersion": "0.22.0",
+        "reasoningEffort": "max",
+        "taskFilter": "bigcode/bigcodebench_100",
+        "taskWorkspaceDigest": "sha256:4b07d69263eb4dc8870c15b70acc80531ebd58e97c94d5772cf4ad19d58246f0"
+      },
+      "requiredDigest": "sha256:60f3a942a7abee3888914a2285e857d32094f807c34cc446605d0273b82bcb10",
+      "transitionObserved": false,
+      "wakeCondition": "retry only after the required provider-qualified task filter is bound; do not repeat the ownerless filter"
+    },
+    "providerTaskResolved": false,
+    "providerTrialAccepted": false,
+    "subjectTrialStarted": false,
+    "terminalDecision": "provider_failed_actual_attempt",
+    "trialState": "not_observed",
+    "verifierExecuted": false
+  },
+  "shardId": "population-shard-4",
+  "taskRef": null
+}

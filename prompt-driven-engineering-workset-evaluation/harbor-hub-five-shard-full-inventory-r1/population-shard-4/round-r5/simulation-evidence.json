@@ -1,0 +1,203 @@
+{
+  "arms": [
+    {
+      "admitted": true,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:918c1bc2f86c8617da6296e6fab7d916a54938b1a5935dae8ad4579b84ed3123",
+      "id": "artifact_aware_max",
+      "instructionProfileRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+      "modelRef": "model:gpt-5.6-luna",
+      "reasoningProfileRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T13:02:00Z",
+  "digest": "sha256:1b05161f119bc83983936e7908840e57a4853b0e9e2013d19c61adf2814dd33e",
+  "environment": {
+    "compatibilityState": "qualified",
+    "environmentDigest": "sha256:0dced807b062eaec94cea792e5933163c7b41d8ba504c0d5b5a71839fc9f2f3c",
+    "limitations": [
+      "qualification is specific to Docker linux/aarch64 execution on the observed Darwin arm64 host"
+    ],
+    "platformRef": "platform:linux-aarch64"
+  },
+  "evidenceId": "evidence:harbor-shard-4:r5:hello-world",
+  "failures": [],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "passed",
+    "taskResults": [
+      {
+        "evidenceRefs": ["artifacts/population-shard-4/harbor-execution-observation.json"],
+        "failureRefs": [],
+        "reward": 1.0,
+        "status": "passed",
+        "taskDigest": "sha256:bfb2e7afa2ddd48fadd57b7a44e4c25bfe987d739e8442bc59eb4ae9fc6d897a",
+        "taskId": "harbor/hello-world"
+      }
+    ]
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": true,
+    "benchmarkEligibility": true,
+    "disqualifications": [],
+    "eligibleTrialIds": ["trial:harbor-shard-4:r5:hello-world"]
+  },
+  "population": {
+    "exclusions": [
+      "48 other shard-4 assignments were not independently repartitioned or executed in this representative round"
+    ],
+    "selectionRule": "sha256-prefix64-modulo-v1; exact plan consumed",
+    "taskCount": 1,
+    "taskDigests": ["sha256:bfb2e7afa2ddd48fadd57b7a44e4c25bfe987d739e8442bc59eb4ae9fc6d897a"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-4/round-r5"
+  },
+  "provider": {
+    "limitations": [
+      "the qualification is bounded to the public hello-world representative and does not generalize to private Hub sources",
+      "network restriction enforcement was not required because the task declares public internet access",
+      "provider metadata records configured effort; private reasoning content is not evidence",
+      "independent external claim review remains outside this worker round"
+    ],
+    "qualificationDigest": "sha256:579004ff936721829e6f656b9dccc994b19bd890d94f9ecfee6b714346df3861",
+    "qualificationRef": "artifacts/population-shard-4/provider-qualification.json",
+    "state": "qualified"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r5",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:9108a8a4d80122df4a845a84aa924fb7e984f61412b766a38d26a29367b903d5",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/policy/engineering-workset-simulation.policy.json"
+    ],
+    "sourceDigest": "sha256:3129ad473a1c60f76d7159614e57c251e1fdf0a3ee64c9c347166e3315a1dd69",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:dc8b56e26addb909623cd1c09b451b232a8b1a077277bda8cbbe82743c7ba9c6",
+    "verifierDigest": "sha256:2972ebb8086f1926bd0e427da4a1039f7583b167c5ef60e4d49f6778f155b380"
+  },
+  "settlement": {
+    "reconciliationRef": "artifacts/population-shard-4/settlement-ledger.json",
+    "resources": [
+      {
+        "evidenceRefs": ["artifacts/population-shard-4/settlement-ledger.json"],
+        "resourceClass": "queue-claim",
+        "resourceRefDigest": "sha256:71fdb9dc3e7b5f35e13b2fc3be866bbba3bc54e01808b111b3ed07417ed65a22",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["artifacts/population-shard-4/settlement-ledger.json"],
+        "resourceClass": "task-materialization",
+        "resourceRefDigest": "sha256:f935353be14ee5ffc4758f9f81cdd6d5d00d1d4b5afa0914d59a0a47a15529f3",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["artifacts/population-shard-4/settlement-ledger.json"],
+        "resourceClass": "provider-job",
+        "resourceRefDigest": "sha256:56608c38579c930f18f8d2154d9a3a4172fee8d6f462eaba87a851ab226173ac",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["artifacts/population-shard-4/settlement-ledger.json"],
+        "resourceClass": "candidate-container",
+        "resourceRefDigest": "sha256:33a89d2c5083377bcf7128f282f7b49599702d9044d59676b9667fbf20d8d3e5",
+        "state": "deleted"
+      },
+      {
+        "evidenceRefs": ["artifacts/population-shard-4/settlement-ledger.json"],
+        "resourceClass": "verifier-state",
+        "resourceRefDigest": "sha256:bb316f728be6df6143cbecb35b1da00726450823c2af686f9e5379cee3baa229",
+        "state": "deleted"
+      },
+      {
+        "evidenceRefs": ["artifacts/population-shard-4/settlement-ledger.json"],
+        "resourceClass": "auth-material",
+        "resourceRefDigest": "sha256:c5ca76acf76b134c58f39564d98e1652f904ec251781bde9eca33de7e929490b",
+        "state": "deleted"
+      },
+      {
+        "evidenceRefs": ["artifacts/population-shard-4/settlement-ledger.json"],
+        "resourceClass": "temporary-files",
+        "resourceRefDigest": "sha256:8460f59ffb9832f63543ea02d41ed01539f7b37e560e9051ca6efa4cfe085889",
+        "state": "deleted"
+      },
+      {
+        "evidenceRefs": ["artifacts/population-shard-4/settlement-ledger.json"],
+        "resourceClass": "generated-evidence",
+        "resourceRefDigest": "sha256:3862b071acd3a7d73fbd0d1fa2efd89cf9e713a67dc529674300fa79572d4e8d",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    "artifacts/population-shard-4/simulation-request.json",
+    "artifacts/population-shard-4/route-decision.json",
+    "artifacts/population-shard-4/provider-qualification.json",
+    "artifacts/population-shard-4/harbor-execution-observation.json"
+  ],
+  "status": "passed",
+  "trials": [
+    {
+      "armId": "artifact_aware_max",
+      "artifactObservationRef": "artifacts/population-shard-4/artifact-aware-trial-observation-v4.json",
+      "benchmarkOutcome": {
+        "reward": 1.0,
+        "verifierState": "passed"
+      },
+      "evidenceRefs": [
+        "artifacts/population-shard-4/harbor-execution-observation.json",
+        "artifacts/population-shard-4/artifact-aware-trial-observation-v4.json"
+      ],
+      "reasoningObservation": {
+        "effectiveEffort": "max",
+        "evidenceRefs": ["artifacts/population-shard-4/harbor-execution-observation.json"],
+        "limitationCodes": ["private_reasoning_not_projected"],
+        "requestedEffort": "max",
+        "status": "compatible"
+      },
+      "state": "passed",
+      "taskDigest": "sha256:bfb2e7afa2ddd48fadd57b7a44e4c25bfe987d739e8442bc59eb4ae9fc6d897a",
+      "taskId": "harbor/hello-world",
+      "trialId": "trial:harbor-shard-4:r5:hello-world",
+      "usage": {
+        "cachedInputTokens": 20992,
+        "cost": {
+          "currency": "USD",
+          "value": 0.0009668400000000001
+        },
+        "elapsedMs": 130351,
+        "evidenceRefs": ["artifacts/population-shard-4/harbor-execution-observation.json"],
+        "inputTokens": 22509,
+        "limitationCodes": [],
+        "outputTokens": 203,
+        "status": "observed"
+      }
+    }
+  ],
+  "workingMemory": {
+    "bindingRef": "artifacts/population-shard-4/working-memory-binding.json",
+    "checkpointRefs": [
+      "artifacts/population-shard-4/route-decision.json",
+      "artifacts/population-shard-4/provider-qualification.json",
+      "artifacts/population-shard-4/settlement-ledger.json"
+    ],
+    "digest": "sha256:9060847eed8d2080f9496a4ec350e2b5e2b5189add74289d890ba74ecaf17616",
+    "invalidation": [
+      "source_revision_changed",
+      "decision_digest_changed",
+      "population_plan_digest_changed",
+      "round_settled"
+    ],
+    "namespaceRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-4/round-r5",
+    "retention": "round-scoped runtime-private state with metadata-only portable projection",
+    "sessionCursor": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:round-r5:session-cursor"
+  }
+}

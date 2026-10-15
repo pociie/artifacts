@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 9,
+      "expectedEventHeadSha256": "505a9f9a72a320aac1067f30f38969f989552244bb2d7893b85ed9a609ddc332",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:86ff4f0344663f0a117a25f8afa0f48b0021d8be39d65b5d7a753e26ef8e1d68"
+      },
+      "identityDigest": "sha256:f3445642cc670b1f7625f41608e157c7eff7c0a696740d6a005da794b21c7699",
+      "itemId": "tbench-pubcrack-a-pc_1784073251/pubcrack-dataset",
+      "laneId": "population-shard-3",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-3:tbench-pubcrack-a-pc_1784073251/pubcrack-dataset:r13",
+      "sequence": 57,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-3:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 9,
+    "eventHeadSha256": "sha256:505a9f9a72a320aac1067f30f38969f989552244bb2d7893b85ed9a609ddc332",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:785fa2e02e7772ee8ee63112bc11cefb3508adbab62b4ed6121c7352fe49b4ed",
+  "eventCursor": 9,
+  "eventHeadSha256": "sha256:505a9f9a72a320aac1067f30f38969f989552244bb2d7893b85ed9a609ddc332",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-3",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-57-tbench-pubcrack-a-pc_1784073251-pubcrack-dataset/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "tbench-pubcrack-a-pc_1784073251/pubcrack-dataset",
+        "laneId": "population-shard-3",
+        "proposalId": "proposal:population-shard-3:tbench-pubcrack-a-pc_1784073251/pubcrack-dataset:r13",
+        "workerId": "worker:harbor-population-shard-3:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 9,
+      "eventHeadSha256": "505a9f9a72a320aac1067f30f38969f989552244bb2d7893b85ed9a609ddc332",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 9,
+    "eventHeadSha256": "505a9f9a72a320aac1067f30f38969f989552244bb2d7893b85ed9a609ddc332",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-3",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}

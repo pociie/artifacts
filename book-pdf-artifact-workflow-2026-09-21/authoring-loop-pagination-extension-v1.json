@@ -1,0 +1,127 @@
+{
+  "kind": "report-authoring-loop-extension/v1",
+  "extensionId": "loop-extension:prerequisite-expansion-and-content-continuity",
+  "revision": "book-pdf-authoring-pagination/1",
+  "status": "candidate_not_activated",
+  "authorityEffect": "none",
+  "baseLoopRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/report-authoring-loop-candidate.json",
+  "baseLoopDigest": "sha256:a4b31c2edc39b143b03e6c66e6931dd09f77a91e33a779a56c5bfef9773e9717",
+  "typographyExtensionRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/authoring-loop-typography-extension-v1.json",
+  "typographyExtensionDigest": "sha256:c3444e766203eeeb54b0d800026b9a729306eba58f740d537a801ac64a3247ac",
+  "flowSpecRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-flow-and-continuity-spec-v1.md",
+  "readOnlyReferenceBindings": [
+    {
+      "ref": "artifacts/agents/agent-operation/skill/project-context-enrichment/SKILL.md",
+      "digest": "sha256:f2cca2fd15eca3e0498a17b575d5d6ba94344f05d044ffecbad4e1b11ae0df7d"
+    },
+    {
+      "ref": "artifacts/agents/agent-operation/skill/project-context-enrichment/references/analysis-lenses.md",
+      "digest": "sha256:2eadd38c56d12adb077141863753abf15c9b90d719fed0cc4e54111a2c8fdc56"
+    },
+    {
+      "ref": "artifacts/agents/agent-operation/skill/project-context-enrichment/references/enrichment-packet.md",
+      "digest": "sha256:efdada7520c1b35c747b10ef0e1be8e6c10b1a898d99c6d201ab0cb045042cbf"
+    }
+  ],
+  "insertions": [
+    {
+      "insertAfterPhase": "phase:claim-and-source-binding",
+      "phase": {
+        "id": "phase:prerequisite-bridge-and-placement-resolution",
+        "ownerRole": "role:domain-prerequisite-researcher",
+        "action": "For each real comprehension gap, construct the smallest fact-background-inference-why-it-matters bridge, assign exactly one primary placement and exclude adjacent context that cannot change the learning outcome.",
+        "inputs": [
+          "frozen reader and learning outcome",
+          "source-to-claim packet",
+          "project-context-enrichment packet or equivalent bounded contribution"
+        ],
+        "exitEvidence": [
+          "prerequisite dependency map",
+          "evidence-class labels",
+          "explanation bridge inventory",
+          "one primary placement per bridge",
+          "excluded adjacent-context ledger",
+          "unresolved gaps"
+        ],
+        "holdWhen": [
+          "a bridge lacks observed project evidence or an explicit inference label",
+          "external background is used as proof of project behavior",
+          "a mandatory prerequisite has no admissible source",
+          "placement is chosen only to fill available page space",
+          "the source or target revision changes"
+        ]
+      }
+    },
+    {
+      "insertAfterPhase": "phase:typography-normalization",
+      "phase": {
+        "id": "phase:content-continuity-pagination",
+        "ownerRole": "role:pdf-information-visual-designer",
+        "action": "Paginate complete semantic units with an expandable page count, create explicit continuation structures for multi-page units and preserve evidence classes, claim meaning, typography and reading order.",
+        "inputs": [
+          "frozen manuscript candidate",
+          "bridge and placement inventory",
+          "page-mode decisions",
+          "typography-normalized layout",
+          "pdf-flow-and-continuity supplement"
+        ],
+        "requiredCapabilities": [
+          "capability:semantic-content-segmentation",
+          "capability:multi-page-worked-example-layout",
+          "capability:paged-media-reflow",
+          "capability:continuation-identity-management",
+          "capability:content-completeness-comparison"
+        ],
+        "requiredToolRefs": [
+          "tool:content-block-inventory",
+          "tool:html-css-paged-media-renderer",
+          "tool:browser-page-geometry-audit",
+          "tool:browser-computed-style-audit",
+          "tool:pdf-text-and-page-inspector",
+          "tool:continuation-and-placement-audit",
+          "tool:contact-sheet-renderer"
+        ],
+        "exitEvidence": [
+          "content-unit to page-flow map",
+          "page count recorded as an outcome rather than a cap",
+          "split-unit continuation report",
+          "before/after content identity comparison",
+          "zero clipping and overflow report",
+          "no-shrink computed-style report",
+          "selectable-text and contact-sheet inspection"
+        ],
+        "holdWhen": [
+          "a page target causes content deletion, claim weakening or provenance removal",
+          "type size or leading is reduced below the typography contract",
+          "a split loses bridge, trace, claim or evidence identity",
+          "a mandatory prerequisite is hidden in an appendix",
+          "a figure is separated from its interpretive caption",
+          "page overflow, clipping, rasterized prose or unexplained content loss exists"
+        ]
+      }
+    }
+  ],
+  "validationExtension": {
+    "appliesToPhase": "phase:independent-fact-visual-validation",
+    "requiredComparison": "Compare the frozen semantic-unit inventory with the rendered PDF and account for every included, moved, continued, deferred and excluded unit.",
+    "requiredEvidence": [
+      "claim and content completeness diff",
+      "continuation identity review",
+      "placement correctness review",
+      "physical A4 and accessibility review or explicit pending disposition"
+    ]
+  },
+  "materialChangeSignals": [
+    "a hard page maximum is introduced or changed",
+    "a prerequisite bridge, worked example, trace, diagram or failure case changes depth",
+    "source, manuscript, target PDF or typography revision changes",
+    "page size, medium, language, accessibility or printing requirements change",
+    "a semantic unit moves between main text and appendix"
+  ],
+  "activation": "not_performed",
+  "acknowledgement": "not_received",
+  "independentValidation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}

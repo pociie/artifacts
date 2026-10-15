@@ -1,0 +1,231 @@
+{
+  "kind": "reusable-artifact-assessment/v1",
+  "schemaVersion": 1,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "automaticPromotion": false,
+  "assessmentId": "assessment:cafe-visual-evidence-rubric-candidate",
+  "objective": "Decide whether the stable part of the cafe visual-evaluation artifacts should be reused, composed, improved, promoted as a report-only candidate, or retained for this task.",
+  "subject": {
+    "artifactId": "candidate:contract-checker:visual-evidence-rubric",
+    "artifactVersion": "1",
+    "cardRef": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/reusable-extraction/visual-evidence-rubric.responsibility-card.json",
+    "cardDigest": "b2d9a2e26ac8afde81056dda7a3ff27b9d03fac8b2694e4d98a9cd18a63def3e",
+    "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+    "inventoryDigest": "5d19a6069fe964f81fdc944ccdaee77ace3353ba033a264df0d51783ea2656bd"
+  },
+  "observationWindow": {
+    "start": "2026-09-04T00:00:00Z",
+    "end": "2026-09-04T23:59:59Z",
+    "populationRef": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/naver-map-raw-image-manifest.json"
+  },
+  "evaluators": {
+    "assessor": "integration-owner",
+    "independentReviewer": null,
+    "independentReviewStatus": "unavailable"
+  },
+  "evidenceFacts": [
+    {
+      "id": "fact.current_task_profile",
+      "classification": "exact",
+      "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/visual-rubric.json",
+      "digest": "8ee2bccb1e3222b64d8c3e26526159bf6f77597d848217ef0599b1c42ce827dd",
+      "current": true,
+      "applicable": true,
+      "summary": "The task profile separates mandatory, qualifying, comparative, and observational decisions and binds the exact cafe-study context."
+    },
+    {
+      "id": "fact.current_task_validation",
+      "classification": "exact",
+      "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/validate-report.mjs",
+      "digest": "379d5bb9213606819fca2d47d95dcf3ae56c3c77718c2ddce5dd07fbe3b4797a",
+      "current": true,
+      "applicable": true,
+      "summary": "The task checker validates source hosts, image indices, gate precedence, comparison arithmetic, result count, review exclusion, and the HTML projection."
+    },
+    {
+      "id": "fact.local_rubric_coverage",
+      "classification": "exact",
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/decision-rubric/contract.md",
+      "digest": null,
+      "current": true,
+      "applicable": true,
+      "summary": "The existing engineering rubric owns non-compensatory criterion kinds, evidence states, assessment anchors, and report-only authority boundaries."
+    },
+    {
+      "id": "fact.local_operation_coverage",
+      "classification": "exact",
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/rubric-operation/contract.md",
+      "digest": null,
+      "current": true,
+      "applicable": true,
+      "summary": "The existing rubric operation contract owns task binding, metric purpose, population, window, expiry, invalidation, observation, and lifecycle concerns."
+    },
+    {
+      "id": "fact.topology_covered",
+      "classification": "derived",
+      "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/optimized-agent-architecture.json",
+      "digest": "8b2c1612fca198d9a1a741a9c666811e8db477412441d5d7bbb1a650ea3566cb",
+      "current": true,
+      "applicable": true,
+      "summary": "The collector, disjoint read-only evaluation lanes, and single-writer integration are an execution instance of existing bounded pipeline and fan-out/fan-in patterns, not a novel architecture."
+    },
+    {
+      "id": "fact.provider_domain_separation",
+      "classification": "derived",
+      "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/reusable-extraction/visual-evidence-rubric-definition.candidate.json",
+      "digest": "09e93071356acb636ed21793cc83b8ab15945cd619212b253ca8952815a919b7",
+      "current": true,
+      "applicable": true,
+      "summary": "A small provider-neutral responsibility can be stated while Naver, cafe, district, thresholds, and preferences remain in the task profile."
+    },
+    {
+      "id": "fact.owner_and_scope",
+      "classification": "unavailable",
+      "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/reusable-extraction/visual-evidence-rubric.responsibility-card.json#owner-and-scope",
+      "digest": null,
+      "current": null,
+      "applicable": true,
+      "summary": "No source-managed semantic owner, maintainer, or accepted framework, team, or personal scope has been established for a generic visual-evidence rubric."
+    },
+    {
+      "id": "fact.cross_context_evidence",
+      "classification": "unavailable",
+      "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/reusable-extraction/visual-evidence-rubric-definition.candidate.json#promotion-boundary",
+      "digest": null,
+      "current": null,
+      "applicable": true,
+      "summary": "No independent second provider, domain, consumer, or representative adversarial corpus has exercised the candidate."
+    },
+    {
+      "id": "fact.accepted_outcome_join",
+      "classification": "unavailable",
+      "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/visual-rubric.json#limitations",
+      "digest": null,
+      "current": null,
+      "applicable": true,
+      "summary": "The ranking has not been joined to an independently accepted field-study outcome."
+    },
+    {
+      "id": "fact.privacy_boundary",
+      "classification": "exact",
+      "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/visual-rubric.json#privacy-and-rights",
+      "digest": "8ee2bccb1e3222b64d8c3e26526159bf6f77597d848217ef0599b1c42ce827dd",
+      "current": true,
+      "applicable": true,
+      "summary": "The candidate retains public remote image references and sanitized observations while excluding credentials, runtime handles, image binaries, interaction text, and private reasoning."
+    }
+  ],
+  "criteria": {
+    "mandatory": [
+      {
+        "id": "mandatory.authority_privacy_provenance",
+        "status": "supported",
+        "evidenceFactIds": ["fact.current_task_profile", "fact.current_task_validation", "fact.privacy_boundary"]
+      },
+      {
+        "id": "mandatory.existing_owner_coverage_first",
+        "status": "supported",
+        "evidenceFactIds": ["fact.local_rubric_coverage", "fact.local_operation_coverage", "fact.topology_covered"]
+      },
+      {
+        "id": "mandatory.owner_scope_lifecycle",
+        "status": "unavailable",
+        "evidenceFactIds": ["fact.owner_and_scope"]
+      }
+    ],
+    "qualifying": [
+      {
+        "id": "qualifying.stable_responsibility",
+        "status": "partially_supported",
+        "evidenceFactIds": ["fact.provider_domain_separation", "fact.local_rubric_coverage", "fact.local_operation_coverage"]
+      },
+      {
+        "id": "qualifying.current_consumer_fit",
+        "status": "supported",
+        "evidenceFactIds": ["fact.current_task_profile", "fact.current_task_validation"]
+      },
+      {
+        "id": "qualifying.representative_contexts",
+        "status": "unavailable",
+        "evidenceFactIds": ["fact.cross_context_evidence", "fact.accepted_outcome_join"]
+      }
+    ],
+    "comparative": [
+      {
+        "id": "comparative.compose_existing_contracts",
+        "status": "supported",
+        "evidenceFactIds": ["fact.local_rubric_coverage", "fact.local_operation_coverage"]
+      },
+      {
+        "id": "comparative.new_unit_maintenance_cost",
+        "status": "unavailable",
+        "evidenceFactIds": ["fact.owner_and_scope", "fact.cross_context_evidence"]
+      },
+      {
+        "id": "comparative.task_local_clarity",
+        "status": "supported",
+        "evidenceFactIds": ["fact.current_task_profile", "fact.provider_domain_separation"]
+      }
+    ],
+    "observational": [
+      {
+        "id": "observational.single_provider_domain",
+        "status": "supported",
+        "evidenceFactIds": ["fact.current_task_profile", "fact.cross_context_evidence"]
+      },
+      {
+        "id": "observational.independent_semantic_review",
+        "status": "unavailable",
+        "evidenceFactIds": ["fact.owner_and_scope", "fact.accepted_outcome_join"]
+      }
+    ]
+  },
+  "alternatives": [
+    {
+      "disposition": "compose_existing",
+      "targetRefs": [
+        "artifacts/agent-loop/assessment/engineering-evaluation/decision-rubric/contract.md",
+        "artifacts/agent-loop/assessment/engineering-evaluation/rubric-operation/contract.md"
+      ],
+      "evidenceFactIds": ["fact.local_rubric_coverage", "fact.local_operation_coverage"]
+    },
+    {
+      "disposition": "report_only_candidate",
+      "targetRefs": [
+        ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/reusable-extraction/visual-evidence-rubric-definition.candidate.json"
+      ],
+      "evidenceFactIds": ["fact.provider_domain_separation", "fact.current_task_validation"]
+    },
+    {
+      "disposition": "retain_task_specific",
+      "targetRefs": [
+        ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/visual-rubric.json"
+      ],
+      "evidenceFactIds": ["fact.current_task_profile", "fact.cross_context_evidence", "fact.accepted_outcome_join"]
+    }
+  ],
+  "disposition": "require_context",
+  "mandatoryFailures": [],
+  "unavailableFacts": ["fact.owner_and_scope", "fact.cross_context_evidence", "fact.accepted_outcome_join"],
+  "conflictingFacts": [],
+  "counterevidenceRefs": [
+    "artifacts/agent-loop/assessment/engineering-evaluation/decision-rubric/contract.md#non-compensatory-decision-order",
+    "artifacts/agent-loop/assessment/engineering-evaluation/rubric-operation/contract.md#task-context-metric-profile",
+    "artifacts/loop-architecture/components/work-pattern-context-resolution/rubrics/domain-work-pattern/rubric.json#reuse.existing_structure_coverage"
+  ],
+  "limitations": [
+    "One task cannot establish cross-context semantic stability or net reuse value.",
+    "Structural validation does not validate visual judgment correctness or evaluator agreement.",
+    "The candidate definition has no accepted source owner and must remain outside reusable source."
+  ],
+  "migration": "Keep the cafe profile and results task-local; if a source owner later accepts the generic responsibility, migrate only provider-neutral criteria and retain Naver, cafe, district, preference, and thresholds in a domain or task profile.",
+  "rollback": "Remove the definition binding and candidate records, restore the task profile as a self-contained report-only rubric, then regenerate and validate the report.",
+  "retirement": "Retire the candidate if the existing engineering rubric family is generalized by its owner or if independent contexts show no stable reusable responsibility.",
+  "nextReviewTrigger": "A second materially different visual-evidence domain or provider, an independent reviewer, or an accepted field outcome becomes available.",
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "bf08eea2a89e3e296d4fdbd435d82af03d1854f8068ad98f8275891f26695547"
+  }
+}

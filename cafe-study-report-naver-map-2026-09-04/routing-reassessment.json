@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "execution-routing-reassessment/v1",
+  "requestRevision": "2026-09-04-resource-optimization",
+  "relation": "continues-and-constrains-existing-cafe-research-objective",
+  "outerObjective": "네이버 지도 내부사진만으로 중랑구·강동구 공부 카페 10곳을 선정해 HTML로 제공",
+  "materialChange": {
+    "fact": "사용자가 순차 브라우저 수집의 리소스 점유를 지적하고 에이전트 구성 최적화를 요구",
+    "earliestAffectedDecision": "workflow-pattern-and-agent-topology",
+    "priorDisposition": "coordinator-only fallback after external provider launch failures",
+    "newCapabilityFact": "현재 세션의 읽기 전용 협업 워커 런타임이 사용 가능"
+  },
+  "boundedScopes": [
+    {
+      "scope": "브라우저 기반 원시자료 회수",
+      "mode": "single_task",
+      "owner": "integration coordinator"
+    },
+    {
+      "scope": "서로 겹치지 않는 이미지 묶음의 시각 판정",
+      "mode": "orchestration",
+      "owner": "three read-only evaluator workers"
+    },
+    {
+      "scope": "점수 계산·순위·HTML·검증",
+      "mode": "single_task",
+      "owner": "integration coordinator"
+    }
+  ],
+  "selectedPattern": "bounded-readonly-fanout-with-single-writer-fanin",
+  "rejectedPatterns": [
+    {
+      "pattern": "continue-per-image-browser-loop",
+      "reason": "이미 100장 이상 확보되어 추가 수집의 한계효용보다 브라우저 비용이 큼"
+    },
+    {
+      "pattern": "parallel-shared-file-writers",
+      "reason": "공유 작업공간 충돌과 fan-in 정합성 비용이 증가"
+    },
+    {
+      "pattern": "retry-failed-external-provider-workers",
+      "reason": "동일 실패 지문 재시도 금지"
+    }
+  ],
+  "authorityEffect": "none",
+  "instructionAdmission": "사용자 요청 범위 안의 읽기·임시 다운로드·로컬 산출물 작성만 허용",
+  "settlement": "세 워커 완료 후 코디네이터가 인덱스·게이트·점수·출처를 검증"
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "job-application-context-projection/v1",
+  "schema_version": 1,
+  "run_id": "job-application-nextwave-backend-2026-09-14",
+  "projection_status": "report_only",
+  "included": {
+    "application": ["company_name", "role", "language", "deadline", "user_supplied_role_summary"],
+    "applicant": ["public_GitHub_profile_statement", "public_repository_structure", "public_issue_and_commit_evidence"],
+    "writing_strategy": ["responsibility_based_design", "API_and_data_contracts", "data_lifecycle", "verification_and_stability", "user_flow_and_failure_experience"]
+  },
+  "excluded": [
+    "회사 고유 제품·고객·문화에 대한 추측",
+    "공개 코드에서 추정한 개인 기여를 확정 사실로 표현하는 문장",
+    "실행하지 않은 테스트·벤치마크·운영 지표",
+    "내부 작업 경로, 프롬프트, 런타임 핸들, 비공개 메모"
+  ],
+  "preserved_unknowns": [
+    "unknown-exact-contribution",
+    "unknown-runtime-verification",
+    "unknown-redis-runtime-result",
+    "unknown-production-use",
+    "unknown-nextwave-company-context",
+    "unknown-q4-character-limit"
+  ],
+  "public_projection_rules": {
+    "source_namespace_preserved": true,
+    "public_sources_only": true,
+    "non_authoritative": true,
+    "submission_or_provider_effect": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "self-introduction-render-validation/v5",
+  "status": "passed",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "html": "self-introduction-5sets-v5.html",
+  "pdf": "self-introduction-5sets-v5.pdf",
+  "alternatePdf": "self-introduction-expert-report-v5.pdf",
+  "checks": {
+    "htmlSections": {"expected": 13, "observed": 13, "status": "pass"},
+    "pdfPageTreeCount": {"expected": 13, "observed": 13, "status": "pass", "method": "Playwright-generated PDF page tree inspection"},
+    "answerCount": {"expected": 15, "observed": 15, "status": "pass"},
+    "answerLength": {"expected": "300~700 Korean characters", "observed": "15/15 in range", "status": "pass"},
+    "visualOverflow": {"observed": "13/13 section screenshots fit within one A4 section; no clipped card or table detected", "status": "pass"},
+    "sourcePolicy": {"expectedVisibleExternalUrls": 1, "observedExternalUrls": ["https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007"], "status": "pass"},
+    "scoreGate": {"expected": "all >=90", "observed": {"set-1": 95.5, "set-2": 94.63, "set-3": 97.88, "set-4": 98.5, "set-5": 95.5}, "status": "pass"},
+    "userUnderstandingProjection": {"validator": "check_user_understanding_projection.py", "status": "pass"}
+  },
+  "method": [
+    "Playwright rendered the HTML at 1240x1754 and captured each .page section.",
+    "Generated PDF through Playwright with A4 and printBackground enabled.",
+    "Counted the PDF page tree and searched rendered HTML for visible HTTP URLs.",
+    "Ran the user-understanding projection validator and JSON parse checks."
+  ],
+  "limitations": [
+    "Visual review was performed by the current coordinator; independent visual reviewer unavailable.",
+    "PDF visual fit does not validate factual truth or user semantic acknowledgement.",
+    "The official recruitment URL may change after the observation date."
+  ]
+}

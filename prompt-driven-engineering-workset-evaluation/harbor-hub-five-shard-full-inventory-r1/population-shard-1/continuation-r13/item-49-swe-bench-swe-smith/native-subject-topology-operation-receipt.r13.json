@@ -1,0 +1,50 @@
+{
+  "activation": {
+    "roleBindings": [],
+    "status": "not_activated",
+    "turnBindings": []
+  },
+  "authorityEffect": "none",
+  "controller": {
+    "actorRef": "controller:worker:harbor-population-shard-1:r13-controller",
+    "countedAsSubjectOperation": false,
+    "mayAuthorPackets": false
+  },
+  "kind": "subject-topology-operation-receipt/v2",
+  "operation": {
+    "observedEventFamilies": [],
+    "packetDigests": [],
+    "requiredEventFamilies": [
+      "assignment_acknowledgement",
+      "contribution_packet",
+      "handoff_packet",
+      "resource_settlement"
+    ],
+    "roleResults": [],
+    "status": "not_operated"
+  },
+  "packets": [],
+  "receiptId": "receipt:subject-operation-request:population-shard-1:swe-bench/swe-smith:r13",
+  "requestDigest": "sha256:553d63bbe0c5dc3d93ab4f1cdcad5afc218baf6dcd8161847df2faa5777a3c65",
+  "requestRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-49-swe-bench-swe-smith/subject-operation-request.r13.json",
+  "schemaVersion": 2,
+  "settlement": {
+    "evidenceDigest": null,
+    "evidenceRef": null,
+    "state": "held",
+    "unsettledResourceRefs": []
+  },
+  "status": "report_only",
+  "validation": {
+    "decisionBindingsVerified": false,
+    "independentFromActorRefs": ["controller:worker:harbor-population-shard-1:r13-controller"],
+    "packetsVerified": false,
+    "profileApplicationsVerified": false,
+    "requestContentVerified": false,
+    "roleResultsVerified": false,
+    "runtimeAttestationsVerified": false,
+    "validatorRef": "validator:subject-operation-contract"
+  },
+  "workflowExecutionRecordDigest": null,
+  "workflowExecutionRecordRef": null
+}

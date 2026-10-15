@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "self-introduction-render-validation/v3",
+  "status": "passed",
+  "validatedAt": "2026-09-07",
+  "checks": {
+    "jsonArtifactsParse": "passed",
+    "answerCount": 15,
+    "minimumAnswerLength": 374,
+    "maximumAnswerLength": 465,
+    "allAnswersIn300To700Range": true,
+    "directUserValueInEveryQ3": true,
+    "rubricWeightTotal": 100,
+    "rubricArithmetic": "passed: every set score equals sum(weight * rating / 4)",
+    "userUnderstandingProjection": "passed: schema-bound task_user projection; authorityEffect=none",
+    "protectedGateStatuses": "passed: G1-G6 are status=pass for draft-review consumer",
+    "allSetsAtOrAbove90": true,
+    "allSetDispositionInclude": true,
+    "htmlPageSections": 11,
+    "pdfPageCount": 11,
+    "essayTextAndVisibleCountsMatch": true,
+    "pageOverflow": false,
+    "visualInspection": "passed: cover, user-context boundary, project abstraction, rubric, data operations, all five sets, and selection page rendered without visible clipping"
+  },
+  "artifacts": {
+    "pdf": "self-introduction-5sets-v3.pdf",
+    "html": "self-introduction-5sets-v3.html",
+    "content": "self-introduction-content-v3.json",
+    "rubric": "evaluation-rubric-v3.json",
+    "assessmentOperation": "assessment-operation-v3.json",
+    "dataOperations": "evaluation-data-operations-v3.json",
+    "evidenceMap": "evidence-map-v3.json",
+    "claimLedger": "claim-ledger-v3.json",
+    "userUnderstanding": "user-understanding-projection-v3.json",
+    "projectAbstraction": "project-abstraction-map-v3.json",
+    "researchSources": "research-sources-v3.json",
+    "qualityLoop": "quality-loop-v3.json"
+  },
+  "limitations": [
+    "PDF 렌더링과 수치 검증은 글의 구조·산식·표시를 검증할 뿐, 사용자 제공 1인칭 기여나 운영 결과의 사실성을 인증하지 않는다.",
+    "평가자 간 일치도와 제출·면접·채용 결과 연결은 현재 unavailable이다.",
+    "사용자는 제출 전 각 세트의 중심 관점, 실제 변경 범위, 실행한 검증과 성과를 확인해야 한다."
+  ]
+}

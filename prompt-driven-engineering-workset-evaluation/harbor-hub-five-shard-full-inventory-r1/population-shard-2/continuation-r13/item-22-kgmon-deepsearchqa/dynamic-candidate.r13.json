@@ -1,0 +1,47 @@
+{
+  "artifactKind": "construct",
+  "authorityEffect": "none",
+  "automaticPromotion": false,
+  "candidateRole": "bounded_effective_provider_receipt_projection",
+  "capabilityIds": ["effective_provider_receipt"],
+  "compatibleModes": ["single_task"],
+  "componentRefs": [
+    "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+    "artifacts/loop-architecture/components/execution-routing/component.json",
+    "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+  ],
+  "coveredGapIds": ["gap:item-effective-provider-receipt"],
+  "expiryConditionRefs": [
+    "item-terminal-settlement",
+    "operation-revision-successor",
+    "provider-receipt-observed"
+  ],
+  "fallbackRef": "fallback:hold:population-shard-2:kgmon/deepsearchqa:until-effective-provider-receipt",
+  "identityDigest": "sha256:2e818434ddc774b51abdc0a9e09120904f31007d09dc4efb3a11821228045052",
+  "invalidationConditionRefs": [
+    "source-binding-change",
+    "requirement-scope-change",
+    "capability-fingerprint-change"
+  ],
+  "itemId": "kgmon/deepsearchqa",
+  "kind": "dynamic-artifact-candidate/v1",
+  "operationEvidenceContractRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "runPrivate": true,
+  "schemaVersion": 1,
+  "structuralCost": 1,
+  "topologyBearing": false,
+  "validated": true,
+  "validationEvidenceRefs": [
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-22-kgmon-deepsearchqa/artifact-reuse-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-22-kgmon-deepsearchqa/candidate-probe.r13.json"
+  ],
+  "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-2:continuation-r13/item-22-kgmon-deepsearchqa:kgmon/deepsearchqa"
+}

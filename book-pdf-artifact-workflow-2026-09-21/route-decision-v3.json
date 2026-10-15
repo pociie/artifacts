@@ -1,0 +1,66 @@
+{
+  "kind": "sanitized-six-mode-route-decision/v1",
+  "decisionId": "route-decision:book-pdf-artifact-workflow:v3",
+  "requestRelation": "refine_constraints",
+  "historyCoverage": "complete",
+  "sessionBoundary": "cross_session_evidence_with_task_local_writer",
+  "priorPrimaryMode": "orchestration",
+  "outerObligationState": "active_report_only",
+  "priorCompletionEvidence": "superseded_by_change_envelope",
+  "workPurpose": ["research", "design", "implement", "validate", "deliver"],
+  "operationFamily": "outcome_production",
+  "effectIntent": "task_local_mutation",
+  "outputShape": "aggregate",
+  "temporalShape": "iterative",
+  "contributionShape": "multiple_dependent",
+  "executionSurface": "one_active_writer_with_cross_session_evidence",
+  "uncertainty": "medium",
+  "novelty": "adjacent",
+  "risk": "low",
+  "reversibility": "reversible",
+  "validationSeparability": "independent",
+  "contextPartitionability": "high",
+  "capabilityReadiness": "verified_for_current_segment_only",
+  "lifecycleReadiness": "candidate_only",
+  "effectivePrimaryMode": "orchestration",
+  "segmentMode": "loop",
+  "segmentSubject": "agent-subject:visual-pdf-spec-builder",
+  "predecessor": {
+    "decisionRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/route-decision-v2.json",
+    "decisionDigest": "sha256:33bf45ae0f080b5092dd8beafcecf61b8da8586419f84acac3ae8f5490043106",
+    "invalidatedAssumptions": [
+      "agent-role:instruction-governance-editor is a participant",
+      "AGENTS.md is a write target",
+      "instruction-governance-editor owns fan-in"
+    ],
+    "materialChanges": [
+      "The earlier one_owner assumption remains replaced by actual source-session and visual-session contributions.",
+      "The former instruction-governance-editor role is replaced by a read-only session-context-integrator.",
+      "AGENTS.md and canonical loop-architecture contracts/components are now explicitly out of scope.",
+      "Mutable runtime state is separated into .collab/memory while sanitized evidence stays in .collab/artifacts.",
+      "The recipient, not a contributing session, owns any future fan-in acceptance."
+    ]
+  },
+  "collaborationBundle": {
+    "bundleRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/collaboration-bundle-v2.json",
+    "bundleRevision": "book-pdf-collaboration/2",
+    "bundleDigest": "sha256:cb9401da733fbebd267d9fe182219b803f60f517b518e318aebd6cf2d390674a"
+  },
+  "architectureCandidateRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/architecture-selection.json",
+  "rejectedModes": {
+    "communication": "Durable task-local artifacts and source/visual evidence binding are required.",
+    "investigation": "Research alone cannot satisfy the requested mockups, PDF expression and handoff.",
+    "single_task": "The current contribution requires iterative research, generation, rendering and validation.",
+    "loop": "Loop remains the active writer segment mode but not the outer multi-contribution shape.",
+    "session_control": "No activation, assignment, acknowledgement or runtime handle operation is authorized."
+  },
+  "materialChangeSignals": [
+    "The project domain, audience, recipient or source revision changes.",
+    "A candidate role is activated, assigned or acknowledged.",
+    "A participant role, contribution boundary, dependency edge or recipient fan-in changes.",
+    "The task moves from report-only prototype to production PDF acceptance.",
+    "A canonical contract/component mutation becomes necessary."
+  ],
+  "authorityEffect": "none"
+}
+

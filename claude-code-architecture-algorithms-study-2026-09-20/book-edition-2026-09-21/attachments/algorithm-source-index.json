@@ -1,0 +1,530 @@
+[
+  {
+    "id": "A01",
+    "title": "복사본 변환과 반복 stub 생성",
+    "source": {
+      "path": "scripts/build.mjs",
+      "start": 52,
+      "end": 117,
+      "label": "copy와 compile-time 치환"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/scripts/build.mjs#L52-L117",
+    "chapter": "chapter-1"
+  },
+  {
+    "id": "A02",
+    "title": "원본을 직접 고치는 prepare-src",
+    "source": {
+      "path": "scripts/prepare-src.mjs",
+      "start": 36,
+      "end": 76,
+      "label": "in-place patchFile"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/scripts/prepare-src.mjs#L36-L76",
+    "chapter": "chapter-1"
+  },
+  {
+    "id": "A03",
+    "title": "우선순위 기반 CLI route resolution",
+    "source": {
+      "path": "src/entrypoints/cli.tsx",
+      "start": 28,
+      "end": 93,
+      "label": "fast-path dispatcher"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/entrypoints/cli.tsx#L28-L93",
+    "chapter": "chapter-2"
+  },
+  {
+    "id": "A04",
+    "title": "ask()의 one-shot engine adapter",
+    "source": {
+      "path": "src/QueryEngine.ts",
+      "start": 1249,
+      "end": 1295,
+      "label": "one-shot QueryEngine lifecycle"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/QueryEngine.ts#L1249-L1295",
+    "chapter": "chapter-2"
+  },
+  {
+    "id": "A05",
+    "title": "print loop의 turn 간 상태 handoff",
+    "source": {
+      "path": "src/cli/print.ts",
+      "start": 2140,
+      "end": 2188,
+      "label": "headless ask invocation"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/cli/print.ts#L2140-L2188",
+    "chapter": "chapter-2"
+  },
+  {
+    "id": "A06",
+    "title": "state lifetime classification",
+    "source": {
+      "path": "src/QueryEngine.ts",
+      "start": 184,
+      "end": 207,
+      "label": "session fields의 실제 예"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/QueryEngine.ts#L184-L207",
+    "chapter": "chapter-2"
+  },
+  {
+    "id": "A07",
+    "title": "사용자 입력 dispatch",
+    "source": {
+      "path": "src/utils/processUserInput/processUserInput.ts",
+      "start": 515,
+      "end": 588,
+      "label": "bash·slash·normal prompt의 결정적 dispatch"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/processUserInput/processUserInput.ts#L515-L588",
+    "chapter": "chapter-3"
+  },
+  {
+    "id": "A08",
+    "title": "System/User/System context 조립",
+    "source": {
+      "path": "src/utils/queryContext.ts",
+      "start": 44,
+      "end": 87,
+      "label": "prompt part composition"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/queryContext.ts#L44-L87",
+    "chapter": "chapter-3"
+  },
+  {
+    "id": "A09",
+    "title": "API message normalization",
+    "source": {
+      "path": "src/utils/messages.ts",
+      "start": 1989,
+      "end": 2028,
+      "label": "normalizeMessagesForAPI entry"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/messages.ts#L1989-L2028",
+    "chapter": "chapter-3"
+  },
+  {
+    "id": "A10",
+    "title": "queryLoop 상태 전이",
+    "source": {
+      "path": "src/query.ts",
+      "start": 252,
+      "end": 321,
+      "label": "queryLoop state initialization"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L252-L321",
+    "chapter": "chapter-4"
+  },
+  {
+    "id": "A11",
+    "title": "tool-use/tool-result pairing",
+    "source": {
+      "path": "src/services/tools/toolExecution.ts",
+      "start": 337,
+      "end": 410,
+      "label": "unknown tool도 result로 닫기"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/tools/toolExecution.ts#L337-L410",
+    "chapter": "chapter-4"
+  },
+  {
+    "id": "A39",
+    "title": "부분 content block의 typed reconstruction",
+    "source": {
+      "path": "src/services/api/claude.ts",
+      "start": 1940,
+      "end": 2054,
+      "label": "message start와 content block 초기화"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/api/claude.ts#L1940-L2054",
+    "chapter": "chapter-4"
+  },
+  {
+    "id": "A12",
+    "title": "API retry와 backoff",
+    "source": {
+      "path": "src/services/api/withRetry.ts",
+      "start": 170,
+      "end": 220,
+      "label": "retry context와 attempt loop"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/api/withRetry.ts#L170-L220",
+    "chapter": "chapter-4"
+  },
+  {
+    "id": "A13",
+    "title": "Compaction as lossy migration",
+    "source": {
+      "path": "src/services/compact/compact.ts",
+      "start": 596,
+      "end": 742,
+      "label": "boundary·summary message·post-compact 결과 구성"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/compact/compact.ts#L596-L742",
+    "chapter": "chapter-9"
+  },
+  {
+    "id": "A14",
+    "title": "Message normalization lookup 구축",
+    "source": {
+      "path": "src/utils/messages.ts",
+      "start": 1170,
+      "end": 1215,
+      "label": "message lookup construction"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/messages.ts#L1170-L1215",
+    "chapter": "chapter-3"
+  },
+  {
+    "id": "A15",
+    "title": "Generic factory의 default 합성",
+    "source": {
+      "path": "src/Tool.ts",
+      "start": 721,
+      "end": 791,
+      "label": "ToolDef/BuiltTool/buildTool"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/Tool.ts#L721-L791",
+    "chapter": "chapter-5"
+  },
+  {
+    "id": "A16",
+    "title": "입력별 concurrency batch partition",
+    "source": {
+      "path": "src/services/tools/toolOrchestration.ts",
+      "start": 84,
+      "end": 116,
+      "label": "partitionToolCalls"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/tools/toolOrchestration.ts#L84-L116",
+    "chapter": "chapter-5"
+  },
+  {
+    "id": "A17",
+    "title": "병렬 결과의 deterministic context merge",
+    "source": {
+      "path": "src/services/tools/toolOrchestration.ts",
+      "start": 19,
+      "end": 81,
+      "label": "runTools batch execution"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/tools/toolOrchestration.ts#L19-L81",
+    "chapter": "chapter-5"
+  },
+  {
+    "id": "A18",
+    "title": "공통 permission-and-call pipeline",
+    "source": {
+      "path": "src/services/tools/toolExecution.ts",
+      "start": 599,
+      "end": 720,
+      "label": "checkPermissionsAndCallTool 앞부분"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/tools/toolExecution.ts#L599-L720",
+    "chapter": "chapter-5"
+  },
+  {
+    "id": "A19",
+    "title": "Rule source aggregation과 behavior precedence",
+    "source": {
+      "path": "src/utils/permissions/permissions.ts",
+      "start": 109,
+      "end": 131,
+      "label": "source-ordered allow rules"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/permissions/permissions.ts#L109-L131",
+    "chapter": "chapter-6"
+  },
+  {
+    "id": "A20",
+    "title": "Tool-level deny/ask short circuit",
+    "source": {
+      "path": "src/utils/permissions/permissions.ts",
+      "start": 1070,
+      "end": 1120,
+      "label": "tool permission decision path"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/permissions/permissions.ts#L1070-L1120",
+    "chapter": "chapter-6"
+  },
+  {
+    "id": "A21",
+    "title": "Compound command decision 합성",
+    "source": {
+      "path": "src/tools/BashTool/bashPermissions.ts",
+      "start": 2430,
+      "end": 2485,
+      "label": "subcommand result aggregation"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/tools/BashTool/bashPermissions.ts#L2430-L2485",
+    "chapter": "chapter-6"
+  },
+  {
+    "id": "A42",
+    "title": "Hook fan-out과 permission decision 합성",
+    "source": {
+      "path": "src/utils/hooks.ts",
+      "start": 1952,
+      "end": 2075,
+      "label": "trust gate와 matching hook 준비"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/hooks.ts#L1952-L2075",
+    "chapter": "chapter-6"
+  },
+  {
+    "id": "A43",
+    "title": "설정과 policy를 sandbox runtime capability로 투영",
+    "source": {
+      "path": "src/utils/sandbox/sandbox-adapter.ts",
+      "start": 172,
+      "end": 260,
+      "label": "sandbox runtime config projection"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/sandbox/sandbox-adapter.ts#L172-L260",
+    "chapter": "chapter-6"
+  },
+  {
+    "id": "A22",
+    "title": "Read가 edit precondition을 만든다",
+    "source": {
+      "path": "src/tools/FileReadTool/FileReadTool.ts",
+      "start": 1020,
+      "end": 1040,
+      "label": "range read와 readFileState observation 기록"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/tools/FileReadTool/FileReadTool.ts#L1020-L1040",
+    "chapter": "chapter-7"
+  },
+  {
+    "id": "A23",
+    "title": "FileEdit optimistic validation과 commit window",
+    "source": {
+      "path": "src/tools/FileEditTool/FileEditTool.ts",
+      "start": 427,
+      "end": 491,
+      "label": "await를 앞당긴 뒤 stale check→patch→동기 write"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/tools/FileEditTool/FileEditTool.ts#L427-L491",
+    "chapter": "chapter-7"
+  },
+  {
+    "id": "A24",
+    "title": "Tool contract characterization",
+    "source": {
+      "path": "src/Tool.ts",
+      "start": 743,
+      "end": 791,
+      "label": "factory가 보장하는 default"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/Tool.ts#L743-L791",
+    "chapter": "chapter-7"
+  },
+  {
+    "id": "A25",
+    "title": "Leaf-to-root conversation chain reconstruction",
+    "source": {
+      "path": "src/utils/sessionStorage.ts",
+      "start": 2069,
+      "end": 2117,
+      "label": "buildConversationChain"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/sessionStorage.ts#L2069-L2117",
+    "chapter": "chapter-8"
+  },
+  {
+    "id": "A26",
+    "title": "병렬 tool result orphan recovery",
+    "source": {
+      "path": "src/utils/sessionStorage.ts",
+      "start": 2118,
+      "end": 2205,
+      "label": "recoverOrphanedParallelToolResults"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/sessionStorage.ts#L2118-L2205",
+    "chapter": "chapter-8"
+  },
+  {
+    "id": "A27",
+    "title": "Resume consistency telemetry",
+    "source": {
+      "path": "src/utils/sessionStorage.ts",
+      "start": 2208,
+      "end": 2243,
+      "label": "checkResumeConsistency"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/sessionStorage.ts#L2208-L2243",
+    "chapter": "chapter-8"
+  },
+  {
+    "id": "A28",
+    "title": "Cooperative cancellation propagation",
+    "source": {
+      "path": "src/services/tools/toolExecution.ts",
+      "start": 413,
+      "end": 468,
+      "label": "tool execution abort gate"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/tools/toolExecution.ts#L413-L468",
+    "chapter": "chapter-8"
+  },
+  {
+    "id": "A29",
+    "title": "Post-compaction context restoration",
+    "source": {
+      "path": "src/services/compact/compact.ts",
+      "start": 1399,
+      "end": 1448,
+      "label": "recent file restoration"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/compact/compact.ts#L1399-L1448",
+    "chapter": "chapter-8"
+  },
+  {
+    "id": "A40",
+    "title": "Session memory extraction trigger",
+    "source": {
+      "path": "src/services/SessionMemory/sessionMemory.ts",
+      "start": 134,
+      "end": 179,
+      "label": "memory extraction threshold decision"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/SessionMemory/sessionMemory.ts#L134-L179",
+    "chapter": "chapter-9"
+  },
+  {
+    "id": "A41",
+    "title": "Capability가 축소된 memory extraction agent",
+    "source": {
+      "path": "src/services/SessionMemory/sessionMemory.ts",
+      "start": 272,
+      "end": 337,
+      "label": "sequential extraction과 forked agent"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/SessionMemory/sessionMemory.ts#L272-L337",
+    "chapter": "chapter-9"
+  },
+  {
+    "id": "A30",
+    "title": "Child agent runtime spawn과 event projection",
+    "source": {
+      "path": "src/tools/AgentTool/runAgent.ts",
+      "start": 500,
+      "end": 770,
+      "label": "child controller·context·transcript·query 합류"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/tools/AgentTool/runAgent.ts#L500-L770",
+    "chapter": "chapter-10"
+  },
+  {
+    "id": "A31",
+    "title": "Incomplete child tool call filtering",
+    "source": {
+      "path": "src/tools/AgentTool/runAgent.ts",
+      "start": 866,
+      "end": 905,
+      "label": "filterIncompleteToolCalls"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/tools/AgentTool/runAgent.ts#L866-L905",
+    "chapter": "chapter-10"
+  },
+  {
+    "id": "A32",
+    "title": "MCP server name normalization",
+    "source": {
+      "path": "src/services/mcp/normalization.ts",
+      "start": 1,
+      "end": 23,
+      "label": "pure normalization function"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/mcp/normalization.ts#L1-L23",
+    "chapter": "chapter-11"
+  },
+  {
+    "id": "A33",
+    "title": "Background plugin installation queue",
+    "source": {
+      "path": "src/services/plugins/PluginInstallationManager.ts",
+      "start": 60,
+      "end": 120,
+      "label": "diff→pending state→reconcile progress"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/plugins/PluginInstallationManager.ts#L60-L120",
+    "chapter": "chapter-11"
+  },
+  {
+    "id": "A44",
+    "title": "WebSocket close code별 bounded reconnect",
+    "source": {
+      "path": "src/remote/SessionsWebSocket.ts",
+      "start": 208,
+      "end": 300,
+      "label": "message validation과 reconnect state machine"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/remote/SessionsWebSocket.ts#L208-L300",
+    "chapter": "chapter-11"
+  },
+  {
+    "id": "A34",
+    "title": "Settings precedence resolution",
+    "source": {
+      "path": "src/utils/settings/constants.ts",
+      "start": 3,
+      "end": 22,
+      "label": "ordered setting sources"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/settings/constants.ts#L3-L22",
+    "chapter": "chapter-12"
+  },
+  {
+    "id": "A35",
+    "title": "Remote managed settings checksum과 polling",
+    "source": {
+      "path": "src/services/remoteManagedSettings/index.ts",
+      "start": 105,
+      "end": 155,
+      "label": "checksum과 eligibility"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/remoteManagedSettings/index.ts#L105-L155",
+    "chapter": "chapter-12"
+  },
+  {
+    "id": "A36",
+    "title": "Idempotent migration",
+    "source": {
+      "path": "src/migrations/migrateLegacyOpusToCurrent.ts",
+      "start": 1,
+      "end": 57,
+      "label": "model setting migration"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/migrations/migrateLegacyOpusToCurrent.ts#L1-L57",
+    "chapter": "chapter-12"
+  },
+  {
+    "id": "A37",
+    "title": "Analytics fan-out과 sink isolation",
+    "source": {
+      "path": "src/services/analytics/index.ts",
+      "start": 72,
+      "end": 165,
+      "label": "analytics sink registry와 logEvent"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/analytics/index.ts#L72-L165",
+    "chapter": "chapter-13"
+  },
+  {
+    "id": "A38",
+    "title": "Batched exporter flush",
+    "source": {
+      "path": "src/services/analytics/datadog.ts",
+      "start": 85,
+      "end": 130,
+      "label": "buffer flush scheduling"
+    },
+    "url": "https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/analytics/datadog.ts#L85-L130",
+    "chapter": "chapter-13"
+  }
+]

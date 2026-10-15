@@ -1,0 +1,91 @@
+{
+  "kind": "work-execution-binding/v1",
+  "schemaVersion": 1,
+  "bindingId": "binding:job-application-report-expression-template-improvement:r1",
+  "workRef": "work:job-application-report-expression-template-improvement",
+  "workRevision": "r1",
+  "instruction": {
+    "instructionRef": ".collab/artifacts/job-application-report-expression-template-improvement-2026-09-14/reusable-artifact-operation-request.json",
+    "revision": "r1",
+    "requestDigest": "sha256:4601f22cf0730008e17e2853ff73a0924ccf787067f4356a3e6ba4ad160f1bb0",
+    "objectiveRef": "objective:improve-job-application-expression-and-editorial-template",
+    "origin": {
+      "channel": "chat",
+      "sessionRef": "session:opaque:current",
+      "turnRef": "turn:opaque:expression-editorial-r1",
+      "requestingAgentRef": "agent-session:opaque:requester",
+      "callbackRouteRef": "callback:opaque:requester"
+    },
+    "rawPromptStored": false
+  },
+  "composition": {
+    "loopRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+    "loopRevision": "v1.6-expression-editorial-quality",
+    "agentRef": "artifacts/agents/requirement-realization/agents/artifact-builder.yaml",
+    "origin": "reusable",
+    "dynamicBlueprintRefs": [],
+    "coverageDecisionRef": ".collab/artifacts/job-application-report-expression-template-improvement-2026-09-14/route-decision.json"
+  },
+  "execution": {
+    "assignmentRef": "assignment:job-application-report-expression-template-improvement",
+    "executionSessionRef": "session:opaque:current",
+    "worktreeRef": "worktree:opaque:current",
+    "branchRef": "refs/heads/main",
+    "baseCommit": "1bf67e8ca1b9806dce130796bc772c1d9a01a4e2",
+    "mutableStateRef": ".collab/memory/job-application-report-expression-template-improvement/r1",
+    "runRef": null,
+    "taskRef": null,
+    "dispatchRef": null,
+    "coordinatorMode": "coordination_only",
+    "orchestratorCommitBoundary": "none"
+  },
+  "delivery": {
+    "topologyMode": "top_level_task_root",
+    "deliveryOwnerRef": "agent:current-worktree-owner",
+    "externalDelivery": true,
+    "deliveryKind": "ordinary",
+    "targetRepositoryRef": "repository:pociie/collab-mono",
+    "targetBranchRef": "refs/heads/integration",
+    "pullRequestRef": null,
+    "parentDeliveryRef": null,
+    "status": "not_ready",
+    "deliveryReceiptRef": null
+  },
+  "notificationPolicy": {
+    "deliverOn": ["hitl_required", "review_ready", "completed", "stopped"],
+    "suppress": ["started", "progress", "heartbeat", "retry_within_budget", "validation_running", "ci_pending", "worker_done_unaccepted"],
+    "fallbackRouteRef": "callback:opaque:requester",
+    "dedupeKeyRef": "dedupe:job-application-report-expression-editorial:r1"
+  },
+  "lifecycle": {
+    "state": "completed",
+    "decisionPacketRef": null,
+    "completionReceiptRef": "receipt:job-application-report-expression-template-improvement:validation-summary",
+    "stopReasonRef": null,
+    "resumeConditionRef": null
+  },
+  "privacy": {
+    "sanitized": true,
+    "containsRawPrompt": false,
+    "containsTranscript": false,
+    "containsPrivateReasoning": false,
+    "containsCredentials": false,
+    "containsReplayableApproval": false
+  },
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "evidenceRefs": [
+    "AGENTS.md",
+    ".collab/artifacts/job-application-report-expression-template-improvement-2026-09-14/route-decision.json",
+    ".collab/artifacts/job-application-report-expression-template-improvement-2026-09-14/reusable-artifact-operation-request.json"
+    ,
+    ".collab/artifacts/job-application-report-expression-template-improvement-2026-09-14/comparative-audit.json",
+    ".collab/artifacts/job-application-report-expression-template-improvement-2026-09-14/validation-summary.json",
+    "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+    ".collab/artifacts/job-application-2026-10-finebridge-digital-service-planner-fresh/finebridge-digital-service-planner-report.pdf"
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "bindingDigest": "sha256:38884e15c62c28682e03b98eb9f8ca8cde36b570b76f904960b291534e9e2ed1"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "activation": {
+    "roleBindings": [],
+    "status": "not_activated",
+    "turnBindings": []
+  },
+  "authorityEffect": "none",
+  "controller": {
+    "actorRef": "controller:worker:harbor-population-shard-1:r13-controller",
+    "countedAsSubjectOperation": false,
+    "mayAuthorPackets": false
+  },
+  "kind": "subject-topology-operation-receipt/v2",
+  "operation": {
+    "observedEventFamilies": [],
+    "packetDigests": [],
+    "requiredEventFamilies": [
+      "assignment_acknowledgement",
+      "contribution_packet",
+      "handoff_packet",
+      "resource_settlement"
+    ],
+    "roleResults": [],
+    "status": "not_operated"
+  },
+  "packets": [],
+  "receiptId": "receipt:subject-operation-request:population-shard-1:orinlabs/horizon-1-public:r13",
+  "requestDigest": "sha256:313e06316a2c169c5967df75ba16d6a0fdcebfef3abc538b9108b1098aea71f6",
+  "requestRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-43-orinlabs-horizon-1-public/subject-operation-request.r13.json",
+  "schemaVersion": 2,
+  "settlement": {
+    "evidenceDigest": null,
+    "evidenceRef": null,
+    "state": "held",
+    "unsettledResourceRefs": []
+  },
+  "status": "report_only",
+  "validation": {
+    "decisionBindingsVerified": false,
+    "independentFromActorRefs": ["controller:worker:harbor-population-shard-1:r13-controller"],
+    "packetsVerified": false,
+    "profileApplicationsVerified": false,
+    "requestContentVerified": false,
+    "roleResultsVerified": false,
+    "runtimeAttestationsVerified": false,
+    "validatorRef": "validator:subject-operation-contract"
+  },
+  "workflowExecutionRecordDigest": null,
+  "workflowExecutionRecordRef": null
+}

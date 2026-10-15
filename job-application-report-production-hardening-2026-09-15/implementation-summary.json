@@ -1,0 +1,66 @@
+{
+  "kind": "reusable-artifact-operation-summary/v1",
+  "schema_version": 1,
+  "operation_request_ref": ".collab/artifacts/job-application-report-production-hardening-2026-09-15/operation-request.json",
+  "route": "artifact_enrichment",
+  "native_owner": "artifacts/agent-loop/document/job-application-report-production",
+  "outcome": "The native job-application report Loop now rejects incomplete requests before drafting, enforces reader-facing candidate composition against the frozen result, and exposes a final PDF only through one aggregate fail-closed settlement receipt.",
+  "responsibility_decisions": {
+    "loop_architecture_component_change": "not_required",
+    "reason": "Request readiness, candidate report composition, and final PDF settlement are lifecycle responsibilities of this single document-production Loop. No separate cross-domain control decision, reusable port contract, or independently governed lifecycle was evidenced.",
+    "new_adjacent_artifact": "not_created",
+    "reason_for_no_extraction": "The new schemas, validators, examples, policy, and operating guidance are cohesive parts of the existing Loop and have no proven consumer outside its outcome boundary."
+  },
+  "material_changes": [
+    "A complete request preflight now validates protected rubric, source provenance, question planning, applicant-owned voice evidence, publication policy, and the mandatory five-set PDF profile before drafting.",
+    "Protected runtime-profile rules are shared by profile and full validation so a reduced request cannot pass one entrypoint while failing another.",
+    "Report composition now proves exact answer, strategy, and criterion-comment parity with the frozen result and requires descriptive candidate titles and candidate-specific expert review.",
+    "A typed run bundle binds every required runtime record and file, and one aggregate checker re-runs cross-record, composition, render, text-layer, and final-PDF checks before settlement.",
+    "Individual checker success and handwritten validation summaries no longer qualify a run as complete."
+  ],
+  "validation": {
+    "unit_and_contract_tests": {
+      "status": "pass",
+      "tests": 56,
+      "failures": 0
+    },
+    "strict_loop_package": {
+      "status": "pass",
+      "issues": 0,
+      "warnings": 0
+    },
+    "operation_skill": {
+      "status": "pass"
+    },
+    "repository_fitness": {
+      "status": "fail_outside_native_validation",
+      "command": "npm run fitness",
+      "findings": [
+        "Existing job-application reference and knowledge pages fail current repository knowledge-document requirements.",
+        "Repository-wide artifact portfolio, semantic graph, and reusable-artifact inventory snapshots are stale relative to the current dirty worktree."
+      ],
+      "disposition": "not_modified",
+      "reason": "These documents and fan-in generated indexes are outside the exact native owner and include unrelated user changes. Repository instructions reserve fan-in index updates for an integration owner."
+    },
+    "target_quality_runtime": {
+      "status": "pass",
+      "settlement_receipt_ref": ".collab/artifacts/job-application-report-production-hardening-2026-09-15/target-quality-settlement-receipt.json",
+      "final_pdf_ref": ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15/report.pdf",
+      "observed_pages": 15
+    },
+    "incomplete_runtime": {
+      "status": "rejected_as_expected",
+      "settlement_receipt_ref": ".collab/artifacts/job-application-report-production-hardening-2026-09-15/incomplete-settlement-receipt.json",
+      "final_user_output": null
+    }
+  },
+  "limitations": [
+    "The aggregate checker proves deterministic contract and artifact consistency; applicant confirmation and a material final-use decision remain human-owned.",
+    "The report composer remains adaptable rather than canonical. Its visible output is constrained through the profile and composition checks so company- and question-specific layouts can vary without weakening settlement.",
+    "No prior report was regenerated or rewritten by this hardening operation."
+  ],
+  "optional_follow_up": {
+    "status": "unexecuted",
+    "condition": "Consider extracting a shared publication-settlement component only after another document domain demonstrates the same control decision, ports, and lifecycle independently of job-application semantics."
+  }
+}

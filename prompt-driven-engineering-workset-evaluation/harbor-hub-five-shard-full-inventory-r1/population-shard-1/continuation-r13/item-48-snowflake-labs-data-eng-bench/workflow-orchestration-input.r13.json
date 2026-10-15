@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "47d8a85a7de1b247fea61071783886f50510d3d56d8f968687fc4890d6f2c47d",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-48-snowflake-labs-data-eng-bench/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-48-snowflake-labs-data-eng-bench/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "c4651460565cfc160faa4d933249ce4ce76c56c68b8e69f03492ec1dabd331f2",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "e60afbc3bec344561b41f18bc5caf511e432d8e7998c0a5b70fe01a65b0da1b1",
+      "topologySelectionDecisionSha256": "c5a6a2c140275dc322f717e6d8174c57ee304a414571c5aac35bc34e64b619ed"
+    },
+    {
+      "coordinationPlanDecisionSha256": "47d8a85a7de1b247fea61071783886f50510d3d56d8f968687fc4890d6f2c47d",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-48-snowflake-labs-data-eng-bench/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-48-snowflake-labs-data-eng-bench/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "c4651460565cfc160faa4d933249ce4ce76c56c68b8e69f03492ec1dabd331f2",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "e60afbc3bec344561b41f18bc5caf511e432d8e7998c0a5b70fe01a65b0da1b1",
+      "topologySelectionDecisionSha256": "c5a6a2c140275dc322f717e6d8174c57ee304a414571c5aac35bc34e64b619ed"
+    },
+    {
+      "coordinationPlanDecisionSha256": "47d8a85a7de1b247fea61071783886f50510d3d56d8f968687fc4890d6f2c47d",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-48-snowflake-labs-data-eng-bench/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-48-snowflake-labs-data-eng-bench/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "c4651460565cfc160faa4d933249ce4ce76c56c68b8e69f03492ec1dabd331f2",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "e60afbc3bec344561b41f18bc5caf511e432d8e7998c0a5b70fe01a65b0da1b1",
+      "topologySelectionDecisionSha256": "c5a6a2c140275dc322f717e6d8174c57ee304a414571c5aac35bc34e64b619ed"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

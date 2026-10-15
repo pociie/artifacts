@@ -1,0 +1,82 @@
+{
+  "affectedRoles": ["coordinator", "population-curator", "provider-curator", "validator"],
+  "amendmentId": "dispatch-policy-amendment:harbor-hub-five-shard-full-inventory-r1:population-shard-1:r13",
+  "appliedAtBoundary": "post-settlement_pre-next-claim",
+  "appliedBeforeClaimItemId": "abundant/swe-marathon",
+  "authorityEffect": "none",
+  "baselineExecutionStructureFingerprint": "sha256:8a6eb423ff4041663d6bd5aeabce6c5212dd78b1ec9fd10f0abe1d11a1972d17",
+  "changedExecutionStructureFingerprint": "sha256:68b036776ca0823fc0235c2083caeb0f4bd8e1b53676e85818b9c29d0e99034c",
+  "changedFingerprint": true,
+  "continueOnlyOnChangedItemOrCapabilityFingerprint": true,
+  "controller": {
+    "architectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+    "architectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "privateReasoningAccess": false,
+    "roleId": "coordinator"
+  },
+  "controllerProviderEvidenceNotSubjectEvidence": true,
+  "digest": "sha256:e7a11b38a79345c2e6312c1b56157a93177fab73507cefcb5e48acf07684bd16",
+  "dispatchPolicy": {
+    "claimPredicate": "same frozen assignment, no terminal disposition, no active claim, and changed item or capability fingerprint",
+    "continueNextPlanOrderItem": true,
+    "laneStopOnItemHold": false,
+    "maxInterventions": 1,
+    "qualificationFailureDisposition": "unique_held_terminal_receipt",
+    "sourceScope": "run_private",
+    "unchangedFailureScope": "same_work_item_and_capability"
+  },
+  "independentValidation": {
+    "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/dispatch-policy-amendment-independent-validation.r13.json",
+    "selfDigest": "sha256:45c7695ac622a036d7cdfe7304b340cf8349dd68e50eecf3a365f2afc4e14e0c",
+    "sha256": "9de0bd8145a202f6be056a8c276a35b5ba05f1d8a3d074bddb73152015b404fa",
+    "status": "passed"
+  },
+  "itemHoldDoesNotStopLane": true,
+  "kind": "dispatch-policy-amendment/v1",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "qualificationFailureDisposition": "unique_held_terminal_receipt",
+  "qualificationFailureIsItemScoped": true,
+  "roleAcknowledgements": [
+    {
+      "acknowledgementId": "ack:dispatch-policy-amendment:harbor-hub-five-shard-full-inventory-r1:population-shard-1:r13:coordinator",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/dispatch-policy-role-ack-coordinator.r13.json",
+      "roleId": "coordinator",
+      "selfDigest": "sha256:24edf8ff4c4c1fb2fe2d5083bb84911eec0057e7435c745b1626905faaab6cbe",
+      "sha256": "06080349b508e003904f8c3a4d80143eb7fef24b222487533aad676286d50e03"
+    },
+    {
+      "acknowledgementId": "ack:dispatch-policy-amendment:harbor-hub-five-shard-full-inventory-r1:population-shard-1:r13:population-curator",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/dispatch-policy-role-ack-population-curator.r13.json",
+      "roleId": "population-curator",
+      "selfDigest": "sha256:8eb2a55592e653edf20e00664c853a7dcc7994987069c9d9cf5b989cf759555c",
+      "sha256": "81d74a91a98b680fcf4f6d878cd097151521b08b7a0b9c1f936bc2be946ebf7c"
+    },
+    {
+      "acknowledgementId": "ack:dispatch-policy-amendment:harbor-hub-five-shard-full-inventory-r1:population-shard-1:r13:provider-curator",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/dispatch-policy-role-ack-provider-curator.r13.json",
+      "roleId": "provider-curator",
+      "selfDigest": "sha256:069a0c1f38c91a479398b7878eaec2c020ce46d8d548ef792c50d4407459f607",
+      "sha256": "2153bf605cf2f59ade7efa69f59945497fece731d3f2f597c618678cdfdf0618"
+    },
+    {
+      "acknowledgementId": "ack:dispatch-policy-amendment:harbor-hub-five-shard-full-inventory-r1:population-shard-1:r13:validator",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/dispatch-policy-role-ack-validator.r13.json",
+      "roleId": "validator",
+      "selfDigest": "sha256:9914983537ddbd259d63825c8675cc1b73d17014088c9d916a013eaee1a1e556",
+      "sha256": "6103e91b5c3e47983f89402bd04811633796f3f418a2e8df33b58ad72de3fe59"
+    }
+  ],
+  "schemaVersion": 1,
+  "shardId": "population-shard-1",
+  "sourceScope": "run_private",
+  "status": "report_only",
+  "trackedReusableSourceMutation": false,
+  "unchangedFailureScope": "same_work_item_and_capability"
+}

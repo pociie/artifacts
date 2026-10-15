@@ -1,0 +1,22 @@
+{
+  "kind": "six-mode-route-input/v1",
+  "requestRevision": "coremotion-smart-factory-five-set-pdf.1",
+  "requestRelation": "correct_prior_outcome",
+  "objective": "기존 단일 Markdown 자기소개서 결과를 5세트의 평가 포함 검색 가능한 PDF 보고서로 보완하고 재생성한다.",
+  "historyCoverage": "same-session-prior-result-available",
+  "priorOutcome": {
+    "mode": "loop",
+    "artifact": "single-candidate-markdown",
+    "gap": "requested-five-set-pdf-scope-was-not-bound"
+  },
+  "structuralFacts": {
+    "contributionShape": "one_owner",
+    "temporalShape": "multi_phase",
+    "effect": "local_write",
+    "outputShape": "validated_candidate",
+    "boundedIteration": 1,
+    "stopCondition": "profile-checker-and-publication-validation-pass"
+  },
+  "executionSurface": "local_coordinator_only",
+  "authorityEffect": "none"
+}

@@ -1,0 +1,676 @@
+{
+  "kind": "workset-terminal-reward-assessment/v1",
+  "schemaVersion": 1,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "assessmentId": "assessment:harbor-hub-five-shard:population-shard-5:compilebench-next-r7",
+  "assessmentRevision": 3,
+  "workset": {
+    "taskRef": "workset:harbor:quesma-compilebench-ordinal-6",
+    "taskRevision": "harbor-hub-five-shard-full-inventory-source-r7:quesma-compilebench:006",
+    "split": "development",
+    "environmentRef": "environment:harbor:quesma-compilebench-ordinal-6"
+  },
+  "bindings": {
+    "simulationEvidence": {
+      "ref": "population-shard-5/r7/simulation-evidence.r7.json",
+      "digest": "sha256:0545f34c540ed65a57229e494f4245263b0117c159e8dbe2c6b4476a5447d26d",
+      "settled": true
+    },
+    "evaluationReport": {
+      "ref": "population-shard-5/r7/evaluation-compilebench-next.r7.json",
+      "digest": "sha256:845a86617bc37814a31fbf0d276e5f8b2129a946f79eba745da7f2fb69f066fd",
+      "simulationEvidenceDigest": "sha256:0545f34c540ed65a57229e494f4245263b0117c159e8dbe2c6b4476a5447d26d",
+      "final": true
+    },
+    "profile": {
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/profiles/workset-terminal-reward.profile.json",
+      "digest": "sha256:ca1e8d48eff7e065cf4cf1f2e4be5ec86778f97509df137e2de6308bdc0632bf"
+    },
+    "rubric": {
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md",
+      "digest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18"
+    },
+    "evaluator": {
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/algorithms/workset-terminal-reward-reduction/implementation.py",
+      "digest": "sha256:4cc3cd8d17db20c0a73449d107170c1db81aeff160bf10968643e1d688c03a62"
+    }
+  },
+  "roles": {
+    "subjectAgentRef": "role:subject-agent:compilebench-next",
+    "oracleOwnerRef": "role:oracle-owner:compilebench-next",
+    "evaluatorRef": "role:evaluator:compilebench-next",
+    "independentValidatorRef": "role:independent-validator:compilebench-next",
+    "rewardReducerRef": "role:reward-reducer:compilebench-next"
+  },
+  "freeze": {
+    "frozenBeforeExecution": true,
+    "taskDigest": "sha256:7152f4ac62217810140ce2126e03a4b851716ceb13eaff9c5f323241f08ce323",
+    "environmentDigest": "sha256:7e0fe3beb2099321c2141d4441d87726b2f9d118d426d2892602c774ae5a3b18",
+    "rubricDigest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18",
+    "activationDigest": "sha256:144c72ea133ec316a7bce6b296cdace3e18bfc4f302a204ac207b78760d994b8",
+    "thresholdsDigest": "sha256:9b1fb3a1a1728ab64f03f118ebe9599ee3369f4bbd67c3651c8019bea6cc7d9e"
+  },
+  "artifactLifecycle": {
+    "requestedOperationIds": ["discover", "reuse", "create"],
+    "operations": [
+      {
+        "operationId": "discover",
+        "state": "operated",
+        "evidenceRefs": ["population-shard-5/inventory-freeze.json"],
+        "limitations": []
+      },
+      {
+        "operationId": "reuse",
+        "state": "operated",
+        "evidenceRefs": ["population-shard-5/r7/route-resolutions.r7.json"],
+        "limitations": []
+      },
+      {
+        "operationId": "create",
+        "state": "operated",
+        "evidenceRefs": ["population-shard-5/candidates/native-subject-receipt-gap-r1.json"],
+        "limitations": []
+      },
+      {
+        "operationId": "update",
+        "state": "not_applicable",
+        "evidenceRefs": [],
+        "limitations": ["operation_not_requested"]
+      },
+      {
+        "operationId": "split",
+        "state": "not_applicable",
+        "evidenceRefs": [],
+        "limitations": ["operation_not_requested"]
+      },
+      {
+        "operationId": "merge",
+        "state": "not_applicable",
+        "evidenceRefs": [],
+        "limitations": ["operation_not_requested"]
+      }
+    ],
+    "dynamicComposition": {
+      "required": true,
+      "disposition": "unavailable",
+      "residualGapRef": "population-shard-5/candidates/native-subject-receipt-gap-r1.json",
+      "reusableArtifactRefs": [
+        "artifacts/agents/evidence-governance/architectures/persistent-engineering-workset-lanes.hierarchical-delegation.json"
+      ],
+      "dynamicArtifactRefs": ["population-shard-5/candidates/native-subject-receipt-gap-r1.json"],
+      "componentRefs": [
+        "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json"
+      ],
+      "operationEvidenceRefs": ["population-shard-5/r7/route-resolutions.r7.json"],
+      "outcomeEvidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"],
+      "validityWindowRef": "population-shard-5/cursor.json",
+      "expiryConditionRefs": ["expiry:source-revision-change", "expiry:operation-close"],
+      "fallbackRef": "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+      "automaticPromotion": false
+    }
+  },
+  "criterionObservations": [
+    {
+      "criterionId": "gate.binding.final_evaluation",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["population-shard-5/r7/evaluation-compilebench-next.r7.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.boundary.authority_privacy",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": ["population-shard-5/r7/simulation-evidence.r7.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.lifecycle.terminal_settlement",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.lifecycle.population_disposition_integrity",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "population-shard-5/r7/population-settlement-accounting-decision.final.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.context.requirement_scope_lifetime_integrity",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": ["population-shard-5/r7/context-reconciliation-binding.r7.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.routing.compound_obligation_coverage",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["population-shard-5/r7/route-resolutions.r7.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.validation.reward_hacking",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["population-shard-5/r7/evaluation-compilebench-next.r7.json"],
+      "limitations": ["independent_anti_hacking_gate_not_separately_executed"]
+    },
+    {
+      "criterionId": "gate.outcome.required_validation",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": ["population-shard-5/r7/evaluation-compilebench-next.r7.json"],
+      "limitations": ["benchmark_verifier_failed_and_no_independent_recovery"]
+    },
+    {
+      "criterionId": "gate.artifact.lifecycle_coverage",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["population-shard-5/r7/route-resolutions.r7.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.artifact.reuse_before_dynamic",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "population-shard-5/r7/route-resolutions.r7.json",
+        "population-shard-5/candidates/native-subject-receipt-gap-r1.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.artifact.dynamic_residual_gap",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": ["population-shard-5/candidates/native-subject-receipt-gap-r1.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.artifact.dynamic_binding_integrity",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": ["population-shard-5/candidates/native-subject-receipt-gap-r1.json"],
+      "limitations": ["dynamic_composition_not_operated"]
+    },
+    {
+      "criterionId": "reward.requirement_understanding",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["population-shard-5/r7/context-reconciliation-binding.r7.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.operability",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": ["population-shard-5/r7/provider-outcome-receipts.r7.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.routing",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["population-shard-5/r7/route-resolutions.r7.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.reasoning_control",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": ["population-shard-5/r7/provider-outcome-receipts.r7.json"],
+      "limitations": ["effective_effort_not_exposed"]
+    },
+    {
+      "criterionId": "reward.context_adaptation",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": ["population-shard-5/r7/context-reconciliation-binding.r7.json"],
+      "limitations": ["no_independent_context_adaptation_assessment"]
+    },
+    {
+      "criterionId": "reward.workflow",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "graph",
+      "evidenceRefs": ["population-shard-5/r7/route-resolutions.r7.json"],
+      "limitations": ["native_workflow_receipt_unavailable"]
+    },
+    {
+      "criterionId": "reward.agent_architecture",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "graph",
+      "evidenceRefs": ["population-shard-5/r7/route-resolutions.r7.json"],
+      "limitations": ["architecture_only_candidate_report_only"]
+    },
+    {
+      "criterionId": "reward.agent_swarm",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "graph",
+      "evidenceRefs": ["population-shard-5/r7/route-resolutions.r7.json"],
+      "limitations": ["swarm_not_required_for_one_owner"]
+    },
+    {
+      "criterionId": "reward.artifact.discover",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["population-shard-5/inventory-freeze.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.artifact.reuse",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "graph",
+      "evidenceRefs": ["population-shard-5/r7/route-resolutions.r7.json"],
+      "limitations": ["no_reusable_owner_selected"]
+    },
+    {
+      "criterionId": "reward.artifact.create",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": ["population-shard-5/candidates/native-subject-receipt-gap-r1.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.artifact.update",
+      "state": "not_applicable",
+      "score": null,
+      "evaluatorKind": "graph",
+      "evidenceRefs": [],
+      "limitations": ["operation_not_requested"]
+    },
+    {
+      "criterionId": "reward.artifact.split",
+      "state": "not_applicable",
+      "score": null,
+      "evaluatorKind": "graph",
+      "evidenceRefs": [],
+      "limitations": ["operation_not_requested"]
+    },
+    {
+      "criterionId": "reward.artifact.merge",
+      "state": "not_applicable",
+      "score": null,
+      "evaluatorKind": "graph",
+      "evidenceRefs": [],
+      "limitations": ["operation_not_requested"]
+    },
+    {
+      "criterionId": "reward.artifact.dynamic_composition",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "graph",
+      "evidenceRefs": ["population-shard-5/candidates/native-subject-receipt-gap-r1.json"],
+      "limitations": ["dynamic_composition_not_operated"]
+    },
+    {
+      "criterionId": "reward.loop_architecture_quality",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["population-shard-5/r7/route-resolutions.r7.json"],
+      "limitations": ["native_subject_topology_not_operated"]
+    },
+    {
+      "criterionId": "reward.evidence_quality",
+      "state": "supported",
+      "score": 1,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["population-shard-5/r7/simulation-evidence.r7.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.outcome_quality",
+      "state": "failed",
+      "score": 0,
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": ["population-shard-5/r7/evaluation-compilebench-next.r7.json"],
+      "limitations": ["required_local_file_download_test_failed"]
+    },
+    {
+      "criterionId": "reward.efficiency",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["population-shard-5/r7/provider-outcome-receipts.r7.json"],
+      "limitations": ["no_efficiency_baseline_bound"]
+    }
+  ],
+  "dimensionThresholds": [
+    {
+      "dimensionId": "requirement_understanding",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "operability",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "routing",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "reasoning_control",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "context_adaptation",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "workflow",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "agent_architecture",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "agent_swarm",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "artifact_discovery",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "artifact_reuse",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "artifact_creation",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "artifact_update",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "artifact_split",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "artifact_merge",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "dynamic_artifact_composition",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "loop_architecture_quality",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "evidence_quality",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "outcome_quality",
+      "minimumReward": 0.8,
+      "weight": 1
+    },
+    {
+      "dimensionId": "efficiency",
+      "minimumReward": 0.8,
+      "weight": 1
+    }
+  ],
+  "calibration": {
+    "state": "not_required",
+    "humanLabelPopulationRef": null,
+    "metrics": {
+      "falseAllowRate": null,
+      "falseBlockRate": null,
+      "abstentionRate": null,
+      "chanceCorrectedAgreement": null
+    },
+    "ownerThresholds": {
+      "maxFalseAllowRate": 0.1,
+      "maxFalseBlockRate": 0.15,
+      "maxAbstentionRate": 0.1,
+      "minChanceCorrectedAgreement": 0.7
+    },
+    "evidenceRefs": []
+  },
+  "settlement": {
+    "state": "complete",
+    "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+  },
+  "declaredDecision": {
+    "useClass": "workset_terminal",
+    "disposition": "require_context",
+    "primaryReward": 0,
+    "diagnosticReward": null,
+    "dimensionRewards": [
+      {
+        "dimensionId": "requirement_understanding",
+        "state": "scored",
+        "reward": 1
+      },
+      {
+        "dimensionId": "operability",
+        "state": "scored",
+        "reward": 1
+      },
+      {
+        "dimensionId": "routing",
+        "state": "scored",
+        "reward": 1
+      },
+      {
+        "dimensionId": "reasoning_control",
+        "state": "unavailable",
+        "reward": null
+      },
+      {
+        "dimensionId": "context_adaptation",
+        "state": "unavailable",
+        "reward": null
+      },
+      {
+        "dimensionId": "workflow",
+        "state": "unavailable",
+        "reward": null
+      },
+      {
+        "dimensionId": "agent_architecture",
+        "state": "unavailable",
+        "reward": null
+      },
+      {
+        "dimensionId": "agent_swarm",
+        "state": "scored",
+        "reward": 1
+      },
+      {
+        "dimensionId": "artifact_discovery",
+        "state": "scored",
+        "reward": 1
+      },
+      {
+        "dimensionId": "artifact_reuse",
+        "state": "scored",
+        "reward": 1
+      },
+      {
+        "dimensionId": "artifact_creation",
+        "state": "scored",
+        "reward": 1
+      },
+      {
+        "dimensionId": "artifact_update",
+        "state": "not_applicable",
+        "reward": null
+      },
+      {
+        "dimensionId": "artifact_split",
+        "state": "not_applicable",
+        "reward": null
+      },
+      {
+        "dimensionId": "artifact_merge",
+        "state": "not_applicable",
+        "reward": null
+      },
+      {
+        "dimensionId": "dynamic_artifact_composition",
+        "state": "unavailable",
+        "reward": null
+      },
+      {
+        "dimensionId": "loop_architecture_quality",
+        "state": "unavailable",
+        "reward": null
+      },
+      {
+        "dimensionId": "evidence_quality",
+        "state": "scored",
+        "reward": 1
+      },
+      {
+        "dimensionId": "outcome_quality",
+        "state": "scored",
+        "reward": 0
+      },
+      {
+        "dimensionId": "efficiency",
+        "state": "unavailable",
+        "reward": null
+      }
+    ],
+    "reasonCodes": [
+      "dynamic_composition_unresolved",
+      "protected_criterion_unresolved",
+      "qualifying_criterion_unresolved",
+      "required_active_dimension_unavailable",
+      "qualifying_criterion_failed",
+      "required_active_dimension_below_threshold"
+    ],
+    "findings": [
+      {
+        "criterionId": "gate.validation.reward_hacking",
+        "findingType": "protected_gate_failure",
+        "ownerRoute": "EVALUATOR_UNCERTAINTY",
+        "severity": "critical"
+      },
+      {
+        "criterionId": "gate.outcome.required_validation",
+        "findingType": "protected_gate_failure",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "critical"
+      },
+      {
+        "criterionId": "gate.artifact.dynamic_binding_integrity",
+        "findingType": "protected_gate_failure",
+        "ownerRoute": "ARTIFACT_COMPOSITION_GAP",
+        "severity": "critical"
+      },
+      {
+        "criterionId": "reward.reasoning_control",
+        "findingType": "evidence_gap",
+        "ownerRoute": "REASONING_POLICY_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.context_adaptation",
+        "findingType": "evidence_gap",
+        "ownerRoute": "CONTEXT_ADAPTATION_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.workflow",
+        "findingType": "evidence_gap",
+        "ownerRoute": "WORKFLOW_REPRESENTATION_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.agent_architecture",
+        "findingType": "evidence_gap",
+        "ownerRoute": "AGENT_ARCHITECTURE_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.dynamic_composition",
+        "findingType": "evidence_gap",
+        "ownerRoute": "DYNAMIC_ARTIFACT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.loop_architecture_quality",
+        "findingType": "evidence_gap",
+        "ownerRoute": "COMPONENT_COHESION_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.outcome_quality",
+        "findingType": "quality_gap",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "major"
+      }
+    ],
+    "improvementTargetCriterionIds": [
+      "gate.validation.reward_hacking",
+      "gate.outcome.required_validation",
+      "gate.artifact.dynamic_binding_integrity",
+      "reward.reasoning_control",
+      "reward.context_adaptation",
+      "reward.workflow",
+      "reward.agent_architecture",
+      "reward.artifact.dynamic_composition",
+      "reward.loop_architecture_quality",
+      "reward.outcome_quality"
+    ],
+    "promotionEligible": false
+  },
+  "integrity": {
+    "algorithm": "canonical-json-sha256/v1",
+    "digest": "sha256:db6cfe3b824f658dc7835f20993049c64f15ecf6834bf4393ea6656bb4e3a837"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "kind": "sanitized-six-mode-route-decision/v1",
+  "decisionId": "route-decision:book-pdf-artifact-workflow:v3",
+  "requestRelation": "refine_constraints",
+  "historyCoverage": "complete",
+  "sessionBoundary": "cross_session",
+  "priorPrimaryMode": "orchestration",
+  "outerObligationState": "active",
+  "priorCompletionEvidence": "missing",
+  "workPurpose": [
+    "research",
+    "design",
+    "validate",
+    "deliver"
+  ],
+  "operationFamily": "outcome_production",
+  "effectIntent": "local_mutation",
+  "outputShape": "aggregate",
+  "temporalShape": "iterative",
+  "contributionShape": "multiple_dependent",
+  "executionSurface": "multiple_workers",
+  "uncertainty": "medium",
+  "novelty": "adjacent",
+  "risk": "medium",
+  "reversibility": "reversible",
+  "validationSeparability": "independent",
+  "contextPartitionability": "high",
+  "capabilityReadiness": "verified",
+  "lifecycleReadiness": "degraded",
+  "effectivePrimaryMode": "orchestration",
+  "segmentModes": [
+    {
+      "mode": "investigation",
+      "subject": "agent-subject:session-context-integrator",
+      "scope": "execution-session inspection, background-knowledge and claim packets, and Loop Architecture binding"
+    },
+    {
+      "mode": "investigation",
+      "subject": "agent-role:source-analysis-read-only-reviewer",
+      "scope": "algorithms, project operations, and modular structure evidence"
+    },
+    {
+      "mode": "loop",
+      "subject": "agent-subject:visual-pdf-spec-builder",
+      "scope": "settled source and visual specification packet"
+    },
+    {
+      "mode": "single_task",
+      "subject": "agent-subject:source-analysis-coordinator",
+      "scope": "sanitized packet admission and candidate bundle composition"
+    }
+  ],
+  "predecessor": {
+    "decisionRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/route-decision-v2.json",
+    "decisionDigest": "sha256:33bf45ae0f080b5092dd8beafcecf61b8da8586419f84acac3ae8f5490043106",
+    "invalidatedAssumptions": [
+      "agent-role:instruction-governance-editor remains a valid contributor",
+      "AGENTS.md remains an allowed task-local write boundary",
+      "the Orca source-analysis checkout is the durable analysis workspace",
+      "the visual artifact count is stable before contribution settlement"
+    ],
+    "materialChange": "The requester removed task-local AGENTS.md instructions, reassigned context integration to a read-only role, selected .collab memory and artifact ownership, and added source-analysis contributions to the fan-in."
+  },
+  "ownership": {
+    "mutableAssignmentAckState": ".collab/memory/**",
+    "sanitizedRunBundleEvidence": ".collab/artifacts/**",
+    "reusableContractsComponents": "artifacts/loop-architecture/**"
+  },
+  "rejectedModes": {
+    "communication": "Durable task-local evidence and a revised aggregate are required.",
+    "investigation": "Investigation is a segment but cannot compose several dependent contribution packets.",
+    "single_task": "Single-task is the coordinator composition segment but not the multi-contribution primary mode.",
+    "loop": "Loop remains the visual segment but does not represent cross-session fan-in.",
+    "session_control": "Known sessions were steered only as a bounded segment; session mutation is not the requested final output."
+  },
+  "holds": [
+    "source-analysis reviewer packets are not all settled",
+    "the source and visual packet is not settled",
+    "the session-context packet is not settled",
+    "candidate composition grants no activation or acceptance"
+  ],
+  "materialChangeSignals": [
+    "objective, recipient, source revision, or acceptance boundary changes",
+    "a participant, dependency, write boundary, or contribution packet changes",
+    "the visual mockup inventory settles at a different digest or count",
+    "a registered Agent profile is selected or a dynamic-blueprint gap is proven",
+    "canonical framework modification, Agent activation, or PDF acceptance is requested"
+  ],
+  "authorityEffect": "none"
+}

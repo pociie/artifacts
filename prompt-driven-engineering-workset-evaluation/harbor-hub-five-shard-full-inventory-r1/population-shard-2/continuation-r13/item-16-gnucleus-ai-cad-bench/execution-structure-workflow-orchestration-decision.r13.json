@@ -1,0 +1,16 @@
+{
+  "activeNodeIds": [],
+  "authorityEffect": "none",
+  "heldNodes": [],
+  "kind": "workflow-orchestration-decision/v1",
+  "readyNodeIds": ["subject-operation"],
+  "status": "running",
+  "waitingNodes": [
+    {
+      "nodeId": "operation-observation",
+      "reasonCodes": ["predecessor_not_settled"]
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

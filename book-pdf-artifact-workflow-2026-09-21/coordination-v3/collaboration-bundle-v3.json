@@ -1,0 +1,187 @@
+{
+  "kind": "sanitized-collaboration-bundle/v3",
+  "bundleId": "collaboration-bundle:book-pdf-artifact-workflow",
+  "bundleRevision": "book-pdf-collaboration/3",
+  "status": "candidate_with_holds",
+  "predecessors": [
+    {
+      "ref": "../collaboration-bundle.json",
+      "digest": "sha256:b5a274bc5d75587cbe08991a84203ead30cbd63296d7a6c49c72c8222c6171e5",
+      "disposition": "superseded_for_v3",
+      "reason": "The instruction-governance-editor role, AGENTS.md write boundary, and editor fan-in ownership are stale."
+    },
+    {
+      "ref": "../collaboration-bundle-v2.json",
+      "digest": "sha256:cb9401da733fbebd267d9fe182219b803f60f517b518e318aebd6cf2d390674a",
+      "disposition": "superseded_for_v3",
+      "reason": "The visual-session candidate removes stale editor semantics but predates the three source-analysis reviewer contributions and the coordinator-owned v3 boundary."
+    }
+  ],
+  "routeBinding": {
+    "ref": "route-decision.json",
+    "digest": "sha256:239861144aa10b8e73b8beae8bc87d10bbfef64b125c4664157b62ff36a3149a",
+    "effectivePrimaryMode": "orchestration"
+  },
+  "objective": "Coordinate read-only source analysis and session context with the visual agent's source and PDF specification evidence, while producing only a sanitized task-local candidate and preserving every authority and settlement boundary.",
+  "participants": [
+    {
+      "roleRef": "agent-role:source-analysis-coordinator",
+      "mode": "single_writer_candidate_integrator",
+      "contributionScope": [
+        "admit settled sanitized packets",
+        "preserve conflicts, unknowns, and holds",
+        "compose and validate coordination-v3 candidate files"
+      ],
+      "writeBoundary": [
+        ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/**"
+      ],
+      "nonAuthority": [
+        "canonical framework modification",
+        "Agent or profile activation",
+        "PDF acceptance or publication",
+        "self-validation as independent review"
+      ]
+    },
+    {
+      "roleRef": "agent-role:session-context-integrator",
+      "mode": "read_only",
+      "contributionScope": [
+        "execution-session inspection",
+        "background-knowledge and claim packet",
+        "Loop Architecture binding references"
+      ],
+      "writeBoundary": [],
+      "packetRef": "session-context-contribution-packet.json",
+      "packetDigest": "sha256:cffa117a0046a7c672ba80dbdf1489e9b5220dfabe9b58586e19cf9d49cba102",
+      "claimAdmissionState": "pending_independent_validation"
+    },
+    {
+      "roleRef": "agent-role:source-analysis-read-only-reviewer",
+      "mode": "three_read_only_contributions",
+      "contributionScope": [
+        "decisive algorithms and system-writing representation",
+        "project operations and evidence governance",
+        "modularity, topology, and incremental boundary candidates"
+      ],
+      "writeBoundary": [],
+      "packetRef": "source-analysis-contribution-packet.json",
+      "packetDigest": "sha256:dc832ff8ae4870d755ebb57197cce2f80bc1f2309c9d0892d9ecca1347edbcda",
+      "claimAdmissionState": "pending_independent_validation"
+    },
+    {
+      "roleRef": "agent-role:visual-pdf-spec-builder",
+      "mode": "task_local_visual_writer",
+      "contributionScope": [
+        "PDF expression specification",
+        "thirteen raster direction boards and visual manifest",
+        "source-to-claim packet",
+        "nine-page expression prototype and contact sheet",
+        "candidate recipient handoff and author-side preliminary validation status"
+      ],
+      "writeBoundary": [
+        ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-expression-spec.md",
+        ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/mockups/**",
+        ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/mockup-manifest.json",
+        ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/source-to-claim-packet.json",
+        ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/prototype/**",
+        ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/route-decision-v3.json",
+        ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/recipient-handoff-candidate.json",
+        ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/validation-candidate.json",
+        ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/settlement-status.json"
+      ],
+      "coordinatorAccess": "read_only",
+      "packetState": "candidate_handoff_received_pending_recipient_acknowledgement_and_independent_validation"
+    }
+  ],
+  "visualCandidateRefs": [
+    {
+      "ref": "../route-decision-v3.json",
+      "digest": "sha256:9c9fa247e9e90c1af5885bb204cd26e3111ef50ef8743e00ae2d1e0a7930db41",
+      "state": "visual_owned_candidate_binding_predecessor_bundle_v2"
+    },
+    {
+      "ref": "../recipient-handoff-candidate.json",
+      "digest": "sha256:09ad38464b3bab8431f5eed0dad1e0648fcfcea538f3ab83dd5082c4a6c2ee15",
+      "state": "candidate_pending_recipient_review_and_independent_validation"
+    },
+    {
+      "ref": "../validation-candidate.json",
+      "digest": "sha256:ac61701e4e0fc59a6a1f4001f669dd7817b74823e288ec5baf489aa2fc24697c",
+      "state": "author_side_preliminary_not_independent"
+    },
+    {
+      "ref": "../settlement-status.json",
+      "digest": "sha256:aa23aa1783b6620368f0ee765548d4075dbfbd3a4404cdb0a1f7f79a76767b81",
+      "state": "pending_record_not_settlement_evidence"
+    }
+  ],
+  "dependencyEdges": [
+    {
+      "from": "agent-role:source-analysis-read-only-reviewer",
+      "to": "agent-role:source-analysis-coordinator",
+      "deliverable": "sanitized-source-analysis-contribution-packet/v1",
+      "state": "received_pending_independent_validation"
+    },
+    {
+      "from": "agent-role:session-context-integrator",
+      "to": "agent-role:source-analysis-coordinator",
+      "deliverable": "sanitized-session-context-contribution-packet/v1",
+      "state": "received_pending_independent_validation"
+    },
+    {
+      "from": "agent-role:visual-pdf-spec-builder",
+      "to": "agent-role:source-analysis-coordinator",
+      "deliverable": "sanitized-recipient-handoff-candidate/v1",
+      "ref": "../recipient-handoff-candidate.json",
+      "digest": "sha256:09ad38464b3bab8431f5eed0dad1e0648fcfcea538f3ab83dd5082c4a6c2ee15",
+      "state": "candidate_received_pending_recipient_acknowledgement_and_independent_validation"
+    },
+    {
+      "from": "agent-role:source-analysis-coordinator",
+      "to": "recipient:pdf-authorship-owner",
+      "deliverable": "independently-validated-collaboration-candidate/v3",
+      "state": "blocked_on_packets_and_independent_validation"
+    }
+  ],
+  "fanInOwner": "agent-role:source-analysis-coordinator",
+  "ownershipPolicy": {
+    "mutableAssignmentAckState": ".collab/memory/**",
+    "sanitizedRunBundleEvidence": ".collab/artifacts/**",
+    "reusableContractsComponents": "artifacts/loop-architecture/**",
+    "agentsMd": "read_only_out_of_scope",
+    "loopArchitecture": "read_only_out_of_scope"
+  },
+  "reusableCoverageRef": {
+    "ref": "reusable-coverage-report.json",
+    "digest": "sha256:fcd85a67c18d0eaf4ef0ce7914dc6cc15d4521b5c47e3e5bf1c1023ee3e5d78b",
+    "disposition": "report_only_candidate"
+  },
+  "nonActivatedRoleCandidates": [
+    "technical editorial writer",
+    "PDF information and visual designer",
+    "independent fact and visual validator"
+  ],
+  "futureRoleAdmission": "Only after settled source and visual packets may a separate owner qualify registered profile reuse or prove a residual gap for a dynamic blueprint. This bundle performs neither activation nor acceptance.",
+  "holds": [
+    "visual candidate handoff arrived, but recipient acknowledgement and an independently validated contribution packet remain pending",
+    "independent validation of source-analysis claims pending",
+    "independent fact and visual validation pending",
+    "README exact output names remain unmaterialized; similarly named candidate records do not satisfy those references",
+    "architecture-selection now resolves to a visual-owned route-decision-v3, but that route and the candidate handoff still bind predecessor bundle v2 rather than coordinator bundle v3",
+    "registered-profile reuse versus dynamic-blueprint disposition remains unmade"
+  ],
+  "sharedOutputContract": [
+    "predecessors are superseded by explicit disposition and are never silently rewritten",
+    "existing and pending artifacts remain distinct",
+    "source-observed, external background, bounded inference, repository-authored claim, and unknown remain distinguishable",
+    "visual-agent-owned files remain read-only to the coordinator",
+    "raw prompts, private reasoning, secrets, session handles, and mutable assignments are absent",
+    "activation, acceptance, publication, promotion, and settlement remain not performed"
+  ],
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "promotion": "not_performed",
+  "settlement": "not_claimed",
+  "authorityEffect": "none"
+}

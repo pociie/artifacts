@@ -1,0 +1,69 @@
+{
+  "kind": "job-application-answer-projection-validation/v1",
+  "status": "passed",
+  "authority_effect": "none",
+  "source_result_ref": "result.json",
+  "source_result_digest": "5dd23954f4c6eccc9add687246b8fe7813a93c2b0d811ae31d991b88c0ab3860",
+  "review_report_refs": [
+    "finebridge-digital-service-planner-report.html",
+    "finebridge-digital-service-planner-report.txt"
+  ],
+  "application_answer_artifacts": [
+    {
+      "path": "application-answer-projection.json",
+      "media_type": "application/json",
+      "digest": "f51f6df4450fea0367214140aabb6b2dd610e54e0cd640094027853c0197617b"
+    }
+  ],
+  "projection_scope": {
+    "candidate_ids": [
+      "candidate-a",
+      "candidate-b",
+      "candidate-c",
+      "candidate-d",
+      "candidate-e"
+    ],
+    "question_count_per_candidate": 4,
+    "included": [
+      "allowed application metadata",
+      "question text",
+      "candidate labeling",
+      "answer bodies"
+    ],
+    "excluded": [
+      "workflow mechanics",
+      "scores",
+      "validation receipts",
+      "interview preparation",
+      "confirmation requests",
+      "process commentary"
+    ]
+  },
+  "checks": [
+    {
+      "id": "answer-body-parity",
+      "status": "passed",
+      "evidence": "five candidate sets and twenty answer bodies are copied exactly from the frozen result."
+    },
+    {
+      "id": "character-count-parity",
+      "status": "passed",
+      "evidence": "all twenty projected character counts use Unicode code points and match the result."
+    },
+    {
+      "id": "workflow-metadata-exclusion",
+      "status": "passed",
+      "evidence": "the projection contains only allowed application metadata, question text, candidate labels, and answer bodies."
+    },
+    {
+      "id": "publication-safety",
+      "status": "passed",
+      "evidence": "the projection is runtime support and contains no absolute local path or external media dependency."
+    }
+  ],
+  "authority_limits": [
+    "does not accept the application",
+    "does not submit the application",
+    "does not infer a hiring outcome"
+  ]
+}

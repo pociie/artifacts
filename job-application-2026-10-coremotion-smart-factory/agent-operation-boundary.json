@@ -1,0 +1,45 @@
+{
+  "kind": "reusable-artifact-agent-operation-boundary/v1",
+  "revision": "2026-09-14.1",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "subjectRef": "agent-subject:coremotion-smart-factory-report-builder",
+  "nativeOwnerRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+  "requestedOutcome": "코어모션 인더스트리 스마트팩토리 시스템 엔지니어 지원을 위한 4개 문항 자기소개서 초안과 검토 가능한 보고서를 생산한다.",
+  "successEvidence": [
+    "모든 문항 답안과 글자 수",
+    "공고·지원자·프로젝트 근거 연결",
+    "1회 수정 기록",
+    "결정 지원 보고서와 검증 결과"
+  ],
+  "nonGoals": [
+    "회사 고유 사실의 추정",
+    "실제 현장 성과의 발명",
+    "지원서 제출 또는 채용 판단",
+    "재사용 아티팩트 소스 변경"
+  ],
+  "boundedDiscoverySurface": {
+    "runtimeInput": "사용자 제공 지원 정보·공고 핵심 내용·프로필·경험 요약",
+    "nativeOwner": "artifacts/agent-loop/document/job-application-report-production",
+    "maximumNewReusableUnit": 0,
+    "outputRoot": ".collab/artifacts/job-application-2026-10-coremotion-smart-factory"
+  },
+  "validation": [
+    "요청/결과 스키마와 결정론적 체크러",
+    "문항별 글자 수",
+    "공개 텍스트 정책",
+    "루프 패키지 검사"
+  ],
+  "materialChangeSignals": [
+    "문항·글자 수 변경",
+    "회사·직무 근거 변경",
+    "지원자 기여 범위 변경",
+    "외부 효과 또는 제출 요청 추가"
+  ],
+  "stopConditions": [
+    "필수 근거가 제공되지 않음",
+    "동일한 검증 실패 반복",
+    "회사 고유 사실을 확인할 수 없음",
+    "범위가 제출·채용 판단으로 확대됨"
+  ]
+}

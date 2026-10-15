@@ -1,0 +1,183 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>실습·리뷰·스터디 가이드</title><style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; color: #17212b; background: #dce2e8; font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+body { counter-reset: sheet; }
+.sheet { --accent: #3476bd; width: 210mm; min-height: 297mm; margin: 0 auto; padding: 17mm 17mm 15mm; background: #fbfaf7; break-after: page; position: relative; overflow: hidden; counter-increment: sheet; }
+.sheet::after { content: ""; position: absolute; inset: auto 0 0; height: 5mm; background: linear-gradient(90deg, var(--accent), #182735 78%); }
+.sheet-foot { position: absolute; bottom: 7mm; left: 17mm; right: 17mm; display: flex; justify-content: space-between; font-size: 7.5pt; color: #6a747f; letter-spacing: .03em; }
+.cover { color: #f8fafb; background: radial-gradient(circle at 82% 22%, color-mix(in srgb, var(--accent) 72%, transparent), transparent 29%), linear-gradient(145deg, #101a24 0 56%, #1b2b38 56% 100%); display: flex; flex-direction: column; }
+.cover::after { height: 9mm; background: var(--accent); }
+.cover-top { display:flex; justify-content:space-between; font-size:9pt; letter-spacing:.14em; color:#bcd0de; border-bottom:1px solid #496071; padding-bottom:5mm; }
+.cover-mark { width:34mm; height:34mm; margin-top:30mm; border-radius:50%; border:2px solid var(--accent); display:grid; place-items:center; font:700 30pt ui-monospace, monospace; color:var(--accent); }
+.cover h1 { font-size:31pt; line-height:1.12; margin:12mm 0 5mm; max-width:165mm; letter-spacing:-.035em; }
+.cover > p { font-size:13pt; line-height:1.55; color:#d5e0e7; max-width:150mm; }
+.cover-grid { margin-top:auto; display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+.cover-grid div { padding:4mm; border-top:1px solid #526979; background:#ffffff08; }
+.cover-grid small, .cover-grid b { display:block; }.cover-grid small{color:#98acba;font-size:8pt;margin-bottom:2mm}.cover-grid b{font-size:10pt}
+.cover-warning { margin:8mm 0 8mm; padding:4mm; border-left:3px solid var(--accent); background:#ffffff0c; font-size:8.6pt; line-height:1.5; }
+.cover .sheet-foot{color:#aebec8;bottom:11mm}.section-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #c8d0d5;padding-bottom:3mm;color:var(--accent);font-weight:800;font-size:8pt;letter-spacing:.12em;text-transform:uppercase}.section-head em{font-style:normal;font:700 18pt ui-monospace,monospace;color:#aab3ba}.sheet h2{font-size:23pt;line-height:1.18;letter-spacing:-.035em;margin:7mm 0 3mm;max-width:170mm}.lede{font-size:11pt;line-height:1.62;color:#465462;margin:0 0 6mm;max-width:168mm}.section-body{font-size:9.2pt;line-height:1.58}.section-body p{margin:0 0 3mm}.section-body h3{font-size:11.5pt;margin:4mm 0 2mm;color:#223242}.section-body ul,.section-body ol{margin:1.5mm 0 4mm;padding-left:5mm}.section-body li{margin:1.2mm 0}.eyebrow{display:block;font-size:7pt;letter-spacing:.12em;color:var(--accent);font-weight:800;text-transform:uppercase}.cards{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin:4mm 0}.card{padding:4mm;border:1px solid #d1d7da;border-radius:3mm;background:#fff}.card h3{margin:1mm 0 2mm}.card p{font-size:8.5pt}.flow{display:flex;align-items:stretch;gap:2mm;margin:5mm 0}.node{flex:1;border:1px solid #bec8cf;background:#fff;border-radius:2mm;padding:3mm;text-align:center;min-width:0}.node b,.node small{display:block}.node b{font-size:9pt;color:#263845}.node small{font-size:7.2pt;color:#6c7881;margin-top:1mm}.arrow{align-self:center;color:var(--accent);font-size:14pt;font-weight:900}table{width:100%;border-collapse:collapse;margin:4mm 0;font-size:7.8pt;line-height:1.4;table-layout:fixed}th{background:#253846;color:#fff;text-align:left;padding:2.2mm;vertical-align:top}td{border:1px solid #d3d8dc;padding:2.2mm;vertical-align:top;background:#fff}tr:nth-child(even) td{background:#f2f4f4}.callout{margin:4mm 0;padding:3.5mm 4mm;border-left:3px solid var(--accent);background:#eef4f5}.callout strong{display:block;color:#253846;margin-bottom:1mm}.callout.warn{border-color:#d07a2b;background:#fff4e9}.callout.risk{border-color:#b44444;background:#fff0ef}.callout.good{border-color:#2a8a6a;background:#edf8f3}.code{margin:4mm 0;border-radius:2mm;overflow:hidden;background:#111b24;color:#e9f2f6}.code figcaption{padding:2mm 3mm;background:#203341;color:#9fc8d7;font-size:7.5pt;letter-spacing:.06em}.code pre{margin:0;padding:4mm;font:7.8pt/1.55 "SFMono-Regular",Consolas,monospace;white-space:pre-wrap}.refs{margin-top:5mm;padding-top:3mm;border-top:1px solid #ccd3d7;font-size:7.5pt;color:#596773;display:flex;gap:2mm;flex-wrap:wrap}.refs b{color:#263845}.refs span:not(:last-child)::after{content:" ·"}.refs a,.section-body a{color:#18627b;text-decoration:none;border-bottom:1px solid #9db7c2}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin:4mm 0}.metric{padding:3mm;border-top:3px solid var(--accent);background:#fff;border-radius:1mm;box-shadow:0 1px 5px #0011}.metric b,.metric span,.metric small{display:block}.metric b{font:800 17pt ui-monospace,monospace;color:#253845}.metric span{font-weight:700;margin-top:1mm}.metric small{font-size:7pt;color:#74808a;margin-top:1mm}.exercise{margin:4mm 0;padding:4mm;border:1px dashed #8aa4b3;border-radius:2mm;background:#f4f8f9}.exercise b{color:#1f596e}.exercise small{display:block;color:#61727c}.checklist{columns:2;column-gap:8mm;margin:4mm 0}.checklist div{break-inside:avoid;padding:1.3mm 0;border-bottom:1px dotted #c9d0d3}.bar{display:grid;grid-template-columns:34mm 1fr 17mm;gap:2mm;align-items:center;margin:1.7mm 0}.bar i{height:3mm;background:linear-gradient(90deg,var(--accent),#8bb7c8);border-radius:3mm;display:block}.bar span:last-child{text-align:right;font:7pt ui-monospace,monospace}.two{display:grid;grid-template-columns:1fr 1fr;gap:5mm}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}.tag{display:inline-block;padding:.5mm 1.5mm;border-radius:10mm;background:#dfecee;color:#275367;font-size:7pt;font-weight:700;margin:.4mm}.quote{font-size:14pt;line-height:1.45;border-left:5px solid var(--accent);padding:4mm 0 4mm 6mm;margin:6mm 0;color:#263946;font-weight:700}.muted{color:#697680}.small{font-size:7.8pt}.page-title{font-size:14pt;font-weight:800}.timeline{border-left:2px solid var(--accent);padding-left:5mm;margin:4mm}.timeline div{position:relative;margin:0 0 4mm}.timeline div::before{content:"";position:absolute;width:2.5mm;height:2.5mm;background:var(--accent);border-radius:50%;left:-6.4mm;top:1.5mm}.timeline b{display:block}.timeline small{color:#63717b}.matrix td:first-child,.matrix th:first-child{font-weight:800}.dense{font-size:7.4pt}
+</style></head>
+  <body><section class="cover sheet" style="--accent:#3476bd">
+    <div class="cover-top"><span>CLAUDE CODE SOURCE STUDY</span><span>VOL. 06</span></div>
+    <div class="cover-mark">LAB</div>
+    <h1>실습·리뷰·스터디 가이드</h1><p>읽기에서 재구현·검증·설계 전이로</p>
+    <div class="cover-grid">
+      <div><small>분석 대상</small><b>v2.1.88 reconstructed source</b></div>
+      <div><small>고정 리비전</small><b>2ca5ddabfed5</b></div>
+      <div><small>독자</small><b>스터디 운영자·참여자</b></div>
+      <div><small>사용 방식</small><b>워크북 · 평가</b></div>
+    </div>
+    <div class="cover-warning">교육·연구용 파생 분석입니다. Anthropic의 공식 소스·공식 아키텍처 문서가 아닙니다.</div>
+    <div class="sheet-foot"><span>Study Pack / 2026-09-20</span><span>한국어</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>HOW TO USE</span><em>01</em></div>
+    <h2>정답집이 아니라 evidence workbook</h2><p class="lede">각 실습은 목표, bounded file set, 조작, 기대 evidence, 중단 조건으로 구성한다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>구성</th><th>작성 내용</th><th>나쁜 예</th></tr></thead>
+  <tbody><tr><td>질문</td><td>한 문장으로 falsifiable</td><td>“전체를 이해한다”</td></tr><tr><td>범위</td><td>파일 3–8개 + exact lines</td><td>src 전체</td></tr><tr><td>조작</td><td>mock/event/input 변화</td><td>그냥 읽기</td></tr><tr><td>관찰</td><td>trace/test/frame/graph</td><td>느낌</td></tr><tr><td>결론</td><td>사실/추정/한계 분리</td><td>영상과 같았다</td></tr><tr><td>중단</td><td>시간·범위·안전 조건</td><td>끝날 때까지</td></tr></tbody></table><aside class="callout warn"><strong>저작권 원칙</strong><div>실습 저장소에 원 소스의 큰 덩어리를 복사하지 않는다. 작은 독립 toy implementation과 line reference를 사용한다.</div></aside></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 0</span><em>02</em></div>
+    <h2>프로비넌스와 신뢰도 카드</h2><p class="lede">코드를 읽기 전에 분석 대상을 정확히 고정한다.</p>
+    <div class="section-body"><ol><li>remote URL, commit, commit date, version 표기를 기록한다.</li><li>LICENSE 파일 유무와 README disclaimer를 분리한다.</li><li>QUICKSTART의 build limitation과 missing module 주장을 등급 B로 기록한다.</li><li>공식 Claude Code repository/docs와 이 reconstructed source를 구분한다.</li><li>분석에서 실행하지 않을 script와 이유를 적는다.</li></ol>
+  <div class="exercise"><b>실습 · source card</b><p>한 페이지 provenance card를 만든다.</p><small>완료 증거: revision·scope·limitations·legal note·sources</small></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 1</span><em>03</em></div>
+    <h2>코드 분포와 hotspot 재현</h2><p class="lede">라인 수 대신 구조 신호를 계산한다.</p>
+    <div class="section-body"><ol><li>TS compiler API로 .ts/.tsx를 parse한다.</li><li>directory별 files/lines, syntax feature count를 만든다.</li><li>상대 import를 resolve해 fan-in/out과 SCC를 계산한다.</li><li>REPL.tsx, Tool.ts, query.ts를 graph에 표시한다.</li><li>metric의 한계—barrel, dynamic import, missing module—를 적는다.</li></ol>
+  <div class="exercise"><b>실습 · metric audit</b><p>이 묶음의 source-metrics.json과 자신의 결과를 비교한다.</p><small>완료 증거: 차이 원인 세 가지</small></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 2</span><em>04</em></div>
+    <h2>async generator 상태기계</h2><p class="lede">문법 이해를 cancellation·error semantics까지 확장한다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>case</th><th>producer</th><th>consumer action</th><th>기대</th></tr></thead>
+  <tbody><tr><td>normal</td><td>1,2,3 yield</td><td>끝까지 iterate</td><td>done true + terminal</td></tr><tr><td>slow consumer</td><td>10ms produce</td><td>100ms await</td><td>pull-based 순서 유지</td></tr><tr><td>consumer return</td><td>무한 producer</td><td>3개 후 break</td><td>finally/dispose</td></tr><tr><td>throw</td><td>2 뒤 error</td><td>try/catch</td><td>error propagation</td></tr><tr><td>abort</td><td>await 중 signal</td><td>abort()</td><td>bounded exit</td></tr><tr><td>delegation</td><td>child generator</td><td>parent yield*</td><td>return value 전달</td></tr></tbody></table>
+  <div class="exercise"><b>실습 · protocol log</b><p>next/return/throw 호출과 iterator result를 모두 기록한다.</p><small>완료 증거: 상태 전이 표</small></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 3</span><em>05</em></div>
+    <h2>축약 agent loop</h2><p class="lede">모델 mock과 tool mock으로 두 번의 request를 만든다.</p>
+    <div class="section-body"><figure class="code"><figcaption>목표 trace</figcaption><pre>request #1 → text(&quot;검색&quot;) → tool_use(read, id=A)
+tool A → tool_result(id=A, &quot;found&quot;)
+request #2 → text(&quot;요약&quot;) → completed</pre></figure><div class="checklist"><div>□ 각 event에 sequence와 timestamp가 있다.</div><div>□ tool_use/result id가 일치한다.</div><div>□ unknown tool은 모델이 볼 수 있는 error result가 된다.</div><div>□ maxTurns가 loop를 닫는다.</div><div>□ AbortSignal이 model/tool에 모두 전달된다.</div><div>□ terminal reason을 boolean 대신 union으로 표현한다.</div></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 4</span><em>06</em></div>
+    <h2>fallback과 tombstone</h2><p class="lede">append-only UI가 왜 충분하지 않은지 실험한다.</p>
+    <div class="section-body"><ol><li>attempt A가 text와 tool_use 일부를 yield한 뒤 실패하게 한다.</li><li>attempt B가 fresh message를 생성한다.</li><li>tombstone 없이 transcript를 렌더해 orphan/duplicate를 관찰한다.</li><li>tombstone event를 추가해 materialized view가 old message를 제거하게 한다.</li><li>event log 자체는 append-only, view는 retractable인 구조를 설명한다.</li></ol>
+  <div class="exercise"><b>실습 · view reducer</b><p>event[]에서 현재 messages를 만드는 pure reducer를 작성한다.</p><small>완료 증거: fallback 전후 snapshot test</small></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 5</span><em>07</em></div>
+    <h2>Tool contract vertical slice</h2><p class="lede">FileRead 또는 작은 toy tool을 schema부터 renderer까지 추적한다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>관찰 지점</th><th>기록</th></tr></thead>
+  <tbody><tr><td>definition</td><td>name, schema, output, progress</td></tr><tr><td>classification</td><td>read-only, destructive, concurrency</td></tr><tr><td>validation</td><td>path/limits/context</td></tr><tr><td>permission</td><td>rule/mode/human</td></tr><tr><td>execution</td><td>signal/timeout/effect</td></tr><tr><td>normalization</td><td>tool_result shape</td></tr><tr><td>projection</td><td>compact/verbose/headless</td></tr></tbody></table>
+  <div class="exercise"><b>실습 · one-page contract</b><p>한 tool의 모든 contract를 표 한 장으로 만든다.</p><small>완료 증거: 각 행에 source line ref</small></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 6</span><em>08</em></div>
+    <h2>권한 결정표</h2><p class="lede">mode, rule, tool-specific check, hook, human prompt의 precedence를 작은 모델로 재구성한다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>입력</th><th>mode</th><th>rule</th><th>hook</th><th>기대</th></tr></thead>
+  <tbody><tr><td>read cwd</td><td>default</td><td>allow</td><td>none</td><td>allow</td></tr><tr><td>write cwd</td><td>default</td><td>ask</td><td>none</td><td>prompt</td></tr><tr><td>write cwd</td><td>dontAsk</td><td>ask</td><td>none</td><td>deny</td></tr><tr><td>shell dangerous</td><td>bypass</td><td>allow</td><td>block</td><td>block 여부 검증</td></tr><tr><td>outside root</td><td>acceptEdits</td><td>allow?</td><td>none</td><td>tool validation 우선</td></tr><tr><td>MCP delete</td><td>default</td><td>server hint readOnly</td><td>none</td><td>hint 불신</td></tr></tbody></table><aside class="callout note"><strong>목표</strong><div>표의 기대를 추측으로 채우지 말고 실제 resolver line과 test로 확인한다. 미확인은 미확인으로 남긴다.</div></aside></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 7</span><em>09</em></div>
+    <h2>PromptInput finite-state model</h2><p class="lede">early return 연쇄를 transition table로 바꾼다.</p>
+    <div class="section-body"><ol><li>Enter 처리부에서 guard condition을 순서대로 추출한다.</li><li>각 guard를 state + event → action으로 표현한다.</li><li>동시에 참일 수 있는 guard와 precedence를 찾는다.</li><li>normal submit까지 가는 minimal state를 만든다.</li><li>table-driven test로 branch coverage를 만든다.</li></ol>
+  <div class="exercise"><b>실습 · guard refactor proposal</b><p>행동은 바꾸지 않고 guard 평가를 pure function으로 떼는 설계를 제안한다.</p><small>완료 증거: before/after dependency와 rollback</small></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 8</span><em>10</em></div>
+    <h2>React/Ink frame 측정</h2><p class="lede">“React가 알아서 batching”을 계측 가능한 주장으로 바꾼다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>측정</th><th>도구</th><th>질문</th></tr></thead>
+  <tbody><tr><td>chunk arrival</td><td>mock async generator</td><td>입력 속도는?</td></tr><tr><td>state updates</td><td>instrumented setter</td><td>몇 번 호출?</td></tr><tr><td>renders</td><td>counter/profiler</td><td>몇 component가 render?</td></tr><tr><td>terminal writes</td><td>mock stdout</td><td>몇 회/몇 byte?</td></tr><tr><td>visual result</td><td>pseudo-TTY snapshot</td><td>누락/flicker/scrollback?</td></tr></tbody></table>
+  <div class="exercise"><b>실습 · rate sweep</b><p>10/30/100/300 chunk·초에서 표를 만든다.</p><small>완료 증거: 성능 switch point와 한계</small></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 9</span><em>11</em></div>
+    <h2>컨텍스트 예산 시뮬레이션</h2><p class="lede">compaction을 품질·비용·회복 문제로 다룬다.</p>
+    <div class="section-body"><div class="cards"><article class="card"><span class="eyebrow">workload A</span><h3>긴 text 대화</h3><div><p>요약 손실과 token 절감 비교.</p></div></article><article class="card"><span class="eyebrow">workload B</span><h3>큰 tool result</h3><div><p>persist/preview와 재읽기 비용.</p></div></article><article class="card"><span class="eyebrow">workload C</span><h3>반복 file edits</h3><div><p>attachment 중복과 stale context.</p></div></article><article class="card"><span class="eyebrow">workload D</span><h3>media 포함</h3><div><p>size error recovery 경로.</p></div></article></div>
+  <div class="exercise"><b>실습 · quality budget</b><p>각 workload에서 keep/snip/microcompact/summary를 언제 선택할지 policy를 만든다.</p><small>완료 증거: decision table + counterexample</small></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 10</span><em>12</em></div>
+    <h2>MCP server 최소 구현과 trust test</h2><p class="lede">tool discovery와 실행, result validation, human confirmation을 분리한다.</p>
+    <div class="section-body"><ol><li>read-only toy tool 한 개를 tools/list로 노출한다.</li><li>input/output schema를 정의하고 invalid result를 일부러 반환한다.</li><li>client가 output schema를 검증하는지 확인한다.</li><li>server annotation에 거짓 readOnlyHint를 넣고 권한 경계가 속지 않는지 확인한다.</li><li>timeout/abort와 transport disconnect를 시험한다.</li></ol>
+  <div class="exercise"><b>실습 · trust matrix</b><p>trusted/untrusted server × read/write tool × interactive/headless를 평가한다.</p><small>완료 증거: 12-cell policy matrix</small></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 11</span><em>13</em></div>
+    <h2>Prompt injection 위협 모델</h2><p class="lede">repository comment나 web content가 instruction처럼 보일 때 effect 경로를 추적한다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>공격 지점</th><th>원하는 오용</th><th>구조 통제</th></tr></thead>
+  <tbody><tr><td>README</td><td>shell 실행 유도</td><td>instruction provenance + permission</td></tr><tr><td>web page</td><td>secret exfiltration</td><td>content isolation + network allowlist</td></tr><tr><td>MCP result</td><td>다른 tool 호출 유도</td><td>untrusted result + least privilege</td></tr><tr><td>plugin skill</td><td>지속 instruction</td><td>install trust + scope + review</td></tr><tr><td>tool output</td><td>fake success/authority</td><td>typed evidence + canonical readback</td></tr></tbody></table><aside class="callout risk"><strong>안전</strong><div>실제 secret·외부 account·파괴적 명령을 사용하지 않는다. toy filesystem과 fake token으로 시뮬레이션한다.</div></aside></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB 12</span><em>14</em></div>
+    <h2>의존성 cycle 한 조각 자르기</h2><p class="lede">거대 SCC 전체가 아니라 하나의 vertical slice에서 seam을 찾는다.</p>
+    <div class="section-body"><ol><li>Tool.ts와 FileReadTool/UI/runtime 주변 local graph를 추출한다.</li><li>type-only, runtime, UI, registry edge를 색칠한다.</li><li>UI render contract를 별도 adapter로 이동하는 가설을 세운다.</li><li>headless consumer와 interactive consumer의 public surface를 설계한다.</li><li>변경 파일·compatibility·validation·rollback을 작성한다.</li></ol>
+  <div class="exercise"><b>실습 · ADR 한 장</b><p>현 구조 유지 vs render adapter 분리의 trade-off를 비교한다.</p><small>완료 증거: 선택·근거·반대 증거·재검토 조건</small></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>CODE REVIEW RUBRIC</span><em>15</em></div>
+    <h2>agent runtime 변경 리뷰 12문항</h2><p class="lede">기능이 동작하는지만 보지 않고 stream·취소·권한·정리·관측 가능성의 계약이 함께 보존되는지 확인한다.</p>
+    <div class="section-body"><div class="checklist"><div>□ 새 event/terminal variant가 exhaustive하게 처리되는가?</div><div>□ streaming 중 partial state가 실패 시 retract/settle되는가?</div><div>□ AbortSignal이 모든 blocking boundary에 전달되는가?</div><div>□ permission 검사와 실제 effect input이 동일한 canonical value인가?</div><div>□ read-only·destructive·concurrency 분류가 input별로 정확한가?</div><div>□ retry/loop/budget에 상한과 failure fingerprint가 있는가?</div><div>□ tool_use/result id와 순서 불변식이 보존되는가?</div><div>□ UI projection이 API-bound message를 mutate하지 않는가?</div><div>□ feature gate 조합에서 missing import/untested path가 생기지 않는가?</div><div>□ telemetry가 path/content/secret을 최소화하는가?</div><div>□ headless/interactive/remote surface의 의미가 일치하는가?</div><div>□ 공식 사양과 소스 추정이 문서에서 구분되는가?</div></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>QUIZ A</span><em>16</em></div>
+    <h2>개념 확인 질문</h2><p class="lede">정답보다 근거와 반례를 말한다.</p>
+    <div class="section-body"><ol><li>async generator와 ReadableStream은 어떤 요구에서 서로 대체 가능하고 불가능한가?</li><li>yield*가 하위 generator의 terminal을 어떻게 전달하는가?</li><li>tool result error와 thrown error를 왜 구분하는가?</li><li>React reconciler와 Ink renderer의 책임을 각각 한 문장으로 정의하라.</li><li>Static history가 없는 terminal chat UI에서 어떤 현상이 생길 수 있는가?</li><li>isReadOnly=true가 concurrency-safe를 보장하지 않는 반례를 들어라.</li><li>bypassPermissions가 sandbox를 대체하지 못하는 이유는?</li><li>MCP tool annotation을 권한 근거로 신뢰하면 안 되는 이유는?</li></ol></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>QUIZ B</span><em>17</em></div>
+    <h2>소스 추적 질문</h2><p class="lede">각 답에는 최소 두 개의 source line ref가 필요하다.</p>
+    <div class="section-body"><ol><li>query loop가 tool_use continuation을 결정하는 실제 evidence는 무엇인가?</li><li>fallback 뒤 orphan message를 제거하는 event는 무엇인가?</li><li>tool concurrency 기본 상한과 보수적 parse failure 처리 위치는?</li><li>permission mode의 외부/내부 집합은 어떻게 다른가?</li><li>Tool builder가 채우는 기본 method와 그 보안 의미는?</li><li>memory prefetch가 조기 generator 종료에서 정리되는 표현은?</li><li>REPL onQuery의 try/finally가 복구하는 UI 상태는 무엇인가?</li><li>build script를 실행하지 않은 이유를 source limitation으로 설명하라.</li></ol></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>PRESENTATION TEMPLATE</span><em>18</em></div>
+    <h2>20분 발표를 구성하는 법</h2><p class="lede">기능 나열 대신 하나의 설계 긴장을 중심으로 구성한다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>시간</th><th>내용</th><th>예시</th></tr></thead>
+  <tbody><tr><td>2분</td><td>사용자 사건</td><td>Enter 후 첫 token까지</td></tr><tr><td>3분</td><td>도메인 요구</td><td>점진성·취소·권한</td></tr><tr><td>5분</td><td>언어 메커니즘</td><td>async generator + AbortSignal</td></tr><tr><td>5분</td><td>코드 구조</td><td>query → tool runtime → projection</td></tr><tr><td>3분</td><td>실패/반례</td><td>fallback tombstone</td></tr><tr><td>2분</td><td>전이 가능한 원칙</td><td>append-only log vs retractable view</td></tr></tbody></table><aside class="callout note"><strong>발표 금지</strong><div>파일 트리 낭독, 20줄 넘는 코드 캡처, 근거 없는 “Anthropic은 ~하려고 했다”식 의도 추정.</div></aside></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>ASSESSMENT</span><em>19</em></div>
+    <h2>학습 성취 루브릭</h2><p class="lede">파일을 찾는 수준에서 시작해 근거를 연결하고, 반증 가능한 설계 판단과 재사용 가능한 분석 프레임까지 발전시킨다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>수준</th><th>설명</th><th>증거</th></tr></thead>
+  <tbody><tr><td>1 · 식별</td><td>파일/문법을 찾는다</td><td>anchor link</td></tr><tr><td>2 · 설명</td><td>기능 흐름을 말한다</td><td>sequence diagram</td></tr><tr><td>3 · 연결</td><td>요구↔메커니즘↔구조를 잇는다</td><td>concept map</td></tr><tr><td>4 · 검증</td><td>반례·실패를 실험한다</td><td>trace/test</td></tr><tr><td>5 · 전이</td><td>다른 agent runtime에 적용한다</td><td>design proposal</td></tr></tbody></table><p>팀 평가는 사람의 암기량이 아니라 artifact의 재현성·근거 품질·불확실성 관리에 둔다.</p></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>FURTHER RESEARCH</span><em>20</em></div>
+    <h2>다음 판에서 확장할 분석</h2><p class="lede">이번 자료는 넓은 지도를 제공한다. 다음 연구는 exact revision과 실행 환경을 새로 고정해야 한다.</p>
+    <div class="section-body"><div class="cards"><article class="card"><span class="eyebrow">runtime</span><h3>실제 trace 계측</h3><div><p>공식 binary의 event/latency를 source 가설과 비교.</p></div></article><article class="card"><span class="eyebrow">versions</span><h3>버전 diff</h3><div><p>2.1.88 이후 query/tool/permission 변화 추적.</p></div></article><article class="card"><span class="eyebrow">testing</span><h3>복원 test corpus</h3><div><p>source에 빠진 test를 behavior fixture로 재구성.</p></div></article><article class="card"><span class="eyebrow">security</span><h3>adversarial evaluation</h3><div><p>prompt injection·path·MCP trust benchmark.</p></div></article><article class="card"><span class="eyebrow">architecture</span><h3>cycle decomposition</h3><div><p>largest SCC를 vertical slice별로 분해.</p></div></article><article class="card"><span class="eyebrow">performance</span><h3>TUI benchmark</h3><div><p>event rate→render/write/latency 관계 계측.</p></div></article></div><aside class="callout warn"><strong>별도 작업으로 남김</strong><div>공식 제품 binary 실행, 인증 계정 사용, 외부 시스템 효과, 대규모 소스 재배포는 이번 산출물 범위에 포함하지 않았다.</div></aside></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>FINAL CHECK</span><em>21</em></div>
+    <h2>스터디를 마치기 전</h2><p class="lede">아래 질문에 모두 “예”라면 이 프로젝트를 다른 코드베이스의 설계 도구로 사용할 수 있다.</p>
+    <div class="section-body"><div class="checklist"><div>□ 코드와 문서, 공식 사양, 내 추정을 구분했다.</div><div>□ 성공 경로와 실패·취소·거부 경로를 같은 깊이로 읽었다.</div><div>□ 문법을 제품 요구와 연결했다.</div><div>□ 한 vertical slice를 schema부터 UI까지 추적했다.</div><div>□ 최소 하나의 설명을 실험으로 반증하려 했다.</div><div>□ 성능 주장을 계측 지표로 바꿨다.</div><div>□ 권한과 capability, effect와 evidence를 구분했다.</div><div>□ 대형 소스 조각을 복제하지 않고 파생 지식을 만들었다.</div><div>□ 다음 연구 범위와 미확인 사실을 남겼다.</div><div>□ 다른 agentic CLI에 동일한 분석 프레임을 적용할 수 있다.</div></div><div class="quote">“흐름을 따라가는 것”에서 끝내지 않고, 왜 이 표현이어야 했는지와 어디서 깨지는지를 설명하는 것이 목표다.</div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>SOURCE INDEX</span><em>22</em></div>
+    <h2>핵심 1차 자료</h2><p class="lede">보고서 본문은 아래 소스의 짧은 참조와 파생 설명으로 구성했다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>범주</th><th>자료</th></tr></thead>
+  <tbody><tr><td>분석 대상</td><td><a href="https://github.com/stupidhumans/claude-code-source-code">stupidhumans/claude-code-source-code</a></td></tr><tr><td>공식 제품</td><td><a href="https://github.com/anthropics/claude-code">anthropics/claude-code</a></td></tr><tr><td>언어</td><td><a href="https://tc39.es/ecma262/">ECMAScript specification</a></td></tr><tr><td>타입</td><td><a href="https://www.typescriptlang.org/docs/handbook/2/narrowing">TypeScript Handbook — Narrowing</a></td></tr><tr><td>UI</td><td><a href="https://github.com/vadimdemedes/ink">Ink</a></td></tr><tr><td>SSE 배경</td><td><a href="https://html.spec.whatwg.org/multipage/server-sent-events.html">WHATWG SSE</a></td></tr><tr><td>MCP</td><td><a href="https://modelcontextprotocol.io/specification/2025-06-18/server/tools">MCP Tools specification</a></td></tr><tr><td>Hooks/permissions</td><td><a href="https://code.claude.com/docs/en/hooks">Claude Code Hooks reference</a></td></tr><tr><td>Agent 연구</td><td><a href="https://arxiv.org/abs/2210.03629">ReAct</a> · <a href="https://arxiv.org/abs/2302.04761">Toolformer</a></td></tr><tr><td>참고 영상</td><td><a href="https://www.youtube.com/watch?v=3ZnBDXQQN_E">async generator</a> · <a href="https://www.youtube.com/watch?v=W83jWFwEnTU&t=61s">React/Ink</a></td></tr></tbody></table></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section></body></html>

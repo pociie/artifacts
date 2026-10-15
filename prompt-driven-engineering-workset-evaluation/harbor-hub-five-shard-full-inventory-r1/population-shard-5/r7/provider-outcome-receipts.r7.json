@@ -1,0 +1,134 @@
+{
+  "kind": "harbor-item-bound-provider-outcome-receipts/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "requestRevision": "harbor-terminal-reward-source-binding-r7",
+  "laneId": "population-shard-5",
+  "shardIndex": 4,
+  "terminalReceiptCount": 3,
+  "receipts": [
+    {
+      "itemOrdinal": 3,
+      "itemId": "gpqa-diamond/gpqa-diamond",
+      "taskDigest": "sha256:cbb1e1520a788ce85f2c436b040161cbdaa98be9c055a0dfefb005fe21f76ddb",
+      "round": 1,
+      "provider": "harbor@0.22.0",
+      "providerOutcome": "completed",
+      "terminalReward": 1,
+      "verifierState": "passed",
+      "terminalReceiptRef": "population-shard-5/runs/gpqa-10/2026-08-28__21-31-46/result.json",
+      "terminalReceiptSha256": "sha256:a452432b9a1d8938c40fa11b16c383a4c063d4158eb5764b4933fa678f832578",
+      "model": {
+        "requested": "openai/gpt-5.6-luna",
+        "effective": "openai/gpt-5.6-luna",
+        "effectiveState": "observed"
+      },
+      "effort": {
+        "requested": "max",
+        "effective": null,
+        "effectiveState": "unverified",
+        "limitation": "provider_effective_effort_not_exposed"
+      },
+      "timeout": {
+        "requestedSubjectSec": 3600,
+        "effectiveSubjectSec": 3600,
+        "effectiveVerifierSec": 3600,
+        "state": "observed"
+      },
+      "usage": {
+        "inputTokens": 213874,
+        "cachedInputTokens": 180480,
+        "outputTokens": 1940,
+        "costUsd": 0.0126164,
+        "elapsedMs": 158976
+      }
+    },
+    {
+      "itemOrdinal": 13,
+      "itemId": "bauerjustin/tb3-preview-v2",
+      "taskDigest": "sha256:9d561f23585d87ca49b749692479f9d8bc1f2d77163d168f2a822be9d034b1bb",
+      "round": 2,
+      "provider": "harbor@0.22.0",
+      "providerOutcome": "completed",
+      "terminalReward": 1,
+      "verifierState": "passed",
+      "terminalReceiptRef": "population-shard-5/runs/tb3-crash-safe-loop/2026-08-28__21-37-10/result.json",
+      "terminalReceiptSha256": "sha256:c6091c34715f1b145a99e8567baec45d040e09b15fb07ad946b3b0351694ed8f",
+      "model": {
+        "requested": "openai/gpt-5.6-luna",
+        "effective": "openai/gpt-5.6-luna",
+        "effectiveState": "observed"
+      },
+      "effort": {
+        "requested": "max",
+        "effective": null,
+        "effectiveState": "unverified",
+        "limitation": "provider_effective_effort_not_exposed"
+      },
+      "timeout": {
+        "requestedSubjectSec": 3600,
+        "effectiveSubjectSec": 3600,
+        "effectiveVerifierSec": 3600,
+        "state": "observed"
+      },
+      "usage": {
+        "inputTokens": 1967754,
+        "cachedInputTokens": 1875200,
+        "outputTokens": 50056,
+        "costUsd": 0.116082,
+        "elapsedMs": 1037816
+      }
+    },
+    {
+      "itemOrdinal": 6,
+      "itemId": "quesma/compilebench",
+      "taskDigest": "sha256:7152f4ac62217810140ce2126e03a4b851716ceb13eaff9c5f323241f08ce323",
+      "round": 3,
+      "provider": "harbor@0.22.0",
+      "providerOutcome": "completed",
+      "terminalReward": 0,
+      "verifierState": "failed",
+      "verifierPasses": 9,
+      "verifierFailures": 1,
+      "terminalReceiptRef": "population-shard-5/r7/runs/compilebench-next/2026-08-28__22-29-42/result.json",
+      "terminalReceiptSha256": "sha256:6ebcf3a1108f257626dcf2572e5b94f77307ec19478d185be6b64c22bc05ba7d",
+      "verifierEvidenceDigests": {
+        "reward": "sha256:9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "testOutput": "sha256:a813f8055bdedc7af7ccd397280f4ef4512a7a75c0df9b9d2cd1110eb2d4290d",
+        "testLog": "sha256:6c271d87e053aa933ac6b4758729518c173750a07965e54efeed5d8432c40dbc"
+      },
+      "model": {
+        "requested": "openai/gpt-5.6-luna",
+        "effective": "openai/gpt-5.6-luna",
+        "effectiveState": "observed"
+      },
+      "effort": {
+        "requested": "max",
+        "effective": null,
+        "effectiveState": "unverified",
+        "limitation": "provider_effective_effort_not_exposed"
+      },
+      "timeout": {
+        "requestedSubjectSec": 3600,
+        "effectiveSubjectSec": 3600,
+        "effectiveVerifierSec": 3600,
+        "state": "observed"
+      },
+      "usage": {
+        "inputTokens": 7735666,
+        "cachedInputTokens": 7520512,
+        "outputTokens": 43992,
+        "costUsd": 0.24623144,
+        "elapsedMs": 1762588
+      }
+    }
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "privateReasoningRetained": false,
+    "authValuesRetained": false,
+    "runtimeHandlesRetained": false
+  }
+}

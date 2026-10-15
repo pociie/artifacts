@@ -1,0 +1,176 @@
+{
+  "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/persistent-engineering-workset-lanes.hierarchical-delegation.json",
+  "aggregationPolicy": {
+    "dissentPolicy": "preserve",
+    "ownerRoleId": "controller",
+    "requiredPacketStates": ["accepted", "rejected", "deferred", "dissenting", "unresolved"],
+    "unresolvedPolicy": "hold"
+  },
+  "authorityEffect": "none",
+  "coordinator": {
+    "mode": "coordination_only",
+    "profileRef": "artifacts/agents/evidence-governance/agents/persistent-engineering-workset-lane-coordinator.yaml",
+    "roleId": "controller"
+  },
+  "dispatchPolicy": {
+    "inputContractRefs": [
+      "artifacts/loop-architecture/components/work-queue-coordination/algorithms/persistent-work-queue-frontier/schemas/output.schema.json",
+      "artifacts/workflows/engineering-evaluation/workset-terminal-reward-round/workflow.json"
+    ],
+    "maximumRevisions": 1,
+    "outputContractKinds": [
+      "persistent-engineering-workset-lane-coordination/v1",
+      "engineering-workset-lane-terminal-settlement/v1",
+      "engineering-workset-lane-settlement-review/v1"
+    ],
+    "scheduling": "bounded_parallel",
+    "unchangedFailurePolicy": "replan",
+    "unchangedFailureScope": "same_work_item_and_capability"
+  },
+  "domain": "evidence-governance",
+  "id": "agent-swarm:persistent-engineering-workset-lanes",
+  "kind": "agent-swarm/v1",
+  "memberPolicy": {
+    "activationEvidence": [
+      "one frozen neutral population-shard plan with the exact five shard ids",
+      "one current route and topology resolution per claimed task independent of shard identity",
+      "one complete execution-structure decision bundle per admitted claim",
+      "one native Subject-operation receipt for topology-bearing execution or one explicit no-topology not-required disposition",
+      "one independently validated affected-role-acknowledged changed-fingerprint amendment when a lane Controller intervenes",
+      "one configured hierarchy ceiling and one separately observed effective runtime capacity",
+      "one exact framework revision and opaque work reference per lane claim",
+      "one lane-local Workset Terminal Reward Round per claimed item",
+      "one independent lane-settlement validation and per-resource disposition"
+    ],
+    "capacityEnvelope": {
+      "configuredAgentCeiling": 12,
+      "effectiveCapacitySource": "runtime_observation",
+      "logicalLaneRoleIds": [
+        "population-shard-1",
+        "population-shard-2",
+        "population-shard-3",
+        "population-shard-4",
+        "population-shard-5"
+      ],
+      "scope": "hierarchy_including_nested_subjects",
+      "shortfallPolicy": "rotate_without_role_collapse"
+    },
+    "eligibleRoleIds": [
+      "population-shard-1",
+      "population-shard-2",
+      "population-shard-3",
+      "population-shard-4",
+      "population-shard-5",
+      "lane-settlement-validator"
+    ],
+    "maximumActiveMembers": 6,
+    "maximumConcurrency": 6,
+    "minimumActiveMembers": 6,
+    "qualificationRefs": [
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/algorithms/population-shard-planning/contract.md",
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/algorithms/combination-workset-planning/algorithm.json",
+      "artifacts/workflows/engineering-evaluation/workset-terminal-reward-round/workflow.json",
+      "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+      "artifacts/agents/evidence-governance/architectures/engineering-workset-structure-intervention.supervisor.json",
+      "artifacts/agents/evidence-governance/architectures/persistent-engineering-workset-lanes.hierarchical-delegation.json"
+    ],
+    "selectionMode": "static"
+  },
+  "nonAuthority": [
+    "the twelve-Agent envelope does not provision twelve live workers or override runtime provider budget license or resource limits",
+    "the five neutral shard role identities do not require five simultaneous provider sessions",
+    "the five neutral shard role identities have no routing or topology selection effect",
+    "a lane-local benchmark reward does not establish Artifact quality acceptance or promotion",
+    "the descriptor grants no source mutation integration delivery settlement or effect authority"
+  ],
+  "ownerRef": "owner:engineering-workset-simulation-swarm-policy",
+  "profileRefs": [
+    "artifacts/agents/evidence-governance/agents/persistent-engineering-workset-lane-coordinator.yaml",
+    "artifacts/agents/evidence-governance/agents/engineering-workset-lane-operator.yaml",
+    "artifacts/agents/evidence-governance/agents/engineering-workset-lane-settlement-validator.yaml"
+  ],
+  "purpose": "Select five neutral Workset population-shard controllers and one independent settlement validator beneath one coordinator, require complete per-claim execution-structure admission and native Subject-operation evidence, and let an affected lane invoke the reusable run-private structure-intervention topology under a twelve-Agent ceiling without letting shard identity preselect task routing or topology.",
+  "schemaVersion": 1,
+  "settlement": {
+    "perResource": true,
+    "requiredStates": ["completed_or_held", "delivery_reconciled", "settled"],
+    "retentionPolicy": "release_or_explicitly_retain"
+  },
+  "status": "report_only",
+  "stopConditions": [
+    "configured hierarchy capacity or runtime-observed effective capacity is missing",
+    "a logical shard is merged omitted or renamed because of a runtime slot shortfall",
+    "a shard identity is used to select a task mode Workflow Pattern Architecture or Swarm",
+    "a lane starts without an exact queue claim framework revision and opaque work reference",
+    "a topology-bearing lane operation starts without the complete execution-structure bundle and native Subject-operation request",
+    "a lane Controller resumes work without independent amendment validation affected-role acknowledgement and a changed execution-structure fingerprint",
+    "the same unchanged environment or evaluation failure fingerprint repeats",
+    "lane settlement and independent validation responsibilities collapse",
+    "any lane Subject validator provider or queue resource remains unsettled"
+  ],
+  "topologyCompatibility": {
+    "compatibleModes": ["orchestration"],
+    "disqualifiers": [
+      "population_shard_identity_drift",
+      "mode_bound_shard_identity",
+      "collapsed_lane_identity",
+      "provider_as_architecture_owner",
+      "controller_output_as_subject_operation_evidence",
+      "missing_subject_role_acknowledgement_for_amendment",
+      "unchanged_structure_fingerprint_resume",
+      "runtime_capacity_as_reusable_capacity",
+      "missing_independent_validator",
+      "unbounded_nested_agent_creation",
+      "unsettled_predecessor_resource"
+    ],
+    "requiredSignals": [
+      "neutral_five_shard_population_plan",
+      "per_task_current_route_and_topology_resolution",
+      "complete_execution_structure_bundle_per_claim",
+      "native_subject_operation_receipt_or_explicit_no_topology_disposition",
+      "lane_controller_changed_fingerprint_intervention_when_required",
+      "configured_hierarchy_capacity",
+      "runtime_observed_effective_capacity",
+      "lane_local_terminal_reward_round",
+      "independent_lane_settlement_review"
+    ],
+    "responsibilityClasses": ["lane_operator", "orchestrator", "validator"],
+    "structuralCost": 7,
+    "workflowPatternBindings": [
+      {
+        "agreementPolicy": {
+          "abstentionPolicy": "hold_required",
+          "decisionOwnerRoleId": "controller",
+          "dissentDisposition": "preserve",
+          "evidenceRequired": true,
+          "mechanism": "evidence_adjudication",
+          "minimumApprovals": 0,
+          "participantRoleIds": [
+            "controller",
+            "population-shard-1",
+            "population-shard-2",
+            "population-shard-3",
+            "population-shard-4",
+            "population-shard-5",
+            "lane-settlement-validator"
+          ],
+          "requiredRoleIds": [
+            "controller",
+            "population-shard-1",
+            "population-shard-2",
+            "population-shard-3",
+            "population-shard-4",
+            "population-shard-5",
+            "lane-settlement-validator"
+          ],
+          "timeoutDisposition": "hold",
+          "vetoRoleIds": ["lane-settlement-validator"]
+        },
+        "compatibleModes": ["orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/hierarchical-synthesis/coordination-policy.json",
+        "patternId": "hierarchical_delegation"
+      }
+    ]
+  }
+}

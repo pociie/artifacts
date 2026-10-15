@@ -1,0 +1,64 @@
+{
+  "authorityEffect": "none",
+  "blockingCodes": [
+    "task_image_linux_arm64_manifest_unavailable",
+    "effective_model_receipt_missing",
+    "effective_reasoning_effort_receipt_missing",
+    "effective_subject_timeout_receipt_missing",
+    "protected_verifier_not_started"
+  ],
+  "claimDigest": "sha256:bfa409f7671518efb1136f3857cfe03ce56c0ae4d0bb361299fb26f166527e16",
+  "claimRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/claim.r12.json",
+  "digest": "sha256:950836648feb60cc34259cefb91f0c98a551aa9a938b0d47b5b465f999bcc82d",
+  "effective": {
+    "model": null,
+    "reasoningEffort": null,
+    "receiptState": "missing_require_context",
+    "timeoutSeconds": null
+  },
+  "failureCode": "harbor:linux-arm64-image-manifest-unavailable",
+  "identityDigest": "sha256:6c9c5a99c1e698460064925c35d37f2fd005c8455ab6e2f2f43b081c1a58c3fd",
+  "invocation": {
+    "attempted": true,
+    "modelConfigurationObserved": "gpt-5.6-luna",
+    "reasoningConfigurationObserved": "max",
+    "taskPackageImported": true
+  },
+  "itemId": "LiteCoder/LiteCoder-rl",
+  "itemTerminalStatus": "held",
+  "kind": "harbor-subject-operation-receipt/v3",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationStatus": "environment_setup_failed",
+  "privacy": {
+    "credentialsStored": false,
+    "metadataOnly": true,
+    "privateTrajectoryStored": false,
+    "rawProviderMaterialStored": false,
+    "runtimeHandlesStored": false
+  },
+  "provider": "harbor@0.22.0",
+  "providerResultDigests": {
+    "job": "sha256:eba220a44909046f214c4302afe0dfefcb6967da7436c0ef112805e68c167495",
+    "trial": "sha256:2da18ecfadb4e966bb07a264c474fbba687cbaf63222d42ae32e82e467ae6bcc"
+  },
+  "requested": {
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "timeoutSeconds": 3600
+  },
+  "requireContext": true,
+  "schemaVersion": 3,
+  "shardId": "population-shard-3",
+  "subjectBindingDigest": "sha256:094a40dd87a2646c7a25c350854d6b010810c933e374b7d8342f3eaa04deaca3",
+  "subjectBindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/subject-operation-binding.r12.json",
+  "subjectTerminalState": "not_started",
+  "verifierState": "not_started",
+  "wakeCondition": [
+    "changed_provider_capability_fingerprint",
+    "linux_arm64_task_image_manifest_observed",
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "protected_verifier_observed"
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "kind": "job-application-report-conflict-audit/v1",
+  "status": "diagnostic_complete",
+  "authority_effect": "none",
+  "target": {
+    "pdf": ".collab/artifacts/job-application-2026-09-ibk-it/report.pdf",
+    "render_source": ".collab/artifacts/job-application-2026-09-ibk-it/report.html",
+    "page_count": 20,
+    "report_mutated": false
+  },
+  "summary": "The IBK PDF is technically searchable and unclipped, but it conflicts with the reusable artifact's intended applicant-evidence, public-language, reader-comparison, and editorial-design boundaries. The former checks accepted structural PDF success and aggregate scores without proving applicant readiness or reader-facing composition.",
+  "findings": [
+    {
+      "id": "applicant-readiness-bypassed",
+      "severity": "mandatory",
+      "observation": "All five candidates were marked qualified between 94.90 and 96.30 even though the request retained an unconfirmed IBK-specific motivation, preferred IT domain, direct project contribution, project outcomes, and production-operation experience for the affected questions.",
+      "reader_effect": "The application answers sound finished while repeatedly admitting that the writer still lacks facts the questions ask the applicant to own.",
+      "artifact_conflict": "The Skill and contract require material personal gaps to stop or narrow drafting, but the prior schema did not classify an unknown's disposition and the checker allowed a score to compensate in practice.",
+      "implemented_control": "Every unknown now declares blocking, claim-narrowing, or omitted resolution. A blocking unknown deterministically withholds qualification, and independent review separately records applicant-voice and answer-boundary status."
+    },
+    {
+      "id": "report-writer-commentary-inside-answers",
+      "severity": "mandatory",
+      "observation": "The searchable text contains 15 occurrences across six report-writer caveat patterns such as facts needing further confirmation or claims the writer will not overstate.",
+      "reader_effect": "Recruiter-facing prose is interrupted by the report production boundary, making the applicant sound provisional rather than candid and specific.",
+      "artifact_conflict": "The expression guide already moved generator caveats to the expert report, yet the review marked every answer's public language as pass.",
+      "implemented_control": "Every candidate-question review now requires applicant-voice and answer-boundary judgments, while blocking facts stop drafting instead of generating disclaimers."
+    },
+    {
+      "id": "public-copy-exposes-runtime-taxonomy",
+      "severity": "mandatory",
+      "observation": "The cover advertises production properties, the question table exposes a closing-method column and machine-oriented values, and repeated running labels describe the report system rather than helping the applicant decide.",
+      "reader_effect": "The report explains how it was made instead of clarifying what the employer asks and how the applicant should improve the answer.",
+      "artifact_conflict": "The former semantic review had only one undifferentiated public-label status and recorded no evidence for its pass decision.",
+      "implemented_control": "Cover purpose, public question-analysis translation, public labels, and production-language separation are distinct non-compensatory review dimensions. Every page and candidate must be named in the independent review with one evidence observation per dimension."
+    },
+    {
+      "id": "candidate-identity-and-strategy-duplication",
+      "severity": "mandatory",
+      "observation": "Each candidate start page repeats the set identity and nearly identical title through the numbered section heading, candidate header, set label, title, strategy line, and impression line.",
+      "reader_effect": "The strongest visual area repeats identity instead of showing the score profile and the meaningful distinction between candidates.",
+      "artifact_conflict": "The previous profile asked for adjacent score and thesis content but did not define a single primary candidate hierarchy or inspect the rendered DOM.",
+      "implemented_control": "A candidate start page now permits one primary title, one distinct strategy line, one total, and one complete criterion profile. Continuations may show only a compact continuation heading; normalized title-strategy repetition fails the composition check."
+    },
+    {
+      "id": "criterion-scores-not-visible-by-candidate",
+      "severity": "mandatory",
+      "observation": "Candidate pages show only total scores. The result contains six weighted dimensions and comments for every candidate, but the rendered report contains no candidate axis table.",
+      "reader_effect": "Values such as 95.40 and 95.95 cannot be interpreted or compared, so the scoring system provides less decision support than its precision implies.",
+      "artifact_conflict": "The former profile required criterion-level evaluation data but did not prove that each criterion was visible in the final report.",
+      "implemented_control": "The composition checker reconciles every candidate's total and every result dimension with a public label, visible weighted score, and explanatory comment in the actual HTML. Missing or unknown rows fail publication."
+    },
+    {
+      "id": "manual-pagination-creates-uneven-page-economy",
+      "severity": "mandatory",
+      "observation": "Pages 7, 8, and 9 occupy approximately 35.5%, 28.5%, and 33.7% of usable body height. Candidate start pages occupy about 64.6% to 67.1%, while continuation pages rise to about 70.5% to 72.0%.",
+      "reader_effect": "Short internal stages receive full pages while dense answers use very small type, producing an uneven reading rhythm and unnecessary page turns.",
+      "artifact_conflict": "The old renderer checked clipping but not page purpose, occupied height, candidate continuity, or coherent page-break units.",
+      "implemented_control": "Every page now declares a role with a role-specific minimum occupied-height ratio. Candidate pages must remain contiguous, and answers, score profiles, figures, and expert-review units use break-inside protection before text size is reduced."
+    },
+    {
+      "id": "profile-style-can-be-overridden",
+      "severity": "mandatory",
+      "observation": "The report has no marked external profile stylesheet, embeds one style element, and uses 18 inline style attributes.",
+      "reader_effect": "Typography, spacing, and page layout can drift from one report builder to another even when both claim to use the same profile.",
+      "artifact_conflict": "The former instructions named a CSS file but did not prove that it was the single source of visual styling.",
+      "implemented_control": "The profile stylesheet must be linked once with a marker. Style elements and inline style attributes fail composition. The stylesheet now exposes reusable typography, spacing, rule, and measure tokens plus candidate, score, continuation, and figure classes."
+    },
+    {
+      "id": "raster-assets-are-not-integrated-figures",
+      "severity": "mandatory",
+      "observation": "Three PNG images are registered, but the report contains no figure element, caption, searchable text-equivalent binding, artifact-to-placement binding, or measured figure role. Some visuals restate nearby rows or tables.",
+      "reader_effect": "Images increase visual weight without consistently adding a relationship that can be understood, searched, or reused at report scale.",
+      "artifact_conflict": "The old profile counted PNG files but did not validate why, where, or at what size they appeared.",
+      "implemented_control": "Every raster is now placed once inside a section-bound figure with artifact ID, purpose, relation, alt text, caption, searchable equivalent, and measured width and height ratios. Detached or duplicate-decoration use fails semantic review."
+    },
+    {
+      "id": "source-presentation-is-broader-than-reader-need",
+      "severity": "advisory",
+      "observation": "The final page lists the posting, public-sector portal, company blog, five portfolio links, and a secondary prior-question source.",
+      "reader_effect": "The report ends as a research inventory rather than a focused submission-preparation document.",
+      "artifact_conflict": "The old request used one visible-source allowlist without distinguishing research admission from public source presentation.",
+      "implemented_control": "The default public source scope now exposes official posting sources only. A broader source list requires an explicit request-level allowlist."
+    }
+  ],
+  "design_basis": [
+    {
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels",
+      "applied_principle": "Headings describe topic or purpose and make document organization understandable."
+    },
+    {
+      "source": "https://www.w3.org/TR/css-break-3/",
+      "applied_principle": "Page fragmentation uses break controls, widows, and orphans to keep coherent content units together."
+    },
+    {
+      "source": "https://designsystem.digital.gov/design-tokens/",
+      "applied_principle": "Typography, spacing, measure, and color use constrained reusable tokens rather than report-specific values."
+    },
+    {
+      "source": "https://designsystem.digital.gov/components/typography/",
+      "applied_principle": "Long-form text uses readable body size, controlled measure, left alignment, and sufficient leading."
+    },
+    {
+      "source": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content",
+      "applied_principle": "Informative images have equivalent text and decorative images do not add reading noise."
+    },
+    {
+      "source": "https://www.gov.uk/guidance/publishing-accessible-documents",
+      "applied_principle": "PDF-oriented documents preserve logical heading hierarchy, reading order, table headers, and image alternatives."
+    }
+  ],
+  "residual_limitations": [
+    "The existing IBK PDF was retained as the diagnostic target and was not regenerated by this artifact-hardening task.",
+    "Semantic judgments such as whether a cover sentence describes reader purpose or whether a figure merely restates adjacent content still require independent review; the updated review must name every page and candidate and provide criterion-specific observations.",
+    "Occupied-height thresholds are profile defaults for the standard A4 report and may be revised only through a new profile with its own validation evidence."
+  ]
+}

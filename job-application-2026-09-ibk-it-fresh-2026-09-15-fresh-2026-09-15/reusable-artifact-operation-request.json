@@ -1,0 +1,127 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:reusable-operation:ibk-it-report-fresh",
+  "requestRevision": "revision:ibk-it-r2-fresh",
+  "requestRelation": "new_objective",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15-fresh-2026-09-15/route-decision.json",
+    "decisionDigest": "sha256:1d5b1d9ac3eae99ef1f6c194f90f13d7cad1d178d68cafd1069f4b011aa34774",
+    "effectiveMode": "loop"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:ibk-it-report-builder",
+    "agencyRef": "artifacts/agents/requirement-realization/agents/artifact-builder.yaml",
+    "agencyDigest": "sha256:06ebe77c9b1b5754e6f2e749c470d9129854abe04690022b3156705f6f10410d",
+    "responsibilityClass": "builder",
+    "outcomeContract": "outcome:five-set-searchable-pdf-job-application-review",
+    "outputContract": "output:request-result-projection-review-and-pdf",
+    "decisionScopes": [
+      "selected-job-application-loop",
+      "five-candidate-answer-content",
+      "reader-facing-pdf-publication"
+    ],
+    "nonAuthority": [
+      "source-truth",
+      "applicant-impersonation",
+      "acceptance",
+      "submission",
+      "hiring-outcome",
+      "native-artifact-edit"
+    ]
+  },
+  "objective": "Use the selected job-application report Loop as-is to produce five differentiated Korean answer sets and one searchable PDF for the supplied IBK기업은행 IT posting.",
+  "successEvidenceRefs": [
+    "evidence:fresh-runtime-bundle-created",
+    "evidence:five-candidate-coverage",
+    "evidence:searchable-pdf-addressable"
+  ],
+  "protectedConstraintRefs": [
+    "constraint:no-invented-applicant-facts",
+    "constraint:five-set-pdf-profile",
+    "constraint:public-private-projection-separation",
+    "constraint:authority-effect-none"
+  ],
+  "nonGoalRefs": [
+    "non-goal:edit-reusable-source",
+    "non-goal:application-submission",
+    "non-goal:company-fact-invention"
+  ],
+  "lifecycleIntent": "reuse_as_is",
+  "capabilities": [
+    "job application report production",
+    "Korean editorial writing",
+    "PDF publication validation"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "428a42e075cb9d5d66f87be50bf6b28b0ad29c1b597d88612f213a7634935779",
+  "allowedBaseClasses": [
+    "loop"
+  ],
+  "allowedScopes": [
+    "unresolved"
+  ],
+  "requiredFacts": [],
+  "exactArtifactIds": [],
+  "relationshipDepth": 0,
+  "maxCandidates": 1,
+  "contextBudget": {
+    "maxSourceMembers": 10,
+    "maxConsumerRefs": 4,
+    "maxValidationRefs": 6
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "applicant contribution depth and production-operation evidence remain unresolved"
+    ],
+    "allowedRelationshipTypes": [
+      "defines",
+      "consumes",
+      "validates"
+    ],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "consumer",
+      "effect",
+      "route_or_topology",
+      "lifecycle",
+      "protected_constraint"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "evidence:fresh-runtime-bundle-created",
+      "evidence:adjacent-findings-not-executed",
+      "evidence:pdf-rendered-and-addressable"
+    ],
+    "validationRefs": [
+      "validation:five-set-pdf-profile",
+      "validation:request-result-writing-projection",
+      "validation:render-publication"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "loop-budget:ibk-it-five-set-report:v1",
+  "dataClassification": "internal",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": true,
+  "constructionAllowed": false,
+  "residualGapProven": true,
+  "requestDigest": "7b2edfac3825c9d960218fc0defe650457f6947fc991974d5616a0b8eabfd5e3"
+}

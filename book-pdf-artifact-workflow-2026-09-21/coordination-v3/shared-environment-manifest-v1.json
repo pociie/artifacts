@@ -1,0 +1,62 @@
+{
+  "kind": "sanitized-shared-environment-manifest/v1",
+  "manifestId": "manifest:book-pdf-analysis-environment:v1",
+  "status": "candidate_snapshot_with_material_change_holds",
+  "baseline": {
+    "root": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21",
+    "collaborationBundleRef": "coordination-v3/collaboration-bundle-v3.json",
+    "collaborationBundleSha256": "d0d376444dc1b29d8713250097e8206a5feca9cee125b5a1a63af593b2f8cb45",
+    "predecessorArtifactStateRef": "coordination-v3/artifact-state-manifest.json",
+    "predecessorArtifactStateSha256": "aa3a1338e8ee07cfc68248dc43e9d03c6b58b35796b4c3abb427e7d4f541e7dd",
+    "predecessorDisposition": "preserved_material_change_reassessment_required"
+  },
+  "edges": [
+    {
+      "roleRef": "agent-role:source-analysis-coordinator",
+      "artifactRef": "coordination-v3/project-analysis-v1/artifact-manifest.json",
+      "sha256": "49400762416b9570b9b9d5db07bbb75cdd19622e2c899dd189e030b3ede17742",
+      "state": "candidate_bundle_complete_pending_independent_acceptance"
+    },
+    {
+      "roleRef": "agent-role:visual-pdf-spec-builder",
+      "artifactRef": "pending-owner-manifest-for-prototype-v3-and-current-handoff",
+      "sha256": null,
+      "state": "in_flight_hold_for_natural_checkpoint_digest_handoff"
+    },
+    {
+      "roleRef": "agent-role:project-context-enrichment-producer",
+      "artifactRef": "../project-context-enrichment-validation-2026-09-21/run-v1/source-freeze-manifest.json",
+      "sha256": "21273c5d9cb50e43482a84476114909df0d0c0f8f785f12c03a2536855311cb9",
+      "state": "frozen_unaccepted_external_dependency"
+    },
+    {
+      "roleRef": "agent-role:independent-project-context-enrichment-validator",
+      "artifactRef": "../project-context-enrichment-validation-2026-09-21/run-v1/activation-receipt.json",
+      "sha256": "2b693ea7ae9bcbe03b97a745e241534f35b414c8cf835db2bdc219b71638359a",
+      "state": "runtime_dispatch_in_progress_report_pending",
+      "artifactActivationEffect": "none"
+    },
+    {
+      "roleRef": "agent-role:session-context-integrator",
+      "artifactRef": "coordination-v3/session-context-contribution-packet.json",
+      "sha256": "cffa117a0046a7c672ba80dbdf1489e9b5220dfabe9b58586e19cf9d49cba102",
+      "state": "read_only_contribution_pending_independent_acceptance"
+    }
+  ],
+  "pendingEdges": [
+    "visual manifest and digest handoff",
+    "independent project-context-enrichment validator report and worker_done",
+    "independent review of the source-analysis candidate bundle"
+  ],
+  "invalidation": [
+    "any listed digest changes",
+    "a pending edge materializes",
+    "participant role or write boundary changes",
+    "activation, acceptance, publication, or settlement evidence arrives"
+  ],
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_performed",
+  "authorityEffect": "none"
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "harbor-environment-platform-observation/v3",
+  "schemaVersion": 3,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "shardId": "population-shard-5",
+  "itemId": "aarr/aarri-bench",
+  "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:e185aff8ec6d9dc521d527c67fa959614fefc94514a3a092d00c00b25bb125ab",
+  "environmentDigest": "sha256:7e0fe3beb2099321c2141d4441d87726b2f9d118d426d2892602c774ae5a3b18",
+  "capabilityFingerprint": "sha256:7ed61a5d3380a42a141f251d4ce703f79ed4ffd90ff5d5f53ce1e08538ca4c84",
+  "dockerAvailable": true,
+  "hostPlatformRef": "platform:darwin-arm64",
+  "targetPlatformRef": "platform:linux-arm64",
+  "preExecutionQualification": {
+    "state": "held",
+    "reasonCodes": [
+      "task_image_manifest_unobserved",
+      "effective_timeout_unestablished",
+      "license_evidence_incomplete"
+    ]
+  },
+  "postExecutionObservation": null,
+  "status": "held_before_subject_admission",
+  "limitations": [
+    "no Harbor task environment was started",
+    "the platform probe is metadata-only and does not establish a task image manifest",
+    "effective model, effort, timeout, and verifier receipts are absent"
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "protectedVerifierBodyProjected": false
+  }
+}

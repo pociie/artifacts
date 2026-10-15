@@ -1,0 +1,57 @@
+{
+  "authorityEffect": "none",
+  "claimId": "claim:harbor-hub-five-shard-full-inventory-r1:population-shard-2:abhishek203/task-aw:r13",
+  "controllerProviderEvidenceIsSubjectEvidence": false,
+  "digest": "sha256:2648796337e0432778811b4b3b48f797aa506a93cf95c532db7aaeaa993e130a",
+  "evidenceRefs": [
+    "continuation-r13/execution-structure-admission.r13.json",
+    "continuation-r13/provider-observation.r13.json",
+    "continuation-r13/subject-operation.r13.json"
+  ],
+  "final": false,
+  "findings": [
+    {
+      "code": "effective_capability_receipts_missing",
+      "ownerRoute": "ENVIRONMENT_GAP",
+      "severity": "major"
+    },
+    {
+      "code": "execution_structure_admission_hold",
+      "ownerRoute": "ENVIRONMENT_GAP",
+      "severity": "major"
+    },
+    {
+      "code": "protected_verifier_not_run",
+      "ownerRoute": "OUTCOME_GAP",
+      "severity": "critical"
+    }
+  ],
+  "independence": {
+    "distinctRoles": true,
+    "evaluatorRoleRef": "role:evaluator:engineering",
+    "independentValidatorRoleRef": "role:independent-validator:deterministic",
+    "oracleRoleRef": "role:oracle-owner:harbor",
+    "verifierBoundarySeparate": true
+  },
+  "itemId": "abhishek203/task-aw",
+  "kind": "engineering-workset-independent-evaluation/v4",
+  "laneId": "population-shard-2",
+  "limitations": [
+    "No effective model, reasoning effort, or runtime timeout receipt was available.",
+    "No provider job, task workspace, container, or verifier was created."
+  ],
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "qualityDimensions": {
+    "efficiency": "unavailable",
+    "operability": "unavailable",
+    "outcomeQuality": "unavailable",
+    "processEvidence": "supported"
+  },
+  "requiredValidation": {
+    "reason": "native Subject operation did not activate because effective receipts and admission capability remained unqualified",
+    "state": "unavailable"
+  },
+  "schemaVersion": 4,
+  "status": "require_context",
+  "subjectEvidenceAvailable": false
+}

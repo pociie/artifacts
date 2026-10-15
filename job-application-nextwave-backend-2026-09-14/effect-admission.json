@@ -1,0 +1,15 @@
+{
+  "kind": "job-application-effect-admission/v1",
+  "status": "admitted_local_only",
+  "authorityEffect": "none",
+  "effectIntent": "local_write",
+  "targets": [
+    ".collab/artifacts/job-application-nextwave-backend-2026-09-14/request.json",
+    ".collab/artifacts/job-application-nextwave-backend-2026-09-14/result.json",
+    ".collab/artifacts/job-application-nextwave-backend-2026-09-14/self-introduction-5sets.md"
+  ],
+  "externalEffects": [],
+  "prohibitedEffects": ["application_submission", "provider_update", "shared_projection_update", "hiring_decision"],
+  "reconciliation": "read-back-and-run-deterministic-checker",
+  "onUncertainEffect": "reread_then_stop"
+}

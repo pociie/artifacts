@@ -1,0 +1,67 @@
+{
+  "authorityEffect": "none",
+  "checks": [
+    {
+      "checkId": "item-identity",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-21-openai-simpleqa/claim-source-freeze.r13.json"
+      ],
+      "state": "supported"
+    },
+    {
+      "checkId": "population-accounting",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-21-openai-simpleqa/queue-reconciliation-before-claim.r13.json"
+      ],
+      "state": "supported"
+    },
+    {
+      "checkId": "resource-settlement",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-21-openai-simpleqa/item-resource-settlement.r13.json"
+      ],
+      "state": "supported"
+    },
+    {
+      "checkId": "effective-execution-receipt",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-21-openai-simpleqa/harbor-subject-operation.r13.json"
+      ],
+      "state": "unavailable"
+    },
+    {
+      "checkId": "protected-outcome-validation",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-21-openai-simpleqa/simulation-evidence.r13.json"
+      ],
+      "state": "unavailable"
+    }
+  ],
+  "digest": "sha256:0e6d1de4b8f8aaddd7d758e7222b2b6525045109d1a960ae15f911676570e36f",
+  "disposition": "require_context",
+  "evaluatorKind": "deterministic",
+  "final": true,
+  "identityDigest": "sha256:06ea05110ead1545b839faefa590fc239c67afbfd22e0918bdbd2ff063ff712f",
+  "itemId": "openai/simpleqa",
+  "kind": "engineering-evaluation-report/v2",
+  "limitations": [
+    "subject_not_started",
+    "verifier_not_started",
+    "effective_model_unverified",
+    "effective_reasoning_effort_unverified",
+    "subject_timeout_unverified",
+    "task_payload_unavailable"
+  ],
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawTaskContentProjected": false
+  },
+  "promotionEligible": false,
+  "reportId": "evaluation:harbor-hub-five-shard-full-inventory-r1:population-shard-5:continuation-r13/item-21-openai-simpleqa:openai/simpleqa",
+  "schemaVersion": 2,
+  "simulationEvidenceDigest": "sha256:8eb552b39f95e4da7ef5ff166a6dc837a31839a8d785bf8aadb2c684b031be8d",
+  "simulationEvidenceRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-21-openai-simpleqa/simulation-evidence.r13.json",
+  "status": "complete"
+}

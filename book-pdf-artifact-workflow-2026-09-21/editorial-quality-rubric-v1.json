@@ -1,0 +1,66 @@
+{
+  "kind": "technical-book-editorial-quality-rubric/v1",
+  "rubricId": "rubric:high-context-claim-led-pdf",
+  "revision": "book-pdf-editorial-rubric/1",
+  "status": "candidate",
+  "authorityEffect": "none",
+  "mandatoryCriteria": [
+    {
+      "id": "reader-purpose",
+      "question": "Does the report state what the reader should understand or decide rather than merely what components exist?",
+      "failure": "The structure is a directory, technology or feature tour."
+    },
+    {
+      "id": "high-level-context",
+      "question": "Does each section connect the human problem, system principle, project mechanism and operational consequence?",
+      "failure": "The section remains only abstract or only implementation-specific."
+    },
+    {
+      "id": "keyword-decoupling",
+      "question": "If framework and API names are hidden, do state, time, ownership, effect and failure relationships remain understandable?",
+      "failure": "Keywords or labels carry the argument."
+    },
+    {
+      "id": "causal-continuity",
+      "question": "Do paragraphs and diagrams show what value moves, what changes it and why the next step follows?",
+      "failure": "Bullets or cards present adjacent facts without a causal bridge."
+    },
+    {
+      "id": "worked-trace",
+      "question": "Does every major concept appear in a concrete request, state transition, failure or recovery trace?",
+      "failure": "The report contains definitions without application."
+    },
+    {
+      "id": "evidence-strength",
+      "question": "Are observed source facts, external background, project inference, unknowns and limitations visibly distinct?",
+      "failure": "A fluent explanation is stronger than its source evidence."
+    },
+    {
+      "id": "design-function",
+      "question": "Is Systems Monograph used for explanatory progress and Evidence Notebook for verification rather than decorative alternation?",
+      "failure": "The page style does not match the reader task."
+    },
+    {
+      "id": "anti-card",
+      "question": "Does continuous reasoning remain primary, with callouts and boxes occupying a supporting minority of the page?",
+      "failure": "The report reads as slides or a dashboard."
+    },
+    {
+      "id": "transfer",
+      "question": "Can the reader apply the principle to another interactive or agent system without copying the same framework?",
+      "failure": "The lesson is inseparable from one product keyword."
+    },
+    {
+      "id": "render-integrity",
+      "question": "Does the PDF preserve expected pages, selectable text, legible type, source links and zero overflow?",
+      "failure": "The visual artifact loses or clips content."
+    }
+  ],
+  "decisionRule": "Any mandatory failure holds the candidate for revision; criteria are not averaged and no scalar score grants acceptance.",
+  "authorSideApplication": "allowed_as_candidate_only",
+  "independentValidationRequiredForAcceptance": true,
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}
+

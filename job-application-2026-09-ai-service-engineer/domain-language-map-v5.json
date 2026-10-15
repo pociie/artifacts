@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "self-introduction-domain-language-map/v5",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "selectionRule": "보편적으로 이해 가능한 용어를 먼저 선택하고 프로젝트·팀 고유어는 근거 설명에만 사용한다.",
+  "canonicalTerms": [
+    {"id": "user-goal", "term": "사용자 목표", "definition": "업무에서 이루려는 결과와 해결하려는 문제", "aliasesAvoided": ["의도", "목적", "가치"], "requiredCompanion": "다음 업무 행동"},
+    {"id": "work-context", "term": "업무 맥락", "definition": "결과를 판단하는 데 필요한 정보·제약·역할·확인 기준", "aliasesAvoided": ["공유 맥락", "상황"], "requiredCompanion": "확인 기준"},
+    {"id": "service-flow", "term": "서비스 처리 흐름", "definition": "입력·처리·결과가 다음 업무 행동으로 이어지는 흐름", "aliasesAvoided": ["실행", "여정", "파이프라인"], "requiredCompanion": "결과 검증"},
+    {"id": "result-verification", "term": "결과 검증", "definition": "결과가 업무 목적에 맞는지 확인하고 다음 행동을 정하는 과정", "aliasesAvoided": ["신뢰", "품질 확인"], "requiredCompanion": "확인 기준"},
+    {"id": "reviewable-record", "term": "검토 가능한 기록", "definition": "입력·맥락·결과·확인 내용이 다시 확인되는 상태", "aliasesAvoided": ["근거가 남는 개발", "이력"], "requiredCompanion": "다음 개선"},
+    {"id": "error-recovery", "term": "오류 원인과 복구", "definition": "문제의 위치를 좁히고 이용을 이어가기 위한 대응", "aliasesAvoided": ["안정성", "장애 대응"], "requiredCompanion": "확인 가능한 상태"},
+    {"id": "feedback-improvement", "term": "피드백 기반 개선", "definition": "관찰된 부담·오류·변경을 다음 설계와 검증에 반영하는 순환", "aliasesAvoided": ["지속적 개선", "고도화"], "requiredCompanion": "관찰 신호"},
+    {"id": "human-check-point", "term": "사람 확인 지점", "definition": "결과를 바로 사용하지 않고 사람이 최종 확인·수정해야 하는 조건과 단계", "aliasesAvoided": ["승인", "사람이 판단"], "requiredCompanion": "보류 또는 다음 행동"}
+  ],
+  "jobTerms": [
+    {"term": "AI 서비스 API·백엔드", "meaning": "사용자 업무에 필요한 요청·처리·결과를 서비스로 연결하는 영역", "essayUse": "Q1 직무 행동"},
+    {"term": "데이터 파이프라인", "meaning": "서비스 입력과 처리·결과가 이어지도록 데이터의 흐름과 확인을 관리하는 영역", "essayUse": "Q1 역량·검증"},
+    {"term": "플랫폼 운영·고도화", "meaning": "변경·오류·피드백을 반영해 서비스가 계속 사용될 수 있도록 개선하는 업무", "essayUse": "Q1/Q3 미래 행동"},
+    {"term": "서비스 발굴·검증", "meaning": "사용자 문제와 적용 범위를 확인하고 실제 업무에 맞는지 판단하는 과정", "essayUse": "Q1/Q3 업무 관점"},
+    {"term": "튜닝·품질 검증", "meaning": "결과의 적합성·오류·적용 범위·확인 기준을 점검하고 개선하는 업무", "essayUse": "Q1/Q2 검증"}
+  ],
+  "internalTranslation": [
+    {"internal": "execution routing", "universal": "작업 맥락과 제약을 정리해 처리 경로를 선택하는 설계", "essayCenter": false},
+    {"internal": "knowledge projection", "universal": "목적에 필요한 정보와 제약을 선별해 처리 맥락으로 구성", "essayCenter": false},
+    {"internal": "reusable artifact", "universal": "재사용 가능한 설계·검증 자료", "essayCenter": false},
+    {"internal": "report-only / authorityEffect:none", "universal": "검토용 기록이며 실행·승인·운영 효과를 부여하지 않음", "essayCenter": false}
+  ],
+  "qualityChecks": {
+    "criticalTermDefinitionRateTarget": 1,
+    "canonicalCoverageTarget": 0.9,
+    "undefinedCriticalTermTarget": 0,
+    "projectSpecificTermAsCoreSubjectTarget": 0,
+    "implementationMechanismAsOutcomeTarget": 0
+  },
+  "sources": ["domain-knowledge-v5.json", "artifacts/knowledge/ai/ai-service-engineer-domain-and-evaluation-v5.md", "docs/reference/work-items/job-application-ai-service-engineer-v5.md"]
+}

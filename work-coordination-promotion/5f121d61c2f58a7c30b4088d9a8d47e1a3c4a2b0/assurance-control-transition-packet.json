@@ -1,0 +1,74 @@
+{
+  "kind": "assurance-control-transition/v1",
+  "implementationOwnerRef": "owner:implementation",
+  "candidate": {
+    "commit": "5f121d61c2f58a7c30b4088d9a8d47e1a3c4a2b0",
+    "tree": "02eb63ab7d9827097b4a7ede667e7b997bacafb3",
+    "policyDigest": "48ff86f488eff92bfe4a80dbf6827fa4f9bbb8f7bf3f3fcdedf88fd894215f2c",
+    "evidenceBundleDigest": "7b796f2f9dcb1314b4e59a6a79e754abd99f22b9dd6e98e26003fa2a9c78675d",
+    "governingContractDigest": "da60a60711fcd41dfe82ed7e423e49889a6a72b08ee2bb3bfa9c14e5262ceafd",
+    "algorithmRevision": "work-coordination-graph-poc/v1",
+    "adapterRevision": "canonical-snapshot-adapter/v1"
+  },
+  "requestedProfile": {
+    "enforcement": "report_only",
+    "exposure": "shadow",
+    "failureMode": "fail_open",
+    "scopeRef": "scope:work-coordination-shadow"
+  },
+  "reviewerEligibility": [],
+  "reviews": [],
+  "governance": {
+    "decision": "pending",
+    "ownerRef": "owner:governance:unassigned",
+    "authoritySourceRef": "authority:governance:unassigned",
+    "authorityStatus": "unknown",
+    "binding": {
+      "candidateCommit": "5f121d61c2f58a7c30b4088d9a8d47e1a3c4a2b0",
+      "candidateTree": "02eb63ab7d9827097b4a7ede667e7b997bacafb3",
+      "policyDigest": "48ff86f488eff92bfe4a80dbf6827fa4f9bbb8f7bf3f3fcdedf88fd894215f2c",
+      "evidenceBundleDigest": "7b796f2f9dcb1314b4e59a6a79e754abd99f22b9dd6e98e26003fa2a9c78675d"
+    },
+    "permittedEnvelope": null,
+    "retainedLimitationIds": [
+      "limitation:knowledge-review-pending",
+      "limitation:live-collector-unavailable",
+      "limitation:production-activation-unavailable",
+      "limitation:real-history-shadow-unavailable"
+    ],
+    "residualRiskIds": [
+      "risk:correlated-review-unassessed",
+      "risk:production-evidence-unavailable"
+    ],
+    "rollbackTriggerIds": [
+      "rollback:false-completion",
+      "rollback:false-negative",
+      "rollback:state-divergence"
+    ],
+    "reviewTriggerIds": [
+      "review:adapter-change",
+      "review:candidate-change",
+      "review:policy-or-evidence-change"
+    ],
+    "expiryState": "unknown",
+    "evidenceRef": "governance:pending"
+  },
+  "activation": {
+    "state": "not_selected",
+    "operatorRef": null,
+    "governanceDecisionRef": null,
+    "binding": {
+      "candidateCommit": "5f121d61c2f58a7c30b4088d9a8d47e1a3c4a2b0",
+      "candidateTree": "02eb63ab7d9827097b4a7ede667e7b997bacafb3",
+      "policyDigest": "48ff86f488eff92bfe4a80dbf6827fa4f9bbb8f7bf3f3fcdedf88fd894215f2c",
+      "evidenceBundleDigest": "7b796f2f9dcb1314b4e59a6a79e754abd99f22b9dd6e98e26003fa2a9c78675d"
+    },
+    "desiredProfile": null,
+    "installedProfile": null,
+    "observedProfile": null,
+    "adapterRevision": null,
+    "convergence": "not_applicable",
+    "rollbackPlanRef": null,
+    "observationRef": null
+  }
+}

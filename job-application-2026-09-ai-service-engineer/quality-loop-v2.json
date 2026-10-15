@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "self-introduction-quality-loop/v2",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "objective": "Produce five 300-700 character self-introduction sets for the AI service engineer role, retain only 90+ sets, and make technology mechanisms, evidence boundaries, and evaluation meaning explicit.",
+  "scope": {
+    "included": [
+      "official recruitment/company/HR context",
+      "read-only repository structure and source evidence",
+      "higher-level narrative architecture",
+      "five candidate sets with three answers each",
+      "claim-level evidence and mechanism review",
+      "weighted rubric and PDF rendering/validation"
+    ],
+    "excluded": [
+      "external application submission",
+      "source architecture changes",
+      "inventing personal metrics, ownership, production operation, or customer outcomes",
+      "private prompts, transcripts, secrets, runtime handles, or provider credentials"
+    ]
+  },
+  "routing": {
+    "mode": "bounded_iterative_investigation_and_loop",
+    "coordination": "Orca supervised Run with three read-only worker lanes and one integration owner",
+    "ownership": "single integration writer for artifacts and PDF; workers do not edit files",
+    "validation": "hard gates plus non-compensatory mechanism/evidence/interview micro-gates",
+    "stopConditions": [
+      "all five sets pass the 90 threshold and hard gates",
+      "any claim that cannot be supported is rewritten as bounded inference or future intent",
+      "no direct Chat Gateway→Reporting claim remains without integration evidence",
+      "PDF is rendered and checked for page layout and character counts",
+      "remaining uncertainty is recorded as applicant confirmation, not silently resolved"
+    ]
+  },
+  "roles": [
+    {
+      "id": "official-source-researcher",
+      "purpose": "Extract job responsibilities, qualifications, company business context, HR values, and application constraints from official pages.",
+      "nonGoals": ["predict hiring outcome", "infer the candidate's skills", "write unsupported experience"],
+      "output": "source-backed role context and safe narrative implications"
+    },
+    {
+      "id": "repository-evidence-curator",
+      "purpose": "Map repository structure, runtime surfaces, quality controls, and scale while separating source facts from authorship and run-result claims.",
+      "nonGoals": ["assign personal ownership from Git metadata", "claim production scale", "run destructive tooling"],
+      "output": "evidence map with paths, claim class, safe wording, and exclusions"
+    },
+    {
+      "id": "mechanism-adversary",
+      "purpose": "Review each technology as a problem-solving mechanism with boundary, causal flow, failure behavior, and operational implication.",
+      "nonGoals": ["optimize keyword density", "treat every provider as active", "turn tests into evidence of successful operation without a run artifact"],
+      "output": "mechanism map, claim ledger rules, and rejection/caveat list"
+    },
+    {
+      "id": "narrative-integrator",
+      "purpose": "Turn evidence into five distinct but coherent sets: capability, project proof, and value-in-organization.",
+      "nonGoals": ["copy a stack list into prose", "merge separate bounded services into one unsupported flow"],
+      "output": "content JSON and rendered self-introduction draft"
+    },
+    {
+      "id": "rubric-assessor",
+      "purpose": "Score each set using weighted axes and non-compensatory micro-gates; exclude any set below 90.",
+      "nonGoals": ["treat score as hiring probability", "offset evidence/mechanism hard failures with style points"],
+      "output": "versioned rubric with score meaning and disposition"
+    },
+    {
+      "id": "render-validator",
+      "purpose": "Validate Unicode character ranges, JSON consistency, PDF page layout, and visible score/selection labels.",
+      "nonGoals": ["change content to hide a failed gate", "submit the application"],
+      "output": "PDF plus machine-readable validation result"
+    }
+  ],
+  "stages": [
+    {
+      "id": "S1",
+      "name": "intake_and_constraint_resolution",
+      "inputs": ["user prompts", "AGENTS.md", "official URLs", "repository path"],
+      "checks": ["three questions identified", "300-700 character range", "five-set minimum", "90 percent inclusion threshold", "PDF requirement"],
+      "exit": "acceptance contract is explicit"
+    },
+    {
+      "id": "S2",
+      "name": "parallel_evidence_collection",
+      "inputs": ["official pages", "root package manifests", "architecture READMEs", "runtime/adapter/quality sources"],
+      "checks": ["F/U/P/O/I/N classification", "uncertainty preserved", "no source mutation"],
+      "exit": "evidence map and mechanism map are available"
+    },
+    {
+      "id": "S3",
+      "name": "narrative_architecture",
+      "inputs": ["evidence map", "role context", "user's existing writing"],
+      "checks": ["one central identity", "Q1/Q2/Q3 different narrative roles", "technical mechanisms translated to business/operation meaning"],
+      "exit": "candidate thesis: AI features into usable, operable services"
+    },
+    {
+      "id": "S4",
+      "name": "five_set_generation",
+      "inputs": ["narrative thesis", "confirmed/bounded claims"],
+      "checks": ["each answer 300-700", "Q2 includes type/scale/role/process/learning", "no technology list without causal verb"],
+      "exit": "15 draft answers exist"
+    },
+    {
+      "id": "S5",
+      "name": "adversarial_mechanism_and_claim_review",
+      "inputs": ["15 draft answers", "mechanism map", "evidence map"],
+      "checks": ["MCP/provider/Dapr/UI/Reporting distinctions", "no unsupported run/outcome claims", "first-person scope flagged for confirmation", "failure/quality signal per technology paragraph"],
+      "exit": "revised drafts have no known hard mechanism/evidence failures"
+    },
+    {
+      "id": "S6",
+      "name": "scoring_and_selection",
+      "inputs": ["rubric v2", "revised drafts"],
+      "checks": ["12 axes sum to 100", "mechanism/evidence/interview micro-gates non-compensatory", "only score >=90 included"],
+      "exit": "five passing sets selected"
+    },
+    {
+      "id": "S7",
+      "name": "document_render_and_quality_gate",
+      "inputs": ["content JSON", "rubric JSON", "evidence map", "HTML template"],
+      "checks": ["JSON parse", "character counts", "Playwright A4 PDF", "visual/page overflow inspection", "artifact links"],
+      "exit": "PDF and machine-readable companion artifacts are ready"
+    }
+  ],
+  "tooling": {
+    "orchestration": "Orca Run/task/worker-start/check/worker-release for traceable read-only lanes",
+    "research": "official-source web research with direct citations",
+    "repository": "rg, package manifests, architecture READMEs, source path inspection",
+    "validation": "Node JSON/Unicode checks, Playwright A4 PDF rendering, image inspection",
+    "skills": ["orchestration"]
+  },
+  "qualitySignals": {
+    "mustBePresent": ["central narrative", "causal technology explanation", "source/ownership caveat", "failure or quality implication", "future application"],
+    "mustBeAbsent": ["unverified metrics", "production certainty", "technology category errors", "three-or-more-item stack lists without explanation", "school-identifying information"],
+    "applicantFollowUp": ["confirm owned modules and changed files", "confirm which checks were actually run and when", "add a real result/metric only if available", "prepare one failure and one rejected alternative per project answer"]
+  }
+}

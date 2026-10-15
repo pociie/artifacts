@@ -1,0 +1,73 @@
+{
+  "actualCommandAttempt": true,
+  "attemptState": {
+    "commandAttempted": true,
+    "harnessExitCode": 1,
+    "preservedEvidence": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-05-bigcode-bigcodebench-hard-complete/harbor-command.log",
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-05-bigcode-bigcodebench-hard-complete-terminal-receipt.r16.json",
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-05-bigcode-bigcodebench-hard-complete-terminal-reward-vector.r16.json"
+    ],
+    "providerTaskResolved": false,
+    "providerTrialCount": 0,
+    "state": "provider_preflight_failed_no_subject_trial",
+    "subjectTrialStarted": false,
+    "verifierStarted": false,
+    "wrapperSlotAcquired": true
+  },
+  "authorityEffect": "none",
+  "changedFingerprintWakeCondition": {
+    "kind": "harbor-task-filter-fingerprint-transition/v1",
+    "previous": {
+      "datasetRef": "bigcode/bigcodebench-hard-complete@latest",
+      "model": "gpt-5.6-luna",
+      "providerVersion": "0.22.0",
+      "reasoningEffort": "max",
+      "taskFilter": "bigcodebench_100",
+      "taskWorkspaceDigest": "sha256:4b07d69263eb4dc8870c15b70acc80531ebd58e97c94d5772cf4ad19d58246f0"
+    },
+    "previousDigest": "sha256:f35304a8cccc02651fd5406a903b9368ef51b54f975c4382c414d87a2803b42b",
+    "required": {
+      "datasetRef": "bigcode/bigcodebench-hard-complete@latest",
+      "model": "gpt-5.6-luna",
+      "providerVersion": "0.22.0",
+      "reasoningEffort": "max",
+      "taskFilter": "bigcode/bigcodebench_100",
+      "taskWorkspaceDigest": "sha256:4b07d69263eb4dc8870c15b70acc80531ebd58e97c94d5772cf4ad19d58246f0"
+    },
+    "requiredDigest": "sha256:60f3a942a7abee3888914a2285e857d32094f807c34cc446605d0273b82bcb10",
+    "transitionObserved": false,
+    "wakeCondition": "retry only after the required provider-qualified task filter is bound; do not repeat the ownerless filter"
+  },
+  "digest": "sha256:4940f298f25d3a60109493a3204af351e1b5194d85adce71a9e5afcb3a8c0ca9",
+  "evidenceRefs": [
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-05-bigcode-bigcodebench-hard-complete/harbor-command.log",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-05-bigcode-bigcodebench-hard-complete-terminal-receipt.r16.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-05-bigcode-bigcodebench-hard-complete-terminal-reward-vector.r16.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-05-bigcode-bigcodebench-hard-complete-route-delta.r16.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/events/0005-terminal-bigcode-bigcodebench-hard-complete.json"
+  ],
+  "failedTaskFilter": "bigcodebench_100",
+  "failureClass": "NoTerminalTrialResult",
+  "finding": "provider_task_filter_preflight_failed_before_subject_trial",
+  "frameworkRevision": "sha256:90e03a443bdf20344c3e51000387814f872df81fb245ecc2934badda28624139",
+  "identityDigest": "sha256:e4f745d8aa0edc814791b1dfb9e1791c184c728c7585e7a7cd8b7534e76a54f3",
+  "itemId": "bigcode/bigcodebench-hard-complete",
+  "kind": "harbor-item-preflight-finding/v1",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "ordinal": 5,
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawPromptStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "providerTrialCount": 0,
+  "requiredTaskFilter": "bigcode/bigcodebench_100",
+  "shardId": "population-shard-4",
+  "status": "failed",
+  "subjectTrialStarted": false,
+  "wakeCondition": "changed provider task-filter fingerprint required: bind exact qualified filter bigcode/bigcodebench_100 (previous bigcodebench_100); shared semantic-facts resolver integration must complete before any retry; no equivalent retry"
+}

@@ -1,0 +1,73 @@
+{
+  "authorityEffect": "none",
+  "blockers": [],
+  "effectivePrimaryMode": "single_task",
+  "excludedScopeKinds": ["ambient", "controller", "coverage"],
+  "kind": "subject-operation-scope-binding-decision/v1",
+  "reasonCodes": [
+    "non_subject_scopes_explicitly_excluded",
+    "selected_subject_topology_content_bound"
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:polyvorlabs/cyberdefense-bench:r13:execute-harbor-subject",
+  "routeDecisionSha256": "a4bbf9df072e98ca5a57ee0d46f5a954b5f523d387f4cdb50e7f17565303413f",
+  "scopeBindings": [
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:a8e28cdef4bae4154a89abf7bc9cc4782b335b5c6db123b434a5e93f103b50bf",
+      "disposition": "coverage_stimulus_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-37-polyvorlabs-cyberdefense-bench/source-and-plan-binding.r13.json",
+      "scopeId": "coverage:population-shard-4:polyvorlabs/cyberdefense-bench:r13",
+      "scopeKind": "coverage",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:e8c99c8ebbd439b904e30fd480a38310864804550ac1f45d839240939a098da3",
+      "disposition": "context_only",
+      "ref": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-37-polyvorlabs-cyberdefense-bench/environment-platform-observation.r13.json",
+      "scopeId": "ambient:population-shard-4:polyvorlabs/cyberdefense-bench:r13",
+      "scopeKind": "ambient",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:1633c5f76d89f3d4d6ad6dee42a53b9004d327b7d73c2de4ef3942e0dd1788c4",
+      "disposition": "control_plane_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-37-polyvorlabs-cyberdefense-bench/claim.r13.json",
+      "scopeId": "controller:population-shard-4:polyvorlabs/cyberdefense-bench:r13",
+      "scopeKind": "controller",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": true,
+      "digest": "sha256:3aa935dff1eca852f1c5a4c3d4bfa004ede1274ba1fef568e0bfd4d79652c441",
+      "disposition": "eligible_report_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-37-polyvorlabs-cyberdefense-bench/subject-topology-binding.r13.json",
+      "scopeId": "subject-scope:population-shard-4:polyvorlabs/cyberdefense-bench:r13",
+      "scopeKind": "subject",
+      "state": "selected"
+    }
+  ],
+  "scopedMode": "single_task",
+  "segmentMode": null,
+  "status": "ready",
+  "subjectOperation": {
+    "agentArchitectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmDigest": null,
+    "agentSwarmRef": null,
+    "bindingDigest": "sha256:3aa935dff1eca852f1c5a4c3d4bfa004ede1274ba1fef568e0bfd4d79652c441",
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-37-polyvorlabs-cyberdefense-bench/subject-topology-binding.r13.json",
+    "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "disposition": "eligible_report_only",
+    "scopeId": "subject-scope:population-shard-4:polyvorlabs/cyberdefense-bench:r13",
+    "workflowPatternDigest": "sha256:93bf91356072b399cd3684ea2d482c7fe3afe4ca083e8443e86978b2bdb5d7bd",
+    "workflowPatternId": "pipeline",
+    "workflowPatternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/pipeline/workflow-pattern.json"
+  },
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "topologyRequirementDecisionSha256": "9802ebaf3812e9e42d6b88bdaeef08538af9ff5a1194226502253d8d0902ef2f",
+  "topologySelectionDecisionSha256": "7e3583daf03f021ce806f28abdf37f2472958fea072e3883903ab48d275f8dee"
+}

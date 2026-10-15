@@ -1,0 +1,14 @@
+{
+  "kind": "validator-report-security-sanitization-receipt/v1",
+  "sanitizedAt": "2026-09-20T23:58:22Z",
+  "runId": "run_837aab6bfcd6",
+  "taskId": "task_012d12037607",
+  "dispatchId": "ctx_b038ad2fd4bd",
+  "reportPath": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-validation-v1/independent-validation-report.json",
+  "preSanitizationSha256": "4a55b6fc1e0d1da1153c5afaa33bcef022cdfaaa6d7953d6738222f76646f4e3",
+  "postSanitizationSha256": "f75461e24cac263a0cec828e1a43660cdd40cc617017d41437d0aba5a1674f81",
+  "change": "Removed one revoked dispatch capability token and mutable terminal-handle identity fields from the shared report. Stable Run, Task, Dispatch, role, and independent-producer identity remain.",
+  "validationJudgmentChanged": false,
+  "reason": "Runtime capability tokens and terminal handles are mutable operational state and must not remain in sanitized shared artifacts.",
+  "authorityEffect": "none"
+}

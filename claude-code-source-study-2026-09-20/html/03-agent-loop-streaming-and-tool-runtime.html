@@ -1,0 +1,169 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>에이전트 루프·스트리밍·도구 런타임</title><style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; color: #17212b; background: #dce2e8; font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; }
+body { counter-reset: sheet; }
+.sheet { --accent: #d15d48; width: 210mm; min-height: 297mm; margin: 0 auto; padding: 17mm 17mm 15mm; background: #fbfaf7; break-after: page; position: relative; overflow: hidden; counter-increment: sheet; }
+.sheet::after { content: ""; position: absolute; inset: auto 0 0; height: 5mm; background: linear-gradient(90deg, var(--accent), #182735 78%); }
+.sheet-foot { position: absolute; bottom: 7mm; left: 17mm; right: 17mm; display: flex; justify-content: space-between; font-size: 7.5pt; color: #6a747f; letter-spacing: .03em; }
+.cover { color: #f8fafb; background: radial-gradient(circle at 82% 22%, color-mix(in srgb, var(--accent) 72%, transparent), transparent 29%), linear-gradient(145deg, #101a24 0 56%, #1b2b38 56% 100%); display: flex; flex-direction: column; }
+.cover::after { height: 9mm; background: var(--accent); }
+.cover-top { display:flex; justify-content:space-between; font-size:9pt; letter-spacing:.14em; color:#bcd0de; border-bottom:1px solid #496071; padding-bottom:5mm; }
+.cover-mark { width:34mm; height:34mm; margin-top:30mm; border-radius:50%; border:2px solid var(--accent); display:grid; place-items:center; font:700 30pt ui-monospace, monospace; color:var(--accent); }
+.cover h1 { font-size:31pt; line-height:1.12; margin:12mm 0 5mm; max-width:165mm; letter-spacing:-.035em; }
+.cover > p { font-size:13pt; line-height:1.55; color:#d5e0e7; max-width:150mm; }
+.cover-grid { margin-top:auto; display:grid; grid-template-columns:1fr 1fr; gap:5mm; }
+.cover-grid div { padding:4mm; border-top:1px solid #526979; background:#ffffff08; }
+.cover-grid small, .cover-grid b { display:block; }.cover-grid small{color:#98acba;font-size:8pt;margin-bottom:2mm}.cover-grid b{font-size:10pt}
+.cover-warning { margin:8mm 0 8mm; padding:4mm; border-left:3px solid var(--accent); background:#ffffff0c; font-size:8.6pt; line-height:1.5; }
+.cover .sheet-foot{color:#aebec8;bottom:11mm}.section-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #c8d0d5;padding-bottom:3mm;color:var(--accent);font-weight:800;font-size:8pt;letter-spacing:.12em;text-transform:uppercase}.section-head em{font-style:normal;font:700 18pt ui-monospace,monospace;color:#aab3ba}.sheet h2{font-size:23pt;line-height:1.18;letter-spacing:-.035em;margin:7mm 0 3mm;max-width:170mm}.lede{font-size:11pt;line-height:1.62;color:#465462;margin:0 0 6mm;max-width:168mm}.section-body{font-size:9.2pt;line-height:1.58}.section-body p{margin:0 0 3mm}.section-body h3{font-size:11.5pt;margin:4mm 0 2mm;color:#223242}.section-body ul,.section-body ol{margin:1.5mm 0 4mm;padding-left:5mm}.section-body li{margin:1.2mm 0}.eyebrow{display:block;font-size:7pt;letter-spacing:.12em;color:var(--accent);font-weight:800;text-transform:uppercase}.cards{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin:4mm 0}.card{padding:4mm;border:1px solid #d1d7da;border-radius:3mm;background:#fff}.card h3{margin:1mm 0 2mm}.card p{font-size:8.5pt}.flow{display:flex;align-items:stretch;gap:2mm;margin:5mm 0}.node{flex:1;border:1px solid #bec8cf;background:#fff;border-radius:2mm;padding:3mm;text-align:center;min-width:0}.node b,.node small{display:block}.node b{font-size:9pt;color:#263845}.node small{font-size:7.2pt;color:#6c7881;margin-top:1mm}.arrow{align-self:center;color:var(--accent);font-size:14pt;font-weight:900}table{width:100%;border-collapse:collapse;margin:4mm 0;font-size:7.8pt;line-height:1.4;table-layout:fixed}th{background:#253846;color:#fff;text-align:left;padding:2.2mm;vertical-align:top}td{border:1px solid #d3d8dc;padding:2.2mm;vertical-align:top;background:#fff}tr:nth-child(even) td{background:#f2f4f4}.callout{margin:4mm 0;padding:3.5mm 4mm;border-left:3px solid var(--accent);background:#eef4f5}.callout strong{display:block;color:#253846;margin-bottom:1mm}.callout.warn{border-color:#d07a2b;background:#fff4e9}.callout.risk{border-color:#b44444;background:#fff0ef}.callout.good{border-color:#2a8a6a;background:#edf8f3}.code{margin:4mm 0;border-radius:2mm;overflow:hidden;background:#111b24;color:#e9f2f6}.code figcaption{padding:2mm 3mm;background:#203341;color:#9fc8d7;font-size:7.5pt;letter-spacing:.06em}.code pre{margin:0;padding:4mm;font:7.8pt/1.55 "SFMono-Regular",Consolas,monospace;white-space:pre-wrap}.refs{margin-top:5mm;padding-top:3mm;border-top:1px solid #ccd3d7;font-size:7.5pt;color:#596773;display:flex;gap:2mm;flex-wrap:wrap}.refs b{color:#263845}.refs span:not(:last-child)::after{content:" ·"}.refs a,.section-body a{color:#18627b;text-decoration:none;border-bottom:1px solid #9db7c2}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin:4mm 0}.metric{padding:3mm;border-top:3px solid var(--accent);background:#fff;border-radius:1mm;box-shadow:0 1px 5px #0011}.metric b,.metric span,.metric small{display:block}.metric b{font:800 17pt ui-monospace,monospace;color:#253845}.metric span{font-weight:700;margin-top:1mm}.metric small{font-size:7pt;color:#74808a;margin-top:1mm}.exercise{margin:4mm 0;padding:4mm;border:1px dashed #8aa4b3;border-radius:2mm;background:#f4f8f9}.exercise b{color:#1f596e}.exercise small{display:block;color:#61727c}.checklist{columns:2;column-gap:8mm;margin:4mm 0}.checklist div{break-inside:avoid;padding:1.3mm 0;border-bottom:1px dotted #c9d0d3}.bar{display:grid;grid-template-columns:34mm 1fr 17mm;gap:2mm;align-items:center;margin:1.7mm 0}.bar i{height:3mm;background:linear-gradient(90deg,var(--accent),#8bb7c8);border-radius:3mm;display:block}.bar span:last-child{text-align:right;font:7pt ui-monospace,monospace}.two{display:grid;grid-template-columns:1fr 1fr;gap:5mm}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm}.tag{display:inline-block;padding:.5mm 1.5mm;border-radius:10mm;background:#dfecee;color:#275367;font-size:7pt;font-weight:700;margin:.4mm}.quote{font-size:14pt;line-height:1.45;border-left:5px solid var(--accent);padding:4mm 0 4mm 6mm;margin:6mm 0;color:#263946;font-weight:700}.muted{color:#697680}.small{font-size:7.8pt}.page-title{font-size:14pt;font-weight:800}.timeline{border-left:2px solid var(--accent);padding-left:5mm;margin:4mm}.timeline div{position:relative;margin:0 0 4mm}.timeline div::before{content:"";position:absolute;width:2.5mm;height:2.5mm;background:var(--accent);border-radius:50%;left:-6.4mm;top:1.5mm}.timeline b{display:block}.timeline small{color:#63717b}.matrix td:first-child,.matrix th:first-child{font-weight:800}.dense{font-size:7.4pt}
+</style></head>
+  <body><section class="cover sheet" style="--accent:#d15d48">
+    <div class="cover-top"><span>CLAUDE CODE SOURCE STUDY</span><span>VOL. 03</span></div>
+    <div class="cover-mark">LOOP</div>
+    <h1>에이전트 루프·스트리밍·도구 런타임</h1><p>한 사용자 턴이 모델과 환경을 왕복하며 수렴하는 과정</p>
+    <div class="cover-grid">
+      <div><small>분석 대상</small><b>v2.1.88 reconstructed source</b></div>
+      <div><small>고정 리비전</small><b>2ca5ddabfed5</b></div>
+      <div><small>독자</small><b>agent runtime 구현자</b></div>
+      <div><small>사용 방식</small><b>상태기계 · 실패 경로 분석</b></div>
+    </div>
+    <div class="cover-warning">교육·연구용 파생 분석입니다. Anthropic의 공식 소스·공식 아키텍처 문서가 아닙니다.</div>
+    <div class="sheet-foot"><span>Study Pack / 2026-09-20</span><span>한국어</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>CORE IDEA</span><em>01</em></div>
+    <h2>에이전트는 모델이 아니라 폐루프 시스템이다</h2><p class="lede">모델 출력이 tool action을 만들고, 환경 결과가 다시 모델 입력이 되는 feedback loop가 핵심이다.</p>
+    <div class="section-body"><div class="flow"><div class="node"><b>observe</b><small>prompt · context</small></div><span class="arrow">→</span><div class="node"><b>infer</b><small>model stream</small></div><span class="arrow">→</span><div class="node"><b>act</b><small>tool calls</small></div><span class="arrow">→</span><div class="node"><b>observe</b><small>tool results</small></div><span class="arrow">→</span><div class="node"><b>continue/stop</b><small>terminal decision</small></div></div><p>ReAct 연구는 reasoning과 action을 교차시키는 패턴을 제시했다. 실제 제품 harness는 여기에 권한·취소·압축·재시도·관측·UI를 더한다.</p><div class="refs"><b>근거 위치</b><span><a href="https://arxiv.org/abs/2210.03629">ReAct paper</a></span><span><a href="https://arxiv.org/abs/2302.04761">Toolformer paper</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L219-L260">src/query.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>ENTRY</span><em>02</em></div>
+    <h2>query와 queryLoop의 역할 분리</h2><p class="lede">public generator는 event stream과 terminal을 노출하고, 내부 loop는 반복 상태와 회복 정책을 소유한다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>함수</th><th>소유 책임</th><th>중요 semantics</th></tr></thead>
+  <tbody><tr><td><code>query()</code></td><td>public async generator facade</td><td>yield delegation, 정상 종료 후 command lifecycle 완료</td></tr><tr><td><code>queryLoop()</code></td><td>turn iteration과 상태 전이</td><td>while(true), continue/return/throw</td></tr><tr><td><code>queryModelWithStreaming()</code></td><td>model adapter facade</td><td>VCR wrapper와 하위 stream 위임</td></tr><tr><td><code>runTools()</code></td><td>tool batch orchestration</td><td>safe partition, serial/concurrent merge</td></tr><tr><td><code>runToolUse()</code></td><td>단일 capability 실행</td><td>lookup, parse, permission, hook, call, normalize</td></tr></tbody></table><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L219-L260">src/query.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/api/claude.ts#L752-L780">src/services/api/claude.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/tools/toolOrchestration.ts#L19-L188">src/services/tools/toolOrchestration.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>STATE</span><em>03</em></div>
+    <h2>iteration을 건너가는 최소 상태</h2><p class="lede">loop-local state는 메시지, tool context, 압축 tracking, recovery count, turn count, 이전 transition을 묶는다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>필드</th><th>왜 필요한가</th><th>잘못 다루면</th></tr></thead>
+  <tbody><tr><td>messages</td><td>다음 model request의 history</td><td>tool_use/result 불일치</td></tr><tr><td>toolUseContext</td><td>도구·권한·앱 상태·취소</td><td>stale capability/permission</td></tr><tr><td>autoCompactTracking</td><td>압축 이후 turn·실패 추적</td><td>무한 재압축</td></tr><tr><td>recovery count</td><td>bounded retry</td><td>비용 폭증·livelock</td></tr><tr><td>pending summary</td><td>tool 요약을 다음 요청과 겹쳐 실행</td><td>불필요한 latency</td></tr><tr><td>transition</td><td>continue 이유를 테스트/관측</td><td>회복 경로가 보이지 않음</td></tr></tbody></table><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L179-L218">src/query.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>ITERATION</span><em>04</em></div>
+    <h2>한 번의 while(true) 해부</h2><p class="lede">각 iteration은 “입력 projection → request → stream → tool → enrichment → next state”의 transaction-like 경계를 만든다.</p>
+    <div class="section-body"><ol><li>현재 State를 iteration-local 변수로 펼친다.</li><li>memory/skill prefetch를 시작해 model/tool 시간과 겹친다.</li><li>snip·microcompact·context collapse·autocompact로 messages projection을 만든다.</li><li>token blocking 조건을 확인한다.</li><li>model stream을 소비하며 event를 yield하고 tool_use를 수집한다.</li><li>recoverable error면 표시를 보류하고 recovery branch를 평가한다.</li><li>tool이 없으면 stop hook/budget을 확인하고 terminal return한다.</li><li>tool batch를 실행하고 result/attachment/context update를 모은다.</li><li>max turn을 확인하고 next State를 만든 뒤 continue한다.</li></ol><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L286-L548">src/query.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L650-L940">src/query.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L1357-L1728">src/query.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>COMPACTION</span><em>05</em></div>
+    <h2>컨텍스트는 하나의 배열이 아니라 여러 projection의 합성</h2><p class="lede">긴 대화의 유한 context window를 관리하기 위해 서로 다른 비용·정확도 특성을 가진 압축 단계가 순서대로 적용된다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>단계</th><th>의도</th><th>핵심 주의</th></tr></thead>
+  <tbody><tr><td>tool result budget</td><td>과대 결과를 저장/축약</td><td>Read 같은 도구는 순환을 막기 위해 예외</td></tr><tr><td>snip</td><td>선택적 과거 제거</td><td>token freed를 후속 threshold에 반영</td></tr><tr><td>microcompact</td><td>tool-use id 기반 작은 정리</td><td>API cache deletion과 합성</td></tr><tr><td>context collapse</td><td>세분화된 projection/commit</td><td>feature gated, full history와 구분</td></tr><tr><td>autocompact</td><td>요약 메시지로 큰 경계 생성</td><td>실패 circuit breaker, task budget</td></tr></tbody></table><aside class="callout note"><strong>중요한 구조</strong><div>압축은 iteration 시작의 전처리가 아니라, 실패 회복·budget·세션 resume·tool result persistence와 얽힌 상태 전이다.</div></aside><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L330-L548">src/query.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/compact/compact.ts#L1">src/services/compact/compact.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>REQUEST BUILD</span><em>06</em></div>
+    <h2>모델 호출은 많은 정책의 합류점</h2><p class="lede">history 외에도 system/user context, tools, model, thinking, effort, MCP, fallback, budget, signal이 request에 결합된다.</p>
+    <div class="section-body"><figure class="code"><figcaption>요청 모양의 개념 축약</figcaption><pre>callModel({
+  messages: project(history, userContext),
+  systemPrompt: append(systemPrompt, systemContext),
+  tools,
+  signal,
+  options: { model, fallbackModel, mcpTools, effort, taskBudget }
+})</pre></figure><aside class="callout note"><strong>캐시 불변식</strong><div>observable input을 보강할 때 API로 되돌아갈 원본을 mutate하지 않는 주석이 있다. byte-level prompt cache identity가 기능 정확도와 비용에 영향을 준다.</div></aside><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L653-L708">src/query.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L742-L787">src/query.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>STREAM</span><em>07</em></div>
+    <h2>이벤트는 즉시 내보내고, 일부는 내부에도 축적한다</h2><p class="lede">같은 message가 UI/SDK로 yield되는 동시에 assistantMessages 배열에 쌓여 tool discovery와 다음 request 구성에 쓰인다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>stream 처리</th><th>외부 projection</th><th>내부 상태</th></tr></thead>
+  <tbody><tr><td>일반 text/thinking event</td><td>즉시 yield</td><td>assistantMessages에 축적</td></tr><tr><td>tool_use block</td><td>message yield</td><td>toolUseBlocks + needsFollowUp</td></tr><tr><td>streaming tool result</td><td>완료 즉시 yield</td><td>normalized toolResults</td></tr><tr><td>recoverable error</td><td>일시 withhold</td><td>recovery 판단용 축적</td></tr><tr><td>fallback orphan</td><td>tombstone yield</td><td>이전 partial arrays 초기화</td></tr></tbody></table><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L708-L864">src/query.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>TOMBSTONES</span><em>08</em></div>
+    <h2>fallback에서 partial output을 지우는 이유</h2><p class="lede">streaming attempt가 도중 fallback으로 바뀌면 이미 노출된 partial assistant message가 새 응답과 공존해 transcript·signature·tool id를 오염시킬 수 있다.</p>
+    <div class="section-body"><div class="flow"><div class="node"><b>attempt A</b><small>partial text/tool_use</small></div><span class="arrow">→</span><div class="node"><b>fallback</b><small>provider/model 전환</small></div><span class="arrow">→</span><div class="node"><b>tombstone</b><small>orphan projection 제거</small></div><span class="arrow">→</span><div class="node"><b>reset</b><small>messages/results/executor</small></div><span class="arrow">→</span><div class="node"><b>attempt B</b><small>fresh stream</small></div></div><aside class="callout good"><strong>일반화</strong><div>streaming UI에는 append만이 아니라 retract/replace semantics가 필요하다. event log와 materialized view를 분리하면 이런 회복을 표현하기 쉽다.</div></aside><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L709-L740">src/query.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>TOOL DETECTION</span><em>09</em></div>
+    <h2>stop_reason만 믿지 않는다</h2><p class="lede">소스 주석은 API의 <code>stop_reason === tool_use</code>가 항상 신뢰할 수 없다고 밝히고, 실제 stream에서 tool_use block을 관찰한 사실을 loop continuation 신호로 쓴다.</p>
+    <div class="section-body"><p>이 설계는 “summary metadata”보다 “실제 payload evidence”를 우선한다. 분산·스트리밍 시스템에서 상태 플래그보다 관찰된 event를 기준으로 전이하는 전형적인 방어다.</p><aside class="callout note"><strong>검증 질문</strong><div>중복 tool_use, partial JSON, fallback 후 old tool id, unknown tool alias가 각각 어떤 오류 메시지와 cleanup을 만드는가?</div></aside><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L551-L558">src/query.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L826-L845">src/query.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>TOOL PIPELINE</span><em>10</em></div>
+    <h2>tool_use에서 외부 효과까지</h2><p class="lede">모델의 JSON 제안은 곧바로 실행되지 않는다. lookup·schema·validation·permission·hook·call·result mapping 단계를 통과한다.</p>
+    <div class="section-body"><div class="flow"><div class="node"><b>lookup</b><small>name + alias</small></div><span class="arrow">→</span><div class="node"><b>parse</b><small>input schema</small></div><span class="arrow">→</span><div class="node"><b>validate</b><small>tool-specific</small></div><span class="arrow">→</span><div class="node"><b>mediate</b><small>permission + hooks</small></div><span class="arrow">→</span><div class="node"><b>execute</b><small>call + progress</small></div><span class="arrow">→</span><div class="node"><b>normalize</b><small>tool_result + context</small></div></div><p>unknown tool은 예외만 던지는 대신 <code>tool_result</code> error로 모델에게 되돌려 self-correction을 가능하게 한다.</p><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/tools/toolExecution.ts#L337-L430">src/services/tools/toolExecution.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/Tool.ts#L362-L560">src/Tool.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>CONCURRENCY</span><em>11</em></div>
+    <h2>동시성은 입력별 capability 속성</h2><p class="lede">같은 Tool이라도 input에 따라 concurrency-safe 여부가 달라질 수 있다. 호출 배열을 안전/비안전 블록으로 partition한다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>경로</th><th>실행 방식</th><th>context update</th></tr></thead>
+  <tbody><tr><td>safe block</td><td>bounded concurrent generator merge</td><td>modifier를 toolUseID별로 큐잉 후 결정적 적용</td></tr><tr><td>unsafe block</td><td>한 호출씩 serial</td><td>각 결과 직후 currentContext 갱신</td></tr><tr><td>parse/판정 실패</td><td>보수적으로 unsafe</td><td>직렬화</td></tr><tr><td>기본값</td><td><code>isConcurrencySafe=false</code></td><td>명시적 opt-in</td></tr></tbody></table><aside class="callout note"><strong>기본 동시성 10</strong><div>환경 변수로 상한을 바꿀 수 있지만, resource별 rate limit·FD·subprocess 비용을 자동으로 이해하는 값은 아니다. 부하 시험이 필요하다.</div></aside><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/tools/toolOrchestration.ts#L8-L188">src/services/tools/toolOrchestration.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>PERMISSION & HOOKS</span><em>12</em></div>
+    <h2>정책 결정과 lifecycle 확장은 도구 실행 안에 있다</h2><p class="lede">PreToolUse·PermissionRequest·PostToolUse·PostToolUseFailure가 tool call 경계를 감싼다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>지점</th><th>가능한 결과</th><th>권위</th></tr></thead>
+  <tbody><tr><td>input validation</td><td>유효/오류</td><td>tool contract</td></tr><tr><td>pre-tool hook</td><td>allow/deny/update/defer</td><td>설정된 hook 정책</td></tr><tr><td>permission resolver</td><td>allow/deny/ask</td><td>mode·rule·user decision</td></tr><tr><td>tool call</td><td>output/progress/throw</td><td>capability adapter</td></tr><tr><td>post hook</td><td>annotation/context/failure handling</td><td>hook contract</td></tr></tbody></table><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/services/tools/toolExecution.ts#L126-L131">src/services/tools/toolExecution.ts</a></span><span><a href="https://code.claude.com/docs/en/hooks">공식 hooks reference</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>FOLLOW-UP</span><em>13</em></div>
+    <h2>tool result가 다음 모델 턴을 만든다</h2><p class="lede">tool execution이 끝나면 assistant message와 tool result, 새 attachment를 순서 규칙에 맞춰 합치고 next State를 만든다.</p>
+    <div class="section-body"><figure class="code"><figcaption>다음 iteration 전이의 개념 축약</figcaption><pre>next.messages = [
+  ...messagesForQuery,
+  ...assistantMessages,
+  ...toolResults
+]
+next.turnCount = turnCount + 1
+next.transition = { reason: &quot;next_turn&quot; }</pre></figure><p>API는 tool_use 뒤 대응하는 tool_result의 순서와 id를 요구한다. queue command나 file-change attachment는 tool batch 뒤에 붙어야 한다는 주석이 이를 지킨다.</p><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L1535-L1657">src/query.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L1678-L1728">src/query.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>TERMINALS</span><em>14</em></div>
+    <h2>종료는 boolean이 아니라 이유가 있는 값</h2><p class="lede">completed, blocking limit, stop-hook prevented, aborted tools, hook stopped, max turns 등은 caller가 서로 다르게 처리해야 한다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>종료 이유</th><th>성격</th><th>후속 질문</th></tr></thead>
+  <tbody><tr><td>completed</td><td>정상 수렴</td><td>completion hooks/usage 정리됐는가?</td></tr><tr><td>blocking_limit</td><td>컨텍스트 한계</td><td>manual compact 안내?</td></tr><tr><td>stop_hook_prevented</td><td>정책 중단</td><td>사용자에게 이유가 보이는가?</td></tr><tr><td>aborted_tools</td><td>취소</td><td>부분 효과와 subprocess가 정리됐는가?</td></tr><tr><td>hook_stopped</td><td>hook이 continuation 차단</td><td>result가 모델에 전달됐는가?</td></tr><tr><td>max_turns</td><td>운영 한도</td><td>현재 상태를 재개할 수 있는가?</td></tr></tbody></table><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L104-L104">Terminal/Continue import 지점</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L1278-L1357">src/query.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L1484-L1521">src/query.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L1704-L1712">src/query.ts</a></span></div><aside class="callout warn"><strong>근거 수준</strong><div><code>query/transitions.ts</code> 자체는 복원본에서 누락됐다. 종료 variant는 호출·반환 지점으로 교차 확인해야 한다.</div></aside></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>RECOVERY</span><em>15</em></div>
+    <h2>오류를 즉시 보여 주지 않는 경우</h2><p class="lede">prompt-too-long, media size, max-output-tokens처럼 자동 회복 가능한 오류는 UI/SDK에 먼저 노출하면 consumer가 세션을 끝낼 수 있어 일시 보류한다.</p>
+    <div class="section-body"><div class="flow"><div class="node"><b>error event</b><small>stream에서 관찰</small></div><span class="arrow">→</span><div class="node"><b>withhold</b><small>외부 yield 보류</small></div><span class="arrow">→</span><div class="node"><b>classify</b><small>recoverable?</small></div><span class="arrow">→</span><div class="node"><b>recover</b><small>compact/truncate/fallback</small></div><span class="arrow">→</span><div class="node"><b>yield/terminal</b><small>최종 결과만 노출</small></div></div><aside class="callout note"><strong>회복 불변식</strong><div>withhold 조건과 recovery gate는 같은 snapshot을 사용해야 한다. gate가 stream 중 바뀌면 “숨겼지만 회복하지 않는” 이벤트 손실이 생길 수 있다는 주석이 이를 설명한다.</div></aside><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L621-L648">src/query.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L788-L825">src/query.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>OBSERVABILITY</span><em>16</em></div>
+    <h2>복잡한 loop는 checkpoint와 correlation 없이는 보이지 않는다</h2><p class="lede">queryChainId/depth, requestId, toolUseID, 단계 checkpoint, transition reason을 통해 한 turn의 causal path를 조립한다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>식별자/신호</th><th>결합 대상</th><th>진단 질문</th></tr></thead>
+  <tbody><tr><td>queryChainId + depth</td><td>main/subagent request chain</td><td>어느 재귀/후속 턴인가?</td></tr><tr><td>requestId</td><td>provider request·fallback</td><td>어느 API 시도가 실패했나?</td></tr><tr><td>toolUseID</td><td>tool_use ↔ result/progress</td><td>orphan result인가?</td></tr><tr><td>checkpoint</td><td>compaction/API/tool phases</td><td>latency가 어디서 생겼나?</td></tr><tr><td>transition.reason</td><td>continue path</td><td>왜 loop가 한 번 더 돌았나?</td></tr></tbody></table><div class="refs"><b>근거 위치</b><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/query.ts#L286-L330">src/query.ts</a></span><span><a href="https://github.com/stupidhumans/claude-code-source-code/blob/2ca5ddabfed5f220812ea11f029eda03b21bc4c1/src/utils/queryProfiler.ts#L1">src/utils/queryProfiler.ts</a></span></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>INVARIANTS</span><em>17</em></div>
+    <h2>코드에서 추출한 핵심 불변식</h2><p class="lede">함수 흐름보다 불변식을 적어야 테스트와 재구현에 사용할 수 있다.</p>
+    <div class="section-body"><div class="checklist"><div>□ 모든 tool_use id에는 정확히 대응하는 tool_result 또는 명시적 interruption이 있어야 한다.</div><div>□ fallback 전 partial assistant projection은 새 stream과 공존하지 않는다.</div><div>□ API로 재전송할 original message는 observer용 backfill 때문에 mutate되지 않는다.</div><div>□ permission/validation을 통과하지 않은 tool effect는 실행되지 않는다.</div><div>□ concurrency-unsafe tool의 context modifier는 직렬 순서로 적용된다.</div><div>□ recoverable error는 recovery가 불가능하다고 결정되기 전 외부 terminal로 누출되지 않는다.</div><div>□ max-turn·token-budget·recovery retry에는 상한이 있다.</div><div>□ abort는 rollback이 아니므로 부분 효과를 별도로 정리한다.</div></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>LAB</span><em>18</em></div>
+    <h2>관찰 가능한 축약 루프 만들기</h2><p class="lede">행복 경로보다 failure matrix를 먼저 만든다.</p>
+    <div class="section-body">
+  <table><colgroup></colgroup>
+  <thead><tr><th>실험</th><th>주입할 사건</th><th>기대 evidence</th></tr></thead>
+  <tbody><tr><td>text only</td><td>text → stop</td><td>yield 순서 + completed</td></tr><tr><td>one tool</td><td>tool_use → result → text</td><td>두 model request + id pairing</td></tr><tr><td>unknown tool</td><td>없는 name</td><td>is_error result + self-correction 가능</td></tr><tr><td>fallback</td><td>partial text 후 provider error</td><td>tombstone + fresh stream</td></tr><tr><td>abort</td><td>tool 50% 시점 signal</td><td>cleanup + aborted_tools</td></tr><tr><td>context limit</td><td>oversized history</td><td>compact 또는 blocking_limit</td></tr><tr><td>hook block</td><td>PreToolUse deny</td><td>effect 없음 + reason</td></tr></tbody></table>
+  <div class="exercise"><b>실습 · event ledger</b><p>각 실험에서 시간, event type, requestId, toolUseID, state transition을 NDJSON으로 기록한다.</p><small>완료 증거: 정렬 가능한 7개 trace와 invariant 검사</small></div></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section><section class="sheet">
+    <div class="section-head"><span>TAKEAWAYS</span><em>19</em></div>
+    <h2>루프를 이해했다는 기준</h2><p class="lede">while문을 찾는 것이 아니라 어떤 evidence가 어떤 상태 전이를 정당화하는지 설명할 수 있어야 한다.</p>
+    <div class="section-body"><div class="cards"><article class="card"><span class="eyebrow">control</span><h3>Generator</h3><div><p>stream event와 terminal을 하나의 protocol로 묶는다.</p></div></article><article class="card"><span class="eyebrow">state</span><h3>Explicit transition</h3><div><p>회복·budget·turn의 이유를 데이터로 남긴다.</p></div></article><article class="card"><span class="eyebrow">effect</span><h3>Tool pipeline</h3><div><p>모델 제안을 capability effect로 안전하게 번역한다.</p></div></article><article class="card"><span class="eyebrow">recovery</span><h3>Projection repair</h3><div><p>tombstone·withhold·compact로 일관된 관찰을 유지한다.</p></div></article></div><aside class="callout good"><strong>다음 권</strong><div>04권은 이 event stream을 사용자가 보는 terminal frame으로 바꾸는 React/Ink 경계를 해부한다.</div></aside></div>
+    <div class="sheet-foot"><span>Claude Code v2.1.88 / third-party reconstructed source</span><span>2026-09-20</span></div>
+  </section></body></html>

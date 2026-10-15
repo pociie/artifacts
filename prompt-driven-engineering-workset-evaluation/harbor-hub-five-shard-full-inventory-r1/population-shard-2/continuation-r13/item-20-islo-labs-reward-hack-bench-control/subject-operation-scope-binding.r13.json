@@ -1,0 +1,73 @@
+{
+  "authorityEffect": "none",
+  "blockers": [],
+  "effectivePrimaryMode": "single_task",
+  "excludedScopeKinds": ["ambient", "controller", "coverage"],
+  "kind": "subject-operation-scope-binding-decision/v1",
+  "reasonCodes": [
+    "non_subject_scopes_explicitly_excluded",
+    "selected_subject_topology_content_bound"
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-2:islo-labs/reward-hack-bench-control:r13:execute-harbor-subject",
+  "routeDecisionSha256": "982de037384e67990725f77e866859708314bc8694f9bbdf0123c24987e8cfde",
+  "scopeBindings": [
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:948ed8bc9594d2edab4c870d2aff349e8a9d26bd2d1aea6e2f6c03d2339d1fa2",
+      "disposition": "coverage_stimulus_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-20-islo-labs-reward-hack-bench-control/source-and-plan-binding.r13.json",
+      "scopeId": "coverage:population-shard-2:islo-labs/reward-hack-bench-control:r13",
+      "scopeKind": "coverage",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:2b7345bcdf2fa04d86286e073a5e96299d4f2b898b3d1560b94d3148098f3923",
+      "disposition": "context_only",
+      "ref": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/environment-platform-observation.json",
+      "scopeId": "ambient:population-shard-2:islo-labs/reward-hack-bench-control:r13",
+      "scopeKind": "ambient",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:9a58d8f0e409c7d9d539c0175dbca16484b8d5c1d951c0833988761c9b506763",
+      "disposition": "control_plane_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-20-islo-labs-reward-hack-bench-control/claim.r13.json",
+      "scopeId": "controller:population-shard-2:islo-labs/reward-hack-bench-control:r13",
+      "scopeKind": "controller",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": true,
+      "digest": "sha256:8ce86bd92bd4832f1ceb7bee819f33a8198b474f439571e17c47d164e2c23e0d",
+      "disposition": "eligible_report_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-20-islo-labs-reward-hack-bench-control/subject-topology-binding.r13.json",
+      "scopeId": "subject-scope:population-shard-2:islo-labs/reward-hack-bench-control:r13",
+      "scopeKind": "subject",
+      "state": "selected"
+    }
+  ],
+  "scopedMode": "single_task",
+  "segmentMode": null,
+  "status": "ready",
+  "subjectOperation": {
+    "agentArchitectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmDigest": null,
+    "agentSwarmRef": null,
+    "bindingDigest": "sha256:8ce86bd92bd4832f1ceb7bee819f33a8198b474f439571e17c47d164e2c23e0d",
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-20-islo-labs-reward-hack-bench-control/subject-topology-binding.r13.json",
+    "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "disposition": "eligible_report_only",
+    "scopeId": "subject-scope:population-shard-2:islo-labs/reward-hack-bench-control:r13",
+    "workflowPatternDigest": "sha256:93bf91356072b399cd3684ea2d482c7fe3afe4ca083e8443e86978b2bdb5d7bd",
+    "workflowPatternId": "pipeline",
+    "workflowPatternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/pipeline/workflow-pattern.json"
+  },
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "topologyRequirementDecisionSha256": "9d1341c53a1aaaa7a2ec8e8604805e1954764027f988038335d1c76829db0d79",
+  "topologySelectionDecisionSha256": "270809a61d8e2338ff2ace821fb2c869fbf66f4e204a734db823c40920aa6b78"
+}

@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 14,
+      "expectedEventHeadSha256": "fe5bde262511fb350ff1f4704818c9c83e988119f6da1c490d682e40af2725c3",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:90c485c42dadc79a685b515580338fe16ba7f24c2d5d86fc3c8125aa1705e471"
+      },
+      "identityDigest": "sha256:29bf1b040acfa370002666c5f97cc1ce60ea2a97693a7019a9d9ebd9720d23a5",
+      "itemId": "cookbook/test",
+      "laneId": "population-shard-1",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-1:cookbook/test:r13",
+      "sequence": 14,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-1:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 14,
+    "eventHeadSha256": "sha256:fe5bde262511fb350ff1f4704818c9c83e988119f6da1c490d682e40af2725c3",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:736bb7790b9767ed2a7179c6cc3888e1e7bd250f879814167f66e18c8776dfb6",
+  "eventCursor": 14,
+  "eventHeadSha256": "sha256:fe5bde262511fb350ff1f4704818c9c83e988119f6da1c490d682e40af2725c3",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-1",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-12-cookbook-test/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "cookbook/test",
+        "laneId": "population-shard-1",
+        "proposalId": "proposal:population-shard-1:cookbook/test:r13",
+        "workerId": "worker:harbor-population-shard-1:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 14,
+      "eventHeadSha256": "fe5bde262511fb350ff1f4704818c9c83e988119f6da1c490d682e40af2725c3",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 14,
+    "eventHeadSha256": "fe5bde262511fb350ff1f4704818c9c83e988119f6da1c490d682e40af2725c3",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-1",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}

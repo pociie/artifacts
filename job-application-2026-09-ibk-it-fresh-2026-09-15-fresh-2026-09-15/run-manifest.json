@@ -1,0 +1,51 @@
+{
+  "kind": "job-application-report-run-manifest/v1",
+  "status": "validation_failed",
+  "authority_effect": "none",
+  "run_id": "job-application-2026-09-ibk-it-fresh-2026-09-15",
+  "native_artifact": "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+  "request": ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15-fresh-2026-09-15/request.json",
+  "result": ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15-fresh-2026-09-15/result.json",
+  "final_user_output": ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15-fresh-2026-09-15/report.pdf",
+  "runtime_support": [
+    ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15-fresh-2026-09-15/report.html",
+    ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15-fresh-2026-09-15/report.txt",
+    ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15-fresh-2026-09-15/application-answer-projection.json"
+  ],
+  "validation": {
+    "requestResult": {
+      "status": "fail",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "- result:publication:overflow-failed"
+    },
+    "profile": {
+      "status": "fail",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "- result:profile:composition-not-proven"
+    },
+    "writingQuality": {
+      "status": "pass",
+      "exitCode": 0,
+      "stdout": "OK job-application writing quality review",
+      "stderr": ""
+    },
+    "answerProjection": {
+      "status": "pass",
+      "exitCode": 0,
+      "stdout": "OK job-application answer projection",
+      "stderr": ""
+    }
+  },
+  "retained_unknown_ids": [
+    "unknown-personal-ibk-motivation",
+    "unknown-preferred-it-domain",
+    "unknown-applicant-contribution-depth",
+    "unknown-portfolio-outcomes",
+    "unknown-production-operation",
+    "unknown-character-minimum"
+  ],
+  "qualified_candidate_ids": [],
+  "no_submission_performed": true
+}

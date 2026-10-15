@@ -1,0 +1,884 @@
+{
+  "kind": "job-application-report-request/v1",
+  "schema_version": 1,
+  "request_id": "request:ibk:it:2026-h2:r1",
+  "revision": "r1-five-set-pdf",
+  "application": {
+    "company_name": "IBK기업은행",
+    "role_title": "IT 신입행원",
+    "language": "ko-KR",
+    "official_posting_source_ids": [
+      "source-ibk-posting",
+      "source-ibk-question-endpoint",
+      "source-ibk-alio"
+    ]
+  },
+  "questions": [
+    {
+      "id": "question-motivation",
+      "prompt": "지원자님을 환영합니다! 수많은 회사 중에서 IBK기업은행을 선택해 주신 이유와, 앞으로 IBK에서 이루고 싶은 모습에 대해 편안하게 이야기해주세요.",
+      "min_chars": 1,
+      "max_chars": 1500,
+      "required_contents": [
+        "IBK기업은행을 선택한 이유",
+        "앞으로 IBK에서 이루고 싶은 모습",
+        "개인 경험 또는 관심과의 연결"
+      ],
+      "focus": {
+        "family_id": "motivation-and-company-fit",
+        "primary_claim": "금융 시스템의 전 과정을 책임지는 IT 역할과 백엔드·이벤트 처리 중심의 준비가 만나 IBK를 선택했다.",
+        "reader_takeaway": "공고의 IT 책임 범위를 읽고 자신의 기술 관심을 금융 시스템의 신뢰성으로 연결한 지원자다.",
+        "reviewer_need": "왜 IBK의 IT 직무인지, 입행 후 어떤 책임으로 기여할지 확인한다.",
+        "evidence_function": "공고의 금융 시스템 개발·운영 범위와 지원자의 핀테크 백엔드·이벤트 처리 포트폴리오를 선택 이유와 미래상에 연결한다.",
+        "rhetorical_move_ids": [
+          "direct-answer",
+          "company-role-connection",
+          "choice-or-action",
+          "relevant-context",
+          "future-direction"
+        ],
+        "voice_evidence_ids": [
+          "applicant-fact-profile-spring-backend",
+          "applicant-fact-bank-portfolio",
+          "applicant-fact-kafka-study",
+          "applicant-value-maintainability"
+        ],
+        "closing_function": "specific-next-responsibility",
+        "non_overlap_boundary": "회사 칭찬이나 막연한 포부가 아니라 공고의 IT 책임 범위와 개인 기술 준비가 만나는 현재의 선택을 중심으로 쓴다."
+      },
+      "user_confirmation_ids": [
+        "unknown-personal-ibk-motivation",
+        "unknown-preferred-it-domain"
+      ]
+    },
+    {
+      "id": "question-strength",
+      "prompt": "지원자님의 여러 강점 중에서 ‘이것만큼은 내가 자신 있다’고 말할 수 있는 것은 무엇인가요? 그리고 이를 발휘하여 성과를 낸 경험에 대해 들려주세요.",
+      "min_chars": 1,
+      "max_chars": 1500,
+      "required_contents": [
+        "가장 자신 있는 강점",
+        "강점을 발휘한 구체적 경험",
+        "본인의 행동",
+        "성과 또는 확인 가능한 결과"
+      ],
+      "focus": {
+        "family_id": "strength-and-work-style",
+        "primary_claim": "복잡한 기술 흐름을 책임 경계와 확인 가능한 결과로 구조화하는 힘이 가장 큰 강점이다.",
+        "reader_takeaway": "기술을 나열하는 대신 흐름·경계·결과를 묶어 설명하고 구현하는 지원자다.",
+        "reviewer_need": "강점이 자기평가가 아니라 반복 가능한 행동과 결과로 드러나는지 확인한다.",
+        "evidence_function": "공개 핀테크 MSA 저장소, Kafka 학습 기록, 정적 분석 도구, 알고리즘 기록에서 강점이 드러나는 구조적 선택과 산출물을 사용한다.",
+        "rhetorical_move_ids": [
+          "direct-answer",
+          "value-in-action",
+          "result-or-boundary",
+          "relevant-context",
+          "choice-or-action",
+          "company-role-connection"
+        ],
+        "voice_evidence_ids": [
+          "applicant-fact-bank-portfolio",
+          "applicant-fact-kafka-study",
+          "applicant-fact-static-analysis",
+          "applicant-value-maintainability"
+        ],
+        "closing_function": "role-relevance",
+        "non_overlap_boundary": "지원동기나 포부를 반복하지 않고 하나의 강점이 실제 작업 방식과 확인 가능한 산출물로 어떻게 나타났는지에 집중한다."
+      },
+      "user_confirmation_ids": [
+        "unknown-applicant-contribution-depth",
+        "unknown-portfolio-outcomes"
+      ]
+    },
+    {
+      "id": "question-growth",
+      "prompt": "결과에 관계없이 지원자님을 한 단계 성장시킨 경험이 궁금합니다. 그 과정에서 몸소 느꼈거나 배운 점, 그리고 이후 ‘변화된 나’에 대해서 솔직하게 들려주세요.",
+      "min_chars": 1,
+      "max_chars": 1500,
+      "required_contents": [
+        "성장시킨 경험",
+        "과정에서 느끼거나 배운 점",
+        "이후 변화된 모습",
+        "결과와 무관한 성장의 의미"
+      ],
+      "focus": {
+        "family_id": "project-problem-and-achievement",
+        "primary_claim": "기술적 결과보다 실패 경로와 검증 과정을 설계하는 태도를 배우며 문제를 대하는 방식이 바뀌었다.",
+        "reader_takeaway": "결과를 과장하지 않고 복잡한 문제에서 선택·검증·학습을 반복하는 엔지니어다.",
+        "reviewer_need": "성장 경험의 긴장과 선택, 배운 점, 이후 행동 변화가 인과적으로 이어지는지 확인한다.",
+        "evidence_function": "정적 분석·Kafka·알고리즘 학습 과정에서 단순 구현을 넘어 경계조건, 전달 보장, 재현 가능한 확인을 고민하게 된 경험을 사용한다.",
+        "rhetorical_move_ids": [
+          "relevant-context",
+          "choice-or-action",
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "learning-or-change",
+          "direct-answer"
+        ],
+        "voice_evidence_ids": [
+          "applicant-fact-static-analysis",
+          "applicant-fact-kafka-study",
+          "applicant-fact-algorithm",
+          "applicant-value-flow-traceability"
+        ],
+        "closing_function": "changed-practice",
+        "non_overlap_boundary": "현재 강점의 증명보다 한 경험에서 관점이 어떻게 바뀌었고 이후 문제 해결 습관이 어떻게 달라졌는지를 중심으로 쓴다."
+      },
+      "user_confirmation_ids": [
+        "unknown-applicant-contribution-depth",
+        "unknown-portfolio-outcomes"
+      ]
+    },
+    {
+      "id": "question-it-capability",
+      "prompt": "지원자님이 지닌 디지털·IT 역량 중 IBK에서 가장 잘 활용할 수 있다고 생각하는 역량은 무엇인지 본인만의 차별화된 스토리로 저희에게 이야기해주세요.",
+      "min_chars": 1,
+      "max_chars": 1500,
+      "required_contents": [
+        "가장 잘 활용할 디지털·IT 역량",
+        "차별화된 경험 또는 스토리",
+        "IBK에서의 활용 방식",
+        "역량의 한계와 확장 방향"
+      ],
+      "focus": {
+        "family_id": "capability-and-contribution",
+        "primary_claim": "Java·Spring 백엔드와 이벤트·데이터 흐름을 함께 보며 금융 시스템의 처리 신뢰성을 높이는 역량을 활용할 수 있다.",
+        "reader_takeaway": "애플리케이션 기능만이 아니라 인증·결제·이벤트·DB·운영 경계를 함께 읽는 IT 지원자다.",
+        "reviewer_need": "보유 기술이 공고의 금융 시스템·애플리케이션·데이터·운영 책임에 어떻게 쓰일지 확인한다.",
+        "evidence_function": "Spring 핀테크 MSA 저장소, Kafka 학습 기록, 프로그램 분석 경험을 하나의 처리 흐름 관점으로 묶어 IBK IT 기여를 설명한다.",
+        "rhetorical_move_ids": [
+          "direct-answer",
+          "choice-or-action",
+          "company-role-connection",
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "future-direction"
+        ],
+        "voice_evidence_ids": [
+          "applicant-fact-profile-spring-backend",
+          "applicant-fact-bank-portfolio",
+          "applicant-fact-kafka-study",
+          "applicant-fact-static-analysis"
+        ],
+        "closing_function": "concrete-contribution",
+        "non_overlap_boundary": "기술 목록을 반복하지 않고 하나의 핵심 역량이 금융 업무 흐름의 안정성·추적성·유지보수성에 기여하는 방식을 중심으로 쓴다."
+      },
+      "user_confirmation_ids": [
+        "unknown-applicant-contribution-depth",
+        "unknown-production-operation",
+        "unknown-preferred-it-domain"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-ibk-posting",
+      "source_type": "official_posting",
+      "locator": "https://secure.jasoseol.com/recruit/105904",
+      "authority": "primary",
+      "observed_at": "2026-09-15T18:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-ibk-question-endpoint",
+      "source_type": "official_posting",
+      "locator": "https://secure.jasoseol.com/employment/employment_question.json?employment_id=427724",
+      "authority": "primary",
+      "observed_at": "2026-09-15T18:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    },
+    {
+      "id": "source-ibk-alio",
+      "source_type": "official_posting",
+      "locator": "https://job.alio.go.kr/recruitview.do?idx=304338",
+      "authority": "primary",
+      "observed_at": "2026-09-15T18:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-ibk-blog",
+      "source_type": "official_company",
+      "locator": "https://blog.ibk.co.kr/569692",
+      "authority": "primary",
+      "observed_at": "2026-09-15T18:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-portfolio-profile",
+      "source_type": "applicant_statement",
+      "locator": "https://github.com/judangs",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-15T18:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-portfolio-bank-msa",
+      "source_type": "project_repository",
+      "locator": "https://github.com/judangs/dev-group-bank-msa",
+      "authority": "project_observation",
+      "observed_at": "2026-09-15T18:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-portfolio-kafka",
+      "source_type": "project_repository",
+      "locator": "https://github.com/judangs/study-kafka-with-java",
+      "authority": "project_observation",
+      "observed_at": "2026-09-15T18:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-portfolio-static-analysis",
+      "source_type": "project_repository",
+      "locator": "https://github.com/judangs/Static-Program-Analysis",
+      "authority": "project_observation",
+      "observed_at": "2026-09-15T18:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-portfolio-algorithm",
+      "source_type": "project_repository",
+      "locator": "https://github.com/judangs/algorithm",
+      "authority": "project_observation",
+      "observed_at": "2026-09-15T18:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-previous-ibk-cover-letter",
+      "source_type": "qualified_secondary",
+      "locator": "https://linkareer.com/cover-letter/35317",
+      "authority": "qualified_secondary",
+      "observed_at": "2026-09-15T18:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    }
+  ],
+  "application_analysis": {
+    "company_context": [
+      {
+        "id": "company-context-current-recruitment",
+        "observation": "IBK기업은행은 2026년 하반기 신입행원 채용에서 금융일반·디지털·IT·고졸인재 분야를 안내했다.",
+        "evidence_refs": [
+          "source-ibk-posting",
+          "source-ibk-blog",
+          "source-ibk-alio"
+        ],
+        "writing_implication": "지원동기는 회사 일반론보다 IT 분야를 선택한 현재의 이유와 준비를 연결해야 한다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "company-context-application-stage",
+        "observation": "공고는 서류심사 뒤 필기·실기·면접을 진행하며, IT 실기에서 알고리즘·데이터베이스를 평가한다고 안내한다.",
+        "evidence_refs": [
+          "source-ibk-alio",
+          "source-ibk-blog"
+        ],
+        "writing_implication": "자기소개서에서 백엔드 경험을 말하되 알고리즘·DB 기초와 실제 학습 흔적을 함께 보여주는 편이 안전하다.",
+        "certainty": "fact"
+      }
+    ],
+    "role_domain_concerns": [
+      {
+        "id": "role-concern-system-lifecycle",
+        "observation": "IT 주요 업무는 금융 시스템 개발·운영, 애플리케이션 개발·유지보수, 네트워크·보안, DB 관리, IT 인프라 구축·운영으로 제시된다.",
+        "evidence_refs": [
+          "source-ibk-posting"
+        ],
+        "writing_implication": "기능 구현만 강조하지 말고 데이터 흐름·장애 경로·유지보수 책임을 함께 말한다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "role-concern-reliability-inference",
+        "observation": "금융 시스템의 개발·운영과 보안·DB·인프라 범위를 함께 맡는 직무는 데이터 무결성·접근 통제·운영 확인을 중시할 가능성이 높다.",
+        "evidence_refs": [
+          "source-ibk-posting",
+          "source-ibk-alio"
+        ],
+        "writing_implication": "확인되지 않은 운영 성과는 주장하지 않고, 신뢰성에 대한 설계 관점과 학습 증거로 좁혀 쓴다.",
+        "certainty": "inference"
+      },
+      {
+        "id": "role-concern-quality-screen",
+        "observation": "공고는 은행명 오류, 표절, 무관·반복·부족한 답변과 블라인드 저촉 등을 서류 단계에서 검증한다고 안내한다.",
+        "evidence_refs": [
+          "source-ibk-alio",
+          "source-ibk-blog"
+        ],
+        "writing_implication": "다섯 세트는 문항별 역할을 구분하고, 제출 전에는 실제 본인의 기여와 문장을 다시 확인한다.",
+        "certainty": "fact"
+      }
+    ],
+    "fit_hypotheses": [
+      {
+        "id": "fit-bank-backend-to-it",
+        "statement": "핀테크 MSA 저장소의 인증·결제·Gateway·Consumer 구조는 금융 시스템과 애플리케이션 개발·유지보수 관심을 보여주는 소재가 될 수 있다.",
+        "evidence_refs": [
+          "source-portfolio-bank-msa"
+        ],
+        "confirmation_required": true
+      },
+      {
+        "id": "fit-kafka-to-reliability",
+        "statement": "Kafka 학습 기록은 이벤트 지연·순서·중복·트랜잭션을 질문하는 데이터 처리 관점을 보여주며 금융 업무 흐름의 신뢰성 이야기로 연결할 수 있다.",
+        "evidence_refs": [
+          "source-portfolio-kafka"
+        ],
+        "confirmation_required": true
+      },
+      {
+        "id": "fit-analysis-to-debugging",
+        "statement": "정적 분석 프로젝트는 복잡한 문제를 단계와 도달 가능성으로 분해하는 사고를 보여주며 원인 추적 역량의 근거가 될 수 있다.",
+        "evidence_refs": [
+          "source-portfolio-static-analysis"
+        ],
+        "confirmation_required": true
+      },
+      {
+        "id": "fit-algorithm-to-practical-test",
+        "statement": "알고리즘 풀이 기록은 IT 실기 준비의 학습 증거가 될 수 있으나 업무 성과나 시험 결과로 확대할 수는 없다.",
+        "evidence_refs": [
+          "source-portfolio-algorithm",
+          "source-ibk-alio"
+        ],
+        "confirmation_required": true
+      }
+    ]
+  },
+  "applicant_evidence": {
+    "facts": [
+      {
+        "id": "applicant-fact-profile-spring-backend",
+        "statement": "공개 GitHub 프로필에서 Spring 기반 애플리케이션 개발을 중심으로 백엔드 시스템의 구조와 아키텍처를 설계·개발하는 데 관심이 있다고 설명한다.",
+        "source_refs": [
+          "source-portfolio-profile"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-motivation",
+          "question-strength",
+          "question-it-capability"
+        ]
+      },
+      {
+        "id": "applicant-fact-bank-portfolio",
+        "statement": "공개 저장소 dev-group-bank-msa를 핀테크 서비스 플랫폼 백엔드 포트폴리오로 제시하고 있으며, 회원·인증·결제·Gateway·Kafka Consumer와 다중 모듈 구조를 설명한다.",
+        "source_refs": [
+          "source-portfolio-profile",
+          "source-portfolio-bank-msa"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-motivation",
+          "question-strength",
+          "question-it-capability"
+        ]
+      },
+      {
+        "id": "applicant-fact-kafka-study",
+        "statement": "공개 study-kafka-with-java 저장소에서 partition·key·순서·consumer lag·ISR·acks·idempotence·transaction·Spring Kafka 등을 학습 주제로 기록한다.",
+        "source_refs": [
+          "source-portfolio-kafka"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ]
+      },
+      {
+        "id": "applicant-fact-static-analysis",
+        "statement": "공개 Static-Program-Analysis 저장소에서 Python으로 ELF 분석, 디스어셈블리, 기본 블록·제어 흐름 복원, LLVM IR lifting을 시도한 구조를 설명한다.",
+        "source_refs": [
+          "source-portfolio-static-analysis"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ]
+      },
+      {
+        "id": "applicant-fact-algorithm",
+        "statement": "공개 algorithm 저장소에서 Programmers·Baekjoon·SWEA 문제 풀이 기록을 지속적으로 관리한다.",
+        "source_refs": [
+          "source-portfolio-algorithm"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-growth",
+          "question-strength"
+        ]
+      },
+      {
+        "id": "applicant-fact-payvue-interest",
+        "statement": "공개 프로필은 Payvue를 개인 자산 관리와 그룹 기반 금융을 연결하는 핀테크 웹앱으로 소개하며 금융 서비스 문제에 대한 관심을 보여준다.",
+        "source_refs": [
+          "source-portfolio-profile"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-motivation",
+          "question-it-capability"
+        ]
+      }
+    ],
+    "value_statements": [
+      {
+        "id": "applicant-value-maintainability",
+        "statement": "공개 프로필은 유지보수 가능성·확장성·도메인 중심 설계와 책임 기반 구조에 관심이 있다고 밝힌다.",
+        "source_refs": [
+          "source-portfolio-profile"
+        ],
+        "confirmed": true,
+        "allowed_uses": [
+          "question-motivation",
+          "question-strength",
+          "question-it-capability"
+        ]
+      },
+      {
+        "id": "applicant-value-flow-traceability",
+        "statement": "공개 프로젝트 기록을 종합하면 처리 흐름과 경계조건을 분해하고 확인 가능한 구조로 남기려는 작업 방식이 관찰된다.",
+        "source_refs": [
+          "source-portfolio-bank-msa",
+          "source-portfolio-kafka",
+          "source-portfolio-static-analysis"
+        ],
+        "confirmed": false,
+        "allowed_uses": [
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ]
+      }
+    ],
+    "unknowns": [
+      {
+        "id": "unknown-personal-ibk-motivation",
+        "needed_fact": "공고의 직무 적합성 외에 지원자 개인이 IBK기업은행을 선택한 직접적인 계기와 관심 고객·업무",
+        "affected_question_ids": [
+          "question-motivation"
+        ],
+        "why_material": "현재 자료만으로는 IBK만의 개인적 선택 이유를 지원자 목소리로 확정할 수 없다.",
+        "acceptable_evidence": "IBK 서비스 이용 경험, 관심 금융 고객, 기업 조사 메모, 지원 결심 계기 중 하나"
+      },
+      {
+        "id": "unknown-preferred-it-domain",
+        "needed_fact": "입행 후 선호하는 애플리케이션·데이터·보안·인프라 등 IT 세부 영역과 맡고 싶은 초기 책임",
+        "affected_question_ids": [
+          "question-motivation",
+          "question-it-capability"
+        ],
+        "why_material": "넓은 IT 직무 범위에서 미래상을 한 방향으로 좁히려면 개인 선호가 필요하다.",
+        "acceptable_evidence": "희망 시스템·기술 영역과 첫 1~2년 동안 배우고 싶은 책임을 한두 문장으로 확인"
+      },
+      {
+        "id": "unknown-applicant-contribution-depth",
+        "needed_fact": "각 공개 저장소에서 지원자가 직접 작성·설계·검증한 범위와 개인 프로젝트인지 협업 프로젝트인지",
+        "affected_question_ids": [
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ],
+        "why_material": "공개 저장소의 구조는 관찰되지만 파일별 개인 기여와 협업 맥락은 별도 확인이 필요하다.",
+        "acceptable_evidence": "커밋·PR·설계 문서·README·회고 또는 본인 기여 목록"
+      },
+      {
+        "id": "unknown-portfolio-outcomes",
+        "needed_fact": "포트폴리오의 테스트 결과, 처리량·지연·정확도·오류 재현 등 정량 또는 관찰 가능한 성과",
+        "affected_question_ids": [
+          "question-strength",
+          "question-growth"
+        ],
+        "why_material": "성과 문항에서 결과를 더 설득력 있게 말하되 생산 환경 성과로 과장하지 않기 위해 필요하다.",
+        "acceptable_evidence": "테스트 리포트, benchmark, issue 해결 기록, 데모 캡처 또는 전후 비교"
+      },
+      {
+        "id": "unknown-production-operation",
+        "needed_fact": "실제 배포·운영, 장애 대응, 보안 점검, DB·인프라 관리 경험 여부와 범위",
+        "affected_question_ids": [
+          "question-it-capability"
+        ],
+        "why_material": "공고의 운영·보안·인프라 범위에 대한 경험 수준을 정확히 구분할 수 있다.",
+        "acceptable_evidence": "배포 설정, 모니터링·로그, 보안 점검, 장애 회고 또는 학습 실습 기록"
+      },
+      {
+        "id": "unknown-character-minimum",
+        "needed_fact": "제출 시스템의 문항별 최소 글자 수와 최종 글자 수 산정 방식",
+        "affected_question_ids": [
+          "question-motivation",
+          "question-strength",
+          "question-growth",
+          "question-it-capability"
+        ],
+        "why_material": "확인된 공식 입력 제한은 문항별 1,500자 최대치이며, 최소치와 최종 카운터 동작은 별도 확인이 필요하다.",
+        "acceptable_evidence": "채용 입력 화면, 지원 안내 또는 최종 제출 단계의 카운터"
+      }
+    ]
+  },
+  "project_evidence": [
+    {
+      "id": "project-bank-msa",
+      "kind": "핀테크 서비스 플랫폼 백엔드",
+      "scale": "공개 GitHub 저장소의 다중 Gradle 모듈 프로젝트",
+      "applicant_role": "공개 저장소 작성자; 세부 파일별 직접 기여 범위는 확인 필요",
+      "contribution": "회원·인증·결제·Gateway·Kafka Consumer와 API·application·domain·store·core 모듈의 구조를 포트폴리오로 제시한다.",
+      "process": "Spring JPA와 MSA 환경을 전제로 서비스 책임과 공통 모듈, 외부 엔드포인트, 저장소 연결, 이벤트 소비 흐름을 분리해 기록한다.",
+      "learning": "금융 기능은 화면이나 API 하나가 아니라 인증·결제·이벤트·저장 경계를 함께 설계해야 유지보수 가능한 시스템이 된다는 관점을 보여준다.",
+      "claims": [
+        {
+          "id": "project-claim-bank-boundaries",
+          "statement": "README는 api·application·domain·store·core를 구분하고 회원·인증·결제·Gateway·Consumer 애플리케이션을 설명한다.",
+          "source_refs": [
+            "source-portfolio-bank-msa"
+          ],
+          "certainty": "observed",
+          "outcome_limit": "공개 구조와 문서만 확인되며 실제 사용자 규모·운영 성과는 알 수 없다."
+        },
+        {
+          "id": "project-claim-bank-events",
+          "statement": "Consumer 애플리케이션은 계정·결제·구매·계정 그룹 이벤트를 처리하고 이벤트 종류·범위에 따라 데이터 소스와 트랜잭션을 분리한다고 설명한다.",
+          "source_refs": [
+            "source-portfolio-bank-msa"
+          ],
+          "certainty": "observed",
+          "outcome_limit": "실제 이벤트 처리량·지연·장애 대응 결과는 확인되지 않았다."
+        },
+        {
+          "id": "project-claim-bank-gateway",
+          "statement": "Gateway 애플리케이션은 인증·인가와 API 서비스 라우팅을 담당하며 Spring Gateway·Spring Boot·WebFlux를 사용한다고 설명한다.",
+          "source_refs": [
+            "source-portfolio-bank-msa"
+          ],
+          "certainty": "observed",
+          "outcome_limit": "프로덕션 배포와 보안 검증 범위는 확인되지 않았다."
+        }
+      ],
+      "language_translations": [
+        {
+          "internal_term": "bank-api / bank-application / bank-domain / bank-store",
+          "universal_term": "외부 요청·업무 규칙·도메인 모델·데이터 저장 책임",
+          "use_condition": "모듈 이름을 그대로 나열하지 않고 책임 경계를 설명할 때 사용한다."
+        },
+        {
+          "internal_term": "Consumer app",
+          "universal_term": "이벤트를 받아 후속 처리를 수행하는 비동기 처리 영역",
+          "use_condition": "결제·계정 관련 후속 처리의 흐름을 설명할 때 사용한다."
+        }
+      ]
+    },
+    {
+      "id": "project-kafka-study",
+      "kind": "Kafka와 이벤트 처리 학습 기록",
+      "scale": "공개 GitHub 학습 저장소의 producer·consumer·connect·streams 예제와 문서",
+      "applicant_role": "학습 저장소 작성자; 실서비스 적용 범위는 확인 필요",
+      "contribution": "partition·key·순서·lag·ISR·acks·idempotence·transaction을 처리 신뢰성 관점에서 학습하고 기록한다.",
+      "process": "메시지 전달과 소비를 단순 성공 여부가 아니라 병렬성·순서·재처리·내구성의 선택 문제로 나눠 탐구한다.",
+      "learning": "이벤트 기반 시스템에서는 전송 성공과 업무 처리 완료를 구분하고, 실패·중복·지연을 설계 단계에서 질문해야 한다.",
+      "claims": [
+        {
+          "id": "project-claim-kafka-semantics",
+          "statement": "README는 partition 크기, 병렬 처리, consumer throughput·lag, message key·order, retention, ISR, producer acks, idempotence·transaction을 학습 주제로 기록한다.",
+          "source_refs": [
+            "source-portfolio-kafka"
+          ],
+          "certainty": "observed",
+          "outcome_limit": "학습 기록은 확인되지만 금융 서비스에 적용한 운영 지표는 확인되지 않았다."
+        },
+        {
+          "id": "project-claim-kafka-spring",
+          "statement": "저장소는 Spring Kafka producer·consumer와 multithreading·배포 전략을 함께 다룬다.",
+          "source_refs": [
+            "source-portfolio-kafka"
+          ],
+          "certainty": "observed",
+          "outcome_limit": "실제 장애 대응이나 대규모 운영 결과는 확인되지 않았다."
+        }
+      ],
+      "language_translations": [
+        {
+          "internal_term": "consumer lag",
+          "universal_term": "생산된 이벤트와 소비 완료 사이의 처리 지연",
+          "use_condition": "운영 관점의 모니터링과 처리 여유를 설명할 때 사용한다."
+        },
+        {
+          "internal_term": "idempotence / transaction",
+          "universal_term": "중복 처리의 영향을 줄이고 처리 단위를 일관되게 유지하는 방식",
+          "use_condition": "결제·계정 이벤트의 재시도와 데이터 일관성을 설명할 때 사용한다."
+        }
+      ]
+    },
+    {
+      "id": "project-static-analysis",
+      "kind": "정적 프로그램 분석 도구",
+      "scale": "공개 GitHub Python 프로젝트의 parser·disassembler·linker·lifter·test 구조",
+      "applicant_role": "프로젝트 작성자; 분석 정확도와 실제 적용 범위는 확인 필요",
+      "contribution": "ELF 헤더 분석, x86 디스어셈블리, 기본 블록·제어 흐름 복원, LLVM IR lifting 과정을 구현 대상으로 삼았다.",
+      "process": "바이너리 입력을 파싱하고 명령어와 제어 흐름을 분리해 분석한 뒤 중간 표현으로 옮기는 단계적 구조를 기록한다.",
+      "learning": "복잡한 결과를 신뢰하려면 결과 표현보다 각 단계의 가정과 도달 가능성을 분리해 검증해야 한다.",
+      "claims": [
+        {
+          "id": "project-claim-analysis-pipeline",
+          "statement": "README는 ELF 32/64비트 헤더 파싱부터 디스어셈블리·코드 패턴·기본 블록·제어 흐름·LLVM IR lifting을 기대 흐름으로 설명한다.",
+          "source_refs": [
+            "source-portfolio-static-analysis"
+          ],
+          "certainty": "observed",
+          "outcome_limit": "도구의 정확도·성능과 모든 바이너리에 대한 완전성은 확인되지 않았다."
+        },
+        {
+          "id": "project-claim-analysis-functions",
+          "statement": "RecursiveDisasm, LinearSweepDisasm, TraceControlFlow, CanReachable 등의 분석 함수를 구조로 제시한다.",
+          "source_refs": [
+            "source-portfolio-static-analysis"
+          ],
+          "certainty": "observed",
+          "outcome_limit": "각 함수의 테스트 커버리지와 실제 분석 성공률은 확인되지 않았다."
+        }
+      ],
+      "language_translations": [
+        {
+          "internal_term": "TraceControlFlow / CanReachable",
+          "universal_term": "제어 흐름을 추적하고 특정 경로의 도달 가능성을 확인하는 분석 단계",
+          "use_condition": "원인 추적과 경계조건 검토를 보편 언어로 바꿀 때 사용한다."
+        }
+      ]
+    },
+    {
+      "id": "project-algorithm-practice",
+      "kind": "알고리즘 문제 해결 기록",
+      "scale": "공개 GitHub 저장소의 Programmers·Baekjoon·SWEA 풀이 기록",
+      "applicant_role": "풀이 기록 작성자",
+      "contribution": "문제 해결 과정을 반복하며 자료구조·알고리즘 선택과 경계조건을 코드로 확인한다.",
+      "process": "문제의 입력 조건을 해석하고 풀이를 구현한 뒤 사례를 추가해 결과를 점검하는 연습을 지속한다.",
+      "learning": "빠른 구현보다 제약 조건과 실패 가능한 입력을 먼저 분리하는 습관이 문제 해결의 재현성을 높인다.",
+      "claims": [
+        {
+          "id": "project-claim-algorithm-record",
+          "statement": "공개 저장소는 Programmers·Baekjoon·SWEA 문제 풀이를 자동 기록하는 형태로 관리된다.",
+          "source_refs": [
+            "source-portfolio-algorithm"
+          ],
+          "certainty": "observed",
+          "outcome_limit": "문제 풀이 기록은 확인되지만 실기시험 점수나 업무 성과를 의미하지 않는다."
+        }
+      ],
+      "language_translations": [
+        {
+          "internal_term": "algorithm practice",
+          "universal_term": "입력 조건·경계 사례·복잡도를 점검하는 문제 해결 훈련",
+          "use_condition": "IT 실기 준비와 디버깅 습관을 연결할 때 사용한다."
+        }
+      ]
+    }
+  ],
+  "source_policy": {
+    "as_of": "2026-09-15",
+    "prefer_primary": true,
+    "allowed_source_ids": [
+      "source-ibk-posting",
+      "source-ibk-question-endpoint",
+      "source-ibk-alio",
+      "source-ibk-blog",
+      "source-portfolio-profile",
+      "source-portfolio-bank-msa",
+      "source-portfolio-kafka",
+      "source-portfolio-static-analysis",
+      "source-portfolio-algorithm",
+      "source-previous-ibk-cover-letter"
+    ],
+    "visible_source_ids": [
+      "source-ibk-posting",
+      "source-ibk-alio",
+      "source-ibk-blog",
+      "source-previous-ibk-cover-letter",
+      "source-portfolio-profile",
+      "source-portfolio-bank-msa",
+      "source-portfolio-kafka",
+      "source-portfolio-static-analysis",
+      "source-portfolio-algorithm"
+    ],
+    "missing_evidence_policy": "preserve_unknown"
+  },
+  "quality_profile": {
+    "policy_ref": "artifacts/agent-loop/document/job-application-report-production/vocabularies/job-application-report-quality-policy.json",
+    "mandatory_gate_ids": [
+      "request-and-question-coverage",
+      "source-and-freshness-boundary",
+      "applicant-attribution-and-confirmation",
+      "project-evidence-and-causality",
+      "role-domain-language-clarity",
+      "publication-and-privacy-safety"
+    ],
+    "dimensions": [
+      {
+        "id": "question-fit-and-differentiation",
+        "weight": 20
+      },
+      {
+        "id": "role-and-domain-alignment",
+        "weight": 20
+      },
+      {
+        "id": "applicant-viewpoint-and-values",
+        "weight": 18
+      },
+      {
+        "id": "evidence-causality-and-attribution",
+        "weight": 18
+      },
+      {
+        "id": "expression-specificity-and-coherence",
+        "weight": 14
+      },
+      {
+        "id": "clarity-and-interview-defensibility",
+        "weight": 10
+      }
+    ],
+    "rating_min": 0,
+    "rating_max": 4,
+    "qualification_threshold": 90,
+    "score_meaning": "editing_fitness_not_hiring_probability",
+    "revision_passes": 1
+  },
+  "output_profile": {
+    "profile_ref": "artifacts/agent-loop/document/job-application-report-production/profiles/five-set-pdf-report.profile.json",
+    "candidate_count": 5,
+    "report_format": "pdf",
+    "audiences": [
+      "IT 직군 지원자",
+      "커리어 조언자"
+    ],
+    "required_sections": [
+      "application-overview",
+      "company-role-analysis",
+      "question-map",
+      "candidate-answers",
+      "candidate-evaluation",
+      "expert-review",
+      "interview-preparation",
+      "material-requests"
+    ],
+    "design": {
+      "tone": "차분한 실무 편집형",
+      "comparison_layout": "editorial_sequence",
+      "avoid_patterns": [
+        "회사 칭찬의 일반론",
+        "기술 목록 나열",
+        "확인되지 않은 성과 확대",
+        "문항 간 동일한 서사"
+      ],
+      "raster_policy": "required_for_visual_assets"
+    },
+    "publication": {
+      "searchable_text_required": true,
+      "overflow_policy": "no_clipped_content",
+      "visible_source_policy": "allowlisted_only",
+      "content_policies": [
+        {
+          "id": "privacy-no-local-paths",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {
+            "type": "regex_any",
+            "values": [
+              "/Users/",
+              "/private/",
+              "file:",
+              "\\\\.collab/",
+              "node_modules"
+            ]
+          },
+          "rationale": "공개 보고서에 로컬 경로와 런타임 저장소 경로가 노출되지 않도록 한다."
+        },
+        {
+          "id": "reader-language-no-runtime-labels",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {
+            "type": "literal_any",
+            "values": [
+              "request.json",
+              "result.json",
+              "route-decision",
+              "reusable-artifact",
+              "authority_effect",
+              "candidate_id",
+              "writing-quality"
+            ]
+          },
+          "rationale": "지원자와 조언자가 읽는 보고서에서 실행 메커니즘과 내부 필드명을 제외한다."
+        },
+        {
+          "id": "reader-sections-present",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "present",
+          "matcher": {
+            "type": "literal_any",
+            "values": [
+              "지원 답안",
+              "면접 준비",
+              "추가 확인 사항"
+            ]
+          },
+          "rationale": "지원자가 답변을 고르고 다음 준비를 이어갈 핵심 섹션이 실제 텍스트로 존재하는지 확인한다."
+        },
+        {
+          "id": "visible-official-posting",
+          "severity": "advisory",
+          "target": "public_text_extract",
+          "expectation": "present",
+          "matcher": {
+            "type": "literal_any",
+            "values": [
+              "https://secure.jasoseol.com/recruit/105904"
+            ]
+          },
+          "rationale": "공고 원문을 독자가 다시 확인할 수 있도록 공개 출처를 표시한다."
+        }
+      ]
+    }
+  },
+  "privacy_boundary": {
+    "public_evidence_ids": [
+      "source-ibk-posting",
+      "source-ibk-alio",
+      "source-ibk-blog",
+      "source-previous-ibk-cover-letter",
+      "source-portfolio-profile",
+      "source-portfolio-bank-msa",
+      "source-portfolio-kafka",
+      "source-portfolio-static-analysis",
+      "source-portfolio-algorithm"
+    ],
+    "prohibited_content_categories": [
+      "private-reasoning",
+      "raw-prompt",
+      "runtime-handle",
+      "secret",
+      "absolute-path",
+      "unconfirmed-personal-fact"
+    ],
+    "identity_handling": "runtime_private"
+  },
+  "stop_budget": {
+    "max_research_rounds": 2,
+    "max_revision_passes": 1,
+    "unchanged_failure_limit": 1
+  }
+}

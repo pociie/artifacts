@@ -1,0 +1,395 @@
+{
+  "accountingDecision": {
+    "activeItemIds": [],
+    "authorityEffect": "none",
+    "diagnosticCodes": ["population_items_pending"],
+    "eventCursor": 36,
+    "eventHeadSha256": "e1e06ee50a2637c804c2bb6e872463a4a493515369d99f1dd8757b951d3a1bf4",
+    "kind": "population-settlement-accounting-decision/v1",
+    "nextAction": "continue_claiming",
+    "pendingItemIds": [
+      "openthoughts/tasktrove-exp-rpt-stack-ruby-v2",
+      "openthoughts/tasktrove-exp-rpt-taco-v2",
+      "openthoughts/tasktrove-exp-rpt-unitsyn-python-large",
+      "openthoughts/tasktrove-mix-h11-compositional-gradient-v2",
+      "openthoughts/tasktrove-mix-h2-language-balanced-v2",
+      "openthoughts/tasktrove-mix-h2-language-proportional",
+      "openthoughts/tasktrove-mix-h7-raw-volume-5k-v2",
+      "openthoughts/tasktrove-swe-rebench-patched-oracle",
+      "orinlabs/horizon-public",
+      "polyvorlabs/klyrune-bench",
+      "rexbench/rexbench",
+      "rsi-index/post-training",
+      "scale-ai/hil-bench",
+      "scale-ai/swe-atlas-tw",
+      "sldbench/sldbench",
+      "tbench-dw2-a-dw2_1784073189_2619080/dw2-dataset",
+      "terminal-bench-pro/terminal-bench-pro",
+      "terminal-bench-science/terminal-bench-science"
+    ],
+    "populationComplete": false,
+    "populationCount": 54,
+    "populationPlanRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/population-shard-plan.json",
+    "populationPlanSha256": "705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-2",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "terminalCounts": {
+      "cancelled": 0,
+      "completed": 0,
+      "failed": 0,
+      "held": 36
+    },
+    "terminalItemIds": [
+      "NovitaAI/tb21-data-science",
+      "NovitaAI/tb21-file-recovery",
+      "NovitaAI/tb21-systems-security",
+      "abhishek203/task-aw",
+      "algotune/algotune",
+      "bencalvert04/programbench",
+      "blobfishai/litigation",
+      "blobfishai/salesbench-100",
+      "cais/swebenchpro",
+      "cmu/refav",
+      "cohere/terminal_bench_aai",
+      "datacurve/deep-swe-1-1",
+      "evoeval/evoeval",
+      "featurebench/featurebench-lite",
+      "gabeorlanski/slopcodebench",
+      "gnucleus-ai/cad-bench",
+      "gustofied/compute-bazaar-bench",
+      "harbor-index/harbor-index",
+      "ibragim-badertdinov/swe-rebench-07-2026",
+      "islo-labs/reward-hack-bench-control",
+      "ivanleo/agent-search",
+      "kgmon/deepsearchqa",
+      "livecodebench/livecodebench",
+      "mmtb/multimedia-terminalbench",
+      "nvats/codeskills-bench",
+      "openai/swe-lancer-diamond-manager",
+      "openthoughts/tasktrove-exp-rle-adversarial",
+      "openthoughts/tasktrove-exp-rle-error-report-v3",
+      "openthoughts/tasktrove-exp-rpt-e2egit-large",
+      "openthoughts/tasktrove-exp-rpt-e2egit-v2",
+      "openthoughts/tasktrove-exp-rpt-methods2test-large-v2",
+      "openthoughts/tasktrove-exp-rpt-nemotron-cpp",
+      "openthoughts/tasktrove-exp-rpt-nemotron-junit",
+      "openthoughts/tasktrove-exp-rpt-stack-dockerfile-v2",
+      "openthoughts/tasktrove-exp-rpt-stack-jest-v2",
+      "ryanmarten/tb-test"
+    ]
+  },
+  "accountingRule": "exact active claims plus unique identity-bearing terminal receipts; legacy aggregates are non-authoritative",
+  "authorityEffect": "none",
+  "candidate": {
+    "identityDigest": "sha256:5f7adf7948048c4ab2f25cf0385bd11e43a80ba9243b192de663a90033113e30",
+    "itemId": "openthoughts/tasktrove-exp-rpt-stack-ruby-v2",
+    "materiallyDifferentFingerprint": true,
+    "sequence": 36
+  },
+  "casePreservingIdentity": true,
+  "claimPredicate": "same frozen assignment, no terminal disposition, no active claim, and materially changed capability/task fingerprint",
+  "continuationId": "population-shard-2:continuation-r13/item-36-openthoughts-tasktrove-exp-rpt-stack-ruby-v2",
+  "kind": "harbor-population-shard-queue-reconciliation/v4",
+  "legacyAggregate": {
+    "authorityForCurrentAccounting": "rejected_aggregate_without_identity_receipts",
+    "digest": "sha256:5ee7653d1aab49b116fd26808b750180f3c8bd0dc78c18363fdfea985c9a9813",
+    "reportedCounts": null,
+    "settlementRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/settlement-ledger.json",
+    "sourceRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-2/lane-operation-report.json",
+    "stateRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/operation-state.json"
+  },
+  "observedAt": "2026-08-28T19:37:36Z",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "preservedTerminalReceipts": [
+    {
+      "itemId": "datacurve/deep-swe-1-1",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:62b268916e55b05063a81c7142a31a0cfb23e126af8dae71e5d088165422acc9",
+      "receiptRef": "population-shard-2/route-and-gate-evidence.json"
+    },
+    {
+      "itemId": "ryanmarten/tb-test",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:7aa6dc9b1f07037ba169e4b3f004f63bc5ac233cadce04477e296819c27c1b30",
+      "receiptRef": "continuation-r5/simulation-evidence-probe-01.json"
+    },
+    {
+      "itemId": "harbor-index/harbor-index",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:b95fdee281a666d651c38379caf08f6f9b69481208afe3f57c69766df1ebac3d",
+      "receiptRef": "continuation-r5/simulation-evidence-probe-02.json"
+    },
+    {
+      "itemId": "NovitaAI/tb21-file-recovery",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:1b077b6c60b771bd748a131398553d72b3c83bfa7263a122ada88348a379ffac",
+      "receiptRef": "continuation-r5/simulation-evidence-probe-03.json"
+    },
+    {
+      "itemId": "NovitaAI/tb21-data-science",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:9f4546caf0a71a4ee9ec91468f5e1e5ee537e143476e3446afd52a8722a842f3",
+      "receiptRef": "continuation-r9/terminal-item-receipt.r9.json"
+    },
+    {
+      "itemId": "NovitaAI/tb21-systems-security",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:693c99e268a2809238a8af6065644ff962895806006060c1f1d621d6534b0890",
+      "receiptRef": "continuation-r12/terminal-item-receipt.r12.json"
+    },
+    {
+      "itemId": "abhishek203/task-aw",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:b25375022a80dc9fe21cdc2659c7f3336513f70fabe37d25dc50af3fb2bbc514",
+      "receiptRef": "population-shard-2/continuation-r13/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "algotune/algotune",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:ab0753902f7d03d36fed3ca195eee726732184570f6ab5337405acfde4a5b5c4",
+      "receiptRef": "population-shard-2/continuation-r13/item-05-algotune-algotune/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "bencalvert04/programbench",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:acadbb5e60a85d5a57651017c30f4b9566cd697b122e21e12b90a9203c4061d0",
+      "receiptRef": "population-shard-2/continuation-r13/item-06-bencalvert04-programbench/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "blobfishai/litigation",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:41f2262aa63781165e29504c932d3b9b6440ceb7d6256ad2afdf39ed073a469d",
+      "receiptRef": "population-shard-2/continuation-r13/item-07-blobfishai-litigation/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "blobfishai/salesbench-100",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:9c161440bdc837bd9cc1f63c4e53e799fa1221d67d768271a48c7164d0946be2",
+      "receiptRef": "population-shard-2/continuation-r13/item-08-blobfishai-salesbench-100/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "cais/swebenchpro",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:4e9dbf0921cd29615e35dd4f2eb1fee4cb390fc659be8458eeddcdce4b6de6d6",
+      "receiptRef": "population-shard-2/continuation-r13/item-09-cais-swebenchpro/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "cmu/refav",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:58f7dc8f7ef08a9cd7dcf6ffce0342e24b4f18dca8fcdd77b054ba56e404fd5e",
+      "receiptRef": "population-shard-2/continuation-r13/item-10-cmu-refav/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "cohere/terminal_bench_aai",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:03483dd1e72e3081f2bdb4131a821c5dc4c98a7027366c360ba91d9133df50b9",
+      "receiptRef": "population-shard-2/continuation-r13/item-11-cohere-terminal_bench_aai/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "evoeval/evoeval",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:34b8324e8652509964e0449aba42cbca319f86db9de33b043f0708b03dd5f0df",
+      "receiptRef": "population-shard-2/continuation-r13/item-13-evoeval-evoeval/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "featurebench/featurebench-lite",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:be2f614a458d1b6e7264071e247f3e72b7ef7a9c96c23847e78b64da5bdaf53f",
+      "receiptRef": "population-shard-2/continuation-r13/item-14-featurebench-featurebench-lite/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "gabeorlanski/slopcodebench",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:cccc18710a4850f8c1357454c3707a40e37eb3bc6b6d76c5b8556bbc534fcb9e",
+      "receiptRef": "population-shard-2/continuation-r13/item-15-gabeorlanski-slopcodebench/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "gnucleus-ai/cad-bench",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:38a31e75b5f964ea04b25a5e5e533bcd2b093f4a449e0b749d15b26d87b5483f",
+      "receiptRef": "population-shard-2/continuation-r13/item-16-gnucleus-ai-cad-bench/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "gustofied/compute-bazaar-bench",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:6b25afa07e3e855ac892aa9186942702409d0d0f36a86dbfda67ff4850b03bba",
+      "receiptRef": "population-shard-2/continuation-r13/item-17-gustofied-compute-bazaar-bench/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "ibragim-badertdinov/swe-rebench-07-2026",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:068f2246abe99f00ee0104f772d011c6f067680db457ac43bd4cfd24bb753f7e",
+      "receiptRef": "population-shard-2/continuation-r13/item-19-ibragim-badertdinov-swe-rebench-07-2026/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "islo-labs/reward-hack-bench-control",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:1488e20d7728648b1a0524fe5623ddf89c40032d3a6117245b219aa7b35bacd7",
+      "receiptRef": "population-shard-2/continuation-r13/item-20-islo-labs-reward-hack-bench-control/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "ivanleo/agent-search",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:ec0e28432338048bf98a3e1a2715928065f5d542ee4eb654cf042f455e7a6a67",
+      "receiptRef": "population-shard-2/continuation-r13/item-21-ivanleo-agent-search/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "kgmon/deepsearchqa",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:ed3065b0b139adbd4607574315cee153f5421fca2ebdeb45643eff6c2758fd05",
+      "receiptRef": "population-shard-2/continuation-r13/item-22-kgmon-deepsearchqa/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "livecodebench/livecodebench",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:8263181d65b06d56ca3be44e8fb623b628456052040ebf49ce706a933ab2501b",
+      "receiptRef": "population-shard-2/continuation-r13/item-23-livecodebench-livecodebench/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "mmtb/multimedia-terminalbench",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:42bcec1d55ccc795c18e6f867d87b27d1939d71711b1a3d3e9dc241d3cdf9adb",
+      "receiptRef": "population-shard-2/continuation-r13/item-24-mmtb-multimedia-terminalbench/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "nvats/codeskills-bench",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:7eab7fc44e089eaa2780a23deccfc52370a6ec7c944badb31c6fd6cb92aa1b6e",
+      "receiptRef": "population-shard-2/continuation-r13/item-25-nvats-codeskills-bench/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openai/swe-lancer-diamond-manager",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:69e9a109e17f8f9b5851e0b92b103de0c53134db9e2b6802c7600f0b6fc3bb7d",
+      "receiptRef": "population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-rle-adversarial",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:ce3b999112f2da0dd2e3a0eeadb7b2355445234520d5cb5a7517add4c2abb3e5",
+      "receiptRef": "population-shard-2/continuation-r13/item-27-openthoughts-tasktrove-exp-rle-adversarial/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-rle-error-report-v3",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:17120851e453f24b9bd46ef5d9a5a061d0ef940eba3f0b7d56b38319656d9e3e",
+      "receiptRef": "population-shard-2/continuation-r13/item-28-openthoughts-tasktrove-exp-rle-error-report-v3/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-rpt-e2egit-large",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:1350c8ec2a4521d4c1ae50e0eb36d637e82d8d37bf0f73ea7522c3177b2dbad9",
+      "receiptRef": "population-shard-2/continuation-r13/item-29-openthoughts-tasktrove-exp-rpt-e2egit-large/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-rpt-e2egit-v2",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:bbb787fc75226e718641137c8fe2a661da0f590271a754bf7729057ba07bb7c2",
+      "receiptRef": "population-shard-2/continuation-r13/item-30-openthoughts-tasktrove-exp-rpt-e2egit-v2/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-rpt-methods2test-large-v2",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:65d8102733ca8a7e1fbb02fec8b458b057484fccbf02005ebd16f1078efbb25b",
+      "receiptRef": "population-shard-2/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-methods2test-large-v2/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-rpt-nemotron-cpp",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:20392e06cdb99f140fe3dc89dc872b36cd8ca6bacb9cdfba52e0680bf7eb22cf",
+      "receiptRef": "population-shard-2/continuation-r13/item-32-openthoughts-tasktrove-exp-rpt-nemotron-cpp/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-rpt-nemotron-junit",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:c2189f961fc60ed555c282df343d5fc104485cacc6cdcb6f9bd34c9de229704a",
+      "receiptRef": "population-shard-2/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-nemotron-junit/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-rpt-stack-dockerfile-v2",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:986f081ddda23fd1a25e828d87780821def38fb6d1a90d876c69e2df99ce2c63",
+      "receiptRef": "population-shard-2/continuation-r13/item-34-openthoughts-tasktrove-exp-rpt-stack-dockerfile-v2/terminal-item-receipt.r13.json"
+    },
+    {
+      "itemId": "openthoughts/tasktrove-exp-rpt-stack-jest-v2",
+      "itemTerminalStatus": "held",
+      "overwritten": false,
+      "receiptDigest": "sha256:e8e1706ab092fceeb31c17563adc46a25f7f2a59fcbcb547b8b84475fc40073a",
+      "receiptRef": "population-shard-2/continuation-r13/item-35-openthoughts-tasktrove-exp-rpt-stack-jest-v2/terminal-item-receipt.r13.json"
+    }
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true
+  },
+  "queueHeadDigest": "sha256:e1e06ee50a2637c804c2bb6e872463a4a493515369d99f1dd8757b951d3a1bf4",
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-2",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "queueSnapshotBeforeClaim": {
+    "activeClaims": 0,
+    "eligibleClaimCount": 18,
+    "frozenShardMembers": 54,
+    "identityBearingTerminalReceipts": 36,
+    "pendingWithoutTerminalDisposition": 18,
+    "populationComplete": false,
+    "terminalCompleted": 0,
+    "terminalFailed": 0,
+    "terminalHeld": 36
+  },
+  "reconciliationDigest": "sha256:38720643633fcc4ab2e21b2a117931c0f55c0ef3550b0c33a76c720c4a8b9941",
+  "repartitionPerformed": false,
+  "schemaVersion": 4,
+  "shardId": "population-shard-2",
+  "sourceBinding": {
+    "decisionDigest": "sha256:1e7032e238e40d3af281a20c6e3c78d8d95672f86379cc52d5f76bf3f838cd16",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "operationEnvelopeDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "planSha256": "sha256:705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+    "populationDigest": "sha256:3129ad473a1c60f76d7159614e57c251e1fdf0a3ee64c9c347166e3315a1dd69",
+    "requirementScopeDigest": "sha256:7de1fe4160cec4912ba6856743cc115c946cd445cb736f351467a1666a8c50ef",
+    "shardCounts": {
+      "population-shard-1": 60,
+      "population-shard-2": 54,
+      "population-shard-3": 66,
+      "population-shard-4": 49,
+      "population-shard-5": 58
+    },
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656"
+  }
+}

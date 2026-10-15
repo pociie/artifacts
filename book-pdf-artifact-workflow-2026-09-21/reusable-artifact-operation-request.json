@@ -1,0 +1,148 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:book-pdf-artifact-workflow",
+  "requestRevision": "revision:v1",
+  "requestRelation": "new_objective",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/route-decision.json",
+    "decisionDigest": "sha256:bbebd935db1f9271130c76499676b6f8b40cada1992afdb89539a07eb833a3cf",
+    "effectiveMode": "loop"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:book-pdf-artifact-builder",
+    "agencyRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/subject-agency.json",
+    "agencyDigest": "sha256:82d86110a9af93c70f34852bf0a00f7781c5930421686e66ea15e5efc7caff83",
+    "responsibilityClass": "builder",
+    "outcomeContract": "outcome:book-quality-pdf-workflow-candidate",
+    "outputContract": "output:references-mockups-expression-map-and-dynamic-spec",
+    "decisionScopes": [
+      "domain-reference-selection",
+      "task-local-visual-direction-generation",
+      "pdf-expression-mapping",
+      "collaboration-safe-candidate-specification",
+      "focused-agents-routing-rule"
+    ],
+    "nonAuthority": [
+      "external-publication",
+      "runtime-session-activation",
+      "team-assignment",
+      "framework-promotion",
+      "final-pdf-acceptance",
+      "unrelated-source-change"
+    ]
+  },
+  "objective": "Inspect reusable repository coverage and produce a bounded task-local workflow candidate for domain-grounded, book-quality PDF artifacts with at least ten raster visual directions and cross-session collaboration handoffs.",
+  "successEvidenceRefs": [
+    "evidence:domain-book-reference-matrix",
+    "evidence:ten-plus-raster-mockups",
+    "evidence:mockup-to-pdf-expression-map",
+    "evidence:dynamic-artifact-specification",
+    "evidence:focused-agents-routing-rule",
+    "evidence:validation-report"
+  ],
+  "protectedConstraintRefs": [
+    "constraint:agencies-and-authority-remain-separate",
+    "constraint:copyright-safe-original-visual-directions",
+    "constraint:generated-outputs-under-artifact-directory",
+    "constraint:existing-user-changes-preserved",
+    "constraint:prompt-bodies-and-runtime-handles-not-tracked"
+  ],
+  "nonGoalRefs": [
+    "non-goal:production-pdf-publication",
+    "non-goal:application-source-change",
+    "non-goal:automatic-team-routing",
+    "non-goal:framework-wide-artifact-promotion",
+    "non-goal:copy-specific-book-trade-dress"
+  ],
+  "lifecycleIntent": "inspect",
+  "capabilities": [
+    "document and PDF production",
+    "editorial design exploration",
+    "domain reference research",
+    "raster image generation",
+    "multi-session artifact handoff"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "428a42e075cb9d5d66f87be50bf6b28b0ad29c1b597d88612f213a7634935779",
+  "allowedBaseClasses": [
+    "workflow",
+    "loop",
+    "agent_profile",
+    "agent_architecture",
+    "skill",
+    "contract_checker",
+    "knowledge_reference",
+    "dynamic_blueprint"
+  ],
+  "allowedScopes": ["framework", "team", "personal"],
+  "requiredFacts": ["owner", "scope", "consumer", "validation"],
+  "exactArtifactIds": [],
+  "relationshipDepth": 1,
+  "maxCandidates": 16,
+  "contextBudget": {
+    "maxSourceMembers": 20,
+    "maxConsumerRefs": 12,
+    "maxValidationRefs": 12
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "Whether a current reusable artifact already owns general book-quality PDF production.",
+      "Whether existing document-production artifacts define raster design exploration and selection.",
+      "Whether current cross-session coordination artifacts cover task-local creative evidence handoff without activation authority."
+    ],
+    "allowedRelationshipTypes": [
+      "defines",
+      "consumes",
+      "depends_on",
+      "validates",
+      "generates",
+      "binds_capability",
+      "observed_in"
+    ],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "consumer",
+      "effect",
+      "route_or_topology",
+      "lifecycle",
+      "protected_constraint"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "evidence:requested-artifact-set-present",
+      "evidence:adjacent-improvements-reported-only",
+      "evidence:user-changes-preserved"
+    ],
+    "validationRefs": [
+      "validation:reusable-artifact-operation-request-v2",
+      "validation:image-inventory-and-contact-sheet",
+      "validation:focused-document-and-governance-checks"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "loop-budget:book-pdf-artifact-workflow:v1",
+  "dataClassification": "internal",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": true,
+  "constructionAllowed": false,
+  "residualGapProven": false,
+  "requestDigest": "9560e5770894c6c8695c4dcef30958d8c720d44b751ffe4ecde30b7a0ffb65f6"
+}

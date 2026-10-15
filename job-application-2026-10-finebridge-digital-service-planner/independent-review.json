@@ -1,0 +1,37 @@
+{
+  "kind": "job-application-independent-review/v1",
+  "status": "separate_frozen_result_pass",
+  "authority_effect": "none",
+  "review_subject": "result.json",
+  "independence_boundary": "작성 결과를 수정하지 않는 별도 검토 패스로 문항 적합성, 근거 귀속, 과장 위험, 면접 방어 가능성을 재점검했다. 외부 전문가의 수락이나 지원자 확인은 아니다.",
+  "candidate_reviews": [
+    {
+      "candidate_id": "candidate-a",
+      "status": "pass_with_confirmation_points",
+      "question_reviews": [
+        { "question_id": "question-collaboration", "status": "pass", "finding": "문의 분류·요구사항·개발 작업 요청·QA·릴리즈 후 확인의 역할 흐름이 분명하다.", "follow_up": "공동 목표와 실제 조율 장면을 추가 확인한다." },
+        { "question_id": "question-preparation", "status": "pass", "finding": "전공·인터뷰·Figma·인턴 경험·도구 역량이 공고 업무와 연결된다.", "follow_up": "GA4 또는 SQL을 실제 적용한 사례를 준비한다." },
+        { "question_id": "question-value-formation", "status": "pass", "finding": "24건 인터뷰에서 단계와 완료 확인을 우선한 판단이 가치관으로 이어진다.", "follow_up": "프로토타입 검증 방식과 대표 발화를 확인한다." },
+        { "question_id": "question-three-to-five-year-goal", "status": "pass", "finding": "사용자 분석부터 출시 후 개선까지의 성장 경로가 직무와 맞닿아 있다.", "follow_up": "개인적으로 원하는 금융 서비스 영역과 지표를 확정한다." }
+      ]
+    },
+    {
+      "candidate_id": "candidate-b",
+      "status": "pass_with_confirmation_points",
+      "question_reviews": [
+        { "question_id": "question-collaboration", "status": "pass", "finding": "고객 문제를 개발팀 실행 기준으로 번역한 기여가 협업의 중심에 있다.", "follow_up": "작업 요청에 담은 정보와 실제 의견 조율을 확인한다." },
+        { "question_id": "question-preparation", "status": "pass", "finding": "문제 발견·흐름 구체화·데이터 재확인의 기획 역량 축이 선명하다.", "follow_up": "보유 도구 중 판단을 바꾼 실제 사례를 하나 준비한다." },
+        { "question_id": "question-value-formation", "status": "pass", "finding": "600건과 31% 분석이 개선 우선순위와 재확인 원칙으로 이어진다.", "follow_up": "감소 폭과 관찰 기간이 없으면 정성 결과로 제한한다." },
+        { "question_id": "question-three-to-five-year-goal", "status": "pass", "finding": "서비스 기획자에서 Product Manager로의 성장 경로가 공고 책임과 연결된다.", "follow_up": "PM으로서 직접 맡고 싶은 문제와 의사결정을 확인한다." }
+      ]
+    }
+  ],
+  "cross_candidate_finding": "A는 사용자 흐름과 금융 서비스의 명확성, B는 데이터와 협업 언어에 상대적 강점이 있어 선택 기준이 겹치지 않는다.",
+  "unresolved_confirmation_points": [
+    "협업한 팀의 공동 목표와 본인의 고유 결정",
+    "GA4·SQL 실제 적용 사례",
+    "인증 문의 감소 폭과 관찰 기간",
+    "3~5년 목표의 개인적 선호"
+  ],
+  "reviewer_does_not": ["rewrite_candidate", "accept_application", "submit_application", "infer_hiring_outcome"]
+}

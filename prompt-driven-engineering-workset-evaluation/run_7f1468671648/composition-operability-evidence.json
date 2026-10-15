@@ -1,0 +1,226 @@
+{
+  "kind": "composition-operability-evidence/v1",
+  "schemaVersion": 1,
+  "evidenceId": "evidence:loop-architecture:memory-backed-composition-operability:run-7f1468671648",
+  "status": "passed",
+  "authorityEffect": "none",
+  "scope": {
+    "workspaceRef": "workspace:collab-mono",
+    "sourceNamespaceRef": "memory:prompt-driven-engineering-workset-evaluation:run-7f1468671648",
+    "objectiveRevision": "memory-backed-composition-operability/v1",
+    "sessionRef": "session:loop-architecture-evaluation:2026-08-27",
+    "runRef": "orca:run:run_7f1468671648",
+    "worktreeRef": "worktree:collab-mono:integration-checkout",
+    "workflowRef": "artifacts/workflows/loop-assurance/memory-backed-composition-operability/workflow.json",
+    "workflowRevision": "sha256:b84d84de156b606f9ab4149f07e16c5e170485870aea8fd39d03a90e1c5cc99b",
+    "componentCompositionRef": "artifacts/loop-architecture/compositions/default-ai-execution-control/composition.json",
+    "componentCompositionRevision": "sha256:104bcfb0a2a04a9356a4230d0fa9ab20536d76b7fc1cb50e31230c68cee6c3ac"
+  },
+  "workingMemory": {
+    "bindingRef": "memory:prompt-driven-engineering-workset-evaluation:run-7f1468671648:binding",
+    "namespaceRef": "memory:prompt-driven-engineering-workset-evaluation:run-7f1468671648",
+    "sessionCursor": "memory:prompt-driven-engineering-workset-evaluation:run-7f1468671648:cursor-1",
+    "checkpointRefs": [
+      "memory:prompt-driven-engineering-workset-evaluation:run-7f1468671648:fan-out-admitted",
+      "memory:prompt-driven-engineering-workset-evaluation:run-7f1468671648:fan-in-validated-and-settled",
+      "composition-test:default-ai-execution-control:research-topology-closed"
+    ],
+    "retention": "runtime-private-until-resource-settlement-then-sanitized-immutable-projection",
+    "invalidation": [
+      "objective_revision_change",
+      "session_cursor_change",
+      "source_digest_change",
+      "topology_binding_change",
+      "participant_change",
+      "evaluation_profile_change",
+      "resource_settlement_change",
+      "privacy_classification_change"
+    ],
+    "digest": "sha256:72e0d18c1cd8bca0695ae6b4d850f3260b37c147cd5dc94bd860a5644c74c0d5"
+  },
+  "artifactSelection": {
+    "selectorRef": "artifacts/agent-loop/improvement/reusable-artifact-capability-lifecycle/scripts/select_reusable_artifact_candidates.py",
+    "selectedRefs": [
+      "artifacts/agent-loop/execution-preparation/working-memory/loop.yaml",
+      "artifacts/agent-loop/observation/composition-operability-evidence/loop.yaml",
+      "artifacts/workflows/loop-assurance/memory-backed-composition-operability/workflow.json",
+      "artifacts/loop-architecture/components/agentic-architecture/patterns/fan-out-fan-in/workflow-pattern.json",
+      "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/independent-fan-in/coordination-policy.json",
+      "artifacts/agents/research/architectures/component-algorithm-research.pipeline.json",
+      "artifacts/agent-swarms/research/component-algorithm-research/swarm.json",
+      "artifacts/loop-architecture/compositions/default-ai-execution-control/composition.json"
+    ],
+    "rejectedRefs": [],
+    "residualGapRefs": [],
+    "digest": "sha256:1d697080416b3e3a7d3e2ce3d4c09d8276f98871e2483b4ca1c7315d84fb4dff"
+  },
+  "topology": {
+    "workflowPatternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/fan-out-fan-in/workflow-pattern.json",
+    "workflowPatternId": "fan_out_fan_in",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/independent-fan-in/coordination-policy.json",
+    "agentArchitectureRef": "artifacts/agents/research/architectures/component-algorithm-research.pipeline.json",
+    "agentSwarmRef": "artifacts/agent-swarms/research/component-algorithm-research/swarm.json",
+    "patternQualificationRef": "composition-test:default-ai-execution-control:pattern-qualification:selected",
+    "swarmExtractionRef": "composition-test:default-ai-execution-control:swarm-extraction:ready",
+    "topologySelectionRef": "composition-test:default-ai-execution-control:topology-selection:selected",
+    "coordinationPlanRef": "composition-test:default-ai-execution-control:coordination-plan:ready",
+    "coordinationClosureRef": "composition-test:default-ai-execution-control:coordination-closure:closed",
+    "workflowFrontierRef": "composition-test:default-ai-execution-control:workflow-frontier:eligible"
+  },
+  "contributors": [
+    {
+      "taskRef": "orca:task:task_36efdfd62733",
+      "dispatchRef": "orca:dispatch:ctx_f16ae92eba4e",
+      "roleId": "demand-planner",
+      "profileRef": "artifacts/agents/agent-operation/agents/knowledge-demand-planner.yaml",
+      "packetState": "accepted",
+      "settlementState": "settled",
+      "evidenceRefs": [
+        "orca:message:msg_b22a749e18e7"
+      ],
+      "digest": "sha256:ab0dcf30937a2cca68294a78681d6598ae8bb567a914bbfefbc753b70ad48af1"
+    },
+    {
+      "taskRef": "orca:task:task_e68fe3ec3c7f",
+      "dispatchRef": "orca:dispatch:ctx_56126b1d351e",
+      "roleId": "context-curator",
+      "profileRef": "artifacts/agents/agent-operation/agents/context-curator.yaml",
+      "packetState": "accepted",
+      "settlementState": "settled",
+      "evidenceRefs": [
+        "orca:message:msg_73d0d4d1388e",
+        "orca:message:msg_505587ba9582"
+      ],
+      "digest": "sha256:3c158fd03547366f39782c1247bf3878bd4090dd576cc27f5f06b4c31f3658b3"
+    },
+    {
+      "taskRef": "orca:task:task_1ae63cad32e3",
+      "dispatchRef": "orca:dispatch:ctx_fc118eeb067e",
+      "roleId": "external-scout",
+      "profileRef": "artifacts/agents/agent-operation/agents/external-evidence-scout.yaml",
+      "packetState": "dissenting",
+      "settlementState": "settled",
+      "evidenceRefs": [
+        "orca:message:msg_346d590e00db",
+        "orca:message:msg_a54c27a00d04",
+        "harbor:job:artifact-research-topology-operability-oracle-r5:root-reward-0"
+      ],
+      "digest": "sha256:511ea818e2d51604e7dede8f64771d78ea5b1c54d916ed005cd014647845bf93"
+    },
+    {
+      "taskRef": "orca:task:task_5b2121ddb23d",
+      "dispatchRef": "orca:dispatch:ctx_8441501e2976",
+      "roleId": "synthesizer",
+      "profileRef": "artifacts/agents/research/agents/component-research-synthesizer.yaml",
+      "packetState": "accepted",
+      "settlementState": "settled",
+      "evidenceRefs": [
+        "orca:message:msg_91fedbca9cb8",
+        "orca:message:msg_e784f86e1a6f"
+      ],
+      "digest": "sha256:8ee9b4567f8ad2259f56c22b74843516ec64abed9f51db710f546f753c1df6fe"
+    },
+    {
+      "taskRef": "orca:task:task_bbe836904a7e",
+      "dispatchRef": "orca:dispatch:ctx_43ba3977b4ff",
+      "roleId": "validator",
+      "profileRef": "artifacts/agents/engineering/agents/source-evidence-reviewer.yaml",
+      "packetState": "accepted",
+      "settlementState": "settled",
+      "evidenceRefs": [
+        "orca:message:msg_04e862790a9b",
+        "orca:message:msg_a02dadf1fd99"
+      ],
+      "digest": "sha256:97995d00ea915a76b036ff478e4cb78e0377443651b3c0715b1406c77b36628d"
+    }
+  ],
+  "evaluation": {
+    "profileRef": "artifacts/agent-loop/assessment/engineering-evaluation/reward-evaluation/profiles/loop-architecture-artifact-improvement.reward-profile.json",
+    "dimensions": [
+      {
+        "id": "scope_binding",
+        "status": "pass",
+        "evidenceRefs": [
+          "memory:prompt-driven-engineering-workset-evaluation:run-7f1468671648:binding",
+          "checker:working-memory-binding:passed"
+        ]
+      },
+      {
+        "id": "reusable_artifact_selection",
+        "status": "pass",
+        "evidenceRefs": [
+          "artifact-selection:compose-existing:run-7f1468671648"
+        ]
+      },
+      {
+        "id": "workflow_operation",
+        "status": "pass",
+        "evidenceRefs": [
+          "artifacts/workflows/loop-assurance/memory-backed-composition-operability/workflow.json"
+        ]
+      },
+      {
+        "id": "architecture_swarm_operation",
+        "status": "pass",
+        "evidenceRefs": [
+          "composition-test:default-ai-execution-control:research-topology-closed",
+          "orca:run:run_7f1468671648:fan-out-fan-in-closed"
+        ]
+      },
+      {
+        "id": "deterministic_validation",
+        "status": "pass",
+        "evidenceRefs": [
+          "checker:composition-operability-evidence:passed",
+          "harbor:job:artifact-research-topology-operability-oracle-r6:root-reward-1",
+          "harbor:job:artifact-research-topology-operability-luna-low-r3:root-reward-1"
+        ]
+      },
+      {
+        "id": "privacy_boundary",
+        "status": "pass",
+        "evidenceRefs": [
+          "policy:loop-assurance:composition-operability-evidence:metadata-only"
+        ]
+      },
+      {
+        "id": "resource_settlement",
+        "status": "pass",
+        "evidenceRefs": [
+          "memory:prompt-driven-engineering-workset-evaluation:run-7f1468671648:fan-in-validated-and-settled"
+        ]
+      }
+    ],
+    "aggregation": "all_pass",
+    "rootReward": 1,
+    "failureClasses": []
+  },
+  "settlement": {
+    "resourceRefs": [
+      "orca:dispatch:ctx_f16ae92eba4e",
+      "orca:dispatch:ctx_56126b1d351e",
+      "orca:dispatch:ctx_fc118eeb067e",
+      "orca:dispatch:ctx_8441501e2976",
+      "orca:dispatch:ctx_43ba3977b4ff",
+      "harbor:job:artifact-research-topology-operability-oracle-r6",
+      "harbor:job:artifact-research-topology-operability-luna-low-r3"
+    ],
+    "reconciliationRef": "memory:prompt-driven-engineering-workset-evaluation:run-7f1468671648:fan-in-validated-and-settled",
+    "state": "complete"
+  },
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "contentEvidenceRefs": []
+  },
+  "sourceRefs": [
+    "orca:run:run_7f1468671648",
+    "memory:prompt-driven-engineering-workset-evaluation:run-7f1468671648:binding",
+    "composition-test:default-ai-execution-control:research-topology-closed",
+    "harbor:job:artifact-research-topology-operability-oracle-r5:root-reward-0",
+    "harbor:job:artifact-research-topology-operability-oracle-r6:root-reward-1",
+    "harbor:job:artifact-research-topology-operability-luna-low-r3:root-reward-1"
+  ],
+  "createdAt": "2026-08-27T17:42:00+09:00",
+  "digest": "sha256:ea66ec0e10dba11ae9244b72787c472329d058f9ca18294f8aaeb0b7e81d1806"
+}

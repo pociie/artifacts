@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "4d2ef9c78b4a617f9a0fcbc940a1cf8613e2298238625a08d80e69717b6f6630",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-49-swe-bench-swe-smith/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-49-swe-bench-swe-smith/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "1265ad6299632243b6d74e31a3c045d77d661369e2c15f1db686bb5d0e2e1ff9",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "0dcc3f1bd80dcce399d539910e0890a4a3e43e698879b0300d8e8cdc99f1d1bf",
+      "topologySelectionDecisionSha256": "773c98f01a26410e6661a78f4f065214eacffc6685858894758303de1c8e9435"
+    },
+    {
+      "coordinationPlanDecisionSha256": "4d2ef9c78b4a617f9a0fcbc940a1cf8613e2298238625a08d80e69717b6f6630",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-49-swe-bench-swe-smith/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-49-swe-bench-swe-smith/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "1265ad6299632243b6d74e31a3c045d77d661369e2c15f1db686bb5d0e2e1ff9",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "0dcc3f1bd80dcce399d539910e0890a4a3e43e698879b0300d8e8cdc99f1d1bf",
+      "topologySelectionDecisionSha256": "773c98f01a26410e6661a78f4f065214eacffc6685858894758303de1c8e9435"
+    },
+    {
+      "coordinationPlanDecisionSha256": "4d2ef9c78b4a617f9a0fcbc940a1cf8613e2298238625a08d80e69717b6f6630",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-49-swe-bench-swe-smith/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-49-swe-bench-swe-smith/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "1265ad6299632243b6d74e31a3c045d77d661369e2c15f1db686bb5d0e2e1ff9",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "0dcc3f1bd80dcce399d539910e0890a4a3e43e698879b0300d8e8cdc99f1d1bf",
+      "topologySelectionDecisionSha256": "773c98f01a26410e6661a78f4f065214eacffc6685858894758303de1c8e9435"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

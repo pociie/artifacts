@@ -1,0 +1,354 @@
+{
+  "acceptedAsExecutionEvidence": false,
+  "authorityEffect": "none",
+  "catalogBinding": {
+    "metricCatalogDigest": "sha256:a7654f58430dddabd4a23c0b7261f6206e7aa7ebcbcf5828fb27a2338e7de952",
+    "metricCatalogRef": "artifact:mode-reasoning-metric-catalog:v1",
+    "profileCatalogDigest": "sha256:b4a5718ab182e2d157c8defe3a3fac866f75c59daf82a239ada200798298a3dc",
+    "profileCatalogRef": "artifact:mode-reasoning-profile-catalog:v1",
+    "rubricCatalogDigest": "sha256:03192c68d307edeb2aa80cdb9b9ef2cc620e4342abed0c4bfe961890cf1e5afe",
+    "rubricCatalogRef": "artifact:mode-reasoning-rubric-catalog:v1"
+  },
+  "context": {
+    "claims": [
+      {
+        "claimRef": "claim:target:new-contract-package",
+        "disposition": "include",
+        "evidenceRefs": ["evidence:user-request:target"],
+        "expiresAt": null,
+        "lensId": "target",
+        "purposeRef": "purpose:bind-exact-output",
+        "relevanceOperatorRefs": ["target_contract", "implementation_strategy"],
+        "sensitive": false,
+        "sourceClass": "explicit_user",
+        "userSpecific": false
+      },
+      {
+        "claimRef": "claim:constraints:report-only",
+        "disposition": "include",
+        "evidenceRefs": ["evidence:repository-governance:authority"],
+        "expiresAt": null,
+        "lensId": "constraints",
+        "purposeRef": "purpose:fence-authority",
+        "relevanceOperatorRefs": ["effect_fence", "implementation_strategy"],
+        "sensitive": false,
+        "sourceClass": "project_evidence",
+        "userSpecific": false
+      },
+      {
+        "claimRef": "claim:expectation:implement-and-validate",
+        "disposition": "include",
+        "evidenceRefs": ["evidence:user-request:execution-expectation"],
+        "expiresAt": null,
+        "lensId": "execution_expectation",
+        "purposeRef": "purpose:bind-work-boundary",
+        "relevanceOperatorRefs": ["target_contract", "completion_boundary"],
+        "sensitive": false,
+        "sourceClass": "explicit_user",
+        "userSpecific": false
+      },
+      {
+        "claimRef": "claim:evidence:focused-checker",
+        "disposition": "include",
+        "evidenceRefs": ["evidence:checker-registry:focused-validation"],
+        "expiresAt": null,
+        "lensId": "evidence",
+        "purposeRef": "purpose:align-validation",
+        "relevanceOperatorRefs": ["validation_alignment", "completion_boundary"],
+        "sensitive": false,
+        "sourceClass": "project_evidence",
+        "userSpecific": false
+      },
+      {
+        "claimRef": "claim:avoidance:no-private-reasoning",
+        "disposition": "include",
+        "evidenceRefs": ["evidence:prompt-contract:privacy-boundary"],
+        "expiresAt": null,
+        "lensId": "avoidance",
+        "purposeRef": "purpose:preserve-reasoning-boundary",
+        "relevanceOperatorRefs": ["mechanism_selection", "effect_fence"],
+        "sensitive": false,
+        "sourceClass": "project_evidence",
+        "userSpecific": false
+      },
+      {
+        "claimRef": "claim:preference:compact-handoff",
+        "disposition": "include",
+        "evidenceRefs": ["evidence:confirmed-task-preference:v1"],
+        "expiresAt": "2026-08-31T09:00:00+09:00",
+        "lensId": "considerations",
+        "purposeRef": "purpose:minimize-prompt-projection",
+        "relevanceOperatorRefs": ["implementation_strategy", "completion_boundary"],
+        "sensitive": false,
+        "sourceClass": "confirmed_profile",
+        "userSpecific": true
+      },
+      {
+        "claimRef": "claim:hypothesis:framework-preference",
+        "disposition": "omit",
+        "evidenceRefs": [],
+        "expiresAt": null,
+        "lensId": "considerations",
+        "purposeRef": "purpose:avoid-invented-preference",
+        "relevanceOperatorRefs": ["mechanism_selection"],
+        "sensitive": false,
+        "sourceClass": "model_hypothesis",
+        "userSpecific": false
+      }
+    ],
+    "conflictRefs": [],
+    "includedClaimRefs": [
+      "claim:target:new-contract-package",
+      "claim:constraints:report-only",
+      "claim:expectation:implement-and-validate",
+      "claim:evidence:focused-checker",
+      "claim:avoidance:no-private-reasoning",
+      "claim:preference:compact-handoff"
+    ],
+    "omittedClaimRefs": ["claim:hypothesis:framework-preference"],
+    "requiredContextClaimRefs": [],
+    "unknownRefs": ["unknown:accepted-outcome-not-yet-available"]
+  },
+  "input": {
+    "consumerRef": "consumer:prompt-engineering-contract",
+    "modeDecisionRef": "artifacts/population-shard-4/route-decision.json",
+    "modeStateRevision": "orchestration-r1",
+    "nonScopeRefs": ["non-scope:no-runtime-prompt-body", "non-scope:no-mode-selection"],
+    "objectiveRef": "objective:harbor-hub-five-shard-full-inventory-source-r5",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r5",
+    "receivedAt": "2026-08-28T13:02:00Z",
+    "requestRef": "request:harbor-hub-five-shard-full-inventory-source-r5:population-shard-4:hello-world"
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "sha256:92c5a678a73ba66a1218a3040d5f88c49aa89136134461b0076692f7f2ca309e"
+  },
+  "kind": "mode-reasoning-envelope/v1",
+  "observations": {
+    "catalogRef": "artifact:mode-reasoning-metric-catalog:v1",
+    "metricRecords": [
+      {
+        "denominator": 6,
+        "limitationRefs": ["limitation:conformance-is-not-outcome"],
+        "metricId": "mode_reasoning.profile_conformance",
+        "numerator": 6,
+        "populationRef": "population:harbor-shard-4:hello-world",
+        "scope": "cross_mode",
+        "state": "observed",
+        "unit": "ratio",
+        "value": 1.0,
+        "windowRef": "window:harbor-round-r5"
+      },
+      {
+        "denominator": 1,
+        "limitationRefs": ["limitation:requires-downstream-execution-observation"],
+        "metricId": "mode_reasoning.single_task_scope_deviation",
+        "numerator": 0,
+        "populationRef": "population:harbor-shard-4:hello-world",
+        "scope": "single_task",
+        "state": "observed",
+        "unit": "ratio",
+        "value": 0.0,
+        "windowRef": "window:harbor-round-r5"
+      }
+    ]
+  },
+  "profile": {
+    "callerOwnsMode": true,
+    "maySelectOrChangeMode": false,
+    "modeId": "single_task",
+    "profileId": "mode-reasoning:single-task:v1"
+  },
+  "reasoningBudgetHint": {
+    "advisoryOnly": true,
+    "class": "bounded_max",
+    "reasonRefs": ["reason:exact-max-request", "reason:single-task-focused-validation"],
+    "runtimeSelectionOwnerRef": "owner:harbor-lane-runtime"
+  },
+  "reasoningEnvelope": {
+    "fallbackRefs": ["fallback:require-context", "fallback:reassess-six-mode"],
+    "invalidationTriggerRefs": [
+      "target_revision_changed",
+      "effect_changed",
+      "iteration_required",
+      "multiple_contributions_required",
+      "objective_changed"
+    ],
+    "operatorRefs": [
+      "target_contract",
+      "mechanism_selection",
+      "effect_fence",
+      "implementation_strategy",
+      "validation_alignment",
+      "completion_boundary"
+    ],
+    "optionalActivatedOperatorRefs": [],
+    "outputContractRef": "contract:mode-reasoning-envelope:v1",
+    "privateReasoningStored": false,
+    "promptBodyStored": false,
+    "promptEngineeringContractRef": "artifact:prompt-engineering-contract:v1",
+    "requiredEvidenceRefs": [
+      "evidence:exact-target-and-revision",
+      "evidence:effect-and-recovery-boundary",
+      "evidence:focused-validation"
+    ],
+    "stopConditionRefs": [
+      "output_and_validation_satisfied",
+      "scope_expansion",
+      "authority_gap",
+      "validation_gap"
+    ],
+    "transcriptStored": false
+  },
+  "recordId": "mode-reasoning:harbor-shard-4:r5:hello-world",
+  "result": {
+    "disposition": "eligible_report_only",
+    "effectPermission": "none",
+    "missingContextRefs": [],
+    "modeSelectionEffect": "none",
+    "nextActionRef": "action:execute-admitted-harbor-trial",
+    "nextOwnerRef": "owner:harbor-lane-runtime"
+  },
+  "revision": "r5",
+  "rubric": {
+    "aggregateScoreAllowed": false,
+    "criteria": [
+      {
+        "anchor": "independently_verified",
+        "criterionId": "universal.goal_fidelity",
+        "evidenceRefs": ["evidence:objective-diff-review"],
+        "kind": "mandatory",
+        "layer": "universal",
+        "limitationRefs": [],
+        "nextActionRef": null
+      },
+      {
+        "anchor": "supported",
+        "criterionId": "universal.provenance_traceability",
+        "evidenceRefs": ["evidence:claim-reference-check"],
+        "kind": "mandatory",
+        "layer": "universal",
+        "limitationRefs": [],
+        "nextActionRef": null
+      },
+      {
+        "anchor": "independently_verified",
+        "criterionId": "universal.authority_effect_boundary",
+        "evidenceRefs": ["evidence:authority-field-check"],
+        "kind": "mandatory",
+        "layer": "universal",
+        "limitationRefs": [],
+        "nextActionRef": null
+      },
+      {
+        "anchor": "supported",
+        "criterionId": "universal.privacy_and_reasoning_boundary",
+        "evidenceRefs": ["evidence:forbidden-content-check"],
+        "kind": "mandatory",
+        "layer": "universal",
+        "limitationRefs": [],
+        "nextActionRef": null
+      },
+      {
+        "anchor": "supported",
+        "criterionId": "universal.no_invented_user_context",
+        "evidenceRefs": ["evidence:source-class-check"],
+        "kind": "mandatory",
+        "layer": "universal",
+        "limitationRefs": [],
+        "nextActionRef": null
+      },
+      {
+        "anchor": "supported",
+        "criterionId": "universal.stop_and_invalidation",
+        "evidenceRefs": ["evidence:mode-profile-condition-check"],
+        "kind": "mandatory",
+        "layer": "universal",
+        "limitationRefs": [],
+        "nextActionRef": null
+      },
+      {
+        "anchor": "supported",
+        "criterionId": "universal.prompt_economy",
+        "evidenceRefs": ["evidence:context-operator-relevance-check"],
+        "kind": "qualifying",
+        "layer": "universal",
+        "limitationRefs": [],
+        "nextActionRef": null
+      },
+      {
+        "anchor": "supported",
+        "criterionId": "universal.bias_risk_disposition",
+        "evidenceRefs": ["evidence:hypothesis-omission-check"],
+        "kind": "qualifying",
+        "layer": "universal",
+        "limitationRefs": [],
+        "nextActionRef": null
+      },
+      {
+        "anchor": "independently_verified",
+        "criterionId": "single_task.exact_target_and_output",
+        "evidenceRefs": ["evidence:exact-output-contract-review"],
+        "kind": "mandatory",
+        "layer": "mode",
+        "limitationRefs": [],
+        "nextActionRef": null
+      },
+      {
+        "anchor": "supported",
+        "criterionId": "single_task.effect_and_recovery",
+        "evidenceRefs": ["evidence:effect-fence-review"],
+        "kind": "mandatory",
+        "layer": "mode",
+        "limitationRefs": [],
+        "nextActionRef": null
+      },
+      {
+        "anchor": "supported",
+        "criterionId": "single_task.validation_alignment",
+        "evidenceRefs": ["evidence:focused-checker-and-tests"],
+        "kind": "mandatory",
+        "layer": "mode",
+        "limitationRefs": [],
+        "nextActionRef": null
+      },
+      {
+        "anchor": "supported",
+        "criterionId": "task.machine_readable_contract",
+        "evidenceRefs": ["evidence:json-schema-present"],
+        "kind": "mandatory",
+        "layer": "task",
+        "limitationRefs": [],
+        "nextActionRef": null
+      },
+      {
+        "anchor": "supported",
+        "criterionId": "user.compact_handoff",
+        "evidenceRefs": ["evidence:confirmed-task-preference:v1"],
+        "kind": "qualifying",
+        "layer": "user",
+        "limitationRefs": [],
+        "nextActionRef": null
+      }
+    ],
+    "ephemeralProfiles": [
+      {
+        "createdAt": "2026-08-24T09:00:00+09:00",
+        "expiresAt": "2026-08-31T09:00:00+09:00",
+        "layer": "task",
+        "mayWeakenInherited": false,
+        "profileRef": "rubric:task:contract-implementation:v1"
+      },
+      {
+        "createdAt": "2026-08-24T09:00:00+09:00",
+        "expiresAt": "2026-08-31T09:00:00+09:00",
+        "layer": "user",
+        "mayWeakenInherited": false,
+        "profileRef": "rubric:user:compact-handoff:v1"
+      }
+    ],
+    "profileOrder": ["universal", "mode", "task", "user"]
+  },
+  "schemaVersion": 1,
+  "status": "report_only"
+}
