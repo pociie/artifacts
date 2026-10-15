@@ -1,0 +1,69 @@
+{
+  "dynamicCandidates": [
+    {
+      "artifactKind": "construct",
+      "artifactRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/dynamic-candidate.r13.json",
+      "capabilityIds": ["effective_provider_receipt"],
+      "compatibleModes": ["single_task"],
+      "componentRefs": [
+        "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+        "artifacts/loop-architecture/components/execution-routing/component.json",
+        "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+      ],
+      "coveredGapIds": ["gap:item-effective-provider-receipt"],
+      "digest": "sha256:a4450cc3e812f29bed8aa11473448d769a5490b24e585245ea344536b41e6026",
+      "expiryConditionRefs": [
+        "item-terminal-settlement",
+        "operation-revision-successor",
+        "provider-receipt-observed"
+      ],
+      "fallbackRef": "fallback:hold:population-shard-4:ryanmarten/tb4-preview:until-effective-provider-receipt",
+      "invalidationConditionRefs": [
+        "source-binding-change",
+        "requirement-scope-change",
+        "capability-fingerprint-change"
+      ],
+      "operationEvidenceContractRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "runPrivate": true,
+      "structuralCost": 1,
+      "topologyBearing": false,
+      "validated": true,
+      "validationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/artifact-reuse-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/candidate-probe.r13.json"
+      ],
+      "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-40-ryanmarten-tb4-preview:ryanmarten/tb4-preview"
+    }
+  ],
+  "nativeTopologyReceiptAvailable": false,
+  "nativeTopologyReceiptDigest": null,
+  "nativeTopologyReceiptRef": null,
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:ryanmarten/tb4-preview:88bbbce459b3adbc1311eabf085de23c46f9ee34a385840849041122b30f6dc2:dynamic-composition",
+  "residualGaps": [
+    {
+      "allowedDynamicKinds": ["context_projection"],
+      "id": "gap:r13-context-projection",
+      "requiredCapabilityIds": ["r13_context_binding"]
+    },
+    {
+      "allowedDynamicKinds": ["construct"],
+      "id": "gap:item-effective-provider-receipt",
+      "requiredCapabilityIds": ["effective_provider_receipt"]
+    }
+  ],
+  "reusableArtifacts": [
+    {
+      "artifactRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json",
+      "coveredGapIds": ["gap:r13-context-projection"],
+      "digest": "sha256:68812a487135db628c34c709cbc1d3c8e4407b118fcdbfde8a1295a4dd01400a",
+      "qualified": true
+    },
+    {
+      "artifactRef": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md",
+      "coveredGapIds": [],
+      "digest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18",
+      "qualified": true
+    }
+  ],
+  "selectedMode": "single_task"
+}

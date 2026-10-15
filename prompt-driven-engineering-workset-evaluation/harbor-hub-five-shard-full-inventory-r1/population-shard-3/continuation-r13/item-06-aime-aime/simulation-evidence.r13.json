@@ -1,0 +1,255 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:bf277b2cb30717d754457b71f1ac9294f53b51ab23af5ed1fb394881e04c508e",
+      "id": "harbor-gpt-5-6-luna",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T19:40:06Z",
+  "digest": "sha256:871361ed0309fcf8d9297edf7242f215b53e9933ac700ec2c99269dd00c6d6a2",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:404166b389ce94e14522b54f42cc56f887a6a1c51bb165df0df6cf43ea616bc5",
+    "limitations": [
+      "platform_state_unobserved",
+      "network_policy_unresolved",
+      "cost_budget_unqualified"
+    ],
+    "platformRef": "environment:darwin-arm64-docker"
+  },
+  "evidenceId": "engineering-workset-simulation:population-shard-3:continuation-r13/item-06-aime-aime:aime/aime",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/candidate-probe.r13.json"
+      ],
+      "id": "provider-auth",
+      "subjectRef": "item:aime/aime"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/candidate-probe.r13.json"
+      ],
+      "id": "task-instruction",
+      "subjectRef": "item:aime/aime"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/candidate-probe.r13.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:aime/aime"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-model",
+      "subjectRef": "item:aime/aime"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-effort",
+      "subjectRef": "item:aime/aime"
+    },
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/harbor-subject-operation.r13.json"
+      ],
+      "id": "subject-timeout",
+      "subjectRef": "item:aime/aime"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_qualification_held",
+      "effective_execution_receipt_missing",
+      "oracle_not_run"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "task_instruction_unavailable",
+      "task_image_manifest_unavailable",
+      "protected_verifier_unavailable"
+    ],
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:8686fd8b0409f082cccbeb07667f0be9b241ffa3eeb08ce94b7699da855ed8a8"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime"
+  },
+  "provider": {
+    "limitations": [],
+    "qualificationDigest": "sha256:fcec278a8334d06de3de6d1c0bc65c32722a69cf6bc737dda34671b80356f4c5",
+    "qualificationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/candidate-probe.r13.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:b6d18b994d7cb51bb656215ea5c03d09d5edf495cabf0d8e7a89de27378962db",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    ],
+    "sourceDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/item-resource-settlement.r13.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/candidate-probe.r13.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:fa50c33de948425f70d69a4b60d4f29a76aef9b2d551412c282c305f55e3ba0d",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/candidate-probe.r13.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:24de810c7909835330dbe9c946157c07b68d060b931d6f2704af8cc591f42e2b",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/candidate-probe.r13.json"
+        ],
+        "resourceClass": "credential-injection",
+        "resourceRefDigest": "sha256:452f0d4aa4fec4ff51bf168d0e9aa33156e0c6e9e5345ec218e76fb4cfcecc75",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/candidate-probe.r13.json"
+        ],
+        "resourceClass": "task-workspace",
+        "resourceRefDigest": "sha256:fa674c11fb30c653011d1768a916a2eca3fa528756abdd5c4c87e4ee6e8e592e",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/candidate-probe.r13.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:1125fa4cfddae9423d8b1190ab53995c61bd06de611ed1dd3def058b12a3cfde",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/candidate-probe.r13.json"
+        ],
+        "resourceClass": "network-policy-scope",
+        "resourceRefDigest": "sha256:7ebccb72d54e13331b71bb4ff9dce2ecf90fea157a4ad9321e7a5153f5ec9f79",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/candidate-probe.r13.json"
+        ],
+        "resourceClass": "cost-budget-scope",
+        "resourceRefDigest": "sha256:fc615ca31dab9163bd9b101c4a1bdfeeacba0a6822fc8524fd139c57a8ec68fd",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/dynamic-candidate.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "resourceClass": "dynamic-candidate",
+        "resourceRefDigest": "sha256:134fb1ce61a1bb25316854330f16ff0d78401dc4b3be179da9b213aa757e1a37",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/preclaim-verification.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/source-and-plan-binding.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/route-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/dynamic-artifact-composition-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/execution-structure-21-output-bundle.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/subject-operation-request.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/native-subject-topology-operation-receipt.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/native-subject-topology-operation-observation.r13.json"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/working-memory-binding.r13.json",
+    "checkpointRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/preclaim-verification.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/claim-source-freeze.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime/item-resource-settlement.r13.json"
+    ],
+    "digest": "sha256:48d609df2ec1de7c46e2265a4d0911c6436bbee164da06941431cf8068c27624",
+    "invalidation": [
+      "objective_revision_changes",
+      "requirement_scope_digest_changes",
+      "frozen_population_plan_digest_changes",
+      "item_capability_fingerprint_changes",
+      "terminal_settlement_emitted"
+    ],
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-06-aime-aime",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-3:continuation-r13/item-06-aime-aime"
+  }
+}

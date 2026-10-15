@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "self-introduction-evaluation-data-operations/v3",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "purpose": "자기소개서 초안의 편집 적합도를 수치화하되 수치가 의미하는 범위와 불확실성을 함께 보존한다.",
+  "evaluand": "one complete three-answer self-introduction set",
+  "decisionUse": "90점 이상 세트만 결과물에 포함하는 편집 선택",
+  "notDecisionUse": ["채용 확률", "지원자의 실제 역량 인증", "합격·승인", "개인 가치관의 진위 판정"],
+  "measurementModel": {
+    "constructDomains": [
+      {"id": "human_centered_narrative", "name": "사람 중심 서사와 가치", "weight": 30, "criteria": ["value_viewpoint_visibility", "human_context", "narrative_coherence", "modern_ai_paradigm"]},
+      {"id": "role_service_fit", "name": "직무·서비스 맥락 적합성", "weight": 25, "criteria": ["role_fit", "business_translation", "future_contribution"]},
+      {"id": "evidence_causal_integrity", "name": "근거·인과·추상화 충실도", "weight": 30, "criteria": ["evidence_attribution", "causal_process", "service_mechanism_abstraction"]},
+      {"id": "communication_defense", "name": "전달·방어 가능성", "weight": 15, "criteria": ["prompt_compliance", "readability_distinctiveness", "interview_defense"]}
+    ],
+    "scale": {
+      "level": "ordinal",
+      "anchors": {
+        "0": "부재·모순·잘못된 귀속",
+        "1": "주장 또는 용어는 있으나 관찰 가능한 근거와 맥락이 없음",
+        "2": "한 경험 또는 한 문단에서 기준이 부분적으로 확인됨",
+        "3": "문제·판단·행동·영향이 인과적으로 연결되고 범위를 방어할 수 있음",
+        "4": "상위 맥락의 관점이 일관되고 사용자·서비스 영향과 한계까지 연결됨"
+      },
+      "sameMeaningAcrossCriteria": true,
+      "unknownStates": ["unavailable", "conflicting", "not_applicable"]
+    },
+    "transformation": {
+      "purpose": "이 초안 라운드 안에서 후보를 비교하기 위한 명시적 편집 변환",
+      "formula": "sum(weight_i * rating_i / 4)",
+      "outputUnit": "percentage_points",
+      "ordinalCaveat": "0-4 평정은 원래 서열척도이므로 이 산식은 채용·심리 측정값이 아니라 현재 문맥에 한정된 편집 비교값이다.",
+      "rounding": "one_decimal"
+    }
+  },
+  "protectedGates": [
+    {"id": "G1_prompt_and_length", "rule": "세 문항이 각각 300~700자이고 문항별 요구 요소를 충족해야 함", "failure": "exclude", "unknown": "hold"},
+    {"id": "G2_evidence_attribution", "rule": "과거형 기술·성과·소유권 주장이 사용자 제공 또는 저장소 근거의 범위를 넘지 않아야 함", "failure": "exclude", "unknown": "rewrite_or_hold"},
+    {"id": "G3_value_boundary", "rule": "사용자 제공 가치관은 드러내되 임시 해석은 초안 관점으로 표시하고 안정적 성격으로 일반화하지 않음", "failure": "exclude", "unknown": "user_review"},
+    {"id": "G4_abstraction", "rule": "프로젝트 핵심이 구현 단위 나열이 아니라 사람의 목적·서비스 흐름·판단·학습으로 설명되어야 함", "failure": "exclude", "unknown": "rewrite"},
+    {"id": "G5_role_and_mechanism", "rule": "공고의 AI 서비스 엔지니어 범위와 프로젝트 근거를 맞추고 검증되지 않은 모델·운영 성과를 쓰지 않음", "failure": "exclude", "unknown": "rewrite_or_hold"},
+    {"id": "G6_set_distinctness", "rule": "5개 세트가 같은 문장을 반복하지 않고 서로 다른 상위 렌즈를 제공해야 함", "failure": "exclude", "unknown": "revise"}
+  ],
+  "assessmentRecord": {
+    "requiredFields": ["operationId", "definitionRevision", "profileRevision", "subjectRef", "criterionId", "rating", "state", "evidenceRefs", "rationale", "limitationRefs"],
+    "ratingStates": ["scored", "unavailable", "conflicting", "not_applicable"],
+    "unknownIsZero": false,
+    "counterevidenceRequired": true,
+    "independentRole": "산식·근거 바인딩을 별도로 검증하되 동일한 편집자가 자기 점수를 독립 검증했다고 주장하지 않음"
+  },
+  "aggregationPolicy": {
+    "order": ["protected_gates", "qualifying_criteria", "weighted_comparative_score", "observational_metrics"],
+    "threshold": 90,
+    "thresholdMeaning": "이 정의·프로필·증거 범위에서 제출 후보로 남길 편집 초안",
+    "nonCompensatory": ["G1", "G2", "G3", "G4", "G5"],
+    "observationalMetricsDoNotAffectSubjectScore": true,
+    "tieBreak": "higher evidence_attribution, then higher value_viewpoint_visibility, then lower unresolved-claim count"
+  },
+  "currentOperationMetrics": {
+    "answerCount": {"value": 15, "denominator": 15, "state": "observed"},
+    "lengthGatePassRate": {"value": 1, "denominator": 15, "state": "observed"},
+    "protectedGatePassRate": {"value": 1, "denominator": 6, "state": "observed", "note": "draft-review gate status only; semantic acknowledgement and applicant evidence confirmation remain separate checkpoints"},
+    "userViewpointVisibility": {"value": "scored_per_set", "state": "observed", "note": "글에 관점이 표현되었는지를 평가하며 가치관의 진위는 평가하지 않음"},
+    "unsupportedPastClaimRate": {"value": null, "denominator": null, "state": "unavailable", "reason": "문장별 날짜가 있는 실행 영수증과 독립된 사실 검증 레코드가 없어 0으로 단정하지 않음"},
+    "raterAgreement": {"value": null, "denominator": null, "state": "unavailable", "reason": "독립된 두 명 이상의 최종 평정 기록이 없음"},
+    "acceptedOutcomeJoin": {"value": null, "denominator": null, "state": "unavailable", "reason": "지원·면접·채용 결과가 연결되지 않음"},
+    "userCorrection": {"value": null, "denominator": null, "state": "pending_user_review"}
+  },
+  "lifecycle": {
+    "states": ["draft", "profile_resolved", "evidence_ready", "evaluated", "observed", "calibration_due", "invalidated", "deprecated", "retired"],
+    "currentState": "evaluated",
+    "transitionEvidence": ["definition-v3", "profile-v3", "evidence-map-v3", "user-understanding-projection-v3", "render-validation-v3"],
+    "reopenTriggers": ["user_correction", "new ownership evidence", "new dated test or outcome evidence", "job-posting revision", "rubric anchor change", "material claim change"],
+    "immutableHistory": true
+  },
+  "interpretationBands": [
+    {"range": "90-100", "meaning": "보호 게이트를 통과한 제출 검토용 초안", "action": "include"},
+    {"range": "80-89.9", "meaning": "핵심은 있으나 한 축의 근거·가치관·추상화가 약한 초안", "action": "revise"},
+    {"range": "below-80", "meaning": "현재 목적에 비해 서사 또는 근거 구조가 닫히지 않은 초안", "action": "exclude_and_rewrite"}
+  ]
+}

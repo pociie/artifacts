@@ -1,0 +1,63 @@
+{
+  "kind": "analysis-validation-report/v1",
+  "reportId": "validation:claude-code-source-project-analysis:v1",
+  "lifecycleState": "candidate",
+  "overall": "pass_with_evidence_holds",
+  "source": {
+    "revision": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+    "tree": "1b6b4ab07d0d7b795129852183137c28099c5550",
+    "workspaceState": "clean",
+    "remoteHeadMatchPreviouslyObserved": true
+  },
+  "checks": [
+    {
+      "id": "json-shape",
+      "command": "jq empty for every project-analysis-v1 JSON artifact",
+      "status": "pass"
+    },
+    {
+      "id": "topology-reproduction",
+      "command": "node module-topology-analyzer.mjs <frozen-source-root>",
+      "status": "pass",
+      "observedSha256": "0f399a07cf5c43be5d187af187219dbacf20c5df22399c91d5bb0f70da143630",
+      "storedSha256": "0f399a07cf5c43be5d187af187219dbacf20c5df22399c91d5bb0f70da143630"
+    },
+    {
+      "id": "algorithm-source-references",
+      "command": "existence and line-range check for algorithm-catalog evidenceRefs",
+      "status": "pass",
+      "checkedRefs": 89,
+      "uniqueRefs": 89
+    },
+    {
+      "id": "prior-analysis-digests",
+      "command": "sha256 comparison for five docs/ko analysis files",
+      "status": "pass",
+      "checkedFiles": 5
+    },
+    {
+      "id": "markdown-whitespace",
+      "command": "trailing-whitespace scan for project-analysis-v1 Markdown",
+      "status": "pass"
+    },
+    {
+      "id": "conventional-test-corpus",
+      "command": "bounded filename scan for test/spec files",
+      "status": "hold",
+      "finding": "No conventional test or spec file was observed; three name matches were implementation terms, not test artifacts. This does not prove tests never existed outside the snapshot."
+    }
+  ],
+  "evidenceHolds": [
+    "No runtime trace was collected, so the runtime-like graph remains a static syntax heuristic.",
+    "The public snapshot is described by its repository as incomplete and contains unresolved internal imports.",
+    "No official module ownership or bounded-context map is present in the analyzed repository.",
+    "This coordinator validation is not independent acceptance of the analysis."
+  ],
+  "forbiddenConclusions": [
+    "A cyclic SCC is automatically a defect.",
+    "The semantic module candidates are current packages or official ownership boundaries.",
+    "Repository-authored product or roadmap claims are official Anthropic statements.",
+    "This report authorizes implementation, activation, publication, or settlement."
+  ],
+  "authorityEffect": "none"
+}

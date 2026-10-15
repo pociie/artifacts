@@ -1,0 +1,115 @@
+{
+  "authorityEffect": "none",
+  "decision": {
+    "architectureSelection": {
+      "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+      "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+      "effectivePrimaryMode": "single_task",
+      "patternSelectedByRouting": false,
+      "requirement": "eligible",
+      "segmentMode": null,
+      "segmentRequirement": null,
+      "segmentSelectionStatus": null,
+      "segmentStructuralSignals": [],
+      "selectionStatus": "deferred_to_architecture_components",
+      "structuralSignals": ["one_material_contribution"],
+      "targetScope": "effective_primary",
+      "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json"
+    },
+    "authorityEffect": "none",
+    "blockers": [],
+    "conflictingFacts": [],
+    "continuityDecision": {
+      "candidateMode": "single_task",
+      "disposition": "transition_candidate",
+      "effectivePrimaryMode": "single_task",
+      "executionSurface": "local_coordinator_only",
+      "historyCoverage": "complete",
+      "modeCompositionRequired": true,
+      "objectiveRelation": "unchanged",
+      "outerObligationAction": "preserve",
+      "outerObligationState": "active",
+      "priorCompletionEvidence": "missing",
+      "priorPrimaryMode": "investigation",
+      "projectionRef": "memory:harbor-hub-five-shard-full-inventory-r1:operation-resolution-r13",
+      "requestRelation": "continue_objective",
+      "segmentMode": null,
+      "sessionBoundary": "same_session"
+    },
+    "eligibleModes": ["single_task"],
+    "kind": "six-mode-route-decision/v1",
+    "missingFacts": [],
+    "reassessmentTriggers": [
+      "authority_or_instruction_admission_changes",
+      "capability_or_lifecycle_readiness_changes",
+      "dependency_or_contribution_shape_changes",
+      "purpose_effect_or_output_changes",
+      "request_relation_or_history_coverage_changes",
+      "risk_reversibility_or_validation_boundary_changes",
+      "outer_obligation_or_completion_evidence_changes",
+      "execution_surface_changes_contribution_shape"
+    ],
+    "rejectedModes": [
+      {
+        "mode": "communication",
+        "reasonCodes": [
+          "operation_not_direct_response",
+          "effect_not_none",
+          "output_not_response",
+          "temporal_not_immediate",
+          "current_state_evidence_required"
+        ]
+      },
+      {
+        "mode": "investigation",
+        "reasonCodes": [
+          "operation_not_information_acquisition",
+          "effect_not_read_only",
+          "output_not_information_finding",
+          "mutation_required"
+        ]
+      },
+      {
+        "mode": "loop",
+        "reasonCodes": ["temporal_not_iterative", "iteration_not_bounded"]
+      },
+      {
+        "mode": "orchestration",
+        "reasonCodes": [
+          "contribution_not_multi_owner",
+          "capability_not_verified",
+          "lifecycle_not_verified"
+        ]
+      },
+      {
+        "mode": "session_control",
+        "reasonCodes": [
+          "operation_not_session_operation",
+          "effect_not_session_control",
+          "output_not_control_receipt_or_finding",
+          "session_revision_not_explicit"
+        ]
+      }
+    ],
+    "requestRevision": "harbor-context-and-compound-routing-r13:population-shard-2:abhishek203/task-aw:resolve-six-mode-route",
+    "selectedMode": "single_task",
+    "status": "selected"
+  },
+  "digest": "sha256:691d15ac26b8db07ecf9304a75c65ab33652140c9c9fef6364a0aa8962bb16a8",
+  "facts": {
+    "capabilityReadiness": "unverified",
+    "contributionShape": "one_owner",
+    "effectIntent": "local_mutation",
+    "executionSurface": "local_coordinator_only",
+    "lifecycleReadiness": "unverified",
+    "operationFamily": "outcome_production",
+    "outputShape": "validated_candidate",
+    "workPurpose": "implement"
+  },
+  "itemId": "abhishek203/task-aw",
+  "kind": "harbor-item-route-decision/v4",
+  "laneId": "population-shard-2",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "requestRevision": "harbor-context-and-compound-routing-r13:population-shard-2:abhishek203/task-aw:resolve-six-mode-route",
+  "schemaVersion": 4
+}

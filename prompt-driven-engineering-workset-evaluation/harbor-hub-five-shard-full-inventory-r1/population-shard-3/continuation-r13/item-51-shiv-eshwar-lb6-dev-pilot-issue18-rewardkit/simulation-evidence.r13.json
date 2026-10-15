@@ -1,0 +1,255 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:73ba343b8faf161e56e6c6597523c0c627d0cc47efaccf69ac2afe8ffa92f029",
+      "id": "harbor-gpt-5-6-luna",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T19:40:13Z",
+  "digest": "sha256:259a7d5b98eae9d3b49d26614a71e13d38dd1afe4cd32fe762548d1657c08cc1",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:404166b389ce94e14522b54f42cc56f887a6a1c51bb165df0df6cf43ea616bc5",
+    "limitations": [
+      "platform_state_unobserved",
+      "network_policy_unresolved",
+      "cost_budget_unqualified"
+    ],
+    "platformRef": "environment:darwin-arm64-docker"
+  },
+  "evidenceId": "engineering-workset-simulation:population-shard-3:continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit:shiv-eshwar/lb6-dev-pilot-issue18-rewardkit",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/candidate-probe.r13.json"
+      ],
+      "id": "provider-auth",
+      "subjectRef": "item:shiv-eshwar/lb6-dev-pilot-issue18-rewardkit"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/candidate-probe.r13.json"
+      ],
+      "id": "task-instruction",
+      "subjectRef": "item:shiv-eshwar/lb6-dev-pilot-issue18-rewardkit"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/candidate-probe.r13.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:shiv-eshwar/lb6-dev-pilot-issue18-rewardkit"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-model",
+      "subjectRef": "item:shiv-eshwar/lb6-dev-pilot-issue18-rewardkit"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-effort",
+      "subjectRef": "item:shiv-eshwar/lb6-dev-pilot-issue18-rewardkit"
+    },
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/harbor-subject-operation.r13.json"
+      ],
+      "id": "subject-timeout",
+      "subjectRef": "item:shiv-eshwar/lb6-dev-pilot-issue18-rewardkit"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_qualification_held",
+      "effective_execution_receipt_missing",
+      "oracle_not_run"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "task_instruction_unavailable",
+      "task_image_manifest_unavailable",
+      "protected_verifier_unavailable"
+    ],
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:e54354aec2c31e6736df0207077218bdfcdcb32f9c2c467c34cbf869f0794717"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit"
+  },
+  "provider": {
+    "limitations": [],
+    "qualificationDigest": "sha256:236a533fb9ccd24da34dfb5a6542b93dca355d856fa67b4848a43df57a59976e",
+    "qualificationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/candidate-probe.r13.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:ad3e608424cfebcb3ec4dad6dde6ab2193e0a2942e074b6ba99c5ef670649ba7",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    ],
+    "sourceDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/item-resource-settlement.r13.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/candidate-probe.r13.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:055942c026bc8e5f98309cab8c7f7f90bf693df63889f68c4c0540f7c79e6e98",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/candidate-probe.r13.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:ce1deca3d16ca7483720af633b307b4ba6d80955df223fe4c8ed9e5ae3cf54ed",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/candidate-probe.r13.json"
+        ],
+        "resourceClass": "credential-injection",
+        "resourceRefDigest": "sha256:aeb549cf02ed5ad893862deb7c27b5227df504935048b81d90bd350c10dcce07",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/candidate-probe.r13.json"
+        ],
+        "resourceClass": "task-workspace",
+        "resourceRefDigest": "sha256:0c3bb034e6acf3ac671fe7e27bbf01bbe463b5965f6324c07cede26bad9ebde5",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/candidate-probe.r13.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:7978b1c9c9b53ab1a552bd8ab01aa2448da19b155daba5d713abe182885575fd",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/candidate-probe.r13.json"
+        ],
+        "resourceClass": "network-policy-scope",
+        "resourceRefDigest": "sha256:1fcec1e28bce92a7c1524a4d0530a07753960a4ef80517ac40d924e9911f2320",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/candidate-probe.r13.json"
+        ],
+        "resourceClass": "cost-budget-scope",
+        "resourceRefDigest": "sha256:3085263881a336f9fe16dea1003f32d2595072c0c18f018f6ae34b631b9c340b",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/dynamic-candidate.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "resourceClass": "dynamic-candidate",
+        "resourceRefDigest": "sha256:2edc836e196a208e9df21e291db62f540f60cb548250d847250af28eb5af5f5a",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/preclaim-verification.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/source-and-plan-binding.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/route-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/dynamic-artifact-composition-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/execution-structure-21-output-bundle.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/subject-operation-request.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/native-subject-topology-operation-receipt.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/native-subject-topology-operation-observation.r13.json"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/working-memory-binding.r13.json",
+    "checkpointRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/preclaim-verification.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/claim-source-freeze.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit/item-resource-settlement.r13.json"
+    ],
+    "digest": "sha256:7232c5acd58ca88381ed3c51593fd09f7ba37766b7c8c36ff0a9e44667f78178",
+    "invalidation": [
+      "objective_revision_changes",
+      "requirement_scope_digest_changes",
+      "frozen_population_plan_digest_changes",
+      "item_capability_fingerprint_changes",
+      "terminal_settlement_emitted"
+    ],
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-3:continuation-r13/item-51-shiv-eshwar-lb6-dev-pilot-issue18-rewardkit"
+  }
+}

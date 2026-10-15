@@ -1,0 +1,730 @@
+{
+  "schema": "progressive-knowledge-acquisition/v1",
+  "id": "research:job-application-ai-service-engineer-v6",
+  "revision": 1,
+  "stage": "R5_saturate",
+  "objective": {
+    "requirementRef": "requirement:report-design-and-source-quality-v6",
+    "consumerRef": "consumer:job-application-expert-report-v6",
+    "decisionRef": "decision:select-report-visible-content-and-research-basis",
+    "successCriteria": [
+      "report design recommendations are supported by authoritative design guidance",
+      "role and company claims are tied to official sources",
+      "project and user claims preserve contribution and outcome boundaries",
+      "each retained claim has a source, applicability note, and limitation",
+      "the resulting reference documents are usable for the next PDF composition"
+    ],
+    "nonScope": [
+      "actual company internal process or team technology discovery",
+      "user project contribution verification without additional user evidence",
+      "automatic hiring or submission decision",
+      "runtime agent activation or external system effect"
+    ],
+    "riskClass": "medium"
+  },
+  "competencyQuestions": [
+    {
+      "id": "cq:report-information-hierarchy",
+      "questionRef": "question:which-design-rules-make-a-report-readable-without-card-repetition",
+      "requiredDisclosureDepth": "D3",
+      "requiredAbstractionLevels": ["A3", "A4", "A5"],
+      "requiredContextFacetTypes": ["stakeholder_viewpoint", "technical_environmental"],
+      "requiredEvidenceKinds": ["standard", "official_documentation", "implementation_observation"],
+      "coverage": "covered"
+    },
+    {
+      "id": "cq:official-role-company-context",
+      "questionRef": "question:which-official-role-and-company-facts-should-shape-the-report",
+      "requiredDisclosureDepth": "D3",
+      "requiredAbstractionLevels": ["A0", "A4", "A5"],
+      "requiredContextFacetTypes": ["temporal", "organizational", "stakeholder_viewpoint"],
+      "requiredEvidenceKinds": ["owner_source", "official_documentation"],
+      "coverage": "covered"
+    },
+    {
+      "id": "cq:claim-boundary-and-interview-use",
+      "questionRef": "question:what-evidence-is-needed-to-translate-project-experience-without-overclaiming",
+      "requiredDisclosureDepth": "D4",
+      "requiredAbstractionLevels": ["A1", "A3", "A4", "A5"],
+      "requiredContextFacetTypes": ["technical_environmental", "stakeholder_viewpoint", "temporal"],
+      "requiredEvidenceKinds": ["implementation_observation", "stakeholder_evidence", "owner_source"],
+      "coverage": "covered"
+    }
+  ],
+  "knowledgeModel": {
+    "id": "model:job-application-report-v6",
+    "version": 1,
+    "schemeRef": "scheme:job-application-report-domain-v6",
+    "nodes": [
+      {
+        "id": "node:report-information-hierarchy",
+        "label": "report information hierarchy",
+        "conceptType": "principle",
+        "abstractionLevel": "A5",
+        "disclosureDepth": "D2",
+        "discoveryState": "mapped",
+        "coverage": "covered",
+        "evidenceState": "corroborated",
+        "freshness": "current",
+        "scope": "direct",
+        "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+        "supportsQuestionRefs": ["cq:report-information-hierarchy"]
+      },
+      {
+        "id": "node:row-based-comparison",
+        "label": "row-based comparison",
+        "conceptType": "pattern",
+        "abstractionLevel": "A3",
+        "disclosureDepth": "D2",
+        "discoveryState": "mapped",
+        "coverage": "covered",
+        "evidenceState": "supported",
+        "freshness": "current",
+        "scope": "direct",
+        "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+        "supportsQuestionRefs": ["cq:report-information-hierarchy"]
+      },
+      {
+        "id": "node:raster-visual-asset",
+        "label": "raster visual asset",
+        "conceptType": "artifact",
+        "abstractionLevel": "A1",
+        "disclosureDepth": "D2",
+        "discoveryState": "mapped",
+        "coverage": "covered",
+        "evidenceState": "supported",
+        "freshness": "current",
+        "scope": "direct",
+        "contextFacetRefs": ["facet:pdf-output"],
+        "supportsQuestionRefs": ["cq:report-information-hierarchy"]
+      },
+      {
+        "id": "node:official-role-context",
+        "label": "official role context",
+        "conceptType": "capability",
+        "abstractionLevel": "A4",
+        "disclosureDepth": "D3",
+        "discoveryState": "mapped",
+        "coverage": "covered",
+        "evidenceState": "corroborated",
+        "freshness": "current",
+        "scope": "direct",
+        "contextFacetRefs": ["facet:posting-observation", "facet:company-context"],
+        "supportsQuestionRefs": ["cq:official-role-company-context"]
+      },
+      {
+        "id": "node:company-to-role-translation",
+        "label": "company to role translation",
+        "conceptType": "method",
+        "abstractionLevel": "A3",
+        "disclosureDepth": "D3",
+        "discoveryState": "mapped",
+        "coverage": "covered",
+        "evidenceState": "supported",
+        "freshness": "current",
+        "scope": "direct",
+        "contextFacetRefs": ["facet:company-context", "facet:stakeholder-view"],
+        "supportsQuestionRefs": ["cq:official-role-company-context"]
+      },
+      {
+        "id": "node:contribution-boundary",
+        "label": "personal contribution boundary",
+        "conceptType": "principle",
+        "abstractionLevel": "A5",
+        "disclosureDepth": "D3",
+        "discoveryState": "mapped",
+        "coverage": "covered",
+        "evidenceState": "supported",
+        "freshness": "current",
+        "scope": "direct",
+        "contextFacetRefs": ["facet:project-state", "facet:stakeholder-view"],
+        "supportsQuestionRefs": ["cq:claim-boundary-and-interview-use"]
+      },
+      {
+        "id": "node:interview-rehearsal-question",
+        "label": "interview rehearsal question",
+        "conceptType": "capability",
+        "abstractionLevel": "A4",
+        "disclosureDepth": "D4",
+        "discoveryState": "mapped",
+        "coverage": "covered",
+        "evidenceState": "supported",
+        "freshness": "current",
+        "scope": "direct",
+        "contextFacetRefs": ["facet:stakeholder-view", "facet:project-state"],
+        "supportsQuestionRefs": ["cq:claim-boundary-and-interview-use"]
+      }
+    ],
+    "relations": [
+      {
+        "id": "relation:hierarchy-supports-row-comparison",
+        "type": "supports",
+        "sourceNodeRef": "node:report-information-hierarchy",
+        "targetNodeRef": "node:row-based-comparison",
+        "origin": "deterministic_derived",
+        "evidenceRefs": ["evidence:govuk-layout", "evidence:govuk-table"],
+        "sourceRefs": ["source:govuk:layout", "source:govuk:table"]
+      },
+      {
+        "id": "relation:hierarchy-uses-raster",
+        "type": "uses",
+        "sourceNodeRef": "node:report-information-hierarchy",
+        "targetNodeRef": "node:raster-visual-asset",
+        "origin": "explicit_authored",
+        "evidenceRefs": ["evidence:local:v5-report"],
+        "sourceRefs": ["source:local:v5-report"]
+      },
+      {
+        "id": "relation:role-context-supports-translation",
+        "type": "supports",
+        "sourceNodeRef": "node:official-role-context",
+        "targetNodeRef": "node:company-to-role-translation",
+        "origin": "deterministic_derived",
+        "evidenceRefs": ["evidence:lotte-posting", "evidence:lotte-affiliate"],
+        "sourceRefs": ["source:official:lotte-posting", "source:official:lotte-affiliate"]
+      },
+      {
+        "id": "relation:translation-depends-on-boundary",
+        "type": "depends_on",
+        "sourceNodeRef": "node:company-to-role-translation",
+        "targetNodeRef": "node:contribution-boundary",
+        "origin": "explicit_authored",
+        "evidenceRefs": ["evidence:local:project-context"],
+        "sourceRefs": ["source:local:project-context"]
+      },
+      {
+        "id": "relation:boundary-supports-interview",
+        "type": "supports",
+        "sourceNodeRef": "node:contribution-boundary",
+        "targetNodeRef": "node:interview-rehearsal-question",
+        "origin": "deterministic_derived",
+        "evidenceRefs": ["evidence:local:project-context"],
+        "sourceRefs": ["source:local:project-context"]
+      }
+    ],
+    "contextFacets": [
+      {
+        "id": "facet:report-audience",
+        "type": "stakeholder_viewpoint",
+        "schemeRef": "scheme:report-consumer-v6",
+        "valueRef": "viewpoint:applicant-and-expert-reviewer",
+        "sourceRefs": ["source:local:user-request"],
+        "scopeNote": "Applies to a report used by the applicant and a human reviewer; not to a hiring evaluator or automated submission gate.",
+        "confidence": "high",
+        "validFrom": "2026-09-08T00:00:00+09:00",
+        "validThrough": null
+      },
+      {
+        "id": "facet:pdf-output",
+        "type": "technical_environmental",
+        "schemeRef": "scheme:document-output-v6",
+        "valueRef": "environment:a4-pdf-with-raster-assets",
+        "sourceRefs": ["source:local:v5-report", "source:govuk:layout"],
+        "scopeNote": "Applies to the generated PDF composition; body text remains text while diagrams are rasterized assets.",
+        "confidence": "high",
+        "validFrom": "2026-09-08T00:00:00+09:00",
+        "validThrough": null
+      },
+      {
+        "id": "facet:posting-observation",
+        "type": "temporal",
+        "schemeRef": "scheme:iso-8601-observation",
+        "valueRef": "time:2026-09-08",
+        "sourceRefs": ["source:official:lotte-posting"],
+        "scopeNote": "Applies to the official recruitment posting observed on 2026-09-08; the posting may change.",
+        "confidence": "high",
+        "validFrom": "2026-09-08T00:00:00+09:00",
+        "validThrough": null
+      },
+      {
+        "id": "facet:company-context",
+        "type": "organizational",
+        "schemeRef": "scheme:official-company-description",
+        "valueRef": "organization:lotte-innovate-public-context",
+        "sourceRefs": ["source:official:lotte-affiliate", "source:official:lotte-home"],
+        "scopeNote": "Applies to publicly described business context, not internal AI service team procedures or metrics.",
+        "confidence": "high",
+        "validFrom": "2026-09-08T00:00:00+09:00",
+        "validThrough": null
+      },
+      {
+        "id": "facet:stakeholder-view",
+        "type": "stakeholder_viewpoint",
+        "schemeRef": "scheme:service-delivery-viewpoints",
+        "valueRef": "viewpoint:user-operator-and-reviewer",
+        "sourceRefs": ["source:official:lotte-posting", "source:local:user-request"],
+        "scopeNote": "Uses user, 현업, 운영자, and reviewer viewpoints to make service responsibility explicit; does not infer a company-specific team structure.",
+        "confidence": "medium",
+        "validFrom": "2026-09-08T00:00:00+09:00",
+        "validThrough": null
+      },
+      {
+        "id": "facet:project-state",
+        "type": "technical_environmental",
+        "schemeRef": "scheme:project-evidence-boundary",
+        "valueRef": "environment:repository-observation-plus-user-context",
+        "sourceRefs": ["source:local:project-context"],
+        "scopeNote": "Repository structure and user-provided role are evidence; production users, operational results, and exact changed files remain unknown until confirmed.",
+        "confidence": "high",
+        "validFrom": "2026-09-08T00:00:00+09:00",
+        "validThrough": null
+      }
+    ],
+    "revisions": []
+  },
+  "gaps": [
+    {
+      "id": "gap:official-design-guidance",
+      "questionRefs": ["cq:report-information-hierarchy"],
+      "nodeRefs": ["node:report-information-hierarchy", "node:row-based-comparison"],
+      "gapType": "source_authority",
+      "coverage": "partial",
+      "state": "resolved",
+      "decisionImpact": "high",
+      "uncertainty": "low",
+      "dependencyImportance": "high",
+      "freshnessRisk": "low",
+      "researchCost": "low",
+      "requiredEvidenceKinds": ["standard", "official_documentation"],
+      "nextAction": "external_research"
+    },
+    {
+      "id": "gap:official-role-and-company",
+      "questionRefs": ["cq:official-role-company-context"],
+      "nodeRefs": ["node:official-role-context", "node:company-to-role-translation"],
+      "gapType": "source_authority",
+      "coverage": "partial",
+      "state": "resolved",
+      "decisionImpact": "high",
+      "uncertainty": "medium",
+      "dependencyImportance": "high",
+      "freshnessRisk": "medium",
+      "researchCost": "low",
+      "requiredEvidenceKinds": ["owner_source", "official_documentation"],
+      "nextAction": "external_research"
+    },
+    {
+      "id": "gap:personal-contribution-evidence",
+      "questionRefs": ["cq:claim-boundary-and-interview-use"],
+      "nodeRefs": ["node:contribution-boundary", "node:interview-rehearsal-question"],
+      "gapType": "implementation_evidence",
+      "coverage": "partial",
+      "state": "retained",
+      "decisionImpact": "high",
+      "uncertainty": "high",
+      "dependencyImportance": "high",
+      "freshnessRisk": "medium",
+      "researchCost": "medium",
+      "requiredEvidenceKinds": ["implementation_observation", "stakeholder_evidence"],
+      "nextAction": "request_context"
+    }
+  ],
+  "researchTasks": [
+    {
+      "id": "task:design-system-evidence",
+      "gapRefs": ["gap:official-design-guidance"],
+      "stage": "R3_deep_dive",
+      "researchScope": "local_then_external",
+      "inclusionCriteria": [
+        "official design system guidance with explicit layout, typography, spacing, or table recommendations",
+        "direct relevance to report readability and comparison"
+      ],
+      "exclusionCriteria": ["uncited visual inspiration", "design trend summary without implementation guidance"],
+      "sourceClasses": ["reusable_knowledge", "standard", "official_documentation"],
+      "budget": {"maxRounds": 2, "maxSources": 6, "maxDocuments": 8, "maxTokens": 12000},
+      "route": {
+        "pattern": "expert_pool",
+        "candidates": [
+          {
+            "specialistRef": "agent:official-design-system-scout",
+            "capabilityRef": "capability:primary-design-guidance-research",
+            "selected": true,
+            "reasonCode": "official-layout-and-table-guidance-required"
+          },
+          {
+            "specialistRef": "agent:visual-trend-curator",
+            "capabilityRef": "capability:secondary-visual-inspiration",
+            "selected": false,
+            "reasonCode": "trend-inspiration-does-not-prove-readable-report-structure"
+          }
+        ],
+        "selectedReason": "The report needs authoritative information-structure guidance, not aesthetic trend aggregation.",
+        "fallbackRef": "fallback:retain-local-design-boundary-and-request-review"
+      },
+      "status": "completed",
+      "outputRefs": ["knowledge:source:report-information-design-and-raster-pdf-v6"]
+    },
+    {
+      "id": "task:role-and-company-evidence",
+      "gapRefs": ["gap:official-role-and-company"],
+      "stage": "R4_triangulate",
+      "researchScope": "external_primary_required",
+      "inclusionCriteria": [
+        "official recruitment posting or official company page",
+        "directly states the role, company business context, or application requirement"
+      ],
+      "exclusionCriteria": ["third-party recruitment summaries", "unverified team stack or outcome claims"],
+      "sourceClasses": ["owner_source", "official_documentation"],
+      "budget": {"maxRounds": 2, "maxSources": 6, "maxDocuments": 8, "maxTokens": 14000},
+      "route": {
+        "pattern": "expert_pool",
+        "candidates": [
+          {
+            "specialistRef": "agent:official-recruitment-source-scout",
+            "capabilityRef": "capability:official-role-and-company-research",
+            "selected": true,
+            "reasonCode": "role-and-company-claims-require-official-sources"
+          },
+          {
+            "specialistRef": "agent:market-commentary-scout",
+            "capabilityRef": "capability:secondary-market-context",
+            "selected": false,
+            "reasonCode": "market-commentary-cannot establish company-specific role requirements"
+          }
+        ],
+        "selectedReason": "The report must separate official role facts from company-level interpretation and avoid third-party claims.",
+        "fallbackRef": "fallback:omit-unsupported-company-specific-claim"
+      },
+      "status": "completed",
+      "outputRefs": ["knowledge:ai:ai-service-engineer-domain-and-interview-review-v6"]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence:govuk-layout",
+      "sourceRef": "source:govuk:layout",
+      "sourceAuthority": "primary_external",
+      "sourceRevision": "observed-2026-09-08",
+      "observedAt": "2026-09-08T10:00:00+09:00",
+      "evidenceKind": "official_documentation",
+      "supportsClaimRefs": ["claim:bounded-line-length-and-layout"],
+      "contradictsClaimRefs": [],
+      "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+      "status": "admitted"
+    },
+    {
+      "id": "evidence:govuk-type-and-spacing",
+      "sourceRef": "source:govuk:typography-and-spacing",
+      "sourceAuthority": "primary_external",
+      "sourceRevision": "observed-2026-09-08",
+      "observedAt": "2026-09-08T10:00:00+09:00",
+      "evidenceKind": "official_documentation",
+      "supportsClaimRefs": ["claim:consistent-typography-and-spacing"],
+      "contradictsClaimRefs": [],
+      "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+      "status": "admitted"
+    },
+    {
+      "id": "evidence:govuk-table",
+      "sourceRef": "source:govuk:table",
+      "sourceAuthority": "primary_external",
+      "sourceRevision": "observed-2026-09-08",
+      "observedAt": "2026-09-08T10:00:00+09:00",
+      "evidenceKind": "official_documentation",
+      "supportsClaimRefs": ["claim:row-based-comparison"],
+      "contradictsClaimRefs": [],
+      "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+      "status": "admitted"
+    },
+    {
+      "id": "evidence:w3c-tables",
+      "sourceRef": "source:w3c:wai-tables",
+      "sourceAuthority": "primary_external",
+      "sourceRevision": "observed-2026-09-08",
+      "observedAt": "2026-09-08T10:00:00+09:00",
+      "evidenceKind": "standard",
+      "supportsClaimRefs": ["claim:semantic-table-relationships"],
+      "contradictsClaimRefs": [],
+      "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+      "status": "admitted"
+    },
+    {
+      "id": "evidence:w3c-color-and-spacing",
+      "sourceRef": "source:w3c:wcag-visual-presentation",
+      "sourceAuthority": "primary_external",
+      "sourceRevision": "observed-2026-09-08",
+      "observedAt": "2026-09-08T10:00:00+09:00",
+      "evidenceKind": "standard",
+      "supportsClaimRefs": ["claim:non-color-and-readable-spacing"],
+      "contradictsClaimRefs": [],
+      "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+      "status": "admitted"
+    },
+    {
+      "id": "evidence:lotte-posting",
+      "sourceRef": "source:official:lotte-posting",
+      "sourceAuthority": "primary_external",
+      "sourceRevision": "observed-2026-09-08",
+      "observedAt": "2026-09-08T10:00:00+09:00",
+      "evidenceKind": "official_documentation",
+      "supportsClaimRefs": ["claim:role-requires-service-delivery", "claim:application-requirements"],
+      "contradictsClaimRefs": [],
+      "contextFacetRefs": ["facet:posting-observation"],
+      "status": "admitted"
+    },
+    {
+      "id": "evidence:lotte-affiliate",
+      "sourceRef": "source:official:lotte-affiliate",
+      "sourceAuthority": "primary_external",
+      "sourceRevision": "observed-2026-09-08",
+      "observedAt": "2026-09-08T10:00:00+09:00",
+      "evidenceKind": "official_documentation",
+      "supportsClaimRefs": ["claim:company-public-context"],
+      "contradictsClaimRefs": [],
+      "contextFacetRefs": ["facet:company-context"],
+      "status": "admitted"
+    },
+    {
+      "id": "evidence:lotte-home",
+      "sourceRef": "source:official:lotte-home",
+      "sourceAuthority": "primary_external",
+      "sourceRevision": "observed-2026-09-08",
+      "observedAt": "2026-09-08T10:00:00+09:00",
+      "evidenceKind": "official_documentation",
+      "supportsClaimRefs": ["claim:company-public-context"],
+      "contradictsClaimRefs": [],
+      "contextFacetRefs": ["facet:company-context"],
+      "status": "admitted"
+    },
+    {
+      "id": "evidence:local:v5-report",
+      "sourceRef": "source:local:v5-report",
+      "sourceAuthority": "work_item",
+      "sourceRevision": "v5-observed-2026-09-08",
+      "observedAt": "2026-09-08T10:00:00+09:00",
+      "evidenceKind": "implementation_observation",
+      "supportsClaimRefs": ["claim:card-repetition-is-a-report-risk", "claim:body-text-should-remain-selectable"],
+      "contradictsClaimRefs": [],
+      "contextFacetRefs": ["facet:pdf-output"],
+      "status": "admitted"
+    },
+    {
+      "id": "evidence:local:project-context",
+      "sourceRef": "source:local:project-context",
+      "sourceAuthority": "work_item",
+      "sourceRevision": "v5-project-context-observed-2026-09-08",
+      "observedAt": "2026-09-08T10:00:00+09:00",
+      "evidenceKind": "stakeholder_evidence",
+      "supportsClaimRefs": ["claim:project-claim-boundary", "claim:interview-question-required"],
+      "contradictsClaimRefs": [],
+      "contextFacetRefs": ["facet:project-state", "facet:stakeholder-view"],
+      "status": "admitted"
+    },
+    {
+      "id": "evidence:local:user-request",
+      "sourceRef": "source:local:user-request",
+      "sourceAuthority": "work_item",
+      "sourceRevision": "request-revision-2026-09-08",
+      "observedAt": "2026-09-08T10:00:00+09:00",
+      "evidenceKind": "stakeholder_evidence",
+      "supportsClaimRefs": ["claim:report-audience-and-publication-policy"],
+      "contradictsClaimRefs": [],
+      "contextFacetRefs": ["facet:report-audience"],
+      "status": "admitted"
+    }
+  ],
+  "claims": [
+    {
+      "id": "claim:bounded-line-length-and-layout",
+      "nodeRef": "node:report-information-hierarchy",
+      "statementRef": "statement:use-constrained-columns-and-clear-layout",
+      "evidenceRefs": ["evidence:govuk-layout"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+      "status": "supported",
+      "confidence": "high",
+      "limitations": ["The cited guidance is for web layouts and is adapted to A4 report composition."]
+    },
+    {
+      "id": "claim:consistent-typography-and-spacing",
+      "nodeRef": "node:report-information-hierarchy",
+      "statementRef": "statement:use-typographic-and-spacing-rhythm",
+      "evidenceRefs": ["evidence:govuk-type-and-spacing"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+      "status": "supported",
+      "confidence": "high",
+      "limitations": ["Font rendering for Korean PDF output still requires local render validation."]
+    },
+    {
+      "id": "claim:row-based-comparison",
+      "nodeRef": "node:row-based-comparison",
+      "statementRef": "statement:use-rows-for-criteria-score-and-interview-check",
+      "evidenceRefs": ["evidence:govuk-table", "evidence:local:v5-report"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+      "status": "supported",
+      "confidence": "high",
+      "limitations": ["The choice to reduce cards is a task-specific design decision informed by the user's feedback."]
+    },
+    {
+      "id": "claim:semantic-table-relationships",
+      "nodeRef": "node:row-based-comparison",
+      "statementRef": "statement:table-headers-and-captions-preserve-comparison-context",
+      "evidenceRefs": ["evidence:w3c-tables"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+      "status": "supported",
+      "confidence": "high",
+      "limitations": ["The generated PDF will be checked visually and by text extraction; full tagged-PDF conformance is not claimed."]
+    },
+    {
+      "id": "claim:non-color-and-readable-spacing",
+      "nodeRef": "node:report-information-hierarchy",
+      "statementRef": "statement:labels-contrast-and-spacing-must-support-color-cues",
+      "evidenceRefs": ["evidence:w3c-color-and-spacing"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+      "status": "supported",
+      "confidence": "high",
+      "limitations": ["WCAG guidance is used as a readability and robustness reference, not as a claim of formal PDF conformance certification."]
+    },
+    {
+      "id": "claim:role-requires-service-delivery",
+      "nodeRef": "node:official-role-context",
+      "statementRef": "statement:role-covers-api-backend-data-platform-validation",
+      "evidenceRefs": ["evidence:lotte-posting"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:posting-observation"],
+      "status": "corroborated",
+      "confidence": "high",
+      "limitations": ["The posting does not establish the team's complete internal workflow or current stack."]
+    },
+    {
+      "id": "claim:application-requirements",
+      "nodeRef": "node:official-role-context",
+      "statementRef": "statement:application-needs-300-plus-characters-and-education-privacy",
+      "evidenceRefs": ["evidence:lotte-posting"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:posting-observation"],
+      "status": "supported",
+      "confidence": "high",
+      "limitations": ["Application instructions can change before submission and should be checked again."]
+    },
+    {
+      "id": "claim:company-public-context",
+      "nodeRef": "node:official-role-context",
+      "statementRef": "statement:company-provides-industry-spanning-it-platforms-and-solutions",
+      "evidenceRefs": ["evidence:lotte-affiliate", "evidence:lotte-home"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:company-context"],
+      "status": "corroborated",
+      "confidence": "high",
+      "limitations": ["Public company descriptions are not evidence of a specific team's internal practice or applicant fit."]
+    },
+    {
+      "id": "claim:card-repetition-is-a-report-risk",
+      "nodeRef": "node:report-information-hierarchy",
+      "statementRef": "statement:repeated-cards-flatten-information-priority",
+      "evidenceRefs": ["evidence:local:v5-report"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:report-audience", "facet:pdf-output"],
+      "status": "supported",
+      "confidence": "medium",
+      "limitations": ["This is an editorial observation for the current report, not a universal prohibition on cards."]
+    },
+    {
+      "id": "claim:body-text-should-remain-selectable",
+      "nodeRef": "node:raster-visual-asset",
+      "statementRef": "statement:rasterize-diagrams-but-preserve-body-text",
+      "evidenceRefs": ["evidence:local:v5-report", "evidence:govuk-layout"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:pdf-output"],
+      "status": "supported",
+      "confidence": "medium",
+      "limitations": ["This balances the user's raster-asset preference with copy/search/readability; a full-page image PDF is intentionally excluded."]
+    },
+    {
+      "id": "claim:project-claim-boundary",
+      "nodeRef": "node:contribution-boundary",
+      "statementRef": "statement:repository-structure-does-not-prove-personal-production-outcome",
+      "evidenceRefs": ["evidence:local:project-context"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:project-state"],
+      "status": "supported",
+      "confidence": "high",
+      "limitations": ["Additional user evidence may narrow or strengthen the permitted past-tense wording."]
+    },
+    {
+      "id": "claim:interview-question-required",
+      "nodeRef": "node:interview-rehearsal-question",
+      "statementRef": "statement:each-set-needs-a-role-specific-rehearsal-question",
+      "evidenceRefs": ["evidence:local:project-context", "evidence:lotte-posting"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:stakeholder-view", "facet:project-state"],
+      "status": "supported",
+      "confidence": "medium",
+      "limitations": ["The questions support preparation but do not predict interview questions or evaluator behavior."]
+    },
+    {
+      "id": "claim:report-audience-and-publication-policy",
+      "nodeRef": "node:report-information-hierarchy",
+      "statementRef": "statement:report-shows-user-useful-content-and-hides-internal-operation-files",
+      "evidenceRefs": ["evidence:local:user-request"],
+      "counterevidenceRefs": [],
+      "contextFacetRefs": ["facet:report-audience"],
+      "status": "supported",
+      "confidence": "high",
+      "limitations": ["The policy applies to the final PDF, not to internal research and validation artifacts."]
+    }
+  ],
+  "rubricAssessment": {
+    "criteria": [
+      {
+        "id": "criterion:official-source-coverage",
+        "kind": "mandatory",
+        "anchor": "supported",
+        "evidenceRefs": ["evidence:lotte-posting", "evidence:lotte-affiliate", "evidence:govuk-layout", "evidence:govuk-table"],
+        "rationaleCode": "role-company-and-design-claims-bind-to-official-sources"
+      },
+      {
+        "id": "criterion:source-limitations-preserved",
+        "kind": "mandatory",
+        "anchor": "supported",
+        "evidenceRefs": ["evidence:lotte-posting", "evidence:lotte-affiliate", "evidence:local:project-context"],
+        "rationaleCode": "public-context-does-not-expand-to-team-or-production-claims"
+      },
+      {
+        "id": "criterion:design-guidance-applicability",
+        "kind": "qualifying",
+        "anchor": "supported",
+        "evidenceRefs": ["evidence:govuk-layout", "evidence:govuk-type-and-spacing", "evidence:govuk-table"],
+        "rationaleCode": "layout-typography-spacing-and-table-guidance-translated-to-a4-report"
+      },
+      {
+        "id": "criterion:report-usefulness",
+        "kind": "qualifying",
+        "anchor": "supported",
+        "evidenceRefs": ["evidence:local:user-request", "evidence:local:v5-report"],
+        "rationaleCode": "user-useful-content-replaces-internal-process-explanation"
+      },
+      {
+        "id": "criterion:project-evidence-gap",
+        "kind": "comparative",
+        "anchor": "partially_supported",
+        "evidenceRefs": ["evidence:local:project-context"],
+        "rationaleCode": "additional-user-material-request-is-retained-for-contribution-and-outcome"
+      },
+      {
+        "id": "criterion:independent-source-review",
+        "kind": "observational",
+        "anchor": "supported",
+        "evidenceRefs": ["evidence:govuk-layout", "evidence:govuk-table", "evidence:lotte-posting"],
+        "rationaleCode": "source-family-and-applicability-check-recorded"
+      }
+    ],
+    "validatorRef": "agent:source-evidence-reviewer"
+  },
+  "termination": {
+    "status": "insufficient",
+    "recommendation": "request_context",
+    "reasonCodes": [
+      "official-design-and-role-source-coverage-sufficient-for-report-composition",
+      "company-context-is-bounded-to-public-information",
+      "personal-contribution-gap-is-retained-as-user-context-request",
+      "no-additional-external-research-needed-before-pdf-design"
+    ],
+    "unresolvedGapRefs": ["gap:personal-contribution-evidence"]
+  },
+  "authorityEffect": "none"
+}

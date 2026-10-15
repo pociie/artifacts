@@ -1,0 +1,67 @@
+{
+  "authorityEffect": "none",
+  "blockingCodes": [
+    "hub-auth-unavailable",
+    "dataset-license-unobserved",
+    "task-instruction-unavailable",
+    "task-image-manifest-unavailable",
+    "protected-verifier-unavailable",
+    "effective-model-unverified",
+    "effective-reasoning-effort-unverified",
+    "subject-timeout-unverified",
+    "network-policy-unresolved",
+    "cost-budget-unqualified"
+  ],
+  "claimRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-49-swe-bench-swe-smith/claim.r13.json",
+  "digest": "sha256:b202445723906bc4431efa6c91d95ffda903c1c541e4f13dd360933c55b66a71",
+  "effective": {
+    "model": null,
+    "reasoningEffort": null,
+    "receiptState": "missing_require_context",
+    "timeoutSeconds": null
+  },
+  "identityDigest": "sha256:0919ab6f504281226b0877f325a266a63d2181b6c44d0d310ef6f91a544508ef",
+  "itemId": "swe-bench/swe-smith",
+  "itemTerminalStatus": "held",
+  "kind": "harbor-subject-operation-receipt/v2",
+  "nativeSubjectBoundary": {
+    "controllerProviderEvidenceNotSubjectEvidence": true,
+    "observationDigest": "sha256:aafa925986977da2a4a0075b1c0188bedb34433968b914abaa15bf67ddb1b0d2",
+    "observationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-49-swe-bench-swe-smith/native-subject-topology-operation-observation.r13.json",
+    "operationStatus": "not_operated",
+    "receiptDigest": "sha256:90bb796fc9a8fe0b7e722b6f06554ed00b94a92c6cc5d64e81657ee3d2cdddb0",
+    "receiptRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-49-swe-bench-swe-smith/native-subject-topology-operation-receipt.r13.json",
+    "requestDigest": "sha256:553d63bbe0c5dc3d93ab4f1cdcad5afc218baf6dcd8161847df2faa5777a3c65",
+    "requestRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-49-swe-bench-swe-smith/subject-operation-request.r13.json"
+  },
+  "operationAttempted": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationStatus": "held_before_subject_execution",
+  "privacy": {
+    "credentialsStored": false,
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false
+  },
+  "provider": "harbor@0.22.0",
+  "requested": {
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "timeoutSeconds": 3600
+  },
+  "requireContext": true,
+  "schemaVersion": 2,
+  "subject": "Harbor Subject",
+  "subjectTerminalState": "not_started",
+  "verifierState": "not_started",
+  "wakeCondition": [
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "network_policy_and_cost_budget_qualified"
+  ]
+}

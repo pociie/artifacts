@@ -1,0 +1,78 @@
+{
+  "activeClaims": [],
+  "authorityEffect": "none",
+  "digest": "sha256:a2447cbbe02e79aa860f53f43f01f5e3ac4b142f4799cfe06e7f0968378d8f5f",
+  "eventCursor": 12,
+  "eventHeadSha256": "sha256:ca289d0dfe303e0b081133f6b272058fc391cf45dd426518b609b11e7b7b0606",
+  "kind": "atomic-lane-claim-admission-input/v3",
+  "maxConcurrency": 1,
+  "proposals": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 12,
+      "expectedEventHeadSha256": "ca289d0dfe303e0b081133f6b272058fc391cf45dd426518b609b11e7b7b0606",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:f53b84cc66f7dfb165ccd739b70b96bac0fd5a8285f7c10ef84dc275b006b912"
+      },
+      "identityDigest": "sha256:c3736ddd9573b93e8fb67e9e3767947dd4778d9765d305d04e0f4fbe5326e5f4",
+      "itemId": "cmu/refav",
+      "laneId": "population-shard-2",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-2:cmu/refav:r13",
+      "sequence": 10,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-2:r13-controller"
+    }
+  ],
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-2",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-10-cmu-refav/queue-reconciliation-before-claim.r13.json",
+  "resolverDecision": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "cmu/refav",
+        "laneId": "population-shard-2",
+        "proposalId": "proposal:population-shard-2:cmu/refav:r13",
+        "workerId": "worker:harbor-population-shard-2:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 12,
+      "eventHeadSha256": "ca289d0dfe303e0b081133f6b272058fc391cf45dd426518b609b11e7b7b0606",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 12,
+    "eventHeadSha256": "ca289d0dfe303e0b081133f6b272058fc391cf45dd426518b609b11e7b7b0606",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-2",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "resolverInputDigest": "sha256:82d29b6b3e56655809053da0a5ef0aabc56d055cf408e45953406036e498c3c2",
+  "schemaVersion": 3,
+  "terminalReceiptRefs": [
+    "population-shard-2/route-and-gate-evidence.json",
+    "continuation-r5/simulation-evidence-probe-01.json",
+    "continuation-r5/simulation-evidence-probe-02.json",
+    "continuation-r5/simulation-evidence-probe-03.json",
+    "continuation-r9/terminal-item-receipt.r9.json",
+    "continuation-r12/terminal-item-receipt.r12.json",
+    "population-shard-2/continuation-r13/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-05-algotune-algotune/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-06-bencalvert04-programbench/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-07-blobfishai-litigation/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-08-blobfishai-salesbench-100/terminal-item-receipt.r13.json",
+    "population-shard-2/continuation-r13/item-09-cais-swebenchpro/terminal-item-receipt.r13.json"
+  ]
+}

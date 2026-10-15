@@ -1,0 +1,67 @@
+{
+  "authorityEffect": "none",
+  "blockingCodes": [
+    "hub-auth-unavailable",
+    "dataset-license-unobserved",
+    "task-instruction-unavailable",
+    "task-image-manifest-unavailable",
+    "protected-verifier-unavailable",
+    "effective-model-unverified",
+    "effective-reasoning-effort-unverified",
+    "subject-timeout-unverified",
+    "network-policy-unresolved",
+    "cost-budget-unqualified"
+  ],
+  "claimRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-29-openthoughts-tasktrove-exp-rpt-e2egit-large/claim.r13.json",
+  "digest": "sha256:d9e6046bbac7c001ce5b442a80bfdb5847b715a94ab03bb5877e93b143c066d1",
+  "effective": {
+    "model": null,
+    "reasoningEffort": null,
+    "receiptState": "missing_require_context",
+    "timeoutSeconds": null
+  },
+  "identityDigest": "sha256:c91e4c6f18d3014db062efff73a18d9540b44354a849181182b40bcef315ba61",
+  "itemId": "openthoughts/tasktrove-exp-rpt-e2egit-large",
+  "itemTerminalStatus": "held",
+  "kind": "harbor-subject-operation-receipt/v2",
+  "nativeSubjectBoundary": {
+    "controllerProviderEvidenceNotSubjectEvidence": true,
+    "observationDigest": "sha256:a4a08768424c784c939782071d2fd9422db7f94b2a31ea83cd18a817c2338260",
+    "observationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-29-openthoughts-tasktrove-exp-rpt-e2egit-large/native-subject-topology-operation-observation.r13.json",
+    "operationStatus": "not_operated",
+    "receiptDigest": "sha256:2e2ca0e4c34a11b7aa15a7850f5e9e4cf0289b994f89e70bcaee122ea45eae6c",
+    "receiptRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-29-openthoughts-tasktrove-exp-rpt-e2egit-large/native-subject-topology-operation-receipt.r13.json",
+    "requestDigest": "sha256:9b7a2e72f024ff4a08b253a048de835fbfaa8696eec27a7fc6baceff7bee4f4b",
+    "requestRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-29-openthoughts-tasktrove-exp-rpt-e2egit-large/subject-operation-request.r13.json"
+  },
+  "operationAttempted": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationStatus": "held_before_subject_execution",
+  "privacy": {
+    "credentialsStored": false,
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false
+  },
+  "provider": "harbor@0.22.0",
+  "requested": {
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "timeoutSeconds": 3600
+  },
+  "requireContext": true,
+  "schemaVersion": 2,
+  "subject": "Harbor Subject",
+  "subjectTerminalState": "not_started",
+  "verifierState": "not_started",
+  "wakeCondition": [
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "network_policy_and_cost_budget_qualified"
+  ]
+}

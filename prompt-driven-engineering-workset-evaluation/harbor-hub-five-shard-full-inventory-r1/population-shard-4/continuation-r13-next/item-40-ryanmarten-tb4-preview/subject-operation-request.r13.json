@@ -1,0 +1,121 @@
+{
+  "agentArchitectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+  "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+  "agentSwarmDigest": null,
+  "agentSwarmRef": null,
+  "authorityEffect": "none",
+  "controllerMaySelect": false,
+  "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+  "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+  "decisionBindings": [
+    {
+      "decisionKind": "route",
+      "digest": "sha256:e258053a511343d118f9f366a6ec90a3b958c5d684f2831f2fb542c9ae1f2ebc",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/native-route-decision.r13.json"
+    },
+    {
+      "decisionKind": "reasoning_control",
+      "digest": "sha256:fdbb16cff42688560d10ffe8313483894680844949013b3a584ead310f4685c5",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/native-mode-reasoning-control.r13.json"
+    },
+    {
+      "decisionKind": "reasoning_envelope",
+      "digest": "sha256:17edd04132a93c3851f63d469cee3dda5a01bed0e49b94da8361727ddc86970f",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/native-mode-reasoning-envelope.r13.json"
+    },
+    {
+      "decisionKind": "artifact_reuse",
+      "digest": "sha256:50952e96f56bb0ac2db61cb7c690942a071d8934147e6198836f8f0c7b1a219e",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/artifact-reuse-decision.r13.json"
+    },
+    {
+      "decisionKind": "subject_operation_scope",
+      "digest": "sha256:54271af783c2e5ed49e084ef8b41df65c35c94d4574260501b55206ae5b3c186",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/subject-operation-scope-binding.r13.json"
+    },
+    {
+      "decisionKind": "topology_requirement",
+      "digest": "sha256:f872b89d9bb939ccb2947b46b4803241e462ee4df1a73073222f7ca4f5bb43ac",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/topology-requirement-decision.r13.json"
+    },
+    {
+      "decisionKind": "workflow_pattern",
+      "digest": "sha256:2ebfa2ef195bb1f151e929cb623bd407b3fabe15bf9bbaf184dbf946d4132bfc",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/workflow-pattern-decision.r13.json"
+    },
+    {
+      "decisionKind": "topology_selection",
+      "digest": "sha256:d3d4bb703f922d97a4363fe2a29f8e11b7612a61e4644728ef29856f63fa28fd",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/topology-selection-decision.r13.json"
+    },
+    {
+      "decisionKind": "coordination_plan",
+      "digest": "sha256:4f9e8c73bf8f730df61f313e6e159ba907929bd334b38cc068a437eb7d7164d0",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/coordination-plan-decision.r13.json"
+    },
+    {
+      "decisionKind": "coordination_closure",
+      "digest": "sha256:16e3eee39456c8ee14344ac2eb2b75aaf0516d2d62e54df3434277f97b01ca73",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/coordination-closure-decision.r13.json"
+    },
+    {
+      "decisionKind": "role_context_projection",
+      "digest": "sha256:64c5ba48a01d36904abfc2869d2cc45f23c9ae630580a059e1152d7909340580",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/role-context-projection.r13.json"
+    }
+  ],
+  "kind": "subject-topology-operation-request/v1",
+  "mode": "single_task",
+  "operationContracts": {
+    "executionRecordSchemaRef": "artifacts/agent-loop/work/workflow-pattern-execution/schemas/workflow-pattern-execution-record-v2.schema.json",
+    "packetSchemaRef": "artifacts/agent-loop/work/workflow-pattern-execution/schemas/subject-operation-packet.schema.json",
+    "receiptSchemaRef": "artifacts/agent-loop/work/workflow-pattern-execution/schemas/subject-topology-operation-receipt-v2.schema.json",
+    "roleResultSchemaRef": "artifacts/agent-loop/work/workflow-pattern-execution/schemas/subject-role-operation-result.schema.json"
+  },
+  "requestId": "subject-operation-request:population-shard-4:ryanmarten/tb4-preview:r13",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:ryanmarten/tb4-preview:r13:execute-harbor-subject",
+  "responsibilitySlots": [
+    {
+      "profileDigest": "sha256:3c84136e80f99bc44c4f2f1be8d9349887389da826574d60c2531195c8f35489",
+      "profileRef": "artifacts/agents/agent-operation/agents/work-orchestration-coordinator.yaml",
+      "required": true,
+      "responsibilityClass": "orchestrator",
+      "roleId": "coordinator"
+    },
+    {
+      "profileDigest": "sha256:1359813cef538a12b342609c8e5a88f120425957ee8d954b9e79f6ae86cf643d",
+      "profileRef": "artifacts/agents/agent-operation/agents/external-tool-surface-curator.yaml",
+      "required": true,
+      "responsibilityClass": "specialist",
+      "roleId": "provider-curator"
+    },
+    {
+      "profileDigest": "sha256:dcaa90f790aaaf86d630ae7571ee686252eb663c413165182298caecdfb3bef1",
+      "profileRef": "artifacts/agents/evidence-governance/agents/representative-collection-readiness-curator.yaml",
+      "required": true,
+      "responsibilityClass": "specialist",
+      "roleId": "population-curator"
+    },
+    {
+      "profileDigest": "sha256:94a3ec55600f73dc4b6222b2a713b03d5b1da8b64fef6af751ea981d88900aa5",
+      "profileRef": "artifacts/agents/engineering/agents/source-evidence-reviewer.yaml",
+      "required": true,
+      "responsibilityClass": "validator",
+      "roleId": "validator"
+    }
+  ],
+  "runtimeBinding": {
+    "capabilityEvidenceDigest": "sha256:582e3145082980dead4601a4e9793123c45bdf58757bccdacc6006f48f49a0e3",
+    "capabilityEvidenceRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-40-ryanmarten-tb4-preview/runtime-capability-binding.r13.json",
+    "controllerActorRef": "controller:worker:harbor-population-shard-4:r13-controller",
+    "providerRef": "provider:harbor:0.22.0",
+    "subjectRuntimeRef": "runtime:harbor-subject:population-shard-4:item-40-ryanmarten-tb4-preview"
+  },
+  "schemaVersion": 1,
+  "status": "report_only",
+  "subjectOwnsActivation": true,
+  "subjectRef": "subject:harbor:ryanmarten/tb4-preview:r13",
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "workflowPatternId": "pipeline"
+}

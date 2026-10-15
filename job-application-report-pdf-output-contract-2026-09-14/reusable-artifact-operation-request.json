@@ -1,0 +1,124 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:job-application-report-pdf-output-contract",
+  "requestRevision": "revision:pdf-only-v1",
+  "requestRelation": "continue_objective",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/job-application-report-pdf-output-contract-2026-09-14/route-decision.json",
+    "decisionDigest": "sha256:eacda51bc3eebd872f53d509371123de4a5044f3e5749d9e39cc46b1343f997e",
+    "effectiveMode": "loop"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:job-application-report-pdf-contract-builder",
+    "agencyRef": "artifacts/agents/requirement-realization/agents/artifact-builder.yaml",
+    "agencyDigest": "sha256:06ebe77c9b1b5754e6f2e749c470d9129854abe04690022b3156705f6f10410d",
+    "responsibilityClass": "builder",
+    "outcomeContract": "Guarantee that this reusable artifact settles only with five complete answer sets and one searchable PDF as the final review report.",
+    "outputContract": "A bounded profile, contract, checker, skill, and regression-test revision with validation evidence.",
+    "decisionScopes": [
+      "five-set PDF profile admission",
+      "final versus runtime-support artifact classification",
+      "deterministic completion validation"
+    ],
+    "nonAuthority": [
+      "application submission",
+      "applicant fact invention",
+      "historical report mutation",
+      "reusable artifact promotion",
+      "unrelated renderer replacement"
+    ]
+  },
+  "objective": "Prevent two-set or HTML-primary job-application report runs from settling under this artifact and require immediate availability of the five-set searchable PDF report at completion.",
+  "successEvidenceRefs": [
+    "evidence:missing-profile-request-rejected",
+    "evidence:two-set-request-rejected",
+    "evidence:html-primary-report-rejected",
+    "evidence:exactly-one-final-pdf-report",
+    "evidence:focused-tests-pass"
+  ],
+  "protectedConstraintRefs": [
+    "constraint:html-may-exist-only-as-runtime-render-source",
+    "constraint:five-complete-answer-sets",
+    "constraint:searchable-pdf-final-report",
+    "constraint:no-historical-output-rewrite",
+    "constraint:authority-effect-none"
+  ],
+  "nonGoalRefs": [
+    "non-goal:regenerate-finebridge-report",
+    "non-goal:change-answer-content-rubric",
+    "non-goal:replace-pdf-renderer",
+    "non-goal:publish-or-submit-output"
+  ],
+  "lifecycleIntent": "improve_existing",
+  "capabilities": [
+    "job-application report profile binding",
+    "PDF publication validation",
+    "artifact exposure classification",
+    "behavioral regression testing"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "783a32562aa185dbef333dde7c7c8945adb294fe76af24b935aa271916d242be",
+  "allowedBaseClasses": ["loop", "skill", "contract_checker"],
+  "allowedScopes": ["framework"],
+  "requiredFacts": ["owner", "scope", "consumer", "validation"],
+  "exactArtifactIds": ["loop:document:job-application-report-production"],
+  "relationshipDepth": 1,
+  "maxCandidates": 4,
+  "contextBudget": {
+    "maxSourceMembers": 25,
+    "maxConsumerRefs": 12,
+    "maxValidationRefs": 20
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "Whether a separately named non-PDF report artifact should exist in the future."
+    ],
+    "allowedRelationshipTypes": ["defines", "consumes", "validates", "generates"],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "consumer",
+      "effect",
+      "route_or_topology",
+      "lifecycle",
+      "protected_constraint"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "evidence:pdf-only-profile-contract-produced",
+      "evidence:negative-fixtures-reject-html-and-two-set",
+      "evidence:validation-and-limitations-recorded"
+    ],
+    "validationRefs": [
+      "validation:reusable-artifact-operation-request-v2",
+      "validation:job-application-package-tests",
+      "validation:skill-quick-validation",
+      "validation:loop-package-strict"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "loop-budget:bounded-job-application-pdf-contract-v1",
+  "dataClassification": "internal",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": false,
+  "constructionAllowed": true,
+  "residualGapProven": true,
+  "requestDigest": "772c7894d93229dde3c16c3116100a47f73af11976b595d06abecb115cefbb10"
+}

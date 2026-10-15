@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "self-introduction-quality-loop/v3",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "objective": "사용자 가치관·견해가 드러나는 상위 서비스 서사의 자기소개서 5세트를 만들고, 의미가 고정된 평가체계에서 90점 이상인 세트만 PDF에 포함한다.",
+  "correctionsFromV2": [
+    "기술 메커니즘의 존재와 설명 품질을 분리하고, 구현 단위 나열을 핵심 서사에서 제거",
+    "모든 축에 동일한 0~4 공통 척도를 적용하고 ordinal 산식을 명시",
+    "사람 중심 가치·현대 AI 관점·사용자 맥락을 별도 구성개념으로 추가",
+    "글에 가치관이 드러나는 정도와 가치관의 진위·정체성 주장을 분리",
+    "점수·평가자 일치도·사용자 확인·사후 결과 연결을 각각 다른 데이터로 운영",
+    "상위 흐름 intent→context→execution→evidence→improvement로 프로젝트 분석 단위를 재정의"
+  ],
+  "scope": {
+    "included": ["official job/company/HR context", "user-understanding projection", "high-level repository abstraction", "five sets with three answers", "revision-bound rubric and evaluation data operations", "PDF and visible score validation"],
+    "excluded": ["application submission", "candidate identity or expertise inference", "unverified production/customer/metric claims", "source architecture changes", "raw prompts/transcripts/private reasoning/secrets/runtime handles"]
+  },
+  "routing": {
+    "mode": "bounded_iterative_investigation_and_loop",
+    "run": "run_2ed3db12fafc",
+    "readOnlyWorkers": ["user-understanding-rubric", "official-research", "project-abstraction", "v2-adversarial-review"],
+    "integrationOwner": "current-coordinator",
+    "materialChangeSignals": ["user corrects value or viewpoint", "project ownership/evidence changes", "job posting changes", "rubric construct or weight changes", "new dated execution/outcome evidence"]
+  },
+  "stages": [
+    {"id": "S1", "name": "purpose_and_context_binding", "checks": ["evaluand is one three-answer set", "consumer is draft editor", "90 threshold and five-set minimum fixed", "user evidence classes separated"], "exit": "definition and user projection bound"},
+    {"id": "S2", "name": "evidence_and_abstraction", "checks": ["official role claims separated from repository facts", "project expressed as service/human workflow", "personal contribution and outcome gaps preserved"], "exit": "evidence-map-v3 and project-abstraction-map-v3 ready"},
+    {"id": "S3", "name": "construct_and_profile_freeze", "checks": ["13 criteria sum to 100", "common anchors have same meaning", "protected gates precede weighted score", "ordinal transformation and unknown states recorded"], "exit": "rubric v3 profile frozen before scoring"},
+    {"id": "S4", "name": "five_set_generation", "checks": ["all 15 answers 300~700 characters", "Q2 includes type/scale/role/contribution/process/learning", "each set expresses a viewpoint and a workplace method", "technology names never stand alone as evidence"], "exit": "15 draft answers ready"},
+    {"id": "S5", "name": "semantic_and_claim_review", "checks": ["no low-level implementation exposition in essay center", "past/future/evidence classes separated", "human-AI viewpoint labeled as user-confirmation item", "no unsupported operational outcome", "all Q3 answers state the user-provided value directly", "five sets have distinct narrative lenses"], "exit": "known hard failures rewritten or excluded"},
+    {"id": "S6", "name": "scoring_and_selection", "checks": ["protected gates pass", "weighted score uses explicit formula", "only score >=90 included", "score meaning and unavailable metrics remain visible"], "exit": "five included sets selected"},
+    {"id": "S7", "name": "render_and_independent_validation", "checks": ["JSON parses", "character counts are visible", "PDF page layout has no overflow", "arithmetic/provenance/render checks are separate from acceptance"], "exit": "PDF and machine-readable v3 artifacts ready"}
+  ],
+  "dataOperations": {
+    "definition": "evaluation-rubric-v3.json",
+    "profile": "evaluation-rubric-v3.json#profile",
+    "operation": "evaluation-rubric-v3.json#operation",
+    "evidence": "evidence-map-v3.json",
+    "userProjection": "user-understanding-projection-v3.json",
+    "metrics": "evaluation-data-operations-v3.json",
+    "unknownPolicy": "unavailable/conflicting/not_applicable remain explicit and never become zero or pass",
+    "lifecycle": "draft -> profile_resolved -> evidence_ready -> evaluated -> observed/calibration_due; material correction invalidates stale operation"
+  },
+  "acceptance": {
+    "includedSets": 5,
+    "minimumScore": 90,
+    "allAnswersWithinRange": true,
+    "userSemanticAcknowledgement": "pending",
+    "raterAgreement": "unavailable",
+    "acceptedOutcomeJoin": "unavailable",
+    "setDistinctness": "observed_pass",
+    "authorityEffect": "none"
+  },
+  "followUpForApplicant": [
+    "각 세트의 중심 관점이 본인의 실제 견해와 맞는지 확인",
+    "collab-mono에서 실제로 변경한 영역·결정·대안·검증 실행을 확인",
+    "날짜가 있는 테스트·배포·장애·성과가 있다면 해당 문장에만 과거형으로 추가",
+    "면접 대비를 위해 프로젝트에서 실패한 선택과 버린 대안을 하나씩 준비"
+  ]
+}

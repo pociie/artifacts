@@ -1,0 +1,244 @@
+{
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "schemaVersion": 1,
+  "evidenceId": "evidence:harbor-hub-five-shard-full-inventory-r1:population-shard-2:continuation-r5:probe-02",
+  "status": "held",
+  "authorityEffect": "none",
+  "scope": {
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r5/probe-02",
+    "requestDigest": "sha256:9cd08f31583070c392d4c8f8d67867b40b9e217b36fb5f2340c294d8babf7b99",
+    "providerClass": "harbor",
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:dc8b56e26addb909623cd1c09b451b232a8b1a077277bda8cbbe82743c7ba9c6",
+    "sourceDigest": "sha256:dc8b56e26addb909623cd1c09b451b232a8b1a077277bda8cbbe82743c7ba9c6",
+    "verifierDigest": "sha256:24c6eaa05b14c837dd7ab3e23556cc058f2457d4d415141dd4be3662b0a86a6c",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/skill/operate-engineering-workset-simulation/SKILL.md",
+      "artifacts/loop-architecture/components/execution-routing/pre-route-workflow-resolution.md"
+    ]
+  },
+  "workingMemory": {
+    "bindingRef": "continuation-r5/working-memory-binding.json",
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r5",
+    "sessionCursor": "continuation-r5/cursor-settled",
+    "checkpointRefs": [
+      "continuation-r5/checkpoints/source-binding.json",
+      "continuation-r5/checkpoints/settlement.json"
+    ],
+    "retention": "runtime-private-until-lane-settlement-then-sanitized-immutable-projection",
+    "invalidation": [
+      "operation_revision_change",
+      "source_digest_change",
+      "hub_inventory_digest_change",
+      "provider_capability_change",
+      "model_effort_timeout_receipt_change",
+      "settlement_state_change",
+      "privacy_classification_change"
+    ],
+    "digest": "sha256:b484a3395f67e384ae50dc51ad0b7d80f345405522e2893b04917686216ea432"
+  },
+  "provider": {
+    "qualificationRef": "continuation-r5/probe-dispositions.json",
+    "qualificationDigest": "sha256:39b93bd95ba4c6b388809a6f02b4f7fc2e1a6c0826ea8e8b0f505447ea48995f",
+    "state": "held",
+    "limitations": [
+      "dataset_license_unobserved",
+      "cross_platform_emulation_unqualified",
+      "inert_initialization_probe_required",
+      "protected_verifier_not_run",
+      "effective_model_unverified",
+      "effective_reasoning_effort_unverified",
+      "subject_timeout_runtime_unverified",
+      "cost_budget_unqualified"
+    ]
+  },
+  "population": {
+    "selectionRule": "integer(SHA256(canonicalDatasetId)[0:16],16) mod 5 == 1; plan-bound case-preserving id",
+    "taskCount": 1,
+    "taskDigests": ["sha256:9cd08f31583070c392d4c8f8d67867b40b9e217b36fb5f2340c294d8babf7b99"],
+    "exclusions": [
+      "first-materialized-task-only",
+      "remaining-dataset-tasks-not-probed",
+      "remaining-shard-candidates-not-probed-in-bounded-continuation"
+    ]
+  },
+  "environment": {
+    "platformRef": "probes/probe-02-harbor-index.json",
+    "environmentDigest": "sha256:93e5be6634cd5b36ded81225e8dee76212410d582e59af3d8adfdaf097eea0d4",
+    "compatibilityState": "held",
+    "limitations": [
+      "cross_platform_emulation_unqualified",
+      "verifier_isolation_not_operated",
+      "subject_timeout_runtime_unverified",
+      "cost_budget_unqualified"
+    ]
+  },
+  "oracle": { "state": "not_run", "taskResults": [] },
+  "arms": [
+    {
+      "id": "arm:harbor-subject-baseline:probe-02",
+      "modelRef": "model:gpt-5.6-luna",
+      "requestedReasoningEffort": "max",
+      "allowedReasoningEfforts": ["max"],
+      "reasoningProfileRef": "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/policy/ai-execution-mode-operation.policy.json",
+      "instructionProfileRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "artifactProjectionDigest": "sha256:9cd08f31583070c392d4c8f8d67867b40b9e217b36fb5f2340c294d8babf7b99",
+      "admitted": false
+    }
+  ],
+  "trials": [],
+  "outcomes": {
+    "benchmarkEligibility": false,
+    "architectureInterpretationEligibility": false,
+    "eligibleTrialIds": [],
+    "disqualifications": [
+      "provider-qualification-held",
+      "cross-platform-emulation-unqualified",
+      "license-metadata-unobserved",
+      "model-effort-timeout-unverified",
+      "no-oracle-or-subject-trial"
+    ]
+  },
+  "failures": [
+    {
+      "id": "failure:probe-02:license",
+      "class": "license",
+      "code": "dataset-license-unobserved",
+      "subjectRef": "population-shard-2/continuation-r5/probe-02",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-02:platform",
+      "class": "platform",
+      "code": "cross-platform-emulation-unqualified",
+      "subjectRef": "population-shard-2/continuation-r5/probe-02",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-02:credentials",
+      "class": "provider",
+      "code": "inert-initialization-probe-required",
+      "subjectRef": "population-shard-2/continuation-r5/probe-02",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-02:verifier",
+      "class": "verifier",
+      "code": "protected-verifier-not-run",
+      "subjectRef": "population-shard-2/continuation-r5/probe-02",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-02:model",
+      "class": "model",
+      "code": "effective-model-unverified",
+      "subjectRef": "population-shard-2/continuation-r5/probe-02",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-02:effort",
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "subjectRef": "population-shard-2/continuation-r5/probe-02",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-02:timeout",
+      "class": "environment",
+      "code": "subject-timeout-runtime-unverified",
+      "subjectRef": "population-shard-2/continuation-r5/probe-02",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-02:cost",
+      "class": "environment",
+      "code": "cost-budget-unqualified",
+      "subjectRef": "population-shard-2/continuation-r5/probe-02",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    }
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r5",
+    "contentEvidenceRefs": []
+  },
+  "settlement": {
+    "state": "complete",
+    "resources": [
+      {
+        "resourceClass": "task-materialization",
+        "resourceRefDigest": "sha256:9cd08f31583070c392d4c8f8d67867b40b9e217b36fb5f2340c294d8babf7b99",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-02-harbor-index.json"]
+      },
+      {
+        "resourceClass": "detail-page",
+        "resourceRefDigest": "sha256:3b58b08b432e4065f4aa3f51158e843f4978fbe92c08f75f9c2104bbbcf73a38",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-02-harbor-index.json"]
+      },
+      {
+        "resourceClass": "environment-image-reference",
+        "resourceRefDigest": "sha256:93e5be6634cd5b36ded81225e8dee76212410d582e59af3d8adfdaf097eea0d4",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-02-harbor-index.json"]
+      },
+      {
+        "resourceClass": "verifier-image-reference",
+        "resourceRefDigest": "sha256:24c6eaa05b14c837dd7ab3e23556cc058f2457d4d415141dd4be3662b0a86a6c",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-02-harbor-index.json"]
+      },
+      {
+        "resourceClass": "containers",
+        "resourceRefDigest": "sha256:94760b54fc51ff51471971812ae866e481c1752cfc1abf1ee473da601e5ab91a",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-02-harbor-index.json"]
+      },
+      {
+        "resourceClass": "provider-jobs",
+        "resourceRefDigest": "sha256:6ab244b179ae9b1fee0b39e1c95119b7570edb8304795d067befffbd5b23a98f",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-02-harbor-index.json"]
+      },
+      {
+        "resourceClass": "auth-material",
+        "resourceRefDigest": "sha256:90b12137b435bc289130a090a78c60d9c072d69b21e4f9a28c82375b6009a085",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-02-harbor-index.json"]
+      },
+      {
+        "resourceClass": "temporary-files",
+        "resourceRefDigest": "sha256:b6cc23124332ea9046730f05d64a2ca7124a26acdd644cd82d33ed45f59fc62b",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-02-harbor-index.json"]
+      }
+    ],
+    "reconciliationRef": "continuation-r5/settlement-ledger.json"
+  },
+  "sourceRefs": [
+    "continuation-r5/source-and-plan-binding.json",
+    "continuation-r5/working-memory-binding.json",
+    "continuation-r5/probe-dispositions.json"
+  ],
+  "createdAt": "2026-08-28T13:12:08Z",
+  "digest": "sha256:b95fdee281a666d651c38379caf08f6f9b69481208afe3f57c69766df1ebac3d"
+}

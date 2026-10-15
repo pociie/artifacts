@@ -1,0 +1,67 @@
+{
+  "authorityEffect": "none",
+  "blockingCodes": [
+    "hub-auth-unavailable",
+    "dataset-license-unobserved",
+    "task-instruction-unavailable",
+    "task-image-manifest-unavailable",
+    "protected-verifier-unavailable",
+    "effective-model-unverified",
+    "effective-reasoning-effort-unverified",
+    "subject-timeout-unverified",
+    "network-policy-unresolved",
+    "cost-budget-unqualified"
+  ],
+  "claimRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-08-frontis-agent-obs-core/claim.r13.json",
+  "digest": "sha256:4f1275be455364ff9cf0240163945a7edf9c41f18699b8e2507a2c5d4059b2a5",
+  "effective": {
+    "model": null,
+    "reasoningEffort": null,
+    "receiptState": "missing_require_context",
+    "timeoutSeconds": null
+  },
+  "identityDigest": "sha256:eb6dfd0f85f9cd406a76f6e45645f5f5f311c131c80a2206a1ed813053efdc47",
+  "itemId": "frontis/agent-obs-core",
+  "itemTerminalStatus": "held",
+  "kind": "harbor-subject-operation-receipt/v2",
+  "nativeSubjectBoundary": {
+    "controllerProviderEvidenceNotSubjectEvidence": true,
+    "observationDigest": "sha256:5a1abd6d97a377b398ea98a6363601f61f90c4261e5d6d54aa1693eecdddd3ca",
+    "observationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-08-frontis-agent-obs-core/native-subject-topology-operation-observation.r13.json",
+    "operationStatus": "not_operated",
+    "receiptDigest": "sha256:cf10b0790f253b91dbe69b26f3d536ec5432ce455971503d7e3da43f1b38e2b6",
+    "receiptRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-08-frontis-agent-obs-core/native-subject-topology-operation-receipt.r13.json",
+    "requestDigest": "sha256:bd6beb17c047eddb4ce09525777acaf0e2f3c5f9de7aa711d9f8feef48fac121",
+    "requestRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-08-frontis-agent-obs-core/subject-operation-request.r13.json"
+  },
+  "operationAttempted": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationStatus": "held_before_subject_execution",
+  "privacy": {
+    "credentialsStored": false,
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false
+  },
+  "provider": "harbor@0.22.0",
+  "requested": {
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "timeoutSeconds": 3600
+  },
+  "requireContext": true,
+  "schemaVersion": 2,
+  "subject": "Harbor Subject",
+  "subjectTerminalState": "not_started",
+  "verifierState": "not_started",
+  "wakeCondition": [
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "network_policy_and_cost_budget_qualified"
+  ]
+}

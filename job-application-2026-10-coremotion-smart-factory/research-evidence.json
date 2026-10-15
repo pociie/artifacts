@@ -1,0 +1,53 @@
+{
+  "record_kind": "job-application-research-evidence/v1",
+  "status": "bounded-user-supplied-evidence",
+  "observed_at": "2026-09-14T12:00:00+09:00",
+  "sources": [
+    {
+      "id": "source:job-posting",
+      "authority": "user-supplied-posting-summary",
+      "locator": "https://jobs.coremotion.example/smart-factory-engineer",
+      "usable_claims": [
+        "제조 데이터 수집 및 분석",
+        "생산 설비 시스템 연동",
+        "공정 자동화",
+        "제조 시스템 모니터링",
+        "생산성 개선",
+        "현장 문제 분석 및 해결"
+      ],
+      "limitation": "example 도메인 URL은 외부 확인이 되지 않아 사용자 제공 요약만 사용했다."
+    },
+    {
+      "id": "source:company-domain",
+      "authority": "user-supplied-company-locator",
+      "locator": "https://www.coremotion.example",
+      "usable_claims": [],
+      "limitation": "실제 회사 공개 정보는 확인되지 않았다."
+    },
+    {
+      "id": "source:applicant-profile",
+      "authority": "applicant-owned",
+      "locator": "user-provided-profile-summary",
+      "usable_claims": [
+        "학력",
+        "신입 지원",
+        "희망 직무",
+        "기술 목록"
+      ],
+      "limitation": "원본 이력서 파일은 독립 검토하지 않았다."
+    },
+    {
+      "id": "source:applicant-experiences",
+      "authority": "applicant-owned",
+      "locator": "user-provided-experience-summary",
+      "usable_claims": [
+        "6개월 센서·생산 기록 분석",
+        "불량 시간대 발견",
+        "검사 단계 대기 병목",
+        "시뮬레이션 기준 11% 감소"
+      ],
+      "limitation": "실제 운영 적용 후속 수치는 제공되지 않았다."
+    }
+  ],
+  "stop_reason": "질문별 작성 전략과 문장 근거를 정하는 데 필요한 범위까지 확인했으며, 추가 외부 정보는 현재 답안에 반영할 수 없어 수집하지 않았다."
+}

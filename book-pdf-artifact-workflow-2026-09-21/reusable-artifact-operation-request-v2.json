@@ -1,0 +1,153 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:book-pdf-artifact-workflow-visual-segment",
+  "requestRevision": "revision:v2",
+  "requestRelation": "change_execution_surface",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/route-decision-v2.json",
+    "decisionDigest": "sha256:33bf45ae0f080b5092dd8beafcecf61b8da8586419f84acac3ae8f5490043106",
+    "effectiveMode": "orchestration"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:visual-pdf-spec-builder",
+    "agencyRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/subject-agency-v2.json",
+    "agencyDigest": "sha256:4102a9d361183effa75c34d8a0f38d4f1198ab558987ec199c6731a8ec00b073",
+    "responsibilityClass": "specialist",
+    "outcomeContract": "outcome:visual-book-pdf-workflow-candidate",
+    "outputContract": "output:references-mockups-expression-map-spec-validation-and-handoff",
+    "decisionScopes": [
+      "domain-reference-selection",
+      "task-local-visual-direction-generation",
+      "pdf-expression-mapping",
+      "collaboration-safe-candidate-specification",
+      "recipient-handoff-packet"
+    ],
+    "nonAuthority": [
+      "AGENTS.md-editing",
+      "external-publication",
+      "runtime-session-activation",
+      "team-assignment",
+      "framework-promotion",
+      "final-pdf-acceptance",
+      "unrelated-source-change"
+    ]
+  },
+  "objective": "Produce the bounded visual PDF-specification contribution for a shared, cross-session book-PDF workflow: domain references, at least ten raster design directions, PDF expression mapping, dynamic artifact specification, validation, and digest-bound handoff.",
+  "successEvidenceRefs": [
+    "evidence:domain-book-reference-matrix",
+    "evidence:ten-plus-raster-mockups",
+    "evidence:mockup-to-pdf-expression-map",
+    "evidence:dynamic-artifact-specification",
+    "evidence:common-collaboration-bundle-binding",
+    "evidence:recipient-handoff",
+    "evidence:validation-report"
+  ],
+  "protectedConstraintRefs": [
+    "constraint:AGENTS-md-owned-by-instruction-governance-editor",
+    "constraint:agencies-and-authority-remain-separate",
+    "constraint:copyright-safe-original-visual-directions",
+    "constraint:generated-outputs-under-task-artifact-directory",
+    "constraint:existing-user-changes-preserved",
+    "constraint:prompt-bodies-private-reasoning-session-identifiers-and-runtime-handles-not-persisted"
+  ],
+  "nonGoalRefs": [
+    "non-goal:AGENTS-md-edit",
+    "non-goal:production-pdf-publication",
+    "non-goal:application-source-change",
+    "non-goal:automatic-team-routing",
+    "non-goal:framework-wide-artifact-promotion",
+    "non-goal:copy-specific-book-trade-dress"
+  ],
+  "lifecycleIntent": "retain_task_specific",
+  "capabilities": [
+    "document and PDF production",
+    "editorial design exploration",
+    "domain reference research",
+    "raster image generation",
+    "multi-session artifact handoff"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "428a42e075cb9d5d66f87be50bf6b28b0ad29c1b597d88612f213a7634935779",
+  "allowedBaseClasses": [
+    "workflow",
+    "loop",
+    "agent_profile",
+    "agent_architecture",
+    "skill",
+    "contract_checker",
+    "knowledge_reference",
+    "dynamic_blueprint"
+  ],
+  "allowedScopes": ["framework", "team", "personal"],
+  "requiredFacts": ["owner", "scope", "consumer", "validation"],
+  "exactArtifactIds": [],
+  "relationshipDepth": 1,
+  "maxCandidates": 16,
+  "contextBudget": {
+    "maxSourceMembers": 20,
+    "maxConsumerRefs": 12,
+    "maxValidationRefs": 12
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "Which visual direction the final PDF owner will select or combine.",
+      "Whether the selected direction will pass physical A4 and independent reader review.",
+      "Whether repeated use later justifies promotion beyond a task-specific candidate."
+    ],
+    "allowedRelationshipTypes": [
+      "defines",
+      "consumes",
+      "depends_on",
+      "validates",
+      "generates",
+      "binds_capability",
+      "observed_in"
+    ],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "consumer",
+      "effect",
+      "route_or_topology",
+      "lifecycle",
+      "protected_constraint"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "evidence:requested-visual-artifact-set-present",
+      "evidence:handoff-binds-collaboration-bundle",
+      "evidence:adjacent-improvements-reported-only",
+      "evidence:AGENTS-md-untouched"
+    ],
+    "validationRefs": [
+      "validation:reusable-artifact-operation-request-v2",
+      "validation:image-inventory-and-visual-review",
+      "validation:handoff-bundle-digest"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "loop-budget:book-pdf-visual-segment:v2",
+  "dataClassification": "internal",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": true,
+  "constructionAllowed": true,
+  "residualGapProven": true,
+  "requestDigest": "253db0630b53c8404ee195430320fa43851f6d21452bbd3bf5a5b2734fdb8000"
+}

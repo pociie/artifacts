@@ -1,0 +1,255 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:11620c1e76f2c403301486035bd92633d275e74796ca41a8f3da012c1c2fc661",
+      "id": "harbor-gpt-5-6-luna",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T19:39:28Z",
+  "digest": "sha256:b16d1aa11c257d281cbaae48af02cc79f2a049299c4fda610b264fe392406c50",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:404166b389ce94e14522b54f42cc56f887a6a1c51bb165df0df6cf43ea616bc5",
+    "limitations": [
+      "platform_state_unobserved",
+      "network_policy_unresolved",
+      "cost_budget_unqualified"
+    ],
+    "platformRef": "environment:darwin-arm64-docker"
+  },
+  "evidenceId": "engineering-workset-simulation:population-shard-3:continuation-r13/item-03-agentic-labs-erp-bench:agentic-labs/erp-bench",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/candidate-probe.r13.json"
+      ],
+      "id": "provider-auth",
+      "subjectRef": "item:agentic-labs/erp-bench"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/candidate-probe.r13.json"
+      ],
+      "id": "task-instruction",
+      "subjectRef": "item:agentic-labs/erp-bench"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/candidate-probe.r13.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:agentic-labs/erp-bench"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-model",
+      "subjectRef": "item:agentic-labs/erp-bench"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-effort",
+      "subjectRef": "item:agentic-labs/erp-bench"
+    },
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/harbor-subject-operation.r13.json"
+      ],
+      "id": "subject-timeout",
+      "subjectRef": "item:agentic-labs/erp-bench"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_qualification_held",
+      "effective_execution_receipt_missing",
+      "oracle_not_run"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "task_instruction_unavailable",
+      "task_image_manifest_unavailable",
+      "protected_verifier_unavailable"
+    ],
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:66b29aad6f6c4dc40a430bb3c93ce55d3bd6340d04fe76a5646bb92dcb72e391"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench"
+  },
+  "provider": {
+    "limitations": [],
+    "qualificationDigest": "sha256:59d91bdf498120b52e8da32c40e4c5fb5d00da5f0ff3b76e2710838c1faf559a",
+    "qualificationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/candidate-probe.r13.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:9038db85f91d7c72a4ae009598fb907f3e741c90a69d7eb52f6f5e79e31879f9",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    ],
+    "sourceDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/item-resource-settlement.r13.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/candidate-probe.r13.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:4233c26843132c87c37ed68f78d5cc1eeac35b57712119ee552372a0729f9f8c",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/candidate-probe.r13.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:1bb41063d4693b489c665720a81695c9d6e1cb2062d3552536c302a128108422",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/candidate-probe.r13.json"
+        ],
+        "resourceClass": "credential-injection",
+        "resourceRefDigest": "sha256:1bd1baf7821caf779fb2e6a7c0b8c0054bd3f76f9729fd2eb0605ee83ca4ec7d",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/candidate-probe.r13.json"
+        ],
+        "resourceClass": "task-workspace",
+        "resourceRefDigest": "sha256:d7c7464c02ede654c7b9d6a0aa13c15a73cb720ac63951e65d9a0f8f22c8bcec",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/candidate-probe.r13.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:4ded33a55c6c1cc7c84cd17c9ee1e937293a6ce20fdf3dd68baad4cf2617503e",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/candidate-probe.r13.json"
+        ],
+        "resourceClass": "network-policy-scope",
+        "resourceRefDigest": "sha256:41cf4318105f7dc00a8a357692c60248da4a72de6b873fc96dc154be40ec149f",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/candidate-probe.r13.json"
+        ],
+        "resourceClass": "cost-budget-scope",
+        "resourceRefDigest": "sha256:0a867ccf5e444e530e7f5365ef928851ffcf00ca3a7720ab1b55f294bda66e59",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/dynamic-candidate.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "resourceClass": "dynamic-candidate",
+        "resourceRefDigest": "sha256:272ca614feae20389d811b6afe106242fd8987d0ca8b0b4e06c9a7e737517cc7",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/preclaim-verification.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/source-and-plan-binding.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/route-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/dynamic-artifact-composition-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/execution-structure-21-output-bundle.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/subject-operation-request.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/native-subject-topology-operation-receipt.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/native-subject-topology-operation-observation.r13.json"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/working-memory-binding.r13.json",
+    "checkpointRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/preclaim-verification.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/claim-source-freeze.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench/item-resource-settlement.r13.json"
+    ],
+    "digest": "sha256:54e5c18ac9074145e74d20f46a274d2b07776a1869570631ee9ff3ff976dc373",
+    "invalidation": [
+      "objective_revision_changes",
+      "requirement_scope_digest_changes",
+      "frozen_population_plan_digest_changes",
+      "item_capability_fingerprint_changes",
+      "terminal_settlement_emitted"
+    ],
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-03-agentic-labs-erp-bench",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-3:continuation-r13/item-03-agentic-labs-erp-bench"
+  }
+}

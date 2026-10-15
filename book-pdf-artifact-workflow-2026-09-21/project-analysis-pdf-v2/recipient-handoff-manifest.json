@@ -1,0 +1,161 @@
+{
+  "kind": "project-analysis-pdf-recipient-handoff/v2",
+  "handoffId": "handoff:claude-code-project-analysis-pdf:v2",
+  "candidateId": "candidate:claude-code-project-analysis-pdf:v2",
+  "producerRole": "visual-pdf-spec-builder",
+  "contributionState": "candidate_correction_delivery",
+  "createdAt": "2026-09-21T00:13:03Z",
+  "authorityEffect": "none",
+  "correctionInputFreeze": {
+    "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/pdf-delivery-v1/correction-input-freeze-v2.json",
+    "sha256": "e51903b9a91e5443f8d13a0c367602d0fc10d5b61034345bc83d3ef23b29497d",
+    "digestVerified": true
+  },
+  "failedPredecessorEvidence": {
+    "candidateRoot": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v1",
+    "candidateTreeDigest": "fd19d959b6e34722da6f19ee5f85fdc038943c5cece1c3356d273eba142dbf90",
+    "independentReport": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-validation-v1/independent-validation-report.json",
+      "sha256": "f75461e24cac263a0cec828e1a43660cdd40cc617017d41437d0aba5a1674f81",
+      "judgment": "fail"
+    },
+    "preserved": true
+  },
+  "sourceIdentity": {
+    "commit": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+    "tree": "1b6b4ab07d0d7b795129852183137c28099c5550",
+    "provenance": "third-party reconstructed source snapshot",
+    "limitationsPreserved": true
+  },
+  "correction": {
+    "defectId": "DEFECT-PDF-TEXT-ORDER-001",
+    "rootCauseEvidence": "The reverse-order fingerprint reproduced in untagged v1 output and disappeared under identical layout CSS when Chromium emitted a tagged PDF structure tree; PDFKit had interpreted affected paint-stream text runs as reversed logical text.",
+    "renderFix": "Playwright page.pdf now requests tagged output, producing StructTreeRoot, MarkInfo, and Lang markers with DOM-aligned logical order.",
+    "boundedVisibleTextAdjustments": [
+      "Page 6 names tool_result as the effect-stage closure signal.",
+      "Page 30 running header names Phase A–B."
+    ],
+    "layoutCssChanged": false,
+    "pageCountChanged": false,
+    "previewComparisonToV1": {
+      "byteIdenticalPages": 35,
+      "changedPages": [6, 30]
+    }
+  },
+  "combinedEvidenceRevision": {
+    "revision": "project-analysis-pdf-v2",
+    "digest": "b764d925c92087351d05af79153dc66f130e477878396849c469725d2644282e",
+    "digestRecipe": "sha256 over UTF-8 LF-terminated lines: revision, correctionInputFreeze, independentFailureReport, authorValidation, readerPdf, artifactSet",
+    "correctionInputFreezeSha256": "e51903b9a91e5443f8d13a0c367602d0fc10d5b61034345bc83d3ef23b29497d",
+    "independentFailureReportSha256": "f75461e24cac263a0cec828e1a43660cdd40cc617017d41437d0aba5a1674f81",
+    "authorValidationSha256": "428274a34a3e6656b109c1490154d79fa7fe46924bf343906d67b75997cd9ef0",
+    "readerPdfSha256": "001289cccb32c83c12bd3f282d5ce0a6e6f6ec35e379c0bc712fd4a7ddbe8802",
+    "artifactSetSha256": "09cbcdb442b06d26de3bc7853a385df5888cd2ae32078d553622b15dcd83595d"
+  },
+  "readerArtifact": {
+    "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/claude-code-project-analysis.pdf",
+    "sha256": "001289cccb32c83c12bd3f282d5ce0a6e6f6ec35e379c0bc712fd4a7ddbe8802",
+    "bytes": 5083379,
+    "pageCount": 37,
+    "pageSize": "A4",
+    "tagged": true,
+    "perPageCharacterSum": 45802,
+    "emptyTextPages": []
+  },
+  "pdfKitSearchOrder": {
+    "result": "pass",
+    "queries": [
+      { "visible": "worker_done", "normalHits": 2, "minimum": 2, "reversed": "enod_rekrow", "reversedHits": 0 },
+      { "visible": "Phase A", "normalHits": 2, "minimum": 2, "reversed": "A esahP", "reversedHits": 0 },
+      { "visible": "공식 module owner", "normalHits": 2, "minimum": 2, "reversed": "renwo eludom 식공", "reversedHits": 0 },
+      { "visible": "tool_result", "normalHits": 12, "minimum": 12, "reversed": "tluser_loot", "reversedHits": 0 }
+    ]
+  },
+  "authorValidationSummary": {
+    "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/authoring-validation.json",
+    "sha256": "428274a34a3e6656b109c1490154d79fa7fe46924bf343906d67b75997cd9ef0",
+    "result": "pass_author_side_correction_candidate",
+    "frozenInputsVerified": true,
+    "projectAnalysisArtifactsVerified": "14/14",
+    "previews": "37/37",
+    "overflowOrClippedUnits": 0,
+    "claimBindingFailures": 0,
+    "continuationFailures": 0,
+    "invalidLinkSyntax": 0,
+    "independentV2Validation": "absent"
+  },
+  "artifactSet": {
+    "digestRecipe": "sha256 of sorted UTF-8 lines: <file-sha256> <bytes> <relative-path>\\n; excludes this self-referential handoff manifest",
+    "fileCount": 44,
+    "totalBytes": 12656939,
+    "sha256": "09cbcdb442b06d26de3bc7853a385df5888cd2ae32078d553622b15dcd83595d"
+  },
+  "artifacts": [
+    { "role": "author_validation", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/authoring-validation.json", "sha256": "428274a34a3e6656b109c1490154d79fa7fe46924bf343906d67b75997cd9ef0", "bytes": 13314 },
+    { "role": "authoring_source", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/claude-code-project-analysis.html", "sha256": "00b93b8314c2f654c6a60f1780acca1726652d5e717c11c154ff3ac8796f4a4d", "bytes": 88943 },
+    { "role": "reader_pdf", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/claude-code-project-analysis.pdf", "sha256": "001289cccb32c83c12bd3f282d5ce0a6e6f6ec35e379c0bc712fd4a7ddbe8802", "bytes": 5083379 },
+    { "role": "contact_sheet_source", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/contact-sheet.html", "sha256": "6e4db2e1464ff905f965efdbcdbec93ba7f160540a5bcfb270801c3aa102b5e1", "bytes": 5682 },
+    { "role": "contact_sheet", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/contact-sheet.png", "sha256": "d3ef2d111f5752cb8eb8f68b5c7c15b4e457161ea4f52c6b5341afb258e76405", "bytes": 2013364 },
+    { "role": "render_audit", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/render-audit.json", "sha256": "2dc2376445df60b9649fea739686657ee52ba5d598e31a9ae08992f9d152d186", "bytes": 18026 },
+    { "role": "render_script", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/render.mjs", "sha256": "249b9369cad519e58a5e1bf8588c67fa0776494ed3dea09d35d05d60a954acf1", "bytes": 13917 }
+  ],
+  "previews": [
+    { "page": 1, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-01.png", "sha256": "540daae06e3f40c556ca249deb61c9a4ca416a7aee5095585d2227e1142493f3", "bytes": 119351 },
+    { "page": 2, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-02.png", "sha256": "4e74860f6572fa922f387bb51e3abb1c22cc80ae8243c149ed0cebce9be3ee1a", "bytes": 156707 },
+    { "page": 3, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-03.png", "sha256": "b4277ccbe508231bac6f429fbebf0cf4b0c0a9d5e269bf52ffb74a881fd4d244", "bytes": 186794 },
+    { "page": 4, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-04.png", "sha256": "2e9f22737bef6b6613a925a7b081a194c2acdba7fcb8631bd522c872136f6dbc", "bytes": 114087 },
+    { "page": 5, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-05.png", "sha256": "91abe5de77fe2ce7e83bec3fb463ed312ff7f53b69dab746a66a2aa36cb6285f", "bytes": 148824 },
+    { "page": 6, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-06.png", "sha256": "48944a98c903f14a56e7db4a50f806e3c599fb56da7ce324e30529517b45cf80", "bytes": 166047 },
+    { "page": 7, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-07.png", "sha256": "fdc226e20c4820f819aa6c960b4f1174a122c44e4cc50be57e3788f101c64f05", "bytes": 138480 },
+    { "page": 8, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-08.png", "sha256": "b082cdfaaa8556f27c53ff67470fd3a312a3f552ef7088c0b3fe82711a1d9df6", "bytes": 145918 },
+    { "page": 9, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-09.png", "sha256": "d58acef1edaa413296640faae220124328d3b013b306830a6affc2564317f6b6", "bytes": 138179 },
+    { "page": 10, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-10.png", "sha256": "f5de1c09bf6f92c54d6ec1f681fad2ae4b967f2a2bc58b0fddd29fe988a8cd1b", "bytes": 153161 },
+    { "page": 11, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-11.png", "sha256": "9721adfa1e877bdd9f6a124ed03a71e3597b5626f6f0ff63352f14a518cce28a", "bytes": 148304 },
+    { "page": 12, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-12.png", "sha256": "528a7cc2ae522d534a7ad74bf5979a7f52793ccdff203a4495d5a2440025b52e", "bytes": 146272 },
+    { "page": 13, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-13.png", "sha256": "99cadf2975823b171122df05ec600280ad43e5c4d20e383c0419c8230f13b59b", "bytes": 153396 },
+    { "page": 14, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-14.png", "sha256": "c35d5bef5fb81a94944d097ffb30c9cf8c0fcc7753af09fadc410e636c2d9c5c", "bytes": 144884 },
+    { "page": 15, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-15.png", "sha256": "f44153432ca6a19b61752a45582125e03c0c522985fdb39a8976b59a522cf1c5", "bytes": 148725 },
+    { "page": 16, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-16.png", "sha256": "200967846ca16d8f6577eece506fe097f04c929e5a65ff359ca306db43d54aae", "bytes": 157792 },
+    { "page": 17, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-17.png", "sha256": "b4af36cf2825f8bf12bcef0112b59cb453d93ebc5aba29fc34b36e61576f17ca", "bytes": 146382 },
+    { "page": 18, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-18.png", "sha256": "11a87493dd83d0e9bb6e6409bb29f075478a8ed2be8767992819281eeb26ae40", "bytes": 149741 },
+    { "page": 19, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-19.png", "sha256": "8bf11610729b08ce9929e6e1f98eabf4d8ded6de65b984f6b2485b27a76ba282", "bytes": 158448 },
+    { "page": 20, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-20.png", "sha256": "a609f6e557ec8f9ba69f11b0146f11336c2042bba66b396a76a258086cccc50e", "bytes": 146688 },
+    { "page": 21, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-21.png", "sha256": "192b18f9b0b9b0ea9ee4b7be5286433518e5c738c12a67b40b12e54892e39a65", "bytes": 166144 },
+    { "page": 22, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-22.png", "sha256": "41204b7feadc54c3dc3a341224f18fb748d48fe4bf317a626b76894851942ea9", "bytes": 96686 },
+    { "page": 23, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-23.png", "sha256": "009216649439b609ee21acacac01e1bff46d340a52e0979e2861a59948f6dbc9", "bytes": 184586 },
+    { "page": 24, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-24.png", "sha256": "4d6ae66c85f011b786f1046bd202a761e232ee2e278ae0ab19a7bf7513e8b5c6", "bytes": 108423 },
+    { "page": 25, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-25.png", "sha256": "673ceb0007c09bf70fc08f7c589ef62f617af45099e941db5755086196efab6a", "bytes": 118969 },
+    { "page": 26, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-26.png", "sha256": "4dcfbd77f9a75f093d607984e1fb49a6543782727f1c7e6636d9ab3799866ceb", "bytes": 111013 },
+    { "page": 27, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-27.png", "sha256": "551f16d2c61522c7b7ab66a8cfec54919454843d8cbce00ab10827f5be031c15", "bytes": 132727 },
+    { "page": 28, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-28.png", "sha256": "79f1afc8835f72b5c1839c50e50131188bcf31b5d4f5664bc1880384c817b343", "bytes": 166460 },
+    { "page": 29, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-29.png", "sha256": "85e0e4b04c24911378842dc21e0cc21b824ea2f383562ec897a44296c8473dbf", "bytes": 107151 },
+    { "page": 30, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-30.png", "sha256": "d03a40d05a9ac4616431fa252133f687ab57daf6a064df006d2fa5ddbb5a0f27", "bytes": 100704 },
+    { "page": 31, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-31.png", "sha256": "86217bd613761f3ece77ae70abaa76cb6f2a2ab280dda9255c7c00101964b8e5", "bytes": 117148 },
+    { "page": 32, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-32.png", "sha256": "43bc4b109f0317b3dd9bbf7747b708961f96d53c76a5fcc053b915c854f4c320", "bytes": 151817 },
+    { "page": 33, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-33.png", "sha256": "c688f3a3bf853cfa5f9caf16fed8a2db034c463ebd4d8e2af9c90c630c5e1e09", "bytes": 217303 },
+    { "page": 34, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-34.png", "sha256": "c8528762b246b02b8f0fce6f5087b08669cd8e954e6cfd0b22a90d6961ca890a", "bytes": 242000 },
+    { "page": 35, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-35.png", "sha256": "c356c4ca48fdc00b7406b01a184613fb0b4a5c8fb2d011ef97bde0ac5b043423", "bytes": 111848 },
+    { "page": 36, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-36.png", "sha256": "395110498bf69464356fabeb0fc1b3d7ac0790ce15c9eb647ba64be4a37a9bb3", "bytes": 147791 },
+    { "page": 37, "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews/page-37.png", "sha256": "d33898ead5ff46278b6978f0410e3c350df89eff037518ffaaa00fc7f2a2bf57", "bytes": 171364 }
+  ],
+  "selfDigestProtocol": {
+    "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/recipient-handoff-manifest.json",
+    "sha256": "reported_externally_after_manifest_finalization",
+    "reason": "A manifest cannot embed its own final digest without changing that digest."
+  },
+  "nextAction": "Coordinator may assign independent validation of the v2 correction; this handoff does not infer its outcome.",
+  "pendingIndependentChecks": [
+    "independent v2 fact, visual, reader, and PDFKit validation",
+    "external URL reachability",
+    "physical print and grayscale proofing",
+    "assistive-technology behavior"
+  ],
+  "nonClaims": {
+    "activation": "not_claimed",
+    "formalAcceptance": "not_claimed",
+    "publication": "not_claimed",
+    "promotion": "not_claimed",
+    "integration": "not_claimed",
+    "settlement": "not_claimed"
+  }
+}

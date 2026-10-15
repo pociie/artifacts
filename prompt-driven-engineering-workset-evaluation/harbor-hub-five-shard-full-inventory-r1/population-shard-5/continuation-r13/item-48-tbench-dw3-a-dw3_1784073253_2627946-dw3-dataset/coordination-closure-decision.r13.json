@@ -1,0 +1,270 @@
+{
+  "authorityEffect": "none",
+  "coordinationClosureDecision": {
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmRef": null,
+    "agreementSatisfied": true,
+    "authorityEffect": "none",
+    "coordinationPlanDecisionSha256": "adcab88cafd99f86129c4a140c4da87fdbd959b215411326cc8e73fd12888061",
+    "coordinationPlanReasonCodes": [],
+    "coordinationPlanValidated": true,
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "coordinationRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-5:tbench-dw3-a-dw3_1784073253_2627946/dw3-dataset:r13:execute-harbor-subject",
+    "dissent": [],
+    "kind": "coordination-closure-decision/v1",
+    "missingParticipantIds": [],
+    "nonterminalParticipantIds": [],
+    "reasonCodes": [],
+    "routeDecisionSha256": "fd67e696b42d33bb89a7411e7f2e7230be376bc5853d915ed948457f079c7c15",
+    "status": "closed",
+    "targetScope": "effective_primary",
+    "timedOutParticipantIds": [],
+    "topologyBindingReasonCodes": [],
+    "topologyBindingValidated": true,
+    "unacknowledgedParticipantIds": [],
+    "unexpectedParticipantIds": [],
+    "unsettledParticipantIds": [],
+    "workflowPatternId": "pipeline"
+  },
+  "coordinationClosureInput": {
+    "coordinationPlanDecision": {
+      "authorityEffect": "none",
+      "coordinationPlan": {
+        "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+        "agentSwarmRef": null,
+        "aggregationOwnerRoleId": "validator",
+        "agreementMechanism": "not_required",
+        "closureConditions": [
+          "every activated stage acknowledges settlement",
+          "terminal owner emits a disposition"
+        ],
+        "communicationTopology": "ordered_handoff",
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+        "maxConcurrency": 4,
+        "maxRounds": 1,
+        "routeDecisionSha256": "fd67e696b42d33bb89a7411e7f2e7230be376bc5853d915ed948457f079c7c15",
+        "selectedMode": "single_task",
+        "selectedRoleIds": ["coordinator", "population-curator", "provider-curator", "validator"],
+        "settlementRequirements": [
+          "delivery reconciliation",
+          "per-stage terminal state",
+          "retained-resource declaration"
+        ],
+        "targetScope": "effective_primary",
+        "topologySelectionDecisionSha256": "2c9405751f393b5323b03623d24e6549a84e1bd5f9069263586bfb4e6cb99777",
+        "workflowPatternId": "pipeline"
+      },
+      "kind": "agent-coordination-plan-decision/v1",
+      "reasonCodes": [],
+      "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-5:tbench-dw3-a-dw3_1784073253_2627946/dw3-dataset:r13:execute-harbor-subject",
+      "routeDecisionSha256": "fd67e696b42d33bb89a7411e7f2e7230be376bc5853d915ed948457f079c7c15",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologySelectionDecisionSha256": "2c9405751f393b5323b03623d24e6549a84e1bd5f9069263586bfb4e6cb99777"
+    },
+    "coordinationRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-5:tbench-dw3-a-dw3_1784073253_2627946/dw3-dataset:r13:execute-harbor-subject",
+    "participants": [
+      {
+        "agreementDecision": "approve",
+        "deliveryAcknowledged": true,
+        "dissent": null,
+        "packetState": "completed",
+        "participantId": "coordinator",
+        "settlementState": "settled",
+        "timedOut": false
+      },
+      {
+        "agreementDecision": "approve",
+        "deliveryAcknowledged": true,
+        "dissent": null,
+        "packetState": "completed",
+        "participantId": "provider-curator",
+        "settlementState": "settled",
+        "timedOut": false
+      },
+      {
+        "agreementDecision": "approve",
+        "deliveryAcknowledged": true,
+        "dissent": null,
+        "packetState": "completed",
+        "participantId": "population-curator",
+        "settlementState": "settled",
+        "timedOut": false
+      },
+      {
+        "agreementDecision": "approve",
+        "deliveryAcknowledged": true,
+        "dissent": null,
+        "packetState": "held",
+        "participantId": "validator",
+        "settlementState": "settled",
+        "timedOut": false
+      }
+    ],
+    "policy": {
+      "agreement": {
+        "mechanism": "not_required",
+        "mediationDecisionRecorded": false,
+        "minimumApprovals": 0,
+        "ownerDecisionRecorded": false,
+        "revisionDisposition": "none"
+      },
+      "requiredParticipantIds": [
+        "coordinator",
+        "provider-curator",
+        "population-curator",
+        "validator"
+      ],
+      "settledStates": ["settled", "complete"],
+      "terminalPacketStates": ["completed", "rejected", "held", "settled"],
+      "timeoutAction": "hold"
+    },
+    "topologyBinding": {
+      "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+      "routeDecisionSha256": "fd67e696b42d33bb89a7411e7f2e7230be376bc5853d915ed948457f079c7c15",
+      "selectedAgentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+      "selectedAgentSwarmRef": null,
+      "swarmAgentArchitectureRef": null,
+      "swarmWorkflowPatternBindings": [],
+      "targetScope": "effective_primary",
+      "topologySelectionDecisionSha256": "2c9405751f393b5323b03623d24e6549a84e1bd5f9069263586bfb4e6cb99777",
+      "workflowPatternId": "pipeline"
+    }
+  },
+  "coordinationPlanDecision": {
+    "authorityEffect": "none",
+    "coordinationPlan": {
+      "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+      "agentSwarmRef": null,
+      "aggregationOwnerRoleId": "validator",
+      "agreementMechanism": "not_required",
+      "closureConditions": [
+        "every activated stage acknowledges settlement",
+        "terminal owner emits a disposition"
+      ],
+      "communicationTopology": "ordered_handoff",
+      "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+      "maxConcurrency": 4,
+      "maxRounds": 1,
+      "routeDecisionSha256": "fd67e696b42d33bb89a7411e7f2e7230be376bc5853d915ed948457f079c7c15",
+      "selectedMode": "single_task",
+      "selectedRoleIds": ["coordinator", "population-curator", "provider-curator", "validator"],
+      "settlementRequirements": [
+        "delivery reconciliation",
+        "per-stage terminal state",
+        "retained-resource declaration"
+      ],
+      "targetScope": "effective_primary",
+      "topologySelectionDecisionSha256": "2c9405751f393b5323b03623d24e6549a84e1bd5f9069263586bfb4e6cb99777",
+      "workflowPatternId": "pipeline"
+    },
+    "kind": "agent-coordination-plan-decision/v1",
+    "reasonCodes": [],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-5:tbench-dw3-a-dw3_1784073253_2627946/dw3-dataset:r13:execute-harbor-subject",
+    "routeDecisionSha256": "fd67e696b42d33bb89a7411e7f2e7230be376bc5853d915ed948457f079c7c15",
+    "status": "ready",
+    "targetScope": "effective_primary",
+    "topologySelectionDecisionSha256": "2c9405751f393b5323b03623d24e6549a84e1bd5f9069263586bfb4e6cb99777"
+  },
+  "coordinationPlanInput": {
+    "coordinationPolicy": {
+      "artifactRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+      "closureConditions": [
+        "terminal owner emits a disposition",
+        "every activated stage acknowledges settlement"
+      ],
+      "patternId": "pipeline",
+      "settlementRequirements": [
+        "per-stage terminal state",
+        "delivery reconciliation",
+        "retained-resource declaration"
+      ]
+    },
+    "limits": {
+      "maxConcurrency": 4,
+      "maxDepth": 2,
+      "maxRounds": 1
+    },
+    "participants": [
+      {
+        "available": true,
+        "parentRoleId": null,
+        "qualified": true,
+        "responsibilityClasses": ["orchestrator"],
+        "roleId": "coordinator",
+        "selected": true
+      },
+      {
+        "available": true,
+        "parentRoleId": "coordinator",
+        "qualified": true,
+        "responsibilityClasses": ["specialist"],
+        "roleId": "provider-curator",
+        "selected": true
+      },
+      {
+        "available": true,
+        "parentRoleId": "coordinator",
+        "qualified": true,
+        "responsibilityClasses": ["specialist"],
+        "roleId": "population-curator",
+        "selected": true
+      },
+      {
+        "available": true,
+        "parentRoleId": "coordinator",
+        "qualified": true,
+        "responsibilityClasses": ["validator"],
+        "roleId": "validator",
+        "selected": true
+      }
+    ],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-5:tbench-dw3-a-dw3_1784073253_2627946/dw3-dataset:r13:execute-harbor-subject",
+    "signals": ["ordered_dependency", "exact_output_contract", "single_aggregation_owner"],
+    "topologyBinding": {
+      "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+      "agentSwarmRef": null,
+      "aggregationOwnerRoleId": "validator",
+      "swarmAgentArchitectureRef": null
+    },
+    "topologySelectionDecision": {
+      "authorityEffect": "none",
+      "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+      "kind": "agent-execution-topology-selection-decision/v1",
+      "rejectedPairs": [],
+      "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-5:tbench-dw3-a-dw3_1784073253_2627946/dw3-dataset:r13:execute-harbor-subject",
+      "requiredResponsibilityClasses": ["orchestrator", "specialist", "validator"],
+      "routeDecisionSha256": "fd67e696b42d33bb89a7411e7f2e7230be376bc5853d915ed948457f079c7c15",
+      "selectedAgentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+      "selectedAgentSwarmRef": null,
+      "selectedAgreementPolicySha256": null,
+      "selectedMode": "single_task",
+      "status": "selected",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "4453c9c5cd8a524fdf28a09e371de7dccc2dcfad03bb0d8f5042d7aafc2a136a",
+      "workflowPatternId": "pipeline"
+    },
+    "workShape": {
+      "dynamicTaskCount": 1,
+      "hierarchyDepth": 2,
+      "independentLaneCount": 1,
+      "orderedStageCount": 6,
+      "sharedMutableOutput": false,
+      "specialistCandidateCount": 2
+    },
+    "workflowPatternId": "pipeline"
+  },
+  "digest": "sha256:4c3977ad03376e5b7bd9640cca7e867edf826f10e8483655b320fef46de65b3b",
+  "identityDigest": "sha256:74fd6e0bbd470563a10799c1771bc8bc18e51df9921c90f659ceb8c4be09bbd5",
+  "itemId": "tbench-dw3-a-dw3_1784073253_2627946/dw3-dataset",
+  "kind": "harbor-item-agent-architecture-coordination-evidence/v2",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "optionalSwarm": "not_required",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false
+  },
+  "schemaVersion": 2,
+  "subjectOperationEffect": "not_admitted"
+}

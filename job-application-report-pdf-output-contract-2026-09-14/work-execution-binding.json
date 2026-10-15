@@ -1,0 +1,86 @@
+{
+  "kind": "work-execution-binding/v1",
+  "schemaVersion": 1,
+  "bindingId": "binding:job-application-report-pdf-output-contract:r1",
+  "workRef": "work:job-application-report-pdf-output-contract",
+  "workRevision": "r1",
+  "instruction": {
+    "instructionRef": ".collab/artifacts/job-application-report-pdf-output-contract-2026-09-14/reusable-artifact-operation-request.json",
+    "revision": "r1",
+    "requestDigest": "sha256:ddbf3437960e2fe608b4cd724ad83aa3804c1bbbb7d5b23dc9a2ce77d3edaf85",
+    "objectiveRef": "objective:require-five-set-pdf-job-application-report",
+    "origin": {
+      "channel": "chat",
+      "sessionRef": "session:opaque:current",
+      "turnRef": "turn:opaque:pdf-contract-r1",
+      "requestingAgentRef": "agent-session:opaque:requester",
+      "callbackRouteRef": "callback:opaque:requester"
+    },
+    "rawPromptStored": false
+  },
+  "composition": {
+    "loopRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+    "loopRevision": "v1.5-mandatory-five-set-pdf-output",
+    "agentRef": "artifacts/agents/requirement-realization/agents/artifact-builder.yaml",
+    "origin": "reusable",
+    "dynamicBlueprintRefs": [],
+    "coverageDecisionRef": ".collab/artifacts/job-application-report-pdf-output-contract-2026-09-14/route-decision.json"
+  },
+  "execution": {
+    "assignmentRef": "assignment:job-application-report-pdf-output-contract",
+    "executionSessionRef": "session:opaque:current",
+    "worktreeRef": "worktree:opaque:current",
+    "branchRef": "refs/heads/main",
+    "baseCommit": "1bf67e8ca1b9806dce130796bc772c1d9a01a4e2",
+    "mutableStateRef": ".collab/memory/job-application-report-pdf-output-contract/r1",
+    "runRef": null,
+    "taskRef": null,
+    "dispatchRef": null,
+    "coordinatorMode": "coordination_only",
+    "orchestratorCommitBoundary": "none"
+  },
+  "delivery": {
+    "topologyMode": "top_level_task_root",
+    "deliveryOwnerRef": "agent:current-worktree-owner",
+    "externalDelivery": true,
+    "deliveryKind": "ordinary",
+    "targetRepositoryRef": "repository:pociie/collab-mono",
+    "targetBranchRef": "refs/heads/integration",
+    "pullRequestRef": null,
+    "parentDeliveryRef": null,
+    "status": "not_ready",
+    "deliveryReceiptRef": null
+  },
+  "notificationPolicy": {
+    "deliverOn": ["hitl_required", "review_ready", "completed", "stopped"],
+    "suppress": ["started", "progress", "heartbeat", "retry_within_budget", "validation_running", "ci_pending", "worker_done_unaccepted"],
+    "fallbackRouteRef": "callback:opaque:requester",
+    "dedupeKeyRef": "dedupe:job-application-report-pdf-output:r1"
+  },
+  "lifecycle": {
+    "state": "prepared",
+    "decisionPacketRef": null,
+    "completionReceiptRef": null,
+    "stopReasonRef": null,
+    "resumeConditionRef": null
+  },
+  "privacy": {
+    "sanitized": true,
+    "containsRawPrompt": false,
+    "containsTranscript": false,
+    "containsPrivateReasoning": false,
+    "containsCredentials": false,
+    "containsReplayableApproval": false
+  },
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "evidenceRefs": [
+    "AGENTS.md",
+    ".collab/artifacts/job-application-report-pdf-output-contract-2026-09-14/route-decision.json",
+    ".collab/artifacts/job-application-report-pdf-output-contract-2026-09-14/reusable-artifact-operation-request.json"
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "bindingDigest": "sha256:c5b0d54926528ecaacb6cb8bfbb9e056acd749e128ed4d76a9147b14ef80a1a2"
+  }
+}

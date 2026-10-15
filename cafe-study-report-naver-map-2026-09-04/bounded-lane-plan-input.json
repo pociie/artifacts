@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "bounded-lane-plan-input/v1",
+  "objectiveRef": "objective:naver-map-cafe-visual-study-report-2026-09-04",
+  "phase": {
+    "ref": "phase:naver-map-image-evidence-and-report",
+    "revision": 1,
+    "digest": "0150324868f2464f5d6fc26fea42e48d116ed560892b4cffc7736614cff30158"
+  },
+  "observedAt": "2026-09-04T14:22:00+09:00",
+  "components": [
+    {
+      "id": "gangdong-naver-map-image-collection",
+      "ownerRef": "agent:gangdong-naver-map-collector",
+      "mode": "read_only",
+      "sourcePaths": ["external:naver-map:gangdong-cafes:interior-photo-filter"],
+      "semanticDomains": ["gangdong-naver-place-identity-and-image-evidence"],
+      "mutableResources": [],
+      "outputContract": "naver-map-raw-image-manifest-without-review-or-score",
+      "validationRefs": ["validation:naver-place-url-image-url-venue-identity"],
+      "dependsOn": [],
+      "sharedContractRefs": ["contract:naver-map-visual-only-cafe-report-v1"],
+      "estimatedContextTokens": 7000
+    },
+    {
+      "id": "jungnang-naver-map-image-collection",
+      "ownerRef": "agent:jungnang-naver-map-collector",
+      "mode": "read_only",
+      "sourcePaths": ["external:naver-map:jungnang-cafes:interior-photo-filter"],
+      "semanticDomains": ["jungnang-naver-place-identity-and-image-evidence"],
+      "mutableResources": [],
+      "outputContract": "naver-map-raw-image-manifest-without-review-or-score",
+      "validationRefs": ["validation:naver-place-url-image-url-venue-identity"],
+      "dependsOn": [],
+      "sharedContractRefs": ["contract:naver-map-visual-only-cafe-report-v1"],
+      "estimatedContextTokens": 7000
+    },
+    {
+      "id": "visual-only-classification-and-rubric",
+      "ownerRef": "agent:independent-cafe-vision-evaluator",
+      "mode": "read_only",
+      "sourcePaths": ["artifact:naver-map-raw-image-manifest"],
+      "semanticDomains": ["cafe-interior-image-classification-and-study-rubric"],
+      "mutableResources": [],
+      "outputContract": "visual-only-image-classification-and-ranked-evaluation",
+      "validationRefs": ["validation:rubric-arithmetic-and-no-review-evidence"],
+      "dependsOn": ["gangdong-naver-map-image-collection", "jungnang-naver-map-image-collection"],
+      "sharedContractRefs": ["contract:naver-map-visual-only-cafe-report-v1"],
+      "estimatedContextTokens": 8000
+    }
+  ],
+  "sharedContracts": [
+    {
+      "ref": "contract:naver-map-visual-only-cafe-report-v1",
+      "state": "frozen",
+      "ownerRef": "agent:root-coordinator",
+      "decisionRef": "decision:naver-map-only-no-review-10-cafes-more-than-50-images"
+    }
+  ],
+  "capacity": {
+    "workerSlots": 3,
+    "writerSlots": 1,
+    "reviewSlots": 1,
+    "integrationSlots": 1,
+    "maxContextTokensPerWave": 16000,
+    "maxTotalContextTokens": 24000,
+    "maxLanes": 5,
+    "maxProduceValidateCycles": 1,
+    "maxAutomaticEscalations": 0
+  },
+  "worktreePolicy": {
+    "taskRootState": "dirty",
+    "acceptedBaseRef": "git:1bf67e8ca1b9806dce130796bc772c1d9a01a4e2",
+    "allowCurrentWriter": true,
+    "isolatedChildSlots": 0,
+    "sourceWritersRequireIsolationWhenConcurrent": true
+  },
+  "completionCapability": {
+    "state": "failed",
+    "receiptRef": "run:run_4b41822c1638",
+    "failureFingerprint": "orca-agent-provider-launch-bridge-or-auth-failure",
+    "repeatedFailureCount": 4,
+    "fallback": "coordinator_only"
+  },
+  "fanIn": {
+    "synthesisOwnerRef": "agent:root-coordinator",
+    "validatorOwnerRef": "agent:independent-cafe-vision-evaluator",
+    "validatorOutputContract": "visual-only-evaluation-validation-report",
+    "integrationOwnerRef": "agent:root-coordinator",
+    "integrationOutputContract": "single-interactive-html-naver-map-cafe-report"
+  },
+  "authorityEffect": "none"
+}

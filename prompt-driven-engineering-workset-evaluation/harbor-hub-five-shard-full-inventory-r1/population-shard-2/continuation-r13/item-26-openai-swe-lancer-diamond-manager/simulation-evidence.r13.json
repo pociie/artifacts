@@ -1,0 +1,266 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:9bb3e78761c11dc2db8e1a757cce1fe24d5444b8c39898181140039820ef8ae9",
+      "id": "harbor-gpt-5-6-luna",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T19:37:35Z",
+  "digest": "sha256:4e49f0d89ce749135484e98e60577aa6a6fbc0af64aa9929458a8ab3e4e54548",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:8e1d03390fc7fed5a1528046473b44bd336e1e150a3e5c2e7fac75ff26abe71d",
+    "limitations": [
+      "platform_state_unobserved",
+      "network_policy_unresolved",
+      "cost_budget_unqualified"
+    ],
+    "platformRef": "environment:darwin-arm64-docker"
+  },
+  "evidenceId": "engineering-workset-simulation:population-shard-2:continuation-r13/item-26-openai-swe-lancer-diamond-manager:openai/swe-lancer-diamond-manager",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json"
+      ],
+      "id": "provider-auth",
+      "subjectRef": "item:openai/swe-lancer-diamond-manager"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json"
+      ],
+      "id": "task-instruction",
+      "subjectRef": "item:openai/swe-lancer-diamond-manager"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:openai/swe-lancer-diamond-manager"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-model",
+      "subjectRef": "item:openai/swe-lancer-diamond-manager"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-effort",
+      "subjectRef": "item:openai/swe-lancer-diamond-manager"
+    },
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/harbor-subject-operation.r13.json"
+      ],
+      "id": "subject-timeout",
+      "subjectRef": "item:openai/swe-lancer-diamond-manager"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_qualification_held",
+      "effective_execution_receipt_missing",
+      "oracle_not_run"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "task_instruction_unavailable",
+      "task_image_manifest_unavailable",
+      "protected_verifier_unavailable"
+    ],
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:f69c19ab1836fba2ffaf7c0f6e3557210ff036704ca47d1f82c9e9449e24c5e2"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager"
+  },
+  "provider": {
+    "limitations": [
+      "dataset_license_unobserved",
+      "cross_platform_emulation_unqualified",
+      "inert_initialization_probe_required",
+      "no_network_enforcement_unavailable",
+      "dynamic_network_policy_unavailable",
+      "protected_verifier_not_run",
+      "effective_model_unverified",
+      "effective_reasoning_effort_unverified",
+      "subject_timeout_runtime_receipt_unverified",
+      "cost_budget_unqualified"
+    ],
+    "qualificationDigest": "sha256:df198f8e2d0d36c36fce7de589c5bf9b529f6b6b6a255fc5c85acf76ccb26ee6",
+    "qualificationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:5f1679592f9f7393716ba180f19cae8573be9102a3e3fe93119634f88201e23f",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    ],
+    "sourceDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/item-resource-settlement.r13.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:bd4458e7a527fd447e0abf0da86a37f0155e5194b3e4d16b6a18ad49937cc8bd",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:911c71f7b4287c8bd060a60d9bf4a05b92e3fc03bf11615d4eddc99d15b0bc46",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json"
+        ],
+        "resourceClass": "credential-injection",
+        "resourceRefDigest": "sha256:6a6a705aef8403480fe4ce4e593e233812b8393d17c844b44575912b555a10c6",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json"
+        ],
+        "resourceClass": "task-workspace",
+        "resourceRefDigest": "sha256:27a22ff4e3ac5b028409ef684984f44aecbe6b8534dd708064f9f5164e028a3f",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:0cd7e9f1764a2bffaf7a63496ff0d2da65d29c804c34241d2e09a0f9b3b89533",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json"
+        ],
+        "resourceClass": "network-policy-scope",
+        "resourceRefDigest": "sha256:6b12e68e920135e258cd61f8ddec30b7ba5537bfc52c50f50f40486c90edf212",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/candidate-probe.r13.json"
+        ],
+        "resourceClass": "cost-budget-scope",
+        "resourceRefDigest": "sha256:35db7622a82565b5dceafcd41c3f762b4a23175a7979028986f7a61778062d42",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/dynamic-candidate.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "resourceClass": "dynamic-candidate",
+        "resourceRefDigest": "sha256:74e97cbc22a2e2a52759f4af6387280457a027c4b5d890958addb1f092f36ce7",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/preclaim-verification.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/source-and-plan-binding.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/route-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/dynamic-artifact-composition-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/execution-structure-21-output-bundle.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/subject-operation-request.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/native-subject-topology-operation-receipt.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/native-subject-topology-operation-observation.r13.json"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/working-memory-binding.r13.json",
+    "checkpointRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/preclaim-verification.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/claim-source-freeze.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager/item-resource-settlement.r13.json"
+    ],
+    "digest": "sha256:761a7f30de82b79fb8af1f84646d5c16508594f389c05f1c63c9d4ace1717e54",
+    "invalidation": [
+      "objective_revision_changes",
+      "requirement_scope_digest_changes",
+      "frozen_population_plan_digest_changes",
+      "item_capability_fingerprint_changes",
+      "terminal_settlement_emitted"
+    ],
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-26-openai-swe-lancer-diamond-manager",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-2:continuation-r13/item-26-openai-swe-lancer-diamond-manager"
+  }
+}

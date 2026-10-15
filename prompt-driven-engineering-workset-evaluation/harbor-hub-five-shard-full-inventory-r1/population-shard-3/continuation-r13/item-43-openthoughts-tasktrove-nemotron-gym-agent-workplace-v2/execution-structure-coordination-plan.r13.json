@@ -1,0 +1,35 @@
+{
+  "authorityEffect": "none",
+  "coordinationPlan": {
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmRef": null,
+    "aggregationOwnerRoleId": "validator",
+    "agreementMechanism": "not_required",
+    "closureConditions": [
+      "every activated stage acknowledges settlement",
+      "terminal owner emits a disposition"
+    ],
+    "communicationTopology": "ordered_handoff",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "maxConcurrency": 4,
+    "maxRounds": 1,
+    "routeDecisionSha256": "04c0150722158bd2428b95e76734af168e3087fbb69cfc7656acd189bcbd7b3f",
+    "selectedMode": "single_task",
+    "selectedRoleIds": ["coordinator", "population-curator", "provider-curator", "validator"],
+    "settlementRequirements": [
+      "delivery reconciliation",
+      "per-stage terminal state",
+      "retained-resource declaration"
+    ],
+    "targetScope": "effective_primary",
+    "topologySelectionDecisionSha256": "6aa2f14ae0bb5cd904c993bde0079b78c91785e63d57e1eaa8c1d367fefd3f08",
+    "workflowPatternId": "pipeline"
+  },
+  "kind": "agent-coordination-plan-decision/v1",
+  "reasonCodes": [],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-3:openthoughts/tasktrove-nemotron-gym-agent-workplace-v2:r13:execute-harbor-subject",
+  "routeDecisionSha256": "04c0150722158bd2428b95e76734af168e3087fbb69cfc7656acd189bcbd7b3f",
+  "status": "ready",
+  "targetScope": "effective_primary",
+  "topologySelectionDecisionSha256": "6aa2f14ae0bb5cd904c993bde0079b78c91785e63d57e1eaa8c1d367fefd3f08"
+}

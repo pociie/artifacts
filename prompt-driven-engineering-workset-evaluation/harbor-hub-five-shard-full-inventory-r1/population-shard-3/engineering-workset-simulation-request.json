@@ -1,0 +1,77 @@
+{
+  "arms": [
+    {
+      "allowedReasoningEfforts": ["max"],
+      "armType": "artifact_aware",
+      "artifactProjectionDigest": "sha256:79e095439a8c369ae05f822084a43e8e5793ec84361f57a0695ec61616bfdf08",
+      "id": "artifact-aware-gpt-5-6-luna-max",
+      "instructionProfileRef": "artifacts/agent-loop/execution-preparation/prompt-assistance/README.md",
+      "modelRef": "openai:gpt-5.6-luna",
+      "reasoningProfileRef": "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/policy/ai-execution-routing.policy.json",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "budget": {
+    "maxAttempts": 1,
+    "maxConcurrent": 1,
+    "maxTrials": 1
+  },
+  "digest": "sha256:6843892be3df8f880ceb1a526f108fe9411f3121b26b3029b019397dbd7e5aef",
+  "environment": {
+    "emulationPolicy": "qualified_emulation",
+    "environmentDigest": "sha256:3618e1f8a997b437c09cd3dbaac736705809c05f6f12f584b65722175970ebe1",
+    "hostPlatformRef": "linux/aarch64",
+    "targetPlatformRef": "linux/amd64"
+  },
+  "kind": "engineering-workset-simulation-request/v1",
+  "license": {
+    "limitations": [],
+    "qualificationRef": "https://github.com/harbor-framework/terminal-bench-2-1/blob/main/LICENSE",
+    "state": "qualified"
+  },
+  "objectiveRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-3/revision-1",
+  "population": {
+    "frozenBeforeOutcome": true,
+    "selectionRule": "frozen Hub inventory identity; canonical NFC-trimmed id; sha256 first 64 bits modulo five; this request contains the first admitted task slice",
+    "tasks": [
+      {
+        "providerTaskRef": "terminal-bench/write-compressor@3",
+        "taskDigest": "sha256:d9ddd9a8e925e2c566b37b2492cbf995afecefe58874e4043ef78d7f3c892c7e",
+        "taskId": "terminal-bench-write-compressor-v3"
+      }
+    ]
+  },
+  "privacy": {
+    "prohibitedContent": [
+      "raw_prompt",
+      "transcript",
+      "private_reasoning",
+      "credential",
+      "secret",
+      "runtime_handle",
+      "hidden_oracle_body"
+    ],
+    "runtimePrivateRootRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-3",
+    "workingMemoryBindingRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/working-memory-binding.json"
+  },
+  "provider": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "class": "harbor",
+    "digest": "sha256:5fd2667d0c794eeaca3db96153638d311a3834264f3e4fe17fdeabea8d7d51ac",
+    "qualificationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/harbor-provider-qualification.json",
+    "version": "0.22.0"
+  },
+  "schemaVersion": 1,
+  "source": {
+    "datasetDigest": "sha256:7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a",
+    "datasetRef": "terminal-bench/terminal-bench-2-1",
+    "datasetRevision": "sha256:b792db99f51d0d7946082320d57b23ce8d94efbd25e2eeecbc06482f65551343"
+  },
+  "status": "frozen",
+  "verifier": {
+    "oracleRequired": true,
+    "verifierDigest": "sha256:097d1a15260bad246a2b9db3b30f49b941a17710bfdfb5b283efec2d6bb9cd67",
+    "verifierRef": "terminal-bench/write-compressor@3/verifier"
+  }
+}

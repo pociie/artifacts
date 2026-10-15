@@ -1,0 +1,266 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:6c1991acfceba1f96fc3e93ae6a0bd7fa5d6415fdf1c957dbd114138cd7ce7c7",
+      "id": "harbor-gpt-5-6-luna",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T19:37:37Z",
+  "digest": "sha256:a0a35dea03163c4b422cc865b4090b54776e8a62679baa37c5d632b508c4d1b3",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:8e1d03390fc7fed5a1528046473b44bd336e1e150a3e5c2e7fac75ff26abe71d",
+    "limitations": [
+      "platform_state_unobserved",
+      "network_policy_unresolved",
+      "cost_budget_unqualified"
+    ],
+    "platformRef": "environment:darwin-arm64-docker"
+  },
+  "evidenceId": "engineering-workset-simulation:population-shard-2:continuation-r13/item-54-terminal-bench-science-terminal-bench-science:terminal-bench-science/terminal-bench-science",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/candidate-probe.r13.json"
+      ],
+      "id": "provider-auth",
+      "subjectRef": "item:terminal-bench-science/terminal-bench-science"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/candidate-probe.r13.json"
+      ],
+      "id": "task-instruction",
+      "subjectRef": "item:terminal-bench-science/terminal-bench-science"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/candidate-probe.r13.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:terminal-bench-science/terminal-bench-science"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-model",
+      "subjectRef": "item:terminal-bench-science/terminal-bench-science"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-effort",
+      "subjectRef": "item:terminal-bench-science/terminal-bench-science"
+    },
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/harbor-subject-operation.r13.json"
+      ],
+      "id": "subject-timeout",
+      "subjectRef": "item:terminal-bench-science/terminal-bench-science"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_qualification_held",
+      "effective_execution_receipt_missing",
+      "oracle_not_run"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "task_instruction_unavailable",
+      "task_image_manifest_unavailable",
+      "protected_verifier_unavailable"
+    ],
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:fe7794b4a4df3b6961b3a3c1fc3d350f8d08fca23cd46a34d5d4b4c5feb9f41e"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science"
+  },
+  "provider": {
+    "limitations": [
+      "dataset_license_unobserved",
+      "cross_platform_emulation_unqualified",
+      "inert_initialization_probe_required",
+      "no_network_enforcement_unavailable",
+      "dynamic_network_policy_unavailable",
+      "protected_verifier_not_run",
+      "effective_model_unverified",
+      "effective_reasoning_effort_unverified",
+      "subject_timeout_runtime_receipt_unverified",
+      "cost_budget_unqualified"
+    ],
+    "qualificationDigest": "sha256:b14bae01c2ca8d50e41fd21b3e4151488517ef81e14edff02a30f37b9b1418ce",
+    "qualificationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/candidate-probe.r13.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:1c5cc6ad57d61dba57a79caadc54b71b6191944c223d22c95204d0af1053a9f7",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    ],
+    "sourceDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/item-resource-settlement.r13.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/candidate-probe.r13.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:3c2d7997f3a00ed548d55bb94b6108b6a9352ed0513ff5b25ac678cc2c7e670a",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/candidate-probe.r13.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:b22d4ce6eb8bbdc64b0b22d9501cc9d6e7c788908fd131e5c8af54a678d696a1",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/candidate-probe.r13.json"
+        ],
+        "resourceClass": "credential-injection",
+        "resourceRefDigest": "sha256:66038a7fe44255b8da55d910f9e1b0c5637b98bbcad3634af68dd77d16ca10d2",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/candidate-probe.r13.json"
+        ],
+        "resourceClass": "task-workspace",
+        "resourceRefDigest": "sha256:8a19a53c35bd57ad282b49259d70be2dd62740fbc4eb9e6fb694cfe0c1edcea1",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/candidate-probe.r13.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:0f887fa270ea1ed6ed14c329858432f24784da6522faeae0b2ea5e919f73529a",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/candidate-probe.r13.json"
+        ],
+        "resourceClass": "network-policy-scope",
+        "resourceRefDigest": "sha256:f6b8c94ff3f739772c5f8f334823c121513ab7880744fd9740f4635f3133b5d7",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/candidate-probe.r13.json"
+        ],
+        "resourceClass": "cost-budget-scope",
+        "resourceRefDigest": "sha256:bb6453070a70c94bf1625b30b795cb950d5cf257c18deaff68400402ff748c2a",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/dynamic-candidate.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "resourceClass": "dynamic-candidate",
+        "resourceRefDigest": "sha256:0555da6b05941fe764a43f83018c12f5bcf0c7fd5f41f47d0ef19521d3db5b43",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/preclaim-verification.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/source-and-plan-binding.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/route-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/dynamic-artifact-composition-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/execution-structure-21-output-bundle.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/subject-operation-request.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/native-subject-topology-operation-receipt.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/native-subject-topology-operation-observation.r13.json"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/working-memory-binding.r13.json",
+    "checkpointRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/preclaim-verification.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/claim-source-freeze.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science/item-resource-settlement.r13.json"
+    ],
+    "digest": "sha256:e851a89b1fbf880083ba9fe9a7f98b8cdb055f898e2c02220970e982f673c0a5",
+    "invalidation": [
+      "objective_revision_changes",
+      "requirement_scope_digest_changes",
+      "frozen_population_plan_digest_changes",
+      "item_capability_fingerprint_changes",
+      "terminal_settlement_emitted"
+    ],
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-54-terminal-bench-science-terminal-bench-science",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-2:continuation-r13/item-54-terminal-bench-science-terminal-bench-science"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "authorityEffect": "none",
+  "coordinationPlan": {
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmRef": null,
+    "aggregationOwnerRoleId": "validator",
+    "agreementMechanism": "not_required",
+    "closureConditions": [
+      "every activated stage acknowledges settlement",
+      "terminal owner emits a disposition"
+    ],
+    "communicationTopology": "ordered_handoff",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "maxConcurrency": 4,
+    "maxRounds": 1,
+    "routeDecisionSha256": "254370e7bffd80b0f360f9e6de3df9f6263504b4547b54d836cd0d2c89107d52",
+    "selectedMode": "single_task",
+    "selectedRoleIds": ["coordinator", "population-curator", "provider-curator", "validator"],
+    "settlementRequirements": [
+      "delivery reconciliation",
+      "per-stage terminal state",
+      "retained-resource declaration"
+    ],
+    "targetScope": "effective_primary",
+    "topologySelectionDecisionSha256": "499040509b66d065838e86a5de27b8b250d2e80daff00ea1fbab6b64bed23540",
+    "workflowPatternId": "pipeline"
+  },
+  "kind": "agent-coordination-plan-decision/v1",
+  "reasonCodes": [],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-5:openthoughts/tasktrove-exp-flat25-pseudocode-v2:r13:execute-harbor-subject",
+  "routeDecisionSha256": "254370e7bffd80b0f360f9e6de3df9f6263504b4547b54d836cd0d2c89107d52",
+  "status": "ready",
+  "targetScope": "effective_primary",
+  "topologySelectionDecisionSha256": "499040509b66d065838e86a5de27b8b250d2e80daff00ea1fbab6b64bed23540"
+}

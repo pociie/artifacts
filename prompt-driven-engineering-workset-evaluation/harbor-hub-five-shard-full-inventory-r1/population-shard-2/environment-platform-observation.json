@@ -1,0 +1,78 @@
+{
+  "kind": "harbor-task-environment-qualification/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "providerClass": "harbor",
+  "observedAt": "2026-08-28T12:34:07.744Z",
+  "projectedAt": "2026-08-28T12:47:30Z",
+  "taskId": "datacurve/kcp-go-multiplexed-kcp-streams",
+  "taskRevision": 1,
+  "taskDigest": "sha256:0ab935fc3f07b97b7e4c7f54a7524ac47927060fd554b35c562575c283b7367e",
+  "environmentImageDigest": "sha256:9dd116d7790d85c1699e8637cd1710204a7f9fae0b79a120e77bbc4d5cd49458",
+  "manifestInspection": {
+    "status": "complete",
+    "platforms": ["linux/amd64"],
+    "platformDigest": "sha256:a5913143ae1feab20367c94548b117baeed4ddc51d703a464c0c73867be0f1ef"
+  },
+  "hostPlatform": "linux/arm64",
+  "targetPlatform": "linux/amd64",
+  "executionPath": {
+    "mode": "emulated",
+    "emulatorState": "unavailable",
+    "emulationPolicy": "prohibited"
+  },
+  "platformPreflight": {
+    "status": "hold",
+    "providerAdmissionEligible": false,
+    "blockerCodes": ["cross_platform_emulation_unqualified"],
+    "nextAction": "qualify_cross_platform_emulation"
+  },
+  "taskConfiguration": {
+    "agentNetworkMode": "no-network",
+    "agentNativeTimeoutSeconds": 5400,
+    "verifierNetworkMode": "no-network",
+    "verifierEnvironmentMode": "separate",
+    "verifierNativeTimeoutSeconds": 1800,
+    "verifierCollectCount": 1,
+    "resources": {
+      "cpus": 2,
+      "memoryMb": 8192,
+      "storageMb": 20480
+    }
+  },
+  "networkPreflight": {
+    "status": "hold",
+    "providerAdmissionEligible": false,
+    "restrictedPolicyRequired": true,
+    "dynamicPolicyRequired": true,
+    "effectivePolicies": [
+      { "scope": "environment", "networkMode": "public", "phaseOrder": 0 },
+      { "scope": "agent", "networkMode": "no-network", "phaseOrder": 1 },
+      { "scope": "verifier", "networkMode": "no-network", "phaseOrder": 2 },
+      { "scope": "step_agent", "networkMode": "no-network", "phaseOrder": 3 },
+      { "scope": "step_verifier", "networkMode": "no-network", "phaseOrder": 4 }
+    ],
+    "blockerCodes": ["dynamic_network_policy_unavailable", "no_network_enforcement_unavailable"],
+    "nextAction": "enable_and_reobserve_egress_control_or_select_capable_provider"
+  },
+  "requestedModel": "gpt-5.6-luna",
+  "effectiveModel": null,
+  "requestedReasoningEffort": "max",
+  "effectiveReasoningEffort": null,
+  "requestedSubjectTimeoutSeconds": 3600,
+  "operationEffectiveSubjectTimeoutSeconds": 3600,
+  "runtimeEffectiveSubjectTimeoutSeconds": null,
+  "effectiveSubjectTimeoutSeconds": null,
+  "compatibilityState": "held",
+  "blockingCodes": [
+    "cross_platform_emulation_unqualified",
+    "dynamic_network_policy_unavailable",
+    "no_network_enforcement_unavailable",
+    "verifier_isolation_not_operated",
+    "cost_budget_unqualified",
+    "subject_timeout_runtime_receipt_unverified"
+  ],
+  "sourceMemoryRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/environment-platform-observation.json",
+  "digest": "sha256:e3e29d038237d9a610ffe4ac6e71e96804b0ac2f5dcd48a4f5d12389a2ff6577"
+}

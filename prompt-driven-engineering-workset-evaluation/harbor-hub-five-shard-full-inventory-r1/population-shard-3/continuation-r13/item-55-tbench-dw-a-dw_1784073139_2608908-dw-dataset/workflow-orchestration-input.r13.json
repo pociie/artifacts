@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "bfc1fa7f5412d788b5a82ba4fbbd1424839fc0dc2643921da6e64e816e20c5f8",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "57ad9d934798976d3ed9f1338a4158b4fe9be946034a9303f437f2f459a83717",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "cc23a9f88e8916c37bccd0d512f687174bf89954606fdfa379db54db3d06d0c6",
+      "topologySelectionDecisionSha256": "9ae6efdba9c827227d9e1d18f28c49b12070e08b759f2348001000e2c22bdf82"
+    },
+    {
+      "coordinationPlanDecisionSha256": "bfc1fa7f5412d788b5a82ba4fbbd1424839fc0dc2643921da6e64e816e20c5f8",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "57ad9d934798976d3ed9f1338a4158b4fe9be946034a9303f437f2f459a83717",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "cc23a9f88e8916c37bccd0d512f687174bf89954606fdfa379db54db3d06d0c6",
+      "topologySelectionDecisionSha256": "9ae6efdba9c827227d9e1d18f28c49b12070e08b759f2348001000e2c22bdf82"
+    },
+    {
+      "coordinationPlanDecisionSha256": "bfc1fa7f5412d788b5a82ba4fbbd1424839fc0dc2643921da6e64e816e20c5f8",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "57ad9d934798976d3ed9f1338a4158b4fe9be946034a9303f437f2f459a83717",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "cc23a9f88e8916c37bccd0d512f687174bf89954606fdfa379db54db3d06d0c6",
+      "topologySelectionDecisionSha256": "9ae6efdba9c827227d9e1d18f28c49b12070e08b759f2348001000e2c22bdf82"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

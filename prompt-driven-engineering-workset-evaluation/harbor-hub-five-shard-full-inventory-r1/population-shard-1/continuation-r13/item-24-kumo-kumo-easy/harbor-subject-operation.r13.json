@@ -1,0 +1,67 @@
+{
+  "authorityEffect": "none",
+  "blockingCodes": [
+    "hub-auth-unavailable",
+    "dataset-license-unobserved",
+    "task-instruction-unavailable",
+    "task-image-manifest-unavailable",
+    "protected-verifier-unavailable",
+    "effective-model-unverified",
+    "effective-reasoning-effort-unverified",
+    "subject-timeout-unverified",
+    "network-policy-unresolved",
+    "cost-budget-unqualified"
+  ],
+  "claimRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-24-kumo-kumo-easy/claim.r13.json",
+  "digest": "sha256:20a3ca823c12727d418d96536f462faf0ba815c5e67ad92ac7ab0cd58d33dc25",
+  "effective": {
+    "model": null,
+    "reasoningEffort": null,
+    "receiptState": "missing_require_context",
+    "timeoutSeconds": null
+  },
+  "identityDigest": "sha256:2640d626d6a09e7786b33874b4d84ccc41bb784d5ad4a67bdcb9ae02e163ced1",
+  "itemId": "kumo/kumo-easy",
+  "itemTerminalStatus": "held",
+  "kind": "harbor-subject-operation-receipt/v2",
+  "nativeSubjectBoundary": {
+    "controllerProviderEvidenceNotSubjectEvidence": true,
+    "observationDigest": "sha256:f3bb363197e5f2afbd0db71380192628e73ef6a3f97a9616666164f75269f1ef",
+    "observationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-24-kumo-kumo-easy/native-subject-topology-operation-observation.r13.json",
+    "operationStatus": "not_operated",
+    "receiptDigest": "sha256:76f2f2554f73cdf5a29eed7fc32ab63bcf00d1dade2c3b713a98b7656739163a",
+    "receiptRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-24-kumo-kumo-easy/native-subject-topology-operation-receipt.r13.json",
+    "requestDigest": "sha256:28adccccde772ffa26eba5d4802f8fa424ab0f6748d6f0d8549bb0ec767d476c",
+    "requestRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-24-kumo-kumo-easy/subject-operation-request.r13.json"
+  },
+  "operationAttempted": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationStatus": "held_before_subject_execution",
+  "privacy": {
+    "credentialsStored": false,
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false
+  },
+  "provider": "harbor@0.22.0",
+  "requested": {
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "timeoutSeconds": 3600
+  },
+  "requireContext": true,
+  "schemaVersion": 2,
+  "subject": "Harbor Subject",
+  "subjectTerminalState": "not_started",
+  "verifierState": "not_started",
+  "wakeCondition": [
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "network_policy_and_cost_budget_qualified"
+  ]
+}

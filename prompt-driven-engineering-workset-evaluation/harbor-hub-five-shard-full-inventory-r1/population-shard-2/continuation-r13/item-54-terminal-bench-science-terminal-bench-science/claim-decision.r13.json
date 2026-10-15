@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 53,
+      "expectedEventHeadSha256": "5f4a2337731060859ce5b0da55019fd3142f379004a5f79bb70b97f2cc90ef0c",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:df46bc0c00936e0de797144bf188c0df60cfed86f7b80a9c8ea4fa962d1c7e60"
+      },
+      "identityDigest": "sha256:d0eddfc84490c64411dd00f2a9c6d5dae03e306bab54245a04923d3e2e2182e4",
+      "itemId": "terminal-bench-science/terminal-bench-science",
+      "laneId": "population-shard-2",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-2:terminal-bench-science/terminal-bench-science:r13",
+      "sequence": 54,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-2:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 53,
+    "eventHeadSha256": "sha256:5f4a2337731060859ce5b0da55019fd3142f379004a5f79bb70b97f2cc90ef0c",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:7133a5c942f1bb4e922658da04109e25445716835cf051b3da6f17ed744c012e",
+  "eventCursor": 53,
+  "eventHeadSha256": "sha256:5f4a2337731060859ce5b0da55019fd3142f379004a5f79bb70b97f2cc90ef0c",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-2",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-54-terminal-bench-science-terminal-bench-science/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "terminal-bench-science/terminal-bench-science",
+        "laneId": "population-shard-2",
+        "proposalId": "proposal:population-shard-2:terminal-bench-science/terminal-bench-science:r13",
+        "workerId": "worker:harbor-population-shard-2:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 53,
+      "eventHeadSha256": "5f4a2337731060859ce5b0da55019fd3142f379004a5f79bb70b97f2cc90ef0c",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 53,
+    "eventHeadSha256": "5f4a2337731060859ce5b0da55019fd3142f379004a5f79bb70b97f2cc90ef0c",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-2",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}

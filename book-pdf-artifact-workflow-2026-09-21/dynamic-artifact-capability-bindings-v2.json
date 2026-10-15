@@ -1,0 +1,149 @@
+{
+  "kind": "dynamic-artifact-capability-bindings/v2",
+  "bindingId": "capability-bindings:claim-led-book-pdf",
+  "revision": "book-pdf-capabilities/2",
+  "status": "candidate_not_activated",
+  "authorityEffect": "none",
+  "registeredSkillLookupPerformed": true,
+  "registeredSkillRefs": [
+    "artifacts/agents/agent-operation/skill/context-engineering/SKILL.md",
+    "artifacts/agents/engineering/skill/source-driven-development/SKILL.md",
+    "artifacts/agent-loop/work/progressive-knowledge-research/skill/progressive-knowledge-research-loop-operation/SKILL.md",
+    "artifacts/agent-loop/document/documentation-surface/skill/document-functional-requirement/SKILL.md",
+    "artifacts/agent-loop/design/frontend-design-source/skill/frontend-design-source-loop-operation/SKILL.md",
+    "artifacts/agent-loop/design/visual-parity-remediation/skill/visual-parity-loop-operation/SKILL.md",
+    "artifacts/agent-loop/evidence-validation-reuse/skill/evidence-validation-reuse-loop-operation/SKILL.md"
+  ],
+  "coverageFinding": "Registered skills cover context, source evidence, bounded documentation, design intent and visual comparison, but none alone guarantees claim-led long-form technical narrative or paged-media PDF integrity.",
+  "taskLocalContractRefs": [
+    ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/writing-quality-contract-v1.md",
+    ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-expression-spec-v2.md",
+    ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/report-authoring-loop-candidate.json",
+    ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-v1.json"
+  ],
+  "taskLocalCapabilities": [
+    {
+      "id": "capability:claim-led-narrative-composition",
+      "purpose": "Turn a bounded claim packet into continuous technical prose organized by reader question, thesis, causal explanation, worked trace, failure path and transition.",
+      "inputs": ["source-to-claim packet", "reader and scope", "chapter order", "source limitations"],
+      "output": "technical-book-manuscript-candidate/v2",
+      "requiredChecks": [
+        "heading removal does not destroy the argument",
+        "causal sequences are prose or diagrams rather than disconnected feature lists",
+        "each chapter hands an explicit value or question to the next chapter",
+        "every material inference remains labeled"
+      ],
+      "antiPatterns": ["keyword-led page", "feature-card catalog", "diagram without interpretation", "fluent prose hiding missing evidence"]
+    },
+    {
+      "id": "capability:high-context-concept-framing",
+      "purpose": "Move between human problem, system principle, project mechanism and operational consequence so the explanation transfers beyond one keyword set.",
+      "inputs": ["reader question", "claim packet", "project mechanism", "operational failure or decision"],
+      "output": "conceptual-framing section",
+      "requiredChecks": [
+        "framework names are examples rather than the thesis",
+        "keyword-decoupling test passes",
+        "the section returns from abstraction to a project trace",
+        "the reader can name a transferable principle"
+      ],
+      "antiPatterns": ["terminology-first explanation", "API name as conclusion", "abstract principle without project evidence"]
+    },
+    {
+      "id": "capability:content-function-page-selection",
+      "purpose": "Select Systems Monograph or Evidence Notebook from the information function of the content, not from alternating decoration.",
+      "inputs": ["manuscript unit", "evidence role", "reader task"],
+      "output": "page-mode decision",
+      "requiredChecks": [
+        "Monograph advances explanation",
+        "Notebook verifies one material claim",
+        "lists and callouts do not replace the argument"
+      ]
+    },
+    {
+      "id": "capability:paged-media-rendering",
+      "purpose": "Render A4 HTML/CSS into a selectable-text PDF while preserving typography, vectors, links and page boundaries.",
+      "inputs": ["frozen HTML", "CSS page contract", "local assets"],
+      "output": "book-pdf-candidate/v2",
+      "requiredChecks": ["expected page count", "no clipped content", "print background", "selectable text"]
+    },
+    {
+      "id": "capability:pdf-structural-inspection",
+      "purpose": "Measure page count, extractable text, page geometry, overflow and asset digests without accepting the content.",
+      "inputs": ["frozen PDF", "render source", "expected manifest"],
+      "output": "pdf-structural-validation-candidate/v2",
+      "requiredChecks": ["page count", "text per page", "zero overflow", "digest binding"]
+    },
+    {
+      "id": "capability:chapter-rhythm-visual-review",
+      "purpose": "Use page previews and contact sheets to detect slide-like emptiness, repeated cards, abrupt mode changes and unreadable density.",
+      "inputs": ["page preview set", "reference boards 01 and 07", "expression spec v2"],
+      "output": "author-side visual-review candidate",
+      "requiredChecks": ["narrative rhythm", "page-mode fitness", "diagram-to-prose connection", "grayscale intent"],
+      "limitation": "Does not substitute for an independent visual validator."
+    }
+  ],
+  "tools": [
+    {
+      "ref": "tool:repository-read",
+      "purpose": "Read exact local source, study artifacts and registered profiles without mutation."
+    },
+    {
+      "ref": "tool:primary-source-browser",
+      "purpose": "Retrieve official MDN, React and Anthropic background sources with URL provenance."
+    },
+    {
+      "ref": "tool:raster-concept-generation",
+      "purpose": "Produce original visual direction boards; never use generated small text as factual content."
+    },
+    {
+      "ref": "tool:html-css-paged-media-renderer",
+      "purpose": "Render live-text A4 PDF and per-page previews from frozen HTML/CSS."
+    },
+    {
+      "ref": "tool:browser-layout-geometry-audit",
+      "purpose": "Check each page element for horizontal and vertical overflow."
+    },
+    {
+      "ref": "tool:pdfkit-page-text-inspector",
+      "purpose": "Count PDF pages and extractable text per page."
+    },
+    {
+      "ref": "tool:sha256-digest",
+      "purpose": "Bind source, visual, PDF and handoff evidence to exact immutable bytes."
+    },
+    {
+      "ref": "tool:contact-sheet-renderer",
+      "purpose": "Expose cross-page rhythm and visual repetition for review."
+    }
+  ],
+  "gates": [
+    {
+      "id": "gate:narrative-before-layout",
+      "requirement": "A manuscript unit passes the seven-element narrative contract before page styling."
+    },
+    {
+      "id": "gate:high-context-before-keywords",
+      "requirement": "A section explains the human problem and system principle before using framework or API names as project examples."
+    },
+    {
+      "id": "gate:reject-keyword-pages",
+      "requirement": "Reject a page whose meaning lives mainly in keywords, badges or three-or-more independent boxes."
+    },
+    {
+      "id": "gate:source-strength",
+      "requirement": "Observed facts, external background and project inference remain separately labeled."
+    },
+    {
+      "id": "gate:render-integrity",
+      "requirement": "Expected pages, selectable text, zero page overflow and exact digests are present."
+    },
+    {
+      "id": "gate:independent-validation",
+      "requirement": "Fact and visual acceptance remains pending until an author-independent validator reviews frozen inputs."
+    }
+  ],
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}

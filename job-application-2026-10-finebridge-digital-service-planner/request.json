@@ -1,0 +1,487 @@
+{
+  "kind": "job-application-report-request/v1",
+  "schema_version": 1,
+  "request_id": "request:finebridge:digital-service-planner:set-2",
+  "revision": "set-2-r2-answer-projection-boundary",
+  "application": {
+    "company_name": "파인브릿지 금융",
+    "role_title": "디지털 서비스 기획자",
+    "language": "ko-KR",
+    "official_posting_source_ids": ["source-finebridge-posting"]
+  },
+  "questions": [
+    {
+      "id": "question-collaboration",
+      "prompt": "다른 사람들과 협력하여 공동의 목표를 달성한 경험과 본인의 역할을 설명해 주세요.",
+      "min_chars": 1,
+      "max_chars": 700,
+      "required_contents": ["협력 상황", "공동 목표", "본인의 역할", "결과 또는 배움"],
+      "focus": {
+        "family_id": "collaboration-and-conflict",
+        "primary_claim": "고객 신호를 실행 가능한 요구사항과 검증으로 연결하는 협업 역할을 수행했다.",
+        "reader_takeaway": "고객 문제를 개발 조직의 실행 기준으로 번역하고 공동 목표를 맞추는 신입 기획자다.",
+        "reviewer_need": "공동 목표를 이해하고 개발 조직과 실행 기준을 맞추는 방식을 확인한다.",
+        "evidence_function": "인턴의 문의 분류·요구사항·개발팀 Jira Ticket·QA·릴리즈 후 VOC 경험을 협업의 인과로 사용한다.",
+        "rhetorical_move_ids": ["relevant-context", "other-person-perspective", "choice-or-action", "result-or-boundary", "reason-or-tradeoff", "learning-or-change"],
+        "voice_evidence_ids": ["applicant-fact-internship", "applicant-fact-voc-analysis", "project-claim-requirement-qa", "project-claim-authentication-message"],
+        "closing_function": "repeatable-collaboration-practice",
+        "non_overlap_boundary": "개인 역량 목록이나 3~5년 포부가 중심이 되지 않으며, 협업에서 맡은 책임과 결과를 중심으로 쓴다."
+      },
+      "user_confirmation_ids": ["unknown-q1-collaboration-context"]
+    },
+    {
+      "id": "question-preparation",
+      "prompt": "디지털 서비스 기획 업무를 수행하기 위해 준비해 온 지식·경험·역량을 구체적으로 작성해 주세요.",
+      "min_chars": 1,
+      "max_chars": 800,
+      "required_contents": ["준비해 온 지식", "관련 경험", "보유 역량", "직무에서의 활용"],
+      "focus": {
+        "family_id": "capability-and-contribution",
+        "primary_claim": "사용자 조사·화면과 흐름 설계·기초 데이터 분석·개발 협업을 연결하는 준비를 해왔다.",
+        "reader_takeaway": "사용자 문제를 발견해 요구사항과 흐름으로 구체화하고 출시 후 개선까지 연결할 준비가 되어 있다.",
+        "reviewer_need": "신입 지원자가 공고의 핵심 업무를 수행할 기반과 구체적 활용 방식을 확인한다.",
+        "evidence_function": "경영정보학 전공, 금융 앱 UX 프로젝트, 핀테크 운영 인턴, Figma·GA4·SQL·Jira 역량을 직무 요구와 연결한다.",
+        "rhetorical_move_ids": ["direct-answer", "choice-or-action", "company-role-connection", "reason-or-tradeoff", "result-or-boundary", "future-direction"],
+        "voice_evidence_ids": ["applicant-fact-education", "applicant-fact-tools", "applicant-fact-finance-app-project", "applicant-fact-internship", "project-claim-flow-redesign", "project-claim-requirement-qa"],
+        "closing_function": "concrete-contribution",
+        "non_overlap_boundary": "한 사건의 협업 서사나 가치관 형성 사건을 길게 재현하지 않고, 준비의 축과 직무 적용을 중심으로 쓴다."
+      },
+      "user_confirmation_ids": ["unknown-q2-analytics-example"]
+    },
+    {
+      "id": "question-value-formation",
+      "prompt": "성장 과정이나 주요 경험 중 현재의 업무 가치관 형성에 가장 큰 영향을 준 사건을 설명해 주세요.",
+      "min_chars": 1,
+      "max_chars": 600,
+      "required_contents": ["가장 큰 영향을 준 사건", "당시 판단", "현재의 업무 가치관", "업무에서의 실천"],
+      "focus": {
+        "family_id": "values-and-formative-experience",
+        "primary_claim": "사용자가 현재 어느 단계에 있는지 알기 어려웠던 문제를 발견한 경험이 기능보다 과정의 명확성을 우선하는 가치관을 만들었다.",
+        "reader_takeaway": "기능 추가보다 사용자의 상태 이해와 다음 행동을 먼저 살피는 판단 기준을 실제 경험으로 형성했다.",
+        "reviewer_need": "문제 인식과 우선순위 판단이 실제 업무 태도로 어떻게 이어지는지 확인한다.",
+        "evidence_function": "사용자 인터뷰 24건과 금융 앱의 송금·계좌·완료 확인 문제, 인터뷰 메모를 사건과 가치관의 근거로 사용한다.",
+        "rhetorical_move_ids": ["direct-answer", "value-in-action", "choice-or-action", "relevant-context", "learning-or-change", "company-role-connection"],
+        "voice_evidence_ids": ["applicant-value-stage-clarity", "applicant-value-process-simplicity", "applicant-fact-interview-findings", "project-claim-flow-redesign", "project-claim-prioritize-clarity"],
+        "closing_function": "principle-at-work",
+        "non_overlap_boundary": "인턴 경력의 데이터 분석 성과나 미래 목표를 중심에 두지 않고, 한 사건의 판단 변화와 실천 원칙을 중심으로 쓴다."
+      },
+      "user_confirmation_ids": ["applicant-value-stage-clarity"]
+    },
+    {
+      "id": "question-three-to-five-year-goal",
+      "prompt": "입사 후 3~5년 동안 디지털 금융 서비스 분야에서 이루고 싶은 목표를 작성해 주세요.",
+      "min_chars": 1,
+      "max_chars": 700,
+      "required_contents": ["3~5년 목표", "디지털 금융 서비스 분야", "성장 과정", "회사에서의 기여"],
+      "focus": {
+        "family_id": "growth-and-career-direction",
+        "primary_claim": "사용자 분석부터 기능 기획·출시 후 데이터 개선까지 책임지는 디지털 금융 서비스 기획자로 성장한다.",
+        "reader_takeaway": "공고의 핵심 책임을 단계적으로 확장해 3~5년 안에 사용자·제품 개선 과제를 주도하려는 방향이 분명하다.",
+        "reviewer_need": "입사 후 성장 방향이 직무의 실제 책임과 연결되는지 확인한다.",
+        "evidence_function": "공고의 사용자 분석·기능 기획·요구사항·화면 흐름·데이터 개선 요구를 지원자의 제안된 성장 경로에 연결한다.",
+        "rhetorical_move_ids": ["direct-answer", "future-direction", "company-role-connection", "choice-or-action", "learning-or-change", "result-or-boundary"],
+        "voice_evidence_ids": ["applicant-fact-career-direction", "applicant-fact-tools", "applicant-fact-finance-app-project", "applicant-fact-internship", "fit-career-goal"],
+        "closing_function": "staged-growth",
+        "non_overlap_boundary": "과거 경험을 다시 나열하지 않고, 입사 후 단계별 기여와 확인할 지표를 중심으로 쓴다."
+      },
+      "user_confirmation_ids": ["unknown-q4-three-to-five-year-goal"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-finebridge-posting",
+      "source_type": "official_posting",
+      "locator": "https://recruit.finebridge.example/jobs/digital-service-planner",
+      "authority": "primary",
+      "observed_at": "2026-09-14T00:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-finebridge-company",
+      "source_type": "official_company",
+      "locator": "https://www.finebridge.example",
+      "authority": "primary",
+      "observed_at": "2026-09-14T00:00:00+09:00",
+      "digest": null,
+      "visibility": "metadata_only"
+    },
+    {
+      "id": "source-applicant-profile",
+      "source_type": "applicant_statement",
+      "locator": "runtime/input/user-provided-set-2-profile",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-14T00:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    },
+    {
+      "id": "source-applicant-experiences",
+      "source_type": "applicant_statement",
+      "locator": "runtime/input/user-provided-set-2-experiences",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-14T00:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    }
+  ],
+  "application_analysis": {
+    "company_context": [
+      {
+        "id": "company-context-role-brief",
+        "observation": "제공된 공고는 금융 서비스 사용자 분석, 모바일 서비스와 신규 기능 기획, 요구사항 정의, 화면과 사용자 흐름 설계, 개발·디자인 협업, 데이터 기반 개선을 핵심 업무로 제시한다.",
+        "evidence_refs": ["source-finebridge-posting"],
+        "writing_implication": "회사 고유 상품을 상상하지 않고 사용자 문제를 요구사항과 흐름으로 번역하고 출시 후 데이터를 확인하는 책임을 답안의 중심에 둔다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "company-context-source-limit",
+        "observation": "회사 홈페이지는 .example 가상 주소로 제공되었고 별도 회사 상품·고객군·전략 정보가 확인되지 않아 회사 고유 분석은 제한된다.",
+        "evidence_refs": ["source-finebridge-company"],
+        "writing_implication": "근거가 없는 회사 찬사나 사업 전략 주장을 넣지 않고 공고에 명시된 역할 요구만 사용한다.",
+        "certainty": "unknown"
+      }
+    ],
+    "role_domain_concerns": [
+      {
+        "id": "role-user-analysis",
+        "observation": "직무는 금융 서비스 사용자를 분석하고 모바일 서비스와 신규 기능을 기획하는 책임을 요구한다.",
+        "evidence_refs": ["source-finebridge-posting"],
+        "writing_implication": "사용자 인터뷰와 문의 데이터를 문제 정의와 우선순위 판단의 근거로 제시한다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "role-flow-and-requirements",
+        "observation": "직무는 서비스 요구사항을 정의하고 화면 및 사용자 흐름을 설계하는 일을 포함한다.",
+        "evidence_refs": ["source-finebridge-posting"],
+        "writing_implication": "Figma 산출물 자체보다 문제를 구조화하고 단계와 완료 상태를 단순하게 설계한 판단을 보여준다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "role-cross-functional-data",
+        "observation": "직무는 개발·디자인 조직과 협업하고 데이터 기반으로 서비스를 개선하는 책임을 함께 요구한다.",
+        "evidence_refs": ["source-finebridge-posting"],
+        "writing_implication": "요구사항과 작업 티켓으로 협업 기준을 맞추고 릴리즈 후 문의와 행동 신호를 다시 보는 경험을 연결한다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "role-financial-clarity",
+        "observation": "지원자 프로젝트에서는 송금 메뉴 진입, 최근 계좌 접근, 송금 완료 여부 확인과 같은 금융 앱의 상태·완료 인지가 주요 문제로 나타났다.",
+        "evidence_refs": ["source-applicant-experiences"],
+        "writing_implication": "금융 서비스에서 기능 수보다 사용자가 현재 단계와 완료 여부를 명확히 이해하는지를 품질 기준으로 제시한다.",
+        "certainty": "inference"
+      }
+    ],
+    "fit_hypotheses": [
+      {
+        "id": "fit-user-flow-requirements",
+        "statement": "금융 앱 사용자 인터뷰에서 문제를 찾고 흐름을 재설계한 경험은 공고의 사용자 분석·요구사항·화면 흐름 설계 책임으로 전이될 수 있다.",
+        "evidence_refs": ["source-finebridge-posting", "source-applicant-experiences"],
+        "confirmation_required": true
+      },
+      {
+        "id": "fit-voc-data-loop",
+        "statement": "고객 문의를 유형화하고 인증 안내 문구를 개선한 뒤 동일 유형 문의 감소를 추적한 경험은 데이터 기반 서비스 개선 책임과 연결될 수 있다.",
+        "evidence_refs": ["source-finebridge-posting", "source-applicant-experiences"],
+        "confirmation_required": true
+      },
+      {
+        "id": "fit-collaboration-bridge",
+        "statement": "요구사항 작성, 개발팀 Jira Ticket, QA, 릴리즈 후 VOC 추적 경험은 고객 문제를 개발 조직의 실행 기준으로 번역하는 협업 역할로 설명할 수 있다.",
+        "evidence_refs": ["source-finebridge-posting", "source-applicant-experiences"],
+        "confirmation_required": true
+      },
+      {
+        "id": "fit-career-goal",
+        "statement": "사용자 분석부터 기능 기획·출시 후 데이터 개선까지 책임지는 3~5년 목표는 공고의 핵심 업무와 지원자의 서비스 기획 방향에 맞는 제안으로 볼 수 있다.",
+        "evidence_refs": ["source-finebridge-posting", "source-applicant-profile"],
+        "confirmation_required": true
+      }
+    ]
+  },
+  "applicant_evidence": {
+    "facts": [
+      {
+        "id": "applicant-fact-education",
+        "statement": "미래대학교 경영정보학과를 졸업했다.",
+        "source_refs": ["source-applicant-profile"],
+        "confirmed": true,
+        "allowed_uses": ["question-preparation", "question-three-to-five-year-goal"]
+      },
+      {
+        "id": "applicant-fact-career-direction",
+        "statement": "신입으로 서비스 기획 및 Product Manager 직무를 희망한다.",
+        "source_refs": ["source-applicant-profile"],
+        "confirmed": true,
+        "allowed_uses": ["question-preparation", "question-three-to-five-year-goal"]
+      },
+      {
+        "id": "applicant-fact-tools",
+        "statement": "Figma, GA4, SQL 기본 분석, Excel, Notion, Jira, 사용자 인터뷰, 서비스 정책 및 요구사항 작성 역량을 보유하고 있다.",
+        "source_refs": ["source-applicant-profile"],
+        "confirmed": true,
+        "allowed_uses": ["question-collaboration", "question-preparation", "question-three-to-five-year-goal"]
+      },
+      {
+        "id": "applicant-fact-finance-app-project",
+        "statement": "학교 산학 프로젝트에서 모바일 금융 앱의 사용성을 개선하고 사용자 인터뷰 결과를 바탕으로 사용자 흐름을 재설계하고 프로토타입을 제작했다.",
+        "source_refs": ["source-applicant-experiences"],
+        "confirmed": true,
+        "allowed_uses": ["question-preparation", "question-value-formation"]
+      },
+      {
+        "id": "applicant-fact-internship",
+        "statement": "핀테크 스타트업에서 3개월 동안 고객 문의 분류, 서비스 개선 요구사항 작성, 개발팀 Jira Ticket 작성, QA 참여, 릴리즈 후 VOC 추적을 수행했다.",
+        "source_refs": ["source-applicant-experiences"],
+        "confirmed": true,
+        "allowed_uses": ["question-collaboration", "question-preparation"]
+      },
+      {
+        "id": "applicant-fact-voc-analysis",
+        "statement": "고객 문의 약 600건을 유형별로 분류해 인증 과정 관련 문의가 전체의 약 31%임을 발견하고 안내 문구 개선안을 제안했으며 이후 동일 유형 문의 감소를 확인했다.",
+        "source_refs": ["source-applicant-experiences"],
+        "confirmed": true,
+        "allowed_uses": ["question-collaboration", "question-preparation", "question-value-formation"]
+      },
+      {
+        "id": "applicant-fact-interview-findings",
+        "statement": "금융 앱 사용자 인터뷰 24건에서 송금 메뉴 진입 과정, 최근 계좌 접근, 송금 완료 여부 확인이 어렵다는 문제를 발견했다.",
+        "source_refs": ["source-applicant-experiences"],
+        "confirmed": true,
+        "allowed_uses": ["question-preparation", "question-value-formation"]
+      }
+    ],
+    "value_statements": [
+      {
+        "id": "applicant-value-stage-clarity",
+        "statement": "기능 자체보다 사용자가 현재 어느 단계에 있는지 알기 어려운 문제를 먼저 해결해야 한다고 판단한다.",
+        "source_refs": ["source-applicant-experiences"],
+        "confirmed": true,
+        "allowed_uses": ["question-value-formation", "question-three-to-five-year-goal"]
+      },
+      {
+        "id": "applicant-value-process-simplicity",
+        "statement": "새로운 기능 추가보다 현재 프로세스를 단순하게 보여주는 것이 우선이라고 판단한다.",
+        "source_refs": ["source-applicant-experiences"],
+        "confirmed": true,
+        "allowed_uses": ["question-preparation", "question-value-formation", "question-three-to-five-year-goal"]
+      }
+    ],
+    "unknowns": [
+      {
+        "id": "unknown-q1-collaboration-context",
+        "needed_fact": "협업한 팀의 구성, 공동 목표를 합의한 방식, 지원자가 맡은 결정과 팀 결과를 확인할 구체적 장면",
+        "affected_question_ids": ["question-collaboration"],
+        "why_material": "현재 자료만으로는 협업의 공동 목표와 본인의 고유 역할을 더 구체적으로 방어하기 어렵다.",
+        "acceptable_evidence": "당시 요구사항 문서, Jira Ticket, 회의 메모, QA 기록 또는 팀원과의 역할 분담을 설명하는 본인 회고 중 하나"
+      },
+      {
+        "id": "unknown-q2-analytics-example",
+        "needed_fact": "GA4 또는 SQL 기본 분석을 실제로 적용한 화면·이벤트·질의 사례와 분석 결과",
+        "affected_question_ids": ["question-preparation"],
+        "why_material": "보유 역량을 나열하는 수준에서 벗어나 데이터 기반 기획 역량을 구체화할 수 있다.",
+        "acceptable_evidence": "비식별화한 이벤트 설계, SQL 질의 예시, 분석 화면, Excel 집계표 또는 학습 프로젝트 기록"
+      },
+      {
+        "id": "unknown-q3-voc-decline-magnitude",
+        "needed_fact": "인증 안내 문구 개선 전후의 동일 유형 문의 건수 또는 관찰 기간",
+        "affected_question_ids": ["question-value-formation"],
+        "why_material": "개선 제안의 결과를 과장 없이 어느 정도 확인했는지 설명할 수 있다.",
+        "acceptable_evidence": "전후 문의 건수, 비율 변화, 관찰 기간, 운영 리포트 또는 담당자 확인 중 하나"
+      },
+      {
+        "id": "unknown-q4-three-to-five-year-goal",
+        "needed_fact": "3~5년 뒤 맡고 싶은 금융 서비스 영역과 직접 책임지고 싶은 사용자·사업 지표",
+        "affected_question_ids": ["question-three-to-five-year-goal"],
+        "why_material": "포부가 직무 적합성을 위한 제안인지 지원자 본인의 목표인지 구분하고 어조를 확정할 수 있다.",
+        "acceptable_evidence": "희망 제품·고객 문제·기획 책임·성장 경로에 대한 본인의 선호를 한두 문장으로 확인"
+      }
+    ]
+  },
+  "project_evidence": [
+    {
+      "id": "project-finance-app-ux",
+      "kind": "모바일 금융 앱 사용성 개선 산학 프로젝트",
+      "scale": "사용자 인터뷰 24건을 분석한 학교 산학 프로젝트",
+      "applicant_role": "사용자 인터뷰 분석, 문제 정의, 사용자 흐름 재설계, 프로토타입 제작",
+      "contribution": "송금 메뉴 진입, 최근 계좌 접근, 송금 완료 확인 이슈를 구조화하고 현재 상태와 완료 여부를 이해하기 쉬운 흐름으로 재설계했다.",
+      "process": "24건의 인터뷰에서 반복 문제를 도출한 뒤 신규 기능 추가보다 현재 프로세스를 단순하게 보여주는 방향을 우선하고 프로토타입을 제작했다.",
+      "learning": "기능 자체보다 사용자가 어느 단계에 있는지와 과업이 완료됐는지를 먼저 이해하게 만드는 것이 금융 서비스 개선의 출발점임을 배웠다.",
+      "claims": [
+        {
+          "id": "project-claim-interview-24",
+          "statement": "사용자 인터뷰 24건을 분석해 금융 앱의 반복적인 사용성 문제를 발견했다.",
+          "source_refs": ["source-applicant-experiences"],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "인터뷰 분석 결과는 확인되지만 인터뷰 대상 구성과 전체 사용자 대표성은 별도 자료가 필요하다."
+        },
+        {
+          "id": "project-claim-flow-redesign",
+          "statement": "발견한 문제를 바탕으로 사용자 흐름을 재설계하고 프로토타입을 제작했다.",
+          "source_refs": ["source-applicant-experiences"],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "화면과 흐름의 개선안은 확인되지만 실제 서비스 출시 후 사용성 지표는 제공되지 않았다."
+        },
+        {
+          "id": "project-claim-prioritize-clarity",
+          "statement": "새 기능 추가보다 현재 사용자가 프로세스와 단계를 단순하게 이해하도록 만드는 일을 우선했다.",
+          "source_refs": ["source-applicant-experiences"],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "우선순위 판단과 설계 방향은 확인되지만 팀 내 대안 비교와 최종 채택 과정은 미확인이다."
+        },
+        {
+          "id": "project-claim-collaboration-unknown",
+          "statement": "산학 프로젝트에서 다른 구성원과 공동 목표를 달성하는 과정에서 지원자가 맡은 협업 범위는 추가 확인이 필요하다.",
+          "source_refs": ["source-applicant-experiences"],
+          "certainty": "unknown",
+          "outcome_limit": "팀 구성과 지원자의 고유 의사결정 및 결과가 제공되지 않았다."
+        }
+      ],
+      "language_translations": [
+        {
+          "internal_term": "사용자 흐름",
+          "universal_term": "사용자가 과업을 완료하기까지 거치는 단계와 상태",
+          "use_condition": "화면 구조나 내부 산출물 이름보다 사용자의 과업 결과를 설명할 때 사용한다."
+        },
+        {
+          "internal_term": "프로토타입",
+          "universal_term": "출시 전에 화면과 이용 단계를 확인할 수 있는 시제품",
+          "use_condition": "실제 출시 성과와 혼동하지 않고 설계 검증 범위를 설명할 때 사용한다."
+        }
+      ]
+    },
+    {
+      "id": "project-fintech-operations-internship",
+      "kind": "핀테크 스타트업 서비스 운영 인턴십",
+      "scale": "3개월",
+      "applicant_role": "고객 문의 분류, 개선 요구사항 작성, 개발팀 Jira Ticket 작성, QA 참여, 릴리즈 후 VOC 추적",
+      "contribution": "고객 문의를 개선 요구사항과 개발·검증 작업으로 연결하고 릴리즈 후 같은 유형의 문의가 줄었는지 추적했다.",
+      "process": "고객 문의 약 600건을 유형별로 분류해 인증 관련 문의가 약 31%임을 발견하고 안내 문구 개선안을 제안한 뒤 동일 유형 문의 감소를 확인했다.",
+      "learning": "운영 데이터를 실행 가능한 요구사항으로 바꾸고 출시 후 반응을 다시 확인해야 서비스 개선이 실제 변화로 이어지는지 판단할 수 있음을 배웠다.",
+      "claims": [
+        {
+          "id": "project-claim-voc-analysis",
+          "statement": "고객 문의 약 600건을 유형별로 분류한 결과 인증 과정 관련 문의가 전체의 약 31%였다.",
+          "source_refs": ["source-applicant-experiences"],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "문의 규모와 비중은 제공되었지만 분류 기간, 중복 문의 처리, 기준표는 추가 자료가 필요하다."
+        },
+        {
+          "id": "project-claim-requirement-qa",
+          "statement": "개선 요구사항을 작성해 개발팀 Jira Ticket으로 전달하고 QA에 참여했다.",
+          "source_refs": ["source-applicant-experiences"],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "요구사항 작성과 QA 참여는 확인되지만 실제 의사결정 권한과 팀 내 협업 장면은 추가 확인이 필요하다."
+        },
+        {
+          "id": "project-claim-authentication-message",
+          "statement": "인증 단계 안내 문구 개선안을 제안했고 릴리즈 후 동일 유형 문의가 감소한 것을 확인했다.",
+          "source_refs": ["source-applicant-experiences"],
+          "certainty": "applicant_confirmed",
+          "outcome_limit": "감소 사실은 확인되지만 전후 수치와 관찰 기간이 없어 정량 효과는 단정하지 않는다."
+        }
+      ],
+      "language_translations": [
+        {
+          "internal_term": "VOC",
+          "universal_term": "고객 문의와 이용 중 남긴 의견",
+          "use_condition": "지원서에서는 처음 한 번 풀어 쓰고 이후 필요한 경우에만 약어를 사용한다."
+        },
+        {
+          "internal_term": "Jira Ticket",
+          "universal_term": "개발팀이 실행할 수 있도록 정리한 작업 요청",
+          "use_condition": "도구 이름보다 요구사항을 실행 가능한 단위로 전달한 역할을 강조할 때 사용한다."
+        },
+        {
+          "internal_term": "QA",
+          "universal_term": "출시 전 기능 확인",
+          "use_condition": "테스트 범위와 본인의 참여 수준을 과장하지 않고 설명할 때 사용한다."
+        }
+      ]
+    }
+  ],
+  "source_policy": {
+    "as_of": "2026-09-14",
+    "prefer_primary": true,
+    "allowed_source_ids": ["source-finebridge-posting", "source-finebridge-company", "source-applicant-profile", "source-applicant-experiences"],
+    "visible_source_ids": ["source-finebridge-posting"],
+    "missing_evidence_policy": "preserve_unknown"
+  },
+  "quality_profile": {
+    "policy_ref": "artifacts/agent-loop/document/job-application-report-production/vocabularies/job-application-report-quality-policy.json",
+    "mandatory_gate_ids": [
+      "request-and-question-coverage",
+      "source-and-freshness-boundary",
+      "applicant-attribution-and-confirmation",
+      "project-evidence-and-causality",
+      "role-domain-language-clarity",
+      "publication-and-privacy-safety"
+    ],
+    "dimensions": [
+      { "id": "question-fit-and-differentiation", "weight": 20 },
+      { "id": "role-and-domain-alignment", "weight": 20 },
+      { "id": "applicant-viewpoint-and-values", "weight": 18 },
+      { "id": "evidence-causality-and-attribution", "weight": 18 },
+      { "id": "expression-specificity-and-coherence", "weight": 14 },
+      { "id": "clarity-and-interview-defensibility", "weight": 10 }
+    ],
+    "rating_min": 0,
+    "rating_max": 4,
+    "qualification_threshold": 90,
+    "score_meaning": "editing_fitness_not_hiring_probability",
+    "revision_passes": 1
+  },
+  "output_profile": {
+    "candidate_count": 2,
+    "report_format": "html",
+    "audiences": ["지원자", "취업 전문가"],
+    "required_sections": ["company-role-analysis", "candidate-answers", "candidate-evaluation", "interview-preparation", "material-requests"],
+    "design": {
+      "tone": "금융 서비스의 신뢰감을 반영한 간결한 편집 보고서",
+      "comparison_layout": "vertical",
+      "avoid_patterns": ["내부 작업 기록", "근거 없는 회사 찬사", "문항 간 반복", "검토 보고서 요소가 제출용 답안에 섞이는 것", "루프·검증·점수 등 작업 메타데이터가 자기소개서 본문에 나타나는 것"],
+      "raster_policy": "not_required"
+    },
+    "publication": {
+      "searchable_text_required": true,
+      "overflow_policy": "no_clipped_content",
+      "visible_source_policy": "allowlisted_only",
+      "content_policies": [
+        {
+          "id": "exclude-internal-bookkeeping",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": { "type": "literal_any", "values": [".json", "route-decision", "private reasoning"] },
+          "rationale": "독자가 읽을 답안과 내부 실행 기록을 분리한다."
+        },
+        {
+          "id": "exclude-local-absolute-path",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": { "type": "regex_any", "values": ["/Users/[^\\s]+", "file://[^\\s]+"] },
+          "rationale": "로컬 경로와 환경 정보를 공개 보고서에 노출하지 않는다."
+        },
+        {
+          "id": "require-reader-sections",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "present",
+          "matcher": { "type": "literal_any", "values": ["지원 답안", "면접 준비", "추가 확인 사항"] },
+          "rationale": "지원자가 답안을 고르고 면접을 준비하는 데 필요한 핵심 섹션의 존재를 확인한다."
+        }
+      ]
+    }
+  },
+  "privacy_boundary": {
+    "public_evidence_ids": ["source-finebridge-posting", "company-context-role-brief", "role-user-analysis", "role-flow-and-requirements", "role-cross-functional-data"],
+    "prohibited_content_categories": ["private-reasoning", "raw-prompt", "runtime-handle", "secret", "unconsented-identity"],
+    "identity_handling": "explicit_consent_only"
+  },
+  "stop_budget": {
+    "max_research_rounds": 1,
+    "max_revision_passes": 1,
+    "unchanged_failure_limit": 1
+  }
+}

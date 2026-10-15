@@ -1,0 +1,44 @@
+{
+  "activeItemFreeze": {
+    "decisionDigest": "sha256:5b5fa2713334ff3e1c0451a48291c1343318435f9be3620f8cbfaf6b8ecc6663",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r9",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:fb88be3a0d69a80d51adda2bc4f6d62e52d5a525fcf33789efb099f474c6eed7"
+  },
+  "authorityEffect": "none",
+  "itemId": "abundant/swe-gen-go",
+  "kind": "operation-resolution-post-settlement-observation/v1",
+  "limitations": [
+    "latest context successor omits sourceRevision and decisionDigest in its observed file; preserve those missing facts at the next claim boundary",
+    "this observation does not alter the settled r9 claim or its terminal receipt"
+  ],
+  "materialChange": true,
+  "observedLatestContextSuccessor": {
+    "activePhaseContractDigest": "sha256:830efd51eeb0e08dba9339ace4fd07fb3e68b5aabd4d68cc138f380d43861f91",
+    "decisionDigest": "missing",
+    "modeStateRevision": "orchestration-r1",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r12",
+    "projectionDigest": "sha256:12d62634e792c850f001703679d67711fb3f217af8811dc268b51dce4dbbdfb8",
+    "projectionRef": "memory:harbor-hub-five-shard-full-inventory-r1:operation-resolution-r12",
+    "requestRevision": "harbor-context-and-compound-routing-r12",
+    "requirementScopeDigest": "sha256:3f2b7a1f00900db29b21ff5a318be74799675e2162a24696cfdd743a4350beba",
+    "sourceRevision": "missing"
+  },
+  "observedLatestOperationResolution": {
+    "decisionDigest": "sha256:12d62634e792c850f001703679d67711fb3f217af8811dc268b51dce4dbbdfb8",
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:e185aff8ec6d9dc521d527c67fa959614fefc94514a3a092d00c00b25bb125ab",
+    "structureDigest": "sha256:e185aff8ec6d9dc521d527c67fa959614fefc94514a3a092d00c00b25bb125ab"
+  },
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "policy": {
+    "activeItem": "finish_under_frozen_r9_revision",
+    "currentItemProjection": "not_made",
+    "nextSafeClaim": "reconcile_and_freeze_latest_compatible_revision_before_claiming_another_item",
+    "settledItem": "receipt_is_terminal_and_not_reopened"
+  },
+  "privacy": { "metadataOnly": true, "privateReasoningProjected": false },
+  "schemaVersion": 1,
+  "shardId": "population-shard-4",
+  "status": "deferred_to_next_safe_claim_boundary",
+  "digest": "sha256:420f9306de7a258501647ead4df0f256f293ac3b0748deb49ed36171bd94a6da"
+}

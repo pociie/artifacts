@@ -1,0 +1,67 @@
+{
+  "authorityEffect": "none",
+  "blockingCodes": [
+    "hub-auth-unavailable",
+    "dataset-license-unobserved",
+    "task-instruction-unavailable",
+    "task-image-manifest-unavailable",
+    "protected-verifier-unavailable",
+    "effective-model-unverified",
+    "effective-reasoning-effort-unverified",
+    "subject-timeout-unverified",
+    "network-policy-unresolved",
+    "cost-budget-unqualified"
+  ],
+  "claimRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-18-luosuu-swe-kokkos-bench/claim.r13.json",
+  "digest": "sha256:bbb8e522a262d133e318e6c7fd59c76c0d08e5a19eba975856a5860847221e1f",
+  "effective": {
+    "model": null,
+    "reasoningEffort": null,
+    "receiptState": "missing_require_context",
+    "timeoutSeconds": null
+  },
+  "identityDigest": "sha256:a1c270d48cdbda3a3db064218c6406ca65e53a7628956c17ae3efe24ef8df119",
+  "itemId": "luosuu/SWE-kokkos-bench",
+  "itemTerminalStatus": "held",
+  "kind": "harbor-subject-operation-receipt/v2",
+  "nativeSubjectBoundary": {
+    "controllerProviderEvidenceNotSubjectEvidence": true,
+    "observationDigest": "sha256:85ddaf4af9a6440ff2ebdc3c0347b75b5d5d88f1e3b9296a50ef415802450bf6",
+    "observationRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-18-luosuu-swe-kokkos-bench/native-subject-topology-operation-observation.r13.json",
+    "operationStatus": "not_operated",
+    "receiptDigest": "sha256:de057e0008f50a394844cb5aeb9ac9468aa158e09d491927b8243e70d9d473b5",
+    "receiptRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-18-luosuu-swe-kokkos-bench/native-subject-topology-operation-receipt.r13.json",
+    "requestDigest": "sha256:47601fb14522cfe76c55ad86e7f8d921abb53b344550ebf11bbeb67002b543d1",
+    "requestRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-18-luosuu-swe-kokkos-bench/subject-operation-request.r13.json"
+  },
+  "operationAttempted": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationStatus": "held_before_subject_execution",
+  "privacy": {
+    "credentialsStored": false,
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false
+  },
+  "provider": "harbor@0.22.0",
+  "requested": {
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "timeoutSeconds": 3600
+  },
+  "requireContext": true,
+  "schemaVersion": 2,
+  "subject": "Harbor Subject",
+  "subjectTerminalState": "not_started",
+  "verifierState": "not_started",
+  "wakeCondition": [
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "network_policy_and_cost_budget_qualified"
+  ]
+}

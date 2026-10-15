@@ -1,0 +1,54 @@
+{
+  "allowedFallbackKinds": ["construct"],
+  "candidates": [
+    {
+      "artifactKind": "evaluation_contract",
+      "artifactRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "availability": "available",
+      "capabilityIds": ["task_execution", "verifier_binding", "privacy_boundary"],
+      "compatibleModes": ["single_task", "loop", "orchestration"],
+      "coversConcernIds": ["task-execution-support"],
+      "qualification": "qualified",
+      "structuralCost": 1
+    },
+    {
+      "artifactKind": "routing_contract",
+      "artifactRef": "artifacts/loop-architecture/components/execution-routing/component.json",
+      "availability": "available",
+      "capabilityIds": ["six_mode_routing", "reassessment"],
+      "compatibleModes": ["single_task", "loop", "orchestration"],
+      "coversConcernIds": ["routing-support"],
+      "qualification": "qualified",
+      "structuralCost": 1
+    },
+    {
+      "artifactKind": "context_contract",
+      "artifactRef": "artifacts/agent-loop/execution-preparation/context-resolution/loop.yaml",
+      "availability": "available",
+      "capabilityIds": ["context_lifetime", "revision_freeze"],
+      "compatibleModes": ["single_task", "loop", "orchestration"],
+      "coversConcernIds": ["context-reconciliation-support"],
+      "qualification": "qualified",
+      "structuralCost": 1
+    }
+  ],
+  "concerns": [
+    {
+      "acceptedArtifactKinds": ["evaluation_contract"],
+      "id": "task-execution-support",
+      "requiredCapabilityIds": ["task_execution", "verifier_binding", "privacy_boundary"]
+    },
+    {
+      "acceptedArtifactKinds": ["routing_contract"],
+      "id": "routing-support",
+      "requiredCapabilityIds": ["six_mode_routing", "reassessment"]
+    },
+    {
+      "acceptedArtifactKinds": ["context_contract"],
+      "id": "context-reconciliation-support",
+      "requiredCapabilityIds": ["context_lifetime", "revision_freeze"]
+    }
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:adameubanks/rating-generation-consistency:6f425580e941b7de0d2e5a4e1a2fd0f096d570068d4d32efb2e9ac7fbceb1a83",
+  "selectedMode": "single_task"
+}

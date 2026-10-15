@@ -1,0 +1,96 @@
+{
+  "architecture": {
+    "ref": "artifacts/population-shard-4/continuation-r12/architecture-qualification.r12.json",
+    "status": "not_required"
+  },
+  "artifactLifecycle": {
+    "digest": "sha256:adfb3b37ecfbabc4e4a7634873c9b178c3106b2cd7603ea738c300b32daa15ee",
+    "dynamicComposition": "not_required",
+    "observationRef": "artifacts/population-shard-4/continuation-r12/artifact-lifecycle-observation.r12.json"
+  },
+  "authorityEffect": "none",
+  "benchmark": {
+    "executionRef": "artifacts/population-shard-4/continuation-r12/harbor-execution-observation.r12.json",
+    "failureCode": "provider:effective-model-effort-timeout-credential-receipts-unavailable",
+    "rawVerifierReward": null,
+    "reward": null,
+    "state": "held"
+  },
+  "coordination": {
+    "ref": "artifacts/population-shard-4/continuation-r12/coordination-qualification.r12.json",
+    "status": "not_required"
+  },
+  "digest": "sha256:10341be9e149e17123bfb00cfaf8035ae09e468902da9194b738e33a88f38eea",
+  "efficiency": {
+    "executionStarted": false,
+    "reworkCount": 0,
+    "toolEffectCount": 0
+  },
+  "evaluator": {
+    "independentEvaluationRef": "artifacts/population-shard-4/continuation-r12/independent-evaluation.r12.json",
+    "kind": "deterministic"
+  },
+  "final": true,
+  "gaps": [
+    "provider capability/effective receipts are unavailable",
+    "protected verifier outcome is unavailable",
+    "no dynamic Artifact was required or created",
+    "no topology-bearing Agent Architecture, Swarm, or coordination operation was required"
+  ],
+  "independentEvaluationRef": "artifacts/population-shard-4/continuation-r12/independent-evaluation.r12.json",
+  "kind": "engineering-evaluation-report/v2",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawProviderMaterialProjected": false
+  },
+  "provider": {
+    "effectiveModel": null,
+    "effectiveReasoningEffort": null,
+    "effectiveReceiptPresent": false,
+    "effectiveSubjectTimeoutSeconds": null,
+    "requestedModel": "gpt-5.6-luna",
+    "requestedReasoningEffort": "max",
+    "requestedSubjectTimeoutSeconds": 3600
+  },
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-4:abundant/swe-gen-java:dde74a7e707f60a1978399f9af6bea1b45f345e818cbf66aa425b48418b5f650",
+  "requirements": {
+    "outputContract": "protected Java task verifier",
+    "scope": "one exact frozen shard-4 item",
+    "taskFamily": "swe-gen-java",
+    "taskRevision": 1
+  },
+  "route": {
+    "compoundJourneyRef": "artifacts/population-shard-4/continuation-r12/compound-mode-journey.r12.json",
+    "reasoningEnvelopeDigest": "sha256:3cb9a7098a9784be6076c960f12b998ee1476df29361648711c3eb95a81abd26",
+    "reasoningEnvelopeRef": "artifacts/population-shard-4/continuation-r12/mode-reasoning-envelope.r12.json",
+    "routeDigest": "sha256:cb916cf93702d22ed5545ed847abaeab81e8385013e292c2092445f78f785de3",
+    "routeRef": "artifacts/population-shard-4/continuation-r12/route-decision.r12.json",
+    "selectedMode": "single_task",
+    "status": "selected"
+  },
+  "simulationEvidenceDigest": "sha256:585f781fbbe3347ca5c133b4c3adcdfa9758ce264485a3be045484d4c8f20a61",
+  "simulationEvidenceRef": "artifacts/population-shard-4/continuation-r12/simulation-evidence.r12.json",
+  "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:e185aff8ec6d9dc521d527c67fa959614fefc94514a3a092d00c00b25bb125ab",
+  "status": "final_report_only",
+  "swarm": {
+    "ref": "artifacts/population-shard-4/continuation-r12/swarm-qualification.r12.json",
+    "status": "not_required"
+  },
+  "taskId": "abundant/swe-gen-java/junit-team__junit5-4692",
+  "terminalEvaluation": {
+    "eligible": false,
+    "reason": "effective model, effort, timeout, credential, and verifier receipts are unavailable before Subject admission",
+    "state": "require_context",
+    "wakeCondition": "Re-observe Harbor capability for this exact next item only after the provider capability fingerprint changes: credentials must authenticate, the effective gpt-5.6-luna model and max effort must be receipt-bound, the effective subject and verifier timeout must be proven at or below 3600 seconds, and the protected verifier capability must be qualified; then admit a fresh item-bound round. Do not retry this hold or claim the next pending item with the unchanged capability fingerprint."
+  },
+  "topology": {
+    "ref": "artifacts/population-shard-4/continuation-r12/topology-requirement.r12.json",
+    "requirement": "none"
+  },
+  "workflow": {
+    "patternRef": "artifacts/population-shard-4/continuation-r12/workflow-pattern-qualification.r12.json",
+    "status": "not_required_for_one_owner"
+  }
+}

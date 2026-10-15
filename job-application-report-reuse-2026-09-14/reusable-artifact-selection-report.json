@@ -1,0 +1,337 @@
+{
+  "kind": "reusable-artifact-selection-report/v1",
+  "schemaVersion": 1,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:job-application-report-reusable-extraction",
+  "requestDigest": "39e5143467feb8798f051c7a9bf6235c7733245af0606c1ec8c8935cd8496708",
+  "inventoryDigest": "428a42e075cb9d5d66f87be50bf6b28b0ad29c1b597d88612f213a7634935779",
+  "algorithm": {
+    "id": "deterministic-evidence-tier-selection/v1",
+    "relationshipDepth": 0,
+    "maxCandidates": 6
+  },
+  "candidates": [
+    {
+      "artifactId": "loop:agent-loop/execution-preparation/prompt-assistance",
+      "baseResponsibilityClass": "loop",
+      "specialization": null,
+      "scope": "unresolved",
+      "sourceDigest": "4f06466ea4af7fbe8bda507f74eba10f24a1a83e270364e2c441cd3d2aa96839",
+      "evidenceTier": "direct",
+      "graphDistance": 0,
+      "matchedTerms": [
+        "candidate",
+        "completeness",
+        "context",
+        "loop",
+        "prompt",
+        "requirement",
+        "research",
+        "reusable",
+        "review",
+        "rubric",
+        "work"
+      ],
+      "sourceMembers": [
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/README.md",
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/examples/prompt-engineering-contract.example.json",
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/governance.md",
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/loop.yaml",
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/policy/instruction-envelope.policy.json",
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/requirements/prompt-assistance.requirement.json",
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/schemas/prompt-engineering-contract.schema.json",
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/scripts/check_prompt_engineering_contract.py"
+      ],
+      "consumerRefs": [
+        "artifacts/agent-loop/assessment/agent-review/loop.yaml",
+        "artifacts/agent-loop/assessment/engineering-calibration/loop.yaml",
+        "artifacts/agent-loop/assessment/engineering-evaluation/component-interoperability/examples/current-loop-architecture-assessment.example.json",
+        "artifacts/agent-loop/assessment/engineering-evaluation/component-interoperability/scripts/build_current_examples.py",
+        "artifacts/agent-loop/assessment/engineering-evaluation/decision-rubric/contract.md"
+      ],
+      "validationRefs": [
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/examples/prompt-engineering-contract.example.json",
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/schemas/prompt-engineering-contract.schema.json",
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/scripts/check_prompt_engineering_contract.py",
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/scripts/test_check_prompt_engineering_contract.py"
+      ],
+      "unresolvedFacts": []
+    },
+    {
+      "artifactId": "loop:agent-loop/execution-preparation/context-resolution",
+      "baseResponsibilityClass": "loop",
+      "specialization": null,
+      "scope": "unresolved",
+      "sourceDigest": "8e997bf81830a813d36c4a3cb23704387a984db885d3a1f43d4edf09eb60d5b4",
+      "evidenceTier": "direct",
+      "graphDistance": 0,
+      "matchedTerms": [
+        "candidate",
+        "context",
+        "loop",
+        "requirement",
+        "research",
+        "reusable",
+        "review",
+        "rubric",
+        "work"
+      ],
+      "sourceMembers": [
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/inflight-context-reconciliation/algorithm.json",
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/inflight-context-reconciliation/implementation.py",
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/inflight-context-reconciliation/schemas/input.schema.json",
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/inflight-context-reconciliation/schemas/output.schema.json",
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/inflight-context-reconciliation/tests/test_implementation.py",
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/requirement-scoped-context-adaptation/algorithm.json",
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/requirement-scoped-context-adaptation/implementation.py",
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/requirement-scoped-context-adaptation/schemas/input.schema.json"
+      ],
+      "consumerRefs": [
+        "artifacts/agent-loop/assessment/engineering-evaluation/component-interoperability/examples/current-loop-architecture-assessment.example.json",
+        "artifacts/agent-loop/assessment/engineering-evaluation/component-interoperability/scripts/build_current_examples.py",
+        "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/profiles/workset-terminal-reward.profile.json",
+        "artifacts/agent-loop/assessment/engineering-evaluation/workset-transition-evaluation/scripts/check_transition_workset.py",
+        "artifacts/agent-loop/document/documentation-surface/scripts/phase30_documentation_model.cjs"
+      ],
+      "validationRefs": [
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/inflight-context-reconciliation/schemas/input.schema.json",
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/inflight-context-reconciliation/schemas/output.schema.json",
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/inflight-context-reconciliation/tests/test_implementation.py",
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/requirement-scoped-context-adaptation/schemas/input.schema.json",
+        "artifacts/agent-loop/execution-preparation/context-resolution/algorithms/requirement-scoped-context-adaptation/schemas/output.schema.json"
+      ],
+      "unresolvedFacts": []
+    },
+    {
+      "artifactId": "loop:agent-loop/assessment/agent-review",
+      "baseResponsibilityClass": "loop",
+      "specialization": null,
+      "scope": "unresolved",
+      "sourceDigest": "575318af5d4d110f17d23141aa88b1a68c42041345805ea177ae947f3bfd0b82",
+      "evidenceTier": "direct",
+      "graphDistance": 0,
+      "matchedTerms": [
+        "candidate",
+        "loop",
+        "multi",
+        "non",
+        "requirement",
+        "research",
+        "review"
+      ],
+      "sourceMembers": [
+        "artifacts/agent-loop/assessment/agent-review/agent-review-governance-structure.md",
+        "artifacts/agent-loop/assessment/agent-review/contract.md",
+        "artifacts/agent-loop/assessment/agent-review/examples/multi-lens-review.example.json",
+        "artifacts/agent-loop/assessment/agent-review/examples/panel-quorum.example.json",
+        "artifacts/agent-loop/assessment/agent-review/examples/review-investigation-resolution.example.json",
+        "artifacts/agent-loop/assessment/agent-review/loop.yaml",
+        "artifacts/agent-loop/assessment/agent-review/reviewer-competence/contract.md",
+        "artifacts/agent-loop/assessment/agent-review/reviewer-competence/examples/missing-external-authority-pair-admission.json"
+      ],
+      "consumerRefs": [
+        "artifacts/agent-loop/assessment/engineering-calibration/loop.yaml",
+        "artifacts/agent-loop/assessment/engineering-evaluation/six-mode-offline-evaluation/examples/six-mode-non-runtime-readiness-scope-policy.example.json",
+        "artifacts/agent-loop/assessment/engineering-evaluation/six-mode-offline-evaluation/examples/six-mode-offline-evaluation.example.json",
+        "artifacts/agent-loop/assessment/engineering-evaluation/six-mode-offline-evaluation/examples/six-mode-offline-evaluation.phase-40-candidate.example.json",
+        "artifacts/agent-loop/assessment/engineering-evaluation/six-mode-offline-evaluation/scripts/check_six_mode_offline_evaluation.cjs"
+      ],
+      "validationRefs": [
+        "artifacts/agent-loop/assessment/agent-review/examples/multi-lens-review.example.json",
+        "artifacts/agent-loop/assessment/agent-review/examples/panel-quorum.example.json",
+        "artifacts/agent-loop/assessment/agent-review/examples/review-investigation-resolution.example.json",
+        "artifacts/agent-loop/assessment/agent-review/reviewer-competence/examples/missing-external-authority-pair-admission.json",
+        "artifacts/agent-loop/assessment/agent-review/reviewer-competence/examples/ready-architecture-assignment-observation.json"
+      ],
+      "unresolvedFacts": []
+    },
+    {
+      "artifactId": "loop:agent-loop/work/session-handoff-resume",
+      "baseResponsibilityClass": "loop",
+      "specialization": null,
+      "scope": "unresolved",
+      "sourceDigest": "d6cba83ca7b43ed913513deb81033a9a357e1ddbe33b786fbf463d809297368b",
+      "evidenceTier": "direct",
+      "graphDistance": 0,
+      "matchedTerms": [
+        "handoff",
+        "loop",
+        "prompt",
+        "requirement",
+        "research",
+        "session",
+        "work"
+      ],
+      "sourceMembers": [
+        "artifacts/agent-loop/work/session-handoff-resume/contract.md",
+        "artifacts/agent-loop/work/session-handoff-resume/loop.yaml",
+        "artifacts/agent-loop/work/session-handoff-resume/policy/work-history-checkpoint-recovery.policy.json",
+        "artifacts/agent-loop/work/session-handoff-resume/runtime-work-session-governance.md",
+        "artifacts/agent-loop/work/session-handoff-resume/schemas/session-handoff-acceptance.schema.json",
+        "artifacts/agent-loop/work/session-handoff-resume/schemas/session-handoff-capsule.schema.json",
+        "artifacts/agent-loop/work/session-handoff-resume/schemas/session-resume-plan.schema.json",
+        "artifacts/agent-loop/work/session-handoff-resume/scripts/check_session_handoff.py"
+      ],
+      "consumerRefs": [
+        "artifacts/agent-loop/improvement/engineering-optimization/vocabularies/artifact-governance-baseline-source.json",
+        "artifacts/agent-loop/meta/loop-architecture-requirement-realization/architecture-domain-research/vocabularies/architecture-domain-policy.json",
+        "artifacts/agent-loop/meta/mode-aware-prompt-assistance/scripts/check_ai_execution_contract.cjs",
+        "artifacts/agent-loop/observation/execution-supervision/execution-supervision-governance-structure.md",
+        "artifacts/agent-loop/spec/loop-scope-hierarchy/vocabularies/loop-scope-registry.json"
+      ],
+      "validationRefs": [
+        "artifacts/agent-loop/work/session-handoff-resume/schemas/session-handoff-acceptance.schema.json",
+        "artifacts/agent-loop/work/session-handoff-resume/schemas/session-handoff-capsule.schema.json",
+        "artifacts/agent-loop/work/session-handoff-resume/schemas/session-resume-plan.schema.json",
+        "artifacts/agent-loop/work/session-handoff-resume/scripts/check_session_handoff.py",
+        "artifacts/agent-loop/work/session-handoff-resume/scripts/check_work_history_contract.py"
+      ],
+      "unresolvedFacts": []
+    },
+    {
+      "artifactId": "loop:agent-loop/assessment/rubric-management",
+      "baseResponsibilityClass": "loop",
+      "specialization": null,
+      "scope": "unresolved",
+      "sourceDigest": "91ad67aa374d4bc52bdc9589a610cd41dbbd37a745af8803c326698fe4f02619",
+      "evidenceTier": "direct",
+      "graphDistance": 0,
+      "matchedTerms": [
+        "evidence",
+        "loop",
+        "requirement",
+        "rubric",
+        "work"
+      ],
+      "sourceMembers": [
+        "artifacts/agent-loop/assessment/rubric-management/governance.md",
+        "artifacts/agent-loop/assessment/rubric-management/loop.yaml",
+        "artifacts/agent-loop/assessment/rubric-management/policy/rubric-management.policy.json",
+        "artifacts/agent-loop/assessment/rubric-management/requirements/manage-rubric-lifecycle.requirement.json",
+        "artifacts/agent-loop/assessment/rubric-management/schemas/rubric-definition.schema.json",
+        "artifacts/agent-loop/assessment/rubric-management/schemas/rubric-lineage.schema.json",
+        "artifacts/agent-loop/assessment/rubric-management/schemas/rubric-operation.schema.json",
+        "artifacts/agent-loop/assessment/rubric-management/schemas/rubric-profile.schema.json"
+      ],
+      "consumerRefs": [
+        "artifacts/agent-loop/improvement/cafe-study-artifact-improvement/examples/cafe-study-rsi-observation.example.json",
+        "artifacts/agent-loop/work/cafe-study-visual-evidence/examples/cafe-study-rubric-lineage.example.json",
+        "artifacts/agent-loop/work/cafe-study-visual-evidence/examples/cafe-study-work-evolution.example.json",
+        "artifacts/agent-loop/work/cafe-study-visual-evidence/profiles/cafe-study-visual.profile.json",
+        "artifacts/agent-loop/work/cafe-study-visual-evidence/rubrics/cafe-study-visual.definition.json"
+      ],
+      "validationRefs": [
+        "artifacts/agent-loop/assessment/rubric-management/schemas/rubric-definition.schema.json",
+        "artifacts/agent-loop/assessment/rubric-management/schemas/rubric-lineage.schema.json",
+        "artifacts/agent-loop/assessment/rubric-management/schemas/rubric-operation.schema.json",
+        "artifacts/agent-loop/assessment/rubric-management/schemas/rubric-profile.schema.json",
+        "artifacts/agent-loop/assessment/rubric-management/scripts/check_rubric_management.mjs"
+      ],
+      "unresolvedFacts": []
+    },
+    {
+      "artifactId": "loop:agent-loop/work/progressive-knowledge-research",
+      "baseResponsibilityClass": "loop",
+      "specialization": null,
+      "scope": "unresolved",
+      "sourceDigest": "63dc229b588d9da6314aff34ff549938151f08b56c14ffa94b4595dfe4a91576",
+      "evidenceTier": "direct",
+      "graphDistance": 0,
+      "matchedTerms": [
+        "loop",
+        "research",
+        "reusable",
+        "work"
+      ],
+      "sourceMembers": [
+        "artifacts/agent-loop/work/progressive-knowledge-research/contract.md",
+        "artifacts/agent-loop/work/progressive-knowledge-research/examples/progressive-knowledge-acquisition.example.json",
+        "artifacts/agent-loop/work/progressive-knowledge-research/loop.yaml",
+        "artifacts/agent-loop/work/progressive-knowledge-research/progressive-knowledge-research-governance-structure.md",
+        "artifacts/agent-loop/work/progressive-knowledge-research/schemas/progressive-knowledge-acquisition.schema.json",
+        "artifacts/agent-loop/work/progressive-knowledge-research/scripts/check_progressive_knowledge_acquisition.cjs",
+        "artifacts/agent-loop/work/progressive-knowledge-research/scripts/test_check_progressive_knowledge_acquisition.cjs",
+        "artifacts/agent-loop/work/progressive-knowledge-research/vocabularies/progressive-knowledge-acquisition-vocabulary.json"
+      ],
+      "consumerRefs": [
+        "artifacts/agent-loop/improvement/reusable-artifact-capability-lifecycle/discovery/vocabularies/reusable-artifact-policy.json",
+        "artifacts/agent-loop/spec/loop-scope-hierarchy/vocabularies/loop-scope-registry.json",
+        "artifacts/agent-swarms/research/component-algorithm-research/swarm.json"
+      ],
+      "validationRefs": [
+        "artifacts/agent-loop/work/progressive-knowledge-research/examples/progressive-knowledge-acquisition.example.json",
+        "artifacts/agent-loop/work/progressive-knowledge-research/schemas/progressive-knowledge-acquisition.schema.json",
+        "artifacts/agent-loop/work/progressive-knowledge-research/scripts/check_progressive_knowledge_acquisition.cjs",
+        "artifacts/agent-loop/work/progressive-knowledge-research/scripts/test_check_progressive_knowledge_acquisition.cjs"
+      ],
+      "unresolvedFacts": []
+    }
+  ],
+  "rejected": [],
+  "unresolvedFacts": [
+    "effect_admission_requires_separate_binding"
+  ],
+  "residualGap": "Local candidates require owner validation before any operating reuse.",
+  "disposition": "require_context",
+  "rubric": {
+    "mandatory": [
+      {
+        "criterion": "inventory_identity_and_digest",
+        "result": "pass",
+        "evidenceRefs": [
+          "artifacts/loop-architecture/registry/reusable-artifact-inventory.json"
+        ]
+      },
+      {
+        "criterion": "authority_privacy_scope_effect_required_facts",
+        "result": "unavailable",
+        "evidenceRefs": [
+          "artifacts/loop-architecture/registry/reusable-artifact-inventory.json"
+        ]
+      }
+    ],
+    "qualifying": [
+      {
+        "criterion": "candidate_capability_and_consumer_fit",
+        "result": "observed",
+        "evidenceRefs": [
+          "artifacts/loop-architecture/registry/reusable-artifact-inventory.json"
+        ]
+      }
+    ],
+    "comparative": [
+      {
+        "criterion": "evidence_tier_graph_distance_and_composition_burden",
+        "result": "observed",
+        "evidenceRefs": [
+          "artifacts/loop-architecture/registry/reusable-artifact-inventory.json"
+        ]
+      }
+    ],
+    "observational": [
+      {
+        "criterion": "selected_candidates:6",
+        "result": "observed",
+        "evidenceRefs": [
+          "artifacts/loop-architecture/registry/reusable-artifact-inventory.json"
+        ]
+      },
+      {
+        "criterion": "unresolved_facts:1",
+        "result": "observed",
+        "evidenceRefs": [
+          "artifacts/loop-architecture/registry/reusable-artifact-inventory.json"
+        ]
+      }
+    ]
+  },
+  "protectedConstraints": [
+    "selection_grants_no_authority_acceptance_or_promotion",
+    "missing_and_conflicting_facts_are_preserved",
+    "external_qualification_precedes_binding_execution_and_acceptance",
+    "prompt_memory_secret_and_runtime_private_content_are_not_tracked"
+  ],
+  "reportDigest": "f63463fee9551fbbe300eb335ed11f9f630dd94132e34c8cd31f80a8fc0ada75"
+}

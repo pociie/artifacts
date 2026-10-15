@@ -1,0 +1,79 @@
+{
+  "authorityEffect": "none",
+  "controllerState": "stopped_at_item_6_boundary",
+  "evidencePolicy": "provider preflight command attempts are retained as failures; no Subject or verifier trial is inferred",
+  "frameworkRevision": "sha256:90e03a443bdf20344c3e51000387814f872df81fb245ecc2934badda28624139",
+  "items": [
+    {
+      "attemptState": "provider_preflight_failed_no_subject_trial",
+      "failedTaskFilter": "junit-team__junit5-4692",
+      "findingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-02-abundant-swe-gen-java-preflight-finding.r16.json",
+      "itemId": "abundant/swe-gen-java",
+      "ordinal": 2,
+      "requiredFingerprint": "sha256:f814b58ad66cad35a43dfcc6c37b44617cf8d60901a1291d7b4e8da9e330eb6a",
+      "requiredTaskFilter": "abundant/junit-team__junit5-4692",
+      "subjectTrialStarted": false,
+      "wakeCondition": "changed provider task-filter fingerprint required: bind exact qualified filter abundant/junit-team__junit5-4692 (previous junit-team__junit5-4692); shared semantic-facts resolver integration must complete before any retry; no equivalent retry"
+    },
+    {
+      "attemptState": "provider_preflight_failed_no_subject_trial",
+      "failedTaskFilter": "restaurant-etiquette-zero-ten-t5",
+      "findingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-03-adameubanks-rating-generation-consistency-preflight-finding.r16.json",
+      "itemId": "adameubanks/rating-generation-consistency",
+      "ordinal": 3,
+      "requiredFingerprint": "sha256:e57064f2e5e3d97a45d735ae16dbe2b2352d8fab83ee6917cb8804d805940fb5",
+      "requiredTaskFilter": "adameubanks/restaurant-etiquette-zero-ten-t5",
+      "subjectTrialStarted": false,
+      "wakeCondition": "changed provider task-filter fingerprint required: bind exact qualified filter adameubanks/restaurant-etiquette-zero-ten-t5 (previous restaurant-etiquette-zero-ten-t5); shared semantic-facts resolver integration must complete before any retry; no equivalent retry"
+    },
+    {
+      "attemptState": "provider_preflight_failed_no_subject_trial",
+      "failedTaskFilter": "3d-scan-calc",
+      "findingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-04-benchflow-skillsbench-preflight-finding.r16.json",
+      "itemId": "benchflow/skillsbench",
+      "ordinal": 4,
+      "requiredFingerprint": "sha256:37b62496014fb5367dd0936890c06f26a76ef12c697ae20529f6f587d758fab6",
+      "requiredTaskFilter": "benchflow/3d-scan-calc",
+      "subjectTrialStarted": false,
+      "wakeCondition": "changed provider task-filter fingerprint required: bind exact qualified filter benchflow/3d-scan-calc (previous 3d-scan-calc); shared semantic-facts resolver integration must complete before any retry; no equivalent retry"
+    },
+    {
+      "attemptState": "provider_preflight_failed_no_subject_trial",
+      "failedTaskFilter": "bigcodebench_100",
+      "findingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-05-bigcode-bigcodebench-hard-complete-preflight-finding.r16.json",
+      "itemId": "bigcode/bigcodebench-hard-complete",
+      "ordinal": 5,
+      "requiredFingerprint": "sha256:60f3a942a7abee3888914a2285e857d32094f807c34cc446605d0273b82bcb10",
+      "requiredTaskFilter": "bigcode/bigcodebench_100",
+      "subjectTrialStarted": false,
+      "wakeCondition": "changed provider task-filter fingerprint required: bind exact qualified filter bigcode/bigcodebench_100 (previous bigcodebench_100); shared semantic-facts resolver integration must complete before any retry; no equivalent retry"
+    }
+  ],
+  "kind": "harbor-shard-preflight-reconciliation/v1",
+  "nextUnsettledItemId": "camel-ai/seta-env",
+  "nextUnsettledOrdinal": 6,
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawPromptStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "providerPreflightNoSubjectTrial": 4,
+  "queueGate": {
+    "authorityEffect": "none",
+    "heldAtOrdinal": 6,
+    "reason": "do not start item 6 until shared semantic-facts resolver integration and changed task-filter fingerprints are available",
+    "status": "held"
+  },
+  "reconciledOrdinals": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "shardId": "population-shard-4",
+  "subjectTrialsStarted": 1
+}

@@ -1,0 +1,266 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:d8183992a6a7e2db012395314507122c7ae6c702d7789ea89e78ef4d03ccffd6",
+      "id": "harbor-gpt-5-6-luna",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T15:59:32Z",
+  "digest": "sha256:ec4cf806e94558fe346571e7ff194b486c146df58340a8e19015be6b0c1ed7fe",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:81776890972d744f3e9e08df89c12a6b64f74b9e9661a8c6b9e698341ff676e8",
+    "limitations": [
+      "platform_state_unobserved",
+      "network_policy_unresolved",
+      "cost_budget_unqualified"
+    ],
+    "platformRef": "environment:darwin-arm64-docker"
+  },
+  "evidenceId": "engineering-workset-simulation:population-shard-1:continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2:openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/candidate-probe.r13.json"
+      ],
+      "id": "provider-auth",
+      "subjectRef": "item:openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/candidate-probe.r13.json"
+      ],
+      "id": "task-instruction",
+      "subjectRef": "item:openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/candidate-probe.r13.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-model",
+      "subjectRef": "item:openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-effort",
+      "subjectRef": "item:openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2"
+    },
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/harbor-subject-operation.r13.json"
+      ],
+      "id": "subject-timeout",
+      "subjectRef": "item:openthoughts/tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_qualification_held",
+      "effective_execution_receipt_missing",
+      "oracle_not_run"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "task_instruction_unavailable",
+      "task_image_manifest_unavailable",
+      "protected_verifier_unavailable"
+    ],
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:af546f4d007daac585b8e9ba44c154dd4dc22931d77c778365c122411185900a"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2"
+  },
+  "provider": {
+    "limitations": [
+      "hub-auth-unavailable",
+      "dataset-license-unobserved",
+      "task-instruction-unavailable",
+      "task-image-manifest-unavailable",
+      "protected-verifier-unavailable",
+      "effective-model-unverified",
+      "effective-reasoning-effort-unverified",
+      "subject-timeout-unverified",
+      "network-policy-unresolved",
+      "cost-budget-unqualified"
+    ],
+    "qualificationDigest": "sha256:30cd44f0d0e7b58ae6feccb921352478155a46e80c60bd771da813c7e3fe644a",
+    "qualificationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/candidate-probe.r13.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:0efd6320309f63491284565000d469a8164faf75f59124750fbf30c2938d2217",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    ],
+    "sourceDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/item-resource-settlement.r13.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:85252daade5cccfb4aeb15a2a7ff454eb09fc063a4d35b00e298767de7e8ce29",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:1832c4d7f0f8d87bba6e275cbea3fbd9b71193804b86b061971669e0a8a41761",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "credential-injection",
+        "resourceRefDigest": "sha256:baef9948f77ccc8c06ff1c38d3787ac442e6b4643ce305561708eb20254781c6",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "task-workspace",
+        "resourceRefDigest": "sha256:c0728a51f04dadfce27ed3782864abb83a39a030c3cf20b4c7c952a2c83a6980",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:2cd8a15743d3a6a2e308ec702bea70dc476af42e7324604f0902270786471d64",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "network-policy-scope",
+        "resourceRefDigest": "sha256:2c93043c679ac42a86c6e4312726a4500a0af93081e88257cf42fb8ad8f953d6",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "cost-budget-scope",
+        "resourceRefDigest": "sha256:b10b61da51628c094840d0425458a4ec3e26ac450c641710a2fe85fc34fce6ea",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/dynamic-candidate.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "resourceClass": "dynamic-candidate",
+        "resourceRefDigest": "sha256:09c1af20bb37e04adc8bb2981d85dbe5b448d5e77a84e104c8ce1252897e554f",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/preclaim-verification.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/source-and-plan-binding.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/route-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/dynamic-artifact-composition-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/execution-structure-21-output-bundle.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/subject-operation-request.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/native-subject-topology-operation-receipt.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/native-subject-topology-operation-observation.r13.json"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/working-memory-binding.r13.json",
+    "checkpointRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/preclaim-verification.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/claim-source-freeze.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2/item-resource-settlement.r13.json"
+    ],
+    "digest": "sha256:1eb4a6fbece5e2793a154e5835d3ca931360aa932f47a67326a78857c703658d",
+    "invalidation": [
+      "objective_revision_changes",
+      "requirement_scope_digest_changes",
+      "frozen_population_plan_digest_changes",
+      "item_capability_fingerprint_changes",
+      "terminal_settlement_emitted"
+    ],
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-1:continuation-r13/item-36-openthoughts-tasktrove-freelancer-projects-sandboxes-ta-rl-gpt-5-mini-v2"
+  }
+}

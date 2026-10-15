@@ -1,0 +1,255 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:41196055b2146d0f7c37e6e060eb4d9704a668e790046be87fcc3b6f564f0481",
+      "id": "harbor-gpt-5-6-luna",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T19:26:21Z",
+  "digest": "sha256:bd4df0350e974ce12511c0d6f344901f80ed9374864428b91a4062ee0cbfab83",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:60bf88ec20a577a52495e22d4876d5f8f0a0ce00c699471a7991c3ed8b27b54f",
+    "limitations": [
+      "platform_state_unobserved",
+      "network_policy_unresolved",
+      "cost_budget_unqualified"
+    ],
+    "platformRef": "environment:darwin-arm64-docker"
+  },
+  "evidenceId": "engineering-workset-simulation:population-shard-4:continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06:snorkel-ai/senior-swe-bench-v2026.06",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/candidate-probe.r13.json"
+      ],
+      "id": "provider-auth",
+      "subjectRef": "item:snorkel-ai/senior-swe-bench-v2026.06"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/candidate-probe.r13.json"
+      ],
+      "id": "task-instruction",
+      "subjectRef": "item:snorkel-ai/senior-swe-bench-v2026.06"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/candidate-probe.r13.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:snorkel-ai/senior-swe-bench-v2026.06"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-model",
+      "subjectRef": "item:snorkel-ai/senior-swe-bench-v2026.06"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-effort",
+      "subjectRef": "item:snorkel-ai/senior-swe-bench-v2026.06"
+    },
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/harbor-subject-operation.r13.json"
+      ],
+      "id": "subject-timeout",
+      "subjectRef": "item:snorkel-ai/senior-swe-bench-v2026.06"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_qualification_held",
+      "effective_execution_receipt_missing",
+      "oracle_not_run"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "task_instruction_unavailable",
+      "task_image_manifest_unavailable",
+      "protected_verifier_unavailable"
+    ],
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:552aec337bfef1cdcfaa0a8e1637d2aaa05ebe4bb12644273c65012dc4a20e0c"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06"
+  },
+  "provider": {
+    "limitations": [],
+    "qualificationDigest": "sha256:d3fd287cbf1a3e3e17b6bcd909be7289c6adc68e162a5ea4c4f3a62e8a225b9f",
+    "qualificationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/candidate-probe.r13.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:3592734f308a11dbd04d63084bcc6f31a7d3d2939641ac87cd877971088c73b0",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    ],
+    "sourceDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/item-resource-settlement.r13.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/candidate-probe.r13.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:8e0487c476bf7b3757bcc6ef4158a198fc0b517d7d4c6ccbf3ea817ca4c3ad7c",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/candidate-probe.r13.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:4da1674f9868b38fcca0564ed03c27a9a5777ea5cc3d6234b2472436731cf510",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/candidate-probe.r13.json"
+        ],
+        "resourceClass": "credential-injection",
+        "resourceRefDigest": "sha256:456f2fe345abbfadeae7874cffa4ceeca74414e35ea106766fda1b4ae3832a0b",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/candidate-probe.r13.json"
+        ],
+        "resourceClass": "task-workspace",
+        "resourceRefDigest": "sha256:7f4b22a62905fa1ba48af38d3795c35a67cdb5bf80e295b2a2ac14607044036b",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/candidate-probe.r13.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:e8d6a7e7e00cacc1e8c726bd42d6a7aed32d4c096470db41d7c78eb89bae6f3b",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/candidate-probe.r13.json"
+        ],
+        "resourceClass": "network-policy-scope",
+        "resourceRefDigest": "sha256:ce12018661ad8fcfedecc870bcc1953bec08b1190eabee968ce19b1f4366d836",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/harbor-subject-operation.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/candidate-probe.r13.json"
+        ],
+        "resourceClass": "cost-budget-scope",
+        "resourceRefDigest": "sha256:9f78cb0b10308c459cb62fc543aa33d020db7c354a22ded8d3ed690a85e2713a",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/dynamic-candidate.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "resourceClass": "dynamic-candidate",
+        "resourceRefDigest": "sha256:9c0c33a4d75b5145db41539e4783265a52d138e10b4a39cabb7ef9011c1371b9",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/preclaim-verification.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/source-and-plan-binding.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/route-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/dynamic-artifact-composition-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/execution-structure-21-output-bundle.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/subject-operation-request.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/native-subject-topology-operation-receipt.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/native-subject-topology-operation-observation.r13.json"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/working-memory-binding.r13.json",
+    "checkpointRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/preclaim-verification.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/claim-source-freeze.r13.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/item-resource-settlement.r13.json"
+    ],
+    "digest": "sha256:aca4c4a4d5e1df7ee421287a52d7545ccd65717fccfe26428b63a6b79ad4056f",
+    "invalidation": [
+      "objective_revision_changes",
+      "requirement_scope_digest_changes",
+      "frozen_population_plan_digest_changes",
+      "item_capability_fingerprint_changes",
+      "terminal_settlement_emitted"
+    ],
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "8d06aed306c52e90e40810758c63dc3cb879fd35a3795017bdb25bfe1f873812",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "e416d88b3d9f4ae858139ffdca8ea7d20475775a088332d95de97e2280d93c76",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "fc3ca58ebf9f80cb0f07dafd023d2da10ed5d4727b457941dac7bf36792458c3",
+      "topologySelectionDecisionSha256": "e797e43ba2284e1816e5b25a2c77a9c343c8db72af8a77d16140beb0e477bd52"
+    },
+    {
+      "coordinationPlanDecisionSha256": "8d06aed306c52e90e40810758c63dc3cb879fd35a3795017bdb25bfe1f873812",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "e416d88b3d9f4ae858139ffdca8ea7d20475775a088332d95de97e2280d93c76",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "fc3ca58ebf9f80cb0f07dafd023d2da10ed5d4727b457941dac7bf36792458c3",
+      "topologySelectionDecisionSha256": "e797e43ba2284e1816e5b25a2c77a9c343c8db72af8a77d16140beb0e477bd52"
+    },
+    {
+      "coordinationPlanDecisionSha256": "8d06aed306c52e90e40810758c63dc3cb879fd35a3795017bdb25bfe1f873812",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-42-snorkel-ai-senior-swe-bench-v2026.06/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "e416d88b3d9f4ae858139ffdca8ea7d20475775a088332d95de97e2280d93c76",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "fc3ca58ebf9f80cb0f07dafd023d2da10ed5d4727b457941dac7bf36792458c3",
+      "topologySelectionDecisionSha256": "e797e43ba2284e1816e5b25a2c77a9c343c8db72af8a77d16140beb0e477bd52"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

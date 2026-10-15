@@ -1,0 +1,97 @@
+{
+  "kind": "harbor-population-item-terminal-receipt/v2",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "shardId": "population-shard-4",
+  "itemId": "abundant/swe-gen-go",
+  "identityDigest": "sha256:d433b9581efa9cddb7215b07ea429c4c45b397d48061c926dcad10b8fd46cd75",
+  "itemTerminalStatus": "completed_scored_zero",
+  "terminalDisposition": "completed_actual_attempt",
+  "selectedTask": {
+    "taskRef": "abundant/swe-gen-go/prometheus__client_golang-1917",
+    "taskName": "prometheus__client_golang-1917",
+    "taskRevision": 1,
+    "taskPackageDigest": "sha256:533504b9b99cfb6fe716b32681612e700b9f7e25cb621ccadbf46713f9bb9368",
+    "taskChecksum": "sha256:174f57f4ea4c54ac799b9e73ce1a60620ba2742a9fba8f5b9d4f23333f5bf674",
+    "taskLockDigest": "sha256:bcf8990b0f0f0eec7324051cc3b2082a23c95cf3a0fb9b9af9a2a467f8957427"
+  },
+  "provider": {
+    "class": "harbor",
+    "version": "0.22.0",
+    "actualAttempt": true,
+    "harnessExitCode": 0,
+    "agent": "codex",
+    "agentVersion": "0.150.1",
+    "requestedModel": "gpt-5.6-luna",
+    "effectiveModel": "gpt-5.6-luna",
+    "requestedReasoningEffort": "max",
+    "effectiveReasoningEffort": "max",
+    "credentialInjectionMode": "CODEX_FORCE_AUTH_JSON",
+    "credentialValueProjected": false,
+    "verificationEnabled": true,
+    "verifierEnvironmentMode": "shared"
+  },
+  "timeouts": {
+    "taskDeclaredAgentSeconds": 600,
+    "taskDeclaredVerifierSeconds": 600,
+    "agentMultiplier": 6.0,
+    "verifierMultiplier": 6.0,
+    "effectiveSubjectSeconds": 3600,
+    "effectiveVerifierSeconds": 3600
+  },
+  "platform": {
+    "target": "linux/amd64",
+    "containerArchitectureObserved": "x86_64",
+    "imageDigest": "sha256:2a6c13921d19cae6e2449fd0c30803b62ee078915889e093a65b0f0667b815da",
+    "gccM64Check": "passed",
+    "changedCapabilityFingerprint": "sha256:a1e33a8b34bcf5f79417dcf36f9261de87f3b0383a4dbb9728abac5749ea5c9b"
+  },
+  "execution": {
+    "state": "completed",
+    "subjectStartedAt": "2026-08-28T21:08:53.703261Z",
+    "subjectFinishedAt": "2026-08-28T21:23:53.431810Z",
+    "verifierStartedAt": "2026-08-28T21:23:55.519993Z",
+    "verifierFinishedAt": "2026-08-28T21:24:01.834381Z",
+    "containerSettlement": "settled_after_evidence_capture",
+    "activeProviderResourceCountAfterRun": 0
+  },
+  "evaluation": {
+    "terminalRewardVectorRef": "item-01-terminal-reward-vector.r14.json",
+    "rawVerifierReward": 0.0,
+    "benchmarkReward": 0.0,
+    "terminalPrimaryReward": 0.0,
+    "reductionDisposition": "scored_functional_failure",
+    "protectedVerifierState": "executed_scored",
+    "failureClass": "protected_verifier_functional_failure",
+    "failureCode": "verifier:snappy_decode_len_assertion_mismatch",
+    "originalCgoBlocker": "cleared",
+    "retryPolicy": "do_not_repeat_without_subject_or_task_change"
+  },
+  "route": {
+    "selectedMode": "single_task",
+    "architecturePattern": "not_required",
+    "swarmDecision": "no-swarm",
+    "coordinationPolicy": "not_required",
+    "dynamicArtifact": "terminal-receipt-and-reward-vector",
+    "reason": "one_deterministic_representative_provider_task_with_local_lane_control"
+  },
+  "evidenceRefs": {
+    "routeDelta": "item-01-abundant-swe-gen-go-delta.r14.json",
+    "preventedEquivalentRetry": "item-01-prevented-equivalent-retry.r14.json",
+    "taskImagePlatformFingerprint": "task-image-platform-fingerprint.r14.json",
+    "terminalRewardVector": "item-01-terminal-reward-vector.r14.json"
+  },
+  "cost": {
+    "inputTokens": 2729241,
+    "cachedInputTokens": 2615552,
+    "outputTokens": 15159,
+    "costUsd": 0.09323964000000001
+  },
+  "authorityEffect": "none",
+  "privacy": {
+    "metadataOnly": true,
+    "credentialsProjected": false,
+    "rawPromptProjected": false,
+    "privateReasoningProjected": false,
+    "runtimeHandlesProjected": false
+  }
+}

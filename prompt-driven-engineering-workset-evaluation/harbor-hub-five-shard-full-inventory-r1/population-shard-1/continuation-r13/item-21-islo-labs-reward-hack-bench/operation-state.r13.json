@@ -1,0 +1,60 @@
+{
+  "activeClaimCount": 0,
+  "authorityEffect": "none",
+  "continuationCounts": {
+    "itemsDiscovered": 1,
+    "itemsEvaluated": 0,
+    "itemsExecuted": 0,
+    "itemsHeld": 1,
+    "itemsQualified": 0,
+    "itemsRejected": 0,
+    "itemsSettled": 1
+  },
+  "currentItem": {
+    "effectiveReceiptState": "missing_require_context",
+    "identityDigest": "sha256:1f988db7cd432af9c0b5146f51366743b60c2bea51c3bf249ebebabaa40d265e",
+    "itemId": "islo-labs/reward-hack-bench",
+    "terminalReward": 0.0,
+    "terminalStatus": "held"
+  },
+  "digest": "sha256:90fc90ac991031d77d58d7fcd7806787edb9f6bb8cbcda6eb2d212a62954ef21",
+  "exactTerminalReceiptCount": 24,
+  "frozenPopulationCount": 60,
+  "holdWakeCondition": [
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "network_policy_and_cost_budget_qualified",
+    "changed_item_or_capability_fingerprint"
+  ],
+  "kind": "harbor-population-shard-operation-state/v2",
+  "nextAction": "claim_next_pending_plan_order_member_after_settlement_if_worker_window_permits; otherwise_hold_until_changed_provider_capability_fingerprint",
+  "nextPlanOrderItem": "itmo-autods/scientific-cases",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+  "pendingItemCount": 36,
+  "phase": "item_terminal_settlement_hold",
+  "populationComplete": false,
+  "populationSettlementDigest": "sha256:909fe8fe0fc8adb41138a46cdbc2c75a607a2ce287c7972f68f0a75601c54eff",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "runtimeAuthority": "report_only; no queue-owner mutation available",
+  "schemaVersion": 2,
+  "shardId": "population-shard-1",
+  "shardIndex": 0,
+  "sourceBindingDigest": "sha256:9d0e93acaa920aa25fb0cb7ab76db7b8325718477d991d82ab7b91043e1b9198",
+  "terminalCounts": {
+    "cancelled": 0,
+    "completed": 1,
+    "failed": 1,
+    "held": 22
+  },
+  "terminalRewardDigest": "sha256:6bd2babe17392feab5d8a8a00f5da8afc9fabf3c0af06978682304e87badf906"
+}

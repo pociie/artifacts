@@ -1,0 +1,50 @@
+{
+  "activation": {
+    "roleBindings": [],
+    "status": "not_activated",
+    "turnBindings": []
+  },
+  "authorityEffect": "none",
+  "controller": {
+    "actorRef": "controller:worker:harbor-population-shard-4:r13-controller",
+    "countedAsSubjectOperation": false,
+    "mayAuthorPackets": false
+  },
+  "kind": "subject-topology-operation-receipt/v2",
+  "operation": {
+    "observedEventFamilies": [],
+    "packetDigests": [],
+    "requiredEventFamilies": [
+      "assignment_acknowledgement",
+      "contribution_packet",
+      "handoff_packet",
+      "resource_settlement"
+    ],
+    "roleResults": [],
+    "status": "not_operated"
+  },
+  "packets": [],
+  "receiptId": "receipt:subject-operation-request:population-shard-4:bigcode/bigcodebench-hard-complete:r13",
+  "requestDigest": "sha256:e71e7a1438acb64156be94faaf252b8e1bd328e3743a345c1cbb26f35a56bdcd",
+  "requestRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-05-bigcode-bigcodebench-hard-complete/subject-operation-request.r13.json",
+  "schemaVersion": 2,
+  "settlement": {
+    "evidenceDigest": null,
+    "evidenceRef": null,
+    "state": "held",
+    "unsettledResourceRefs": []
+  },
+  "status": "report_only",
+  "validation": {
+    "decisionBindingsVerified": false,
+    "independentFromActorRefs": ["controller:worker:harbor-population-shard-4:r13-controller"],
+    "packetsVerified": false,
+    "profileApplicationsVerified": false,
+    "requestContentVerified": false,
+    "roleResultsVerified": false,
+    "runtimeAttestationsVerified": false,
+    "validatorRef": "validator:subject-operation-contract"
+  },
+  "workflowExecutionRecordDigest": null,
+  "workflowExecutionRecordRef": null
+}

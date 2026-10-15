@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "self-introduction-revision-plan/v5",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "baseline": {
+    "version": "v4",
+    "scores": {"set-1": 94.0, "set-2": 91.0, "set-3": 95.5, "set-4": 98.0, "set-5": 94.5},
+    "average": 94.6,
+    "gates": "all pass",
+    "knownWeaknesses": [
+      "Q2가 사건·선택·검증보다 상위 개념 목록에 머문 세트가 많음",
+      "Q1·Q2·Q3가 사용자 목표·서비스 처리·결과 확인의 비슷한 문장 골격을 공유함",
+      "set-1과 set-5의 가치관·사람의 판단·시간 부담 경계가 가까움",
+      "사용자 기여·실행 시점·배포·실제 결과는 확인 전 상태임"
+    ]
+  },
+  "revisionMethod": {
+    "passes": 1,
+    "methodName": "feedback-guided editorial revision",
+    "notClaimed": ["RLHF", "DPO training", "reward-model training", "automated acceptance"],
+    "steps": [
+      "v4 사전 평가와 약점 고정",
+      "문항별 소유 관점과 세트별 렌즈 고정",
+      "세트별 가장 큰 결함 하나 선택",
+      "문장 수정: 사건·선택·검증·관찰 신호 보강, 미확인 성과 낮춤",
+      "동일 rubric으로 사후 재평가",
+      "잔여 불확실성과 사용자 확인 질문 보존"
+    ],
+    "feedbackSignal": "rubric의 문항 적합·도메인 연결·근거·추상화·명료성 평정과 reviewer comment",
+    "rewardInterpretation": "점수 차이는 편집 선호 기준에 대한 비교 신호이며 지원자 역량의 보상이 아님"
+  },
+  "setPlans": [
+    {
+      "setId": "set-1",
+      "primaryChange": "Q1을 AI 가치 선언에서 API·데이터·결과 확인을 연결하는 직무 행동으로 이동; Q2에 핵심 흐름을 먼저 택한 이유와 확인 상태 추가; Q3를 최종 판단 보존으로 고정",
+      "v4Risk": "Q1·Q2의 사용자 목표 서사가 겹치고 Q3가 set-5와 가까움",
+      "v5Acceptance": "Q1=직무 행동, Q2=범위 선택, Q3=최종 판단이라는 주어 분리"
+    },
+    {
+      "setId": "set-2",
+      "primaryChange": "공통 언어 정의를 줄이고 요구 변경 상황에서 책임·영향·확인을 연결; Q3는 역할별 합의 산출물과 관찰 신호를 추가",
+      "v4Risk": "공통 용어와 책임 목록이 실제 사건보다 앞섬",
+      "v5Acceptance": "문항 본문에서 공통 용어가 ‘무엇을 바꿨는지’로 이어지고 세트의 협업 렌즈가 분명함"
+    },
+    {
+      "setId": "set-3",
+      "primaryChange": "재현·원인 설명을 추상적 점검이 아닌 한 번의 오류 확인 과정으로 좁히고, Q3는 미확인 사항 공유와 팀 학습으로 이동",
+      "v4Risk": "Q1·Q2의 검증 표현이 겹치고 실제 오류 사건이 부족함",
+      "v5Acceptance": "Q2에 실패 위치→수정 범위→변화 확인이 있고 Q3는 조직 행동으로 읽힘"
+    },
+    {
+      "setId": "set-4",
+      "primaryChange": "Q1은 적용 범위·사람 확인을 품질 검증 역량으로, Q2는 환경 차이와 기준 보존의 설계 판단으로, Q3는 보류·에스컬레이션·피드백으로 분리",
+      "v4Risk": "오류·적용 범위·사람 확인 목록이 Q1/Q2/Q3에서 반복됨",
+      "v5Acceptance": "가장 높은 직무 적합도는 유지하되 과거 운영 성과로 확대하지 않음"
+    },
+    {
+      "setId": "set-5",
+      "primaryChange": "Q1의 추상적 신뢰·경쟁력 표현을 처리 단계와 데이터 흐름으로 제한; Q2에 보류한 범위, Q3에 반복·우회 관찰 신호를 고정",
+      "v4Risk": "set-1·set-3과 핵심 흐름·완수 표현이 중복되고 결과어가 근거보다 앞섬",
+      "v5Acceptance": "사용자의 시간·처리 단계가 유일한 중심 렌즈로 남음"
+    }
+  ],
+  "safetyChecks": [
+    "프로젝트의 상세 구현명은 자기소개서 중심에서 제거",
+    "report-only·authorityEffect:none을 운영·승인·성과로 번역하지 않음",
+    "provider readiness·출력 계약·비용/사용량 신호를 동시 활성화나 운영 성과로 쓰지 않음",
+    "auth·requestRef·cancellation·smoke·loopback을 성과로 쓰지 않음",
+    "실제 성능·비용·가동률·사용자 만족·고객 결과 수치 생성 금지",
+    "사용자 직접 가치관과 편집 해석을 별도 상태로 보존"
+  ],
+  "decisionRule": "사후 점수 >= 90이고 보호 게이트를 모두 통과한 세트만 PDF 결과물에 포함",
+  "sourcePolicy": "상세 출처는 knowledge/reference/research artifact에 남기고 PDF는 공식 모집공고만 노출"
+}

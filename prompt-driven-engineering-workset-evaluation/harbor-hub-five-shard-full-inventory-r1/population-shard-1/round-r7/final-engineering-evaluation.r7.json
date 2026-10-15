@@ -1,0 +1,261 @@
+{
+  "kind": "engineering-evaluation-report/v1",
+  "schemaVersion": 1,
+  "status": "report_only_evaluation",
+  "authorityEffect": "none",
+  "evaluationId": "harbor-shard-1-catch2-1843-final-evaluation-r7",
+  "evaluationRevision": 1,
+  "evaluationStage": "post_realization",
+  "subject": {
+    "subjectKind": "workset_item",
+    "subjectRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:representative-task-binding",
+    "subjectRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-1/round-r7/abundant-swe-gen-cpp-catchorg-catch2-1843",
+    "subjectDigest": "sha256:ee03b97f71bf59edc1ae109f1a6d7277d8cb9ecd58f206f8fc1caa2ae8fd5dc2",
+    "componentClass": "agent-execution-topology"
+  },
+  "bindings": {
+    "plan": {
+      "ref": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/round-r7/coordination-plan-input.postqualification.r7.json",
+      "digest": "sha256:2ebff64f7b4830a20a8da4aa09806f1044a39b9f299a5bafa89560be80502757"
+    },
+    "profile": {
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/profiles/workset-terminal-reward.profile.json",
+      "digest": "sha256:ca1e8d48eff7e065cf4cf1f2e4be5ec86778f97509df137e2de6308bdc0632bf"
+    },
+    "methodCatalog": {
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/vocabularies/evaluation-method-policy.json",
+      "digest": "sha256:293b29514b623c0b01f9964f40afac698b373627d7d74340bc9a7ae80270eb79"
+    }
+  },
+  "criterionResults": [
+    {
+      "criterionId": "simulation.settled_binding",
+      "claimId": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:claim-settled-binding",
+      "methodId": "deterministic_checker",
+      "state": "independently_verified",
+      "evidenceLevel": "E4",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:simulation-evidence",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:settlement-ledger"
+      ],
+      "evaluatorRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:independent-validator",
+      "limitations": []
+    },
+    {
+      "criterionId": "simulation.provider_runtime",
+      "claimId": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:claim-provider-runtime",
+      "methodId": "state_machine_trace",
+      "state": "independently_verified",
+      "evidenceLevel": "E4",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-subject-receipt"
+      ],
+      "evaluatorRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:independent-validator",
+      "limitations": [
+        "license_metadata_unobserved",
+        "restricted_network_enforcement_unobserved",
+        "target_platform_receipt_unexposed_on_arm64_host",
+        "verifier_environment_mode_not_exposed"
+      ]
+    },
+    {
+      "criterionId": "simulation.outcome_validation",
+      "claimId": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:claim-outcome-validation",
+      "methodId": "deterministic_checker",
+      "state": "independently_verified",
+      "evidenceLevel": "E4",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-verifier-receipt",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:simulation-evidence"
+      ],
+      "evaluatorRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:independent-validator",
+      "limitations": ["verifier environment mode was not exposed by Harbor result metadata"]
+    },
+    {
+      "criterionId": "context.inflight_reconciliation",
+      "claimId": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:claim-context-reconciliation",
+      "methodId": "state_machine_trace",
+      "state": "supported",
+      "evidenceLevel": "E3",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:context-reconciliation-consumption",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:context-reconciliation-decision"
+      ],
+      "evaluatorRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:independent-validator",
+      "limitations": ["raw task instruction and private provider reasoning remain runtime-private"]
+    },
+    {
+      "criterionId": "routing.topology_coordination",
+      "claimId": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:claim-routing-topology",
+      "methodId": "graph_closure",
+      "state": "supported",
+      "evidenceLevel": "E3",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:route-decision-postqualification",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:topology-selection-decision-postqualification",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:coordination-closure"
+      ],
+      "evaluatorRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:independent-validator",
+      "limitations": ["Swarm was not required by the selected architecture-only topology"]
+    },
+    {
+      "criterionId": "artifact.dynamic_composition",
+      "claimId": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:claim-dynamic-composition",
+      "methodId": "graph_closure",
+      "state": "supported",
+      "evidenceLevel": "E3",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:artifact-reuse-decision-postqualification",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:terminal-reward-round"
+      ],
+      "evaluatorRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:independent-validator",
+      "limitations": [
+        "run-local dynamic configuration expires at settled round or auth-session revocation"
+      ]
+    },
+    {
+      "criterionId": "settlement.resource_reconciliation",
+      "claimId": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:claim-settlement",
+      "methodId": "state_machine_trace",
+      "state": "independently_verified",
+      "evidenceLevel": "E4",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:settlement-ledger",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:population-settlement-accounting"
+      ],
+      "evaluatorRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:independent-validator",
+      "limitations": [
+        "runtime job artifacts remain retained under the private memory namespace by design"
+      ]
+    }
+  ],
+  "perspectiveResults": [
+    {
+      "perspective": "design",
+      "state": "supported",
+      "criterionIds": [
+        "context.inflight_reconciliation",
+        "routing.topology_coordination",
+        "artifact.dynamic_composition"
+      ]
+    },
+    {
+      "perspective": "development",
+      "state": "supported",
+      "criterionIds": ["simulation.outcome_validation"]
+    },
+    {
+      "perspective": "operation",
+      "state": "supported",
+      "criterionIds": ["simulation.provider_runtime", "simulation.settled_binding"]
+    },
+    {
+      "perspective": "optimization",
+      "state": "partial",
+      "criterionIds": ["simulation.provider_runtime"]
+    },
+    {
+      "perspective": "maintenance",
+      "state": "supported",
+      "criterionIds": ["settlement.resource_reconciliation"]
+    }
+  ],
+  "metricObservations": [
+    {
+      "metricRef": "outcome.reward",
+      "role": "primary_outcome",
+      "status": "observed",
+      "value": 1.0,
+      "numerator": 1.0,
+      "denominator": 1.0,
+      "unit": "reward",
+      "windowRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:single-subject-round",
+      "evidenceLevel": "E4",
+      "outcomeJoin": "complete",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-verifier-receipt"
+      ],
+      "limitations": []
+    },
+    {
+      "metricRef": "efficiency.wall_clock",
+      "role": "efficiency",
+      "status": "observed",
+      "value": 858.576,
+      "numerator": 858576.0,
+      "denominator": 1.0,
+      "unit": "seconds",
+      "windowRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:single-subject-round",
+      "evidenceLevel": "E4",
+      "outcomeJoin": "complete",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation"
+      ],
+      "limitations": ["one representative task and one provider arm"]
+    },
+    {
+      "metricRef": "efficiency.cost",
+      "role": "efficiency",
+      "status": "observed",
+      "value": 0.28241108,
+      "numerator": 0.28241108,
+      "denominator": 1.0,
+      "unit": "USD",
+      "windowRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:single-subject-round",
+      "evidenceLevel": "E4",
+      "outcomeJoin": "complete",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation"
+      ],
+      "limitations": ["monetary budget cap was not supplied"]
+    }
+  ],
+  "outcomeJoin": {
+    "state": "complete",
+    "acceptedOutcomeRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-verifier-receipt",
+    "evidenceRefs": [
+      "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-subject-receipt",
+      "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-verifier-receipt",
+      "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:settlement-ledger"
+    ]
+  },
+  "independentReview": {
+    "state": "pending",
+    "reviewerRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:independent-validator",
+    "evidenceRefs": []
+  },
+  "decision": {
+    "disposition": "eligible_report_only",
+    "reasonCodes": [
+      "license_metadata_unobserved",
+      "restricted_network_enforcement_unobserved",
+      "target_platform_receipt_unexposed_on_arm64_host",
+      "monetary_budget_cap_not_supplied",
+      "independent_review_pending"
+    ],
+    "nextActionCodes": [
+      "native_owner_observe_license_metadata",
+      "native_owner_observe_restricted_network_enforcement",
+      "native_owner_observe_target_platform_receipt",
+      "native_owner_supply_monetary_cap",
+      "independent_review"
+    ]
+  },
+  "limitations": [
+    "one representative task was executed in this controller window",
+    "license_metadata_unobserved",
+    "restricted_network_enforcement_unobserved",
+    "target_platform_receipt_unexposed_on_arm64_host",
+    "monetary_budget_cap_not_supplied",
+    "verifier_environment_mode_not_exposed",
+    "independent_review_pending",
+    "no auth value was read or copied",
+    "no tracked reusable source mutation, promotion, or acceptance authority was exercised"
+  ],
+  "integrity": {
+    "algorithm": "canonical-json-sha256/v1",
+    "digest": "sha256:60b7c9800d4f9ed3514ff934ebc3b3df538478b69378b8db90d593d045be5e4b"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "e464a7207979de149fc20697465377334f6eb04c7ef832dda599bb8360f83695",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-16-frontis-generated-basic-production-traces/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-16-frontis-generated-basic-production-traces/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "23fe999c0392cc82fd47ed985c0cb64d9484f26b3508029ee6ca3cc3121181ff",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "2c8fd03faffe7c4d01c3236656076b7e0f71fdc301dc2d66c82c475521a5359a",
+      "topologySelectionDecisionSha256": "972cc7eb8f7112638b68b387daf28e752875c9d8807d54eac9811f9687ca19aa"
+    },
+    {
+      "coordinationPlanDecisionSha256": "e464a7207979de149fc20697465377334f6eb04c7ef832dda599bb8360f83695",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-16-frontis-generated-basic-production-traces/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-16-frontis-generated-basic-production-traces/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "23fe999c0392cc82fd47ed985c0cb64d9484f26b3508029ee6ca3cc3121181ff",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "2c8fd03faffe7c4d01c3236656076b7e0f71fdc301dc2d66c82c475521a5359a",
+      "topologySelectionDecisionSha256": "972cc7eb8f7112638b68b387daf28e752875c9d8807d54eac9811f9687ca19aa"
+    },
+    {
+      "coordinationPlanDecisionSha256": "e464a7207979de149fc20697465377334f6eb04c7ef832dda599bb8360f83695",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-16-frontis-generated-basic-production-traces/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-16-frontis-generated-basic-production-traces/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "23fe999c0392cc82fd47ed985c0cb64d9484f26b3508029ee6ca3cc3121181ff",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "2c8fd03faffe7c4d01c3236656076b7e0f71fdc301dc2d66c82c475521a5359a",
+      "topologySelectionDecisionSha256": "972cc7eb8f7112638b68b387daf28e752875c9d8807d54eac9811f9687ca19aa"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

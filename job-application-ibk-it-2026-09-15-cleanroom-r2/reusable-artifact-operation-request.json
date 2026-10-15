@@ -1,0 +1,139 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:job-application:ibk-it-cleanroom-r2",
+  "requestRevision": "revision:ibk-it-cleanroom-r2",
+  "requestRelation": "new_objective",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/job-application-ibk-it-2026-09-15-cleanroom-r2/route-resolution.json",
+    "decisionDigest": "sha256:a12961b5cbf4349ef60037b482c825108e1d4526a87fe4981c0a5e73d7bb2cc9",
+    "effectiveMode": "orchestration"
+  },
+  "subject": {
+    "subjectRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml#agentBinding:orchestrator",
+    "agencyRef": "artifacts/agents/requirement-realization/agents/requirement-orchestrator.yaml",
+    "agencyDigest": "sha256:e7db99c4782db7408f493d27fe71a93ea3bbf8b1a3e53cbf466c047b64cb5cb4",
+    "responsibilityClass": "orchestrator",
+    "outcomeContract": "Produce exactly five evidence-grounded complete answer sets and one searchable PDF for the selected IBK IT application questions.",
+    "outputContract": "One passing aggregate settlement receipt whose final_user_output is the exact searchable PDF handed to the requester.",
+    "decisionScopes": [
+      "source admission",
+      "question differentiation",
+      "candidate strategy",
+      "review mediation",
+      "publication settlement"
+    ],
+    "nonAuthority": [
+      "no invented applicant facts",
+      "no application submission",
+      "no hiring prediction",
+      "no modification of reusable source"
+    ]
+  },
+  "objective": "Research the supplied portfolio, question source, and current IBK posting from scratch in an isolated runtime directory, then produce five differentiated Korean IT-role answer sets within 1,000 Unicode code points per question and a validated searchable PDF.",
+  "successEvidenceRefs": [
+    ".collab/artifacts/job-application-ibk-it-2026-09-15-cleanroom-r2/settlement-receipt.json",
+    ".collab/artifacts/job-application-ibk-it-2026-09-15-cleanroom-r2/ibk-it-job-application-report.pdf"
+  ],
+  "protectedConstraintRefs": [
+    "artifacts/agent-loop/document/job-application-report-production/contract.md",
+    "artifacts/agent-loop/document/job-application-report-production/profiles/five-set-pdf-report.profile.json",
+    "user:each-answer-at-most-1000-characters",
+    "user:do-not-reference-existing-job-application-runtime-work"
+  ],
+  "nonGoalRefs": [
+    "application submission",
+    "reusable artifact modification",
+    "private repository inspection",
+    "reuse of earlier IBK drafts"
+  ],
+  "lifecycleIntent": "compose_existing",
+  "capabilities": [
+    "public web research",
+    "public GitHub inspection",
+    "Korean application writing",
+    "PDF rendering",
+    "deterministic validation",
+    "supervised review"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "428a42e075cb9d5d66f87be50bf6b28b0ad29c1b597d88612f213a7634935779",
+  "allowedBaseClasses": [
+    "loop",
+    "skill",
+    "contract_checker"
+  ],
+  "allowedScopes": [
+    "framework",
+    "personal"
+  ],
+  "requiredFacts": [
+    "owner",
+    "scope",
+    "consumer",
+    "validation"
+  ],
+  "exactArtifactIds": [
+    "loop:document:job-application-report-production"
+  ],
+  "relationshipDepth": 1,
+  "maxCandidates": 3,
+  "contextBudget": {
+    "maxSourceMembers": 16,
+    "maxConsumerRefs": 4,
+    "maxValidationRefs": 10
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "no external proof of production traffic or team size",
+      "the supplied question source is 2025 while the posting is 2026"
+    ],
+    "allowedRelationshipTypes": [
+      "defines",
+      "depends_on",
+      "validates",
+      "binds_capability"
+    ],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "consumer",
+      "effect",
+      "route_or_topology",
+      "protected_constraint"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "aggregate settlement status pass",
+      "exact PDF exists at final_user_output path"
+    ],
+    "validationRefs": [
+      "check_job_application_report_run.mjs",
+      "independent semantic final verdict"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": ".collab/artifacts/job-application-ibk-it-2026-09-15-cleanroom-r2/request.json#stop_budget",
+  "dataClassification": "confidential",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": true,
+  "constructionAllowed": false,
+  "residualGapProven": false,
+  "requestDigest": "ae293a9691c82e7442365c8c6a066e627c6d19e692695c532531c85358f4113a"
+}

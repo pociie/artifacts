@@ -1,0 +1,136 @@
+{
+  "schemaVersion": "job-application-report-design/v6",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "purpose": "v5 자기소개서 내용을 카드 반복 없이 읽기 쉬운 A4 전문가 보고서로 재구성하기 위한 정보 설계와 시각 자산 계약",
+  "researchBinding": {
+    "method": "progressive-knowledge-research",
+    "recordRef": "research:job-application-ai-service-engineer-v6",
+    "publicationRubricRef": "report-publication-rubric-v6.json",
+    "sourceQualityRule": "official recruitment and company sources first; official design guidance next; local project evidence and user context remain separately attributed",
+    "sourceRefs": [
+      "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007",
+      "https://recruit.lotte.co.kr/companylife/affiliate/detail?compcd=30007",
+      "https://design-system.service.gov.uk/styles/layout/",
+      "https://design-system.service.gov.uk/styles/type-scale/",
+      "https://design-system.service.gov.uk/styles/spacing/",
+      "https://design-system.service.gov.uk/components/table/",
+      "https://www.w3.org/WAI/tutorials/tables/",
+      "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color",
+      "https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation.html"
+    ],
+    "claimRecord": ["source", "observationDate", "applicability", "limitation", "confidence"],
+    "unresolvedContext": ["personal contribution evidence", "exact verification run and result", "deployment and real-use status"]
+  },
+  "sourceQualityPolicy": {
+    "tiers": [
+      {"tier": 1, "label": "official recruitment and company sources", "use": "role, company, and application facts", "mustStateLimitations": true},
+      {"tier": 2, "label": "official public design and accessibility guidance", "use": "layout, typography, table, contrast, and readability rules", "mustStateAdaptation": true},
+      {"tier": 3, "label": "repository owner documents and current artifacts", "use": "project structure, design context, and observed report issues", "mustNotInferPersonalOutcome": true},
+      {"tier": 4, "label": "user-confirmed evidence", "use": "personal role, implementation, verification, deployment, and viewpoint", "requiredForPastTenseClaims": true}
+    ],
+    "selectionRule": "Use the highest-authority source that directly supports each claim; keep source authority, applicability, and limitation separate rather than merging them into one confidence score.",
+    "publicationRule": "Retain the detailed source ledger internally; show only the official recruitment posting link in the final PDF unless the user requests broader references."
+  },
+  "accessibilityPolicy": {
+    "sourceRefs": [
+      "https://www.w3.org/WAI/tutorials/tables/",
+      "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color",
+      "https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation.html"
+    ],
+    "rules": [
+      "Use visible table headers and captions or nearby purpose text for comparison tables.",
+      "Do not make color the only carrier of score, warning, or confirmation state.",
+      "Keep essay body text selectable and searchable; rasterize only explanatory diagrams and charts.",
+      "Validate Korean line length, alignment, contrast, spacing, and page overflow after rendering.",
+      "Do not claim formal tagged-PDF accessibility conformance without a separate audit."
+    ]
+  },
+  "format": {
+    "pageSize": "A4",
+    "bodyTextPolicy": "live selectable PDF text",
+    "visualAssetPolicy": "diagrams, charts, and visual summaries are PNG/JPEG assets; do not expose SVG/XML as final report structure",
+    "pageMargin": "generous consistent margin with constrained reading width",
+    "lineLength": "constrained long-form text column",
+    "alignment": "left aligned except numeric columns",
+    "cardPolicy": "avoid repeated cards; use section rules, prose, tables, and one purposeful callout per page at most"
+  },
+  "visualSystem": {
+    "palette": {
+      "ink": "#1F2937",
+      "navy": "#0F2747",
+      "blue": "#2457A6",
+      "muted": "#657386",
+      "line": "#D8E0EA",
+      "pale": "#F3F6FA",
+      "warning": "#A66B18"
+    },
+    "typeRoles": [
+      {"id": "cover-title", "purpose": "document and role identification"},
+      {"id": "section-title", "purpose": "page question and navigation"},
+      {"id": "body", "purpose": "essay and explanation"},
+      {"id": "table-header", "purpose": "comparison dimension"},
+      {"id": "note", "purpose": "boundary, limitation, and official source"}
+    ],
+    "spacingRoles": [
+      {"id": "intra", "purpose": "label-to-value and row rhythm"},
+      {"id": "paragraph", "purpose": "separate adjacent explanations"},
+      {"id": "section", "purpose": "separate different decisions"}
+    ]
+  },
+  "rasterAssets": [
+    {"id": "cover-flow", "format": "png", "purpose": "quiet editorial cover mark showing connected service flow", "mustRemainSecondaryTo": "title and report purpose"},
+    {"id": "company-role-map", "format": "png", "purpose": "company public context to role task to personal evidence to contribution"},
+    {"id": "domain-interest-map", "format": "png", "purpose": "current essays' four domain interests and their user-facing meaning"},
+    {"id": "project-flow", "format": "png", "purpose": "high-level project meaning from problem definition to verification and learning"},
+    {"id": "score-profile", "format": "png", "purpose": "set-level score summary without implying skill reward or hiring prediction"},
+    {"id": "selection-path", "format": "png", "purpose": "candidate selection, fact check, interview rehearsal, final user decision"}
+  ],
+  "pageBlueprint": [
+    {"page": 1, "title": "롯데이노베이트 AI 서비스 엔지니어 자기소개서 전문가 보고서", "representation": "editorial cover + one-sentence purpose", "avoid": ["internal version names", "operation status"]},
+    {"page": 2, "title": "이 보고서로 확인할 것", "representation": "decision sequence and plain-language table", "avoid": ["score shorthand", "internal reasoning"]},
+    {"page": 3, "title": "회사·직무 맥락", "representation": "company-role raster map + structured table", "avoid": ["unverified team details"]},
+    {"page": 4, "title": "현재 자기소개서의 도메인 관심", "representation": "domain-interest raster map + explanatory rows", "avoid": ["low-level mechanism list"]},
+    {"page": 5, "title": "프로젝트 경험의 의미와 확인 범위", "representation": "high-level service flow + evidence boundary rows", "avoid": ["runtime claims", "implementation identifiers"]},
+    {"page": 6, "title": "평가축과 세트별 관찰 결과", "representation": "vertical criterion rows + numeric comparison", "avoid": ["score as ability certificate"]},
+    {"page": 7, "title": "전문가 관점의 첨삭 포인트", "representation": "role-by-role review table and interview questions", "avoid": ["agent runtime transcript"]},
+    {"page": 8, "title": "제출 전 보완이 필요한 자료", "representation": "priority table with evidence threshold and fallback wording", "avoid": ["generic request for more detail"]},
+    {"page": 9, "title": "세트 선택과 면접 준비", "representation": "selection path raster + actionable checklist", "avoid": ["automatic recommendation"]},
+    {"page": "10-14", "title": "5개 자기소개서 세트", "representation": "one set per page with three essays, score row, review notes", "avoid": ["repeated cards", "file names"]},
+    {"page": 15, "title": "제출 전 최종 판단", "representation": "short final checklist and official posting link", "avoid": ["submission approval claim"]}
+  ],
+  "evaluationDisplay": {
+    "criteria": [
+      {"id": "question-fit", "label": "문항 적합성과 차별화", "meaning": "Q1 직무 행동, Q2 과거 선택, Q3 조직 행동이 분리되는가"},
+      {"id": "role-domain", "label": "직무·도메인 연결", "meaning": "공고의 업무가 사용자 경험과 서비스 결과로 번역되는가"},
+      {"id": "user-viewpoint", "label": "사용자 견해·가치관", "meaning": "사람·업무·책임에 대한 지원자의 관점이 드러나는가"},
+      {"id": "evidence-causality", "label": "근거·인과·귀속", "meaning": "과거 사실·선택·확인·학습과 개인 기여 범위가 방어되는가"},
+      {"id": "project-abstraction", "label": "프로젝트 설계 추상화", "meaning": "저수준 구현보다 목표·책임·검증·개선의 의미가 보이는가"},
+      {"id": "clarity-defensibility", "label": "명료성·방어 가능성", "meaning": "독자가 이해하고 면접에서 다시 설명할 수 있는가"}
+    ],
+    "rowOrder": ["criterion", "observedStrengthOrLimit", "score", "interviewCheck", "remainingConfirmation"],
+    "scoreInterpretation": "현재 공고·문항·근거에 대한 편집 적합도이며 역량 인증, 합격 예측, 제출 승인이 아님",
+    "threshold": 90,
+    "gatePolicy": "below-threshold or unresolved protected fact remains a user confirmation item"
+  },
+  "expertReviewRoles": [
+    {"id": "service-connection", "label": "서비스 연결 검토", "question": "이 역량이 어떤 사용자 목표·입력·결과를 연결하는가?"},
+    {"id": "contribution-evidence", "label": "근거·기여 검토", "question": "내가 직접 바꾼 것과 저장소에서 관찰한 것을 구분할 수 있는가?"},
+    {"id": "quality-responsibility", "label": "품질·책임 검토", "question": "오류와 적용 범위를 어떻게 확인하고 언제 사람에게 넘기는가?"},
+    {"id": "logical-speaking", "label": "논리적 말하기 검토", "question": "주장·근거·선택·확인·배움이 60초 안에 이어지는가?"},
+    {"id": "company-context", "label": "회사 맥락 검토", "question": "회사 공개 맥락이 나의 경험과 과장 없이 기여 계획으로 연결되는가?"}
+  ],
+  "publicationPolicy": {
+    "visible": ["job title", "company and role context", "question differentiation", "essay text", "score meaning", "expert review questions", "user material requests", "official recruitment posting"],
+    "hidden": ["internal artifact names and version labels", "operation loops", "prompt or private reasoning", "agent runtime states", "research URL list except official posting", "model-learning terminology"],
+    "visibleSources": ["https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007"]
+  },
+  "validationContract": {
+    "rubricRef": "report-publication-rubric-v6.json",
+    "mandatoryGate": "all mandatory criteria pass",
+    "qualifyingGate": "all qualifying criteria pass",
+    "unknownPolicy": "observational unknowns remain unavailable and do not become a score or approval",
+    "noCompensation": true
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "schemaVersion": "ai-service-engineer-domain-model/v5",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "officialPosting": {
+    "url": "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007",
+    "role": "AI 서비스 엔지니어",
+    "team": "AI서비스팀",
+    "directDuties": [
+      "AI 서비스 API(Backend) 개발",
+      "AI 서비스 데이터 파이프라인 구축",
+      "AI 프로젝트 참여 및 지원",
+      "AI 서비스 백엔드 개발",
+      "AI 플랫폼 운영 및 고도화",
+      "AI 서비스 발굴 및 검증",
+      "튜닝 및 품질 검증"
+    ],
+    "basicRequirements": [
+      "데이터 수집·분석과 모델 이해",
+      "비즈니스·서비스·웹서비스 프로세스 이해",
+      "Cloud Native 및 IaaS/PaaS 이해",
+      "데이터 파이프라인 구축·운영",
+      "CI/CD 기반 소스·배포·운영",
+      "REST API·CLI·SDK·Webhooks·MQ 이해",
+      "프론트엔드·백엔드 및 Docker·Kubernetes 이해"
+    ],
+    "preferred": [
+      "AI 서비스 구축·운영 또는 AI 교육 경험",
+      "Python·React(Next.js)·Java(Spring Boot)",
+      "Git 기반 CI/CD",
+      "AWS·Azure"
+    ],
+    "applicationConstraint": "각 자기소개서 문항 300자 이상; 학교·전공·수업 식별 정보는 기재하지 않음"
+  },
+  "domainLayers": [
+    {
+      "id": "service-problem",
+      "name": "서비스 문제와 사용자 업무",
+      "canonicalTerms": ["사용자 목표", "업무 맥락", "다음 업무 행동"],
+      "meaning": "기술을 도입하기 전에 사용자가 업무에서 이루려는 결과와 판단 조건을 정의한다.",
+      "essayUse": "Q1의 역량 정의와 Q3의 가치관을 사람의 업무 부담에 연결"
+    },
+    {
+      "id": "service-delivery",
+      "name": "AI 서비스 전달",
+      "canonicalTerms": ["서비스 처리 흐름", "API·백엔드", "데이터 흐름", "결과 검증"],
+      "meaning": "입력·처리·결과를 사용자의 다음 업무 행동으로 연결하고 확인 기준을 함께 둔다.",
+      "essayUse": "Q1에서 공고 업무를 행동으로 번역"
+    },
+    {
+      "id": "operation-quality",
+      "name": "운영과 품질",
+      "canonicalTerms": ["오류 원인과 복구", "적용 범위", "사람 확인 지점", "검토 가능한 기록"],
+      "meaning": "정상 응답 하나를 운영 성과로 확대하지 않고, 오류·한계·확인·개선의 경계를 관리한다.",
+      "essayUse": "Q2의 완수 기준과 Q3의 회사 행동"
+    },
+    {
+      "id": "feedback-evaluation",
+      "name": "검증과 피드백",
+      "canonicalTerms": ["확인 기준", "관찰 신호", "피드백 기반 개선", "미확인 사항"],
+      "meaning": "품질을 단일 점수로 축약하지 않고 목적·근거·검증 방법·한계를 함께 기록한다.",
+      "essayUse": "v4→v5 1회 첨삭과 제출 전 검토"
+    }
+  ],
+  "sourceClasses": {
+    "F": "공식 공고·저장소 문서에서 직접 확인한 사실",
+    "U": "사용자가 직접 제공한 경험·가치관",
+    "P": "개인 기여·실행·배포·주요 선택으로 사용자 확인이 필요한 주장",
+    "I": "자료를 자기소개서 목적에 맞게 상위 수준으로 번역한 해석",
+    "N": "입사 후 실행 계획",
+    "M": "현재 측정·근거가 없다는 제한"
+  },
+  "termPolicy": {
+    "preferred": [
+      "사용자 목표",
+      "업무 맥락",
+      "서비스 처리 흐름",
+      "API·백엔드",
+      "데이터 흐름",
+      "결과 검증",
+      "오류 원인과 복구",
+      "검토 가능한 기록",
+      "피드백 기반 개선",
+      "사람 확인 지점"
+    ],
+    "projectTermsAllowedOnlyAsEvidence": [
+      "Loop Architecture",
+      "execution routing",
+      "knowledge projection",
+      "reusable artifact",
+      "report-only"
+    ],
+    "excludedFromEssayCenter": [
+      "AST·Graph·AdjustmentRequest 등 내부 자료 구조",
+      "requestRef·cancellation·provider readiness·smoke·loopback",
+      "특정 프로토콜·필드·포트·알고리즘 ID",
+      "운영·승인·품질 보장을 암시하는 authorityEffect 표현"
+    ]
+  },
+  "collectionRubric": {
+    "mustHave": {
+      "items": ["공식 업무·자격·우대", "문항 필수요소·글자 수", "프로젝트 역할·규모·과정·학습", "성과·한계", "문항별 차별화"],
+      "stopRule": "15개 답변 모두에 직무·문항·근거 연결이 있고 unsupported past outcome이 0건"
+    },
+    "shouldHave": {
+      "items": ["API·백엔드·데이터·운영·검증의 업무 의미", "사용자·현업·운영자 관점", "보편 용어 번역", "피드백 기반 수정"],
+      "stopRule": "직무 직접 요구와 문항 핵심 신호의 매핑 커버리지 90% 이상"
+    },
+    "niceToHave": {
+      "items": ["특정 모델·클라우드·프로토콜", "성능·비용·가동률 수치", "인접 직무의 LLM/RAG 세부 용어"],
+      "stopRule": "실제 사용·기여·성과의 증거가 있을 때만 추가"
+    }
+  },
+  "projectAbstraction": {
+    "repository": "pociie/collab-mono",
+    "observedFacts": [
+      "root package manifest declares 28 npm workspaces",
+      "repository structure separates domain/application/adapters/composition responsibilities",
+      "shared and loop-architecture documentation describes normalization, reuse, workflow, verification and adaptive review boundaries",
+      "report-only and authorityEffect:none boundaries prevent design records from being described as runtime or production outcomes"
+    ],
+    "safeNarrative": "사람의 업무 목적을 서비스 처리 흐름으로 구조화하고, 책임 경계·검토 가능한 기록·결과 확인·피드백 기반 개선을 연결한 개인 프로젝트 설계 경험",
+    "notEstablished": [
+      "production users or customer outcomes",
+      "latency, cost, availability, incidents or adoption",
+      "every component personally implemented",
+      "actual cloud/provider/model/team stack",
+      "dated verification commands and deployment result"
+    ]
+  },
+  "evaluationUse": {
+    "directRoleAxes": ["service-delivery", "data-flow", "platform-operation", "quality-verification"],
+    "userViewpointAxes": ["human-context", "responsibility-preservation", "observable-improvement"],
+    "unknownPolicy": "unknown·pending_user_review·unavailable를 0점으로 치환하지 않고 별도 상태로 보존",
+    "scoreInterpretation": "편집 후보 비교값이며 역량 인증·채용 예측·제출 승인 아님"
+  },
+  "sources": [
+    {
+      "id": "official-job-posting",
+      "class": "F",
+      "url": "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007",
+      "supports": ["directDuties", "basicRequirements", "preferred", "applicationConstraint"]
+    },
+    {
+      "id": "local-architecture",
+      "class": "F",
+      "paths": ["docs/architecture/project-structure.md", "docs/architecture/module-operating-model.md", "shared/README.md", "package.json"],
+      "supports": ["projectAbstraction.observedFacts"]
+    },
+    {
+      "id": "local-loop-architecture",
+      "class": "F",
+      "paths": ["artifacts/loop-architecture/README.md", "artifacts/loop-architecture/components/execution-routing/README.md", "artifacts/loop-architecture/components/reusable-artifact-capability-lifecycle/contract.md"],
+      "supports": ["projectAbstraction.safeNarrative", "termPolicy"]
+    },
+    {
+      "id": "nist-measure",
+      "class": "S",
+      "url": "https://airc.nist.gov/airmf-resources/playbook/measure/",
+      "supports": ["evaluationUse", "collectionRubric"]
+    },
+    {
+      "id": "instructgpt",
+      "class": "S",
+      "url": "https://arxiv.org/abs/2203.02155",
+      "supports": ["feedback-guided revision analogy only"]
+    },
+    {
+      "id": "dpo",
+      "class": "S",
+      "url": "https://arxiv.org/abs/2305.18290",
+      "supports": ["feedback-guided revision analogy only"]
+    },
+    {
+      "id": "style-and-language",
+      "class": "S",
+      "urls": ["https://learn.microsoft.com/en-us/style-guide/word-choice/", "https://learn.microsoft.com/en-us/style-guide/word-choice/avoid-jargon", "https://martinfowler.com/bliki/UbiquitousLanguage.html"],
+      "supports": ["termPolicy"]
+    }
+  ],
+  "reportSourcePolicy": {
+    "allowedVisibleSources": ["https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007"],
+    "hiddenInPdf": ["all non-recruitment external sources", "repository paths", "raw prompt/transcript/private reasoning"],
+    "internalSourceLocations": ["artifacts/knowledge/ai/ai-service-engineer-domain-and-evaluation-v5.md", "docs/reference/work-items/job-application-ai-service-engineer-v5.md", "research-sources-v5.json"]
+  }
+}

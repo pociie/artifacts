@@ -1,0 +1,60 @@
+{
+  "activeClaimCount": 0,
+  "authorityEffect": "none",
+  "continuationCounts": {
+    "itemsDiscovered": 1,
+    "itemsEvaluated": 0,
+    "itemsExecuted": 0,
+    "itemsHeld": 1,
+    "itemsQualified": 0,
+    "itemsRejected": 0,
+    "itemsSettled": 1
+  },
+  "currentItem": {
+    "effectiveReceiptState": "missing_require_context",
+    "identityDigest": "sha256:87162a3de950cf77030fcbe1e9d14c821de57192a6ca410ee9b58afb9f76c6c7",
+    "itemId": "abundant/swe-gen-rust",
+    "terminalReward": 0.0,
+    "terminalStatus": "held"
+  },
+  "digest": "sha256:fc401699ebd4f18cd3d4fc078647ce1f1cf068d09c6a92198d5b78dd9d88a1aa",
+  "exactTerminalReceiptCount": 5,
+  "frozenPopulationCount": 58,
+  "holdWakeCondition": [
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "network_policy_and_cost_budget_qualified",
+    "changed_item_or_capability_fingerprint"
+  ],
+  "kind": "harbor-population-shard-operation-state/v2",
+  "nextAction": "claim_next_pending_plan_order_member_after_settlement_if_worker_window_permits; otherwise_hold_until_changed_provider_capability_fingerprint",
+  "nextPlanOrderItem": "actava-ai/chi-bench",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+  "pendingItemCount": 53,
+  "phase": "item_terminal_settlement_hold",
+  "populationComplete": false,
+  "populationSettlementDigest": "sha256:e5c43fec27272d2b3e135f706780223511169a1cf3cf121cb93f0187b81b0f6c",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "runtimeAuthority": "report_only; no queue-owner mutation available",
+  "schemaVersion": 2,
+  "shardId": "population-shard-5",
+  "shardIndex": 4,
+  "sourceBindingDigest": "sha256:0a76d7e34fa4ec6c06769dfe698df956d6771feeff3dbae1771f459ab5d375b8",
+  "terminalCounts": {
+    "cancelled": 0,
+    "completed": 3,
+    "failed": 0,
+    "held": 2
+  },
+  "terminalRewardDigest": "sha256:de9ba6f466b4925620a89003753267d67c1fded962e45885c7298787285f0c55"
+}

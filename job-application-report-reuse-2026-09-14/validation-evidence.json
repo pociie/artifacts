@@ -1,0 +1,80 @@
+{
+  "kind": "job-application-report-reusable-validation/v1",
+  "status": "focused_passed_repository_follow_up_required",
+  "authorityEffect": "none",
+  "subject": "artifacts/agent-loop/document/job-application-report-production",
+  "observedAt": "2026-09-14T19:43:48+09:00",
+  "focusedChecks": [
+    {
+      "id": "request-result-example",
+      "command": "node artifacts/agent-loop/document/job-application-report-production/scripts/check_job_application_report.mjs --request artifacts/agent-loop/document/job-application-report-production/examples/job-application-report-request.example.json --result artifacts/agent-loop/document/job-application-report-production/examples/job-application-report-result.example.json",
+      "status": "pass",
+      "evidence": "The schema-valid example closed question coverage, evidence references, character counts, protected gates, arithmetic, bounded revision, qualification, interview coverage, content policy, source visibility, privacy, and publication reductions."
+    },
+    {
+      "id": "negative-parity-tests",
+      "command": "node --test artifacts/agent-loop/document/job-application-report-production/scripts/test_job_application_report.mjs",
+      "status": "pass",
+      "evidence": "11 tests passed, including valid input plus failures for length, invented evidence, score drift, mandatory-gate compensation, runtime content-policy leakage, visible-source scope, absolute paths, missing questions, revision regression, and removed protected dimensions."
+    },
+    {
+      "id": "loop-package-structure",
+      "command": "python3 artifacts/agent-loop/spec/scripts/check_loop_package.py artifacts/agent-loop/document/job-application-report-production --strict",
+      "status": "pass",
+      "evidence": "0 issues and 0 warnings."
+    },
+    {
+      "id": "agent-loop-v2-binding",
+      "command": "node artifacts/agent-loop/spec/scripts/check_agent_loops.cjs --loop artifacts/agent-loop/document/job-application-report-production/loop.yaml --json",
+      "status": "pass",
+      "evidence": "The loop, governance, requirement, policy, architecture roles, profiles, ports, stages, gates, checker, completion, and authority boundary passed the selected-loop checker."
+    },
+    {
+      "id": "loop-requirement-policy-schema",
+      "command": "Ajv 2020 validation of loop.yaml, functional requirement, and functional policy against repository schemas",
+      "status": "pass",
+      "evidence": "All three records passed their exact schemas."
+    },
+    {
+      "id": "documentation-links",
+      "command": "python3 artifacts/agent-loop/document/documentation-surface/scripts/check_loop_links.py artifacts/agent-loop/document/job-application-report-production --strict",
+      "status": "pass",
+      "evidence": "0 issues and 0 warnings."
+    },
+    {
+      "id": "prompt-engineering-envelope",
+      "command": "python3 artifacts/agent-loop/execution-preparation/prompt-assistance/scripts/check_prompt_engineering_contract.py .collab/artifacts/job-application-report-reuse-2026-09-14/prompt-engineering-contract.json and exact JSON Schema validation",
+      "status": "pass",
+      "evidence": "The reusable instruction binds six ordered layers by digest, finite methods and revisions, grounding and privacy as non-compensatory dimensions, no stored prompt body or transcript, and no authority effect."
+    },
+    {
+      "id": "serialization-and-whitespace",
+      "command": "Parse all task JSON, parse loop YAML, and scan exact task paths for trailing whitespace",
+      "status": "pass",
+      "evidence": "22 JSON records and loop.yaml parsed; no trailing whitespace was found."
+    }
+  ],
+  "repositoryCheck": {
+    "command": "node governance/governance-fitness.mjs",
+    "status": "fail",
+    "attribution": [
+      {
+        "class": "outside-exact-target-documentation",
+        "details": "Reference and knowledge documents outside the admitted source target do not satisfy current wiki structure and source-authority checks."
+      },
+      {
+        "class": "shared-generated-projection-drift",
+        "details": "Artifact portfolio, semantic graph, and reusable-artifact inventory projections are stale relative to repository source, including the newly added report-only Loop."
+      }
+    ],
+    "disposition": "Do not repair or regenerate shared fan-in projections as a non-integration writer. Hand the exact new unit to the integration owner for inventory and portfolio reconciliation."
+  },
+  "limitations": [
+    "Focused deterministic success does not prove the semantic quality of future application answers.",
+    "No independent reviewer distinct from the material author was assigned in this extraction run.",
+    "Only one completed application-report workflow has been observed.",
+    "Repository-wide fitness remains red until separately owned documentation and shared projections are reconciled."
+  ],
+  "acceptanceEffect": "none",
+  "promotionEffect": "none"
+}

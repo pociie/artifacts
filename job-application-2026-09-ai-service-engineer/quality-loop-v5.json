@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "self-introduction-quality-loop/v5",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "objective": "문항별 차별화·도메인 명료성·사용자 관점·프로젝트 상위 추상화를 반영한 5세트를 만들고, 각 세트를 한 차례 피드백 기반 첨삭한 후 90점 이상만 PDF에 포함한다.",
+  "routing": {"mode": "bounded_iterative_investigation_and_loop", "orchestrationRun": "run_2ed0a89c8603", "integrationOwner": "current-coordinator", "authority": "routing is report-only and grants no execution/acceptance effect"},
+  "inputs": ["official recruitment posting", "question-differentiation-v5.json", "domain-knowledge-v5.json", "project-abstraction-map-v5.json", "v4 content/rubric/assessment", "user-understanding-projection-v5.json"],
+  "correctionsFromV4": [
+    "문항별 소유 관점을 Q1 직무 행동·Q2 사건의 선택과 검증·Q3 조직 행동으로 고정",
+    "Q2의 추상적 책임 목록을 문제 1건·범위 선택·확인 상태로 보강",
+    "AI 가치·신뢰·품질 선언을 공고 업무와 검증 기준으로 구체화",
+    "set-1/set-5의 close pair를 유지하되 최종 판단과 처리 단계라는 선택 기준을 명시",
+    "Loop Architecture의 routing·reuse·context·verification·adaptive 의미를 서비스 목표·책임·확인·개선으로 번역",
+    "보상학습 표현을 피드백 기반 편집 첨삭으로 제한하고 pre/post 평가 데이터를 보존",
+    "PDF에 공식 모집공고 외 출처를 노출하지 않고 상세 출처를 내부 지식·reference에 보관"
+  ],
+  "stages": [
+    {"id": "S1", "name": "scope-and-user-boundary", "exit": "공고·문항·사용자 가치관·5세트·90점 기준·출처 노출 정책 고정"},
+    {"id": "S2", "name": "role-and-domain-research", "exit": "직접 직무 요구와 인접 AI 지식 분리; collection rubric must/should/nice 충족"},
+    {"id": "S3", "name": "project-abstraction", "exit": "저수준 구현을 사람의 목표→서비스 처리→결과 확인→개선 흐름으로 번역"},
+    {"id": "S4", "name": "question-contract-freeze", "exit": "Q1/Q2/Q3 required signals·overlap prohibition·set lens 고정"},
+    {"id": "S5", "name": "baseline-review", "exit": "v4 점수·약점·close pair·미확인 주장 기록"},
+    {"id": "S6", "name": "one-pass-revision", "exit": "각 세트에 가장 큰 결함 하나를 수정하고 변경 이유 기록"},
+    {"id": "S7", "name": "post-assessment", "exit": "같은 rubric·척도·평가자에 따른 pre/post 점수·gate·잔여 불확실성 기록"},
+    {"id": "S8", "name": "render-and-publication", "exit": "15/15 길이·5/5 threshold·PDF overflow·공식 공고만 출처 노출"}
+  ],
+  "revisionPass": {"count": 1, "feedbackSignal": "question-specific anchor, domain fit, evidence boundary, language ambiguity, project abstraction, defensibility", "rewardBoundary": "preference-informed editorial optimization; not RLHF/DPO/model training"},
+  "gates": ["all answers 300~700 chars", "all question required signals", "unsupported past outcome claims = 0", "all sets distinct primary lens", "all sets score >=90", "visible PDF source policy pass", "user viewpoint pending acknowledgement retained"],
+  "stopConditions": ["official posting changed materially", "user corrects value/project role", "new evidence conflicts with claim ledger", "same unresolved claim repeats without evidence", "score gate or length gate fails"],
+  "terminalResult": {"status": "ready_for_user_review", "sets": 5, "averagePostScore": 96.4, "thresholdPass": "5/5", "userConfirmationRequired": true}
+}

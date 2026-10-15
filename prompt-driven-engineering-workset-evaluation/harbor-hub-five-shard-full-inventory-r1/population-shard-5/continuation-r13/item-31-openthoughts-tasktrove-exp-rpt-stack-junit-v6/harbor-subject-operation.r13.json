@@ -1,0 +1,67 @@
+{
+  "authorityEffect": "none",
+  "blockingCodes": [
+    "hub-auth-unavailable",
+    "dataset-license-unobserved",
+    "task-instruction-unavailable",
+    "task-image-manifest-unavailable",
+    "protected-verifier-unavailable",
+    "effective-model-unverified",
+    "effective-reasoning-effort-unverified",
+    "subject-timeout-unverified",
+    "network-policy-unresolved",
+    "cost-budget-unqualified"
+  ],
+  "claimRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/claim.r13.json",
+  "digest": "sha256:bfc521db11cefd4ffce2cd3f4973b6e2045af3a90d5b3828dd2585f5a1dacf3a",
+  "effective": {
+    "model": null,
+    "reasoningEffort": null,
+    "receiptState": "missing_require_context",
+    "timeoutSeconds": null
+  },
+  "identityDigest": "sha256:9a1e1f6f0a7510a5e9b5f555fd18b3c50a2c2ac07b3e354885d15a92900e6a9e",
+  "itemId": "openthoughts/tasktrove-exp-rpt-stack-junit-v6",
+  "itemTerminalStatus": "held",
+  "kind": "harbor-subject-operation-receipt/v2",
+  "nativeSubjectBoundary": {
+    "controllerProviderEvidenceNotSubjectEvidence": true,
+    "observationDigest": "sha256:d3200a35efbee202f638739fe3bc8b52ee69850e0eccfb3fd6df2fa546f82498",
+    "observationRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/native-subject-topology-operation-observation.r13.json",
+    "operationStatus": "not_operated",
+    "receiptDigest": "sha256:393c7d228583c55e87d4f530ca2d5128dff0c15a0400c2e4342e4693ea0aaf85",
+    "receiptRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/native-subject-topology-operation-receipt.r13.json",
+    "requestDigest": "sha256:c29ce4b914680e24b70a0a43c91b065c4683c9389fb2f0fb18e7483608c03794",
+    "requestRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-31-openthoughts-tasktrove-exp-rpt-stack-junit-v6/subject-operation-request.r13.json"
+  },
+  "operationAttempted": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationStatus": "held_before_subject_execution",
+  "privacy": {
+    "credentialsStored": false,
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false
+  },
+  "provider": "harbor@0.22.0",
+  "requested": {
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "timeoutSeconds": 3600
+  },
+  "requireContext": true,
+  "schemaVersion": 2,
+  "subject": "Harbor Subject",
+  "subjectTerminalState": "not_started",
+  "verifierState": "not_started",
+  "wakeCondition": [
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "network_policy_and_cost_budget_qualified"
+  ]
+}

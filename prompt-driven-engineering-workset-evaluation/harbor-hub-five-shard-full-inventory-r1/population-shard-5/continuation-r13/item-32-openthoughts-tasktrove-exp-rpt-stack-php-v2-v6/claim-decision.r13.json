@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 32,
+      "expectedEventHeadSha256": "d9aef615aa85c125a4794407c26ea30d8b9b22b91293c382c54f562298b387b7",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:1e3a689712e827705403aa2b30b977a45e7d38d89d49586ac1b3cecee2e79cd8"
+      },
+      "identityDigest": "sha256:db0ed597d1132d5994a5cc829d541ef6256f0c341bf818923f113edeea561993",
+      "itemId": "openthoughts/tasktrove-exp-rpt-stack-php-v2-v6",
+      "laneId": "population-shard-5",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-5:openthoughts/tasktrove-exp-rpt-stack-php-v2-v6:r13",
+      "sequence": 32,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-5:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 32,
+    "eventHeadSha256": "sha256:d9aef615aa85c125a4794407c26ea30d8b9b22b91293c382c54f562298b387b7",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:4f39ac6c55d1984af7ddd16081e22d7fbcecebbeecb739404c4f14718d919a72",
+  "eventCursor": 32,
+  "eventHeadSha256": "sha256:d9aef615aa85c125a4794407c26ea30d8b9b22b91293c382c54f562298b387b7",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-5",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-32-openthoughts-tasktrove-exp-rpt-stack-php-v2-v6/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "openthoughts/tasktrove-exp-rpt-stack-php-v2-v6",
+        "laneId": "population-shard-5",
+        "proposalId": "proposal:population-shard-5:openthoughts/tasktrove-exp-rpt-stack-php-v2-v6:r13",
+        "workerId": "worker:harbor-population-shard-5:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 32,
+      "eventHeadSha256": "d9aef615aa85c125a4794407c26ea30d8b9b22b91293c382c54f562298b387b7",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 32,
+    "eventHeadSha256": "d9aef615aa85c125a4794407c26ea30d8b9b22b91293c382c54f562298b387b7",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-5",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}

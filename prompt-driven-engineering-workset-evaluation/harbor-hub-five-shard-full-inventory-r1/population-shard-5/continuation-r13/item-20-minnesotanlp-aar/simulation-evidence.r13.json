@@ -1,0 +1,255 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:2d15818a4060dddcd956bcde0740447cf81305a94c96dca9db4e90096c6074aa",
+      "id": "harbor-gpt-5-6-luna",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T15:53:48Z",
+  "digest": "sha256:927c91fb6df435cc983dc4100680c150105c75a590908e7863c8c30a272bf2c3",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:0f8e6ba429166d6fd62644e4e0be9a9a2ff22f34bf77d61b86c1be898c3b4f34",
+    "limitations": [
+      "platform_state_unobserved",
+      "network_policy_unresolved",
+      "cost_budget_unqualified"
+    ],
+    "platformRef": "environment:darwin-arm64-docker"
+  },
+  "evidenceId": "engineering-workset-simulation:population-shard-5:continuation-r13/item-20-minnesotanlp-aar:minnesotanlp/aar",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/candidate-probe.r13.json"
+      ],
+      "id": "provider-auth",
+      "subjectRef": "item:minnesotanlp/aar"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/candidate-probe.r13.json"
+      ],
+      "id": "task-instruction",
+      "subjectRef": "item:minnesotanlp/aar"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/candidate-probe.r13.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:minnesotanlp/aar"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-model",
+      "subjectRef": "item:minnesotanlp/aar"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-effort",
+      "subjectRef": "item:minnesotanlp/aar"
+    },
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/harbor-subject-operation.r13.json"
+      ],
+      "id": "subject-timeout",
+      "subjectRef": "item:minnesotanlp/aar"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_qualification_held",
+      "effective_execution_receipt_missing",
+      "oracle_not_run"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "task_instruction_unavailable",
+      "task_image_manifest_unavailable",
+      "protected_verifier_unavailable"
+    ],
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:7e8c9cba666ddb8cc6686d2cbdd7b57d2614a8adb9e55faab7dc90b4fd6f25d5"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar"
+  },
+  "provider": {
+    "limitations": [],
+    "qualificationDigest": "sha256:d5aed66dca3fc8a71a23a1b94f4e55482896e44f5b817e70577b42d0f7707645",
+    "qualificationRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/candidate-probe.r13.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:ef8c523a76acffe4fe6b68568a2aa3c6e7117542b084d87d42f3546cd59dbe17",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    ],
+    "sourceDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/item-resource-settlement.r13.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/candidate-probe.r13.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:ae492c22764eab1fcdf7ae54a2f34dc70ba24e146cf4562892bd8ed196e65985",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/candidate-probe.r13.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:6a9d5465c6d37ccda8f6dd576c8078e6b0ce3061a3248ef806a03d0c9ed47c95",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/candidate-probe.r13.json"
+        ],
+        "resourceClass": "credential-injection",
+        "resourceRefDigest": "sha256:af4b7de4881900c51d76ec15cee4b10a0bfe75c346620a38ecc931aae08591a0",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/candidate-probe.r13.json"
+        ],
+        "resourceClass": "task-workspace",
+        "resourceRefDigest": "sha256:e95f6172502d9fa7375c4f2863a0e4a6f2893b80738ad1331446f628615cef7b",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/candidate-probe.r13.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:cfce71aed3741aefc368ef99f271043ee3b0c7f319bc26de0fad37a51d11757c",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/candidate-probe.r13.json"
+        ],
+        "resourceClass": "network-policy-scope",
+        "resourceRefDigest": "sha256:52170b2469eef5a5815aaca4ee7f7ad417c56498773639be8d4bff41430c41c0",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/candidate-probe.r13.json"
+        ],
+        "resourceClass": "cost-budget-scope",
+        "resourceRefDigest": "sha256:f178f0410cd4bd2a237b0ec0ea9aa91f25d7956206fb93baf9a62ea27f68394e",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/dynamic-candidate.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "resourceClass": "dynamic-candidate",
+        "resourceRefDigest": "sha256:1f325b6709c6bb137a8aa636008fceb0dd8c4b3f2dc743f6bb3ae022434c63f0",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/preclaim-verification.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/source-and-plan-binding.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/route-decision.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/dynamic-artifact-composition-decision.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/execution-structure-21-output-bundle.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/subject-operation-request.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/native-subject-topology-operation-receipt.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/native-subject-topology-operation-observation.r13.json"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/working-memory-binding.r13.json",
+    "checkpointRefs": [
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/preclaim-verification.r13.json",
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/claim-source-freeze.r13.json",
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar/item-resource-settlement.r13.json"
+    ],
+    "digest": "sha256:6df789001c8f8ae918722a0813c4e8111b1646cb84244dd17a1dccb96b65f478",
+    "invalidation": [
+      "objective_revision_changes",
+      "requirement_scope_digest_changes",
+      "frozen_population_plan_digest_changes",
+      "item_capability_fingerprint_changes",
+      "terminal_settlement_emitted"
+    ],
+    "namespaceRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-20-minnesotanlp-aar",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-5:continuation-r13/item-20-minnesotanlp-aar"
+  }
+}

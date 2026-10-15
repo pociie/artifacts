@@ -1,0 +1,50 @@
+{
+  "activation": {
+    "roleBindings": [],
+    "status": "not_activated",
+    "turnBindings": []
+  },
+  "authorityEffect": "none",
+  "controller": {
+    "actorRef": "controller:worker:harbor-population-shard-5:r13-controller",
+    "countedAsSubjectOperation": false,
+    "mayAuthorPackets": false
+  },
+  "kind": "subject-topology-operation-receipt/v2",
+  "operation": {
+    "observedEventFamilies": [],
+    "packetDigests": [],
+    "requiredEventFamilies": [
+      "assignment_acknowledgement",
+      "contribution_packet",
+      "handoff_packet",
+      "resource_settlement"
+    ],
+    "roleResults": [],
+    "status": "not_operated"
+  },
+  "packets": [],
+  "receiptId": "receipt:subject-operation-request:population-shard-5:usaco/usaco:r13",
+  "requestDigest": "sha256:194c6d023989a8049cf8b1f949519457e13b1f96d1b525ab84bf8d6a1b2ae0d3",
+  "requestRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-54-usaco-usaco/subject-operation-request.r13.json",
+  "schemaVersion": 2,
+  "settlement": {
+    "evidenceDigest": null,
+    "evidenceRef": null,
+    "state": "held",
+    "unsettledResourceRefs": []
+  },
+  "status": "report_only",
+  "validation": {
+    "decisionBindingsVerified": false,
+    "independentFromActorRefs": ["controller:worker:harbor-population-shard-5:r13-controller"],
+    "packetsVerified": false,
+    "profileApplicationsVerified": false,
+    "requestContentVerified": false,
+    "roleResultsVerified": false,
+    "runtimeAttestationsVerified": false,
+    "validatorRef": "validator:subject-operation-contract"
+  },
+  "workflowExecutionRecordDigest": null,
+  "workflowExecutionRecordRef": null
+}

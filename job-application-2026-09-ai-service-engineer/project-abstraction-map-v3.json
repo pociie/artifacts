@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "self-introduction-project-abstraction-map/v3",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "project": "pociie/collab-mono",
+  "abstractionLevel": "service-and-human-workflow",
+  "thesis": "사람의 의도를 실행 가능한 맥락으로 만들고 AI의 결과를 다시 사람이 검토·다음 행동으로 연결하는 협업 서비스의 구조를 실험한 프로젝트",
+  "highLevelFlow": [
+    {
+      "id": "intent",
+      "name": "의도와 문제의식",
+      "meaning": "사람이 해결하려는 업무 목적과 반복되는 협업 부담을 표현한다.",
+      "repoEvidence": ["shared/README.md", "docs/architecture/project-structure.md"],
+      "essayUse": "기능 목록보다 왜 이 서비스를 만들었는지 설명"
+    },
+    {
+      "id": "shared-context",
+      "name": "공유 맥락",
+      "meaning": "문서와 협업 상태를 여러 참여자가 같은 의미로 이해할 수 있는 형태로 정리한다.",
+      "repoEvidence": ["apps/components/core-domain/workspace", "apps/components/core-domain/team-collaboration", "packages/shared/README.md"],
+      "essayUse": "모호한 요구를 공통 언어와 책임으로 구조화한 판단 설명"
+    },
+    {
+      "id": "ai-collaboration",
+      "name": "AI 실행과 협업",
+      "meaning": "정리된 의도를 실행 가능한 작업으로 연결하고, 실행 방식의 차이를 서비스 흐름 안에서 관리한다.",
+      "repoEvidence": ["apps/components/core-domain/agent-runtime/README.md", "apps/components/generic-sub-domain/chat-gateway/README.md"],
+      "essayUse": "AI를 단독 모델이 아니라 업무 흐름에 편입되는 서비스로 서술"
+    },
+    {
+      "id": "evidence-feedback",
+      "name": "근거와 피드백",
+      "meaning": "실행 결과와 이력을 사람이 확인하고 다음 개선의 근거로 삼을 수 있게 한다.",
+      "repoEvidence": ["apps/components/generic-sub-domain/reporting/README.md", "apps/components/core-domain/agent-runtime"],
+      "essayUse": "완수와 품질을 ‘동작한다’가 아니라 ‘설명하고 개선할 수 있다’로 정의"
+    },
+    {
+      "id": "improvement",
+      "name": "개선의 순환",
+      "meaning": "관찰된 부담과 실패를 다음 요구·설계·검증의 입력으로 되돌린다.",
+      "repoEvidence": ["governance/governance-fitness.mjs", "e2e", ".woodpecker"],
+      "essayUse": "지원 직무에서 품질·운영·사용자 피드백을 연결하겠다는 계획"
+    }
+  ],
+  "projectState": {
+    "repositoryFacts": [
+      "root package manifest declares 28 npm workspaces",
+      "repository contains core/generic/supporting domains, web, infrastructure, MCP and E2E surfaces",
+      "source architecture separates domain, application, adapters and composition responsibilities"
+    ],
+    "userProvidedContext": [
+      "사용자가 현재 진행 중인 프로젝트로 제시함",
+      "사용자가 개인 프로젝트로서 요구 분석부터 설계·구현·배포까지의 경험을 자기소개서 초안에 제공함"
+    ],
+    "notEstablished": [
+      "production users, traffic, latency, cost, availability or customer outcome",
+      "every repository component being personally implemented",
+      "all checks passing at a dated run",
+      "simultaneous activation of every external execution surface"
+    ]
+  },
+  "claimPolicy": {
+    "allowed": [
+      "사람의 의도와 AI 실행 결과를 협업·검토·기록 흐름으로 연결하는 서비스 구조를 설계·구현한 경험",
+      "넓은 범위를 핵심 사용자 여정과 책임 경계로 구조화한 경험",
+      "실행 가능성과 근거·피드백 가능성을 함께 고려한 설계 관점"
+    ],
+    "requiresUserConfirmation": [
+      "본인이 실제로 변경한 범위와 의사결정",
+      "실행한 검증 명령·시점·결과",
+      "배포 환경과 실제 운영 결과"
+    ],
+    "excludedFromEssayCenter": [
+      "구현 단위·프로토콜 필드·개별 핸들러의 열거",
+      "도구 이름을 성과나 모델 능력처럼 표현하는 것",
+      "개발용 연결 확인을 운영 성과로 확대하는 것",
+      "저장소 구조만으로 개인 소유권·사용자 규모·품질 결과를 확정하는 것"
+    ]
+  },
+  "narrativeTest": [
+    "문장이 기술 이름 없이도 해결하려는 사람의 문제를 설명하는가",
+    "기술 선택이 업무 흐름·책임·검증에 어떤 변화를 주었는가",
+    "결과를 과거 사실·제한된 해석·입사 후 계획으로 구분했는가",
+    "구현 단위를 삭제해도 프로젝트의 서비스 정체성이 남는가"
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "authorityEffect": "none",
+  "digest": "sha256:d00b86967798a956225de17170e34a8fec86bff63ad3f8965934e38e9ef39592",
+  "kind": "harbor-provider-qualification/v1",
+  "limitations": [
+    "one representative task was executed in this controller window",
+    "host architecture required qualified linux/amd64 emulation",
+    "public network access was part of the task environment policy",
+    "no reusable-source mutation or promotion authority was exercised"
+  ],
+  "observedAt": "2026-08-28T12:57:38.300Z",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "provider": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "agent": "codex",
+    "agentSetupTimeoutMultiplier": 10,
+    "agentTimeoutMultiplier": 4,
+    "effortEffective": "max",
+    "effortRequested": "max",
+    "environmentBuildTimeoutMultiplier": 2,
+    "modelEffective": "gpt-5.6-luna",
+    "modelRequested": "gpt-5.6-luna",
+    "name": "harbor",
+    "subjectTimeoutEffectiveSeconds": 3600,
+    "subjectTimeoutRequestedSeconds": 3600,
+    "verifierTimeoutMultiplier": 4,
+    "version": "0.22.0"
+  },
+  "qualification": {
+    "access": {
+      "basis": "Hub inventory entry is Public and exact version retrieval succeeded",
+      "evidenceRefs": [
+        "https://hub.harborframework.com/datasets",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-3:inventory-freeze"
+      ],
+      "state": "supported"
+    },
+    "auth": {
+      "mechanism": "codex_auth_json",
+      "metadataObservation": "local auth metadata was readable and non-empty; values were not recorded",
+      "mode": "CODEX_FORCE_AUTH_JSON",
+      "state": "supported",
+      "valueExported": false
+    },
+    "cleanup": {
+      "retainedEvidence": "runtime-private metadata and raw execution evidence remain only under the lane memory namespace",
+      "state": "supported",
+      "temporaryResources": "Harbor task environment and trial resources released after completion"
+    },
+    "cost": {
+      "budgetDisposition": "within bounded one-trial admission",
+      "currency": "USD",
+      "scope": "one completed retry trial",
+      "state": "observed",
+      "value": 0.0629526
+    },
+    "effort": {
+      "effective": "max",
+      "evidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-3:first-representative:effort-receipt",
+      "requested": "max",
+      "state": "supported"
+    },
+    "isolation": {
+      "portableProjection": "metadata-only",
+      "runtimeRoot": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/harbor-runtime",
+      "state": "supported",
+      "subjectAndVerifierSeparated": true
+    },
+    "license": {
+      "basis": "Terminal-Bench source repository declares Apache-2.0",
+      "evidenceRefs": ["https://github.com/harbor-framework/terminal-bench-2-1/blob/main/LICENSE"],
+      "state": "supported"
+    },
+    "model": {
+      "effective": "gpt-5.6-luna",
+      "evidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-3:first-representative:model-receipt",
+      "requested": "gpt-5.6-luna",
+      "state": "supported"
+    },
+    "network": {
+      "boundary": "public network access was permitted only inside the Harbor task environment",
+      "state": "supported",
+      "taskPolicy": "allow_internet=true"
+    },
+    "platform": {
+      "emulation": "qualified",
+      "hostPlatform": "linux/aarch64",
+      "imageDigest": "sha256:3618e1f8a997b437c09cd3dbaac736705809c05f6f12f584b65722175970ebe1",
+      "state": "supported",
+      "targetPlatform": "linux/amd64",
+      "validation": "docker run --platform linux/amd64 ... uname -m returned x86_64"
+    },
+    "timeout": {
+      "binding": "agent_timeout_multiplier=4",
+      "effectiveSeconds": 3600,
+      "evidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-3:first-representative:timeout-receipt",
+      "nativeTaskTimeoutSeconds": 900,
+      "requestedSeconds": 3600,
+      "state": "supported"
+    },
+    "verifier": {
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-3:first-representative:verifier",
+        "memory:harbor-hub-five-shard-full-inventory-r1:first-representative-reward"
+      ],
+      "failed": 0,
+      "passed": 3,
+      "reward": 1.0,
+      "state": "supported",
+      "testCount": 3
+    }
+  },
+  "receipts": {
+    "firstAttempt": {
+      "blocking": false,
+      "evidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-3:first-representative:attempt-1",
+      "recovery": "retry admitted only after setup and environment timeout fingerprint changed",
+      "setupTimeoutSeconds": 360,
+      "state": "failed_setup_timeout"
+    },
+    "retry": {
+      "completedCount": 1,
+      "elapsedMs": 801235,
+      "errorCount": 0,
+      "finishedAt": "2026-08-28T12:50:08.172585Z",
+      "resultDigest": "sha256:7aae65923e1225d77599fb2bc28f2e634f1d7cb678fcfba29eb9c3841e5c4ba1",
+      "reward": 1.0,
+      "startedAt": "2026-08-28T12:36:46.937930Z",
+      "state": "completed",
+      "trialCount": 1,
+      "verifierDigest": "sha256:097d1a15260bad246a2b9db3b30f49b941a17710bfdfb5b283efec2d6bb9cd67"
+    }
+  },
+  "schemaVersion": 1,
+  "shardId": "population-shard-3",
+  "source": {
+    "access": "Public",
+    "datasetDigest": "sha256:7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a",
+    "datasetRef": "terminal-bench/terminal-bench-2-1",
+    "datasetRevision": "terminal-bench/terminal-bench-2-1@6",
+    "taskDigest": "sha256:d9ddd9a8e925e2c566b37b2492cbf995afecefe58874e4043ef78d7f3c892c7e",
+    "taskRef": "terminal-bench/write-compressor@3"
+  },
+  "sourceRefs": [
+    "https://hub.harborframework.com/datasets",
+    "https://www.harborframework.com/docs/datasets",
+    "https://www.harborframework.com/docs/agents",
+    "https://www.harborframework.com/docs/rewardkit",
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/policy/ai-execution-routing.policy.json",
+    "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/policy/ai-execution-mode-operation.policy.json"
+  ]
+}

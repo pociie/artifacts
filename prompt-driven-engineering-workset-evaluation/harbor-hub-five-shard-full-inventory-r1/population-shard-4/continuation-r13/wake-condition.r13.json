@@ -1,0 +1,31 @@
+{
+  "authorityEffect": "none",
+  "currentCapabilityFingerprintChanged": false,
+  "digest": "sha256:0d584995cb0aed57d6e820a8e173dbbffc6b8ba3452414a9a1b79b25ae42df1f",
+  "itemId": "adameubanks/rating-generation-consistency",
+  "kind": "harbor-population-shard-wake-condition/v2",
+  "nextEligiblePendingItem": "benchflow/skillsbench",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "pendingAfterSettlement": 45,
+  "privacy": {
+    "credentialsStored": false,
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "runtimeHandlesStored": false
+  },
+  "reasonCode": "provider:effective-model-effort-timeout-credential-receipts-unavailable",
+  "requiredChanges": [
+    "credential_mechanism_available",
+    "effective_model_receipt",
+    "effective_reasoning_effort_receipt",
+    "effective_timeout_receipt",
+    "protected_verifier_capability",
+    "task_image_manifest_or_platform_qualification"
+  ],
+  "retryPolicy": "no_unchanged_retry",
+  "schemaVersion": 2,
+  "scope": "this_exact_item_and_claim_only",
+  "shardId": "population-shard-4",
+  "status": "held",
+  "wakeCondition": "Re-observe Harbor capability for this exact next item only after the provider capability fingerprint changes: credentials must authenticate, the effective gpt-5.6-luna model and max effort must be receipt-bound, the effective subject and verifier timeout must be proven at or below 3600 seconds, and the protected verifier capability must be qualified; then admit a fresh item-bound round. Do not retry this hold or claim the next pending item with the unchanged capability fingerprint."
+}

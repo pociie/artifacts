@@ -1,0 +1,109 @@
+{
+  "identity": {
+    "datasetId": "abundant/swe-gen-rust",
+    "datasetVersion": "latest",
+    "identityDigest": "sha256:87162a3de950cf77030fcbe1e9d14c821de57192a6ca410ee9b58afb9f76c6c7",
+    "inventoryTaskCount": 1000,
+    "providerCasePreserved": true,
+    "taskDigest": "sha256:c443e1a0365e088b136700cc53857f37212433f93fb5b66a19c1fa49bfa257c0",
+    "taskProbeRef": "population-shard-5/task-probes/004-abundant_swe-gen-rust/tokio-rs__tokio-6696",
+    "visibility": "Public"
+  },
+  "lane": "population-shard-5",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "frameworkRevision": "sha256:ec23c40270733d0a9ffd336abcd2f51c084fbb439acd73ccd67d2e0c7fdc5d68",
+  "ordinal": 2,
+  "priorEvidence": {
+    "operationAttempted": true,
+    "reentryReason": "changed-capability-fingerprint",
+    "state": "held"
+  },
+  "privacy": {
+    "privateReasoningStored": false,
+    "rawPromptStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "providerOperation": {
+    "frameworkRevision": "sha256:ec23c40270733d0a9ffd336abcd2f51c084fbb439acd73ccd67d2e0c7fdc5d68",
+    "agent": "codex",
+    "authMode": "CODEX_FORCE_AUTH_JSON=1",
+    "datasetRef": "abundant/swe-gen-rust@latest",
+    "execution": "local",
+    "hostedLaunch": false,
+    "installOnly": false,
+    "model": "gpt-5.6-luna",
+    "modelArgument": "openai/gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "selection": "exact prior task binding with --n-tasks 1",
+    "slotCount": 3,
+    "slotWrapper": ".collab/runtime/prompt-driven-engineering-workset-evaluation/harbor-hub-r14/with_harbor_slot.py",
+    "subjectTimeoutCeilingSeconds": 3600,
+    "verification": "enabled"
+  },
+  "routeBasis": {
+    "independentContributionsRequired": false,
+    "instructionDigest": "sha256:5ffc9200d58f2ec68e6aa1e5cff83acaafda7e43e8022b9b232fd8d19e406714",
+    "singleRepresentativeScope": true,
+    "source": "exact-representative-task-content-and-workspace-probe",
+    "taskTomlDigest": "sha256:647f989d5b54438fb30bc45546e02e5f3c5ec9f911bd79bae0129ab66f8b3fe0",
+    "workspaceFileCount": 8,
+    "contributionShape": "single-representative-provider-task",
+    "executionSurface": "one-task-workspace-with-native-verifier",
+    "responsibilityClasses": ["single-Harbor-subject", "native-verifier"],
+    "separableRoleCount": 1,
+    "independentValidation": true,
+    "dynamicMembership": false,
+    "constraints": ["native-Harbor-task-contract", "one-deterministic-representative", "subject-timeout<=3600"],
+    "workspaceFileManifestDigest": "sha256:3490a825e268b11044630a42e9eea0888fa514735605206cb25e4c06e56f9fa0"
+  },
+  "routeJourney": {
+    "frameworkRevision": "sha256:ec23c40270733d0a9ffd336abcd2f51c084fbb439acd73ccd67d2e0c7fdc5d68",
+    "architecture": "not_required",
+    "candidateArchitecturePatternsInspected": [
+      "expert-pool",
+      "fan-out-fan-in",
+      "generator-validator",
+      "hierarchical-delegation",
+      "pipeline",
+      "supervisor"
+    ],
+    "candidateModesInspected": [
+      "communication",
+      "investigation",
+      "single_task",
+      "loop",
+      "orchestration",
+      "session_control"
+    ],
+    "coordinationPolicy": "no-swarm-single-owner",
+    "dynamicArtifactComposition": [
+      "route-decision",
+      "workflow-decision",
+      "topology-selection",
+      "architecture-selection",
+      "swarm-decision",
+      "coordination-policy",
+      "subject-operation",
+      "terminal-reward",
+      "terminal-receipt"
+    ],
+    "reasoningEnvelope": {
+      "bounded": true,
+      "reasoningEffort": "max",
+      "stopCondition": "one representative task reaches terminal Harbor result"
+    },
+    "reassessment": "changed-capability-fingerprint-or-material-runtime-deficiency",
+    "roleContext": "lane-controller-admits-one-native-Harbor-subject-and-settles-one-vector-reward",
+    "selectedMode": "single_task",
+    "swarmDecision": {
+      "reason": "one deterministic provider task has one owning lane controller and no material independent contributions",
+      "selected": "no-swarm-single-owner",
+      "status": "not_required"
+    },
+    "topology": "none",
+    "workflow": "single-item-native-harbor-execution"
+  },
+  "schemaVersion": "harbor-hub-r14-item-delta/v1",
+  "terminalState": "admitted-not-started"
+}

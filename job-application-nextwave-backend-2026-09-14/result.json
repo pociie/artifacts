@@ -1,0 +1,417 @@
+{
+  "kind": "job-application-report-result/v1",
+  "schema_version": 1,
+  "result_id": "result:job-application:nextwave-backend:2026-09-14",
+  "request_binding": {
+    "ref": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/request.json",
+    "request_id": "request:job-application:nextwave-backend:2026-09-14",
+    "revision": "nextwave-backend-r1",
+    "digest": "aa081318f9a8751a4f3b7451f9800d09126675170d16a5ef714f34c27c3ebb7d"
+  },
+  "candidates": [
+    {
+      "id": "candidate-set-1",
+      "strategy": "책임 단위로 도메인을 모델링하고 안정적인 서비스 구조로 연결하는 백엔드 개발자",
+      "answers": [
+        {
+          "question_id": "question-strength",
+          "text": "저의 강점은 복잡한 업무를 책임 단위로 나누고, 이를 유지보수 가능한 도메인 모델과 서비스 구조로 바꾸는 능력입니다. 공개한 Spring 기반 핀테크 프로젝트에서 회원·인증, 결제, 게이트웨이, 이벤트 소비를 기능 목록으로만 묶지 않고 도메인·애플리케이션·저장소·외부 연결의 역할로 구분했습니다. 각 책임의 입력과 결과를 나누자 API 변경이 다른 처리에 미치는 영향을 먼저 확인할 수 있었습니다. 넥스트웨이브 테크에서도 Java/Spring으로 업무 규칙과 REST API, 데이터 모델을 일관되게 연결해 기능이 늘어도 설명하고 고칠 수 있는 백엔드를 만들겠습니다.",
+          "char_count": 317,
+          "primary_claim": "업무를 책임 단위로 나누어 유지보수 가능한 도메인·서비스 구조로 바꾼다.",
+          "evidence_refs": ["question-strength", "role-concern-java-spring-api-data", "applicant-fact-spring-backend", "applicant-fact-bank-platform", "project-claim-module-responsibility"],
+          "inference_refs": ["fit-domain-and-responsibility"],
+          "unknown_refs": ["unknown-exact-contribution"]
+        },
+        {
+          "question_id": "question-motivation",
+          "text": "넥스트웨이브 테크의 백엔드 개발 직무에 관심을 가진 계기는 서비스의 성패가 화면보다 요청을 안전하게 처리하고 데이터를 일관되게 남기는 기반에서 결정된다고 느꼈기 때문입니다. 공고가 제시한 Java/Spring 서비스 개발, REST API 설계, 데이터베이스 모델링, 대규모 트래픽 대응과 안정성 개선은 제가 핀테크 플랫폼을 만들며 고민해 온 문제와 맞닿아 있습니다. 회원·결제·게이트웨이·이벤트 소비를 나누어 설계하고 Redis와 Kafka의 역할을 학습한 경험을 실제 서비스 품질로 확장하고 싶어 지원했습니다. 입사 후에는 기능 구현에 그치지 않고 요청의 흐름과 데이터의 상태를 끝까지 확인하는 개발자가 되겠습니다.",
+          "char_count": 346,
+          "primary_claim": "공고의 Java/Spring·API·데이터·안정성 요구가 프로젝트의 관심과 맞아 지원한다.",
+          "evidence_refs": ["question-motivation", "role-concern-java-spring-api-data", "role-concern-scale-stability-ux", "applicant-fact-bank-platform", "project-claim-kafka-reliability-study"],
+          "inference_refs": ["fit-domain-and-responsibility", "fit-event-storage-and-stability"],
+          "unknown_refs": ["unknown-nextwave-company-context", "unknown-production-use"]
+        },
+        {
+          "question_id": "question-problem",
+          "text": "핀테크 플랫폼의 회원가입 인증 메일을 구현하던 중, 저장 과정에서 무결성 예외가 발생하면 같은 메서드를 재귀 호출하는 구조가 문제였습니다. 저장이 계속 실패하면 무한 재시도가 될 수 있고, 회원가입 트랜잭션이 끝나기 전에 메일이 발송될 위험도 있었습니다. 저는 재시도 횟수만 줄이는 대신 데이터 성격과 발송 시점을 분리했습니다. 일시적인 인증 정보와 세션 토큰은 Redis 저장소로 분리하고, 메일 발송은 이벤트로 전달해 원래 트랜잭션이 커밋된 뒤 비동기로 처리했습니다. Redis 저장·조회·삭제와 인증 메일 정보 테스트도 추가했습니다. 그 결과 재귀적 예외 처리 대신 커밋 이후 발송이라는 흐름이 코드에 드러났고, 저장소와 메일 책임을 나눌 수 있었습니다. 공개 자료에는 운영 지표가 없으므로 성능 향상으로 과장하지 않고, 안정성은 재현 테스트와 관찰 지표로 확인해야 한다는 점을 배웠습니다.",
+          "char_count": 445,
+          "primary_claim": "인증 메일의 재귀적 실패 위험을 Redis와 커밋 후 비동기 발송으로 분리했다.",
+          "evidence_refs": ["question-problem", "project-claim-redis-mail-session", "project-claim-after-commit-mail", "project-claim-redis-tests", "applicant-fact-redis-refactor"],
+          "inference_refs": [],
+          "unknown_refs": ["unknown-exact-contribution", "unknown-runtime-verification", "unknown-redis-runtime-result"]
+        },
+        {
+          "question_id": "question-contribution",
+          "text": "입사 후에는 안정성을 기능의 부가 조건이 아니라 사용자 경험을 결정하는 개발 기준으로 삼겠습니다. 먼저 Java/Spring API마다 요청의 유효성, 권한, 상태 전이를 명확히 하고 데이터베이스 모델과 트랜잭션 경계를 함께 설계하겠습니다. 이후 정상·중복·실패 요청을 구분하는 테스트와 로그를 마련해 문제가 발생했을 때 원인을 좁히고 복구할 수 있게 하겠습니다. 트래픽이 증가하면 처리량만 높이기보다 병목과 재시도, 데이터 중복 가능성을 측정하고 필요한 곳에 캐시·비동기 처리·구조 개선을 단계적으로 적용하겠습니다. 사용자에게는 일관된 응답과 이해 가능한 오류 안내를 제공하고, 변경 전후의 지표를 확인해 안정성과 편의가 함께 좋아지는 백엔드를 만들겠습니다.",
+          "char_count": 369,
+          "primary_claim": "API·데이터·테스트·관찰을 연결해 안정성과 사용자 경험을 함께 개선한다.",
+          "evidence_refs": ["question-contribution", "role-concern-java-spring-api-data", "role-concern-scale-stability-ux", "applicant-value-maintainability", "project-claim-kafka-reliability-study"],
+          "inference_refs": ["fit-event-storage-and-stability"],
+          "unknown_refs": ["unknown-q4-character-limit", "unknown-production-use", "unknown-exact-contribution"]
+        }
+      ],
+      "mandatory_gates": [
+        {"id": "request-and-question-coverage", "status": "unavailable", "evidence_refs": ["question-contribution", "unknown-q4-character-limit"], "comment": "Q1~Q3는 제공된 상한 안에 맞췄지만 Q4의 실제 글자수 규칙이 없어 제출용 분량 확정은 보류한다."},
+        {"id": "source-and-freshness-boundary", "status": "unavailable", "evidence_refs": ["source-nextwave-posting", "company-context-unverified"], "comment": "직무 핵심은 사용자 제공 요약으로 사용했으나 .example 회사·공고 원문은 독립 확인하지 못했다."},
+        {"id": "applicant-attribution-and-confirmation", "status": "unavailable", "evidence_refs": ["applicant-fact-redis-refactor", "unknown-exact-contribution"], "comment": "공개 계정 활동은 확인되지만 직접 변경한 범위와 의사결정은 지원자 확인이 필요하다."},
+        {"id": "project-evidence-and-causality", "status": "unavailable", "evidence_refs": ["project-claim-after-commit-mail", "unknown-runtime-verification"], "comment": "문제·구조 변경·테스트 파일은 추적되지만 실제 실행 결과와 운영 효과는 확인되지 않았다."},
+        {"id": "role-domain-language-clarity", "status": "pass", "evidence_refs": ["role-concern-java-spring-api-data", "project-claim-module-responsibility"], "comment": "Java/Spring, API, 데이터, 트래픽, 안정성 언어로 직무와 프로젝트를 연결했다."},
+        {"id": "publication-and-privacy-safety", "status": "pass", "evidence_refs": ["source-github-profile", "source-bank-project-readme"], "comment": "공개 GitHub 출처만 표시하고 내부 경로·프롬프트·개인정보는 보고서에서 제외했다."}
+      ],
+      "dimensions": [
+        {"id": "question-fit-and-differentiation", "rating": 4, "weighted_score": 20, "evidence_refs": ["question-strength", "question-motivation", "question-problem", "question-contribution"], "comment": "강점·지원동기·문제 해결·입사 후 기여의 역할을 분리했다."},
+        {"id": "role-and-domain-alignment", "rating": 3.5, "weighted_score": 17.5, "evidence_refs": ["role-concern-java-spring-api-data", "role-concern-scale-stability-ux"], "comment": "공고 요구를 구조 설계와 안정성 계획으로 연결했으나 회사 고유 맥락은 미확인이다."},
+        {"id": "applicant-viewpoint-and-values", "rating": 3.6, "weighted_score": 16.2, "evidence_refs": ["applicant-value-maintainability", "project-claim-module-responsibility"], "comment": "유지보수성과 책임 분리 관점이 세트 전체에 일관되게 드러난다."},
+        {"id": "evidence-causality-and-attribution", "rating": 3.9, "weighted_score": 17.55, "evidence_refs": ["project-claim-redis-mail-session", "project-claim-after-commit-mail", "project-claim-redis-tests"], "comment": "문제·행동·구조적 결과를 공개 근거로 연결하고 운영 수치는 제한했다."},
+        {"id": "project-abstraction-and-transfer", "rating": 3.8, "weighted_score": 13.3, "evidence_refs": ["project-claim-module-responsibility", "fit-domain-and-responsibility"], "comment": "모듈 나열을 책임 설계와 Java/Spring 직무 행동으로 번역했다."},
+        {"id": "clarity-and-interview-defensibility", "rating": 3.8, "weighted_score": 9.5, "evidence_refs": ["project-claim-after-commit-mail", "unknown-runtime-verification"], "comment": "면접에서 구현 설명은 가능하지만 직접 범위와 실행 결과 확인이 남아 있다."}
+      ],
+      "total_score": 94.05,
+      "qualified": false,
+      "selection_guidance": "도메인 책임과 구조 설계 역량을 전면에 두고 싶을 때 우선 검토할 세트다. 제출 전 직접 변경 범위를 확인한다."
+    },
+    {
+      "id": "candidate-set-2",
+      "strategy": "API 계약과 데이터 책임을 명확히 해 복잡한 서비스 흐름을 설명 가능한 형태로 만드는 개발자",
+      "answers": [
+        {
+          "question_id": "question-strength",
+          "text": "저의 강점은 서비스 흐름을 API 계약과 데이터 책임으로 구체화하는 능력입니다. Spring 기반 핀테크 프로젝트에서 인증, 결제, 게이트웨이, 이벤트 소비를 각각 어떤 입력을 받고 어떤 결과를 남기는지 기준으로 나누었습니다. 특히 외부 요청을 받는 API와 실제 업무 규칙, 저장소 연결을 분리해 한 부분의 변경이 다른 기능으로 번지는 범위를 줄이려 했습니다. 넥스트웨이브 테크에서도 REST API의 상태·오류·재처리 기준을 먼저 정하고, 데이터 모델과 구현이 같은 업무 언어를 사용하도록 만들겠습니다.",
+          "char_count": 283,
+          "primary_claim": "서비스 흐름을 API 계약과 데이터 책임으로 구체화한다.",
+          "evidence_refs": ["question-strength", "role-concern-java-spring-api-data", "applicant-fact-bank-platform", "project-claim-module-responsibility"],
+          "inference_refs": ["fit-domain-and-responsibility"],
+          "unknown_refs": ["unknown-exact-contribution"]
+        },
+        {
+          "question_id": "question-motivation",
+          "text": "넥스트웨이브 테크에 지원한 이유는 백엔드 개발을 단순한 기능 구현이 아니라 서비스의 신뢰를 설계하는 일로 다루고 싶기 때문입니다. 공고의 Java/Spring 기반 개발과 REST API 설계는 사용자의 요청을 안정적인 처리로 바꾸는 출발점이고, 데이터베이스 모델링과 대규모 트래픽 대응은 그 결과를 오래 유지하기 위한 기반이라고 생각합니다. 저는 결제·인증 흐름을 가진 Spring 프로젝트에서 도메인과 저장소를 나누고, Kafka 이벤트와 Redis 저장소의 역할을 학습했습니다. 이 경험을 실제 서비스의 장애 예방과 사용자 경험 개선으로 넓히며, 문제를 코드 한 곳이 아니라 전체 흐름에서 해결하는 개발자가 되고 싶어 지원했습니다.",
+          "char_count": 356,
+          "primary_claim": "서비스 신뢰를 설계하는 백엔드 책임이 경험·학습 방향과 맞아 지원한다.",
+          "evidence_refs": ["question-motivation", "role-concern-java-spring-api-data", "role-concern-scale-stability-ux", "applicant-fact-spring-backend", "project-claim-kafka-reliability-study"],
+          "inference_refs": ["fit-domain-and-responsibility", "fit-event-storage-and-stability"],
+          "unknown_refs": ["unknown-nextwave-company-context", "unknown-production-use"]
+        },
+        {
+          "question_id": "question-problem",
+          "text": "회원가입 인증 메일 기능을 다듬을 때 가장 어려웠던 점은 하나의 요청 안에 계정 저장, 인증 정보 임시 보관, 외부 메일 발송이 함께 얽혀 있었다는 것입니다. 기존 코드는 저장 예외가 나면 메일 발송 메서드를 다시 호출했기 때문에 실패 원인이 해소되지 않으면 무한 루프가 될 수 있었습니다. 저는 먼저 계정 트랜잭션과 외부 메일의 책임을 분리했습니다. 인증용 임시 데이터와 세션 토큰은 Redis에 저장하고, 메일 발송은 이벤트로 넘겨 계정 트랜잭션이 커밋된 후 비동기로 실행하도록 바꿨습니다. 관련 저장소와 인증 정보의 생성·조회·삭제 테스트를 추가해 각 경계를 확인했습니다. 결과적으로 실패를 재귀 호출로 숨기지 않고, 언제 저장되고 언제 외부 효과가 발생하는지 설명할 수 있는 흐름을 만들었습니다. 이 경험으로 안정성은 기술 하나보다 책임과 순서를 명확히 하는 데서 시작된다는 점을 배웠습니다.",
+          "char_count": 447,
+          "primary_claim": "계정 트랜잭션과 외부 메일의 책임·순서를 분리해 무한 재시도 위험을 제거했다.",
+          "evidence_refs": ["question-problem", "project-claim-redis-mail-session", "project-claim-after-commit-mail", "project-claim-redis-tests", "applicant-fact-redis-refactor"],
+          "inference_refs": [],
+          "unknown_refs": ["unknown-exact-contribution", "unknown-runtime-verification", "unknown-redis-runtime-result"]
+        },
+        {
+          "question_id": "question-contribution",
+          "text": "서비스 안정성과 사용자 경험을 함께 높이기 위해 API 계약, 데이터 모델, 운영 신호를 하나의 흐름으로 관리하겠습니다. 기능을 맡으면 먼저 사용자의 성공 조건과 실패 시 다음 행동을 정의하고, 그 기준을 요청·응답 형식과 상태 코드에 반영하겠습니다. 데이터베이스에서는 중복·부분 성공·동시 요청을 고려해 제약과 트랜잭션을 설계하고, API와 저장소 테스트로 변경 영향을 확인하겠습니다. 대규모 트래픽에 대해서는 처리량과 지연뿐 아니라 재시도와 오류율, 메시지 적체를 관찰해 병목을 좁히겠습니다. 사용자가 같은 요청을 반복하거나 결과를 불안해하지 않도록 멱등성, 진행 상태와 오류 안내도 보완하며 신뢰할 수 있는 서비스를 만들겠습니다.",
+          "char_count": 355,
+          "primary_claim": "API 계약·데이터 모델·운영 신호를 함께 관리해 신뢰 가능한 사용자 흐름을 만든다.",
+          "evidence_refs": ["question-contribution", "role-concern-java-spring-api-data", "role-concern-scale-stability-ux", "applicant-value-maintainability", "project-claim-kafka-reliability-study"],
+          "inference_refs": ["fit-event-storage-and-stability"],
+          "unknown_refs": ["unknown-q4-character-limit", "unknown-production-use", "unknown-exact-contribution"]
+        }
+      ],
+      "mandatory_gates": [
+        {"id": "request-and-question-coverage", "status": "unavailable", "evidence_refs": ["question-contribution", "unknown-q4-character-limit"], "comment": "Q4의 실제 글자수 규칙이 없어 제출용 분량 확정은 보류한다."},
+        {"id": "source-and-freshness-boundary", "status": "unavailable", "evidence_refs": ["source-nextwave-posting", "company-context-unverified"], "comment": "회사·공고 원문은 독립 확인하지 못했다."},
+        {"id": "applicant-attribution-and-confirmation", "status": "unavailable", "evidence_refs": ["applicant-fact-redis-refactor", "unknown-exact-contribution"], "comment": "직접 변경 범위와 의사결정 확인이 필요하다."},
+        {"id": "project-evidence-and-causality", "status": "unavailable", "evidence_refs": ["project-claim-after-commit-mail", "unknown-runtime-verification"], "comment": "공개 코드 구조는 확인되지만 실제 실행 결과는 미확인이다."},
+        {"id": "role-domain-language-clarity", "status": "pass", "evidence_refs": ["role-concern-java-spring-api-data", "project-claim-module-responsibility"], "comment": "API 계약과 데이터 책임 언어로 직무를 설명했다."},
+        {"id": "publication-and-privacy-safety", "status": "pass", "evidence_refs": ["source-github-profile", "source-bank-project-readme"], "comment": "공개 출처와 개인정보 경계를 지켰다."}
+      ],
+      "dimensions": [
+        {"id": "question-fit-and-differentiation", "rating": 3.9, "weighted_score": 19.5, "evidence_refs": ["question-strength", "question-motivation", "question-problem", "question-contribution"], "comment": "API 계약이라는 중심 관점이 네 문항에서 일관되며 역할이 겹치지 않는다."},
+        {"id": "role-and-domain-alignment", "rating": 3.6, "weighted_score": 18, "evidence_refs": ["role-concern-java-spring-api-data", "role-concern-scale-stability-ux"], "comment": "공고 요구와 API·데이터·운영 신호를 연결했으나 회사 고유 정보는 없다."},
+        {"id": "applicant-viewpoint-and-values", "rating": 3.6, "weighted_score": 16.2, "evidence_refs": ["applicant-value-maintainability", "project-claim-module-responsibility"], "comment": "신뢰와 명확한 책임을 중시하는 관점이 드러난다."},
+        {"id": "evidence-causality-and-attribution", "rating": 3.8, "weighted_score": 17.1, "evidence_refs": ["project-claim-redis-mail-session", "project-claim-after-commit-mail", "project-claim-redis-tests"], "comment": "외부 효과와 트랜잭션 순서의 인과를 공개 근거와 함께 제시했다."},
+        {"id": "project-abstraction-and-transfer", "rating": 3.8, "weighted_score": 13.3, "evidence_refs": ["project-claim-module-responsibility", "fit-domain-and-responsibility"], "comment": "프로젝트 구조를 REST API와 데이터 책임으로 전환했다."},
+        {"id": "clarity-and-interview-defensibility", "rating": 3.8, "weighted_score": 9.5, "evidence_refs": ["project-claim-after-commit-mail", "unknown-runtime-verification"], "comment": "설계 설명은 선명하지만 실행 결과 확인이 필요하다."}
+      ],
+      "total_score": 93.6,
+      "qualified": false,
+      "selection_guidance": "API 계약과 책임 경계를 강조하고 싶을 때 적합하다. 면접에서는 실제 API·데이터 변경 범위를 준비한다."
+    },
+    {
+      "id": "candidate-set-3",
+      "strategy": "동작을 검증 가능한 상태로 바꾸고 안정성 신호를 관리하는 개발자",
+      "answers": [
+        {
+          "question_id": "question-strength",
+          "text": "저의 강점은 동작 여부에서 멈추지 않고 결과를 확인할 수 있는 상태까지 구현하는 습관입니다. Spring 기반 프로젝트에서 Redis 세션 저장소와 인증 메일 저장소를 추가하면서 저장·조회·삭제 테스트를 함께 작성했습니다. Kafka 학습 과정에서도 파티션, 컨슈머 랙, ISR과 재처리 조건이 서비스 안정성에 미치는 영향을 정리했습니다. 이런 경험을 바탕으로 넥스트웨이브 테크에서는 REST API의 정상 응답만 확인하지 않고 중복·장애·복구 상황까지 검증 기준으로 삼겠습니다. 측정하지 않은 성과를 주장하지 않고, 확인 가능한 로그와 테스트를 남기는 것이 저의 강점입니다.",
+          "char_count": 322,
+          "primary_claim": "기능 동작을 테스트·로그·복구 기준으로 확장해 확인 가능한 상태로 만든다.",
+          "evidence_refs": ["question-strength", "role-concern-scale-stability-ux", "applicant-fact-redis-refactor", "project-claim-redis-tests", "project-claim-kafka-reliability-study"],
+          "inference_refs": ["fit-event-storage-and-stability"],
+          "unknown_refs": ["unknown-exact-contribution"]
+        },
+        {
+          "question_id": "question-motivation",
+          "text": "넥스트웨이브 테크에 관심을 갖게 된 이유는 공고가 백엔드 개발자에게 빠른 기능 구현뿐 아니라 대규모 트래픽과 서비스 안정성까지 요구하기 때문입니다. 사용자가 체감하는 품질은 API가 한 번 성공하는 데서 끝나지 않고, 요청이 몰리거나 일부 의존성이 느려져도 일관된 결과를 주는지에서 결정된다고 생각합니다. 저는 Spring JPA 기반 핀테크 플랫폼을 만들며 인증·결제·이벤트 흐름을 나누고 Redis 저장소를 도입했으며, Kafka의 처리량과 컨슈머 랙을 공부했습니다. 이제 이 관심을 실제 서비스의 지표와 품질 개선으로 확장하고 싶습니다. 안정성을 코드와 운영의 공통 기준으로 삼는 백엔드 개발자로 성장하기 위해 지원했습니다.",
+          "char_count": 352,
+          "primary_claim": "트래픽과 안정성을 함께 요구하는 직무가 자신의 검증 중심 학습 방향과 맞아 지원한다.",
+          "evidence_refs": ["question-motivation", "role-concern-scale-stability-ux", "applicant-fact-spring-backend", "project-claim-kafka-reliability-study", "project-claim-redis-mail-session"],
+          "inference_refs": ["fit-event-storage-and-stability"],
+          "unknown_refs": ["unknown-nextwave-company-context", "unknown-production-use"]
+        },
+        {
+          "question_id": "question-problem",
+          "text": "Redis 저장소를 도입하는 과정에서 인증 메일과 세션을 기존 관계형 저장 방식에 그대로 두면 일시적으로 사용하는 정보와 핵심 업무 데이터의 수명과 접근 방식이 섞인다는 문제가 보였습니다. 더구나 인증 메일 저장 예외를 비동기 재귀 호출로 다시 시도하던 코드는 실패가 계속될 때 종료되지 않을 수 있었습니다. 저는 인증용 임시 정보와 세션 토큰을 Redis 저장소로 분리하고, 메일 발송은 계정 저장 트랜잭션이 커밋된 뒤 이벤트 리스너에서 비동기로 처리하도록 구조를 바꿨습니다. 저장소별 생성·조회·삭제 테스트와 세션 조회·삭제 테스트를 추가해 경계를 확인했습니다. 결과적으로 데이터의 수명과 외부 메일 발송 시점을 구분할 수 있었고, 문제를 숨기는 재시도보다 실패 조건을 드러내는 설계가 중요하다는 점을 배웠습니다. 실제 운영 성능 수치는 공개되지 않아 그 부분은 별도 확인이 필요합니다.",
+          "char_count": 442,
+          "primary_claim": "데이터 수명과 외부 효과의 순서를 분리하고 저장소별 테스트로 경계를 확인했다.",
+          "evidence_refs": ["question-problem", "project-claim-redis-mail-session", "project-claim-after-commit-mail", "project-claim-redis-tests", "applicant-fact-redis-refactor"],
+          "inference_refs": [],
+          "unknown_refs": ["unknown-exact-contribution", "unknown-runtime-verification", "unknown-redis-runtime-result"]
+        },
+        {
+          "question_id": "question-contribution",
+          "text": "입사 후에는 품질을 ‘테스트가 있다’는 상태가 아니라 장애를 발견하고 원인을 설명할 수 있는 상태로 만들겠습니다. API별 핵심 시나리오와 경계 조건을 테스트하고, 데이터베이스 변경에는 마이그레이션·제약·트랜잭션 검토를 함께 적용하겠습니다. 트래픽이 커지면 지연 시간, 오류율, 처리량, 큐나 컨슈머의 적체를 기준으로 병목을 확인하고, 캐시나 비동기 처리는 데이터 일관성과 재처리 방식을 정한 뒤 도입하겠습니다. 사용자에게는 실패를 숨기는 대신 재시도 가능 여부와 다음 행동을 이해할 수 있는 응답을 제공하겠습니다. 배포 후에는 변경 전후 신호를 비교해 다음 개선으로 연결하고, 확인하지 못한 결과는 과장하지 않겠습니다.",
+          "char_count": 347,
+          "primary_claim": "테스트와 운영 신호로 장애를 발견·설명·개선할 수 있는 서비스 품질을 만든다.",
+          "evidence_refs": ["question-contribution", "role-concern-scale-stability-ux", "applicant-value-maintainability", "project-claim-redis-tests", "project-claim-kafka-reliability-study"],
+          "inference_refs": ["fit-event-storage-and-stability"],
+          "unknown_refs": ["unknown-q4-character-limit", "unknown-production-use", "unknown-exact-contribution"]
+        }
+      ],
+      "mandatory_gates": [
+        {"id": "request-and-question-coverage", "status": "unavailable", "evidence_refs": ["question-contribution", "unknown-q4-character-limit"], "comment": "Q4 실제 제한 미확인으로 제출용 분량은 보류한다."},
+        {"id": "source-and-freshness-boundary", "status": "unavailable", "evidence_refs": ["source-nextwave-posting", "company-context-unverified"], "comment": "직무 요약은 사용했지만 공식 원문은 확인하지 못했다."},
+        {"id": "applicant-attribution-and-confirmation", "status": "unavailable", "evidence_refs": ["applicant-fact-redis-refactor", "unknown-exact-contribution"], "comment": "개인 기여 범위 확인이 남아 있다."},
+        {"id": "project-evidence-and-causality", "status": "unavailable", "evidence_refs": ["project-claim-redis-tests", "unknown-runtime-verification"], "comment": "테스트 파일은 보이지만 실행 결과는 미확인이다."},
+        {"id": "role-domain-language-clarity", "status": "pass", "evidence_refs": ["role-concern-scale-stability-ux", "project-claim-kafka-reliability-study"], "comment": "안정성·트래픽·지표 언어가 명확하다."},
+        {"id": "publication-and-privacy-safety", "status": "pass", "evidence_refs": ["source-github-profile", "source-bank-redis-commit"], "comment": "공개 근거와 제한을 함께 표시했다."}
+      ],
+      "dimensions": [
+        {"id": "question-fit-and-differentiation", "rating": 3.8, "weighted_score": 19, "evidence_refs": ["question-strength", "question-motivation", "question-problem", "question-contribution"], "comment": "검증과 안정성의 관점이 문항별로 행동·동기·사건·포부에 나뉜다."},
+        {"id": "role-and-domain-alignment", "rating": 3.5, "weighted_score": 17.5, "evidence_refs": ["role-concern-scale-stability-ux", "project-claim-kafka-reliability-study"], "comment": "트래픽·관찰·복구 요구와 학습 근거를 연결했다."},
+        {"id": "applicant-viewpoint-and-values", "rating": 3.8, "weighted_score": 17.1, "evidence_refs": ["applicant-value-maintainability", "project-claim-redis-tests"], "comment": "측정하지 않은 결과를 과장하지 않는 태도가 선명하다."},
+        {"id": "evidence-causality-and-attribution", "rating": 3.9, "weighted_score": 17.55, "evidence_refs": ["project-claim-redis-mail-session", "project-claim-redis-tests"], "comment": "구조 변경과 검증 파일을 연결하되 실행 결과 한계를 밝혔다."},
+        {"id": "project-abstraction-and-transfer", "rating": 3.6, "weighted_score": 12.6, "evidence_refs": ["project-claim-kafka-reliability-study", "fit-event-storage-and-stability"], "comment": "학습 근거를 운영 계획으로 옮겼지만 실운영 전이는 확인이 필요하다."},
+        {"id": "clarity-and-interview-defensibility", "rating": 3.9, "weighted_score": 9.75, "evidence_refs": ["unknown-runtime-verification", "unknown-redis-runtime-result"], "comment": "검증 한계와 면접 확인 포인트가 명시되어 방어 가능성이 높다."}
+      ],
+      "total_score": 93.5,
+      "qualified": false,
+      "selection_guidance": "안정성·검증·관찰을 강점으로 보여 주고 싶을 때 적합하다. 실제 실행 로그를 보강하면 가장 강해진다."
+    },
+    {
+      "id": "candidate-set-4",
+      "strategy": "데이터의 생명주기와 처리 경계를 설계해 일관된 서비스를 만드는 개발자",
+      "answers": [
+        {
+          "question_id": "question-strength",
+          "text": "저의 강점은 데이터의 생명주기와 처리 경계를 함께 설계하는 능력입니다. 공개 Spring 프로젝트에서 핵심 업무 데이터는 관계형 저장소와 도메인 모델로 다루고, 세션과 인증 메일처럼 임시성이 큰 정보는 Redis 저장소로 분리했습니다. 또한 Kafka 이벤트를 계정·결제·구매 등의 흐름으로 나누어 소비 애플리케이션이 필요한 데이터소스와 트랜잭션을 선택하도록 구성했습니다. 넥스트웨이브 테크에서도 데이터가 언제 생성되고 누구에게 필요한지부터 살펴 REST API와 데이터베이스 모델을 안정적으로 연결하겠습니다.",
+          "char_count": 285,
+          "primary_claim": "데이터의 수명과 처리 책임에 따라 저장소·이벤트·트랜잭션 경계를 설계한다.",
+          "evidence_refs": ["question-strength", "role-concern-java-spring-api-data", "applicant-fact-bank-platform", "applicant-fact-redis-refactor", "project-claim-redis-mail-session"],
+          "inference_refs": ["fit-event-storage-and-stability"],
+          "unknown_refs": ["unknown-exact-contribution"]
+        },
+        {
+          "question_id": "question-motivation",
+          "text": "제가 넥스트웨이브 테크와 백엔드 직무를 선택한 계기는 데이터가 실제 사용자 행동과 서비스 신뢰로 이어지는 과정을 더 깊이 다루고 싶어서입니다. 공고의 Java/Spring 개발, REST API, 데이터베이스 모델링은 요청을 받아 상태를 바꾸고 결과를 돌려주는 기본 흐름을 설계하는 일입니다. 여기에 대규모 트래픽 대응과 안정성 개선이 더해져야 사용자가 결제나 조회 결과를 믿고 다음 행동을 할 수 있습니다. 저는 핀테크 플랫폼에서 도메인별 저장 책임을 나누고 Redis·Kafka의 사용 조건을 공부했습니다. 넥스트웨이브 테크에서 이 경험을 실제 데이터 일관성, 장애 대응, 사용자 경험 개선으로 발전시키고 싶어 지원했습니다.",
+          "char_count": 351,
+          "primary_claim": "데이터 일관성과 사용자 신뢰를 함께 다루는 백엔드 직무가 경험 방향과 맞아 지원한다.",
+          "evidence_refs": ["question-motivation", "role-concern-java-spring-api-data", "role-concern-scale-stability-ux", "applicant-fact-spring-backend", "project-claim-kafka-reliability-study"],
+          "inference_refs": ["fit-domain-and-responsibility", "fit-event-storage-and-stability"],
+          "unknown_refs": ["unknown-nextwave-company-context", "unknown-production-use"]
+        },
+        {
+          "question_id": "question-problem",
+          "text": "결제·인증 기능을 가진 플랫폼에서 저장소를 확장할 때, 모든 데이터를 관계형 DB에 같은 방식으로 보관할지 판단하는 일이 어려웠습니다. 인증 메일과 세션은 만료와 빠른 조회가 중요한 반면, 회원·결제 데이터는 업무 규칙과 영속성이 중요했습니다. 초기 인증 메일 처리에는 저장 예외가 발생하면 같은 비동기 메서드를 재귀 호출하는 코드가 있었고, 실패가 계속되면 무한 반복될 수 있었습니다. 저는 데이터의 수명과 책임을 기준으로 저장소를 나누어 인증 정보와 세션은 Redis에 두고, 메일 발송은 계정 트랜잭션 커밋 이후 이벤트로 처리했습니다. 저장·조회·삭제 테스트를 추가해 저장소 경계를 확인했습니다. 그 결과 기술 선택을 유행이 아니라 데이터 특성과 실패 순서로 설명할 수 있게 되었고, DB 모델링은 테이블을 만드는 일보다 업무 규칙과 수명을 보존하는 일이라는 점을 배웠습니다.",
+          "char_count": 437,
+          "primary_claim": "데이터 수명과 업무 영속성을 기준으로 저장소를 나누고 외부 효과의 순서를 조정했다.",
+          "evidence_refs": ["question-problem", "project-claim-redis-mail-session", "project-claim-after-commit-mail", "project-claim-redis-tests", "applicant-fact-redis-refactor"],
+          "inference_refs": [],
+          "unknown_refs": ["unknown-exact-contribution", "unknown-runtime-verification", "unknown-redis-runtime-result"]
+        },
+        {
+          "question_id": "question-contribution",
+          "text": "입사 후에는 데이터 모델을 API 구현 뒤에 두지 않고 서비스 설계의 출발점으로 삼겠습니다. 사용자 행동과 업무 규칙을 먼저 정리한 뒤 상태 전이, 식별자, 중복 방지, 이력 보존이 드러나는 모델을 만들고 REST API와 일치시키겠습니다. 외부 시스템이나 메시지 처리가 포함되면 성공 시점과 재처리 기준, 실패 시 사용자에게 보여 줄 상태를 함께 정의하겠습니다. 트래픽이 증가할 때는 무작정 저장소를 분리하기보다 읽기·쓰기 패턴과 병목을 측정한 후 캐시·비동기 처리·인덱스 개선을 선택하겠습니다. 이렇게 데이터 일관성과 응답 경험을 함께 관리해 장애가 나도 원인을 좁히고 안전하게 복구할 수 있는 서비스를 만들겠습니다.",
+          "char_count": 347,
+          "primary_claim": "데이터 모델과 API를 일치시키고 재처리·복구 기준까지 설계해 일관된 서비스를 만든다.",
+          "evidence_refs": ["question-contribution", "role-concern-java-spring-api-data", "role-concern-scale-stability-ux", "applicant-value-maintainability", "project-claim-redis-mail-session"],
+          "inference_refs": ["fit-event-storage-and-stability"],
+          "unknown_refs": ["unknown-q4-character-limit", "unknown-production-use", "unknown-exact-contribution"]
+        }
+      ],
+      "mandatory_gates": [
+        {"id": "request-and-question-coverage", "status": "unavailable", "evidence_refs": ["question-contribution", "unknown-q4-character-limit"], "comment": "Q4 실제 글자수 규칙이 없어 제출용 분량은 보류한다."},
+        {"id": "source-and-freshness-boundary", "status": "unavailable", "evidence_refs": ["source-nextwave-posting", "company-context-unverified"], "comment": "공식 회사·공고 원문은 독립 확인하지 못했다."},
+        {"id": "applicant-attribution-and-confirmation", "status": "unavailable", "evidence_refs": ["applicant-fact-redis-refactor", "unknown-exact-contribution"], "comment": "직접 설계·구현 범위 확인이 필요하다."},
+        {"id": "project-evidence-and-causality", "status": "unavailable", "evidence_refs": ["project-claim-redis-mail-session", "unknown-runtime-verification"], "comment": "구조와 테스트 파일은 보이지만 실제 결과는 미확인이다."},
+        {"id": "role-domain-language-clarity", "status": "pass", "evidence_refs": ["role-concern-java-spring-api-data", "project-claim-redis-mail-session"], "comment": "데이터 수명·트랜잭션·API 책임을 직무 언어로 연결했다."},
+        {"id": "publication-and-privacy-safety", "status": "pass", "evidence_refs": ["source-github-profile", "source-bank-project-readme"], "comment": "공개 근거만 보고서에 노출했다."}
+      ],
+      "dimensions": [
+        {"id": "question-fit-and-differentiation", "rating": 3.8, "weighted_score": 19, "evidence_refs": ["question-strength", "question-motivation", "question-problem", "question-contribution"], "comment": "데이터 중심 관점이 문항별로 강점·동기·사건·기여로 분리된다."},
+        {"id": "role-and-domain-alignment", "rating": 3.6, "weighted_score": 18, "evidence_refs": ["role-concern-java-spring-api-data", "role-concern-scale-stability-ux"], "comment": "DB 모델링과 안정성 요구를 일관성·복구 행동으로 번역했다."},
+        {"id": "applicant-viewpoint-and-values", "rating": 3.7, "weighted_score": 16.65, "evidence_refs": ["applicant-value-maintainability", "project-claim-redis-mail-session"], "comment": "유지보수와 데이터 수명을 중시하는 판단 기준이 보인다."},
+        {"id": "evidence-causality-and-attribution", "rating": 3.9, "weighted_score": 17.55, "evidence_refs": ["project-claim-redis-mail-session", "project-claim-after-commit-mail", "project-claim-redis-tests"], "comment": "문제의 데이터 특성과 조치가 인과적으로 이어진다."},
+        {"id": "project-abstraction-and-transfer", "rating": 3.9, "weighted_score": 13.65, "evidence_refs": ["project-claim-redis-mail-session", "fit-event-storage-and-stability"], "comment": "저장소 선택을 백엔드의 데이터 책임과 복구 설계로 전환했다."},
+        {"id": "clarity-and-interview-defensibility", "rating": 3.7, "weighted_score": 9.25, "evidence_refs": ["unknown-runtime-verification", "unknown-redis-runtime-result"], "comment": "기술 선택은 설명 가능하나 실제 효과 확인이 남아 있다."}
+      ],
+      "total_score": 94.1,
+      "qualified": false,
+      "selection_guidance": "데이터베이스 모델링과 일관성 책임을 강조하려면 적합하다. 실제 모델·제약·트랜잭션 사례를 추가한다."
+    },
+    {
+      "id": "candidate-set-5",
+      "strategy": "사용자 행동을 API와 상태 흐름으로 연결해 안정적인 실패 경험까지 설계하는 개발자",
+      "answers": [
+        {
+          "question_id": "question-strength",
+          "text": "저의 강점은 사용자의 행동을 끝까지 따라가며 필요한 API와 상태를 설계하는 능력입니다. 핀테크 프로젝트에서 사용자가 인증하고, 자산과 결제 흐름을 확인하며, 그룹 결제 요청과 결과를 공유하는 과정을 서비스 기능으로 연결했습니다. 이때 화면 단위로 기능을 나열하기보다 요청이 어떤 업무 상태를 만들고 다음 단계에서 어떤 정보가 필요한지 기준으로 도메인과 API를 나누었습니다. 넥스트웨이브 테크에서도 사용자의 한 번의 요청이 안정적인 처리와 이해 가능한 결과로 이어지도록 백엔드의 책임을 설계하겠습니다.",
+          "char_count": 281,
+          "primary_claim": "사용자 행동을 업무 상태·API·다음 단계의 정보 흐름으로 연결한다.",
+          "evidence_refs": ["question-strength", "role-concern-java-spring-api-data", "applicant-fact-bank-platform", "project-claim-spring-jpa-msa"],
+          "inference_refs": ["fit-domain-and-responsibility"],
+          "unknown_refs": ["unknown-exact-contribution"]
+        },
+        {
+          "question_id": "question-motivation",
+          "text": "넥스트웨이브 테크의 백엔드 직무에 끌린 것은 기술이 사용자 경험을 바꾸는 가장 직접적인 접점이 API와 데이터 흐름이라고 생각하기 때문입니다. 공고의 Java/Spring 기반 서비스 개발과 REST API 설계는 사용자의 행동을 정확한 처리로 바꾸는 일이고, 데이터베이스 모델링과 트래픽 대응은 그 경험을 반복 가능하게 만드는 기반입니다. 저는 Spring 핀테크 프로젝트에서 인증·결제·그룹 기능을 하나의 사용자 흐름으로 연결하고, Kafka 이벤트와 Redis 저장소가 언제 필요한지 학습했습니다. 이 경험을 바탕으로 기능의 성공뿐 아니라 대기·중복·오류 상황에서도 사용자가 다음 행동을 알 수 있는 서비스를 만들고 싶어 지원했습니다.",
+          "char_count": 358,
+          "primary_claim": "API와 데이터 흐름으로 사용자 경험을 개선하는 백엔드 역할이 경험 방향과 맞아 지원한다.",
+          "evidence_refs": ["question-motivation", "role-concern-java-spring-api-data", "role-concern-scale-stability-ux", "applicant-fact-spring-backend", "project-claim-spring-jpa-msa"],
+          "inference_refs": ["fit-domain-and-responsibility", "fit-event-storage-and-stability"],
+          "unknown_refs": ["unknown-nextwave-company-context", "unknown-production-use"]
+        },
+        {
+          "question_id": "question-problem",
+          "text": "인증 메일과 회원가입 흐름을 연결하면서 사용자에게는 단순한 ‘메일 발송’이지만 시스템에는 저장, 트랜잭션, 외부 효과가 함께 있다는 점이 기술적 어려움이었습니다. 기존 비동기 메서드는 저장 예외가 생기면 자기 자신을 다시 호출해 문제를 해결하려 했고, 같은 실패가 반복되면 요청을 끝내지 못할 수 있었습니다. 저는 인증 메일과 세션처럼 임시로 빠르게 조회할 정보는 Redis에 저장하고, 메일 발송은 계정 저장이 성공적으로 커밋된 뒤 이벤트 리스너에서 비동기로 수행하도록 분리했습니다. 관련 저장소의 저장·조회·삭제 테스트를 추가해 사용자가 받은 토큰이 실제 인증 정보와 연결되는지도 확인했습니다. 그 결과 사용자 흐름을 지키려면 성공 화면보다 실패 시점과 복구 방법을 먼저 설계해야 한다는 점을 배웠습니다. 운영 지표는 공개 자료에 없으므로 실제 효과는 입사 후에도 측정으로 확인하겠습니다.",
+          "char_count": 443,
+          "primary_claim": "사용자 흐름을 지키기 위해 저장·트랜잭션·외부 발송을 분리하고 실패 시점을 설계했다.",
+          "evidence_refs": ["question-problem", "project-claim-redis-mail-session", "project-claim-after-commit-mail", "project-claim-redis-tests", "applicant-fact-redis-refactor"],
+          "inference_refs": [],
+          "unknown_refs": ["unknown-exact-contribution", "unknown-runtime-verification", "unknown-redis-runtime-result"]
+        },
+        {
+          "question_id": "question-contribution",
+          "text": "입사 후에는 사용자 경험을 API의 응답 시간과 성공률만으로 판단하지 않겠습니다. 사용자가 기다리는 동안 어떤 상태를 볼 수 있는지, 실패하면 재시도해도 중복되지 않는지, 문제가 생겼을 때 다음 행동을 알 수 있는지를 백엔드 설계에 포함하겠습니다. Java/Spring 서비스의 요청 검증과 오류 응답을 일관되게 만들고, 데이터베이스의 상태 전이와 이벤트 재처리 기준을 함께 관리하겠습니다. 트래픽이 증가하면 캐시와 비동기 처리를 적용하되 데이터 일관성·순서·중복을 먼저 검토하고, 로그와 지표로 실제 개선을 확인하겠습니다. 사용자가 안심하고 서비스를 계속 이용할 수 있도록 안정적인 처리와 친절한 실패 경험을 함께 만드는 개발자가 되겠습니다.",
+          "char_count": 360,
+          "primary_claim": "정상 경로뿐 아니라 대기·중복·오류 상황의 다음 행동까지 설계해 사용자 경험을 개선한다.",
+          "evidence_refs": ["question-contribution", "role-concern-java-spring-api-data", "role-concern-scale-stability-ux", "applicant-value-maintainability", "project-claim-kafka-reliability-study"],
+          "inference_refs": ["fit-event-storage-and-stability"],
+          "unknown_refs": ["unknown-q4-character-limit", "unknown-production-use", "unknown-exact-contribution"]
+        }
+      ],
+      "mandatory_gates": [
+        {"id": "request-and-question-coverage", "status": "unavailable", "evidence_refs": ["question-contribution", "unknown-q4-character-limit"], "comment": "Q4 실제 글자수 규칙 확인 전에는 제출용 분량을 확정하지 않는다."},
+        {"id": "source-and-freshness-boundary", "status": "unavailable", "evidence_refs": ["source-nextwave-posting", "company-context-unverified"], "comment": "공식 회사·공고 원문이 없어 회사 맞춤성은 제한된다."},
+        {"id": "applicant-attribution-and-confirmation", "status": "unavailable", "evidence_refs": ["applicant-fact-redis-refactor", "unknown-exact-contribution"], "comment": "직접 수행한 범위를 지원자가 확인해야 한다."},
+        {"id": "project-evidence-and-causality", "status": "unavailable", "evidence_refs": ["project-claim-after-commit-mail", "unknown-runtime-verification"], "comment": "공개 구조와 테스트 파일은 있으나 실제 사용자 결과는 미확인이다."},
+        {"id": "role-domain-language-clarity", "status": "pass", "evidence_refs": ["role-concern-java-spring-api-data", "project-claim-spring-jpa-msa"], "comment": "사용자 흐름을 API·상태·데이터 언어로 설명했다."},
+        {"id": "publication-and-privacy-safety", "status": "pass", "evidence_refs": ["source-github-profile", "source-bank-project-readme"], "comment": "보고서 공개 범위와 개인정보 경계를 지켰다."}
+      ],
+      "dimensions": [
+        {"id": "question-fit-and-differentiation", "rating": 3.9, "weighted_score": 19.5, "evidence_refs": ["question-strength", "question-motivation", "question-problem", "question-contribution"], "comment": "사용자 흐름이라는 관점이 문항별 역할을 침범하지 않는다."},
+        {"id": "role-and-domain-alignment", "rating": 3.5, "weighted_score": 17.5, "evidence_refs": ["role-concern-java-spring-api-data", "role-concern-scale-stability-ux"], "comment": "API와 데이터가 사용자 경험으로 이어지는 직무 연결이 분명하다."},
+        {"id": "applicant-viewpoint-and-values", "rating": 3.7, "weighted_score": 16.65, "evidence_refs": ["applicant-value-maintainability", "project-claim-spring-jpa-msa"], "comment": "사용자가 다음 행동을 알 수 있어야 한다는 관점이 선명하다."},
+        {"id": "evidence-causality-and-attribution", "rating": 3.7, "weighted_score": 16.65, "evidence_refs": ["project-claim-redis-mail-session", "project-claim-after-commit-mail"], "comment": "사용자 흐름과 기술 조치의 관계가 드러나지만 결과 지표는 없다."},
+        {"id": "project-abstraction-and-transfer", "rating": 3.8, "weighted_score": 13.3, "evidence_refs": ["project-claim-spring-jpa-msa", "fit-domain-and-responsibility"], "comment": "핀테크 기능을 사용자 상태와 API 책임으로 번역했다."},
+        {"id": "clarity-and-interview-defensibility", "rating": 3.9, "weighted_score": 9.75, "evidence_refs": ["unknown-runtime-verification", "unknown-production-use"], "comment": "실제 운영 여부를 확인 질문으로 남겨 과장을 피했다."}
+      ],
+      "total_score": 93.35,
+      "qualified": false,
+      "selection_guidance": "사용자 경험과 백엔드 책임을 함께 보여 주고 싶을 때 적합하다. 실제 사용자·배포 여부를 보강한다."
+    }
+  ],
+  "evaluation": {
+    "policy_ref": "artifacts/agent-loop/document/job-application-report-production/vocabularies/job-application-report-quality-policy.json",
+    "rating_min": 0,
+    "rating_max": 4,
+    "threshold": 90,
+    "score_meaning": "editing_fitness_not_hiring_probability",
+    "dimension_weights": [
+      {"id": "question-fit-and-differentiation", "weight": 20},
+      {"id": "role-and-domain-alignment", "weight": 20},
+      {"id": "applicant-viewpoint-and-values", "weight": 18},
+      {"id": "evidence-causality-and-attribution", "weight": 18},
+      {"id": "project-abstraction-and-transfer", "weight": 14},
+      {"id": "clarity-and-interview-defensibility", "weight": 10}
+    ]
+  },
+  "revision": {
+    "configured_passes": 1,
+    "performed_passes": 1,
+    "frozen_finding_ref": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/frozen-findings.json",
+    "changes": [
+      {"candidate_id": "candidate-set-1", "criterion_ids": ["role-and-domain-alignment", "clarity-and-interview-defensibility"], "before_score": 91.5, "after_score": 94.05, "change": "기술 목록을 책임 단위·트랜잭션·커밋 후 발송의 인과로 바꾸고 운영 성과 한계를 명시했다.", "reason": "백엔드 공고 요구와 공개 근거를 연결하면서 확인되지 않은 성능 주장을 제거하기 위해서다."},
+      {"candidate_id": "candidate-set-2", "criterion_ids": ["question-fit-and-differentiation", "evidence-causality-and-attribution"], "before_score": 91.2, "after_score": 93.6, "change": "API 계약과 외부 효과의 순서를 문항별로 분리하고 저장소 테스트를 행동 근거로 배치했다.", "reason": "문항 간 중복을 줄이고 문제 해결의 원인·행동·결과를 더 방어 가능하게 만들기 위해서다."},
+      {"candidate_id": "candidate-set-3", "criterion_ids": ["applicant-viewpoint-and-values", "clarity-and-interview-defensibility"], "before_score": 90.8, "after_score": 93.5, "change": "검증 중심 강점을 테스트 파일과 운영 지표의 한계까지 포함하는 문장으로 좁혔다.", "reason": "학습 경험을 실운영 성과로 과장하지 않고 면접에서 확인할 범위를 남기기 위해서다."},
+      {"candidate_id": "candidate-set-4", "criterion_ids": ["project-abstraction-and-transfer", "evidence-causality-and-attribution"], "before_score": 91.4, "after_score": 94.1, "change": "Redis 선택을 데이터 수명·영속성·외부 효과의 순서로 설명하고 DB 모델링 직무와 연결했다.", "reason": "저장소 이름보다 기술 선택 기준이 읽히게 하기 위해서다."},
+      {"candidate_id": "candidate-set-5", "criterion_ids": ["role-and-domain-alignment", "clarity-and-interview-defensibility"], "before_score": 90.7, "after_score": 93.35, "change": "사용자 성공 경로뿐 아니라 대기·중복·오류 시 다음 행동까지 포부에 포함했다.", "reason": "사용자 경험과 백엔드 안정성의 연결을 구체화하고 운영 미확인을 보존하기 위해서다."}
+    ]
+  },
+  "qualified_candidate_ids": [],
+  "report": {
+    "format": "markdown",
+    "artifacts": [
+      {"id": "artifact-primary-report", "path": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/self-introduction-5sets.md", "media_type": "text/markdown", "role": "primary_report", "digest": "bc43ecb386dc1c16ecef6baa300400ed4fe708f9694eb0898923e36c10c6fcf8"}
+    ],
+    "section_ids": ["company-role-analysis", "candidate-answers", "candidate-evaluation", "interview-preparation", "material-requests"],
+    "analysis_sections": [
+      {"id": "analysis-company-role", "title": "기업·직무 분석을 답안에 적용한 방식", "body": "회사 고유 정보는 확인하지 못했으므로 공고에서 제공된 Java/Spring, REST API, 데이터베이스, 트래픽, 안정성 요구만 사용하고 회사 제품·문화에 대한 추측은 제외했다.", "evidence_refs": ["company-context-unverified", "role-concern-java-spring-api-data", "role-concern-scale-stability-ux"]},
+      {"id": "analysis-github-evidence", "title": "공개 GitHub 근거를 직무 언어로 전환한 방식", "body": "Spring JPA 핀테크 플랫폼의 모듈·게이트웨이·이벤트·Redis 변경을 도메인 책임, 데이터 수명, 트랜잭션 순서, 검증 행동으로 번역했다.", "evidence_refs": ["project-claim-spring-jpa-msa", "project-claim-redis-mail-session", "project-claim-after-commit-mail", "project-claim-redis-tests"]},
+      {"id": "analysis-unknown-boundary", "title": "초안과 제출용 확정의 경계", "body": "공개 코드 구조와 커밋은 초안 근거로 사용했지만 직접 변경 범위, 실행 결과, 운영 지표, Q4 글자수, 회사 공식 정보는 미확인으로 남겼다.", "evidence_refs": ["unknown-exact-contribution", "unknown-runtime-verification", "unknown-production-use", "unknown-q4-character-limit", "unknown-nextwave-company-context"]}
+    ],
+    "material_requests": [
+      {"id": "unknown-exact-contribution", "question_ids": ["question-strength", "question-problem", "question-contribution"], "needed_fact": "직접 변경한 파일·영역과 핵심 설계 결정", "why_it_matters": "공개 저장소의 구조를 지원자 개인의 행동으로 정확히 귀속한다.", "acceptable_evidence": "커밋 링크나 본인 설명 2~3개", "interview_use": "왜 해당 경계를 선택했는지 설명하는 근거로 사용한다."},
+      {"id": "unknown-runtime-verification", "question_ids": ["question-problem", "question-contribution"], "needed_fact": "변경을 실행·검증한 명령, 환경, 결과", "why_it_matters": "테스트 파일 존재와 실제 검증 실행을 구분한다.", "acceptable_evidence": "실행 로그·CI 결과·재현 절차", "interview_use": "문제 해결 결과와 남은 한계를 설명한다."},
+      {"id": "unknown-redis-runtime-result", "question_ids": ["question-problem"], "needed_fact": "Redis 도입 후 실제 변화와 남은 한계", "why_it_matters": "구조 개선을 운영 성과로 과장하지 않는다.", "acceptable_evidence": "전후 재현 결과·오류 기록·미확인 확인", "interview_use": "성공 기준과 추가 개선 방향을 설명한다."},
+      {"id": "unknown-production-use", "question_ids": ["question-motivation", "question-contribution"], "needed_fact": "배포·사용자·트래픽·운영 여부", "why_it_matters": "개발 경험과 운영 경험을 정확히 구분한다.", "acceptable_evidence": "배포·모니터링 기록 또는 미배포 확인", "interview_use": "대규모 트래픽 대응 계획의 출발점을 조정한다."},
+      {"id": "unknown-nextwave-company-context", "question_ids": ["question-motivation"], "needed_fact": "실제 회사 사업·제품·공고 원문", "why_it_matters": "지원동기를 회사 고유 맥락으로 한 문장 보완한다.", "acceptable_evidence": "공식 홈페이지·공고 원문·제품 소개", "interview_use": "왜 이 회사인지 구체적으로 답한다."},
+      {"id": "unknown-q4-character-limit", "question_ids": ["question-contribution"], "needed_fact": "4번 문항의 실제 글자수 제한", "why_it_matters": "현재 Q4는 작업용 1,000자 상한만 검증했다.", "acceptable_evidence": "지원 페이지 입력창 또는 공고의 글자수 규칙", "interview_use": "제출 전 최종 문장을 정확히 압축한다."}
+    ],
+    "interview_preparation": [
+      {"candidate_id": "candidate-set-1", "question_id": "question-strength", "review_point": "책임 단위로 나눈 실제 모듈과 본인 변경 범위를 준비한다.", "likely_follow_up": "어떤 책임을 어디에서 분리했고 어떤 대안을 검토했나요?", "confirmation_needed": "직접 수정한 파일·결정·검증 결과"},
+      {"candidate_id": "candidate-set-1", "question_id": "question-motivation", "review_point": "Java/Spring 경험이 공고의 API·데이터 책임으로 어떻게 이어지는지 준비한다.", "likely_follow_up": "넥스트웨이브 테크에서 가장 먼저 개선하고 싶은 백엔드 문제는 무엇인가요?", "confirmation_needed": "회사 제품·고객·공고 원문"},
+      {"candidate_id": "candidate-set-1", "question_id": "question-problem", "review_point": "재귀 재시도의 재현 조건과 커밋 후 발송으로 바꾼 이유를 설명한다.", "likely_follow_up": "Redis와 DB 중 어떤 정보를 어디에 두는 기준은 무엇이었나요?", "confirmation_needed": "실행 로그와 실제 결과"},
+      {"candidate_id": "candidate-set-1", "question_id": "question-contribution", "review_point": "안정성 개선의 첫 관찰 지표를 구체화한다.", "likely_follow_up": "캐시와 비동기 처리를 도입할 때 무엇을 먼저 측정하겠습니까?", "confirmation_needed": "운영·트래픽 경험 여부"},
+      {"candidate_id": "candidate-set-2", "question_id": "question-strength", "review_point": "API 계약과 데이터 책임의 실제 예를 준비한다.", "likely_follow_up": "상태 코드와 재처리 기준을 어떻게 정했나요?", "confirmation_needed": "API·데이터 변경 범위"},
+      {"candidate_id": "candidate-set-2", "question_id": "question-motivation", "review_point": "서비스 신뢰를 설계하고 싶다는 동기를 프로젝트 장면과 연결한다.", "likely_follow_up": "코드 한 곳이 아니라 전체 흐름에서 해결한 사례는 무엇인가요?", "confirmation_needed": "직접 수행한 흐름"},
+      {"candidate_id": "candidate-set-2", "question_id": "question-problem", "review_point": "계정 트랜잭션과 외부 메일의 순서를 도식화해 둔다.", "likely_follow_up": "커밋 전에 메일을 보내면 어떤 문제가 생기나요?", "confirmation_needed": "재현·테스트 결과"},
+      {"candidate_id": "candidate-set-2", "question_id": "question-contribution", "review_point": "멱등성과 메시지 적체를 API 운영 신호로 설명한다.", "likely_follow_up": "중복 요청과 부분 성공을 어떻게 다루겠습니까?", "confirmation_needed": "실제 운영 경험 여부"},
+      {"candidate_id": "candidate-set-3", "question_id": "question-strength", "review_point": "추가한 테스트의 범위와 실행 여부를 구분해 말한다.", "likely_follow_up": "테스트가 통과하면 안정성이 보장된다고 볼 수 있나요?", "confirmation_needed": "테스트 실행 증거"},
+      {"candidate_id": "candidate-set-3", "question_id": "question-motivation", "review_point": "Kafka 학습을 실운영 경험처럼 말하지 않도록 경계를 준비한다.", "likely_follow_up": "컨슈머 랙이 늘면 어떤 순서로 원인을 좁히겠습니까?", "confirmation_needed": "실제 Kafka 운영 여부"},
+      {"candidate_id": "candidate-set-3", "question_id": "question-problem", "review_point": "데이터 수명 분리와 실패 조건을 상황·행동·결과로 재현한다.", "likely_follow_up": "Redis 도입 후 무엇이 실제로 달라졌나요?", "confirmation_needed": "전후 관찰 결과"},
+      {"candidate_id": "candidate-set-3", "question_id": "question-contribution", "review_point": "배포 후 비교할 안정성 지표를 세 가지로 좁힌다.", "likely_follow_up": "지연·오류·적체 중 우선순위를 어떻게 정하나요?", "confirmation_needed": "운영 환경과 지표"},
+      {"candidate_id": "candidate-set-4", "question_id": "question-strength", "review_point": "관계형 DB와 Redis의 선택 기준을 데이터 수명으로 설명한다.", "likely_follow_up": "캐시와 원본 데이터의 불일치를 어떻게 다루나요?", "confirmation_needed": "실제 모델·만료·일관성 정책"},
+      {"candidate_id": "candidate-set-4", "question_id": "question-motivation", "review_point": "데이터 일관성과 사용자 신뢰의 연결을 회사 업무로 번역한다.", "likely_follow_up": "데이터 모델링에서 가장 먼저 확인할 업무 규칙은 무엇인가요?", "confirmation_needed": "회사 도메인 정보"},
+      {"candidate_id": "candidate-set-4", "question_id": "question-problem", "review_point": "저장소 선택 대안과 버린 이유를 준비한다.", "likely_follow_up": "왜 기존 DB 재시도보다 저장소 분리가 적절했나요?", "confirmation_needed": "대안 비교와 실행 결과"},
+      {"candidate_id": "candidate-set-4", "question_id": "question-contribution", "review_point": "재처리와 복구 기준을 데이터 모델·API와 함께 설명한다.", "likely_follow_up": "메시지가 중복 소비되면 데이터 모델은 어떻게 보호하나요?", "confirmation_needed": "실제 이벤트 처리 범위"},
+      {"candidate_id": "candidate-set-5", "question_id": "question-strength", "review_point": "사용자 행동에서 API 상태로 번역한 구체적인 흐름을 준비한다.", "likely_follow_up": "그룹 결제 요청의 상태는 어떤 기준으로 바뀌나요?", "confirmation_needed": "직접 구현한 도메인 범위"},
+      {"candidate_id": "candidate-set-5", "question_id": "question-motivation", "review_point": "대기·중복·오류 상황에 관심을 갖게 된 계기를 구체화한다.", "likely_follow_up": "사용자가 실패 후 무엇을 해야 하는지 어떻게 설계하겠습니까?", "confirmation_needed": "회사 서비스와 사용자 맥락"},
+      {"candidate_id": "candidate-set-5", "question_id": "question-problem", "review_point": "성공 화면보다 실패 시점과 복구를 먼저 본 판단을 설명한다.", "likely_follow_up": "메일 발송 실패가 회원가입 흐름에 미치는 영향은 무엇인가요?", "confirmation_needed": "실제 실패·복구 결과"},
+      {"candidate_id": "candidate-set-5", "question_id": "question-contribution", "review_point": "친절한 실패 경험을 HTTP 응답·상태·재시도로 구체화한다.", "likely_follow_up": "재시도 가능한 오류와 불가능한 오류를 어떻게 구분하나요?", "confirmation_needed": "Q4 제한과 운영 경험"}
+    ],
+    "publication_validation": {
+      "page_count": null,
+      "searchable_text": {"required": true, "passed": true},
+      "raster_assets": {"policy": "not_required", "asset_count": 0, "passed": true},
+      "overflow": {"policy": "no_clipped_content", "passed": true, "findings": []},
+      "visible_sources": {"source_ids": ["source-github-profile", "source-bank-project-readme", "source-bank-issue-44", "source-bank-redis-commit", "source-kafka-study"], "undeclared_source_ids": [], "passed": true},
+      "privacy": {"passed": true, "findings": []},
+      "content_policy_results": [
+        {"policy_id": "exclude-internal-bookkeeping", "status": "pass", "matches": []},
+        {"policy_id": "exclude-local-absolute-path", "status": "pass", "matches": []},
+        {"policy_id": "require-reader-sections", "status": "pass", "matches": ["지원 답안", "면접 준비", "제출 전 확인"]}
+      ],
+      "public_text_extract": "넥스트웨이브 테크 백엔드 개발 지원서 초안\n기업·직무 분석\n지원 답안\n후보별 비교\n면접 준비\n제출 전 확인"
+    }
+  },
+  "retained_unknown_ids": [
+    "unknown-exact-contribution",
+    "unknown-runtime-verification",
+    "unknown-redis-runtime-result",
+    "unknown-production-use",
+    "unknown-nextwave-company-context",
+    "unknown-q4-character-limit"
+  ],
+  "limitations": [
+    "넥스트웨이브 테크의 제공 URL이 .example 자리표시자라 회사 고유 정보와 공고 원문을 독립 검증하지 못했다.",
+    "4번 문항의 실제 글자수 제한이 없어 답변은 작업용 1,000자 상한으로만 확인했다.",
+    "공개 저장소의 구조·이슈·커밋은 확인했지만 지원자의 직접 변경 범위, 테스트 실행 결과, 배포·사용자·트래픽 지표는 확인되지 않았다.",
+    "모든 점수는 현재 근거에 대한 편집 적합도 참고값이며 역량 인증·합격 예측·제출 승인이 아니다."
+  ],
+  "authority_effect": "none"
+}

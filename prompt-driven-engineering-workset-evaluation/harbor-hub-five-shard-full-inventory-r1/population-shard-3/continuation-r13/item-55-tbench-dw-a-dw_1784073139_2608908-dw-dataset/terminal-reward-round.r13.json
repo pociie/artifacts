@@ -1,0 +1,244 @@
+{
+  "authorityEffect": "none",
+  "bindings": {
+    "evaluationReportDigest": "sha256:e038e3a38ccff6b435c0cb07a41383baa6620a917db1471fa062aa9b8fef145e",
+    "evaluationReportRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset/final-independent-evaluation.r13.json",
+    "populationAccountingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset/population-settlement-decision.r13.json",
+    "reducerOutputDigest": "sha256:6aa68d4fc7d6f0ffcc15f98ab92d7d0f023db551999306c9c0d4afbc109b15e7",
+    "reducerOutputRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset/terminal-reward-reducer-output.r13.json",
+    "settlementRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset/item-resource-settlement.r13.json",
+    "simulationEvidenceDigest": "sha256:c5f0775effade982d661d16d0df5c9aade434334530cdcb48312c939196474ea",
+    "simulationEvidenceRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset/simulation-evidence.r13.json",
+    "terminalAssessmentDigest": "sha256:d1ba44b6de1186b3e8aeff8534317b490e7fb35a0546c67a4feaf0eb1f3eec6d",
+    "terminalAssessmentRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset/terminal-reward-assessment.r13.json"
+  },
+  "decision": {
+    "diagnosticReward": null,
+    "dimensionRewards": [
+      {
+        "dimensionId": "requirement_understanding",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "operability",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "routing",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "reasoning_control",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "context_adaptation",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "workflow",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "agent_architecture",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "agent_swarm",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_discovery",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_reuse",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_creation",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_update",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "artifact_split",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "artifact_merge",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "dynamic_artifact_composition",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "loop_architecture_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "evidence_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "outcome_quality",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "efficiency",
+        "reward": null,
+        "state": "unavailable"
+      }
+    ],
+    "disposition": "require_context",
+    "findings": [
+      {
+        "criterionId": "gate.outcome.required_validation",
+        "findingType": "protected_gate_failure",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "critical"
+      },
+      {
+        "criterionId": "reward.operability",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ENVIRONMENT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.update",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ARTIFACT_UPDATE_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.split",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ARTIFACT_SPLIT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.merge",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ARTIFACT_MERGE_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.dynamic_composition",
+        "findingType": "evidence_gap",
+        "ownerRoute": "DYNAMIC_ARTIFACT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.outcome_quality",
+        "findingType": "evidence_gap",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "major"
+      }
+    ],
+    "improvementTargetCriterionIds": [
+      "gate.outcome.required_validation",
+      "reward.operability",
+      "reward.artifact.update",
+      "reward.artifact.split",
+      "reward.artifact.merge",
+      "reward.artifact.dynamic_composition",
+      "reward.outcome_quality"
+    ],
+    "primaryReward": 0.0,
+    "promotionEligible": false,
+    "reasonCodes": [
+      "protected_criterion_unresolved",
+      "qualifying_criterion_unresolved",
+      "required_active_dimension_unavailable"
+    ],
+    "useClass": "workset_terminal"
+  },
+  "digest": "sha256:45b24c4112f597bebd5f66d492f00f3bcf557fe7f25cf5d3c54931b64f13b0bc",
+  "execution": {
+    "effectiveReceiptState": "missing_require_context",
+    "effectiveSubjectTimeoutSeconds": null,
+    "modelEffective": null,
+    "modelRequested": "gpt-5.6-luna",
+    "promotionEligible": false,
+    "provider": "harbor@0.22.0",
+    "reasoningEffortEffective": null,
+    "reasoningEffortRequested": "max",
+    "requestedSubjectTimeoutSeconds": 3600,
+    "subject": "Harbor Subject",
+    "subjectRetries": 0,
+    "subjectTerminalState": "not_started",
+    "subjectTrials": 0,
+    "verifierState": "not_started"
+  },
+  "frameworkRevision": "r4",
+  "identityDigest": "sha256:caed381f33b57dcc748a3623eeba5841e92a177482e65f784e48cf491b1b31a3",
+  "itemId": "tbench-dw-a-dw_1784073139_2608908/dw-dataset",
+  "itemTerminalStatus": "held",
+  "kind": "workset-terminal-reward-round/v2",
+  "nonCompensatoryGates": {
+    "effectiveExecutionReceiptObserved": false,
+    "effectiveExecutionReceiptRequired": true,
+    "populationItemBindingExact": true,
+    "protectedOutcomeValidationObserved": false,
+    "protectedOutcomeValidationRequired": true,
+    "resourceSettlementComplete": true
+  },
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "preservedGaps": [
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "network_policy_and_cost_budget_qualified"
+  ],
+  "privacy": {
+    "credentialsProjected": false,
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawTaskContentProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "roundId": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-55-tbench-dw-a-dw_1784073139_2608908-dw-dataset:terminal-reward-round",
+  "schemaVersion": 2,
+  "shardDisposition": {
+    "activeItemCount": 0,
+    "currentItem": "tbench-dw-a-dw_1784073139_2608908/dw-dataset",
+    "currentItemStatus": "held",
+    "frozenMemberCount": 66,
+    "otherMembersDisposition": "not_inferred",
+    "pendingItemCount": 10,
+    "state": "in_progress",
+    "terminalCounts": {
+      "cancelled": 0,
+      "completed": 1,
+      "failed": 1,
+      "held": 54
+    },
+    "terminalSettledItemCount": 56
+  },
+  "status": "settled",
+  "terminalReward": 0.0
+}

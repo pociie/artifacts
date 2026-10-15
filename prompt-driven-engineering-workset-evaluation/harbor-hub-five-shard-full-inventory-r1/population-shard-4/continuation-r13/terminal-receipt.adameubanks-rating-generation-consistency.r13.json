@@ -1,0 +1,113 @@
+{
+  "claimDigest": "sha256:8a01bfe7bd7c741450e960fe0b67f89636af6104d9ce1b823c5ee80327f24fbf",
+  "claimFrameworkRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "claimId": "claim:population-shard-4:adameubanks/rating-generation-consistency:r13",
+  "claimWorkerRef": "worker:harbor-population-shard-4:r13-controller",
+  "digest": "sha256:203dc028d5f54a16bb5df0ff86ebd97423da78ecc13ab22f78f9ab6465bf4591",
+  "evaluation": {
+    "diagnosticReward": null,
+    "evaluationDigest": "sha256:0a2bb35d8fa6a4da2a448271d7b7e63e768a635ebc8d93055220e78203b1a6c6",
+    "evaluationRef": "artifacts/population-shard-4/continuation-r13/final-engineering-evaluation.r13.json",
+    "primaryReward": 0.0,
+    "reductionDisposition": "require_context",
+    "state": "require_context",
+    "terminalRewardResultDigest": "sha256:fbc2174fdcab64d8f1d4a817feda60e44af6c43b8d9a0b7b6b25c6056611eb81",
+    "terminalRewardResultRef": "artifacts/population-shard-4/continuation-r13/terminal-reward-result.r13.json"
+  },
+  "evidenceRefs": [
+    "artifacts/population-shard-4/continuation-r13/execution-structure-admission-bundle.r13.json",
+    "artifacts/population-shard-4/continuation-r13/simulation-evidence.r13.json",
+    "artifacts/population-shard-4/continuation-r13/final-engineering-evaluation.r13.json",
+    "artifacts/population-shard-4/continuation-r13/terminal-reward-result.r13.json",
+    "artifacts/population-shard-4/continuation-r13/settlement-ledger.r13.json"
+  ],
+  "execution": {
+    "executionRef": "artifacts/population-shard-4/continuation-r13/harbor-execution-observation.r13.json",
+    "nativeReceiptRequired": false,
+    "simulationEvidenceDigest": "sha256:3d316e92d41033057c06dd6e0f06519b0b0c2653e2dcf61d8422537bef0779cf",
+    "simulationEvidenceRef": "artifacts/population-shard-4/continuation-r13/simulation-evidence.r13.json",
+    "state": "not_started",
+    "subjectOperationRequestRef": "artifacts/population-shard-4/continuation-r13/subject-operation-request.r13.json"
+  },
+  "executionStructureAdmission": {
+    "bundleDigest": "sha256:f88b9719d156e0273cbc2b75060cba9dd1fcedcf41aea933f0a36d0741168549",
+    "bundleRef": "artifacts/population-shard-4/continuation-r13/execution-structure-admission-bundle.r13.json",
+    "requiredOutputCount": 21,
+    "status": "ready"
+  },
+  "hold": {
+    "reasonCode": "provider:effective-model-effort-timeout-credential-receipts-unavailable",
+    "retryPolicy": "no_unchanged_retry_on_missing_effective_provider_receipt",
+    "scope": "this_exact_claim_only",
+    "wakeCondition": "Re-observe Harbor capability for this exact next item only after the provider capability fingerprint changes: credentials must authenticate, the effective gpt-5.6-luna model and max effort must be receipt-bound, the effective subject and verifier timeout must be proven at or below 3600 seconds, and the protected verifier capability must be qualified; then admit a fresh item-bound round. Do not retry this hold or claim the next pending item with the unchanged capability fingerprint."
+  },
+  "identityDigest": "sha256:6f425580e941b7de0d2e5a4e1a2fd0f096d570068d4d32efb2e9ac7fbceb1a83",
+  "itemId": "adameubanks/rating-generation-consistency",
+  "itemTerminalStatus": "held",
+  "kind": "harbor-population-item-terminal-receipt/v2",
+  "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "populationDisposition": {
+    "noPopulationProjection": true,
+    "pendingUnclaimedShardMembersAfterSettlement": 45,
+    "populationComplete": false,
+    "thisItemOnly": true
+  },
+  "privacy": {
+    "credentialsProjected": false,
+    "hiddenVerifierBodyProjected": false,
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawPromptProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "provider": {
+    "class": "harbor",
+    "effectiveModel": null,
+    "effectiveReasoningEffort": null,
+    "effectiveReceiptPresent": false,
+    "effectiveSubjectTimeoutSeconds": null,
+    "effectiveVerifierTimeoutSeconds": null,
+    "requestedModel": "gpt-5.6-luna",
+    "requestedReasoningEffort": "max",
+    "requestedSubjectTimeoutSeconds": 3600,
+    "requestedVerifierTimeoutSeconds": 3600,
+    "version": "0.22.0"
+  },
+  "receiptId": "harbor-shard-4-adameubanks-rating-generation-consistency-r13-held",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:adameubanks/rating-generation-consistency:6f425580e941b7de0d2e5a4e1a2fd0f096d570068d4d32efb2e9ac7fbceb1a83",
+  "reward": {
+    "diagnosticReward": null,
+    "primaryReward": 0.0,
+    "promotionEligible": false,
+    "rawVerifierReward": null,
+    "rewardDisposition": "require_context_due_missing_effective_receipt"
+  },
+  "route": {
+    "compoundJourneyDigest": "sha256:8c4b33c2811985d3a284964d221398d9ad6db1b12a45982d29146107d32b4b52",
+    "compoundJourneyRef": "artifacts/population-shard-4/continuation-r13/compound-mode-journey.r13.json",
+    "reasoningEnvelopeDigest": "sha256:d0870525034e1aa64739c05d3cc581e591aa65cb089ca2900b6979876c1e7762",
+    "reasoningEnvelopeRef": "artifacts/population-shard-4/continuation-r13/mode-reasoning-envelope.r13.json",
+    "routeDigest": "sha256:5e9fec166ced64ebb3770f31126c6b7940616230fd3b77f565a93f6a0f841957",
+    "routeRef": "artifacts/population-shard-4/continuation-r13/route-decision.r13.json",
+    "selectedMode": "single_task"
+  },
+  "schemaVersion": 2,
+  "selectedTask": {
+    "taskId": "00b1f08d-f250-4031-b113-6d660473c382",
+    "taskPageDigest": "sha256:9653f1887d05eeda605a8fc6179ddfc0dcff8bd38da640316d09c86cad07079f",
+    "taskRef": "adameubanks/rating-generation-consistency/restaurant-etiquette-zero-ten-t5",
+    "taskRevision": 1
+  },
+  "settledAt": "2026-08-28T15:45:11Z",
+  "settlement": {
+    "activeProviderResourceCount": 0,
+    "settlementDigest": "sha256:8d7881b3ff66c8b3089f7b0fae1944084cfac7a45d53d92c6328e202a52c3ffb",
+    "settlementRef": "artifacts/population-shard-4/continuation-r13/settlement-ledger.r13.json",
+    "state": "complete",
+    "unresolvedExecutionResources": []
+  },
+  "shardId": "population-shard-4",
+  "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+  "terminalDisposition": "held"
+}

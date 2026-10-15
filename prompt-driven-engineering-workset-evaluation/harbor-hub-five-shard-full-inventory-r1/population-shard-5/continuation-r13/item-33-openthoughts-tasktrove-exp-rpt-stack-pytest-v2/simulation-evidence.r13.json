@@ -1,0 +1,255 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:02bd02c7a05c0f3b3a56eb20af017338f83344b58d5644cd0cc10cc1492c322e",
+      "id": "harbor-gpt-5-6-luna",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T15:53:48Z",
+  "digest": "sha256:dc6532c20dc9485a89f05b54b3c7d95aff00d79e2d02f61e2f3ce57502ac7603",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:0f8e6ba429166d6fd62644e4e0be9a9a2ff22f34bf77d61b86c1be898c3b4f34",
+    "limitations": [
+      "platform_state_unobserved",
+      "network_policy_unresolved",
+      "cost_budget_unqualified"
+    ],
+    "platformRef": "environment:darwin-arm64-docker"
+  },
+  "evidenceId": "engineering-workset-simulation:population-shard-5:continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2:openthoughts/tasktrove-exp-rpt-stack-pytest-v2",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/candidate-probe.r13.json"
+      ],
+      "id": "provider-auth",
+      "subjectRef": "item:openthoughts/tasktrove-exp-rpt-stack-pytest-v2"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/candidate-probe.r13.json"
+      ],
+      "id": "task-instruction",
+      "subjectRef": "item:openthoughts/tasktrove-exp-rpt-stack-pytest-v2"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/candidate-probe.r13.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:openthoughts/tasktrove-exp-rpt-stack-pytest-v2"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-model",
+      "subjectRef": "item:openthoughts/tasktrove-exp-rpt-stack-pytest-v2"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-effort",
+      "subjectRef": "item:openthoughts/tasktrove-exp-rpt-stack-pytest-v2"
+    },
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/harbor-subject-operation.r13.json"
+      ],
+      "id": "subject-timeout",
+      "subjectRef": "item:openthoughts/tasktrove-exp-rpt-stack-pytest-v2"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_qualification_held",
+      "effective_execution_receipt_missing",
+      "oracle_not_run"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "task_instruction_unavailable",
+      "task_image_manifest_unavailable",
+      "protected_verifier_unavailable"
+    ],
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:fe4ea652b2e59d4ea3ffbe715d8dd6f747ed2ff2de1fd06e2044981ba7f5e8df"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2"
+  },
+  "provider": {
+    "limitations": [],
+    "qualificationDigest": "sha256:9337d60e02f5db38edbd5cb499f0b03d2f2872f532219ae3b2f2b67d433a0279",
+    "qualificationRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/candidate-probe.r13.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:ce08f3d9d00b30c8b78434e7dfd710d2a4e9525be7da831fdb9c153045dee70a",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    ],
+    "sourceDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/item-resource-settlement.r13.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:ecc4b2fdaeea73c5bef499b81449642371b92f250824a9d259239204030a7520",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:ffddf9120b137fa1e0533a89c67e1cc59e2d4dfdcdd9d94a4168c7dcc1bf889b",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "credential-injection",
+        "resourceRefDigest": "sha256:9917e5cba9a5c7b1906016f25b0c901ea2fb65eff67921f020c86ed66da446f0",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "task-workspace",
+        "resourceRefDigest": "sha256:9c6c101d8566d678c81731ace41d2862a3c7e1dd29a92e1d819da1224ad43499",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:52550578475f586cd043104746b7105a023b70bd9b7397deebbd66e78c76039d",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "network-policy-scope",
+        "resourceRefDigest": "sha256:41aec6e8f312a146de059c237bcecb8cf4ff223c2f879341b90b8abb3242cc44",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "cost-budget-scope",
+        "resourceRefDigest": "sha256:13b8ceebaf0797ccfc7b247fa649b9718163c885cb637e3fa5865e466a50a18f",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/dynamic-candidate.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "resourceClass": "dynamic-candidate",
+        "resourceRefDigest": "sha256:b76e08aa22552e6377b0476411cc6f08edd38b2a5e9763bc18a1966aafa8aed4",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/preclaim-verification.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/source-and-plan-binding.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/route-decision.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/dynamic-artifact-composition-decision.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/execution-structure-21-output-bundle.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/subject-operation-request.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/native-subject-topology-operation-receipt.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/native-subject-topology-operation-observation.r13.json"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/working-memory-binding.r13.json",
+    "checkpointRefs": [
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/preclaim-verification.r13.json",
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/claim-source-freeze.r13.json",
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2/item-resource-settlement.r13.json"
+    ],
+    "digest": "sha256:7d7e935dd99576d51063aa63e04e0e71e25ff24d425c0130993337319cba67f0",
+    "invalidation": [
+      "objective_revision_changes",
+      "requirement_scope_digest_changes",
+      "frozen_population_plan_digest_changes",
+      "item_capability_fingerprint_changes",
+      "terminal_settlement_emitted"
+    ],
+    "namespaceRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-5:continuation-r13/item-33-openthoughts-tasktrove-exp-rpt-stack-pytest-v2"
+  }
+}

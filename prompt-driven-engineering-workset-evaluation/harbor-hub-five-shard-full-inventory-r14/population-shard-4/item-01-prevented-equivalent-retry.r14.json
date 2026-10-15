@@ -1,0 +1,34 @@
+{
+  "kind": "harbor-prevented-equivalent-retry/v1",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "shardId": "population-shard-4",
+  "itemId": "abundant/swe-gen-go",
+  "identityDigest": "sha256:d433b9581efa9cddb7215b07ea429c4c45b397d48061c926dcad10b8fd46cd75",
+  "taskRef": "abundant/swe-gen-go/prometheus__client_golang-1917",
+  "attempt": {
+    "state": "prevented_before_slot_acquisition",
+    "wrapper": "with_harbor_slot.py",
+    "slotCount": 2,
+    "providerAttemptStarted": false,
+    "equivalence": "unchanged_arm64_cgo_toolchain_retry",
+    "reason": "queued invocation was cancelled before acquiring a global execution slot"
+  },
+  "priorBlocker": {
+    "class": "environment_toolchain_incompatible",
+    "platform": "linux/aarch64",
+    "detail": "CGO verifier gcc rejected -m64",
+    "wakeCondition": "compatible_linux_amd64_cgo_task_image_or_toolchain_with_gcc_accepting_m64"
+  },
+  "changedFingerprintRequired": {
+    "status": "pending",
+    "requiredPlatform": "linux/amd64",
+    "requiredToolchain": "CGO-enabled Go toolchain with gcc accepting -m64"
+  },
+  "authorityEffect": "none",
+  "privacy": {
+    "rawPromptStored": false,
+    "privateReasoningStored": false,
+    "secretsStored": false,
+    "runtimeHandlesStored": false
+  }
+}

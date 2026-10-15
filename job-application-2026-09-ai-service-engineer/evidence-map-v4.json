@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "self-introduction-evidence-map/v4",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-07",
+  "purpose": "자기소개서의 문장을 공식 공고·저장소 사실·사용자 제공 경험·제한된 해석·미래 계획으로 구분하고, 상위 서비스 추상화와 공통 용어의 범위를 고정한다.",
+  "legend": {
+    "F": "official or repository fact",
+    "U": "user-provided context",
+    "P": "personal contribution; applicant confirmation required",
+    "I": "bounded interpretation",
+    "N": "future intention",
+    "M": "measurement or lifecycle limitation"
+  },
+  "entries": [
+    {"id": "role-scope", "class": "F", "claim": "공고는 AI 서비스 API·백엔드, 데이터 파이프라인, AI 프로젝트 지원, 플랫폼 운영·고도화, 서비스 발굴·검증, 튜닝·품질 검증을 업무로 제시한다.", "source": "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007", "safeWording": "AI 기능을 업무 처리에 연결하고 API·데이터·운영·검증을 함께 보는 서비스 엔지니어로 기여하겠습니다.", "avoid": "모델 연구·학습 중심 직무로 공고를 재정의하기"},
+    {"id": "company-context", "class": "F", "claim": "공식 회사 소개는 롯데이노베이트를 다양한 산업의 문제를 ICT 플랫폼·솔루션·컨설팅으로 전환하는 회사 맥락에서 설명한다.", "source": "https://recruit.lotte.co.kr/companylife/affiliate/detail?compcd=30007", "safeWording": "다양한 업무 요구를 사용자 목표와 서비스 처리로 번역하고 오래 확인할 수 있는 운영 기준으로 발전시키겠습니다.", "avoid": "특정 고객·계열사·현장 성과를 본인 경험처럼 확정하기"},
+    {"id": "hr-context", "class": "F", "claim": "공식 인사 맥락은 도전·성장·협력의 행동을 중시한다.", "source": "https://recruit.lotte.co.kr/about/hrsystem", "safeWording": "작은 검증과 학습, 합의 가능한 공통 용어를 통해 도전·성장·협력을 행동으로 보여주겠습니다.", "avoid": "인재상 단어만 반복하고 경험과 연결하지 않기"},
+    {"id": "project-purpose", "class": "F+I", "claim": "collab-mono는 사람이 해결하려는 업무 목적을 서비스 처리와 AI 결과 확인으로 연결하는 협업형 구조를 실험하는 저장소로 해석할 수 있다.", "source": "shared/README.md; apps/components/core-domain/agent-runtime/README.md; apps/components/generic-sub-domain/reporting/README.md; project-abstraction-map-v4.json", "safeWording": "사람의 업무 목적을 서비스 처리로 연결하고 결과를 검토·개선으로 되돌리는 흐름을 설계했습니다.", "avoid": "모델의 지능·학습 성과 또는 모든 외부 실행 표면의 동시 활성화를 주장하기"},
+    {"id": "project-scale", "class": "F", "claim": "root package manifest는 28개 npm workspace를 선언하고 저장소는 도메인·웹·인프라·외부 접점·E2E 경계를 포함한다.", "source": "package.json; docs/architecture/project-structure.md", "safeWording": "범위가 넓은 TypeScript 모노레포에서 사용자 목표와 핵심 서비스 처리 흐름을 먼저 정하고 주변 영역을 확장했습니다.", "avoid": "28개 서비스·팀·사용자·트래픽 규모로 확대 해석하기"},
+    {"id": "project-contribution", "class": "U+P", "claim": "사용자는 현재 진행 중인 개인 프로젝트에서 요구 분석·구조 설계·코드 구현·검증·배포 구성을 연결했다고 설명했다. 세부 변경 범위와 실행 결과는 제출 전 확인이 필요하다.", "source": "user-provided-project-description; self-introduction-content-v4.json", "safeWording": "개인 프로젝트로 요구 분석부터 설계·구현·검증·배포 구성을 연결했습니다.", "avoid": "저장소 구조만으로 모든 영역의 단독 구현·운영 성과를 확정하기"},
+    {"id": "project-outcome-limit", "class": "M", "claim": "현재 맥락에는 생산 환경 사용자·고객 결과·성능·비용·가동률·장애·날짜가 있는 실행 증거가 제공되지 않았다.", "source": "current-task-context; project-abstraction-map-v4.json", "safeWording": "구조가 제공하는 검토 가능성과 향후 관찰 계획으로 표현하고 실제 성과는 확인 후 추가한다.", "avoid": "성능 향상·비용 절감·운영 안정성·사용자 만족을 과거 성과로 쓰기"},
+    {"id": "user-value", "class": "U", "claim": "사용자는 ‘불편함을 발견하면 개선하려 노력하는 것’을 삶의 가치관으로 직접 제시했다.", "source": "user-provided-existing-answer-q3", "safeWording": "불편을 사람의 판단 부담과 조직의 반복 비용을 줄이는 개선으로 연결하겠습니다.", "avoid": "한 문장만으로 안정적 성격·협업 능력·전문성을 증명했다고 확정하기"},
+    {"id": "human-centered-viewpoint", "class": "I+N", "claim": "사람의 판단과 책임을 보존하면서 AI가 다음 행동을 돕는다는 관점은 사용자 가치관·공식 직무·인간중심 설계·AI 위험관리 자료를 결합한 초안의 해석이며 사용자 확인이 필요하다.", "source": "domain-language-map-v4.json; research-sources-v4.json", "safeWording": "기술의 가치는 사람의 판단을 더 정확하게 돕고 확인 가능한 다음 행동으로 연결하는 데 있다고 생각합니다.", "avoid": "사용자 확인 전 이 문장을 확정된 성격이나 보편적 신념으로 일반화하기"},
+    {"id": "canonical-language", "class": "I", "claim": "자기소개서의 핵심 개념은 사용자 목표·업무 맥락·서비스 처리 흐름·결과 검증·검토 가능한 기록으로 고정하고 프로젝트 고유어를 설명어로 제한한다.", "source": "domain-language-map-v4.json; https://learn.microsoft.com/en-us/style-guide/word-choice/", "safeWording": "추상어를 사용할 때 입력·처리·결과·확인 기준 또는 다음 행동을 함께 적겠습니다.", "avoid": "여정·공유 맥락·근거·불확실성·완성도처럼 정의 없는 평가어를 핵심 근거로 사용하기"},
+    {"id": "evaluation-method", "class": "F+I", "claim": "ISO 25010·ISO 25022·NIST AI RMF·시험평가 지침은 품질 구성개념, 맥락, 측정·타당도·신뢰도·한계를 분리해 다루는 근거를 제공한다. 이를 자기소개서 편집 비교에 제한적으로 적용한다.", "source": "research-sources-v4.json", "safeWording": "점수와 평가자 일치도·사용자 확인·사후 결과를 별도 데이터로 관리하겠습니다.", "avoid": "편집 점수를 지원자 역량의 객관적 수치나 채용 예측값으로 표현하기"}
+  ],
+  "sentenceReviewProtocol": [
+    "문장마다 사람의 목표나 업무 맥락을 먼저 두고 기술은 그것이 바꾼 처리·책임·검증과 함께 사용한다.",
+    "과거 사실·제한된 해석·미래 계획의 시제를 분리한다.",
+    "개인 기여는 사용자 제공 근거로 쓰되 실제 변경 범위와 실행 결과를 확인 전제로 둔다.",
+    "핵심 문장에는 행위자·대상·행동·판단 기준 또는 다음 행동 중 세 요소 이상을 남긴다.",
+    "한 개념에는 한 canonical term을 쓰고, 유사어가 필요하면 의미 차이를 문장 안에서 설명한다.",
+    "구현 단위가 문단의 중심이 되면 사용자 목표→업무 맥락→서비스 처리→결과 검증→개선 흐름으로 다시 쓴다."
+  ],
+  "claimClassesForLedger": {
+    "F": "확인 가능한 공식·저장소 사실",
+    "U": "사용자가 직접 제공한 정보",
+    "P": "사용자 확인이 필요한 개인 수행·기여",
+    "I": "자료와 맥락을 바탕으로 한 제한된 해석",
+    "N": "회사에서의 계획 또는 의도",
+    "M": "현재 측정·근거가 없다는 제한"
+  }
+}

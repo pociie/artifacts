@@ -1,0 +1,102 @@
+{
+  "kind": "dynamic-agent-team-blueprint-amendment/v1",
+  "blueprintId": "dynamic-team:book-pdf-expandable-pagination",
+  "revision": "book-pdf-dynamic-team/4",
+  "status": "candidate_not_activated",
+  "authorityEffect": "none",
+  "baseBlueprintRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/dynamic-team-blueprint-v3.json",
+  "baseBlueprintDigest": "sha256:a8ce5a93fa12ba093af0cecb85f75fdab67c85c90efe8b45333ca3a6e9deda71",
+  "flowSpecRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-flow-and-continuity-spec-v1.md",
+  "loopExtensionRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/authoring-loop-pagination-extension-v1.json",
+  "rubricExtensionRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-pagination-extension-v1.json",
+  "roleAmendments": [
+    {
+      "roleId": "role:domain-prerequisite-researcher",
+      "addedResponsibilities": [
+        "produce the smallest prerequisite graph that unlocks a named reader question",
+        "construct evidence-labeled explanation bridges and assign exactly one primary placement",
+        "exclude interesting adjacent knowledge that does not change the learning outcome",
+        "preserve unresolved source gaps instead of filling them with generic background"
+      ],
+      "addedStopConditions": [
+        "project evidence and external background cannot be distinguished",
+        "required depth or applicability is unresolved",
+        "adding background would widen the reader objective"
+      ]
+    },
+    {
+      "roleId": "role:technical-editorial-writer",
+      "addedCapabilities": [
+        "capability:semantic-content-unit-definition",
+        "capability:multi-page-example-authoring",
+        "capability:continuation-context-writing"
+      ],
+      "addedResponsibilities": [
+        "mark bridges, examples, traces, diagrams and failure cases as complete semantic units",
+        "write continuation recaps that preserve question, state and claim identity",
+        "treat page count as an output of explanation depth rather than a manuscript limit",
+        "keep mandatory prerequisites in the main reading path"
+      ],
+      "addedStopConditions": [
+        "a requested page target would require claim weakening or omitted reasoning",
+        "an example cannot be split without losing causal continuity",
+        "layout feedback attempts to change evidence authority"
+      ]
+    },
+    {
+      "roleId": "role:pdf-information-visual-designer",
+      "addedCapabilities": [
+        "capability:expandable-paged-media-layout",
+        "capability:semantic-page-break-control",
+        "capability:continuation-identity-management",
+        "capability:content-completeness-audit"
+      ],
+      "addedToolRefs": [
+        "tool:content-block-inventory",
+        "tool:html-css-paged-media-renderer",
+        "tool:browser-page-geometry-audit",
+        "tool:browser-computed-style-audit",
+        "tool:pdf-text-and-page-inspector",
+        "tool:continuation-and-placement-audit",
+        "tool:contact-sheet-renderer"
+      ],
+      "addedResponsibilities": [
+        "add pages whenever readable semantic units do not fit",
+        "split only at declared semantic boundaries and repeat continuation identity",
+        "keep claims with evidence labels and figures with interpretive captions",
+        "produce before/after content identity and no-shrink evidence",
+        "hold hard page-limit conflicts for scope resolution"
+      ],
+      "addedStopConditions": [
+        "content is clipped, rasterized, silently omitted or compressed below type limits",
+        "a page split loses example state, trace ordering, claim id or evidence class",
+        "a main-path prerequisite is moved to an appendix for layout convenience"
+      ]
+    },
+    {
+      "roleId": "role:independent-fact-visual-validator",
+      "addedResponsibilities": [
+        "compare the frozen semantic-unit inventory with the rendered PDF",
+        "verify continuation identity and placement correctness",
+        "verify that page count did not cause semantic omission or shrink-to-fit",
+        "inspect physical A4 readability, reading order and accessibility"
+      ],
+      "currentStatus": "not_activated_pending"
+    }
+  ],
+  "handoffAdditions": [
+    "prerequisite graph and placement ledger",
+    "semantic-unit inventory",
+    "content-to-page-flow map",
+    "continuation audit",
+    "before/after completeness comparison",
+    "page geometry and no-shrink report",
+    "explicit pending disposition for independent validation"
+  ],
+  "activation": "not_performed",
+  "acknowledgement": "not_received",
+  "independentValidation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}

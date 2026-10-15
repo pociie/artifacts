@@ -1,0 +1,73 @@
+{
+  "actualCommandAttempt": true,
+  "attemptState": {
+    "commandAttempted": true,
+    "harnessExitCode": 1,
+    "preservedEvidence": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-04-benchflow-skillsbench/harbor-command.log",
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-04-benchflow-skillsbench-terminal-receipt.r16.json",
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-04-benchflow-skillsbench-terminal-reward-vector.r16.json"
+    ],
+    "providerTaskResolved": false,
+    "providerTrialCount": 0,
+    "state": "provider_preflight_failed_no_subject_trial",
+    "subjectTrialStarted": false,
+    "verifierStarted": false,
+    "wrapperSlotAcquired": true
+  },
+  "authorityEffect": "none",
+  "changedFingerprintWakeCondition": {
+    "kind": "harbor-task-filter-fingerprint-transition/v1",
+    "previous": {
+      "datasetRef": "benchflow/skillsbench@latest",
+      "model": "gpt-5.6-luna",
+      "providerVersion": "0.22.0",
+      "reasoningEffort": "max",
+      "taskFilter": "3d-scan-calc",
+      "taskWorkspaceDigest": "sha256:ab8ca13d97f409e7c4e17dbb8b027745f92fb36be6ea78bd8fe09f05fbb4c9e8"
+    },
+    "previousDigest": "sha256:4f28e19f56b4546390771a5ef82d559e4c1bd8a4b5363699dadf73ed190e713d",
+    "required": {
+      "datasetRef": "benchflow/skillsbench@latest",
+      "model": "gpt-5.6-luna",
+      "providerVersion": "0.22.0",
+      "reasoningEffort": "max",
+      "taskFilter": "benchflow/3d-scan-calc",
+      "taskWorkspaceDigest": "sha256:ab8ca13d97f409e7c4e17dbb8b027745f92fb36be6ea78bd8fe09f05fbb4c9e8"
+    },
+    "requiredDigest": "sha256:37b62496014fb5367dd0936890c06f26a76ef12c697ae20529f6f587d758fab6",
+    "transitionObserved": false,
+    "wakeCondition": "retry only after the required provider-qualified task filter is bound; do not repeat the ownerless filter"
+  },
+  "digest": "sha256:a6d296fbf3b580afc64aea878676c2de60645e89f28e5b5af6fea9ed5fb40a2a",
+  "evidenceRefs": [
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-04-benchflow-skillsbench/harbor-command.log",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-04-benchflow-skillsbench-terminal-receipt.r16.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-04-benchflow-skillsbench-terminal-reward-vector.r16.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/item-04-benchflow-skillsbench-route-delta.r16.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/events/0004-terminal-benchflow-skillsbench.json"
+  ],
+  "failedTaskFilter": "3d-scan-calc",
+  "failureClass": "NoTerminalTrialResult",
+  "finding": "provider_task_filter_preflight_failed_before_subject_trial",
+  "frameworkRevision": "sha256:90e03a443bdf20344c3e51000387814f872df81fb245ecc2934badda28624139",
+  "identityDigest": "sha256:33b59873b306eec96de41ee4d682bc0d3af91dc807f104cc76755661dc60670d",
+  "itemId": "benchflow/skillsbench",
+  "kind": "harbor-item-preflight-finding/v1",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "ordinal": 4,
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawPromptStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "providerTrialCount": 0,
+  "requiredTaskFilter": "benchflow/3d-scan-calc",
+  "shardId": "population-shard-4",
+  "status": "failed",
+  "subjectTrialStarted": false,
+  "wakeCondition": "changed provider task-filter fingerprint required: bind exact qualified filter benchflow/3d-scan-calc (previous 3d-scan-calc); shared semantic-facts resolver integration must complete before any retry; no equivalent retry"
+}

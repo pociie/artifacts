@@ -1,0 +1,65 @@
+{
+  "kind": "dynamic-agent-team-blueprint-amendment/v1",
+  "blueprintId": "dynamic-team:claim-led-book-pdf-clean-typography",
+  "revision": "book-pdf-dynamic-team/3",
+  "status": "candidate_not_activated",
+  "authorityEffect": "none",
+  "baseBlueprintRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/dynamic-team-blueprint-v2.json",
+  "typographySystemRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/typography-and-page-system-v1.json",
+  "loopExtensionRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/authoring-loop-typography-extension-v1.json",
+  "rubricExtensionRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-typography-extension-v1.json",
+  "roleAmendments": [
+    {
+      "roleId": "role:technical-editorial-writer",
+      "addedResponsibilities": [
+        "write opening paragraphs that establish context without decorative initial-letter cues",
+        "ensure prose hierarchy remains understandable without bold, color or capitalization",
+        "mark semantic roles so the designer can apply shared typography tokens"
+      ],
+      "addedStopConditions": [
+        "a paragraph relies on visual emphasis instead of explanation",
+        "typographic markup changes the intended claim strength"
+      ]
+    },
+    {
+      "roleId": "role:pdf-information-visual-designer",
+      "addedCapabilities": [
+        "capability:typographic-system-application",
+        "capability:computed-style-inspection",
+        "capability:korean-glyph-fallback-review"
+      ],
+      "addedToolRefs": [
+        "tool:font-availability-inspector",
+        "tool:browser-computed-style-audit",
+        "tool:html-css-paged-media-renderer"
+      ],
+      "addedResponsibilities": [
+        "apply font roles through shared tokens",
+        "remove drop caps and oversized initial letters",
+        "keep body typography stable across Monograph and Notebook modes",
+        "record any font fallback or page-local override"
+      ],
+      "addedStopConditions": [
+        "declared fonts are unavailable without a compatible fallback",
+        "computed body size or leading differs materially across pages",
+        "page-local typography bypasses the shared system"
+      ]
+    },
+    {
+      "roleId": "role:independent-fact-visual-validator",
+      "addedResponsibilities": [
+        "verify no-drop-cap and semantic font-role criteria",
+        "inspect Korean glyph and punctuation fallback",
+        "review sustained-reading legibility at physical A4 size"
+      ],
+      "currentStatus": "not_activated_pending"
+    }
+  ],
+  "activation": "not_performed",
+  "acknowledgement": "not_received",
+  "independentValidation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}
+

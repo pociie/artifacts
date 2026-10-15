@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "c563331293c71edef027736588e2d2e52affe4afba862d5979d8930bea4803c8",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-44-rounakbende10-rh-swe-bench/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-44-rounakbende10-rh-swe-bench/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "e5f90b232733568b35226d207bb06908b0eda4c4fd21246591e7dc67ec7d17f8",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "2f0f2774a598b03a9203a431b77d21fd1422b3f6b4fb1821eaa96bb67ff08c51",
+      "topologySelectionDecisionSha256": "16ddf8154ce4804a2c4b9a281adbec859f89a3590c3a71ed8deae2e256f4b9eb"
+    },
+    {
+      "coordinationPlanDecisionSha256": "c563331293c71edef027736588e2d2e52affe4afba862d5979d8930bea4803c8",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-44-rounakbende10-rh-swe-bench/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-44-rounakbende10-rh-swe-bench/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "e5f90b232733568b35226d207bb06908b0eda4c4fd21246591e7dc67ec7d17f8",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "2f0f2774a598b03a9203a431b77d21fd1422b3f6b4fb1821eaa96bb67ff08c51",
+      "topologySelectionDecisionSha256": "16ddf8154ce4804a2c4b9a281adbec859f89a3590c3a71ed8deae2e256f4b9eb"
+    },
+    {
+      "coordinationPlanDecisionSha256": "c563331293c71edef027736588e2d2e52affe4afba862d5979d8930bea4803c8",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-44-rounakbende10-rh-swe-bench/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-44-rounakbende10-rh-swe-bench/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "e5f90b232733568b35226d207bb06908b0eda4c4fd21246591e7dc67ec7d17f8",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "2f0f2774a598b03a9203a431b77d21fd1422b3f6b4fb1821eaa96bb67ff08c51",
+      "topologySelectionDecisionSha256": "16ddf8154ce4804a2c4b9a281adbec859f89a3590c3a71ed8deae2e256f4b9eb"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

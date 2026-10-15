@@ -1,0 +1,75 @@
+{
+  "allowedFallbackKinds": ["construct"],
+  "candidates": [
+    {
+      "artifactKind": "evaluation_contract",
+      "artifactRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "availability": "available",
+      "capabilityIds": ["task_execution", "verifier_binding", "privacy_boundary"],
+      "compatibleModes": [
+        "communication",
+        "investigation",
+        "single_task",
+        "loop",
+        "orchestration",
+        "session_control"
+      ],
+      "coversConcernIds": ["task-execution-support"],
+      "qualification": "qualified",
+      "structuralCost": 1
+    },
+    {
+      "artifactKind": "context_contract",
+      "artifactRef": "artifacts/agent-loop/execution-preparation/context-resolution/loop.yaml",
+      "availability": "available",
+      "capabilityIds": ["context_lifetime", "revision_freeze"],
+      "compatibleModes": [
+        "communication",
+        "investigation",
+        "single_task",
+        "loop",
+        "orchestration",
+        "session_control"
+      ],
+      "coversConcernIds": ["context-reconciliation-support"],
+      "qualification": "qualified",
+      "structuralCost": 1
+    },
+    {
+      "artifactKind": "routing_contract",
+      "artifactRef": "artifacts/loop-architecture/components/execution-routing/component.json",
+      "availability": "available",
+      "capabilityIds": ["six_mode_routing", "reassessment"],
+      "compatibleModes": [
+        "communication",
+        "investigation",
+        "single_task",
+        "loop",
+        "orchestration",
+        "session_control"
+      ],
+      "coversConcernIds": ["routing-support"],
+      "qualification": "qualified",
+      "structuralCost": 1
+    }
+  ],
+  "concerns": [
+    {
+      "acceptedArtifactKinds": ["evaluation_contract"],
+      "id": "task-execution-support",
+      "requiredCapabilityIds": ["task_execution", "verifier_binding", "privacy_boundary"]
+    },
+    {
+      "acceptedArtifactKinds": ["context_contract"],
+      "id": "context-reconciliation-support",
+      "requiredCapabilityIds": ["context_lifetime", "revision_freeze"]
+    },
+    {
+      "acceptedArtifactKinds": ["routing_contract"],
+      "id": "routing-support",
+      "requiredCapabilityIds": ["six_mode_routing", "reassessment"]
+    }
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-3:NovitaAI/tb21-code-debug:r13",
+  "selectedMode": "single_task"
+}

@@ -1,0 +1,443 @@
+{
+  "kind": "job-application-report-request/v1",
+  "schema_version": 1,
+  "request_id": "request:job-application:nextwave-backend:2026-09-14",
+  "revision": "nextwave-backend-r1",
+  "application": {
+    "company_name": "넥스트웨이브 테크",
+    "role_title": "백엔드 개발자",
+    "language": "ko-KR",
+    "official_posting_source_ids": ["source-nextwave-posting"]
+  },
+  "questions": [
+    {
+      "id": "question-strength",
+      "prompt": "본인을 가장 잘 나타낼 수 있는 강점 한 가지를 선정하고, 이를 보여주는 경험과 함께 설명해 주세요.",
+      "min_chars": 1,
+      "max_chars": 500,
+      "required_contents": ["강점 한 가지", "강점을 보여 주는 경험", "강점이 드러난 행동 또는 결과"],
+      "focus": {
+        "primary_claim": "백엔드 개발에 재현 가능한 강점 하나를 실제 Java/Spring 경험과 연결한다.",
+        "reviewer_need": "지원자가 어떤 방식으로 문제를 구조화하고 개발 책임을 수행하는지 확인한다.",
+        "evidence_function": "지원자 프로필과 Spring 핀테크 프로젝트의 관찰 가능한 구조를 사용한다.",
+        "non_overlap_boundary": "지원동기나 문제 해결의 상세 사건보다 강점의 작동 방식과 대표 경험에 집중한다."
+      },
+      "user_confirmation_ids": ["applicant-fact-spring-backend", "unknown-exact-contribution"]
+    },
+    {
+      "id": "question-motivation",
+      "prompt": "넥스트웨이브 테크와 백엔드 개발 직무에 관심을 갖게 된 계기와 지원하게 된 이유를 작성해 주세요.",
+      "min_chars": 1,
+      "max_chars": 700,
+      "required_contents": ["관심을 갖게 된 계기", "지원 이유", "회사와 직무 요구에 대한 연결"],
+      "focus": {
+        "primary_claim": "Java/Spring, API, 데이터, 트래픽, 안정성이라는 직무 요구와 자신의 학습·프로젝트 방향이 맞아 지원한다.",
+        "reviewer_need": "직무 선택이 기술 키워드 나열이 아니라 경험과 기여 의지에 근거하는지 확인한다.",
+        "evidence_function": "사용자 제공 공고 요약과 공개 프로젝트·Kafka 학습 근거를 직무 관심으로 연결한다.",
+        "non_overlap_boundary": "과거 문제 해결의 상세 원인·조치보다 관심의 계기와 입사 후 확장 방향을 중심으로 쓴다."
+      },
+      "user_confirmation_ids": ["unknown-nextwave-company-context", "unknown-production-use"]
+    },
+    {
+      "id": "question-problem",
+      "prompt": "개발 과정에서 예상하지 못한 문제를 해결하거나 기술적 어려움을 극복했던 경험을 상황, 행동, 결과 중심으로 설명해 주세요.",
+      "min_chars": 1,
+      "max_chars": 800,
+      "required_contents": ["상황", "문제 또는 기술적 어려움", "행동", "결과", "배운 점"],
+      "focus": {
+        "primary_claim": "인증 메일의 무한 재시도와 트랜잭션·외부 효과 결합 문제를 저장소와 발송 시점 분리로 해결했다.",
+        "reviewer_need": "문제 원인을 정의하고 대안을 선택하며 결과의 범위를 정직하게 설명하는지 확인한다.",
+        "evidence_function": "공개 이슈, Redis 도입 커밋, 커밋 후 이벤트 리스너 코드와 테스트 파일을 인과 순서로 사용한다.",
+        "non_overlap_boundary": "강점 일반론이나 입사 후 포부보다 하나의 기술 사건과 그 판단을 중심으로 쓴다."
+      },
+      "user_confirmation_ids": ["unknown-exact-contribution", "unknown-runtime-verification", "unknown-redis-runtime-result"]
+    },
+    {
+      "id": "question-contribution",
+      "prompt": "입사 후 본인의 개발 역량을 활용하여 서비스의 안정성과 사용자 경험 향상에 어떻게 기여하고 싶은지 작성해 주세요.",
+      "min_chars": 1,
+      "max_chars": 1000,
+      "required_contents": ["입사 후 기여", "개발 역량 활용", "서비스 안정성", "사용자 경험"],
+      "focus": {
+        "primary_claim": "API·데이터 모델·검증·관찰을 연결해 안정성과 이해 가능한 실패 경험을 함께 개선한다.",
+        "reviewer_need": "입사 후 포부가 공고의 백엔드 책임과 구체적인 반복 행동으로 이어지는지 확인한다.",
+        "evidence_function": "확인된 설계 관심과 공개 프로젝트의 API·저장소·메시지 관찰을 미래 행동으로 번역한다.",
+        "non_overlap_boundary": "과거 프로젝트를 다시 연대기처럼 설명하지 않고, 입사 후의 기준·행동·확인 신호에 집중한다."
+      },
+      "user_confirmation_ids": ["unknown-q4-character-limit", "unknown-production-use", "unknown-exact-contribution"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-nextwave-posting",
+      "source_type": "official_posting",
+      "locator": "https://careers.nextwave-tech.example/jobs/backend-engineer",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-14T20:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    },
+    {
+      "id": "source-nextwave-company",
+      "source_type": "official_company",
+      "locator": "https://www.nextwave-tech.example",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-14T20:00:00+09:00",
+      "digest": null,
+      "visibility": "runtime_private"
+    },
+    {
+      "id": "source-github-profile",
+      "source_type": "applicant_statement",
+      "locator": "https://github.com/judangs",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-14T19:55:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-bank-project-readme",
+      "source_type": "project_repository",
+      "locator": "https://github.com/judangs/dev-group-bank-msa/blob/main/Readme.md",
+      "authority": "project_observation",
+      "observed_at": "2026-09-14T19:56:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-bank-issue-44",
+      "source_type": "project_repository",
+      "locator": "https://github.com/judangs/dev-group-bank-msa/issues/44",
+      "authority": "project_observation",
+      "observed_at": "2026-09-14T19:57:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-bank-redis-commit",
+      "source_type": "project_repository",
+      "locator": "https://github.com/judangs/dev-group-bank-msa/commit/64d5edfb1aef0253312a86df402b008912fa2a2b",
+      "authority": "project_observation",
+      "observed_at": "2026-09-14T19:58:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source-kafka-study",
+      "source_type": "project_repository",
+      "locator": "https://github.com/judangs/study-kafka-with-java/blob/main/Readme.md",
+      "authority": "project_observation",
+      "observed_at": "2026-09-14T19:59:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    }
+  ],
+  "application_analysis": {
+    "company_context": [
+      {
+        "id": "company-context-unverified",
+        "observation": "제공된 회사 도메인과 채용 공고 URL은 .example 자리표시자라 회사의 제품·고객·문화·사업 방향을 독립적으로 확인할 수 없다.",
+        "evidence_refs": ["source-nextwave-company", "source-nextwave-posting"],
+        "writing_implication": "회사 고유의 칭찬이나 사업 주장을 만들지 않고, 사용자가 제공한 직무 요구와 확인 가능한 지원자 근거만으로 지원 이유를 작성한다.",
+        "certainty": "unknown"
+      }
+    ],
+    "role_domain_concerns": [
+      {
+        "id": "role-concern-java-spring-api-data",
+        "observation": "사용자가 제공한 공고 핵심 내용은 Java/Spring 서비스 개발, REST API 설계, 데이터베이스 모델링을 요구한다.",
+        "evidence_refs": ["source-nextwave-posting"],
+        "writing_implication": "기술 이름을 나열하지 않고 도메인 규칙·API 계약·데이터 책임을 연결한 경험으로 설명한다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "role-concern-scale-stability-ux",
+        "observation": "사용자가 제공한 공고 핵심 내용은 대규모 트래픽 대응과 서비스 안정성 개선을 핵심 과제로 제시한다.",
+        "evidence_refs": ["source-nextwave-posting"],
+        "writing_implication": "운영 성과를 꾸미지 않고 캐시·비동기·재처리·관찰 지표를 입사 후 기여 계획으로 구체화한다.",
+        "certainty": "fact"
+      }
+    ],
+    "fit_hypotheses": [
+      {
+        "id": "fit-domain-and-responsibility",
+        "statement": "지원자의 공개 Spring 백엔드 설명과 핀테크 프로젝트의 도메인·API·저장소 분리는 Java/Spring 백엔드의 책임 설계로 전이될 가능성이 있다.",
+        "evidence_refs": ["source-github-profile", "source-bank-project-readme", "source-nextwave-posting"],
+        "confirmation_required": true
+      },
+      {
+        "id": "fit-event-storage-and-stability",
+        "statement": "Redis 저장소 도입, 커밋 후 메일 발송 구조, Kafka 학습은 데이터 수명·비동기 처리·트래픽 안정성에 대한 관심을 보여 주지만 실제 운영 성과로 확장할 수 있는지는 확인이 필요하다.",
+        "evidence_refs": ["source-bank-issue-44", "source-bank-redis-commit", "source-kafka-study"],
+        "confirmation_required": true
+      }
+    ]
+  },
+  "applicant_evidence": {
+    "facts": [
+      {
+        "id": "applicant-fact-spring-backend",
+        "statement": "공개 GitHub 프로필은 Spring 기반 백엔드 시스템 설계·개발, 객체지향 설계, 도메인 모델링, 유지보수성과 확장성에 대한 관심을 명시한다.",
+        "source_refs": ["source-github-profile"],
+        "confirmed": true,
+        "allowed_uses": ["question-strength", "question-motivation", "question-contribution"]
+      },
+      {
+        "id": "applicant-fact-bank-platform",
+        "statement": "공개 저장소 README는 Spring JPA 기반 핀테크 플랫폼에서 회원·인증, 결제, 게이트웨이, Kafka 이벤트 소비와 멀티모듈 구성을 설명한다.",
+        "source_refs": ["source-bank-project-readme"],
+        "confirmed": true,
+        "allowed_uses": ["question-strength", "question-motivation", "question-problem", "question-contribution"]
+      },
+      {
+        "id": "applicant-fact-redis-refactor",
+        "statement": "judangs 계정의 공개 이슈와 커밋에는 인증 메일·세션 유지를 위한 Redis 저장소 도입, 관련 리팩터링과 테스트 파일 추가가 기록되어 있다.",
+        "source_refs": ["source-bank-issue-44", "source-bank-redis-commit"],
+        "confirmed": true,
+        "allowed_uses": ["question-strength", "question-problem", "question-contribution"]
+      }
+    ],
+    "value_statements": [
+      {
+        "id": "applicant-value-maintainability",
+        "statement": "공개 프로필은 복잡도가 증가해도 유지보수성과 확장성을 유지하는 코드 구조를 중요하게 생각한다고 밝힌다.",
+        "source_refs": ["source-github-profile"],
+        "confirmed": true,
+        "allowed_uses": ["question-strength", "question-motivation", "question-contribution"]
+      }
+    ],
+    "unknowns": [
+      {
+        "id": "unknown-exact-contribution",
+        "needed_fact": "프로젝트에서 직접 변경한 영역 또는 파일 2~3개, 본인이 내린 핵심 결정과 선택하지 않은 대안",
+        "affected_question_ids": ["question-strength", "question-problem", "question-contribution"],
+        "why_material": "공개 저장소의 구조와 계정 활동을 지원자 개인의 책임·행동으로 정확히 귀속하려면 필요하다.",
+        "acceptable_evidence": "커밋 링크, 본인 메모, 코드 설명, 설계 결정 기록 중 하나"
+      },
+      {
+        "id": "unknown-runtime-verification",
+        "needed_fact": "Redis·메일·이벤트 변경을 어떤 명령과 환경에서 검증했으며 성공·실패·미확인 결과가 무엇인지",
+        "affected_question_ids": ["question-problem", "question-contribution"],
+        "why_material": "테스트 파일 추가와 실제 검증 실행·결과를 구분해야 문제 해결의 결과를 과장하지 않는다.",
+        "acceptable_evidence": "실행 로그, CI 결과, 테스트 리포트, 재현 절차와 관찰 메모"
+      },
+      {
+        "id": "unknown-redis-runtime-result",
+        "needed_fact": "Redis 도입 후 인증 메일·세션 흐름에서 확인된 실제 변화 또는 남은 한계",
+        "affected_question_ids": ["question-problem"],
+        "why_material": "구조 변경을 운영 성과나 전송 보장으로 확대 해석하지 않기 위해 필요하다.",
+        "acceptable_evidence": "재현 전후 결과, 오류 로그, 지연·중복 관찰, 미확인 상태 중 하나"
+      },
+      {
+        "id": "unknown-production-use",
+        "needed_fact": "프로젝트의 배포 여부, 실제 사용자 유무, 운영 기간, 트래픽·지연·장애 지표",
+        "affected_question_ids": ["question-motivation", "question-contribution"],
+        "why_material": "학습·개발 프로젝트와 운영 서비스 경험을 구분해 입사 후 포부의 근거를 정직하게 제시하기 위해 필요하다.",
+        "acceptable_evidence": "배포 주소, 운영 기록, 사용자 피드백, 모니터링 지표, 또는 미배포 확인"
+      },
+      {
+        "id": "unknown-nextwave-company-context",
+        "needed_fact": "넥스트웨이브 테크의 실제 제품·고객·사업 방향 또는 공고 원문",
+        "affected_question_ids": ["question-motivation"],
+        "why_material": "지원동기를 회사 고유 맥락에 맞추려면 직무 요약 이상의 확인 가능한 정보가 필요하다.",
+        "acceptable_evidence": "실제 회사 홈페이지, 채용 공고 원문, 제품 소개, 공식 블로그 중 하나"
+      },
+      {
+        "id": "unknown-q4-character-limit",
+        "needed_fact": "4번 문항의 최소·최대 글자수 또는 입력창 제한",
+        "affected_question_ids": ["question-contribution"],
+        "why_material": "현재 답변은 작업용 1,000자 상한 안에서만 확인되며 실제 제출 제한을 검증하지 못했다.",
+        "acceptable_evidence": "지원 페이지 입력창, 공고 원문, 지원서 안내 화면의 글자수 규칙"
+      }
+    ]
+  },
+  "project_evidence": [
+    {
+      "id": "project-bank-platform",
+      "kind": "Spring JPA 기반 핀테크 서비스 플랫폼의 공개 개인 저장소",
+      "scale": "공개 저장소 README에 회원·결제·게이트웨이·컨슈머 애플리케이션과 멀티모듈 구성이 설명되어 있으나 실제 사용자·트래픽 규모는 확인되지 않음",
+      "applicant_role": "GitHub 계정 judangs가 저장소를 소유하고 이슈와 커밋을 작성했으며, 전체 구현 중 직접 담당한 범위는 제출 전 확인 필요",
+      "contribution": "공개 자료에서 도메인·애플리케이션·저장소·게이트웨이·이벤트 소비의 책임 분리와 Redis 저장소 확장 흔적을 확인할 수 있음",
+      "process": "회원·결제 흐름을 Spring JPA 기반 모듈로 나누고, 게이트웨이와 Kafka 이벤트 소비를 연결한 뒤, 인증 메일·세션의 임시 데이터를 Redis로 분리하는 변경을 진행함",
+      "learning": "백엔드 완수는 기능 추가만이 아니라 데이터 수명, 트랜잭션 경계, 외부 효과의 순서와 검증 범위를 함께 설명할 수 있는 상태임을 학습함",
+      "claims": [
+        {
+          "id": "project-claim-spring-jpa-msa",
+          "statement": "README는 Spring JPA 기반 MSA 플랫폼과 회원·결제·게이트웨이·이벤트 소비 애플리케이션을 설명한다.",
+          "source_refs": ["source-bank-project-readme"],
+          "certainty": "observed",
+          "outcome_limit": "README 관찰만으로 실제 운영 규모나 모든 코드의 개인 기여를 확정할 수 없다."
+        },
+        {
+          "id": "project-claim-module-responsibility",
+          "statement": "공개 README는 API, application, domain, store, core 모듈의 역할을 구분한다.",
+          "source_refs": ["source-bank-project-readme"],
+          "certainty": "observed",
+          "outcome_limit": "구조 설명은 확인되지만 설계·구현의 개인 의사결정 범위는 추가 확인이 필요하다."
+        },
+        {
+          "id": "project-claim-redis-mail-session",
+          "statement": "공개 이슈와 병합 커밋은 인증 메일 임시 정보와 세션 토큰을 Redis로 관리하는 변경을 기록한다.",
+          "source_refs": ["source-bank-issue-44", "source-bank-redis-commit"],
+          "certainty": "observed",
+          "outcome_limit": "구조 변경과 테스트 파일은 확인되지만 운영 성능이나 장애 감소 수치는 공개되지 않았다."
+        },
+        {
+          "id": "project-claim-after-commit-mail",
+          "statement": "병합 커밋의 변경 내용은 메일 발송을 트랜잭션 커밋 이후 이벤트 리스너에서 비동기로 처리하도록 바꾼다.",
+          "source_refs": ["source-bank-redis-commit"],
+          "certainty": "observed",
+          "outcome_limit": "코드 구조는 확인되지만 실제 메일 전송 성공률이나 전달 보장은 측정 자료가 필요하다."
+        },
+        {
+          "id": "project-claim-redis-tests",
+          "statement": "병합 커밋에는 Redis 세션·메일 저장소의 저장·조회·삭제를 확인하는 테스트 파일이 포함된다.",
+          "source_refs": ["source-bank-redis-commit"],
+          "certainty": "observed",
+          "outcome_limit": "테스트 파일 존재는 확인되지만 해당 시점의 실제 테스트 실행 결과는 별도 확인이 필요하다."
+        }
+      ],
+      "language_translations": [
+        {
+          "internal_term": "MSA 멀티모듈 구성",
+          "universal_term": "업무 규칙·API·저장소·외부 연결의 책임 분리",
+          "use_condition": "기술 구조보다 변경 영향과 설명 가능한 책임을 보여 줄 때 사용"
+        },
+        {
+          "internal_term": "TransactionalEventListener(AFTER_COMMIT)",
+          "universal_term": "핵심 데이터 커밋 후 외부 메일 효과를 분리하는 처리 순서",
+          "use_condition": "정확한 구현명을 면접에서 설명할 때만 병기"
+        }
+      ]
+    },
+    {
+      "id": "project-kafka-study",
+      "kind": "Java Kafka 학습 저장소",
+      "scale": "Kafka producer·consumer·streams와 파티션·ISR·컨슈머 랙을 정리한 학습 저장소이며 운영 규모는 확인되지 않음",
+      "applicant_role": "GitHub 계정 judangs의 공개 학습 저장소 작성자",
+      "contribution": "파티션 수, 처리량, 메시지 키, ISR, 멱등성, 컨슈머 랙의 관계를 문서화함",
+      "process": "처리량과 순서, 재처리와 데이터 유실 가능성을 개념별로 비교하고 운영 시 관찰할 신호를 정리함",
+      "learning": "대규모 트래픽 대응은 단순히 병렬 수를 늘리는 일이 아니라 순서·중복·랙·복구 조건을 함께 정하는 일임을 학습함",
+      "claims": [
+        {
+          "id": "project-claim-kafka-reliability-study",
+          "statement": "학습 README는 파티션·컨슈머 처리량·컨슈머 랙·ISR·멱등성 producer를 서비스 안정성 관점에서 정리한다.",
+          "source_refs": ["source-kafka-study"],
+          "certainty": "observed",
+          "outcome_limit": "학습 문서이므로 실제 대규모 트래픽 운영 경험이나 지표로 확장하지 않는다."
+        }
+      ],
+      "language_translations": [
+        {
+          "internal_term": "consumer lag",
+          "universal_term": "생산 속도와 소비 처리량의 차이로 생기는 처리 지연 신호",
+          "use_condition": "입사 후 관찰 지표와 학습 근거를 설명할 때 사용"
+        }
+      ]
+    }
+  ],
+  "source_policy": {
+    "as_of": "2026-09-14",
+    "prefer_primary": true,
+    "allowed_source_ids": [
+      "source-nextwave-posting",
+      "source-nextwave-company",
+      "source-github-profile",
+      "source-bank-project-readme",
+      "source-bank-issue-44",
+      "source-bank-redis-commit",
+      "source-kafka-study"
+    ],
+    "visible_source_ids": [
+      "source-github-profile",
+      "source-bank-project-readme",
+      "source-bank-issue-44",
+      "source-bank-redis-commit",
+      "source-kafka-study"
+    ],
+    "missing_evidence_policy": "preserve_unknown"
+  },
+  "quality_profile": {
+    "policy_ref": "artifacts/agent-loop/document/job-application-report-production/vocabularies/job-application-report-quality-policy.json",
+    "mandatory_gate_ids": [
+      "request-and-question-coverage",
+      "source-and-freshness-boundary",
+      "applicant-attribution-and-confirmation",
+      "project-evidence-and-causality",
+      "role-domain-language-clarity",
+      "publication-and-privacy-safety"
+    ],
+    "dimensions": [
+      {"id": "question-fit-and-differentiation", "weight": 20},
+      {"id": "role-and-domain-alignment", "weight": 20},
+      {"id": "applicant-viewpoint-and-values", "weight": 18},
+      {"id": "evidence-causality-and-attribution", "weight": 18},
+      {"id": "project-abstraction-and-transfer", "weight": 14},
+      {"id": "clarity-and-interview-defensibility", "weight": 10}
+    ],
+    "rating_min": 0,
+    "rating_max": 4,
+    "qualification_threshold": 90,
+    "score_meaning": "editing_fitness_not_hiring_probability",
+    "revision_passes": 1
+  },
+  "output_profile": {
+    "candidate_count": 5,
+    "report_format": "markdown",
+    "audiences": ["지원자", "취업 전문가"],
+    "required_sections": ["company-role-analysis", "candidate-answers", "candidate-evaluation", "interview-preparation", "material-requests"],
+    "design": {
+      "tone": "신뢰감 있고 간결한 편집 보고서",
+      "comparison_layout": "vertical",
+      "avoid_patterns": ["내부 운영 파일명", "회사 고유 사실의 추측", "반복적인 카드 배열", "제출 승인처럼 읽히는 표현"],
+      "raster_policy": "not_required"
+    },
+    "publication": {
+      "searchable_text_required": true,
+      "overflow_policy": "no_clipped_content",
+      "visible_source_policy": "allowlisted_only",
+      "content_policies": [
+        {
+          "id": "exclude-internal-bookkeeping",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {"type": "literal_any", "values": ["prompt-engineering-contract", "frozen-findings.json", "request.json"]},
+          "rationale": "독자에게 필요한 지원서 내용과 내부 실행 기록을 분리한다."
+        },
+        {
+          "id": "exclude-local-absolute-path",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {"type": "regex_any", "values": ["/Users/[^\\s]+", "file://[^\\s]+"]},
+          "rationale": "로컬 환경과 절대 경로를 공개 보고서에 노출하지 않는다."
+        },
+        {
+          "id": "require-reader-sections",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "present",
+          "matcher": {"type": "literal_any", "values": ["지원 답안", "면접 준비", "제출 전 확인"]},
+          "rationale": "지원자가 실제 선택과 수정에 사용할 핵심 섹션을 확인한다."
+        }
+      ]
+    }
+  },
+  "privacy_boundary": {
+    "public_evidence_ids": [
+      "source-github-profile",
+      "source-bank-project-readme",
+      "source-bank-issue-44",
+      "source-bank-redis-commit",
+      "source-kafka-study"
+    ],
+    "prohibited_content_categories": ["private-reasoning", "raw-prompt", "runtime-handle", "secret", "unconsented-identity", "internal-path"],
+    "identity_handling": "explicit_consent_only"
+  },
+  "stop_budget": {
+    "max_research_rounds": 2,
+    "max_revision_passes": 1,
+    "unchanged_failure_limit": 1
+  }
+}

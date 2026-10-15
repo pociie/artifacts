@@ -1,0 +1,63 @@
+{
+  "kind": "reusable-artifact-agent-operation-boundary/v1",
+  "revision": "2026-09-15.ibk-it-fresh",
+  "status": "bound",
+  "authorityEffect": "none",
+  "subjectRef": "agent-subject:ibk-it-report-builder",
+  "nativeOwnerRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+  "requestedOutcome": "Produce five differentiated Korean answers and one searchable PDF review report for the supplied IBK기업은행 IT posting.",
+  "successEvidence": [
+    "request.json binds the mandatory five-set PDF profile",
+    "five complete candidate sets cover every question",
+    "application projection is separate from review data",
+    "PDF has measured searchable text and no overflow",
+    "missing facts remain explicit and submission remains outside scope"
+  ],
+  "nonGoals": [
+    "edit reusable source",
+    "invent company or applicant facts",
+    "submit the application",
+    "make a hiring decision"
+  ],
+  "boundedDiscoverySurface": {
+    "nativeArtifact": "artifacts/agent-loop/document/job-application-report-production",
+    "runtimeBundle": ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15",
+    "selectedSourceMembers": [
+      "loop.yaml",
+      "contract.md",
+      "governance.md",
+      "policy/job-application-report-production.policy.json",
+      "profiles/five-set-pdf-report.profile.json",
+      "skill/job-application-report-loop-operation/SKILL.md",
+      "skill/job-application-report-loop-operation/references/operation-protocol.md",
+      "skill/job-application-report-loop-operation/references/question-family-and-expression-guide.md",
+      "skill/job-application-report-loop-operation/references/editorial-report-and-public-language-guide.md"
+    ],
+    "applicantEvidence": "user-provided posting, portfolio, and previous IBK cover-letter links",
+    "maximumCandidateCount": 5,
+    "maximumRevisionPasses": 1
+  },
+  "validation": [
+    "native request/result checker",
+    "mandatory profile checker",
+    "writing-quality checker",
+    "answer projection checker",
+    "measured PDF renderer",
+    "native package tests"
+  ],
+  "materialChangeSignals": [
+    "question or character-limit change",
+    "applicant or project fact change",
+    "company or role source change",
+    "quality or publication profile change",
+    "projection or report boundary change",
+    "effect expansion beyond fresh runtime directory"
+  ],
+  "stopConditions": [
+    "required evidence changes materially without confirmation",
+    "candidate answers cannot stay within declared limits",
+    "PDF is not searchable or has overflow",
+    "same validation failure repeats unchanged",
+    "requested effect expands to submission or source mutation"
+  ]
+}

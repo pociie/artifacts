@@ -1,0 +1,244 @@
+{
+  "authorityEffect": "none",
+  "bindings": {
+    "evaluationReportDigest": "sha256:26ec87c844a9473da34ce055f118660dd03ad45498bf146a5ccd20d96c19723a",
+    "evaluationReportRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-53-swe-rebench-swe-rebench-leaderboard/final-independent-evaluation.r13.json",
+    "populationAccountingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-53-swe-rebench-swe-rebench-leaderboard/population-settlement-decision.r13.json",
+    "reducerOutputDigest": "sha256:5d5fe559d7ca4aa242f06d9198b629eb8adac3ac6524904d66a79bdfa56bc0cb",
+    "reducerOutputRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-53-swe-rebench-swe-rebench-leaderboard/terminal-reward-reducer-output.r13.json",
+    "settlementRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-53-swe-rebench-swe-rebench-leaderboard/item-resource-settlement.r13.json",
+    "simulationEvidenceDigest": "sha256:c6d89ab946791445528e7fa895d94502469f6463de63d2844299724a7fc1cf89",
+    "simulationEvidenceRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-53-swe-rebench-swe-rebench-leaderboard/simulation-evidence.r13.json",
+    "terminalAssessmentDigest": "sha256:7a4f8530b1ecfb083ae130a81ca78b4cf9dee073e21f6ce038698d170469f372",
+    "terminalAssessmentRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-53-swe-rebench-swe-rebench-leaderboard/terminal-reward-assessment.r13.json"
+  },
+  "decision": {
+    "diagnosticReward": null,
+    "dimensionRewards": [
+      {
+        "dimensionId": "requirement_understanding",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "operability",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "routing",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "reasoning_control",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "context_adaptation",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "workflow",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "agent_architecture",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "agent_swarm",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_discovery",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_reuse",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_creation",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_update",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "artifact_split",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "artifact_merge",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "dynamic_artifact_composition",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "loop_architecture_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "evidence_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "outcome_quality",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "efficiency",
+        "reward": null,
+        "state": "unavailable"
+      }
+    ],
+    "disposition": "require_context",
+    "findings": [
+      {
+        "criterionId": "gate.outcome.required_validation",
+        "findingType": "protected_gate_failure",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "critical"
+      },
+      {
+        "criterionId": "reward.operability",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ENVIRONMENT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.update",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ARTIFACT_UPDATE_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.split",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ARTIFACT_SPLIT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.merge",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ARTIFACT_MERGE_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.dynamic_composition",
+        "findingType": "evidence_gap",
+        "ownerRoute": "DYNAMIC_ARTIFACT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.outcome_quality",
+        "findingType": "evidence_gap",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "major"
+      }
+    ],
+    "improvementTargetCriterionIds": [
+      "gate.outcome.required_validation",
+      "reward.operability",
+      "reward.artifact.update",
+      "reward.artifact.split",
+      "reward.artifact.merge",
+      "reward.artifact.dynamic_composition",
+      "reward.outcome_quality"
+    ],
+    "primaryReward": 0.0,
+    "promotionEligible": false,
+    "reasonCodes": [
+      "protected_criterion_unresolved",
+      "qualifying_criterion_unresolved",
+      "required_active_dimension_unavailable"
+    ],
+    "useClass": "workset_terminal"
+  },
+  "digest": "sha256:b8a94fb2649b322835ab4c901d63eaf8db8ced463dadc2d677d8dc190cea15fa",
+  "execution": {
+    "effectiveReceiptState": "missing_require_context",
+    "effectiveSubjectTimeoutSeconds": null,
+    "modelEffective": null,
+    "modelRequested": "gpt-5.6-luna",
+    "promotionEligible": false,
+    "provider": "harbor@0.22.0",
+    "reasoningEffortEffective": null,
+    "reasoningEffortRequested": "max",
+    "requestedSubjectTimeoutSeconds": 3600,
+    "subject": "Harbor Subject",
+    "subjectRetries": 0,
+    "subjectTerminalState": "not_started",
+    "subjectTrials": 0,
+    "verifierState": "not_started"
+  },
+  "frameworkRevision": "r4",
+  "identityDigest": "sha256:99dfe7ab80dccd47dd4a02dd69b824a1396aec52c8b2173a92987abe4af334d6",
+  "itemId": "swe-rebench/swe-rebench-leaderboard",
+  "itemTerminalStatus": "held",
+  "kind": "workset-terminal-reward-round/v2",
+  "nonCompensatoryGates": {
+    "effectiveExecutionReceiptObserved": false,
+    "effectiveExecutionReceiptRequired": true,
+    "populationItemBindingExact": true,
+    "protectedOutcomeValidationObserved": false,
+    "protectedOutcomeValidationRequired": true,
+    "resourceSettlementComplete": true
+  },
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "preservedGaps": [
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "network_policy_and_cost_budget_qualified"
+  ],
+  "privacy": {
+    "credentialsProjected": false,
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawTaskContentProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "roundId": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-53-swe-rebench-swe-rebench-leaderboard:terminal-reward-round",
+  "schemaVersion": 2,
+  "shardDisposition": {
+    "activeItemCount": 0,
+    "currentItem": "swe-rebench/swe-rebench-leaderboard",
+    "currentItemStatus": "held",
+    "frozenMemberCount": 66,
+    "otherMembersDisposition": "not_inferred",
+    "pendingItemCount": 12,
+    "state": "in_progress",
+    "terminalCounts": {
+      "cancelled": 0,
+      "completed": 1,
+      "failed": 1,
+      "held": 52
+    },
+    "terminalSettledItemCount": 54
+  },
+  "status": "settled",
+  "terminalReward": 0.0
+}

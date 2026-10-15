@@ -1,0 +1,190 @@
+{
+  "kind": "prompt-engineering-contract/v1",
+  "schemaVersion": 1,
+  "contractId": "job-application.nextwave-backend.report-builder",
+  "revision": "2026-09-14.1",
+  "status": "candidate",
+  "authorityEffect": "none",
+  "consumer": {
+    "kind": "generated_loop",
+    "consumerRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+    "riskClass": "high",
+    "runtimeInstructionRef": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/runtime-instruction-envelope",
+    "outputContractRef": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/result.json"
+  },
+  "objective": {
+    "objectiveRef": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/agent-operation-boundary.json",
+    "successCriteriaRefs": [
+      "criteria:four-question-coverage",
+      "criteria:evidence-attribution",
+      "criteria:bounded-revision-and-validation"
+    ],
+    "nonScopeRefs": [
+      "non-scope:no-submission",
+      "non-scope:no-invented-company-facts",
+      "non-scope:no-private-prompt-materialization"
+    ]
+  },
+  "instructionLayers": [
+    {
+      "order": 0,
+      "kind": "framework_authority",
+      "sourceRef": "artifacts/knowledge/ai/prompt-design-and-quality-engineering.md",
+      "sourceDigest": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+      "trusted": true,
+      "mayWidenAuthority": false
+    },
+    {
+      "order": 1,
+      "kind": "responsibility_profile",
+      "sourceRef": "artifacts/agent-loop/document/job-application-report-production/contract.md",
+      "sourceDigest": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+      "trusted": true,
+      "mayWidenAuthority": false
+    },
+    {
+      "order": 2,
+      "kind": "knowledge_projection",
+      "sourceRef": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/context-projection.json",
+      "sourceDigest": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+      "trusted": true,
+      "mayWidenAuthority": false
+    },
+    {
+      "order": 3,
+      "kind": "consumer_specialization",
+      "sourceRef": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/agent-operation-boundary.json",
+      "sourceDigest": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+      "trusted": true,
+      "mayWidenAuthority": false
+    },
+    {
+      "order": 4,
+      "kind": "task_objective",
+      "sourceRef": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/route-decision.json",
+      "sourceDigest": "sha256:5555555555555555555555555555555555555555555555555555555555555555",
+      "trusted": true,
+      "mayWidenAuthority": false
+    },
+    {
+      "order": 5,
+      "kind": "runtime_narrowing",
+      "sourceRef": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/effect-admission.json",
+      "sourceDigest": "sha256:6666666666666666666666666666666666666666666666666666666666666666",
+      "trusted": true,
+      "mayWidenAuthority": false
+    }
+  ],
+  "methods": [
+    {
+      "id": "direct_zero_shot",
+      "activationEvidenceRefs": ["failure-class:clear-report-contract"],
+      "budget": {"maxSamples": 1, "maxBranches": 1, "maxDepth": 1, "maxRevisions": 0, "maxToolCalls": 0, "maxOptimizationIterations": 0},
+      "failureModeRefs": ["failure:ambiguous-answer-scope"],
+      "mitigationRefs": ["mitigation:explicit-question-map"]
+    },
+    {
+      "id": "retrieval_grounding",
+      "activationEvidenceRefs": ["failure-class:public-source-dependent-claims"],
+      "budget": {"maxSamples": 1, "maxBranches": 1, "maxDepth": 1, "maxRevisions": 0, "maxToolCalls": 0, "maxOptimizationIterations": 0},
+      "failureModeRefs": ["failure:stale-or-unverified-company-context"],
+      "mitigationRefs": ["mitigation:source-provenance-and-unknown-preservation"],
+      "projectionRef": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/research-evidence.json",
+      "protectedClaimRefs": ["claim:source-authority-is-not-inferred"]
+    },
+    {
+      "id": "structured_output",
+      "activationEvidenceRefs": ["failure-class:machine-consumed-answer-and-score-record"],
+      "budget": {"maxSamples": 1, "maxBranches": 1, "maxDepth": 1, "maxRevisions": 0, "maxToolCalls": 0, "maxOptimizationIterations": 0},
+      "failureModeRefs": ["failure:schema-valid-but-unattributed-claim"],
+      "mitigationRefs": ["mitigation:deterministic-cross-record-check"],
+      "semanticValidatorRefs": ["validator:job-application-report-checker"]
+    },
+    {
+      "id": "external_feedback_revision",
+      "activationEvidenceRefs": ["failure-class:frozen-review-finding"],
+      "budget": {"maxSamples": 1, "maxBranches": 1, "maxDepth": 1, "maxRevisions": 1, "maxToolCalls": 0, "maxOptimizationIterations": 0},
+      "failureModeRefs": ["failure:unchanged-revision-fingerprint"],
+      "mitigationRefs": ["mitigation:one-revision-and-stop-on-repeat"],
+      "feedbackSourceRefs": [".collab/artifacts/job-application-nextwave-backend-2026-09-14/frozen-findings.json"],
+      "unchangedFingerprintRouteRef": "route:replan-on-repeat-or-request-context"
+    }
+  ],
+  "context": {
+    "projectionRef": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/context-projection.json",
+    "protectedClaimRefs": [
+      "claim:do-not-invent-company-facts",
+      "claim:do-not-invent-personal-results",
+      "claim:question-specific-narrative-functions"
+    ],
+    "maxInputTokens": 24000,
+    "maxItems": 24,
+    "placementPolicyRef": "policy:critical-context-first-and-last",
+    "compaction": {
+      "maxCompactions": 1,
+      "preserveRefs": [
+        ".collab/artifacts/job-application-nextwave-backend-2026-09-14/agent-operation-boundary.json",
+        ".collab/artifacts/job-application-nextwave-backend-2026-09-14/request.json",
+        "claim:do-not-invent-personal-results"
+      ],
+      "onProtectedClaimLoss": "stop"
+    }
+  },
+  "toolPolicy": {
+    "capabilityRefs": [],
+    "effectPolicyRef": "effect-policy:local-artifact-write-admitted",
+    "targetSelectionRef": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/effect-admission.json",
+    "preEffectCheckRef": "precheck:exact-run-directory-and-no-external-effect",
+    "postEffectReceiptRef": "receipt:read-back-and-deterministic-validation",
+    "onUncertainEffect": "reread_then_stop",
+    "maxAttempts": 1
+  },
+  "evaluation": {
+    "candidateBindingRefs": [
+      ".collab/artifacts/job-application-nextwave-backend-2026-09-14/request.json",
+      ".collab/artifacts/job-application-nextwave-backend-2026-09-14/result.json"
+    ],
+    "baselineRef": "baseline:direct-contract-draft",
+    "datasetRefs": ["dataset:role-brief-github-evidence-and-four-questions"],
+    "evaluatorRefs": ["validator:job-application-report-checker", "reviewer:independent-semantic-review-pending"],
+    "caseClasses": ["typical", "edge", "adversarial", "stale_context", "ambiguous_instruction"],
+    "dimensions": ["task_success", "instruction_following", "grounding", "semantic_validity", "safety_authority", "privacy", "latency", "token_cost", "tool_efficiency"],
+    "nonCompensatoryDimensions": ["grounding", "semantic_validity", "safety_authority", "privacy"],
+    "promotionRuleRef": "promotion:report-only-no-automatic-adoption",
+    "humanCalibrationRef": "calibration:applicant-confirmation-and-independent-review-required"
+  },
+  "stopping": {
+    "maxToolCalls": 20,
+    "maxWaitsPerFingerprint": 0,
+    "maxCompactions": 1,
+    "maxRevisions": 1,
+    "repeatedFingerprintAction": "ask_authorized_owner",
+    "terminalEvidenceRefs": [
+      ".collab/artifacts/job-application-nextwave-backend-2026-09-14/validation-evidence.json",
+      ".collab/artifacts/job-application-nextwave-backend-2026-09-14/result.json"
+    ],
+    "noProgressWindowRef": "window:one-unchanged-missing-fact-fingerprint"
+  },
+  "privacy": {
+    "storePromptBodies": false,
+    "storePrivateReasoning": false,
+    "storeTranscripts": false,
+    "redactionPolicyRef": "policy:job-application-public-report-redaction",
+    "retentionPolicyRef": "policy:task-local-runtime-artifact-retention",
+    "permittedEvidenceRefs": [
+      ".collab/artifacts/job-application-nextwave-backend-2026-09-14/research-evidence.json",
+      ".collab/artifacts/job-application-nextwave-backend-2026-09-14/context-projection.json"
+    ]
+  },
+  "externalControls": {
+    "authorityPolicyRef": "artifacts/agent-loop/document/job-application-report-production/governance.md",
+    "gitPreflightRef": "policy:local-write-without-index-integration",
+    "effectReconciliationRef": ".collab/artifacts/job-application-nextwave-backend-2026-09-14/effect-admission.json",
+    "settlementRef": "settlement:report-only-and-user-confirmation-pending",
+    "approvalPolicyRef": "approval:applicant-final-confirmation-required"
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "fbdc8d28f91df0406362c6bb7f18998d65e33f438cd92638de87c1009ef269ca"
+  }
+}

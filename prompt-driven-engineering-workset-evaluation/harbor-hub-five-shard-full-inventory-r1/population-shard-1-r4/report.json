@@ -1,0 +1,259 @@
+{
+  "authorityEffect": "none",
+  "contextAndRouting": {
+    "artifactReuse": {
+      "evidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:artifact-reuse-decision-video-processing",
+      "selectedCount": 6,
+      "state": "selected"
+    },
+    "contextReconciliation": {
+      "action": "recompose_projection",
+      "decisionRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:context-reconciliation-decision-video-processing",
+      "newClaimsPreserved": true,
+      "omittedExamples": [],
+      "privateContentStored": false,
+      "protectedClaimsPreserved": true,
+      "state": "eligible_report_only"
+    },
+    "coordination": {
+      "closureState": "closed",
+      "evidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:coordination-closure-decision-video-processing",
+      "participantCount": 2,
+      "participantSettlement": "settled",
+      "planState": "ready"
+    },
+    "sixMode": {
+      "continuity": "nested_segment",
+      "evidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:route-decision-video-processing",
+      "outerMode": "orchestration",
+      "segmentMode": "single_task",
+      "state": "selected"
+    },
+    "topology": {
+      "architectureRef": "artifacts/agents/evidence-governance/architectures/subject-topology-operation-observation.generator-validator.json",
+      "evidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:topology-selection-decision-video-processing",
+      "requirement": "architecture_only",
+      "state": "selected",
+      "swarm": "not_required"
+    },
+    "workflowPattern": {
+      "evidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:workflow-pattern-decision-video-processing",
+      "patternId": "generator_validator",
+      "state": "selected"
+    }
+  },
+  "digest": "sha256:fc52d480ebb47cd1a91eef6b745ecdfc8abc9d56264d7945c8acc9bbf6222661",
+  "evidenceRefs": [
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:harbor-public-probe",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:representative-task-binding-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:context-reconciliation-decision-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:route-decision-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:artifact-reuse-decision-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:workflow-pattern-decision-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:topology-selection-decision-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:coordination-closure-decision-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:provider-qualification-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:platform-observation-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:subject-runtime-observation-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:simulation-evidence-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:evaluation-report-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:terminal-reward-assessment-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:settlement-ledger-video-processing"
+  ],
+  "frameworkRevision": "r4",
+  "generatedAt": "2026-08-28T13:06:07.406445Z",
+  "harborProbe": {
+    "accountAuth": {
+      "requiredForObservedPublicOperation": false,
+      "state": "not_authenticated"
+    },
+    "invalidAliasProbe": {
+      "authRequested": false,
+      "blockerForPublicOperation": false,
+      "failureCode": "dataset_version_not_found",
+      "state": "failed"
+    },
+    "publicDatasetList": {
+      "authRequested": false,
+      "datasetCount": 80,
+      "state": "passed",
+      "taskCount": 51625
+    },
+    "validImportProbe": {
+      "authRequested": false,
+      "state": "passed",
+      "taskCount": 89
+    },
+    "version": "0.22.0"
+  },
+  "historicalR3": {
+    "currentR4ReassessmentRequired": true,
+    "priorMetadataSettlementDoesNotCompleteCurrentShard": true,
+    "state": "failure_observation_only"
+  },
+  "inventory": {
+    "assignmentDigest": "sha256:76a0097f9b7d110d00336a72ef22de837a3188e5ce740892143f69e49a44b67",
+    "frozenInventoryDigest": "sha256:3a29a0bb430202ad341ac8e5c41a67198e27418444c992ab6dd0bf52ab8760a7",
+    "ownedDatasetCount": 58,
+    "selectionRule": "integer(SHA256(NFKC(trim(lower(canonicalDatasetId))))[0:16],16) mod 5",
+    "shardCount": 5,
+    "shardIndex": 0
+  },
+  "kind": "harbor-hub-five-shard-full-inventory-r4-sanitized-report/v1",
+  "nativeOwnerGaps": [
+    "restore_model_provider_access_for_subject_adapter",
+    "obtain_effective_reasoning_effort_receipt",
+    "observe_public_catalog_and_package_license_metadata",
+    "observe_restricted_network_enforcement_or_preserve_unobserved_state",
+    "supply_monetary_budget_cap",
+    "expose_separate_verifier_environment_mode_if_required",
+    "obtain_independent_review"
+  ],
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "classification": "sanitized_metadata_only",
+    "excludedClasses": [
+      "task_body",
+      "internal_reasoning",
+      "conversation_record",
+      "secret_material",
+      "runtime_execution_handle"
+    ],
+    "prohibitedContentExcluded": true,
+    "runtimeEvidenceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1-r4"
+  },
+  "qualification": {
+    "authorityEffect": "none",
+    "budget": {
+      "attemptLimit": 1,
+      "concurrencyLimit": 1,
+      "monetaryCap": "not_supplied",
+      "providerUsage": "unavailable",
+      "retryLimit": 0,
+      "trialLimit": 1
+    },
+    "license": {
+      "disposition": "local_execution_only_preserve_gap",
+      "metadataState": "unobserved",
+      "packageLicenseFileObserved": false,
+      "publicVisibilityIsNotLicense": true,
+      "redistribution": "not_requested",
+      "state": "execution_qualified_with_limitation"
+    },
+    "modelAdmission": {
+      "admissionBeforeRun": "passed",
+      "agentTimeoutMultiplier": 1,
+      "configuredModel": "openai/gpt-5.6-luna",
+      "configuredReasoningEffort": "max",
+      "effectiveTimeoutSeconds": 3600,
+      "lowerMaxCapApplied": false,
+      "nativeTimeoutSeconds": 3600,
+      "requestedModel": "openai/gpt-5.6-luna",
+      "requestedReasoningEffort": "max"
+    },
+    "network": {
+      "evidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:network-preflight-decision-video-processing",
+      "restrictedPolicyEnforcement": "unobserved",
+      "state": "qualified_public_only",
+      "taskConfigNetworkField": "not_declared"
+    },
+    "oracle": {
+      "attempts": 2,
+      "evidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:oracle-repeatability-result-video-processing",
+      "exceptions": 0,
+      "rewards": [1, 1],
+      "state": "passed"
+    },
+    "platform": {
+      "dockerServer": "linux/aarch64",
+      "evidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:platform-observation-video-processing",
+      "executionPath": "qualified_emulation",
+      "host": "darwin/arm64",
+      "imageDigest": "sha256:a2c0f39e3ab04e67ac6e49cad9167bb0d987babe32511768c01aa0c6905a875f",
+      "imageRef": "alexgshaw/video-processing:20251031",
+      "state": "qualified",
+      "target": "linux/amd64"
+    },
+    "reportOnly": true,
+    "state": "qualified_for_targeted_run"
+  },
+  "reportId": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:sanitized-report",
+  "representative": {
+    "canonicalDatasetId": "terminal-bench/terminal-bench-2",
+    "datasetIdDigest": "sha256:387faffe64ae9ee7eb2b8fed8e033b75afcb199eeb05f9e57fbf05700d5a05f1",
+    "datasetVisibility": "Public",
+    "exactConfigImported": true,
+    "exactTaskConfigDigest": "sha256:49e4a92b9b04a3dd12ac1f0818e75574128d2b981f7b7e4c3707f7781933b805",
+    "harborTaskChecksum": "sha256:b62eef3fb5c016796ec8b1eda72f2be68fcb44844d2dbe12776412e1580a33b3",
+    "instructionDigest": "sha256:15936f5e61823ae4794994d6e1b7e4e776b40968ea382405b868c501dfe032db",
+    "nativeTimeoutSeconds": {
+      "agent": 3600,
+      "verifier": 3600
+    },
+    "observedDatasetRef": "terminal-bench@2.0",
+    "shardIndex": 0,
+    "taskEvidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:representative-task-binding-video-processing",
+    "taskId": "video-processing",
+    "taskPackageDigest": "sha256:bbf256ebdbe5d39bf5f9f3b556fd313947e5775f800b2fee02f5135bd11b8272",
+    "versionObservation": "inventory_revision_not_exposed"
+  },
+  "schemaVersion": 1,
+  "shardDisposition": {
+    "complete": false,
+    "noAggregateRewardOrCompletionInferred": true,
+    "operationLogRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:operation-log",
+    "operationStateRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:operation-state",
+    "ownedDatasetCount": 58,
+    "state": "in_progress",
+    "terminallySettledRepresentatives": 1,
+    "untouchedOwnedDatasetCount": 57
+  },
+  "sourceRevision": "harbor-hub-five-shard-full-inventory-source-r4",
+  "subjectExecution": {
+    "effectiveReasoningEffort": "unverified",
+    "modelResponseCompleted": false,
+    "providerRuntimeGap": "model_provider_auth_empty",
+    "retries": 0,
+    "simulationEvidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:simulation-evidence-video-processing",
+    "state": "failed",
+    "subjectEvidenceRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:subject-runtime-observation-video-processing",
+    "terminalAssessmentRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:terminal-reward-assessment-video-processing",
+    "terminalErrorClass": "NonZeroAgentExitCodeError",
+    "trials": 1,
+    "usageAndCost": "unavailable",
+    "verifier": {
+      "environmentMode": "shared",
+      "failedTests": 3,
+      "passedTests": 2,
+      "protectedModeReceipt": "not_exposed_by_harbor_result",
+      "reward": 0,
+      "state": "failed",
+      "totalTests": 5
+    }
+  },
+  "terminalDecision": {
+    "diagnosticReward": null,
+    "disposition": "blocked",
+    "ownerRoutes": ["OUTCOME_GAP", "REASONING_POLICY_GAP", "AGENT_ARCHITECTURE_GAP"],
+    "primaryReward": 0,
+    "promotionEligible": false,
+    "reasonCodes": [
+      "protected_criterion_failed",
+      "qualifying_criterion_failed",
+      "required_active_dimension_below_threshold"
+    ]
+  },
+  "terminalSettlement": {
+    "containers": "deleted",
+    "credentialInjection": "deleted",
+    "imageCache": "retained_local_cache",
+    "itemState": "terminally_settled_failed",
+    "jobArtifacts": "retained_runtime_private",
+    "sameRoundEvaluationAndSettlement": true,
+    "settlementRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:settlement-ledger-video-processing",
+    "state": "complete",
+    "taskPackage": "retained_runtime_private",
+    "terminalReward": 0,
+    "terminalRoundRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:terminal-reward-round-video-processing"
+  }
+}

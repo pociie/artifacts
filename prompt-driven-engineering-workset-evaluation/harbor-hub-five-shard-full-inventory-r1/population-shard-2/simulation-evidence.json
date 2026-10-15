@@ -1,0 +1,344 @@
+{
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "schemaVersion": 1,
+  "evidenceId": "evidence:harbor-hub-five-shard-full-inventory-r1:population-shard-2",
+  "status": "held",
+  "authorityEffect": "none",
+  "scope": {
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-2",
+    "requestDigest": "sha256:bc289d57ae4e5c11cf65ff86e373982cafa5c4907f3209b68a4ddae310e4da85",
+    "providerClass": "harbor",
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+task:56b1fffecd743df1e7490235e69b51c44701f34c",
+    "sourceDigest": "sha256:6516fcc3a4a753eabd66a3e0b5c4a4313db8feb323ddf0666074d1cbb075c9a1",
+    "verifierDigest": "sha256:7140e6b146025f9acaaaf3582777efbf2df03e780521fc1bf59be6f953aa9c8d",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/skill/operate-engineering-workset-simulation/SKILL.md",
+      "artifacts/loop-architecture/components/execution-routing/pre-route-workflow-resolution.md"
+    ]
+  },
+  "workingMemory": {
+    "bindingRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/working-memory-binding.json",
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2",
+    "sessionCursor": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/cursor-settled",
+    "checkpointRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/checkpoint-inventory-freeze.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/checkpoint-settlement.json"
+    ],
+    "retention": "runtime-private-until-lane-settlement-then-sanitized-immutable-projection",
+    "invalidation": [
+      "operation_revision_change",
+      "source_digest_change",
+      "hub_inventory_digest_change",
+      "provider_capability_change",
+      "model_effort_timeout_receipt_change",
+      "settlement_state_change",
+      "privacy_classification_change"
+    ],
+    "digest": "sha256:b58792e30660e82fed2adc1e534cd5b3fa2e57516bab88c43f61744ae46fb9d9"
+  },
+  "provider": {
+    "qualificationRef": "provider-observation.json",
+    "qualificationDigest": "sha256:84c25861ba6556e25d1cfdcfa15d68c75f206199afa4c3ffe3bba934185f60c9",
+    "state": "held",
+    "limitations": [
+      "dynamic_network_policy_unavailable",
+      "no_network_enforcement_unavailable",
+      "inert_initialization_probe_required",
+      "effective_model_unverified",
+      "effective_reasoning_effort_unverified",
+      "subject_timeout_runtime_receipt_unverified",
+      "cost_budget_unqualified"
+    ]
+  },
+  "population": {
+    "selectionRule": "Freeze all 287 rows from 10 Hub pages; canonicalize Unicode NFC + trim; preserve provider case and slash spelling; own integer(SHA256(canonicalDatasetId)[0:16],16) mod 5 == 1.",
+    "taskCount": 1,
+    "taskDigests": ["sha256:0ab935fc3f07b97b7e4c7f54a7524ac47927060fd554b35c562575c283b7367e"],
+    "exclusions": [
+      "non-owned-shard-indices-0-2-3-4",
+      "remaining-53-candidates-held-before-task-prompt-acquisition",
+      "task-level-evidence-limited-to-first-representative"
+    ]
+  },
+  "environment": {
+    "platformRef": "environment-platform-observation.json",
+    "environmentDigest": "sha256:b41abf3fb4fe1fdb408d3f5ebd9ccddbd9a7226cba8c7f18304da265211d3054",
+    "compatibilityState": "held",
+    "limitations": [
+      "cross_platform_emulation_unqualified",
+      "dynamic_network_policy_unavailable",
+      "no_network_enforcement_unavailable",
+      "verifier_isolation_not_operated",
+      "cost_budget_unqualified",
+      "subject_timeout_runtime_receipt_unverified"
+    ]
+  },
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "arms": [
+    {
+      "id": "arm:harbor-subject-baseline",
+      "modelRef": "model:gpt-5.6-luna",
+      "requestedReasoningEffort": "max",
+      "allowedReasoningEfforts": ["max"],
+      "reasoningProfileRef": "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/policy/ai-execution-mode-operation.policy.json",
+      "instructionProfileRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "artifactProjectionDigest": "sha256:ed08e15e7feab4620c75867fcc2a6d64710743021675beeb0ae58246a4d84b5a",
+      "admitted": false
+    }
+  ],
+  "trials": [],
+  "outcomes": {
+    "benchmarkEligibility": false,
+    "architectureInterpretationEligibility": false,
+    "eligibleTrialIds": [],
+    "disqualifications": [
+      "provider-qualification-held",
+      "cross-platform-emulation-unqualified",
+      "network-enforcement-unavailable",
+      "license-metadata-unobserved",
+      "model-effort-timeout-unverified",
+      "no-oracle-or-subject-trial"
+    ]
+  },
+  "failures": [
+    {
+      "id": "failure:provider-network-platform",
+      "class": "provider",
+      "code": "provider-qualification-held",
+      "subjectRef": "population-shard-2/representative-datacurve-kcp-go-multiplexed-kcp-streams",
+      "evidenceRefs": ["provider-observation.json", "environment-platform-observation.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:license-metadata",
+      "class": "license",
+      "code": "dataset-license-unobserved",
+      "subjectRef": "population-shard-2/representative-datacurve-kcp-go-multiplexed-kcp-streams",
+      "evidenceRefs": ["representative-request.json", "inventory-freeze.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:platform-emulation",
+      "class": "platform",
+      "code": "cross-platform-emulation-unqualified",
+      "subjectRef": "population-shard-2/representative-datacurve-kcp-go-multiplexed-kcp-streams",
+      "evidenceRefs": ["environment-platform-observation.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:network-policy",
+      "class": "environment",
+      "code": "no-network-enforcement-unavailable",
+      "subjectRef": "population-shard-2/representative-datacurve-kcp-go-multiplexed-kcp-streams",
+      "evidenceRefs": ["environment-platform-observation.json", "provider-observation.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:verifier-not-run",
+      "class": "verifier",
+      "code": "protected-verifier-not-run",
+      "subjectRef": "population-shard-2/representative-datacurve-kcp-go-multiplexed-kcp-streams",
+      "evidenceRefs": ["environment-platform-observation.json", "representative-request.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:model-receipt",
+      "class": "model",
+      "code": "effective-model-unverified",
+      "subjectRef": "population-shard-2/representative-datacurve-kcp-go-multiplexed-kcp-streams",
+      "evidenceRefs": ["provider-observation.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:effort-receipt",
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "subjectRef": "population-shard-2/representative-datacurve-kcp-go-multiplexed-kcp-streams",
+      "evidenceRefs": ["provider-observation.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:timeout-receipt",
+      "class": "environment",
+      "code": "subject-timeout-runtime-receipt-unverified",
+      "subjectRef": "population-shard-2/representative-datacurve-kcp-go-multiplexed-kcp-streams",
+      "evidenceRefs": ["provider-observation.json", "environment-platform-observation.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:cost-budget",
+      "class": "environment",
+      "code": "cost-budget-unqualified",
+      "subjectRef": "population-shard-2/representative-datacurve-kcp-go-multiplexed-kcp-streams",
+      "evidenceRefs": ["provider-observation.json", "environment-platform-observation.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:credential-probe",
+      "class": "provider",
+      "code": "inert-initialization-probe-required",
+      "subjectRef": "population-shard-2/representative-datacurve-kcp-go-multiplexed-kcp-streams",
+      "evidenceRefs": ["provider-observation.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    }
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2",
+    "contentEvidenceRefs": []
+  },
+  "settlement": {
+    "state": "complete",
+    "resources": [
+      {
+        "resourceClass": "hub-page-01",
+        "resourceRefDigest": "sha256:bc919f6089c59056ca442914258456e8a748049c439c9a0999220408ce0e00f9",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "hub-page-02",
+        "resourceRefDigest": "sha256:9c0836c83bbfad199e91bafbb29f95d018ed8716a1d910b182a2d48d1eb4619f",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "hub-page-03",
+        "resourceRefDigest": "sha256:3740422afb353bd8061f056ebac3c84e6ed51588ebc62c8bca3b9dc202b59d39",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "hub-page-04",
+        "resourceRefDigest": "sha256:c01e2d707ee868f883e07df13769a50257fe65977b81f354a105f8f7c298bac1",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "hub-page-05",
+        "resourceRefDigest": "sha256:425ff5213b664ec741e8a823d21e9a2efbae3d52706092c70048b1a9dc6eef2a",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "hub-page-06",
+        "resourceRefDigest": "sha256:3e6499bb66323f4205ac977207f6231f0281574a80399504faea6ffd490acc5b",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "hub-page-07",
+        "resourceRefDigest": "sha256:fb3ecb5d6caa85556164d1e171013e72ca55bf44bdb02762e1259340fbae996e",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "hub-page-08",
+        "resourceRefDigest": "sha256:796f59394231502f346408b89c8efd9907067e7e14ac03d7dc671a0c703bf8a4",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "hub-page-09",
+        "resourceRefDigest": "sha256:ec9e2783c410186184540fabe17df6f63da5aa077318f03f89a8052d03689a3c",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "hub-page-10",
+        "resourceRefDigest": "sha256:f0446b7d2b5d928aef19be2572f3eb2053b806281e46776cc75769472b2fc55d",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "owned-detail-pages",
+        "resourceRefDigest": "sha256:5c92ffd3bfe98976c524da98a86cb32cef7e07d7c6ba253c49b5fe02a96213c6",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "task-materialization",
+        "resourceRefDigest": "sha256:0ab935fc3f07b97b7e4c7f54a7524ac47927060fd554b35c562575c283b7367e",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "queue-claims",
+        "resourceRefDigest": "sha256:7b24acd8d913b5c6fbcb5753ca8d2cf8c329b4fbdc1861744c939242c4689adb",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "provider-jobs",
+        "resourceRefDigest": "sha256:6c53781382edcc6415d9391772157736404534b8e5c9a9fbafc1fc536dce646b",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "task-workspaces",
+        "resourceRefDigest": "sha256:7da260b35c2417fc423da2ac5b33a7b7267506e2a2b3444ec2589cae4ab0b70d",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "containers",
+        "resourceRefDigest": "sha256:9b587d9237ea533d38233d7de05c6b60d9de91c1d88d3e6c8cff528387c462b8",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "volumes",
+        "resourceRefDigest": "sha256:83b6b85d557327c47a13bf119a2e87a54f366a2757c79546eb3927b2cbce8867",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "auth-material",
+        "resourceRefDigest": "sha256:5fc21de9bd764c3e23de61ff2bc0f1227a67ae30a455731787e8bf0019c54190",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "temporary-files",
+        "resourceRefDigest": "sha256:7911757bb44e39e5876948bcca5597308dadf5b9cadd541390a55271725467db",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      },
+      {
+        "resourceClass": "verifier-state",
+        "resourceRefDigest": "sha256:1c5e967c89e9d7e10becfc6866c26d1dc9ddde00273c3040267ac3625c1df3bb",
+        "state": "settled",
+        "evidenceRefs": ["settlement-ledger.json"]
+      }
+    ],
+    "reconciliationRef": "settlement-ledger.json"
+  },
+  "sourceRefs": [
+    "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/04-current-harbor-hub-five-shard-operation.md",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/operation-extraction-resolution.json",
+    "artifacts/loop-architecture/components/execution-routing/pre-route-workflow-resolution.md",
+    "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/policy/ai-execution-routing.policy.json",
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/skill/operate-engineering-workset-simulation/SKILL.md",
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "https://hub.harborframework.com/datasets"
+  ],
+  "createdAt": "2026-08-28T12:46:15Z",
+  "digest": "sha256:62b268916e55b05063a81c7142a31a0cfb23e126af8dae71e5d088165422acc9"
+}

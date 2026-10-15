@@ -1,0 +1,197 @@
+{
+  "kind": "task-artifact-disposition-matrix/v1",
+  "schemaVersion": 1,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "taskRef": "cafe-study-report-naver-map-2026-09-04",
+  "operationRequestRef": "reusable-artifact-operation-request.json",
+  "selectionReportRef": "reusable-artifact-selection-report.json",
+  "assessmentRef": "visual-evidence-rubric.assessment.json",
+  "rubric": {
+    "decisionOrder": ["mandatory", "qualifying", "comparative", "observational"],
+    "perspectives": ["design", "development", "operations", "maintenance", "optimization", "security"],
+    "mandatory": [
+      "source identity and provenance",
+      "stable responsibility and non-overlapping ownership",
+      "authority privacy and external-effect boundaries",
+      "task-specific content separation",
+      "rollback invalidation and recovery"
+    ],
+    "qualifying": [
+      "explicit consumer input output and failure contract",
+      "representative evidence and independent validation",
+      "provider and task portability",
+      "current lifecycle owner"
+    ],
+    "comparative": [
+      "reuse or composition of existing owners",
+      "local clarity",
+      "maintenance and coordination burden",
+      "reversibility and portability",
+      "expected net reuse"
+    ],
+    "observational": [
+      "artifact count and evidence population",
+      "validation and recovery outcome",
+      "resource bounds",
+      "cross-context recurrence",
+      "accepted-outcome join"
+    ]
+  },
+  "perspectiveAssessment": [
+    {
+      "perspective": "design",
+      "status": "improved",
+      "finding": "평가 정의·작업 프로필·증거 적격성·비교·관찰·표현을 분리했고, 네이버와 카페 의미는 작업 프로필에 남겼다.",
+      "evidenceRefs": ["../visual-rubric.json", "visual-evidence-rubric-definition.candidate.json"]
+    },
+    {
+      "perspective": "development",
+      "status": "partially_supported",
+      "finding": "기존 보고서 검사기가 v2 게이트·정규화 가중치·정의 digest를 검증하지만 공용 후보 전용 스키마와 독립 검사기는 없다.",
+      "evidenceRefs": ["../validate-report.mjs", "visual-evidence-rubric.assessment.json"]
+    },
+    {
+      "perspective": "operations",
+      "status": "supported_with_limitations",
+      "finding": "107장 동결, 추가 브라우저 순회 0회, 단일 작성자, 실패 지문 정지와 재생성 경로가 명시됐으나 실제 소요 시간은 측정되지 않았다.",
+      "evidenceRefs": ["../optimized-agent-architecture.json", "../visual-rubric.json"]
+    },
+    {
+      "perspective": "maintenance",
+      "status": "improved",
+      "finding": "정의 후보와 작업 프로필을 분리하고 유효기간·무효화·롤백·다음 검토 조건을 추가했다.",
+      "evidenceRefs": ["../visual-rubric.json", "visual-evidence-rubric.responsibility-card.json"]
+    },
+    {
+      "perspective": "optimization",
+      "status": "supported_with_limitations",
+      "finding": "후보·이미지·워커·브라우저 순회 상한과 한계효용 정지를 유지했지만 시간·비용·오탐·미탐은 수용 결과와 연결되지 않아 효율 주장에 사용하지 않았다.",
+      "evidenceRefs": ["../optimized-agent-architecture.json", "../evaluation.json"]
+    },
+    {
+      "perspective": "security",
+      "status": "supported",
+      "finding": "공개 원격 이미지 URL과 최소 장소 메타데이터만 유지하며 쿠키·토큰·브라우저 핸들·이미지 바이너리·상호작용 본문·비공개 추론을 저장하지 않는다.",
+      "evidenceRefs": ["../visual-rubric.json", "../naver-map-raw-image-manifest.json"]
+    }
+  ],
+  "artifactGroups": [
+    {
+      "id": "group.source_snapshot",
+      "sourceRefs": ["../naver-map-raw-image-manifest.json"],
+      "sourceDigests": ["75e4dcf105b583d6814fcd90cf8b52686a6a58254ced5ccf4903d698a31f5487"],
+      "baseResponsibilityClass": "runtime_evidence",
+      "stableResponsibility": "외부 장소·이미지의 동결된 관찰 집합",
+      "consumer": "visual evaluator and deterministic integrator",
+      "disposition": "retain_task_specific",
+      "enrichmentRoute": "runtime_only_support",
+      "reason": "장소 ID, 이미지 URL, 관찰 시점과 공급자 응답은 이번 실행 증거이며 재사용 소스가 아니다."
+    },
+    {
+      "id": "group.task_rubric_profile",
+      "sourceRefs": ["../visual-rubric.json"],
+      "sourceDigests": ["8ee2bccb1e3222b64d8c3e26526159bf6f77597d848217ef0599b1c42ce827dd"],
+      "baseResponsibilityClass": "contract_checker",
+      "stableResponsibility": "이번 카페 선택의 대상·소비자·자료원·필수 기준·선호·유효기간",
+      "consumer": "cafe visual evaluator integrator and report viewer",
+      "disposition": "retain_task_specific",
+      "enrichmentRoute": "runtime_only_support",
+      "extractedRef": "visual-evidence-rubric-definition.candidate.json",
+      "reason": "네이버·중랑구·강동구·카페·30일 유효기간·가중치는 작업 맥락이며 공용 정의가 아니다."
+    },
+    {
+      "id": "group.visual_rubric_kernel_candidate",
+      "sourceRefs": ["visual-evidence-rubric-definition.candidate.json", "visual-evidence-rubric.responsibility-card.json"],
+      "sourceDigests": ["09e93071356acb636ed21793cc83b8ab15945cd619212b253ca8952815a919b7", "b2d9a2e26ac8afde81056dda7a3ff27b9d03fac8b2694e4d98a9cd18a63def3e"],
+      "baseResponsibilityClass": "contract_checker",
+      "stableResponsibility": "시각 증거 단위의 적격성·비교 가능성·불확실성·관찰 분리",
+      "consumer": "future domain visual-evaluation profile authors",
+      "disposition": "require_context",
+      "enrichmentRoute": "new_independent_unit_or_existing_owner_enrichment",
+      "reason": "책임은 분리 가능하지만 한 공급자·한 도메인뿐이며 공용 소유자·스키마·독립 검증이 없다."
+    },
+    {
+      "id": "group.evaluation_result",
+      "sourceRefs": ["../evaluation.json"],
+      "sourceDigests": ["c3a3c0151f155c903bb109a293348ec259988827eafd51392f59578b2197842f"],
+      "baseResponsibilityClass": "runtime_evidence",
+      "stableResponsibility": "동결 이미지에 대한 장소별 판정·제한·순위",
+      "consumer": "HTML report builder and requester",
+      "disposition": "retain_task_specific",
+      "enrichmentRoute": "runtime_only_support",
+      "reason": "장소·이미지 인덱스·현재 프로필 revision에 결합된 불변 실행 결과다."
+    },
+    {
+      "id": "group.execution_topology",
+      "sourceRefs": ["../optimized-agent-architecture.json"],
+      "sourceDigests": ["8b2c1612fca198d9a1a741a9c666811e8db477412441d5d7bbb1a650ea3566cb"],
+      "baseResponsibilityClass": "agent_architecture",
+      "stableResponsibility": "수집·판독·통합의 책임 분리와 읽기 전용 병렬·단일 작성 팬인",
+      "consumer": "current execution coordinator",
+      "disposition": "compose_existing",
+      "enrichmentRoute": "artifact_enrichment_observation",
+      "reason": "기존 pipeline·bounded fan-out/fan-in·single-writer 패턴으로 표현 가능하며 워커 수는 재사용 정체성이 아니다."
+    },
+    {
+      "id": "group.provider_collection_helpers",
+      "sourceRefs": ["../collect-naver-interiors.mjs", "../recover-loaded-naver-evidence.mjs"],
+      "sourceDigests": ["299fba29a91d7b594c34bbef13d254ece544f256175086a8b0ef9f2643b5030a", "29fc70a3989c21c9c2b70521b2d80cd68fd5124e7fdab0078cba870caa7f3dc2"],
+      "baseResponsibilityClass": "tool_adapter",
+      "stableResponsibility": "네이버 지도에서 이미 로드된 내부사진 증거를 회수하고 복구",
+      "consumer": "current evidence collector",
+      "disposition": "retain_task_specific",
+      "enrichmentRoute": "runtime_only_support",
+      "reason": "공급자 DOM·네트워크 동작과 이번 복구 상황에 결합됐고 반복 소비자·프로토콜·실패 케이스가 없다."
+    },
+    {
+      "id": "group.integration_and_validation",
+      "sourceRefs": ["../integrate-evaluation.mjs", "../validate-report.mjs"],
+      "sourceDigests": ["1ae571d10e796e5fe503de890c148cc77d2c577bb3c56b602a6e98ef9cd29257", "379d5bb9213606819fca2d47d95dcf3ae56c3c77718c2ddce5dd07fbe3b4797a"],
+      "baseResponsibilityClass": "contract_checker",
+      "stableResponsibility": "게이트·공식·순위·출처·인덱스·표현 정합성 검증",
+      "consumer": "current report integration owner",
+      "disposition": "retain_task_specific",
+      "enrichmentRoute": "artifact_enrichment_candidate",
+      "reason": "결정적 검증은 재사용 가치가 있으나 현재 구현은 카페 ID·태그·HTML 문구·호스트에 결합되어 있다."
+    },
+    {
+      "id": "group.presentation",
+      "sourceRefs": ["../build-report.mjs", "../naver-map-cafe-study-report.html"],
+      "sourceDigests": ["61b1196297abf11510efa2a327b60e60a65588c8ac3f0b88f5ea3ac847a25df7", "55d91088555b66f2f78ff36d44a2ea78515238d914648401ffa850c2ad4c68e5"],
+      "baseResponsibilityClass": "generated_view",
+      "stableResponsibility": "카페 비교 결과와 채택·배제 이미지를 탐색 가능한 HTML로 투영",
+      "consumer": "requester",
+      "disposition": "retain_task_specific",
+      "enrichmentRoute": "runtime_only_support",
+      "reason": "보고서 구조와 문구가 카페 도메인에 결합됐으며 생성된 HTML은 재사용 소스가 아니다."
+    },
+    {
+      "id": "group.routing_and_lane_decisions",
+      "sourceRefs": ["../routing-reassessment.json", "../bounded-lane-plan-input.json", "../bounded-lane-plan-decision.json"],
+      "sourceDigests": ["fe0ec240b094f19968e5082897df4896cf9b46ced720235f7982e07cb646fa30", "1895e72fc738b5e4e4fda8e5c74552a22be970076823deea8e6fd178bd270865", "32c6cd487e2bb47993b479849454f72f65c787970ac568f87ede310f6f40c7d8"],
+      "baseResponsibilityClass": "runtime_decision_evidence",
+      "stableResponsibility": "요청 변경에 따른 라우팅·병렬 범위·작성권 판정",
+      "consumer": "current coordinator and audit reader",
+      "disposition": "retain_task_specific",
+      "enrichmentRoute": "runtime_only_support",
+      "reason": "현재 요청 revision과 실행 lane에 결합된 보고 전용 의사결정 증거다."
+    }
+  ],
+  "closedDisposition": {
+    "currentTask": "improve_existing_task_artifact",
+    "genericKernel": "require_context",
+    "agentArchitecture": "compose_existing",
+    "sourcePromotion": "not_authorized",
+    "externalSearch": "not_needed",
+    "residualGapRef": "visual-evidence-rubric.capability-gap.json"
+  },
+  "unresolvedFacts": [
+    "generic visual-evidence rubric semantic owner",
+    "independent cross-domain and cross-provider recurrence",
+    "visual evaluator agreement and false acceptance or rejection behavior",
+    "accepted field outcome join",
+    "measured execution duration and cost"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "schemaVersion": 1,
+  "evidenceId": "simulation:legacy-bench-public-oracle-r1",
+  "status": "failed",
+  "authorityEffect": "none",
+  "scope": {
+    "objectiveRevision": "prompt-driven-engineering-workset-evaluation/phase-59/legacy-bench-public-oracle-r1",
+    "requestDigest": "sha256:cecf8c84f96615f6905fbfa810808d54b955cc052ca7d159eebcfdd112ec0ce3",
+    "providerClass": "harbor",
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor",
+    "sourceRevision": "12fa7cf969b7a253183388040d566fb353a1ab31",
+    "sourceDigest": "sha256:d8f5c2a90e2e932462475c235f9727276d70c96d2f47e48a14ef3a246e17fdae",
+    "verifierDigest": "sha256:bebe1cf3e06ae4ca0af0b0367a18a3ca3c6c10a58c7306f0695a9a9c0f29b81e",
+    "rubricRefs": []
+  },
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/legacy-bench-public-oracle-r1/working-memory-binding.json",
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/jobs/legacy-bench-public-oracle-r1",
+    "sessionCursor": "memory:prompt-driven-engineering-workset-evaluation:legacy-bench-public-oracle-r1:settled",
+    "checkpointRefs": [
+      "memory:prompt-driven-engineering-workset-evaluation:legacy-bench-public-oracle-r1:platform-stop",
+      "memory:prompt-driven-engineering-workset-evaluation:legacy-bench-public-oracle-r1:resource-settlement"
+    ],
+    "retention": "runtime-private negative platform qualification evidence retained through independent assessment",
+    "invalidation": [
+      "objective_revision_change",
+      "source_or_population_digest_change",
+      "provider_adapter_or_platform_change",
+      "environment_or_simulation_evidence_checker_change",
+      "resource_settlement_change"
+    ],
+    "digest": "sha256:5d293b3d2c244b53b6496695973bd8feb180b53030cf5933833ccb1f3ac20a87"
+  },
+  "provider": {
+    "qualificationRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/qualification/examples/harbor-rewardkit-luna.phase-10.example.json",
+    "qualificationDigest": "sha256:1d0a6a112d8e5d25590dfa5e3e7b58981ed25910c49711d3442323c30efaab75",
+    "state": "qualified",
+    "limitations": [
+      "qualification does not imply benchmark image compatibility on every host architecture"
+    ]
+  },
+  "population": {
+    "selectionRule": "all ten frozen Legacy Bench tasks before outcome observation",
+    "taskCount": 10,
+    "taskDigests": [
+      "sha256:fb6d020ad87de8da716a25eb4efa21f0794ec4d108b406528bc41045cfea6a18",
+      "sha256:49bc0f417345ad0dcac99367b8c3d82d6914cca0153a8b1c04d358305fe6bcba",
+      "sha256:e13b05a509ef406c34fbba96ad5277da5c985d9d161545d9c336f81521f93e1d",
+      "sha256:7c02ff7eb4aea6306c26ffda704d0701d7fb2f383c5f0762d3803bca7ccacd50",
+      "sha256:1a4c973894b2e5c8911e5cd3cf5b1506c0fdf227a7a9286ec1d5979a17ba6fed",
+      "sha256:95dda1ad1e36ced183d725fe7cf6051f1e5edd6d41a15e8e611d9a3121aed503",
+      "sha256:47072014477e199f337eaac820f0a77b130210859f632d71b10ea3d823081a9c",
+      "sha256:b1510d589d36c137b033968ff00499fa7ac85267646305cf2f872fd3dad836cd",
+      "sha256:5266742cb34213b74295aac5347902ad815f7fde7000f3bd5e8baa7001332d26",
+      "sha256:b434fb940123d431404cffad1c5a8411f522ed44a1b47706a41200e0dac85792"
+    ],
+    "exclusions": []
+  },
+  "environment": {
+    "platformRef": "platform:darwin-arm64-docker",
+    "environmentDigest": "sha256:9be88c8a79d2ebd4457a73b333ad37e4ca662a7a3a8619c05dd9cfc6f51bb346",
+    "compatibilityState": "failed",
+    "limitations": [
+      "the Java 7 task image could not resolve its required zulu7-jdk package on the current arm64 build path"
+    ]
+  },
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "arms": [],
+  "trials": [],
+  "outcomes": {
+    "benchmarkEligibility": false,
+    "architectureInterpretationEligibility": false,
+    "eligibleTrialIds": [],
+    "disqualifications": [
+      "the complete frozen population is incompatible with the current arm64 environment",
+      "Oracle qualification did not start for the population",
+      "no Artifact-aware model arm was admitted"
+    ]
+  },
+  "failures": [
+    {
+      "id": "failure:legacy-bench-arm64-java7-image",
+      "class": "platform",
+      "code": "platform:required-java7-package-unavailable",
+      "subjectRef": "task:505812-java7-inventory-cost-fix",
+      "evidenceRefs": [
+        "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/phases/59-qualified-public-legacy-bench-pilot.md",
+        "memory:prompt-driven-engineering-workset-evaluation:legacy-bench-public-oracle-r1:job-result"
+      ],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    }
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/jobs/legacy-bench-public-oracle-r1",
+    "contentEvidenceRefs": []
+  },
+  "settlement": {
+    "state": "complete",
+    "resources": [
+      {
+        "resourceClass": "harbor-job",
+        "resourceRefDigest": "sha256:0dcadbf8d7848751487432abc362372e8af69f9bb3bb4156f32eaf7e8cb88afd",
+        "state": "settled",
+        "evidenceRefs": ["memory:prompt-driven-engineering-workset-evaluation:legacy-bench-public-oracle-r1:resource-check"]
+      }
+    ],
+    "reconciliationRef": "memory:prompt-driven-engineering-workset-evaluation:legacy-bench-public-oracle-r1:resource-settlement"
+  },
+  "sourceRefs": [
+    "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/phases/59-qualified-public-legacy-bench-pilot.md",
+    "memory:prompt-driven-engineering-workset-evaluation:legacy-bench-public-oracle-r1:job-result"
+  ],
+  "createdAt": "2026-08-27T09:15:08Z",
+  "digest": "sha256:ba0f6530bd0e4a04af10483e86716826d838a80ae6ca2c48c4bd9653b205b14a"
+}

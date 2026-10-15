@@ -1,0 +1,65 @@
+{
+  "authorityEffect": "none",
+  "cumulativeExactCounts": {
+    "active": 0,
+    "cancelled": 0,
+    "completed": 1,
+    "failed": 1,
+    "frozenMembers": 66,
+    "held": 56,
+    "pending": 8,
+    "terminalSettled": 58
+  },
+  "currentItem": {
+    "effectiveReceiptState": "missing_require_context",
+    "identityDigest": "sha256:f3445642cc670b1f7625f41608e157c7eff7c0a696740d6a005da794b21c7699",
+    "itemId": "tbench-pubcrack-a-pc_1784073251/pubcrack-dataset",
+    "terminalReward": 0.0,
+    "terminalStatus": "held"
+  },
+  "digest": "sha256:c9909b04f4caa013569d1384a41ffe4ce0cee29829a1dee9b21456e0e1f8ec1e",
+  "itemScopedCounts": {
+    "itemsDiscovered": 1,
+    "itemsEvaluated": 0,
+    "itemsExecuted": 0,
+    "itemsHeld": 1,
+    "itemsQualified": 0,
+    "itemsRejected": 0,
+    "itemsSettled": 1
+  },
+  "kind": "harbor-hub-shard-operation-report/v2",
+  "laneIdentitySelectsRoutingOrArchitecture": false,
+  "nextAction": "claim_next_pending_plan_order_member_after_settlement_if_worker_window_permits (tbench-up-a-up_1784106749_3678887/up-dataset); otherwise_hold_until_changed_provider_capability_fingerprint",
+  "nextPlanOrderItem": "tbench-up-a-up_1784106749_3678887/up-dataset",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+  "populationSettlementRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-57-tbench-pubcrack-a-pc_1784073251-pubcrack-dataset/population-settlement-decision.r13.json",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawTaskContentProjected": false,
+    "runtimeHandlesProjected": false,
+    "secretsProjected": false
+  },
+  "schemaVersion": 2,
+  "settlementRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-57-tbench-pubcrack-a-pc_1784073251-pubcrack-dataset/lane-settlement-decision.r13.json",
+  "shard": {
+    "frozenMemberCount": 66,
+    "id": "population-shard-3",
+    "index": 0,
+    "planDigest": "sha256:705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+    "populationRevision": "sha256:3129ad473a1c60f76d7159614e57c251e1fdf0a3ee64c9c347166e3315a1dd69"
+  },
+  "sourceMutation": false,
+  "terminalRewardRoundRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-57-tbench-pubcrack-a-pc_1784073251-pubcrack-dataset/terminal-reward-round.r13.json",
+  "wakeCondition": [
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "network_policy_and_cost_budget_qualified",
+    "changed_item_or_capability_fingerprint"
+  ]
+}

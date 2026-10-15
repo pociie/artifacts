@@ -1,0 +1,47 @@
+{
+  "artifactKind": "construct",
+  "authorityEffect": "none",
+  "automaticPromotion": false,
+  "candidateRole": "bounded_effective_provider_receipt_projection",
+  "capabilityIds": ["effective_provider_receipt"],
+  "compatibleModes": ["single_task"],
+  "componentRefs": [
+    "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+    "artifacts/loop-architecture/components/execution-routing/component.json",
+    "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+  ],
+  "coveredGapIds": ["gap:item-effective-provider-receipt"],
+  "expiryConditionRefs": [
+    "item-terminal-settlement",
+    "operation-revision-successor",
+    "provider-receipt-observed"
+  ],
+  "fallbackRef": "fallback:hold:population-shard-4:openthoughts/tasktrove-exp-rpt-stack-bash-withtests-v2:until-effective-provider-receipt",
+  "identityDigest": "sha256:83942d3a234be7551f05dff44825d5bf0a201d6c5d5be0efe4d83947a7d4e040",
+  "invalidationConditionRefs": [
+    "source-binding-change",
+    "requirement-scope-change",
+    "capability-fingerprint-change"
+  ],
+  "itemId": "openthoughts/tasktrove-exp-rpt-stack-bash-withtests-v2",
+  "kind": "dynamic-artifact-candidate/v1",
+  "operationEvidenceContractRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "runPrivate": true,
+  "schemaVersion": 1,
+  "structuralCost": 1,
+  "topologyBearing": false,
+  "validated": true,
+  "validationEvidenceRefs": [
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-22-openthoughts-tasktrove-exp-rpt-stack-bash-withtests-v2/artifact-reuse-decision.r13.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-22-openthoughts-tasktrove-exp-rpt-stack-bash-withtests-v2/candidate-probe.r13.json"
+  ],
+  "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-4:continuation-r13-next/item-22-openthoughts-tasktrove-exp-rpt-stack-bash-withtests-v2:openthoughts/tasktrove-exp-rpt-stack-bash-withtests-v2"
+}

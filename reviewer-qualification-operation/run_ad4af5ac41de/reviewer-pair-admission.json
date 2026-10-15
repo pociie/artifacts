@@ -1,0 +1,100 @@
+{
+  "kind": "reviewer-pair-admission/v1",
+  "subject": {
+    "commit": "585f429fea94af3acced5a709c1b2a7456854678",
+    "tree": "6e62c174da0bae6398c5f34805eee383df4bb0b0",
+    "policyDigest": "sha256:d77b0eeafc40d0eae2fb97db1c13228284af7e4c64d9d8196e219dd3087427f5",
+    "evidenceBundleDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "implementationOwnerRef": "owner:implementation:requesting-session",
+  "observations": {
+    "safety": {
+      "ref": ".collab/artifacts/reviewer-qualification-operation/run_ad4af5ac41de/safety-assignment-observation.json",
+      "digest": "sha256:c5d0ae37f418cbc48e8b0471c7e58719ac778c6c86b4890d7ecabc4ddee87429",
+      "decision": "assignment_evidence_insufficient",
+      "subject": {
+        "commit": "585f429fea94af3acced5a709c1b2a7456854678",
+        "tree": "6e62c174da0bae6398c5f34805eee383df4bb0b0",
+        "policyDigest": "sha256:d77b0eeafc40d0eae2fb97db1c13228284af7e4c64d9d8196e219dd3087427f5",
+        "evidenceBundleDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "runtimeIdentityRef": "runtime:sha256:ab63ed8cbacca2e2780aff1c505441f7919d414e9089345df0af666dcd192732",
+      "taskRef": "task_cafd92d7c4d2",
+      "dispatchRef": "ctx_f835f5378a3f"
+    },
+    "architecture": {
+      "ref": ".collab/artifacts/reviewer-qualification-operation/run_ad4af5ac41de/architecture-assignment-observation.json",
+      "digest": "sha256:885fc76941511811a2296c3a1a0a5ef0566e01c257773e43a8ebbe3cc7c713bc",
+      "decision": "assignment_evidence_insufficient",
+      "subject": {
+        "commit": "585f429fea94af3acced5a709c1b2a7456854678",
+        "tree": "6e62c174da0bae6398c5f34805eee383df4bb0b0",
+        "policyDigest": "sha256:d77b0eeafc40d0eae2fb97db1c13228284af7e4c64d9d8196e219dd3087427f5",
+        "evidenceBundleDigest": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "runtimeIdentityRef": "runtime:sha256:8a5834ac7d226b06ec3356519e92673fccdc5271faf20af73aafa6c711a9ed33",
+      "taskRef": "task_331b85d8de1c",
+      "dispatchRef": "ctx_b99cd1c08d71"
+    }
+  },
+  "pairCorrelations": {
+    "model": {
+      "state": "shared",
+      "evidenceRefs": ["terminal-observation:both-gpt-5.6-sol-high"],
+      "limitationIds": ["limitation:model-not-attested-in-launch-receipt"]
+    },
+    "prompt": {
+      "state": "partially_shared",
+      "evidenceRefs": [
+        "sha256:1da8901b28b6f45aea29b0e0bb3f14b8336e8ad41feac1475b0d9db5259dcd8a",
+        "sha256:e09e181023dc0e4511ff186d2e014bf2415ecd34ad474004bcac2d852cd96f50"
+      ],
+      "limitationIds": ["limitation:shared-lifecycle-preamble-distinct-lens-spec"]
+    },
+    "sources": {
+      "state": "partially_shared",
+      "evidenceRefs": [
+        "git-tree:6e62c174da0bae6398c5f34805eee383df4bb0b0",
+        "profile:safety:d5518ea360780488c46b17f8e4ef6057c9fa52ce5fc74be9b6a811cf9208a9ff",
+        "profile:architecture:ee92672eba50493e3b4acedd084521539b15213b34d7e469ef4d1487b1192048"
+      ],
+      "limitationIds": ["limitation:shared-candidate-and-catalog"]
+    },
+    "harness": {
+      "state": "shared",
+      "evidenceRefs": ["sha256:78c7b4218e0ba2cc7e9b88d39a155125d97de6a425d82eb5d0a3f4a797905d29"],
+      "limitationIds": ["limitation:shared-orca-codex-runtime-class"]
+    },
+    "dataset": {
+      "state": "partially_shared",
+      "evidenceRefs": [
+        "orca:message:msg_bc129f6a8199#commandsResults",
+        "orca:message:msg_56e24de54f10#commands"
+      ],
+      "limitationIds": [
+        "limitation:shared-fixtures-distinct-adversarial-scenarios-no-attested-dataset"
+      ]
+    }
+  },
+  "authorityPolicy": {
+    "status": "absent",
+    "ownerRef": "unknown:external-policy-owner-not-appointed",
+    "ref": "unknown:external-policy-not-adopted",
+    "version": "unknown",
+    "digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "trustedRootRef": "unknown:trusted-root-not-selected",
+    "evidenceRefs": []
+  },
+  "issuerDelegation": {
+    "status": "absent",
+    "ref": "unknown:delegation-not-issued",
+    "delegatorRef": "unknown:external-policy-owner-not-appointed",
+    "issuerRef": "unknown:eligibility-issuer-not-authorized",
+    "permittedLenses": [],
+    "validFrom": "unknown",
+    "validUntil": "unknown",
+    "candidateScopeRef": "unknown:scope-not-delegated",
+    "evidenceRefs": []
+  },
+  "decisionRequest": "evaluate_reviewer_pair_admission"
+}

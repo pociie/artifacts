@@ -1,0 +1,45 @@
+{
+  "kind": "report-authoring-loop-extension/v1",
+  "extensionId": "loop-extension:clean-typography-quality",
+  "revision": "book-pdf-authoring-typography/1",
+  "status": "candidate_not_activated",
+  "authorityEffect": "none",
+  "baseLoopRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/report-authoring-loop-candidate.json",
+  "typographySystemRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/typography-and-page-system-v1.json",
+  "insertAfterPhase": "phase:content-function-design",
+  "phase": {
+    "id": "phase:typography-normalization",
+    "ownerRole": "role:pdf-information-visual-designer",
+    "action": "Bind manuscript roles to the typography system, remove decorative initial-letter treatment, normalize font stack, size, weight, leading and paragraph rhythm, then inspect computed styles before rendering.",
+    "inputs": [
+      "frozen manuscript candidate",
+      "page-mode decisions",
+      "typography-and-page-system/v1"
+    ],
+    "exitEvidence": [
+      "semantic role to font-token mapping",
+      "computed-style inspection",
+      "no-drop-cap assertion",
+      "Korean glyph fallback check",
+      "page-density preview"
+    ],
+    "holdWhen": [
+      "an opening paragraph uses an enlarged first character",
+      "bold or font size carries meaning absent from prose",
+      "body type is below the minimum size",
+      "font fallback changes Korean glyph coverage or hierarchy",
+      "typography tokens are bypassed by page-local overrides"
+    ]
+  },
+  "materialChangeSignals": [
+    "font family or available font set changes",
+    "page size, language or target reading medium changes",
+    "body size, line length or column count changes",
+    "accessibility or print requirements change"
+  ],
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}
+

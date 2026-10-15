@@ -1,0 +1,387 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-20T19:38:21.854Z",
+  "title": "Claude Code 시스템 해부",
+  "edition": "book-edition-2026-09-21",
+  "source": {
+    "repository": "https://github.com/stupidhumans/claude-code-source-code",
+    "revision": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+    "snapshotLabel": "Claude Code v2.1.88 복원 snapshot"
+  },
+  "operationBinding": {
+    "path": "../../../memory/claude-code-book-edition-2026-09-21/operation-request-book-edition-1bf67e8c.json",
+    "sha256": "71d40cc4b769c002bf59fe96c35cc592b38c843a4e408bdf7fe3503a0f89e89a"
+  },
+  "parentInputs": {
+    "parentManifest": {
+      "path": "../manifest.json",
+      "sha256": "880a7e7648d5659e41e1f427cd49d97aa0142ab6239e2a2f993284d62ae1d0e3",
+      "generatedAt": "2026-09-20T14:41:11.891Z"
+    },
+    "parentVisualReview": {
+      "path": "../engineering/visual-review.md",
+      "sha256": "f8677409f5e73306d079a8d9a140a5540032318d93827a9917189a169388d280"
+    },
+    "baselinePdfs": [
+      {
+        "path": "../01-source-truth-and-system-baseline.pdf",
+        "sha256": "c83309f4e04274a09a57e350a66828aa1060e6ff5a8735ff96862efcd92b2d65"
+      },
+      {
+        "path": "../02-runtime-surfaces-and-state-ownership.pdf",
+        "sha256": "602bc13234eb5430276b93c3ad4f7a06a6363a3055010ebb0ce7d421f6344b10"
+      },
+      {
+        "path": "../03-turn-context-and-streaming-protocol.pdf",
+        "sha256": "11849c3758feb9c93ab47de5c4b8a8a7d9d1482b4fc82773a0b76cf6138c1710"
+      },
+      {
+        "path": "../04-tool-effect-permission-and-change-algorithms.pdf",
+        "sha256": "e7acf927f6e2a4f81b3447d6a1da26b9353ae967ebe26241b7de88550a3477eb"
+      },
+      {
+        "path": "../05-durability-recovery-and-agent-lifecycle.pdf",
+        "sha256": "c39b499035d27edc5fbe1415c1a31bd0d1cbba947ca7f0900fe36ad1bfa56d92"
+      },
+      {
+        "path": "../06-extension-variability-operations-and-evolution.pdf",
+        "sha256": "aee56833347ede082acffb572d7919073241b1f157662c094362f7bad7d661d3"
+      }
+    ]
+  },
+  "buildInputs": {
+    "builder": {
+      "path": "build-book.mjs",
+      "sha256": "3728d75421d904decfbaf9e347f85d529904b2fcfa558f3dd3394824e3c6e320"
+    },
+    "content": {
+      "book-plan.json": "4894f452c1620a97fa4e6e71d133a7df68a3f41b04e7f17b953b928497d1e862",
+      "requirement-ledger.json": "0833f6330e8499d135c64e9dc22d1fc190c1c2754e4b27a66bad3507e926e257",
+      "research-adoption.json": "195d63e6506f5c91faeb7607e0d510f18ce52eed93806b8dbaa5592fb181bfb3",
+      "language-mechanisms.json": "880b232878c47e41767ba89343b816cb1225928bc431160c167673cf99a14041"
+    },
+    "research": {
+      "path": "research/codebase-study-methods.md",
+      "sha256": "6faa0b39d6c882120c0d10f8d09be4a76b3ac1a5f1de61f73b6e75ab7449a66b"
+    },
+    "requirementReconciliation": {
+      "path": "engineering/requirement-reconciliation.md",
+      "sha256": "f78fcca0b9ae057ae1d64cf788df82f618adac229b3a9d5574b522830506b88b"
+    },
+    "editorialRationale": {
+      "path": "engineering/editorial-rationale.md",
+      "sha256": "c453f8fdf818fc951c34902a44758fca91f521d3689f0e5a794edc0433985f08"
+    },
+    "frozenInputs": {
+      "path": "attachments/frozen-inputs.json",
+      "sha256": "2add23be3aca9a9f393dec26b804ae529008e3e40610534b66c10b80cfbf4e08"
+    }
+  },
+  "outputs": {
+    "pdf": {
+      "path": "claude-code-system-anatomy-reader-edition-ko.pdf",
+      "sha256": "ec8ec57ce6363f396d8b34f6387b38df18f385e0675d351393aa675310dd79c7",
+      "pages": 103
+    },
+    "html": {
+      "path": "html/claude-code-system-anatomy-reader-edition-ko.html",
+      "sha256": "7e340ee8ccdee47257954d6267057c371a957827a2ff1192fc1f5b8f4cdd03f3"
+    },
+    "previewManifest": {
+      "path": "previews/visual-sample-manifest.json",
+      "sha256": "05b13c8abc7dec503ac939be2554aceaf137f375073ec775a0fab24ab3017ab6"
+    },
+    "previews": [
+      {
+        "id": "cover",
+        "selector": "[data-preview=\"cover\"]",
+        "capture": "full-element",
+        "fullElementDimensions": {
+          "width": 794,
+          "height": 926
+        },
+        "path": "previews/01-cover.png",
+        "sha256": "eba0676f445f02479b1beee1be2c6d5dc8e869188b77de233b54d3b8f7168d45",
+        "dimensions": {
+          "width": 794,
+          "height": 926
+        }
+      },
+      {
+        "id": "toc",
+        "selector": "[data-preview=\"toc\"]",
+        "capture": "full-element",
+        "fullElementDimensions": {
+          "width": 794,
+          "height": 922
+        },
+        "path": "previews/02-toc.png",
+        "sha256": "0237bede908ddf1045e98bd61bfa063a3fb0317b4eae40b063990bc38025f23c",
+        "dimensions": {
+          "width": 794,
+          "height": 924
+        }
+      },
+      {
+        "id": "reading-paths",
+        "selector": "[data-preview=\"reading-paths\"]",
+        "capture": "full-element",
+        "fullElementDimensions": {
+          "width": 794,
+          "height": 922
+        },
+        "path": "previews/03-reading-paths.png",
+        "sha256": "95c821df41649022bd9e7055c4a1030ad5a039f8d2a456b51092984e7f59167a",
+        "dimensions": {
+          "width": 794,
+          "height": 923
+        }
+      },
+      {
+        "id": "whole-system-map",
+        "selector": "[data-preview=\"system-topology\"]",
+        "capture": "full-element",
+        "fullElementDimensions": {
+          "width": 635,
+          "height": 306
+        },
+        "path": "previews/04-whole-system-map.png",
+        "sha256": "2de388a102f3032ec74508568499ba0174e65cf555e85329ad8b1c6d118807c4",
+        "dimensions": {
+          "width": 636,
+          "height": 307
+        }
+      },
+      {
+        "id": "prose",
+        "selector": "[data-preview=\"prose\"] .prose",
+        "capture": "full-element",
+        "fullElementDimensions": {
+          "width": 484,
+          "height": 200
+        },
+        "path": "previews/05-prose.png",
+        "sha256": "180c8deaf93d1633f5b6ad71dc6220e1d130d1fcc17b8ec7b113471543d8bd4e",
+        "dimensions": {
+          "width": 485,
+          "height": 201
+        }
+      },
+      {
+        "id": "dense-code",
+        "selector": "[data-preview=\"dense-code\"]",
+        "capture": "full-element",
+        "fullElementDimensions": {
+          "width": 635,
+          "height": 797
+        },
+        "path": "previews/06-dense-code.png",
+        "sha256": "a067af45a91e93fcd67fd1357ab3b00cdf645ce7089edad92142498a8aac6973",
+        "dimensions": {
+          "width": 636,
+          "height": 798
+        }
+      },
+      {
+        "id": "comparison-table",
+        "selector": "[data-preview=\"yield-comparison\"]",
+        "capture": "full-element",
+        "fullElementDimensions": {
+          "width": 635,
+          "height": 183
+        },
+        "path": "previews/07-comparison-table.png",
+        "sha256": "2439aeec61ec77805ed481c15dba0fe3be9bf657a8a7ae6f124cc677172edcd2",
+        "dimensions": {
+          "width": 636,
+          "height": 185
+        }
+      },
+      {
+        "id": "decision-diagram",
+        "selector": "[data-preview=\"permission-effect\"]",
+        "capture": "full-element",
+        "fullElementDimensions": {
+          "width": 635,
+          "height": 306
+        },
+        "path": "previews/08-decision-diagram.png",
+        "sha256": "8484137a3cdf9f2f429a329afdc78e52e00f7a808b159ecf2b2820a55c374746",
+        "dimensions": {
+          "width": 636,
+          "height": 307
+        }
+      },
+      {
+        "id": "current-state-dashboard",
+        "selector": "[data-preview=\"dashboard\"]",
+        "capture": "full-element",
+        "fullElementDimensions": {
+          "width": 794,
+          "height": 922
+        },
+        "path": "previews/09-current-state-dashboard.png",
+        "sha256": "413b7ecee7653ce9cacf1327311ccaa350910d5f3208eea58fb467ed56a243c0",
+        "dimensions": {
+          "width": 794,
+          "height": 923
+        }
+      },
+      {
+        "id": "algorithm-atlas",
+        "selector": "[data-preview=\"algorithm-atlas\"]",
+        "capture": "top-window",
+        "fullElementDimensions": {
+          "width": 635,
+          "height": 6882
+        },
+        "path": "previews/10-algorithm-atlas.png",
+        "sha256": "42888924be70cf68fb96d9bb900bf13cf63466811bb8352e6a9d1f4448aac5df",
+        "dimensions": {
+          "width": 636,
+          "height": 1001
+        }
+      },
+      {
+        "id": "source-index",
+        "selector": "[data-preview=\"source-index\"]",
+        "capture": "top-window",
+        "fullElementDimensions": {
+          "width": 635,
+          "height": 3583
+        },
+        "path": "previews/11-source-index.png",
+        "sha256": "49739e79d6570b098f793049e8506bde1dedbe6f499a7c4b0f58bd4b7240f20e",
+        "dimensions": {
+          "width": 636,
+          "height": 1001
+        }
+      }
+    ]
+  },
+  "features": {
+    "algorithms": 44,
+    "domains": 14,
+    "requirements": 33,
+    "researchSources": 9,
+    "deepWalkthroughs": 10,
+    "diagrams": 6,
+    "sourceRanges": 60,
+    "parts": 5,
+    "chapters": 13,
+    "glossaryTerms": 12,
+    "frontMatterWithinFirst12Pages": true,
+    "linkedToc": true,
+    "internalLinks": 227,
+    "codeMaxDisplayColumns": 72,
+    "taggedPdf": true,
+    "outlinedPdf": true
+  },
+  "validation": {
+    "schemaVersion": 1,
+    "generatedAt": "2026-09-20T19:38:21.854Z",
+    "status": "machine-checks-passed_visual-and-physical-pending",
+    "counts": {
+      "algorithms": 44,
+      "domains": 14,
+      "requirements": 33,
+      "researchSources": 9,
+      "deepWalkthroughs": 10,
+      "diagrams": 6,
+      "sourceRanges": 60
+    },
+    "html": {
+      "ids": 186,
+      "internalLinks": 227,
+      "researchApplicationAnchors": 48,
+      "figureCrossReferences": 6,
+      "codeBlocks": 23,
+      "maxCodeLine": 72
+    },
+    "layout": {
+      "bodyPx": 14,
+      "bodyPt": 10.5,
+      "codeMinPx": 11.34,
+      "codeMinPt": 8.504999999999999,
+      "labelMinPx": 10,
+      "labelMinPt": 7.5,
+      "clipped": [],
+      "orphanCss": [],
+      "scrollWidth": 1280,
+      "clientWidth": 1280
+    },
+    "pdf": {
+      "pageCount": 103,
+      "searchableTextCharacters": 102948,
+      "searchableHangulCharacters": 21281,
+      "outline": true,
+      "tagged": true,
+      "linkAnnotations": 419,
+      "internalLinkAnnotations": 235,
+      "validInternalDestinations": 235,
+      "externalLinkAnnotations": 184,
+      "medianGeneralPageOccupancy": 0.8995064069265346,
+      "unexpectedSparsePages": []
+    },
+    "previews": {
+      "count": 11,
+      "allPngDimensionsFromIhdr": true,
+      "allHashesRecorded": true
+    },
+    "navigation": {
+      "internalLinksResolved": true,
+      "chapterBacklinks": true,
+      "algorithmSourceGlossaryAnchors": true
+    },
+    "typography": {
+      "bodyMinPt": 10.5,
+      "codeTableNoteMinPt": 8.504999999999999,
+      "labelFolioMinPt": 7.5,
+      "pxToPtFormula": "px*0.75"
+    },
+    "boundaries": {
+      "sourceInferenceRecommendationUnknown": true,
+      "physicalA4": "PENDING",
+      "independentVisualReview": "PENDING",
+      "publicationAcceptance": "NOT_CLAIMED"
+    }
+  },
+  "parentPreservation": {
+    "visualReview": "f8677409f5e73306d079a8d9a140a5540032318d93827a9917189a169388d280",
+    "baselinePdfs": [
+      {
+        "path": "../01-source-truth-and-system-baseline.pdf",
+        "sha256": "c83309f4e04274a09a57e350a66828aa1060e6ff5a8735ff96862efcd92b2d65"
+      },
+      {
+        "path": "../02-runtime-surfaces-and-state-ownership.pdf",
+        "sha256": "602bc13234eb5430276b93c3ad4f7a06a6363a3055010ebb0ce7d421f6344b10"
+      },
+      {
+        "path": "../03-turn-context-and-streaming-protocol.pdf",
+        "sha256": "11849c3758feb9c93ab47de5c4b8a8a7d9d1482b4fc82773a0b76cf6138c1710"
+      },
+      {
+        "path": "../04-tool-effect-permission-and-change-algorithms.pdf",
+        "sha256": "e7acf927f6e2a4f81b3447d6a1da26b9353ae967ebe26241b7de88550a3477eb"
+      },
+      {
+        "path": "../05-durability-recovery-and-agent-lifecycle.pdf",
+        "sha256": "c39b499035d27edc5fbe1415c1a31bd0d1cbba947ca7f0900fe36ad1bfa56d92"
+      },
+      {
+        "path": "../06-extension-variability-operations-and-evolution.pdf",
+        "sha256": "aee56833347ede082acffb572d7919073241b1f157662c094362f7bad7d661d3"
+      }
+    ],
+    "passed": true
+  },
+  "unresolvedLimits": [
+    "pre-Orca raw transcript completeness cannot be proven from sanitized projections",
+    "upstream intent and production feature activation remain UNKNOWN",
+    "server protocol, telemetry backend, and external effect settlement remain UNKNOWN",
+    "independent visual readability verdict pending",
+    "physical A4 print check pending",
+    "publication acceptance not claimed"
+  ]
+}

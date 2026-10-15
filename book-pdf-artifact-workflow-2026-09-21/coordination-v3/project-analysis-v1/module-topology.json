@@ -1,0 +1,747 @@
+{
+  "kind": "source-module-topology-analysis/v1",
+  "analyzer": {
+    "file": "module-topology-analyzer.mjs",
+    "sha256": "513eaf81133fd8be046257bac1777b9af11f653e0de4c7309db36536659b83cb",
+    "semantics": [
+      "TypeScript AST import/export and literal dynamic import/require only",
+      "relative and src/ internal specifiers only",
+      "file-only resolution; directories never count as resolved modules; non-TypeScript files count as resolved occurrences but not graph nodes",
+      "runtime-like graph excludes syntactically type-only imports and exports"
+    ]
+  },
+  "source": {
+    "repository": "https://github.com/stupidhumans/claude-code-source-code/",
+    "revision": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+    "tree": "1b6b4ab07d0d7b795129852183137c28099c5550"
+  },
+  "totals": {
+    "implementationFiles": 1884,
+    "topLevelGroups": 36,
+    "resolvedImportOccurrences": 13219,
+    "crossGroupImportOccurrences": 8626,
+    "crossGroupOccurrencePercent": 65.25,
+    "uniqueResolvedFileEdges": 12889,
+    "distinctCrossGroupEdges": 313,
+    "unresolvedInternalImportOccurrences": 617,
+    "unresolvedRawSpecifiers": 250,
+    "runtimeLikeResolvedOccurrences": 11471,
+    "uniqueRuntimeLikeFileEdges": 11306
+  },
+  "stronglyConnectedComponents": {
+    "groupGraph": {
+      "cyclicComponentCount": 1,
+      "groupsInCyclicComponents": 35,
+      "largestComponentGroups": 35,
+      "components": [
+        [
+          "@root",
+          "assistant",
+          "bootstrap",
+          "bridge",
+          "buddy",
+          "cli",
+          "commands",
+          "components",
+          "constants",
+          "context",
+          "coordinator",
+          "entrypoints",
+          "hooks",
+          "ink",
+          "keybindings",
+          "memdir",
+          "migrations",
+          "native-ts",
+          "outputStyles",
+          "plugins",
+          "query",
+          "remote",
+          "schemas",
+          "screens",
+          "server",
+          "services",
+          "skills",
+          "state",
+          "tasks",
+          "tools",
+          "types",
+          "upstreamproxy",
+          "utils",
+          "vim",
+          "voice"
+        ]
+      ]
+    },
+    "typeInclusiveFileGraph": {
+      "componentCount": 2,
+      "fileCount": 1436,
+      "largestComponentFiles": 1433,
+      "largestComponentSample": [
+        "Task.ts",
+        "Tool.ts",
+        "assistant/sessionHistory.ts",
+        "bootstrap/state.ts",
+        "bridge/bridgeApi.ts",
+        "bridge/bridgeConfig.ts",
+        "bridge/bridgeDebug.ts",
+        "bridge/bridgeEnabled.ts",
+        "bridge/bridgeMessaging.ts",
+        "bridge/bridgePermissionCallbacks.ts",
+        "bridge/bridgePointer.ts",
+        "bridge/codeSessionApi.ts",
+        "bridge/createSession.ts",
+        "bridge/debugUtils.ts",
+        "bridge/envLessBridgeConfig.ts",
+        "bridge/inboundAttachments.ts",
+        "bridge/inboundMessages.ts",
+        "bridge/initReplBridge.ts",
+        "bridge/jwtUtils.ts",
+        "bridge/pollConfig.ts",
+        "bridge/remoteBridgeCore.ts",
+        "bridge/replBridge.ts",
+        "bridge/replBridgeHandle.ts",
+        "bridge/replBridgeTransport.ts",
+        "bridge/trustedDevice.ts",
+        "bridge/workSecret.ts",
+        "buddy/CompanionSprite.tsx",
+        "buddy/companion.ts",
+        "buddy/prompt.ts",
+        "buddy/useBuddyNotification.tsx"
+      ]
+    },
+    "runtimeLikeFileGraph": {
+      "componentCount": 6,
+      "fileCount": 633,
+      "largestComponentFiles": 591,
+      "largestComponentSample": [
+        "Task.ts",
+        "cli/handlers/auth.ts",
+        "commands.ts",
+        "commands/add-dir/add-dir.tsx",
+        "commands/add-dir/index.ts",
+        "commands/add-dir/validation.ts",
+        "commands/advisor.ts",
+        "commands/agents/agents.tsx",
+        "commands/agents/index.ts",
+        "commands/branch/branch.ts",
+        "commands/branch/index.ts",
+        "commands/bridge/bridge.tsx",
+        "commands/bridge/index.ts",
+        "commands/brief.ts",
+        "commands/btw/btw.tsx",
+        "commands/btw/index.ts",
+        "commands/chrome/chrome.tsx",
+        "commands/chrome/index.ts",
+        "commands/clear/caches.ts",
+        "commands/clear/clear.ts",
+        "commands/clear/conversation.ts",
+        "commands/clear/index.ts",
+        "commands/color/color.ts",
+        "commands/color/index.ts",
+        "commands/commit-push-pr.ts",
+        "commands/commit.ts",
+        "commands/compact/compact.ts",
+        "commands/compact/index.ts",
+        "commands/config/config.tsx",
+        "commands/config/index.ts"
+      ]
+    }
+  },
+  "topGroups": [
+    {
+      "group": "utils",
+      "fileCount": 564
+    },
+    {
+      "group": "components",
+      "fileCount": 389
+    },
+    {
+      "group": "commands",
+      "fileCount": 189
+    },
+    {
+      "group": "tools",
+      "fileCount": 184
+    },
+    {
+      "group": "services",
+      "fileCount": 130
+    },
+    {
+      "group": "hooks",
+      "fileCount": 104
+    },
+    {
+      "group": "ink",
+      "fileCount": 96
+    },
+    {
+      "group": "bridge",
+      "fileCount": 31
+    },
+    {
+      "group": "constants",
+      "fileCount": 21
+    },
+    {
+      "group": "skills",
+      "fileCount": 20
+    },
+    {
+      "group": "cli",
+      "fileCount": 19
+    },
+    {
+      "group": "@root",
+      "fileCount": 18
+    },
+    {
+      "group": "keybindings",
+      "fileCount": 14
+    },
+    {
+      "group": "tasks",
+      "fileCount": 12
+    },
+    {
+      "group": "migrations",
+      "fileCount": 11
+    },
+    {
+      "group": "types",
+      "fileCount": 11
+    },
+    {
+      "group": "context",
+      "fileCount": 9
+    },
+    {
+      "group": "entrypoints",
+      "fileCount": 8
+    },
+    {
+      "group": "memdir",
+      "fileCount": 8
+    },
+    {
+      "group": "buddy",
+      "fileCount": 6
+    },
+    {
+      "group": "state",
+      "fileCount": 6
+    },
+    {
+      "group": "vim",
+      "fileCount": 5
+    },
+    {
+      "group": "native-ts",
+      "fileCount": 4
+    },
+    {
+      "group": "query",
+      "fileCount": 4
+    },
+    {
+      "group": "remote",
+      "fileCount": 4
+    },
+    {
+      "group": "screens",
+      "fileCount": 3
+    },
+    {
+      "group": "server",
+      "fileCount": 3
+    },
+    {
+      "group": "plugins",
+      "fileCount": 2
+    },
+    {
+      "group": "upstreamproxy",
+      "fileCount": 2
+    },
+    {
+      "group": "assistant",
+      "fileCount": 1
+    },
+    {
+      "group": "bootstrap",
+      "fileCount": 1
+    },
+    {
+      "group": "coordinator",
+      "fileCount": 1
+    },
+    {
+      "group": "moreright",
+      "fileCount": 1
+    },
+    {
+      "group": "outputStyles",
+      "fileCount": 1
+    },
+    {
+      "group": "schemas",
+      "fileCount": 1
+    },
+    {
+      "group": "voice",
+      "fileCount": 1
+    }
+  ],
+  "topCrossGroupEdges": [
+    {
+      "from": "components",
+      "to": "utils",
+      "occurrences": 868
+    },
+    {
+      "from": "tools",
+      "to": "utils",
+      "occurrences": 696
+    },
+    {
+      "from": "services",
+      "to": "utils",
+      "occurrences": 669
+    },
+    {
+      "from": "components",
+      "to": "@root",
+      "occurrences": 404
+    },
+    {
+      "from": "commands",
+      "to": "utils",
+      "occurrences": 360
+    },
+    {
+      "from": "hooks",
+      "to": "utils",
+      "occurrences": 261
+    },
+    {
+      "from": "@root",
+      "to": "utils",
+      "occurrences": 256
+    },
+    {
+      "from": "utils",
+      "to": "services",
+      "occurrences": 234
+    },
+    {
+      "from": "utils",
+      "to": "tools",
+      "occurrences": 196
+    },
+    {
+      "from": "cli",
+      "to": "utils",
+      "occurrences": 192
+    },
+    {
+      "from": "commands",
+      "to": "@root",
+      "occurrences": 174
+    },
+    {
+      "from": "components",
+      "to": "hooks",
+      "occurrences": 153
+    },
+    {
+      "from": "components",
+      "to": "services",
+      "occurrences": 139
+    },
+    {
+      "from": "tools",
+      "to": "@root",
+      "occurrences": 138
+    },
+    {
+      "from": "bridge",
+      "to": "utils",
+      "occurrences": 114
+    },
+    {
+      "from": "components",
+      "to": "tools",
+      "occurrences": 114
+    },
+    {
+      "from": "utils",
+      "to": "bootstrap",
+      "occurrences": 107
+    },
+    {
+      "from": "components",
+      "to": "ink",
+      "occurrences": 104
+    },
+    {
+      "from": "commands",
+      "to": "components",
+      "occurrences": 103
+    },
+    {
+      "from": "@root",
+      "to": "commands",
+      "occurrences": 102
+    },
+    {
+      "from": "screens",
+      "to": "utils",
+      "occurrences": 97
+    },
+    {
+      "from": "commands",
+      "to": "services",
+      "occurrences": 92
+    },
+    {
+      "from": "components",
+      "to": "keybindings",
+      "occurrences": 91
+    },
+    {
+      "from": "utils",
+      "to": "@root",
+      "occurrences": 89
+    },
+    {
+      "from": "tools",
+      "to": "components",
+      "occurrences": 81
+    },
+    {
+      "from": "tools",
+      "to": "services",
+      "occurrences": 80
+    },
+    {
+      "from": "commands",
+      "to": "types",
+      "occurrences": 72
+    },
+    {
+      "from": "components",
+      "to": "state",
+      "occurrences": 68
+    },
+    {
+      "from": "screens",
+      "to": "hooks",
+      "occurrences": 65
+    },
+    {
+      "from": "services",
+      "to": "tools",
+      "occurrences": 63
+    },
+    {
+      "from": "utils",
+      "to": "types",
+      "occurrences": 58
+    },
+    {
+      "from": "hooks",
+      "to": "services",
+      "occurrences": 56
+    },
+    {
+      "from": "utils",
+      "to": "constants",
+      "occurrences": 55
+    },
+    {
+      "from": "tasks",
+      "to": "utils",
+      "occurrences": 54
+    },
+    {
+      "from": "@root",
+      "to": "tools",
+      "occurrences": 53
+    },
+    {
+      "from": "entrypoints",
+      "to": "utils",
+      "occurrences": 53
+    },
+    {
+      "from": "@root",
+      "to": "services",
+      "occurrences": 50
+    },
+    {
+      "from": "hooks",
+      "to": "@root",
+      "occurrences": 48
+    },
+    {
+      "from": "screens",
+      "to": "components",
+      "occurrences": 47
+    },
+    {
+      "from": "constants",
+      "to": "tools",
+      "occurrences": 44
+    }
+  ],
+  "unresolvedExamples": [
+    {
+      "importer": "src/QueryEngine.ts",
+      "specifier": "./types/message.js"
+    },
+    {
+      "importer": "src/QueryEngine.ts",
+      "specifier": "./services/compact/snipCompact.js"
+    },
+    {
+      "importer": "src/QueryEngine.ts",
+      "specifier": "./services/compact/snipProjection.js"
+    },
+    {
+      "importer": "src/Tool.ts",
+      "specifier": "./types/message.js"
+    },
+    {
+      "importer": "src/Tool.ts",
+      "specifier": "./types/tools.js"
+    },
+    {
+      "importer": "src/Tool.ts",
+      "specifier": "./constants/querySource.js"
+    },
+    {
+      "importer": "src/Tool.ts",
+      "specifier": "./types/utils.js"
+    },
+    {
+      "importer": "src/bridge/bridgeMessaging.ts",
+      "specifier": "../entrypoints/sdk/controlTypes.js"
+    },
+    {
+      "importer": "src/bridge/bridgeMessaging.ts",
+      "specifier": "../types/message.js"
+    },
+    {
+      "importer": "src/bridge/initReplBridge.ts",
+      "specifier": "../entrypoints/sdk/controlTypes.js"
+    },
+    {
+      "importer": "src/bridge/initReplBridge.ts",
+      "specifier": "../types/message.js"
+    },
+    {
+      "importer": "src/bridge/initReplBridge.ts",
+      "specifier": "../assistant/index.js"
+    },
+    {
+      "importer": "src/bridge/remoteBridgeCore.ts",
+      "specifier": "../types/message.js"
+    },
+    {
+      "importer": "src/bridge/remoteBridgeCore.ts",
+      "specifier": "../entrypoints/sdk/controlTypes.js"
+    },
+    {
+      "importer": "src/bridge/replBridge.ts",
+      "specifier": "../types/message.js"
+    },
+    {
+      "importer": "src/bridge/replBridge.ts",
+      "specifier": "../entrypoints/sdk/controlTypes.js"
+    },
+    {
+      "importer": "src/bridge/replBridgeTransport.ts",
+      "specifier": "src/entrypoints/sdk/controlTypes.js"
+    },
+    {
+      "importer": "src/buddy/prompt.ts",
+      "specifier": "../types/message.js"
+    },
+    {
+      "importer": "src/cli/handlers/auth.ts",
+      "specifier": "../../services/oauth/types.js"
+    },
+    {
+      "importer": "src/cli/print.ts",
+      "specifier": "src/types/message.js"
+    },
+    {
+      "importer": "src/cli/print.ts",
+      "specifier": "src/entrypoints/sdk/controlTypes.js"
+    },
+    {
+      "importer": "src/cli/print.ts",
+      "specifier": "../proactive/index.js"
+    },
+    {
+      "importer": "src/cli/print.ts",
+      "specifier": "../utils/udsMessaging.js"
+    },
+    {
+      "importer": "src/cli/remoteIO.ts",
+      "specifier": "src/entrypoints/sdk/controlTypes.js"
+    },
+    {
+      "importer": "src/cli/remoteIO.ts",
+      "specifier": "./transports/Transport.js"
+    },
+    {
+      "importer": "src/cli/structuredIO.ts",
+      "specifier": "src//types/message.js"
+    },
+    {
+      "importer": "src/cli/structuredIO.ts",
+      "specifier": "src/entrypoints/sdk/controlTypes.js"
+    },
+    {
+      "importer": "src/cli/transports/HybridTransport.ts",
+      "specifier": "src/entrypoints/sdk/controlTypes.js"
+    },
+    {
+      "importer": "src/cli/transports/SSETransport.ts",
+      "specifier": "src/entrypoints/sdk/controlTypes.js"
+    },
+    {
+      "importer": "src/cli/transports/SSETransport.ts",
+      "specifier": "./Transport.js"
+    },
+    {
+      "importer": "src/cli/transports/WebSocketTransport.ts",
+      "specifier": "src/entrypoints/sdk/controlTypes.js"
+    },
+    {
+      "importer": "src/cli/transports/WebSocketTransport.ts",
+      "specifier": "./Transport.js"
+    },
+    {
+      "importer": "src/cli/transports/ccrClient.ts",
+      "specifier": "src/entrypoints/sdk/controlTypes.js"
+    },
+    {
+      "importer": "src/cli/transports/transportUtils.ts",
+      "specifier": "./Transport.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./commands/agents-platform/index.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./commands/proactive.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./commands/assistant/index.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./commands/remoteControlServer/index.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./commands/force-snip.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./commands/workflows/index.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./services/skillSearch/localSearch.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./commands/subscribe-pr.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./commands/torch.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./commands/peers/index.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./commands/fork/index.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./commands/buddy/index.js"
+    },
+    {
+      "importer": "src/commands.ts",
+      "specifier": "./tools/WorkflowTool/createWorkflowCommand.js"
+    },
+    {
+      "importer": "src/commands/bridge/bridge.tsx",
+      "specifier": "../../assistant/index.js"
+    },
+    {
+      "importer": "src/commands/btw/btw.tsx",
+      "specifier": "../../types/message.js"
+    },
+    {
+      "importer": "src/commands/clear/caches.ts",
+      "specifier": "../../tools/TungstenTool/TungstenTool.js"
+    },
+    {
+      "importer": "src/commands/clear/caches.ts",
+      "specifier": "../../utils/attributionHooks.js"
+    },
+    {
+      "importer": "src/commands/clear/conversation.ts",
+      "specifier": "../../types/message.js"
+    },
+    {
+      "importer": "src/commands/clear/conversation.ts",
+      "specifier": "../../proactive/index.js"
+    },
+    {
+      "importer": "src/commands/compact/compact.ts",
+      "specifier": "../../types/message.js"
+    },
+    {
+      "importer": "src/commands/compact/compact.ts",
+      "specifier": "../../services/compact/reactiveCompact.js"
+    },
+    {
+      "importer": "src/commands/context/context-noninteractive.ts",
+      "specifier": "../../types/message.js"
+    },
+    {
+      "importer": "src/commands/context/context-noninteractive.ts",
+      "specifier": "../../services/contextCollapse/operations.js"
+    },
+    {
+      "importer": "src/commands/context/context-noninteractive.ts",
+      "specifier": "../../services/contextCollapse/index.js"
+    },
+    {
+      "importer": "src/commands/context/context.tsx",
+      "specifier": "../../types/message.js"
+    },
+    {
+      "importer": "src/commands/context/context.tsx",
+      "specifier": "../../services/contextCollapse/operations.js"
+    }
+  ],
+  "limitations": [
+    "Counts are static lower bounds: nonliteral imports, feature-generated modules, and unpublished modules are not available.",
+    "The runtime-like graph is a syntax heuristic, not an executed module graph.",
+    "Cycles show coupling structure; they do not by themselves prove a design defect or a safe extraction boundary."
+  ],
+  "authorityEffect": "none"
+}

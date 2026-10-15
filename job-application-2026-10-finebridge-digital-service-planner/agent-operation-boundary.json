@@ -1,0 +1,53 @@
+{
+  "kind": "reusable-artifact-agent-operation-boundary/v1",
+  "revision": "2026-09-14.1",
+  "status": "bound",
+  "authorityEffect": "none",
+  "subjectRef": "agent-subject:finebridge-digital-service-planner-report-builder",
+  "nativeOwnerRef": "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+  "requestedOutcome": "Produce a report-only, evidence-grounded Korean job-application answer set and reader-facing review report for Finebridge Finance's digital service planner role.",
+  "successEvidence": [
+    "one schema-valid request binds the exact posting, four questions, applicant evidence, project evidence, quality profile, and publication boundary",
+    "two differentiated complete answer candidates remain within the declared character limits",
+    "one frozen criterion-level assessment and one evidence-bound revision are recorded",
+    "the HTML report and searchable text extract pass deterministic publication checks",
+    "company-site uncertainty, applicant confirmations, and interview follow-ups remain explicit"
+  ],
+  "nonGoals": [
+    "submitting the application or contacting the company",
+    "claiming hiring probability, acceptance, or interview selection",
+    "inventing a company product, strategy, team structure, result metric, or applicant belief",
+    "publishing the applicant's name, age, raw prompt, private reasoning, transcript, credentials, or local paths",
+    "modifying the reusable job-application report-production source or unrelated worktree changes"
+  ],
+  "boundedDiscoverySurface": {
+    "nativeArtifact": "artifacts/agent-loop/document/job-application-report-production",
+    "applicantInputs": "user-provided SET 2 application brief only",
+    "companyAndRoleSources": [
+      "https://www.finebridge.example",
+      "https://recruit.finebridge.example/jobs/digital-service-planner"
+    ],
+    "runtimeOutputRoot": ".collab/artifacts/job-application-2026-10-finebridge-digital-service-planner",
+    "maximumCandidateCount": 2,
+    "maximumRevisionPasses": 1
+  },
+  "validation": [
+    "job-application-report-production deterministic request/result checker",
+    "native job-application report package tests and strict package check",
+    "HTML searchable-text, overflow, visible-source, and privacy inspection",
+    "independent semantic review of every candidate/question pair"
+  ],
+  "materialChangeSignals": [
+    "the company or role source becomes independently available or materially changes",
+    "a question, character limit, applicant fact, project result, or privacy decision changes",
+    "the candidate count, revision budget, output format, or publication policy changes",
+    "the work expands to external research, application submission, or multiple independently owned contributions"
+  ],
+  "stopConditions": [
+    "a required question or character rule is missing",
+    "a material personal fact, collaboration claim, project result, or future goal cannot be confirmed",
+    "the same validation or revision fingerprint fails without changed evidence",
+    "the report would expose an undeclared source, identity, private reasoning, or absolute local path",
+    "the requested effect expands beyond the bounded runtime artifact root"
+  ]
+}

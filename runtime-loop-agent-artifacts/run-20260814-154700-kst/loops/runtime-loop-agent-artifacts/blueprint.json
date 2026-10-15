@@ -1,0 +1,269 @@
+{
+  "kind": "dynamic-loop-blueprint/v1",
+  "schemaVersion": 1,
+  "blueprintId": "dynamic-loop:runtime-loop-agent-artifacts:example",
+  "revision": "revision:1",
+  "status": "validated",
+  "authorityEffect": "none",
+  "taskSemantic": {
+    "objective": "Define and validate a runtime artifact boundary for reuse-first dynamic loop and agent composition.",
+    "workKinds": [
+      "research",
+      "documentation",
+      "testing",
+      "operation"
+    ],
+    "phase": "execution",
+    "riskClass": "moderate",
+    "outputClass": "runtime-loop-agent-artifact-bundle",
+    "modelBacked": true
+  },
+  "reuseResolution": {
+    "gapType": "cross_loop_composition",
+    "requiredOutcome": "One bounded workflow that joins reusable inventory, dynamic topology, artifact materialization, settlement, and promotion review.",
+    "consideredLoops": [
+      {
+        "loopRef": "artifacts/agent-loop/operation/issue-worktree-orchestration/loop.yaml",
+        "disposition": "partially_covered",
+        "reason": "Covers intake and bounded lanes but not generated composition artifact materialization."
+      },
+      {
+        "loopRef": "artifacts/agent-loop/operation/shared-worktree-coordination/loop.yaml",
+        "disposition": "partially_covered",
+        "reason": "Covers writer placement and settlement but not dynamic loop blueprint or promotion feedback."
+      },
+      {
+        "loopRef": "artifacts/agent-loop/operation/post-completion-reconciliation/loop.yaml",
+        "disposition": "partially_covered",
+        "reason": "Covers completion axes but not reusable component extraction disposition."
+      }
+    ],
+    "justification": "The stable operations remain reusable inputs, while their task-specific phase topology and artifact closure are not a reusable loop yet."
+  },
+  "patternStack": [
+    "deterministic_sequence",
+    "evaluator_optimizer"
+  ],
+  "phases": [
+    {
+      "id": "research",
+      "responsibilityRef": "responsibility:specialist",
+      "ownerBindingRef": "agent:source-evidence-reviewer",
+      "dependsOn": [],
+      "outputContract": "sanitized-boundary-evidence",
+      "checkpointRefs": [
+        "hook:knowledge-discovery"
+      ],
+      "gateRefs": [
+        "gate:source-and-privacy"
+      ],
+      "maxAttempts": 1,
+      "executionSurface": "read_only_review"
+    },
+    {
+      "id": "contract",
+      "responsibilityRef": "responsibility:domain_lead",
+      "ownerBindingRef": "agent:document-integration-owner",
+      "dependsOn": [
+        "research"
+      ],
+      "outputContract": "runtime-artifact-contract-change",
+      "checkpointRefs": [
+        "hook:shared-worktree-preflight"
+      ],
+      "gateRefs": [
+        "gate:bounded-writer"
+      ],
+      "maxAttempts": 2,
+      "executionSurface": "coordinator_local"
+    },
+    {
+      "id": "validation",
+      "responsibilityRef": "responsibility:validator",
+      "ownerBindingRef": "agent:dynamic-loop-composition-validator",
+      "dependsOn": [
+        "contract"
+      ],
+      "outputContract": "runtime-artifact-validation-report",
+      "checkpointRefs": [
+        "hook:validation"
+      ],
+      "gateRefs": [
+        "gate:independent-validation"
+      ],
+      "maxAttempts": 2,
+      "executionSurface": "read_only_review"
+    },
+    {
+      "id": "settlement",
+      "responsibilityRef": "responsibility:integration_owner",
+      "ownerBindingRef": "agent:document-integration-owner",
+      "dependsOn": [
+        "validation"
+      ],
+      "outputContract": "composition-improvement-review",
+      "checkpointRefs": [
+        "hook:worktree-settlement"
+      ],
+      "gateRefs": [
+        "gate:completion-convergence"
+      ],
+      "maxAttempts": 1,
+      "executionSurface": "coordinator_local"
+    }
+  ],
+  "composition": {
+    "reusableLoopRefs": [
+      "artifacts/agent-loop/operation/shared-worktree-coordination/loop.yaml",
+      "artifacts/agent-loop/operation/post-completion-reconciliation/loop.yaml"
+    ],
+    "reusableAgentRefs": [
+      "artifacts/agents/agent-operation/agents/dynamic-loop-composition-designer.yaml",
+      "artifacts/agents/agent-operation/agents/dynamic-loop-composition-validator.yaml",
+      "artifacts/agents/agent-operation/agents/document-integration-owner.yaml",
+      "artifacts/agents/engineering/agents/source-evidence-reviewer.yaml"
+    ],
+    "dynamicAgentBlueprintRefs": [],
+    "knowledgeProjectionRefs": [
+      "knowledge:operation:runtime-generated-loop-agent-artifacts"
+    ]
+  },
+  "authority": {
+    "coordinatorMode": "bounded_owner",
+    "decisionScopes": [
+      "bounded-contract-authoring",
+      "local-artifact-materialization"
+    ],
+    "nonAuthority": [
+      "automatic-agent-dispatch",
+      "independent-acceptance",
+      "commit",
+      "integration",
+      "provider-effect",
+      "automatic-promotion"
+    ],
+    "tools": [
+      "tool:repository-read",
+      "tool:apply-patch",
+      "tool:contract-checker"
+    ],
+    "writePaths": [
+      "artifacts/loop-architecture",
+      "artifacts/knowledge",
+      "docs",
+      ".collab/artifacts/runtime-loop-agent-artifacts"
+    ],
+    "delegation": {
+      "allowed": false,
+      "maxDepth": 0,
+      "maxChildren": 0
+    },
+    "commitBoundary": "none",
+    "integrationAllowed": false,
+    "authoritySourceRefs": [
+      "AGENTS.md",
+      "artifacts/loop-architecture/core/agent-composition-governance.md"
+    ]
+  },
+  "worktreePolicy": {
+    "defaultPlacement": "current_worktree",
+    "maxParallelWriters": 1,
+    "isolationTriggers": [
+      "dirty-ownership-conflict",
+      "concurrent-writer",
+      "different-accepted-git-base",
+      "broad-destructive-tooling"
+    ],
+    "preflightRef": "artifacts/loop-architecture/hooks/shared-worktree-preflight.md",
+    "settlementRef": "artifacts/loop-architecture/hooks/worktree-settlement.md"
+  },
+  "instructions": {
+    "sourceChain": [
+      {
+        "layer": "framework_boundary",
+        "ref": "artifacts/loop-architecture/README.md",
+        "revisionOrDigest": "example-framework-revision"
+      },
+      {
+        "layer": "reusable_loop",
+        "ref": "artifacts/agent-loop/operation/shared-worktree-coordination/loop.yaml",
+        "revisionOrDigest": "example-loop-revision"
+      },
+      {
+        "layer": "agent_composition",
+        "ref": "artifacts/agents/agent-authority-map.json",
+        "revisionOrDigest": "example-agent-catalog-revision"
+      },
+      {
+        "layer": "knowledge_projection",
+        "ref": "knowledge:operation:runtime-generated-loop-agent-artifacts",
+        "revisionOrDigest": "runtime-generated-loop-agent-artifacts/v1"
+      },
+      {
+        "layer": "task_objective",
+        "ref": "task:runtime-loop-agent-artifacts",
+        "revisionOrDigest": "example-task-revision"
+      },
+      {
+        "layer": "runtime_narrowing",
+        "ref": "runtime:assignment:runtime-loop-agent-artifacts",
+        "revisionOrDigest": "example-runtime-revision"
+      }
+    ],
+    "promptEngineeringContractRefs": [
+      "artifacts/loop-architecture/package/prompt-engineering-contract/README.md"
+    ],
+    "rawPromptRetained": false
+  },
+  "validation": {
+    "independent": true,
+    "authorAgentId": "dynamic-loop-composition-designer",
+    "validatorAgentId": "dynamic-loop-composition-validator",
+    "acceptanceOwnerRef": "owner:loop-architecture",
+    "outputContract": "dynamic-loop-blueprint-validation-report",
+    "evidenceRequired": [
+      "Exact blueprint digest and schema result.",
+      "Coverage matrix for every considered reusable loop.",
+      "Phase DAG, authority, worktree, termination, and privacy findings."
+    ]
+  },
+  "termination": {
+    "maxPhases": 4,
+    "maxTotalAttempts": 6,
+    "repeatedFingerprintLimit": 2,
+    "totalRejectionLimit": 3,
+    "wallClockPolicyRef": "policy:bounded-execution-window",
+    "externalBlockerPolicy": "stop_unchanged",
+    "successCondition": "The artifact bundle is settled after exact contract validation and an improvement review.",
+    "stopConditions": [
+      "A reusable loop fully covers the required workflow.",
+      "Authority, ownership, or worktree identity is unresolved.",
+      "The same rejected fingerprint repeats twice.",
+      "Required validation or settlement evidence remains unavailable."
+    ]
+  },
+  "lifecycle": {
+    "mode": "ephemeral",
+    "expiresOn": "The bound task is settled, superseded, or rejected.",
+    "terminalDisposition": "expired",
+    "promotion": {
+      "automatic": false,
+      "status": "not_eligible",
+      "evidenceRefs": [
+        "task:runtime-loop-agent-artifacts:single-use"
+      ]
+    }
+  },
+  "provenance": {
+    "createdAt": "2026-08-14T15:16:42+09:00",
+    "governingRefs": [
+      "artifacts/loop-architecture/core/loop-composition-guide.md",
+      "artifacts/loop-architecture/core/agent-composition-governance.md",
+      "artifacts/loop-architecture/core/agent-loop-extraction-governance.md"
+    ]
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "blueprintDigest": "sha256:9cd14776719ee69bf4aeaf7ba782840c84eb376d003a50d36e4c113d983fc821"
+  }
+}

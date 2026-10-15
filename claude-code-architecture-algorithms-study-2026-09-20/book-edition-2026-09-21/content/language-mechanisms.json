@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "interludes": [
+    {
+      "id": "yield-suspension",
+      "chapterId": "chapter-4",
+      "title": "yield는 여러 번 반환하는 문법이 아니다",
+      "lead": "async generator를 이해하려면 함수 호출이 끝났는지, 실행 frame이 멈춘 채 보존되었는지, 소비자가 어떤 iterator result를 받았는지를 분리해야 한다.",
+      "sections": [
+        {
+          "heading": "먼저 return과 suspension을 구분한다",
+          "paragraphs": [
+            "일반 함수의 return은 현재 호출 frame을 종료하고 호출자에게 제어를 돌려준다. 반면 generator의 yield는 현재 instruction pointer, local variable, try/finally 문맥을 보존한 suspension point다. 소비자가 다음 next()를 호출할 때 같은 frame이 yield 다음 지점에서 다시 진행된다.",
+            "따라서 ‘함수를 여러 번 나눠 실행한다’는 직관은 입문용으로는 도움이 되지만 충분하지 않다. 중요한 것은 여러 번의 새 함수 호출이 아니라 하나의 실행 frame이 pause와 resume를 반복한다는 점이다. 이 차이가 cleanup, error injection, UI의 partial projection을 설명한다."
+          ]
+        },
+        {
+          "heading": "사례 1 — next()는 보존된 local state를 다시 연다",
+          "code": "function* count() {\n  let n = 1\n  yield n\n  n += 1\n  return n\n}\n\nconst it = count()\nit.next() // { value: 1, done: false }\nit.next() // { value: 2, done: true }",
+          "explanation": "첫 next() 뒤 n과 instruction pointer는 사라지지 않는다. 두 번째 next()는 새 count() 호출이 아니라 같은 frame을 resume하고, return이 terminal iterator result를 만든다. 그 뒤의 next()는 이미 닫힌 generator에서 더 진행할 코드를 찾지 않는다."
+        },
+        {
+          "heading": "사례 2 — return은 terminal reason을 전달한다",
+          "code": "function* task() {\n  yield { type: 'progress', value: 50 }\n  return { type: 'terminal', reason: 'complete' }\n}\n\nconst it = task()\nit.next() // progress, done: false\nit.next() // terminal, done: true",
+          "explanation": "yielded value는 관찰 가능한 중간 event이고 return value는 같은 반복의 terminal 결과다. for...of와 for await...of는 보통 done:true의 value를 loop body에 전달하지 않으므로 terminal reason이 필요하다면 수동 next() 또는 별도 wrapper contract가 필요하다."
+        },
+        {
+          "heading": "사례 3 — throw는 소비자와 frame 사이의 오류 경로를 연다",
+          "code": "function* guarded() {\n  try {\n    yield 'waiting'\n  } catch (error) {\n    yield `recovered: ${error.message}`\n  } finally {\n    cleanup()\n  }\n}\n\nconst it = guarded()\nit.next()\nit.throw(new Error('cancel'))",
+          "explanation": "iterator.throw(error)는 멈춘 yield 지점에서 예외가 발생한 것처럼 frame 안으로 오류를 주입한다. 내부 catch가 받지 않으면 소비자의 next/throw 호출이 reject·throw되고 generator는 닫힌다. finally는 정상 return, 외부 return(), uncaught throw에서 cleanup 경계가 된다."
+        },
+        {
+          "heading": "사례 4 — async generator는 stream event와 terminal을 다른 채널로 둔다",
+          "code": "async function* query() {\n  yield { type: 'message_delta', text: '안' }\n  yield { type: 'message_delta', text: '녕' }\n  return { reason: 'end_turn' }\n}\n\nfor await (const event of query()) {\n  projectToUI(event)\n}",
+          "explanation": "각 yield는 provider에서 온 partial state를 UI나 observer가 즉시 projection할 기회를 준다. 하지만 두 글자가 보였다는 사실은 turn이 terminal이라는 뜻이 아니다. return 또는 surrounding protocol이 end_turn을 확정하고, throw는 error UI와 cleanup·retry 경로를 연다."
+        }
+      ],
+      "comparison": {
+        "columns": ["속성", "yield value", "return terminal", "throw error"],
+        "rows": [
+          ["함수 상태", "frame 보존·suspend", "정상 종료", "catch되지 않으면 abrupt 종료"],
+          ["소비 결과", "{ value, done:false }", "{ value, done:true }", "next/throw의 예외·reject"],
+          ["query 의미", "stream message·progress", "terminal reason", "실패·중단 전파"],
+          ["UI 영향", "즉시 projection 가능", "turn 마감", "error UI·cleanup·retry 판단"]
+        ]
+      },
+      "projectReturn": "실제 query와 provider stream에서는 yield 수를 세는 대신 각 event가 어떤 partial state를 노출하고, canonical message가 언제 닫히며, return/throw가 어느 owner에게 terminal을 전달하는지 추적해야 한다. A10의 turn State와 A39의 typed accumulator가 이 문법 메커니즘을 프로젝트 수준의 보장으로 바꾼다."
+    }
+  ]
+}

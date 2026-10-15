@@ -1,0 +1,63 @@
+{
+  "authorityEffect": "none",
+  "cumulativeExactCounts": {
+    "active": 0,
+    "completed": 1,
+    "failed": 1,
+    "frozenMembers": 60,
+    "held": 1,
+    "pending": 57,
+    "terminalSettled": 3
+  },
+  "currentItem": {
+    "effectiveReceiptState": "missing_require_context",
+    "identityDigest": "sha256:ad52656f020f3e403ceb880642c28350fb51f9a94f91fc08feba87b55dded282",
+    "itemId": "Enterprise-Bench/l1-l2-bench",
+    "terminalReward": 0.0,
+    "terminalStatus": "held"
+  },
+  "digest": "sha256:3afbe960ac8bc58b4db4fcdd1f705762b7146368e1f7d488a151e040f2df9a56",
+  "itemScopedCounts": {
+    "itemsDiscovered": 1,
+    "itemsEvaluated": 0,
+    "itemsExecuted": 0,
+    "itemsHeld": 1,
+    "itemsQualified": 0,
+    "itemsRejected": 0,
+    "itemsSettled": 1
+  },
+  "kind": "harbor-hub-shard-operation-report/v2",
+  "laneIdentitySelectsRoutingOrArchitecture": false,
+  "nextAction": "hold_after_one_terminal_round; claim next only after bounded worker window reopens and latest source/context is consumed",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationRevision": "harbor-hub-five-shard-full-inventory-source-r12",
+  "populationSettlementRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r12/population-settlement-decision.r12.json",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawTaskContentProjected": false,
+    "runtimeHandlesProjected": false,
+    "secretsProjected": false
+  },
+  "schemaVersion": 2,
+  "settlementRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r12/lane-settlement-decision.r12.json",
+  "shard": {
+    "frozenMemberCount": 60,
+    "id": "population-shard-1",
+    "index": 0,
+    "planDigest": "sha256:705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+    "populationRevision": "sha256:3129ad473a1c60f76d7159614e57c251e1fdf0a3ee64c9c347166e3315a1dd69"
+  },
+  "sourceMutation": false,
+  "terminalRewardRoundRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r12/terminal-reward-round.r12.json",
+  "wakeCondition": [
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "network_policy_and_cost_budget_qualified",
+    "changed_item_or_capability_fingerprint"
+  ]
+}

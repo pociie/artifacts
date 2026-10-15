@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "job-application-company-analysis/v6",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "company": "롯데이노베이트",
+  "targetRole": "AI 서비스 엔지니어(AI서비스팀)",
+  "officialSources": [
+    {"id": "company-affiliate", "url": "https://recruit.lotte.co.kr/companylife/affiliate/detail?compcd=30007", "authority": "official", "observed": "2026-09-08"},
+    {"id": "company-home", "url": "https://www.lotteinnovate.com/", "authority": "official", "observed": "2026-09-08"},
+    {"id": "role-posting", "url": "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007", "authority": "official", "observed": "2026-09-08"}
+  ],
+  "boundedPublicClaims": [
+    {"id": "industry-spanning-it", "claim": "공개 회사 소개는 여러 산업에 시스템 설계·개발·구축·컨설팅과 IT 플랫폼·솔루션을 제공한다고 설명한다.", "sourceIds": ["company-affiliate"], "limit": "AI서비스팀의 내부 업무 전체를 설명하지 않음"},
+    {"id": "technology-enabled-business-change", "claim": "공개 회사 소개는 AI·빅데이터·클라우드 등 신기술 기반의 사업과 비즈니스 전환을 제시한다.", "sourceIds": ["company-affiliate", "company-home"], "limit": "지원자의 적합성이나 실제 프로젝트 성과를 증명하지 않음"},
+    {"id": "service-engineer-scope", "claim": "공고는 AI 서비스 API·백엔드, 데이터 파이프라인, 플랫폼 운영·고도화, 서비스 발굴·검증, 튜닝·품질 검증을 함께 요구한다.", "sourceIds": ["role-posting"], "limit": "팀의 비공개 운영 방식·현재 기술 스택은 알 수 없음"}
+  ],
+  "essayTranslation": [
+    {"companyContext": "여러 산업의 업무 맥락을 IT 플랫폼·솔루션으로 연결", "roleTask": "사용자 요구가 서비스 처리와 결과 확인으로 이어지게 함", "personalEvidence": "요구 분석·책임 구조화·설계·검증을 연결한 개인 프로젝트 경험", "contributionWording": "업무 목적·적용 범위·확인 기준을 정리하며 API·백엔드 업무에 기여"},
+    {"companyContext": "AI·데이터·클라우드 기반의 비즈니스 전환", "roleTask": "AI 서비스의 데이터 흐름과 품질을 관리", "personalEvidence": "오류 범위와 사람 확인 지점을 고려한 설계 관점", "contributionWording": "결과의 한계와 확인 기준을 함께 설계하는 엔지니어로 성장"}
+  ],
+  "interestFacets": [
+    {"id": "service-purpose", "label": "업무 목적과 서비스 연결", "currentSetCoverage": ["set-1", "set-5"]},
+    {"id": "service-delivery", "label": "API·백엔드·데이터 흐름", "currentSetCoverage": ["set-2", "set-3"]},
+    {"id": "quality-responsibility", "label": "결과 검증과 사람 확인", "currentSetCoverage": ["set-3", "set-4"]},
+    {"id": "feedback-improvement", "label": "오류·피드백을 다음 개선으로 연결", "currentSetCoverage": ["set-2", "set-4", "set-5"]}
+  ],
+  "safeWording": {
+    "prefer": ["공개된 회사 맥락을 바탕으로", "공고의 품질 검증 업무와 연결해", "개인 프로젝트에서 확인한 설계 관점으로", "입사 후 확인 기준을 세우며"],
+    "avoid": ["롯데이노베이트는 반드시 ...한다", "AI서비스팀은 ...을 운영한다", "고객 성과를 만들었다", "특정 모델·클라우드·운영 수치를 사용했다"],
+    "rule": "public company context becomes motivation context; only user-confirmed experience becomes past-tense evidence"
+  }
+}

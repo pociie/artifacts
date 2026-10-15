@@ -1,0 +1,80 @@
+{
+  "kind": "visual-pdf-validation-candidate/v1",
+  "validationId": "validation:book-pdf-visual-segment:preliminary",
+  "revision": "book-pdf-validation/1",
+  "status": "candidate_author_side_only",
+  "independent": false,
+  "authorityEffect": "none",
+  "subject": {
+    "pdfRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/prototype/book-pdf-expression-prototype.pdf",
+    "pdfDigest": "sha256:5fcbc6d8825077d8940545aeb9ab9c97b5867d31daff1bdb0b38ce9d60654566",
+    "handoffRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/recipient-handoff-candidate.json",
+    "handoffRevision": "book-pdf-recipient-handoff/2",
+    "combinedEvidenceDigest": "sha256:a133e3f3235932fc57a8e40064accf4d9fac7d9de8e387a2232252073974295e"
+  },
+  "checks": [
+    {
+      "id": "operation-request-contract",
+      "result": "pass",
+      "evidence": "canonical reusable-artifact request checker returned OK request for reusable-artifact-operation-request-v3.json"
+    },
+    {
+      "id": "raster-mockup-count",
+      "result": "pass",
+      "evidence": "13 PNG files are present; requested minimum is 10"
+    },
+    {
+      "id": "raster-shape",
+      "result": "pass",
+      "evidence": "all 13 mockups were identified as 1536×1024 RGB PNG"
+    },
+    {
+      "id": "prototype-page-count",
+      "result": "pass",
+      "evidence": "PDFKit reported 9 pages and nine page previews were rendered"
+    },
+    {
+      "id": "selectable-text",
+      "result": "pass",
+      "evidence": "PDFKit extracted 7,081 characters and zero pages lacked extractable text"
+    },
+    {
+      "id": "layout-overflow",
+      "result": "pass",
+      "evidence": "browser geometry reported no horizontal or vertical overflow on all nine A4 page elements"
+    },
+    {
+      "id": "visual-review",
+      "result": "pass_with_limitations",
+      "evidence": "author inspected the nine-page contact sheet; 01/07 page-mode distinction and hierarchy are visible",
+      "limitations": "not an independent reviewer and not a physical print test"
+    },
+    {
+      "id": "fact-review",
+      "result": "pending_independent_validation",
+      "evidence": "source/background/inference labels are present, but no author-independent verifier has reviewed every claim"
+    },
+    {
+      "id": "grayscale-and-accessibility",
+      "result": "pending_independent_validation",
+      "evidence": "labels use redundant text/border shapes, but grayscale print and assistive-technology review are not complete"
+    }
+  ],
+  "scopeEvidence": {
+    "writesLimitedTo": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/**",
+    "forbiddenWritesPerformed": false,
+    "forbiddenPaths": ["coordination-v3/**", "AGENTS.md", "artifacts/loop-architecture/**"]
+  },
+  "limitations": [
+    "This is author-side preliminary validation, not independent Fact/Visual validation.",
+    "Video transcripts were not independently verified.",
+    "The PDF is an editorial expression prototype, not a production manuscript.",
+    "No physical A4 print, binding-margin, grayscale, screen-reader or formal link audit was completed."
+  ],
+  "decision": "hold_for_independent_fact_visual_validation",
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}
+

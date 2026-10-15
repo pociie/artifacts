@@ -1,0 +1,40 @@
+{
+  "kind": "job-application-pdf-publication-assessment/v1",
+  "pdf_artifact": "coremotion-smart-factory-five-set-pdf.pdf",
+  "bytes": 925595,
+  "page_count": 16,
+  "text_streams": 16,
+  "text_operators": 20879,
+  "to_unicode_maps": 114,
+  "thresholds": {
+    "minimum_pdf_bytes": 10000,
+    "minimum_pdf_text_streams": 5,
+    "minimum_pdf_text_operators": 20,
+    "minimum_pdf_tounicode_maps": 1
+  },
+  "searchable_text_passed": true,
+  "overflow_passed": true,
+  "content_policy_results": [
+    {
+      "policy_id": "exclude-internal-bookkeeping",
+      "status": "pass",
+      "matches": []
+    },
+    {
+      "policy_id": "exclude-local-absolute-path",
+      "status": "pass",
+      "matches": []
+    },
+    {
+      "policy_id": "require-reader-sections",
+      "status": "pass",
+      "matches": [
+        "지원 답안",
+        "면접 준비",
+        "제출 전 확인"
+      ]
+    }
+  ],
+  "privacy_findings": [],
+  "status": "pass"
+}

@@ -1,0 +1,65 @@
+{
+  "kind": "job-application-report-public-composition-validation/v1",
+  "status": "passed",
+  "authority_effect": "none",
+  "artifact_revision": "v1.7-public-report-composition",
+  "checks": [
+    {
+      "id": "ibk-rendered-report-audit",
+      "status": "diagnostic_failure_confirmed",
+      "evidence": "The retained IBK report fails the new composition profile with 47 findings, including missing profile-style binding, inline style drift, undeclared page roles, absent candidate structure bindings, and unplaced raster figures. This is expected evidence that the new contract detects the observed failure class."
+    },
+    {
+      "id": "applicant-readiness-regression",
+      "status": "passed",
+      "evidence": "A qualified candidate with a blocking applicant unknown is rejected before its comparative score can compensate."
+    },
+    {
+      "id": "public-language-and-review-coverage-regression",
+      "status": "passed",
+      "evidence": "Applicant voice, answer/report boundary, cover purpose, heading nonredundancy, score visibility, pagination, visual integration, and design consistency are non-compensatory; independent review must cover every rendered page and candidate with dimension-specific evidence."
+    },
+    {
+      "id": "report-composition-regression",
+      "status": "passed",
+      "evidence": "Acceptance and failure fixtures verify external profile styling, no inline overrides, one candidate identity hierarchy, complete candidate score profiles, contiguous candidate pages, page-role density, and section-bound raster figures."
+    },
+    {
+      "id": "job-application-package-tests",
+      "status": "passed",
+      "evidence": "41 Node tests passed across request/result, profile, writing, composition, answer projection, raster generation, and PDF renderer contracts."
+    },
+    {
+      "id": "loop-package-strict",
+      "status": "passed",
+      "evidence": "Strict Loop package validation reported 0 issues and 0 warnings."
+    },
+    {
+      "id": "skill-quick-validation",
+      "status": "passed",
+      "evidence": "The job-application report operating Skill passed quick validation."
+    },
+    {
+      "id": "repository-fitness",
+      "status": "passed",
+      "evidence": "The repository governance and Turbo fitness command completed successfully."
+    }
+  ],
+  "research_application": [
+    "Descriptive heading and label purpose is reflected in the single candidate identity hierarchy and cover-purpose review.",
+    "CSS fragmentation controls are reflected in page-role planning, contiguous candidate pages, and break-inside protection.",
+    "USWDS design-token and typography guidance is reflected in the external tokenized stylesheet, controlled text measure, body size, and leading.",
+    "W3C non-text-content guidance is reflected in alt text, captions, searchable equivalents, and decorative-duplication review.",
+    "GOV.UK accessible-document guidance is reflected in logical heading hierarchy, reading order, table headers, and figure alternatives."
+  ],
+  "retained_target": {
+    "path": ".collab/artifacts/job-application-2026-09-ibk-it/report.pdf",
+    "disposition": "diagnostic_reference_not_regenerated",
+    "reason": "The user requested reusable-artifact improvement; replacing the existing IBK PDF was outside the bound non-goals."
+  },
+  "limitations": [
+    "The updated artifact prevents the observed structural and evidence-readiness failures in future runs, but it does not retroactively repair the retained IBK report.",
+    "Semantic judgments still require an independent reviewer; the new schema improves auditability by requiring page, candidate, and dimension coverage rather than an unsupported all-pass status.",
+    "The standard A4 occupied-height thresholds are profile-owned defaults and require new evidence before they are changed for a materially different report family."
+  ]
+}

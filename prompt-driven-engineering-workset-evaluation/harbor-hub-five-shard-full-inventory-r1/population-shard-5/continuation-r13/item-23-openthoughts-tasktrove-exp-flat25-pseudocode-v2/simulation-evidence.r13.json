@@ -1,0 +1,255 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:f1a5717f4826f5233bf735d744457ba07ebfd2cad9cb3bc6e1f3fb4e1ce9b795",
+      "id": "harbor-gpt-5-6-luna",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T15:53:48Z",
+  "digest": "sha256:0441d3eacf9ff4b84a3cd98f2dfc0c17dda042fe005293b7452ef858a105b1fa",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:0f8e6ba429166d6fd62644e4e0be9a9a2ff22f34bf77d61b86c1be898c3b4f34",
+    "limitations": [
+      "platform_state_unobserved",
+      "network_policy_unresolved",
+      "cost_budget_unqualified"
+    ],
+    "platformRef": "environment:darwin-arm64-docker"
+  },
+  "evidenceId": "engineering-workset-simulation:population-shard-5:continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2:openthoughts/tasktrove-exp-flat25-pseudocode-v2",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/candidate-probe.r13.json"
+      ],
+      "id": "provider-auth",
+      "subjectRef": "item:openthoughts/tasktrove-exp-flat25-pseudocode-v2"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/candidate-probe.r13.json"
+      ],
+      "id": "task-instruction",
+      "subjectRef": "item:openthoughts/tasktrove-exp-flat25-pseudocode-v2"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/candidate-probe.r13.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:openthoughts/tasktrove-exp-flat25-pseudocode-v2"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-model",
+      "subjectRef": "item:openthoughts/tasktrove-exp-flat25-pseudocode-v2"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-effort",
+      "subjectRef": "item:openthoughts/tasktrove-exp-flat25-pseudocode-v2"
+    },
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/harbor-subject-operation.r13.json"
+      ],
+      "id": "subject-timeout",
+      "subjectRef": "item:openthoughts/tasktrove-exp-flat25-pseudocode-v2"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_qualification_held",
+      "effective_execution_receipt_missing",
+      "oracle_not_run"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "task_instruction_unavailable",
+      "task_image_manifest_unavailable",
+      "protected_verifier_unavailable"
+    ],
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:27a383df7df6201aff5cc2094a2dd2006e755cba7969f2c3e2c40b3b88c73c6a"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2"
+  },
+  "provider": {
+    "limitations": [],
+    "qualificationDigest": "sha256:0e59d88d9062f3b4db35ce0462ed244f6927813da04c95b11cd46f1475896149",
+    "qualificationRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/candidate-probe.r13.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:0721593ff0b9ef9b2dfc2025684d4b07b5e8b4cd2af2a21a7d8da80a2e9190a0",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    ],
+    "sourceDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/item-resource-settlement.r13.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:5d4f162518aeadbc43f379e5515e7792b78f07ebb35d42ad433de635369ca71e",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:251c7821efa289594e6540e7737b62442a0ea3c6cd338993f344f355325c4128",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "credential-injection",
+        "resourceRefDigest": "sha256:e1bf6c9e93793f2d2f41cae97b8a8bb75636a92ebf3f2e0e0ab417e14e4dc720",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "task-workspace",
+        "resourceRefDigest": "sha256:d73b01934744beb1ffceef5cb06b3b78f4011382ee5cd685d273dd6cc5ee16ec",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:e77b5a1099a873a50f0aa0239fcb7e6ff34ff55be0f6298a8213eccd16afd7dc",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "network-policy-scope",
+        "resourceRefDigest": "sha256:33e9b7619adfe8621881126e792c60834a5a395f6c0d07a247b8004904ecd148",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/candidate-probe.r13.json"
+        ],
+        "resourceClass": "cost-budget-scope",
+        "resourceRefDigest": "sha256:158ada9c7ab31a45cee15474a21623bc69501878f0a8371760e6cf8c81d68406",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/dynamic-candidate.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "resourceClass": "dynamic-candidate",
+        "resourceRefDigest": "sha256:a9e8dc0e5b36e4546689892db88f40ab0b12990498741248ba15bbab2846aff9",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/preclaim-verification.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/source-and-plan-binding.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/route-decision.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/dynamic-artifact-composition-decision.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/execution-structure-21-output-bundle.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/subject-operation-request.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/native-subject-topology-operation-receipt.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/native-subject-topology-operation-observation.r13.json"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/working-memory-binding.r13.json",
+    "checkpointRefs": [
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/preclaim-verification.r13.json",
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/claim-source-freeze.r13.json",
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2/item-resource-settlement.r13.json"
+    ],
+    "digest": "sha256:7a5ca81c1d3f063a8ba9525ac06ca05c314c35bd70e2cc5c2a771fb62bfa2243",
+    "invalidation": [
+      "objective_revision_changes",
+      "requirement_scope_digest_changes",
+      "frozen_population_plan_digest_changes",
+      "item_capability_fingerprint_changes",
+      "terminal_settlement_emitted"
+    ],
+    "namespaceRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-5:continuation-r13/item-23-openthoughts-tasktrove-exp-flat25-pseudocode-v2"
+  }
+}

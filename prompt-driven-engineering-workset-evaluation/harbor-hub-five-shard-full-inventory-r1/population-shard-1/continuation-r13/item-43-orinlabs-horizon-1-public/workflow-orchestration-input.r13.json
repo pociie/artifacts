@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "08e6bbab4bb786826e5a210976820cabd15377fff1b54f895feb6dbd465d34b5",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-43-orinlabs-horizon-1-public/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-43-orinlabs-horizon-1-public/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "c174f183b795658b7d2a4d06b9c613e7a1c16e0680a2762c4485fbebd52dd44d",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "d44f96ff93a7dbd8187b07c44a5e2d7577b24c561db1bbf0255ba2b3a666447d",
+      "topologySelectionDecisionSha256": "46ee6bc013a42b27e65bb6494c8074889f57f9cfa101e8e9e7ab9463b1bbc618"
+    },
+    {
+      "coordinationPlanDecisionSha256": "08e6bbab4bb786826e5a210976820cabd15377fff1b54f895feb6dbd465d34b5",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-43-orinlabs-horizon-1-public/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-43-orinlabs-horizon-1-public/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "c174f183b795658b7d2a4d06b9c613e7a1c16e0680a2762c4485fbebd52dd44d",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "d44f96ff93a7dbd8187b07c44a5e2d7577b24c561db1bbf0255ba2b3a666447d",
+      "topologySelectionDecisionSha256": "46ee6bc013a42b27e65bb6494c8074889f57f9cfa101e8e9e7ab9463b1bbc618"
+    },
+    {
+      "coordinationPlanDecisionSha256": "08e6bbab4bb786826e5a210976820cabd15377fff1b54f895feb6dbd465d34b5",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-43-orinlabs-horizon-1-public/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-43-orinlabs-horizon-1-public/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "c174f183b795658b7d2a4d06b9c613e7a1c16e0680a2762c4485fbebd52dd44d",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "d44f96ff93a7dbd8187b07c44a5e2d7577b24c561db1bbf0255ba2b3a666447d",
+      "topologySelectionDecisionSha256": "46ee6bc013a42b27e65bb6494c8074889f57f9cfa101e8e9e7ab9463b1bbc618"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

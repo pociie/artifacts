@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "self-introduction-project-abstraction-map/v4",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-07",
+  "project": "pociie/collab-mono",
+  "abstractionLevel": "service-and-human-workflow",
+  "thesis": "사람이 해결하려는 업무 목적을 서비스 처리로 연결하고, 결과를 다시 사람이 확인·수정·개선할 수 있게 하는 협업형 AI 서비스 구조를 개인 프로젝트로 실험했다.",
+  "highLevelFlow": [
+    {"id": "user-goal", "canonicalTerm": "사용자 목표", "meaning": "사용자가 업무에서 이루려는 결과와 해결하려는 문제", "repositorySignals": ["shared/README.md", "apps/components/core-domain/workspace/README.md"], "essayUse": "기능의 존재보다 서비스를 만들게 된 사람의 문제를 먼저 설명"},
+    {"id": "work-context", "canonicalTerm": "업무 맥락", "meaning": "결과를 판단하는 데 필요한 정보·제약·역할·확인 기준", "repositorySignals": ["apps/components/core-domain/team-collaboration/README.md", "docs/architecture/module-operating-model.md"], "essayUse": "모호한 요구를 사용자 목표와 책임으로 구조화한 판단을 설명"},
+    {"id": "service-processing", "canonicalTerm": "서비스 처리 흐름", "meaning": "입력을 받아 처리하고 결과와 다음 행동으로 연결하는 흐름", "repositorySignals": ["apps/components/core-domain/agent-runtime/README.md", "apps/components/generic-sub-domain/chat-gateway/README.md"], "essayUse": "AI를 독립 기능이 아니라 업무에 연결되는 서비스 처리로 서술"},
+    {"id": "result-verification", "canonicalTerm": "결과 검증", "meaning": "결과를 확인 기준에 비추어 사람이 확인하고 다음 행동을 정하는 과정", "repositorySignals": ["apps/components/generic-sub-domain/reporting/README.md", "e2e"], "essayUse": "완수와 품질을 단순 동작이 아니라 결과 확인과 수정 가능성으로 정의"},
+    {"id": "reviewable-record", "canonicalTerm": "검토 가능한 기록", "meaning": "입력·맥락·결과·확인 내용이 나중에 다시 확인되는 상태", "repositorySignals": ["apps/components/generic-sub-domain/provenance/README.md", "apps/components/generic-sub-domain/reporting/README.md"], "essayUse": "서비스의 개선이 일회성 감상이 아니라 확인 가능한 학습으로 이어짐을 설명"},
+    {"id": "error-recovery", "canonicalTerm": "오류 원인과 복구", "meaning": "문제의 위치를 좁히고 이용을 이어가기 위한 대응", "repositorySignals": ["governance/governance-fitness.mjs", "e2e"], "essayUse": "문제가 생겼을 때 코드 수정 전에 기준·상태·책임을 확인한 과정 설명"},
+    {"id": "feedback-improvement", "canonicalTerm": "피드백 기반 개선", "meaning": "관찰된 부담과 오류를 다음 요구·설계·검증에 반영하는 순환", "repositorySignals": ["docs/operations/agent-workflow.md", "governance/governance-fitness.mjs"], "essayUse": "입사 후 고객·현업 피드백을 품질과 운영 개선으로 연결"}
+  ],
+  "projectState": {
+    "repositoryFacts": [
+      "root package manifest declares 28 npm workspaces",
+      "the repository is organized around core-domain, generic-sub-domain and supporting-domain areas with web, infrastructure, MCP and E2E surfaces",
+      "the documented module shape separates domain, application, adapters and composition responsibilities",
+      "the current shared README path is shared/README.md; packages/shared/README.md is not a valid current evidence path"
+    ],
+    "userProvidedContext": [
+      "사용자가 현재 진행 중인 개인 프로젝트로 제시함",
+      "사용자가 요구 분석부터 구조 설계·코드 구현·검증·배포 구성까지 전 과정을 주도했다고 설명함"
+    ],
+    "notEstablished": [
+      "production users, traffic, latency, cost, availability, customer outcome or adoption",
+      "every repository component being personally implemented",
+      "all checks passing at a dated run",
+      "simultaneous activation of every external execution surface",
+      "exact changed files, deployment environment and dated operational result"
+    ]
+  },
+  "scopeTranslation": {
+    "projectScale": "28개 workspace라는 저장소 규모는 넓은 개발 범위의 근거로만 사용하고 서비스·팀·사용자 규모로 확대하지 않는다.",
+    "personalRole": "개인 프로젝트에서 요구 분석·구조 설계·구현·검증·배포 구성을 연결한 경험으로 쓰되, 실제 변경 범위는 제출 전 확인한다.",
+    "architectureMeaning": "domain/application/adapters/composition의 구분은 ‘모듈을 많이 만들었다’는 성과가 아니라 업무 규칙과 외부 연결의 책임을 나누어 변경 영향을 관리한 설계 판단으로 번역한다.",
+    "aiMeaning": "AI는 모델 성능의 대리어가 아니라 사용자 목표를 서비스 처리에 연결하고 결과 검증과 사람의 수정을 포함하는 업무 지원 방식으로 표현한다.",
+    "completionMeaning": "프로젝트 완수는 기능 수나 구현 완료가 아니라 사용자 목표가 결과 확인까지 이어지고, 오류를 다시 확인해 다음 개선에 활용할 수 있는 상태로 정의한다."
+  },
+  "claimPolicy": {
+    "allowed": [
+      "사람의 업무 목적과 AI 처리 결과를 서비스 처리·결과 검증·개선 흐름으로 연결한 설계 경험",
+      "넓은 TypeScript 모노레포 범위에서 핵심 서비스 처리 흐름과 책임 경계를 먼저 구조화한 경험",
+      "업무 규칙과 외부 연결의 책임을 구분하고 변경 영향과 확인 기준을 함께 고민한 관점"
+    ],
+    "requiresUserConfirmation": [
+      "본인이 실제로 변경한 파일·영역과 주요 의사결정",
+      "실행한 검증 명령·시점·결과",
+      "배포 환경, 실제 사용자 사용 여부와 운영 결과",
+      "프로젝트에서 버린 대안과 선택 이유"
+    ],
+    "excludedFromEssayCenter": [
+      "구현 단위·프로토콜 필드·개별 핸들러의 열거",
+      "도구 이름을 모델 능력이나 운영 성과처럼 표현하는 것",
+      "개발용 연결 확인을 운영 성과로 확대하는 것",
+      "저장소 구조만으로 개인 소유권·사용자 규모·품질 결과를 확정하는 것",
+      "확인되지 않은 성능·비용·가동률·고객 만족 수치"
+    ]
+  },
+  "transitionFromV3": {
+    "correctedEvidencePath": "packages/shared/README.md → shared/README.md",
+    "reducedImplicitTerms": ["의도", "공유 맥락", "여정", "중심 흐름", "근거", "불확실성", "서비스 약속"],
+    "replacementRule": "프로젝트 고유어를 사용자 목표·업무 맥락·서비스 처리 흐름·결과 검증·검토 가능한 기록·피드백 기반 개선으로 번역",
+    "reason": "독자가 저장소 내부의 의미를 복원해야 하는 문장을 줄이고 직무·사용자·서비스의 공통 언어로 평가 근거를 고정하기 위함"
+  },
+  "narrativeTest": [
+    "문장이 기술 이름 없이도 해결하려는 사람의 문제와 다음 행동을 설명하는가",
+    "기술 선택이 업무 처리·책임·검증·복구·사용자 경험에 어떤 변화를 주었는가",
+    "과거 사실·제한된 해석·미래 계획의 시제가 분리되어 있는가",
+    "구현 단위를 삭제해도 프로젝트의 서비스 정체성과 완수 기준이 남는가",
+    "기술 배경이 없는 독자가 행위자·대상·기준을 한 번에 찾을 수 있는가"
+  ]
+}

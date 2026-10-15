@@ -1,0 +1,255 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:fe1e7cc80134897fc4478aea18eb4884ea039e2b0e94a9ba168c1af79846bf7d",
+      "id": "harbor-gpt-5-6-luna",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T15:53:48Z",
+  "digest": "sha256:df55d467f9b721de02a264c8da0994151c9e95f2e1dd816af766dc9889b94aa8",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:0f8e6ba429166d6fd62644e4e0be9a9a2ff22f34bf77d61b86c1be898c3b4f34",
+    "limitations": [
+      "platform_state_unobserved",
+      "network_policy_unresolved",
+      "cost_budget_unqualified"
+    ],
+    "platformRef": "environment:darwin-arm64-docker"
+  },
+  "evidenceId": "engineering-workset-simulation:population-shard-5:continuation-r13/item-11-gorilla-bfcl_parity:gorilla/bfcl_parity",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/candidate-probe.r13.json"
+      ],
+      "id": "provider-auth",
+      "subjectRef": "item:gorilla/bfcl_parity"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/candidate-probe.r13.json"
+      ],
+      "id": "task-instruction",
+      "subjectRef": "item:gorilla/bfcl_parity"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/candidate-probe.r13.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:gorilla/bfcl_parity"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-model",
+      "subjectRef": "item:gorilla/bfcl_parity"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-effort",
+      "subjectRef": "item:gorilla/bfcl_parity"
+    },
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/harbor-subject-operation.r13.json"
+      ],
+      "id": "subject-timeout",
+      "subjectRef": "item:gorilla/bfcl_parity"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_qualification_held",
+      "effective_execution_receipt_missing",
+      "oracle_not_run"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "task_instruction_unavailable",
+      "task_image_manifest_unavailable",
+      "protected_verifier_unavailable"
+    ],
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:1253cf2b766b5aa02721e6ad9f2ebb10688cba0cdcbabb0b87145706d8be3e41"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity"
+  },
+  "provider": {
+    "limitations": [],
+    "qualificationDigest": "sha256:77a2bc2655eea16044baf225abcefb25157e16861b95ddca2f750c4487eb8602",
+    "qualificationRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/candidate-probe.r13.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:97b7a61c22173045fe0d026f920146044286fdd45cbad6766ee0b079f64f338d",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    ],
+    "sourceDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/item-resource-settlement.r13.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/candidate-probe.r13.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:cb1a68d88e0632b0f6d0c1ef38254dc35e97897abae194fb2cec67f987f0267e",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/candidate-probe.r13.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:7f0fd98c349629b8a9b54a4bd38e15330abb5cf5da426bc05a3067ace0ce3b87",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/candidate-probe.r13.json"
+        ],
+        "resourceClass": "credential-injection",
+        "resourceRefDigest": "sha256:f9115e6f0b4166a22cb9dab3845892a80c00ebc36f1a714c0c1d170aca8af02f",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/candidate-probe.r13.json"
+        ],
+        "resourceClass": "task-workspace",
+        "resourceRefDigest": "sha256:6ec236d14e5450726162747d238ccc6b88eab78a2e92b62f185025d9afeb1ee0",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/candidate-probe.r13.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:8b8f762ffbab5c8c4cc58e37492846914290696939bcd138ba614450988606cb",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/candidate-probe.r13.json"
+        ],
+        "resourceClass": "network-policy-scope",
+        "resourceRefDigest": "sha256:de890f61d19043195fd791d8707e54c5b3dd02c8c4cd2a5a3ac9ca92649b06a5",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/candidate-probe.r13.json"
+        ],
+        "resourceClass": "cost-budget-scope",
+        "resourceRefDigest": "sha256:c23513b0aece5bb89c8527c180583e3328af15037b3bffe295933569403ced91",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/dynamic-candidate.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "resourceClass": "dynamic-candidate",
+        "resourceRefDigest": "sha256:b6a26879d4310cb253c9429558eb0a2bb0446a1b94953898d7c4b3ab4aa8989c",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/preclaim-verification.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/source-and-plan-binding.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/route-decision.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/dynamic-artifact-composition-decision.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/execution-structure-21-output-bundle.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/subject-operation-request.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/native-subject-topology-operation-receipt.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/native-subject-topology-operation-observation.r13.json"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/working-memory-binding.r13.json",
+    "checkpointRefs": [
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/preclaim-verification.r13.json",
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/claim-source-freeze.r13.json",
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/item-resource-settlement.r13.json"
+    ],
+    "digest": "sha256:a8d2a4f7f0eeabe67e937dbf7f63bb3507e717def6e59a5be593359d782bc40c",
+    "invalidation": [
+      "objective_revision_changes",
+      "requirement_scope_digest_changes",
+      "frozen_population_plan_digest_changes",
+      "item_capability_fingerprint_changes",
+      "terminal_settlement_emitted"
+    ],
+    "namespaceRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-5:continuation-r13/item-11-gorilla-bfcl_parity"
+  }
+}

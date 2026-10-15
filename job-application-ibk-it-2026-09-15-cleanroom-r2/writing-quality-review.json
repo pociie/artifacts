@@ -1,0 +1,2233 @@
+{
+  "kind": "job-application-writing-quality-review/v1",
+  "schema_version": 1,
+  "request_ref": {
+    "path": ".collab/artifacts/job-application-ibk-it-2026-09-15-cleanroom-r2/request.json",
+    "digest": "57b26f1bfe6392aa182c0ac018dab2cab2319b6db3fe794aa809b031373f4a41"
+  },
+  "result_ref": {
+    "path": ".collab/artifacts/job-application-ibk-it-2026-09-15-cleanroom-r2/result.json",
+    "digest": "fe1f8427a839978e2b80c10655650497447923a96185da8d1f3dbfbccbd8df4b"
+  },
+  "research_review": {
+    "status": "pass",
+    "company_identity_status": "pass",
+    "role_responsibility_status": "pass",
+    "domain_stakes_status": "pass",
+    "applicant_relevance_status": "pass",
+    "question_implication_status": "pass",
+    "source_ids": [
+      "source:ibk-posting",
+      "source:job-alio-posting",
+      "source:ibk-duty",
+      "source:ibk-research",
+      "source:question-page",
+      "source:github-profile",
+      "source:blog-algorithm",
+      "source:blog-security",
+      "source:repo-msa",
+      "source:repo-static-analysis"
+    ],
+    "observations": [
+      {
+        "dimension": "company_identity",
+        "status": "pass",
+        "evidence_refs": [
+          "analysis:company-purpose",
+          "source:ibk-research"
+        ],
+        "evidence": "IBK의 중소기업 중심 역할이 공식 기업 자료와 분석 기록에 결속돼 있고 일반 금융사 찬사와 구분된다.",
+        "writing_effect": "지원동기를 중소기업과 고객이 의존하는 금융 기반의 지속적 운영 책임으로 좁혔다."
+      },
+      {
+        "dimension": "role_responsibility",
+        "status": "pass",
+        "evidence_refs": [
+          "analysis:electronic-finance-duty",
+          "source:ibk-duty"
+        ],
+        "evidence": "전자금융 IT가 업무 개발과 시스템 관리·유지보수·보안체계 운영을 함께 맡는다는 역할 범위가 확인된다.",
+        "writing_effect": "기능 구현만이 아니라 변경 영향과 장기 운영을 설명하는 답안 축을 만들었다."
+      },
+      {
+        "dimension": "domain_stakes",
+        "status": "pass",
+        "evidence_refs": [
+          "analysis:financial-state-stakes",
+          "analysis:operability-stakes"
+        ],
+        "evidence": "거래·잔액·권한 상태의 오류가 고객 자산과 기업 업무 흐름에 닿는다는 위험과 운영 책임의 경계를 과장 없이 제시한다.",
+        "writing_effect": "정확성·일관성·권한 경계를 미래 책임으로 사용하되 장애 예방 성과는 주장하지 않았다."
+      },
+      {
+        "dimension": "applicant_relevance",
+        "status": "pass",
+        "evidence_refs": [
+          "applicant:backend-focus",
+          "applicant:algorithm-practice",
+          "applicant:security-study",
+          "claim:msa-service-boundaries",
+          "claim:static-analysis-tool"
+        ],
+        "evidence": "백엔드 지향, 단계 학습, 보안 관심, 서비스 경계 및 정적 분석 구현이 지원자 소유 진술과 공개 저장소 관찰로 구분돼 있다.",
+        "writing_effect": "후보별로 확인 가능한 행동 한두 개만 선택하고 팀 역할·운영 규모·취약점 성과는 생략하거나 축소했다."
+      },
+      {
+        "dimension": "question_implication",
+        "status": "pass",
+        "evidence_refs": [
+          "implication:motivation",
+          "implication:strength-weakness",
+          "implication:preparation",
+          "implication:alternative-career"
+        ],
+        "evidence": "네 문항은 각각 회사 선택, 자기관리, 실제 준비, 대안 직업 적합성의 독자 판단으로 분리돼 있다.",
+        "writing_effect": "동일 프로젝트 소재의 기능을 문항별로 달리하고 지원동기·준비·보안 연구 결말의 상호 침범을 막았다."
+      }
+    ],
+    "limitations": [
+      "자기소개서 문항은 2025년 상반기 공개 페이지에 기반하며 2026년 하반기 공식 지원서 문항 동일성은 확인되지 않았다.",
+      "2026년 하반기 공고 접수는 2026-09-14 10:00에 마감되어 이 결과는 제출 확정본이 아니라 직무 적합성 연습본이다."
+    ]
+  },
+  "expert_panel": [
+    {
+      "reviewer_id": "company-context-reviewer",
+      "runtime_specialization": "IBK의 중소기업 금융 역할과 전자금융 개발·관리·유지보수 책임이 각 지원동기의 선택 이유를 실제로 바꾸는지 검토한다.",
+      "source_ids": [
+        "source:ibk-duty",
+        "source:ibk-research",
+        "source:ibk-posting"
+      ],
+      "review_scope": "회사·직무 배경이 일반 찬사가 아니라 지원자 경험과 연결된 구체 책임으로 쓰였는지 전 후보를 검토했다.",
+      "status": "pass",
+      "limitation": "공식 회사 자료는 직무 사실을 뒷받침하지만 지원자의 개인 동기나 프로젝트 운영 성과를 증명하지 않는다."
+    },
+    {
+      "reviewer_id": "domain-responsibility-reviewer",
+      "runtime_specialization": "전자금융의 거래 상태·권한·변경 가능성이 고객과 중소기업 업무에 미치는 책임을 검토한다.",
+      "source_ids": [
+        "source:ibk-duty",
+        "source:repo-msa",
+        "source:repo-payvue-core"
+      ],
+      "review_scope": "정확성·일관성·권한 경계가 구현 관찰에서 도출되고 회사 정책이나 실서비스 성과로 과장되지 않았는지 보았다.",
+      "status": "pass",
+      "limitation": "프로젝트 저장소는 구조를 보여 주지만 실제 트래픽, 장애 예방, 성능 향상이나 IBK 내부 정책을 증명하지 않는다."
+    },
+    {
+      "reviewer_id": "applicant-evidence-reviewer",
+      "runtime_specialization": "지원자의 백엔드 지향, 조급함 관리, 약 700문제 학습, 보안 관심과 공개 구현의 귀속 경계를 검토한다.",
+      "source_ids": [
+        "source:github-profile",
+        "source:blog-algorithm",
+        "source:blog-security",
+        "source:repo-msa",
+        "source:repo-static-analysis"
+      ],
+      "review_scope": "20개 답안의 개인 가치·행동·결과가 확인된 진술 또는 관찰 가능한 구현을 넘지 않는지 확인했다.",
+      "status": "pass",
+      "limitation": "팀 규모와 정확한 개인 담당 범위는 미확인이라 협업·리더십·단독 소유권 주장을 허용하지 않는다."
+    },
+    {
+      "reviewer_id": "question-expression-reviewer",
+      "runtime_specialization": "2025 공개 문항 네 개의 독자 질문, 필수 수사 이동, 후보별 통제 주장과 결말의 차별성을 검토한다.",
+      "source_ids": [
+        "source:question-page",
+        "source:ibk-posting"
+      ],
+      "review_scope": "5개 후보×4개 문항의 가족 적합성, 선택적 근거, 문장 응집력, 내부 워크플로 언어 부재와 후보 패턴 분리를 확인했다.",
+      "status": "pass",
+      "limitation": "2026 공식 지원서의 실제 문항과 글자 수가 같다는 보장은 없으므로 제출 전 재확인이 필요하다."
+    },
+    {
+      "reviewer_id": "interview-defensibility-reviewer",
+      "runtime_specialization": "책임 경계·학습 목표 조정·정적 분석 구현 주장을 면접에서 구체 사례로 설명할 수 있는지 검토한다.",
+      "source_ids": [
+        "source:repo-msa",
+        "source:repo-static-analysis",
+        "source:blog-algorithm"
+      ],
+      "review_scope": "각 답안의 핵심 주장에 코드·테스트·회고로 답할 후속 질문과 최소 확인 사실이 연결되는지 점검했다.",
+      "status": "pass",
+      "limitation": "실제 담당 범위와 구현 선택의 세부 근거는 지원자가 제출 전 직접 확인하고 말로 준비해야 한다."
+    }
+  ],
+  "swarm_review": {
+    "protocol_ref": "vocabularies/job-application-expert-review-swarm-policy.json",
+    "execution_mode": "supervised_multi_agent",
+    "logical_reviewer_ids": [
+      "company-context-reviewer",
+      "domain-responsibility-reviewer",
+      "applicant-evidence-reviewer",
+      "question-expression-reviewer",
+      "interview-defensibility-reviewer"
+    ],
+    "proposal_rounds": 1,
+    "challenge_rounds": 1,
+    "proposals": [
+      {
+        "reviewer_id": "company-context-reviewer",
+        "scope": "다섯 후보의 지원동기와 직무 연결",
+        "finding": "IBK의 중소기업 금융 및 전자금융 운영 책임이 모든 지원동기의 선택 이유를 바꾸며 일반 은행 찬사로 대체되지 않는다.",
+        "evidence_refs": [
+          "analysis:company-purpose",
+          "analysis:electronic-finance-duty"
+        ],
+        "proposed_disposition": "preserve"
+      },
+      {
+        "reviewer_id": "domain-responsibility-reviewer",
+        "scope": "금융 상태·권한·변경 가능성의 책임 경계",
+        "finding": "정확성과 운영 가능성은 지원자의 서비스 경계 구현과 연결되지만 실제 장애 예방이나 운영 성과로 확대되지 않았다.",
+        "evidence_refs": [
+          "analysis:financial-state-stakes",
+          "claim:msa-service-boundaries"
+        ],
+        "proposed_disposition": "preserve"
+      },
+      {
+        "reviewer_id": "applicant-evidence-reviewer",
+        "scope": "20개 답안의 개인 경험·가치·성과 귀속",
+        "finding": "약 700문제 학습, 단계 목표 조정, 백엔드 및 정적 분석 구현만 사용했고 미확인 팀 역할과 규모는 좁혔다.",
+        "evidence_refs": [
+          "applicant:algorithm-practice",
+          "applicant:incremental-goals",
+          "claim:msa-service-boundaries",
+          "claim:static-analysis-tool"
+        ],
+        "proposed_disposition": "preserve"
+      },
+      {
+        "reviewer_id": "question-expression-reviewer",
+        "scope": "네 문항 가족과 다섯 후보의 표현 차별성",
+        "finding": "문항 역할과 후보 전략이 통제 주장·도입·이동 순서·결말에서 구분되고 답안에 생성·채점·검증 워크플로 언어가 섞이지 않았다.",
+        "evidence_refs": [
+          "question:motivation",
+          "question:strength-weakness",
+          "question:preparation",
+          "question:alternative-career"
+        ],
+        "proposed_disposition": "preserve"
+      },
+      {
+        "reviewer_id": "interview-defensibility-reviewer",
+        "scope": "핵심 주장과 면접 후속 질문",
+        "finding": "각 후보는 금융 흐름, 목표 조정, 책임 경계, 정적 분석 단계에 대한 구체 질문으로 방어 가능하며 미확인 범위는 보고서의 보완 자료로 분리됐다.",
+        "evidence_refs": [
+          "unknown:team-role",
+          "unknown:production-scale",
+          "unknown:current-question-currency"
+        ],
+        "proposed_disposition": "preserve"
+      }
+    ],
+    "challenges": [
+      {
+        "challenger_id": "company-context-reviewer",
+        "target_reviewer_id": "applicant-evidence-reviewer",
+        "issue": "중소기업 금융을 지속시키겠다는 표현이 과거 운영 성과처럼 읽힐 위험이 있는지 반증을 요구했다.",
+        "evidence_refs": [
+          "analysis:company-purpose",
+          "unknown:production-scale"
+        ],
+        "outcome": "resolved"
+      },
+      {
+        "challenger_id": "domain-responsibility-reviewer",
+        "target_reviewer_id": "company-context-reviewer",
+        "issue": "안정성과 유지보수가 어느 은행에도 붙는 일반 배경으로 남지 않고 IBK 전자금융 책임에 결속되는지 점검했다.",
+        "evidence_refs": [
+          "analysis:electronic-finance-duty",
+          "analysis:operability-stakes"
+        ],
+        "outcome": "resolved"
+      },
+      {
+        "challenger_id": "applicant-evidence-reviewer",
+        "target_reviewer_id": "question-expression-reviewer",
+        "issue": "사용자결과형의 고객 관점이 확인되지 않은 과거 가치나 실사용자 성과를 귀속시키지 않는지 확인했다.",
+        "evidence_refs": [
+          "claim:msa-fintech-flow",
+          "unknown:production-scale"
+        ],
+        "outcome": "resolved"
+      },
+      {
+        "challenger_id": "question-expression-reviewer",
+        "target_reviewer_id": "interview-defensibility-reviewer",
+        "issue": "2025 문항·미확인 역할에 대한 한계 설명이 제출 답안 안의 생성자 면책 문장으로 유입되지 않았는지 검토했다.",
+        "evidence_refs": [
+          "unknown:team-role",
+          "unknown:current-question-currency",
+          "question:preparation"
+        ],
+        "outcome": "resolved"
+      },
+      {
+        "challenger_id": "interview-defensibility-reviewer",
+        "target_reviewer_id": "domain-responsibility-reviewer",
+        "issue": "정적 분석 경험이 취약점 발견·성능·연구 실적으로 확장되지 않고 실제 구현 단계까지만 면접 방어되는지 따졌다.",
+        "evidence_refs": [
+          "claim:static-analysis-tool",
+          "question:alternative-career"
+        ],
+        "outcome": "resolved"
+      }
+    ],
+    "reconciliations": [
+      {
+        "issue": "IBK 고유 맥락과 일반적인 안정성 언어의 경계",
+        "evidence_precedence": "현재 공식 회사·직무 자료가 회사 사실을 결정하고 지원자 공개 구현은 연결 가능한 준비 범위만 결정한다.",
+        "decision": "중소기업 금융과 전자금융 개발·관리·유지보수 책임을 유지하되 과거 운영 성과는 주장하지 않는다.",
+        "affected_question_ids": [
+          "question:motivation",
+          "question:preparation"
+        ]
+      },
+      {
+        "issue": "사용자 결과 표현과 미확인 실서비스 성과의 경계",
+        "evidence_precedence": "프로젝트 관찰은 구현된 흐름을 결정하고 운영 수치·사용자 효과는 지원자 확인이나 운영 증거가 없으면 생략한다.",
+        "decision": "사용자 결과는 입행 후 지향 책임으로만 유지하고 이미 달성한 효과로 읽히는 문장은 두지 않는다.",
+        "affected_question_ids": [
+          "question:motivation",
+          "question:preparation",
+          "question:alternative-career"
+        ]
+      },
+      {
+        "issue": "2025 문항을 사용한 2026 연습본의 공개 언어",
+        "evidence_precedence": "문항 출처와 현재 공고 상태가 사용 범위를 결정하며 점수나 후보 품질이 최신 문항 부재를 상쇄하지 않는다.",
+        "decision": "20개 답안 자체에는 내부 면책을 넣지 않고 보고서 읽는 법·보완 자료·limitations에 연습본과 마감 한계를 명시한다.",
+        "affected_question_ids": [
+          "question:motivation",
+          "question:strength-weakness",
+          "question:preparation",
+          "question:alternative-career"
+        ]
+      }
+    ],
+    "unresolved_material_dissent": [],
+    "final_validator_status": "pass",
+    "status": "pass"
+  },
+  "question_reviews": [
+    {
+      "candidate_id": "candidate:operations-accountability",
+      "question_id": "question:motivation",
+      "family_id": "motivation-and-company-fit",
+      "observed_move_ids": [
+        "direct-answer",
+        "company-role-connection",
+        "choice-or-action",
+        "future-direction"
+      ],
+      "controlling_idea": "중소기업의 금융 활동을 받치는 전자금융 시스템을 오래 관리할 수 있게 만드는 책임이 유지보수 가능한 백엔드에 대한 나의 관심과 맞닿아 있어 IBK를 선택했다.",
+      "reader_takeaway": "지원자의 구조 설계 지향은 신규 기능보다 운영과 변경까지 맡는 IBK IT의 책임으로 이어진다.",
+      "realization": {
+        "opening_mode": "direct-claim",
+        "move_sequence": [
+          "direct-answer",
+          "company-role-connection",
+          "choice-or-action",
+          "future-direction"
+        ],
+        "evidence_emphasis": "claim:msa-fintech-flow에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "개발 완료가 아니라 변경과 유지보수까지 책임지는 직무 선택",
+        "closing_mode": "responsibility-boundary",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "중소기업의 금융 활동을 받치는 전자금융 시스템을 오래 관리할 수 있게 만드는 책임이 유지보수 가능한 백엔드에 대한 나의 관심과 맞닿아 있어 IBK를 선택했다.",
+        "primary_evidence_refs": [
+          "claim:msa-fintech-flow"
+        ],
+        "evidence_interpretation": "핀테크 책임 경계 구현은 유지보수 가능한 구조에 대한 관심이 선언이 아니라 실제 선택에서 형성됐음을 보여 준다.",
+        "company_or_domain_consequence": "중소기업과 고객이 의존하는 금융 흐름을 지속해서 사용할 수 있게 하는 기반 책임",
+        "excluded_material": [
+          "은행 규모나 복지에 대한 일반적 선호",
+          "실제 트래픽·장애 감소 주장",
+          "프로젝트 팀 역할"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "claim:msa-fintech-flow"
+          ],
+          "assessment": "운영책임형 답안은 claim:msa-fintech-flow의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "IBK의 중소기업 금융과 전자금융 운영 책임을 선택 이유의 중심에 두고 일반적인 금융사 찬사로 넓히지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:motivation",
+            "implication:motivation"
+          ],
+          "assessment": "문항의 독자 질문을 지원자의 구조 설계 지향은 신규 기능보다 운영과 변경까지 맡는 IBK IT의 책임으로 이어진다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        },
+        {
+          "perspective": "company_context",
+          "evidence_refs": [
+            "analysis:company-purpose",
+            "analysis:electronic-finance-duty"
+          ],
+          "assessment": "중소기업과 고객이 의존하는 금융 흐름을 지속해서 사용할 수 있게 하는 기반 책임라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "IBK의 중소기업 금융과 전자금융 운영 책임을 선택 이유의 중심에 두고 일반적인 금융사 찬사로 넓히지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:operations-accountability",
+      "question_id": "question:strength-weakness",
+      "family_id": "weakness-and-self-management",
+      "observed_move_ids": [
+        "direct-answer",
+        "relevant-context",
+        "result-or-boundary",
+        "self-management",
+        "learning-or-change"
+      ],
+      "controlling_idea": "원인을 이해할 때까지 파고드는 끈기는 강점이지만 빨리 역량을 갖추려는 조급함이 범위를 흔들 수 있어 단계 목표와 상태 점검으로 통제한다.",
+      "reader_takeaway": "끈기와 조급함을 같은 행동의 양면으로 이해하고 반복 가능한 목표 관리 습관을 쓰는 지원자다.",
+      "realization": {
+        "opening_mode": "direct-claim",
+        "move_sequence": [
+          "direct-answer",
+          "relevant-context",
+          "result-or-boundary",
+          "self-management",
+          "learning-or-change"
+        ],
+        "evidence_emphasis": "applicant:algorithm-practice에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "완벽한 극복보다 조급함이 만드는 범위 이탈을 계속 관리하는 태도",
+        "closing_mode": "responsibility-boundary",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "원인을 이해할 때까지 파고드는 끈기는 강점이지만 빨리 역량을 갖추려는 조급함이 범위를 흔들 수 있어 단계 목표와 상태 점검으로 통제한다.",
+        "primary_evidence_refs": [
+          "applicant:algorithm-practice"
+        ],
+        "evidence_interpretation": "약 700문제 학습과 단계 목표 조정은 끈기와 조급함이 같은 경험에서 드러나고 관리 습관으로 이어졌음을 뒷받침한다.",
+        "company_or_domain_consequence": "정확성과 기한을 함께 요구하는 금융 IT에서 성급한 범위 확대를 줄이는 자기관리",
+        "excluded_material": [
+          "약점을 강점으로 포장하는 표현",
+          "IBK 선택 이유 반복",
+          "완전 극복 주장"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant:algorithm-practice"
+          ],
+          "assessment": "운영책임형 답안은 applicant:algorithm-practice의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "약점을 극복했다고 포장하지 말고 현재도 범위와 완료 기준을 나누어 관리한다는 경계를 유지한다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:strength-weakness",
+            "implication:strength-weakness"
+          ],
+          "assessment": "문항의 독자 질문을 끈기와 조급함을 같은 행동의 양면으로 이해하고 반복 가능한 목표 관리 습관을 쓰는 지원자다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:operability-stakes"
+          ],
+          "assessment": "정확성과 기한을 함께 요구하는 금융 IT에서 성급한 범위 확대를 줄이는 자기관리라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "약점을 극복했다고 포장하지 말고 현재도 범위와 완료 기준을 나누어 관리한다는 경계를 유지한다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:operations-accountability",
+      "question_id": "question:preparation",
+      "family_id": "capability-and-contribution",
+      "observed_move_ids": [
+        "direct-answer",
+        "choice-or-action",
+        "reason-or-tradeoff",
+        "result-or-boundary",
+        "company-role-connection"
+      ],
+      "controlling_idea": "금융 서비스의 인증·결제·게이트웨이·이벤트 처리 책임을 경계별로 나누어 구현하며 변경과 운영을 고려하는 IT 기본기를 준비했다.",
+      "reader_takeaway": "기술을 나열한 것이 아니라 금융 흐름을 책임 단위로 구조화하고 알고리즘 학습으로 구현 기초를 보완했다.",
+      "realization": {
+        "opening_mode": "direct-claim",
+        "move_sequence": [
+          "direct-answer",
+          "choice-or-action",
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "company-role-connection"
+        ],
+        "evidence_emphasis": "claim:msa-service-boundaries에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "기능 수보다 책임과 변경 범위를 드러내는 구조를 택한 이유",
+        "closing_mode": "responsibility-boundary",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "금융 서비스의 인증·결제·게이트웨이·이벤트 처리 책임을 경계별로 나누어 구현하며 변경과 운영을 고려하는 IT 기본기를 준비했다.",
+        "primary_evidence_refs": [
+          "claim:msa-service-boundaries"
+        ],
+        "evidence_interpretation": "서비스 책임 경계와 상태·권한 흐름을 구현한 사실은 기술 목록보다 금융 IT 준비의 행동과 판단을 직접 보여 준다.",
+        "company_or_domain_consequence": "전자금융 업무가 바뀔 때 영향 범위를 설명하고 관리할 수 있는 구조적 준비",
+        "excluded_material": [
+          "실제 운영 규모",
+          "팀 성과나 리더 역할",
+          "보안 학습을 두 번째 보조축으로 추가하는 구성"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "claim:msa-service-boundaries"
+          ],
+          "assessment": "운영책임형 답안은 claim:msa-service-boundaries의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "핵심 금융 흐름 하나를 유지하고 실제 운영 규모나 성능 개선처럼 확인되지 않은 결과를 추가하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:preparation",
+            "implication:preparation"
+          ],
+          "assessment": "문항의 독자 질문을 기술을 나열한 것이 아니라 금융 흐름을 책임 단위로 구조화하고 알고리즘 학습으로 구현 기초를 보완했다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:financial-state-stakes",
+            "analysis:it-capabilities"
+          ],
+          "assessment": "전자금융 업무가 바뀔 때 영향 범위를 설명하고 관리할 수 있는 구조적 준비라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "핵심 금융 흐름 하나를 유지하고 실제 운영 규모나 성능 개선처럼 확인되지 않은 결과를 추가하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:operations-accountability",
+      "question_id": "question:alternative-career",
+      "family_id": "growth-and-career-direction",
+      "observed_move_ids": [
+        "direct-answer",
+        "future-direction",
+        "choice-or-action",
+        "learning-or-change",
+        "company-role-connection"
+      ],
+      "controlling_idea": "은행원이 아닌 길을 택한다면 시스템 보안 연구자가 되어 프로그램의 실행 구조를 분석하고 위험이 생기는 원리를 밝히고 싶다.",
+      "reader_takeaway": "정적 프로그램 분석을 직접 구현해 본 탐구 방식이 시스템 보안 연구자라는 선택과 구체적으로 연결된다.",
+      "realization": {
+        "opening_mode": "direct-claim",
+        "move_sequence": [
+          "direct-answer",
+          "future-direction",
+          "choice-or-action",
+          "learning-or-change",
+          "company-role-connection"
+        ],
+        "evidence_emphasis": "applicant:security-career-interest에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "공격 기법의 흥미보다 프로그램 구조를 끝까지 추적하는 연구 적합성",
+        "closing_mode": "responsibility-boundary",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "은행원이 아닌 길을 택한다면 시스템 보안 연구자가 되어 프로그램의 실행 구조를 분석하고 위험이 생기는 원리를 밝히고 싶다.",
+        "primary_evidence_refs": [
+          "applicant:security-career-interest"
+        ],
+        "evidence_interpretation": "정적 분석 도구의 파싱·명령 해석·기본 블록·제어 흐름 복원 경험은 시스템 보안 연구자라는 대안 직업을 구현 근거로 방어하게 한다.",
+        "company_or_domain_consequence": "은행 IT와 보안 연구가 안전한 소프트웨어를 이해하고 운영한다는 책임에서 만난다.",
+        "excluded_material": [
+          "보안 실무 경력",
+          "취약점 발견 성과",
+          "논문 또는 연구 성과"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant:security-career-interest"
+          ],
+          "assessment": "운영책임형 답안은 applicant:security-career-interest의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "시스템 보안 연구자를 직답하되 취약점 발견이나 연구 실적을 암시하지 않고 구현 범위와 탐구 방식을 유지한다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:alternative-career",
+            "implication:alternative-career"
+          ],
+          "assessment": "문항의 독자 질문을 정적 프로그램 분석을 직접 구현해 본 탐구 방식이 시스템 보안 연구자라는 선택과 구체적으로 연결된다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:financial-state-stakes"
+          ],
+          "assessment": "은행 IT와 보안 연구가 안전한 소프트웨어를 이해하고 운영한다는 책임에서 만난다.라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "시스템 보안 연구자를 직답하되 취약점 발견이나 연구 실적을 암시하지 않고 구현 범위와 탐구 방식을 유지한다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:judgment-tradeoff",
+      "question_id": "question:motivation",
+      "family_id": "motivation-and-company-fit",
+      "observed_move_ids": [
+        "direct-answer",
+        "reason-or-tradeoff",
+        "company-role-connection",
+        "choice-or-action",
+        "future-direction"
+      ],
+      "controlling_idea": "빠른 기능 추가와 장기 유지보수 사이의 균형이 중요한 전자금융 IT에서 구조적 판단을 책임지고 싶어 중소기업 금융을 지탱하는 IBK를 선택했다.",
+      "reader_takeaway": "IBK 지원은 금융 기능 개발 자체보다 변경 속도와 운영 안정성을 함께 판단하는 책임을 택한 결과다.",
+      "realization": {
+        "opening_mode": "contrast",
+        "move_sequence": [
+          "direct-answer",
+          "reason-or-tradeoff",
+          "company-role-connection",
+          "choice-or-action",
+          "future-direction"
+        ],
+        "evidence_emphasis": "claim:msa-service-boundaries에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "당장의 구현 편의와 장기 변경 가능성 사이에서 운영 가능한 선택을 하는 능력",
+        "closing_mode": "role-contribution",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "빠른 기능 추가와 장기 유지보수 사이의 균형이 중요한 전자금융 IT에서 구조적 판단을 책임지고 싶어 중소기업 금융을 지탱하는 IBK를 선택했다.",
+        "primary_evidence_refs": [
+          "claim:msa-service-boundaries"
+        ],
+        "evidence_interpretation": "핀테크 책임 경계 구현은 유지보수 가능한 구조에 대한 관심이 선언이 아니라 실제 선택에서 형성됐음을 보여 준다.",
+        "company_or_domain_consequence": "정책과 업무 변화가 전자금융 시스템에 반영될 때 단기 속도와 지속 가능성을 함께 지키는 일",
+        "excluded_material": [
+          "어느 은행에도 적용되는 안정성 찬사",
+          "프로덕션 운영 성과",
+          "조직 단위 의사결정 역할"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "claim:msa-service-boundaries"
+          ],
+          "assessment": "판단·트레이드오프형 답안은 claim:msa-service-boundaries의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "IBK의 중소기업 금융과 전자금융 운영 책임을 선택 이유의 중심에 두고 일반적인 금융사 찬사로 넓히지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:motivation",
+            "implication:motivation"
+          ],
+          "assessment": "문항의 독자 질문을 IBK 지원은 금융 기능 개발 자체보다 변경 속도와 운영 안정성을 함께 판단하는 책임을 택한 결과다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        },
+        {
+          "perspective": "company_context",
+          "evidence_refs": [
+            "analysis:company-purpose",
+            "analysis:electronic-finance-duty"
+          ],
+          "assessment": "정책과 업무 변화가 전자금융 시스템에 반영될 때 단기 속도와 지속 가능성을 함께 지키는 일라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "IBK의 중소기업 금융과 전자금융 운영 책임을 선택 이유의 중심에 두고 일반적인 금융사 찬사로 넓히지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:judgment-tradeoff",
+      "question_id": "question:strength-weakness",
+      "family_id": "weakness-and-self-management",
+      "observed_move_ids": [
+        "direct-answer",
+        "result-or-boundary",
+        "reason-or-tradeoff",
+        "self-management",
+        "learning-or-change"
+      ],
+      "controlling_idea": "끈기는 문제를 끝까지 이해하게 하지만 조급함과 결합하면 한 번에 너무 많은 목표를 잡게 하므로 완료 기준이 작은 단계 목표를 선택한다.",
+      "reader_takeaway": "강점의 효용과 비용을 모두 인식하고 범위·완료 기준을 조정해 약점을 관리한다.",
+      "realization": {
+        "opening_mode": "contrast",
+        "move_sequence": [
+          "direct-answer",
+          "result-or-boundary",
+          "reason-or-tradeoff",
+          "self-management",
+          "learning-or-change"
+        ],
+        "evidence_emphasis": "applicant:algorithm-practice에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "깊이와 속도 중 하나를 버리지 않고 목표 크기를 조정하는 선택",
+        "closing_mode": "role-contribution",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "끈기는 문제를 끝까지 이해하게 하지만 조급함과 결합하면 한 번에 너무 많은 목표를 잡게 하므로 완료 기준이 작은 단계 목표를 선택한다.",
+        "primary_evidence_refs": [
+          "applicant:algorithm-practice"
+        ],
+        "evidence_interpretation": "약 700문제 학습과 단계 목표 조정은 끈기와 조급함이 같은 경험에서 드러나고 관리 습관으로 이어졌음을 뒷받침한다.",
+        "company_or_domain_consequence": "금융 IT 과제에서 깊이 있는 검토와 정해진 시간의 진척을 함께 확보하는 방식",
+        "excluded_material": [
+          "끈기를 무조건적 장점으로 단정",
+          "약점 소멸 주장",
+          "알고리즘 풀이량을 성과 과시로 전개"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant:algorithm-practice"
+          ],
+          "assessment": "판단·트레이드오프형 답안은 applicant:algorithm-practice의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "약점을 극복했다고 포장하지 말고 현재도 범위와 완료 기준을 나누어 관리한다는 경계를 유지한다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:strength-weakness",
+            "implication:strength-weakness"
+          ],
+          "assessment": "문항의 독자 질문을 강점의 효용과 비용을 모두 인식하고 범위·완료 기준을 조정해 약점을 관리한다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:operability-stakes"
+          ],
+          "assessment": "금융 IT 과제에서 깊이 있는 검토와 정해진 시간의 진척을 함께 확보하는 방식라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "약점을 극복했다고 포장하지 말고 현재도 범위와 완료 기준을 나누어 관리한다는 경계를 유지한다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:judgment-tradeoff",
+      "question_id": "question:preparation",
+      "family_id": "capability-and-contribution",
+      "observed_move_ids": [
+        "direct-answer",
+        "reason-or-tradeoff",
+        "choice-or-action",
+        "result-or-boundary",
+        "company-role-connection"
+      ],
+      "controlling_idea": "서비스 분리는 복잡성을 없애는 해법이 아니라 분리 비용과 변경 영향 사이의 선택이라고 보고 금융 기능의 책임 경계를 직접 설계하며 준비했다.",
+      "reader_takeaway": "핀테크 서비스 경계를 유행 기술이 아니라 책임과 변경 비용을 조절하는 판단 도구로 다룬 지원자다.",
+      "realization": {
+        "opening_mode": "contrast",
+        "move_sequence": [
+          "direct-answer",
+          "reason-or-tradeoff",
+          "choice-or-action",
+          "result-or-boundary",
+          "company-role-connection"
+        ],
+        "evidence_emphasis": "claim:msa-service-boundaries에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "책임 격리가 주는 명료함과 경계 간 연결 복잡성 사이의 균형",
+        "closing_mode": "role-contribution",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "서비스 분리는 복잡성을 없애는 해법이 아니라 분리 비용과 변경 영향 사이의 선택이라고 보고 금융 기능의 책임 경계를 직접 설계하며 준비했다.",
+        "primary_evidence_refs": [
+          "claim:msa-service-boundaries"
+        ],
+        "evidence_interpretation": "서비스 책임 경계와 상태·권한 흐름을 구현한 사실은 기술 목록보다 금융 IT 준비의 행동과 판단을 직접 보여 준다.",
+        "company_or_domain_consequence": "상태·권한·거래 책임을 구분하면서도 연결 지점을 놓치지 않는 전자금융 설계 관점",
+        "excluded_material": [
+          "MSA 자체의 우월성 주장",
+          "운영 장애 개선 주장",
+          "알고리즘을 추가 보조 근거로 병렬 제시"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "claim:msa-service-boundaries"
+          ],
+          "assessment": "판단·트레이드오프형 답안은 claim:msa-service-boundaries의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "핵심 금융 흐름 하나를 유지하고 실제 운영 규모나 성능 개선처럼 확인되지 않은 결과를 추가하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:preparation",
+            "implication:preparation"
+          ],
+          "assessment": "문항의 독자 질문을 핀테크 서비스 경계를 유행 기술이 아니라 책임과 변경 비용을 조절하는 판단 도구로 다룬 지원자다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:financial-state-stakes",
+            "analysis:it-capabilities"
+          ],
+          "assessment": "상태·권한·거래 책임을 구분하면서도 연결 지점을 놓치지 않는 전자금융 설계 관점라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "핵심 금융 흐름 하나를 유지하고 실제 운영 규모나 성능 개선처럼 확인되지 않은 결과를 추가하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:judgment-tradeoff",
+      "question_id": "question:alternative-career",
+      "family_id": "growth-and-career-direction",
+      "observed_move_ids": [
+        "direct-answer",
+        "future-direction",
+        "reason-or-tradeoff",
+        "choice-or-action",
+        "learning-or-change",
+        "company-role-connection"
+      ],
+      "controlling_idea": "다른 직업을 택한다면 분석의 정밀도와 비용 사이에서 유용한 판단을 만드는 시스템 보안 연구자가 되고 싶다.",
+      "reader_takeaway": "정적 프로그램 분석 구현 과정에서 단계별 분석의 목적과 한계를 다룬 경험이 연구 직무의 판단 방식과 닿는다.",
+      "realization": {
+        "opening_mode": "contrast",
+        "move_sequence": [
+          "direct-answer",
+          "future-direction",
+          "reason-or-tradeoff",
+          "choice-or-action",
+          "learning-or-change",
+          "company-role-connection"
+        ],
+        "evidence_emphasis": "applicant:security-career-interest에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "무조건 많은 경로를 보는 것이 아니라 목적에 맞는 분석 경계를 선택하는 연구 태도",
+        "closing_mode": "role-contribution",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "다른 직업을 택한다면 분석의 정밀도와 비용 사이에서 유용한 판단을 만드는 시스템 보안 연구자가 되고 싶다.",
+        "primary_evidence_refs": [
+          "applicant:security-career-interest"
+        ],
+        "evidence_interpretation": "정적 분석 도구의 파싱·명령 해석·기본 블록·제어 흐름 복원 경험은 시스템 보안 연구자라는 대안 직업을 구현 근거로 방어하게 한다.",
+        "company_or_domain_consequence": "정확성과 비용을 함께 판단하는 보안 관점은 안전한 금융 시스템의 설계·운영 이해에도 이어진다.",
+        "excluded_material": [
+          "탐지율이나 성능 수치",
+          "실무 보안 대응 경험",
+          "연구 성과 단정"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant:security-career-interest"
+          ],
+          "assessment": "판단·트레이드오프형 답안은 applicant:security-career-interest의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "시스템 보안 연구자를 직답하되 취약점 발견이나 연구 실적을 암시하지 않고 구현 범위와 탐구 방식을 유지한다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:alternative-career",
+            "implication:alternative-career"
+          ],
+          "assessment": "문항의 독자 질문을 정적 프로그램 분석 구현 과정에서 단계별 분석의 목적과 한계를 다룬 경험이 연구 직무의 판단 방식과 닿는다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:financial-state-stakes"
+          ],
+          "assessment": "정확성과 비용을 함께 판단하는 보안 관점은 안전한 금융 시스템의 설계·운영 이해에도 이어진다.라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "시스템 보안 연구자를 직답하되 취약점 발견이나 연구 실적을 암시하지 않고 구현 범위와 탐구 방식을 유지한다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:change-narrative",
+      "question_id": "question:motivation",
+      "family_id": "motivation-and-company-fit",
+      "observed_move_ids": [
+        "relevant-context",
+        "choice-or-action",
+        "learning-or-change",
+        "company-role-connection",
+        "direct-answer",
+        "future-direction"
+      ],
+      "controlling_idea": "기능을 완성하는 데서 만족하던 관심이 변경 후에도 관리 가능한 금융 백엔드를 만드는 책임으로 넓어졌고 그 방향을 중소기업 금융과 전자금융 운영을 맡는 IBK에서 이어가고 싶다.",
+      "reader_takeaway": "지원 동기는 프로젝트를 통해 개발의 기준이 구현에서 운영 가능성으로 바뀐 과정에서 나왔다.",
+      "realization": {
+        "opening_mode": "scene",
+        "move_sequence": [
+          "relevant-context",
+          "choice-or-action",
+          "learning-or-change",
+          "company-role-connection",
+          "direct-answer",
+          "future-direction"
+        ],
+        "evidence_emphasis": "claim:msa-fintech-flow에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "완성된 기능보다 이후의 변경을 견디는 구조로 책임 범위를 확장한 변화",
+        "closing_mode": "earned-learning",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "기능을 완성하는 데서 만족하던 관심이 변경 후에도 관리 가능한 금융 백엔드를 만드는 책임으로 넓어졌고 그 방향을 중소기업 금융과 전자금융 운영을 맡는 IBK에서 이어가고 싶다.",
+        "primary_evidence_refs": [
+          "claim:msa-fintech-flow"
+        ],
+        "evidence_interpretation": "핀테크 책임 경계 구현은 유지보수 가능한 구조에 대한 관심이 선언이 아니라 실제 선택에서 형성됐음을 보여 준다.",
+        "company_or_domain_consequence": "중소기업 금융을 지탱하는 전자금융 시스템의 장기 변경과 유지보수 책임",
+        "excluded_material": [
+          "막연한 성장 서사",
+          "실서비스 운영 경험 주장",
+          "지원 마감 상태"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "claim:msa-fintech-flow"
+          ],
+          "assessment": "변화서사형 답안은 claim:msa-fintech-flow의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "IBK의 중소기업 금융과 전자금융 운영 책임을 선택 이유의 중심에 두고 일반적인 금융사 찬사로 넓히지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:motivation",
+            "implication:motivation"
+          ],
+          "assessment": "문항의 독자 질문을 지원 동기는 프로젝트를 통해 개발의 기준이 구현에서 운영 가능성으로 바뀐 과정에서 나왔다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        },
+        {
+          "perspective": "company_context",
+          "evidence_refs": [
+            "analysis:company-purpose",
+            "analysis:electronic-finance-duty"
+          ],
+          "assessment": "중소기업 금융을 지탱하는 전자금융 시스템의 장기 변경과 유지보수 책임라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "IBK의 중소기업 금융과 전자금융 운영 책임을 선택 이유의 중심에 두고 일반적인 금융사 찬사로 넓히지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:change-narrative",
+      "question_id": "question:strength-weakness",
+      "family_id": "weakness-and-self-management",
+      "observed_move_ids": [
+        "relevant-context",
+        "self-management",
+        "result-or-boundary",
+        "learning-or-change",
+        "direct-answer"
+      ],
+      "controlling_idea": "조급하게 큰 목표를 세우던 방식에서 작은 목표를 끝까지 달성하는 방식으로 바꾸면서 끈기를 지속 가능한 강점으로 만들고 있다.",
+      "reader_takeaway": "약점을 숨기지 않고 목표 설정 방식을 바꿔 끈기가 중도 포기로 흐르지 않게 관리한 변화가 보인다.",
+      "realization": {
+        "opening_mode": "scene",
+        "move_sequence": [
+          "relevant-context",
+          "self-management",
+          "result-or-boundary",
+          "learning-or-change",
+          "direct-answer"
+        ],
+        "evidence_emphasis": "applicant:algorithm-practice에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "의지의 크기가 아니라 달성 가능한 목표를 갱신하는 방식의 변화",
+        "closing_mode": "earned-learning",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "조급하게 큰 목표를 세우던 방식에서 작은 목표를 끝까지 달성하는 방식으로 바꾸면서 끈기를 지속 가능한 강점으로 만들고 있다.",
+        "primary_evidence_refs": [
+          "applicant:algorithm-practice"
+        ],
+        "evidence_interpretation": "약 700문제 학습과 단계 목표 조정은 끈기와 조급함이 같은 경험에서 드러나고 관리 습관으로 이어졌음을 뒷받침한다.",
+        "company_or_domain_consequence": "장기 학습과 정확한 수행이 필요한 IT 업무에서 진척을 끊기지 않게 하는 자기관리",
+        "excluded_material": [
+          "완벽한 성격 개선",
+          "금융 프로젝트 이야기로의 이탈",
+          "채용 성공을 목표로 한 표현"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant:algorithm-practice"
+          ],
+          "assessment": "변화서사형 답안은 applicant:algorithm-practice의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "약점을 극복했다고 포장하지 말고 현재도 범위와 완료 기준을 나누어 관리한다는 경계를 유지한다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:strength-weakness",
+            "implication:strength-weakness"
+          ],
+          "assessment": "문항의 독자 질문을 약점을 숨기지 않고 목표 설정 방식을 바꿔 끈기가 중도 포기로 흐르지 않게 관리한 변화가 보인다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:operability-stakes"
+          ],
+          "assessment": "장기 학습과 정확한 수행이 필요한 IT 업무에서 진척을 끊기지 않게 하는 자기관리라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "약점을 극복했다고 포장하지 말고 현재도 범위와 완료 기준을 나누어 관리한다는 경계를 유지한다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:change-narrative",
+      "question_id": "question:preparation",
+      "family_id": "capability-and-contribution",
+      "observed_move_ids": [
+        "direct-answer",
+        "learning-or-change",
+        "choice-or-action",
+        "reason-or-tradeoff",
+        "result-or-boundary",
+        "company-role-connection"
+      ],
+      "controlling_idea": "기술을 많이 아는 것이 준비라고 생각하던 단계에서 금융 서비스의 책임 경계와 상태 변화가 코드에 드러나야 한다는 관점으로 준비의 기준을 바꿨다.",
+      "reader_takeaway": "핀테크 서비스 경계를 직접 구현한 경험이 기술 목록 중심 학습을 금융 책임 중심 준비로 전환시켰다.",
+      "realization": {
+        "opening_mode": "scene",
+        "move_sequence": [
+          "direct-answer",
+          "learning-or-change",
+          "choice-or-action",
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "company-role-connection"
+        ],
+        "evidence_emphasis": "claim:msa-service-boundaries에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "도구 숙련보다 금융 기능의 경계와 변경 영향을 설명할 수 있는 준비",
+        "closing_mode": "earned-learning",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "기술을 많이 아는 것이 준비라고 생각하던 단계에서 금융 서비스의 책임 경계와 상태 변화가 코드에 드러나야 한다는 관점으로 준비의 기준을 바꿨다.",
+        "primary_evidence_refs": [
+          "claim:msa-service-boundaries"
+        ],
+        "evidence_interpretation": "서비스 책임 경계와 상태·권한 흐름을 구현한 사실은 기술 목록보다 금융 IT 준비의 행동과 판단을 직접 보여 준다.",
+        "company_or_domain_consequence": "전자금융 기능을 분리된 목록이 아니라 연결된 책임과 상태로 이해하는 기초",
+        "excluded_material": [
+          "기술 스택 열거",
+          "보안 학습까지 별도 축으로 확장",
+          "상용 사용자 효과"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "claim:msa-service-boundaries"
+          ],
+          "assessment": "변화서사형 답안은 claim:msa-service-boundaries의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "핵심 금융 흐름 하나를 유지하고 실제 운영 규모나 성능 개선처럼 확인되지 않은 결과를 추가하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:preparation",
+            "implication:preparation"
+          ],
+          "assessment": "문항의 독자 질문을 핀테크 서비스 경계를 직접 구현한 경험이 기술 목록 중심 학습을 금융 책임 중심 준비로 전환시켰다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:financial-state-stakes",
+            "analysis:it-capabilities"
+          ],
+          "assessment": "전자금융 기능을 분리된 목록이 아니라 연결된 책임과 상태로 이해하는 기초라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "핵심 금융 흐름 하나를 유지하고 실제 운영 규모나 성능 개선처럼 확인되지 않은 결과를 추가하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:change-narrative",
+      "question_id": "question:alternative-career",
+      "family_id": "growth-and-career-direction",
+      "observed_move_ids": [
+        "relevant-context",
+        "choice-or-action",
+        "learning-or-change",
+        "direct-answer",
+        "future-direction",
+        "company-role-connection"
+      ],
+      "controlling_idea": "시스템 해킹에 대한 호기심을 프로그램이 실제로 어떻게 실행되는지 분석하는 학습으로 발전시키며 시스템 보안 연구자라는 대안 직업을 구체화했다.",
+      "reader_takeaway": "막연한 보안 흥미가 정적 분석 도구 구현을 거쳐 구조와 경로를 탐구하는 직업 방향으로 바뀌었다.",
+      "realization": {
+        "opening_mode": "scene",
+        "move_sequence": [
+          "relevant-context",
+          "choice-or-action",
+          "learning-or-change",
+          "direct-answer",
+          "future-direction",
+          "company-role-connection"
+        ],
+        "evidence_emphasis": "applicant:security-career-interest에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "공격 현상에서 멈추지 않고 프로그램 분석으로 원리를 이해하려 한 변화",
+        "closing_mode": "earned-learning",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "시스템 해킹에 대한 호기심을 프로그램이 실제로 어떻게 실행되는지 분석하는 학습으로 발전시키며 시스템 보안 연구자라는 대안 직업을 구체화했다.",
+        "primary_evidence_refs": [
+          "applicant:security-career-interest"
+        ],
+        "evidence_interpretation": "정적 분석 도구의 파싱·명령 해석·기본 블록·제어 흐름 복원 경험은 시스템 보안 연구자라는 대안 직업을 구현 근거로 방어하게 한다.",
+        "company_or_domain_consequence": "프로그램의 내부 동작을 이해하는 관점은 안전한 금융 소프트웨어를 만드는 현재의 관심과도 연결된다.",
+        "excluded_material": [
+          "취약점 발굴 실적",
+          "보안 업계 경력",
+          "준비 문항의 전체 기술 목록"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant:security-career-interest"
+          ],
+          "assessment": "변화서사형 답안은 applicant:security-career-interest의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "시스템 보안 연구자를 직답하되 취약점 발견이나 연구 실적을 암시하지 않고 구현 범위와 탐구 방식을 유지한다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:alternative-career",
+            "implication:alternative-career"
+          ],
+          "assessment": "문항의 독자 질문을 막연한 보안 흥미가 정적 분석 도구 구현을 거쳐 구조와 경로를 탐구하는 직업 방향으로 바뀌었다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:financial-state-stakes"
+          ],
+          "assessment": "프로그램의 내부 동작을 이해하는 관점은 안전한 금융 소프트웨어를 만드는 현재의 관심과도 연결된다.라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "시스템 보안 연구자를 직답하되 취약점 발견이나 연구 실적을 암시하지 않고 구현 범위와 탐구 방식을 유지한다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:evidence-first",
+      "question_id": "question:motivation",
+      "family_id": "motivation-and-company-fit",
+      "observed_move_ids": [
+        "choice-or-action",
+        "result-or-boundary",
+        "company-role-connection",
+        "direct-answer",
+        "future-direction"
+      ],
+      "controlling_idea": "금융 흐름을 책임 단위로 나눈 백엔드 구현과 유지보수 가능한 구조에 대한 관심을 바탕으로 중소기업의 전자금융 기반을 개발·운영하는 IBK IT를 선택했다.",
+      "reader_takeaway": "회사 찬사보다 이미 해 온 구조 설계와 IBK의 고유한 운영 책임을 근거로 지원 이유를 설명한다.",
+      "realization": {
+        "opening_mode": "evidence-first",
+        "move_sequence": [
+          "choice-or-action",
+          "result-or-boundary",
+          "company-role-connection",
+          "direct-answer",
+          "future-direction"
+        ],
+        "evidence_emphasis": "claim:msa-service-boundaries에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "지원 이유를 포부가 아니라 기존 선택과 직무 책임의 접점에서 도출",
+        "closing_mode": "repeatable-practice",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "금융 흐름을 책임 단위로 나눈 백엔드 구현과 유지보수 가능한 구조에 대한 관심을 바탕으로 중소기업의 전자금융 기반을 개발·운영하는 IBK IT를 선택했다.",
+        "primary_evidence_refs": [
+          "claim:msa-service-boundaries"
+        ],
+        "evidence_interpretation": "핀테크 책임 경계 구현은 유지보수 가능한 구조에 대한 관심이 선언이 아니라 실제 선택에서 형성됐음을 보여 준다.",
+        "company_or_domain_consequence": "중소기업 고객의 금융 활동을 받치는 시스템을 개발 이후에도 관리하는 책임",
+        "excluded_material": [
+          "근거 없는 IBK 최고 표현",
+          "운영 수치",
+          "협업 또는 리더십 성과"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "claim:msa-service-boundaries"
+          ],
+          "assessment": "근거선행형 답안은 claim:msa-service-boundaries의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "IBK의 중소기업 금융과 전자금융 운영 책임을 선택 이유의 중심에 두고 일반적인 금융사 찬사로 넓히지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:motivation",
+            "implication:motivation"
+          ],
+          "assessment": "문항의 독자 질문을 회사 찬사보다 이미 해 온 구조 설계와 IBK의 고유한 운영 책임을 근거로 지원 이유를 설명한다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        },
+        {
+          "perspective": "company_context",
+          "evidence_refs": [
+            "analysis:company-purpose",
+            "analysis:electronic-finance-duty"
+          ],
+          "assessment": "중소기업 고객의 금융 활동을 받치는 시스템을 개발 이후에도 관리하는 책임라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "IBK의 중소기업 금융과 전자금융 운영 책임을 선택 이유의 중심에 두고 일반적인 금융사 찬사로 넓히지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:evidence-first",
+      "question_id": "question:strength-weakness",
+      "family_id": "weakness-and-self-management",
+      "observed_move_ids": [
+        "relevant-context",
+        "result-or-boundary",
+        "self-management",
+        "learning-or-change",
+        "direct-answer"
+      ],
+      "controlling_idea": "조급함 때문에 큰 목표를 한꺼번에 잡았다는 회고와 목표를 단계적으로 조정한 기록은 끈기를 진척으로 바꾸는 나의 자기관리 방식을 보여 준다.",
+      "reader_takeaway": "강점과 약점을 추상적 형용사가 아니라 목표 설정을 바꾼 구체적 행동으로 입증한다.",
+      "realization": {
+        "opening_mode": "evidence-first",
+        "move_sequence": [
+          "relevant-context",
+          "result-or-boundary",
+          "self-management",
+          "learning-or-change",
+          "direct-answer"
+        ],
+        "evidence_emphasis": "applicant:algorithm-practice에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "자기평가보다 목표를 나누고 상태를 확인한 행동의 신뢰성",
+        "closing_mode": "repeatable-practice",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "조급함 때문에 큰 목표를 한꺼번에 잡았다는 회고와 목표를 단계적으로 조정한 기록은 끈기를 진척으로 바꾸는 나의 자기관리 방식을 보여 준다.",
+        "primary_evidence_refs": [
+          "applicant:algorithm-practice"
+        ],
+        "evidence_interpretation": "약 700문제 학습과 단계 목표 조정은 끈기와 조급함이 같은 경험에서 드러나고 관리 습관으로 이어졌음을 뒷받침한다.",
+        "company_or_domain_consequence": "정확한 검토와 일정한 진척을 동시에 요구하는 IT 업무에 적용 가능한 습관",
+        "excluded_material": [
+          "성격 장점의 단순 선언",
+          "약점의 미화",
+          "지원 기업 이야기로 결론 대체"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant:algorithm-practice"
+          ],
+          "assessment": "근거선행형 답안은 applicant:algorithm-practice의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "약점을 극복했다고 포장하지 말고 현재도 범위와 완료 기준을 나누어 관리한다는 경계를 유지한다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:strength-weakness",
+            "implication:strength-weakness"
+          ],
+          "assessment": "문항의 독자 질문을 강점과 약점을 추상적 형용사가 아니라 목표 설정을 바꾼 구체적 행동으로 입증한다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:operability-stakes"
+          ],
+          "assessment": "정확한 검토와 일정한 진척을 동시에 요구하는 IT 업무에 적용 가능한 습관라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "약점을 극복했다고 포장하지 말고 현재도 범위와 완료 기준을 나누어 관리한다는 경계를 유지한다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:evidence-first",
+      "question_id": "question:preparation",
+      "family_id": "capability-and-contribution",
+      "observed_move_ids": [
+        "result-or-boundary",
+        "choice-or-action",
+        "reason-or-tradeoff",
+        "company-role-connection",
+        "direct-answer"
+      ],
+      "controlling_idea": "공개된 핀테크 백엔드에서 API·응용·도메인·저장·게이트웨이·이벤트 소비 책임을 구분해 구현한 사실이 금융 IT 준비의 핵심 근거다.",
+      "reader_takeaway": "준비의 중심은 서비스 경계라는 관찰 가능한 산출물이고 보안 학습은 경계 안팎의 위험을 보는 보조 관점이다.",
+      "realization": {
+        "opening_mode": "evidence-first",
+        "move_sequence": [
+          "result-or-boundary",
+          "choice-or-action",
+          "reason-or-tradeoff",
+          "company-role-connection",
+          "direct-answer"
+        ],
+        "evidence_emphasis": "claim:msa-service-boundaries에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "기술 명칭보다 코드에 남은 책임 분리와 그 한계를 증거로 사용",
+        "closing_mode": "repeatable-practice",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "공개된 핀테크 백엔드에서 API·응용·도메인·저장·게이트웨이·이벤트 소비 책임을 구분해 구현한 사실이 금융 IT 준비의 핵심 근거다.",
+        "primary_evidence_refs": [
+          "claim:msa-service-boundaries"
+        ],
+        "evidence_interpretation": "서비스 책임 경계와 상태·권한 흐름을 구현한 사실은 기술 목록보다 금융 IT 준비의 행동과 판단을 직접 보여 준다.",
+        "company_or_domain_consequence": "전자금융 변경의 영향을 책임 경계별로 추적할 수 있게 하는 기초 역량",
+        "excluded_material": [
+          "실제 사용자 규모",
+          "성능 개선",
+          "알고리즘을 또 하나의 보조 근거로 추가"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "claim:msa-service-boundaries"
+          ],
+          "assessment": "근거선행형 답안은 claim:msa-service-boundaries의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "핵심 금융 흐름 하나를 유지하고 실제 운영 규모나 성능 개선처럼 확인되지 않은 결과를 추가하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:preparation",
+            "implication:preparation"
+          ],
+          "assessment": "문항의 독자 질문을 준비의 중심은 서비스 경계라는 관찰 가능한 산출물이고 보안 학습은 경계 안팎의 위험을 보는 보조 관점이다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:financial-state-stakes",
+            "analysis:it-capabilities"
+          ],
+          "assessment": "전자금융 변경의 영향을 책임 경계별로 추적할 수 있게 하는 기초 역량라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "핵심 금융 흐름 하나를 유지하고 실제 운영 규모나 성능 개선처럼 확인되지 않은 결과를 추가하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:evidence-first",
+      "question_id": "question:alternative-career",
+      "family_id": "growth-and-career-direction",
+      "observed_move_ids": [
+        "choice-or-action",
+        "result-or-boundary",
+        "learning-or-change",
+        "direct-answer",
+        "future-direction",
+        "company-role-connection"
+      ],
+      "controlling_idea": "실행 파일 파싱부터 명령 해석과 제어 흐름 복구까지 정적 프로그램 분석 단계를 구현한 경험 때문에 다른 길로는 시스템 보안 연구자를 택하고 싶다.",
+      "reader_takeaway": "직업명보다 프로그램 분석을 직접 구현한 증거가 보안 연구 적합성을 먼저 설명한다.",
+      "realization": {
+        "opening_mode": "evidence-first",
+        "move_sequence": [
+          "choice-or-action",
+          "result-or-boundary",
+          "learning-or-change",
+          "direct-answer",
+          "future-direction",
+          "company-role-connection"
+        ],
+        "evidence_emphasis": "claim:static-analysis-tool에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "프로그램을 낮은 수준부터 구조화해 이해하려는 구현 기반 탐구",
+        "closing_mode": "repeatable-practice",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "실행 파일 파싱부터 명령 해석과 제어 흐름 복구까지 정적 프로그램 분석 단계를 구현한 경험 때문에 다른 길로는 시스템 보안 연구자를 택하고 싶다.",
+        "primary_evidence_refs": [
+          "claim:static-analysis-tool"
+        ],
+        "evidence_interpretation": "정적 분석 도구의 파싱·명령 해석·기본 블록·제어 흐름 복원 경험은 시스템 보안 연구자라는 대안 직업을 구현 근거로 방어하게 한다.",
+        "company_or_domain_consequence": "정적 분석에서 기른 구조 이해는 금융 시스템의 안전성을 검토하는 관점과 이어진다.",
+        "excluded_material": [
+          "도구 완성도 과장",
+          "취약점 탐지 성과",
+          "연구 논문 실적"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "claim:static-analysis-tool"
+          ],
+          "assessment": "근거선행형 답안은 claim:static-analysis-tool의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "시스템 보안 연구자를 직답하되 취약점 발견이나 연구 실적을 암시하지 않고 구현 범위와 탐구 방식을 유지한다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:alternative-career",
+            "implication:alternative-career"
+          ],
+          "assessment": "문항의 독자 질문을 직업명보다 프로그램 분석을 직접 구현한 증거가 보안 연구 적합성을 먼저 설명한다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:financial-state-stakes"
+          ],
+          "assessment": "정적 분석에서 기른 구조 이해는 금융 시스템의 안전성을 검토하는 관점과 이어진다.라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "시스템 보안 연구자를 직답하되 취약점 발견이나 연구 실적을 암시하지 않고 구현 범위와 탐구 방식을 유지한다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:user-outcome",
+      "question_id": "question:motivation",
+      "family_id": "motivation-and-company-fit",
+      "observed_move_ids": [
+        "direct-answer",
+        "company-role-connection",
+        "result-or-boundary",
+        "choice-or-action",
+        "future-direction"
+      ],
+      "controlling_idea": "중소기업과 고객이 필요한 순간 금융 기능을 계속 이용할 수 있게 하는 결과에 기여하고 싶어 전자금융 시스템을 개발하고 유지보수하는 IBK IT를 선택했다.",
+      "reader_takeaway": "사용자가 체감하는 지속적인 금융 이용 가능성을 지원 동기의 중심에 두고 백엔드 구조 관심을 연결한다.",
+      "realization": {
+        "opening_mode": "future-state",
+        "move_sequence": [
+          "direct-answer",
+          "company-role-connection",
+          "result-or-boundary",
+          "choice-or-action",
+          "future-direction"
+        ],
+        "evidence_emphasis": "claim:msa-fintech-flow에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "기술 선택보다 금융 사용자의 업무가 이어지는 결과를 우선하는 관점",
+        "closing_mode": "result-emphasis",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "중소기업과 고객이 필요한 순간 금융 기능을 계속 이용할 수 있게 하는 결과에 기여하고 싶어 전자금융 시스템을 개발하고 유지보수하는 IBK IT를 선택했다.",
+        "primary_evidence_refs": [
+          "claim:msa-fintech-flow"
+        ],
+        "evidence_interpretation": "핀테크 책임 경계 구현은 유지보수 가능한 구조에 대한 관심이 선언이 아니라 실제 선택에서 형성됐음을 보여 준다.",
+        "company_or_domain_consequence": "중소기업의 결제·자금 업무와 고객의 금융 활동이 시스템 변경 중에도 이어져야 한다는 책임",
+        "excluded_material": [
+          "사용자 만족도 수치",
+          "실서비스 성과",
+          "일반적인 고객 중심 구호"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "claim:msa-fintech-flow"
+          ],
+          "assessment": "사용자결과형 답안은 claim:msa-fintech-flow의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "IBK의 중소기업 금융과 전자금융 운영 책임을 선택 이유의 중심에 두고 일반적인 금융사 찬사로 넓히지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:motivation",
+            "implication:motivation"
+          ],
+          "assessment": "문항의 독자 질문을 사용자가 체감하는 지속적인 금융 이용 가능성을 지원 동기의 중심에 두고 백엔드 구조 관심을 연결한다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        },
+        {
+          "perspective": "company_context",
+          "evidence_refs": [
+            "analysis:company-purpose",
+            "analysis:electronic-finance-duty"
+          ],
+          "assessment": "중소기업의 결제·자금 업무와 고객의 금융 활동이 시스템 변경 중에도 이어져야 한다는 책임라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "IBK의 중소기업 금융과 전자금융 운영 책임을 선택 이유의 중심에 두고 일반적인 금융사 찬사로 넓히지 않는다.",
+          "interview_probe": "본인이 구현한 금융 흐름 한 가지와 그 구조 선택이 IBK의 장기 운영 책임에 어떻게 이어지는지 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:user-outcome",
+      "question_id": "question:strength-weakness",
+      "family_id": "weakness-and-self-management",
+      "observed_move_ids": [
+        "direct-answer",
+        "result-or-boundary",
+        "value-in-action",
+        "self-management",
+        "learning-or-change"
+      ],
+      "controlling_idea": "끈기는 사용자가 겪을 모호함을 끝까지 따져 보게 하지만 조급함은 오히려 중요한 확인을 놓치게 할 수 있어 목표를 작은 단계로 나누어 관리한다.",
+      "reader_takeaway": "자기 성향을 개인적 장단점에 머물지 않고 결과를 받는 사람에게 미칠 위험까지 고려해 통제한다.",
+      "realization": {
+        "opening_mode": "future-state",
+        "move_sequence": [
+          "direct-answer",
+          "result-or-boundary",
+          "value-in-action",
+          "self-management",
+          "learning-or-change"
+        ],
+        "evidence_emphasis": "applicant:algorithm-practice에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "빨리 끝내고 싶은 마음보다 확인 가능한 작은 완료를 쌓는 선택",
+        "closing_mode": "result-emphasis",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "끈기는 사용자가 겪을 모호함을 끝까지 따져 보게 하지만 조급함은 오히려 중요한 확인을 놓치게 할 수 있어 목표를 작은 단계로 나누어 관리한다.",
+        "primary_evidence_refs": [
+          "applicant:algorithm-practice"
+        ],
+        "evidence_interpretation": "약 700문제 학습과 단계 목표 조정은 끈기와 조급함이 같은 경험에서 드러나고 관리 습관으로 이어졌음을 뒷받침한다.",
+        "company_or_domain_consequence": "금융 기능을 이용하는 사람이 성급한 구현의 영향을 받지 않도록 수행 단계를 통제하는 습관",
+        "excluded_material": [
+          "확인되지 않은 고객 피드백",
+          "팀 동료 평가",
+          "조급함 완전 해소"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant:algorithm-practice"
+          ],
+          "assessment": "사용자결과형 답안은 applicant:algorithm-practice의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "약점을 극복했다고 포장하지 말고 현재도 범위와 완료 기준을 나누어 관리한다는 경계를 유지한다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:strength-weakness",
+            "implication:strength-weakness"
+          ],
+          "assessment": "문항의 독자 질문을 자기 성향을 개인적 장단점에 머물지 않고 결과를 받는 사람에게 미칠 위험까지 고려해 통제한다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:operability-stakes"
+          ],
+          "assessment": "금융 기능을 이용하는 사람이 성급한 구현의 영향을 받지 않도록 수행 단계를 통제하는 습관라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "약점을 극복했다고 포장하지 말고 현재도 범위와 완료 기준을 나누어 관리한다는 경계를 유지한다.",
+          "interview_probe": "목표 난도와 범위를 실제로 바꾼 시점, 판단 기준, 이후 행동을 구체적으로 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:user-outcome",
+      "question_id": "question:preparation",
+      "family_id": "capability-and-contribution",
+      "observed_move_ids": [
+        "direct-answer",
+        "relevant-context",
+        "choice-or-action",
+        "reason-or-tradeoff",
+        "result-or-boundary",
+        "company-role-connection"
+      ],
+      "controlling_idea": "사용자에게는 하나의 금융 경험으로 보이는 인증·결제·거래 후속 처리를 책임 경계별로 구현하며 상태와 권한이 어디서 바뀌는지 설명할 수 있게 준비했다.",
+      "reader_takeaway": "핀테크 서비스 경계는 내부 기술 자랑이 아니라 사용자의 금융 흐름을 정확히 이해하기 위한 주된 준비 근거다.",
+      "realization": {
+        "opening_mode": "future-state",
+        "move_sequence": [
+          "direct-answer",
+          "relevant-context",
+          "choice-or-action",
+          "reason-or-tradeoff",
+          "result-or-boundary",
+          "company-role-connection"
+        ],
+        "evidence_emphasis": "claim:msa-service-boundaries에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "내부 구조를 사용자의 연속된 금융 흐름과 연결해 이해하는 능력",
+        "closing_mode": "result-emphasis",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "사용자에게는 하나의 금융 경험으로 보이는 인증·결제·거래 후속 처리를 책임 경계별로 구현하며 상태와 권한이 어디서 바뀌는지 설명할 수 있게 준비했다.",
+        "primary_evidence_refs": [
+          "claim:msa-service-boundaries"
+        ],
+        "evidence_interpretation": "서비스 책임 경계와 상태·권한 흐름을 구현한 사실은 기술 목록보다 금융 IT 준비의 행동과 판단을 직접 보여 준다.",
+        "company_or_domain_consequence": "권한과 거래 상태의 경계를 명확히 해 고객의 금융 행동이 의도대로 이어지게 하는 기반",
+        "excluded_material": [
+          "실사용자 반응",
+          "보안 학습을 별도 준비 축으로 추가",
+          "운영 규모나 성능"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "claim:msa-service-boundaries"
+          ],
+          "assessment": "사용자결과형 답안은 claim:msa-service-boundaries의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "핵심 금융 흐름 하나를 유지하고 실제 운영 규모나 성능 개선처럼 확인되지 않은 결과를 추가하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:preparation",
+            "implication:preparation"
+          ],
+          "assessment": "문항의 독자 질문을 핀테크 서비스 경계는 내부 기술 자랑이 아니라 사용자의 금융 흐름을 정확히 이해하기 위한 주된 준비 근거다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:financial-state-stakes",
+            "analysis:it-capabilities"
+          ],
+          "assessment": "권한과 거래 상태의 경계를 명확히 해 고객의 금융 행동이 의도대로 이어지게 하는 기반라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "핵심 금융 흐름 하나를 유지하고 실제 운영 규모나 성능 개선처럼 확인되지 않은 결과를 추가하지 않는다.",
+          "interview_probe": "결제 흐름에서 직접 구현한 책임 경계 하나와 변경 전후를 어떤 코드나 테스트로 확인했는지 설명해 보라."
+        }
+      ],
+      "findings": []
+    },
+    {
+      "candidate_id": "candidate:user-outcome",
+      "question_id": "question:alternative-career",
+      "family_id": "growth-and-career-direction",
+      "observed_move_ids": [
+        "direct-answer",
+        "choice-or-action",
+        "future-direction",
+        "learning-or-change",
+        "company-role-connection"
+      ],
+      "controlling_idea": "은행원이 아니라면 사용자가 알기 어려운 시스템 위험을 먼저 이해하고 설명하는 시스템 보안 연구자가 되고 싶다.",
+      "reader_takeaway": "프로그램 분석 구현 경험을 사용자에게 도달하기 전 위험의 원리를 밝히는 직업적 관심으로 연결한다.",
+      "realization": {
+        "opening_mode": "future-state",
+        "move_sequence": [
+          "direct-answer",
+          "choice-or-action",
+          "future-direction",
+          "learning-or-change",
+          "company-role-connection"
+        ],
+        "evidence_emphasis": "applicant:security-career-interest에 기록된 확인 가능한 행동과 선택",
+        "judgment_emphasis": "공격 성공이 아니라 사용자가 영향을 받기 전에 프로그램의 위험 원리를 이해하는 방향",
+        "closing_mode": "result-emphasis",
+        "uncertainty_disposition": "narrow-to-confirmed-scope"
+      },
+      "contextual_synthesis": {
+        "applicant_position": "은행원이 아니라면 사용자가 알기 어려운 시스템 위험을 먼저 이해하고 설명하는 시스템 보안 연구자가 되고 싶다.",
+        "primary_evidence_refs": [
+          "applicant:security-career-interest"
+        ],
+        "evidence_interpretation": "정적 분석 도구의 파싱·명령 해석·기본 블록·제어 흐름 복원 경험은 시스템 보안 연구자라는 대안 직업을 구현 근거로 방어하게 한다.",
+        "company_or_domain_consequence": "보안 연구와 금융 IT 모두 사용자가 시스템을 신뢰할 수 있게 위험을 이해하고 줄이는 책임을 가진다.",
+        "excluded_material": [
+          "피해 예방 실적",
+          "취약점 발견 주장",
+          "보안 조직 근무 경험"
+        ]
+      },
+      "family_fit_status": "pass",
+      "applicant_voice_status": "pass",
+      "synthesis_status": "pass",
+      "selective_evidence_status": "pass",
+      "applicant_authorship_status": "pass",
+      "company_domain_integration_status": "pass",
+      "answer_boundary_status": "pass",
+      "public_language_status": "pass",
+      "expression_status": "pass",
+      "observed_enumeration_chain_count": 0,
+      "interpreted_enumeration_chain_count": 0,
+      "enumeration_chain_excerpts": [],
+      "expert_observations": [
+        {
+          "perspective": "applicant_evidence",
+          "evidence_refs": [
+            "applicant:security-career-interest"
+          ],
+          "assessment": "사용자결과형 답안은 applicant:security-career-interest의 행동 또는 구현 범위를 핵심 주장에 직접 연결하고 미확인 성과를 덧붙이지 않았다.",
+          "why_it_matters": "지원자의 선택과 경험 귀속이 분명해야 면접에서 주장 범위를 코드나 회고로 방어할 수 있다.",
+          "action": "시스템 보안 연구자를 직답하되 취약점 발견이나 연구 실적을 암시하지 않고 구현 범위와 탐구 방식을 유지한다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        },
+        {
+          "perspective": "question_expression",
+          "evidence_refs": [
+            "question:alternative-career",
+            "implication:alternative-career"
+          ],
+          "assessment": "문항의 독자 질문을 프로그램 분석 구현 경험을 사용자에게 도달하기 전 위험의 원리를 밝히는 직업적 관심으로 연결한다.로 구현했고, 다른 문항의 서사 기능을 대신하지 않는다.",
+          "why_it_matters": "같은 프로젝트 소재를 쓰더라도 지원동기·자기관리·준비·대안 직업의 판단 목적이 분리돼야 한다.",
+          "action": "현재의 통제 주장과 문항별 결말을 유지하고 다른 후보의 핵심 문장을 혼합하지 않는다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        },
+        {
+          "perspective": "domain_responsibility",
+          "evidence_refs": [
+            "analysis:financial-state-stakes"
+          ],
+          "assessment": "보안 연구와 금융 IT 모두 사용자가 시스템을 신뢰할 수 있게 위험을 이해하고 줄이는 책임을 가진다.라는 맥락이 지원자의 판단을 실제로 좁히며, 제거 가능한 회사 배경 설명에 머물지 않는다.",
+          "why_it_matters": "IBK IT의 중소기업 금융·전자금융 책임과 금융 상태·권한의 중요성이 답안의 선택 기준을 바꿔야 직무 연결이 구체적이다.",
+          "action": "시스템 보안 연구자를 직답하되 취약점 발견이나 연구 실적을 암시하지 않고 구현 범위와 탐구 방식을 유지한다.",
+          "interview_probe": "정적 분석 구현에서 가장 어려웠던 단계, 선택한 분석 경계, 현재 설명 가능한 한계를 말해 보라."
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "cross_candidate_reviews": [
+    {
+      "question_id": "question:motivation",
+      "max_pairwise_ngram_jaccard": 0.006,
+      "repeated_long_sentence_hashes": [],
+      "justified_repetitions": [],
+      "strategy_distinction": "운영 책임, 속도와 유지보수의 판단, 개발 기준의 변화, 공개 구현 선행, 사용자 결과라는 다섯 출발점이 각각 다른 IBK 선택 이유와 결말을 만든다.",
+      "status": "pass"
+    },
+    {
+      "question_id": "question:strength-weakness",
+      "max_pairwise_ngram_jaccard": 0.03,
+      "repeated_long_sentence_hashes": [],
+      "justified_repetitions": [],
+      "strategy_distinction": "동일한 약 700문제 경험을 책임 관리, 목표 크기 판단, 습관 변화, 기록 근거, 결과 수용자 관점으로 달리 해석하며 통제 주장과 결말이 중복되지 않는다.",
+      "status": "pass"
+    },
+    {
+      "question_id": "question:preparation",
+      "max_pairwise_ngram_jaccard": 0.026,
+      "repeated_long_sentence_hashes": [],
+      "justified_repetitions": [],
+      "strategy_distinction": "금융 흐름의 운영 책임, 분리 비용의 선택, 준비 기준의 변화, 관찰 가능한 산출물, 사용자 경험의 연속성으로 증거 기능이 구분된다.",
+      "status": "pass"
+    },
+    {
+      "question_id": "question:alternative-career",
+      "max_pairwise_ngram_jaccard": 0.09,
+      "repeated_long_sentence_hashes": [],
+      "justified_repetitions": [],
+      "strategy_distinction": "시스템 보안 연구자라는 직업명은 공통이지만 원인 추적, 분석 경계 판단, 관심의 구체화, 구현 증거, 사용자 보호 결과가 서로 다른 연구 적합성을 제시한다.",
+      "status": "pass"
+    }
+  ],
+  "editorial_review": {
+    "status": "pass",
+    "audience_separation": "pass",
+    "information_hierarchy": "pass",
+    "comparison_structure": "pass",
+    "page_economy": "pass",
+    "public_labels": "pass",
+    "cover_purpose": "pass",
+    "cover_restraint": "pass",
+    "heading_nonredundancy": "pass",
+    "candidate_score_visibility": "pass",
+    "pagination_coherence": "pass",
+    "visual_integration": "pass",
+    "source_link_usability": "pass",
+    "single_stylesheet_integrity": "pass",
+    "design_consistency": "pass",
+    "reviewed_page_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "reviewed_candidate_ids": [
+      "candidate:operations-accountability",
+      "candidate:judgment-tradeoff",
+      "candidate:change-narrative",
+      "candidate:evidence-first",
+      "candidate:user-outcome"
+    ],
+    "observations": [
+      {
+        "dimension": "audience_separation",
+        "status": "pass",
+        "evidence": "20개 제출 답안에는 런·스키마·채점·소스 승인·검증 절차 언어가 없고, 2025 문항·미확인 역할·공고 마감 한계는 독자 안내와 보완 자료에 분리돼 있다."
+      },
+      {
+        "dimension": "information_hierarchy",
+        "status": "pass",
+        "evidence": "1–5쪽이 표지·읽는 법·기업/직무·문항 분석·후보 비교를 순서대로 제공하고 6–15쪽이 후보별 완성 답안을 이어 보여 준다."
+      },
+      {
+        "dimension": "comparison_structure",
+        "status": "pass",
+        "evidence": "5쪽의 비교 시각물과 정렬된 표가 다섯 제목·전략·총점을 한눈에 비교하게 하며 후보별 6개 평가축은 세로 행으로 반복된다."
+      },
+      {
+        "dimension": "page_economy",
+        "status": "pass",
+        "evidence": "16개 렌더 이미지를 전수 확인했으며 분석 4쪽도 역할 있는 문항 분리와 제외 범위를 담고, 후보 페이지는 두 쪽씩 일관되게 사용해 불필요한 고아 페이지가 없다."
+      },
+      {
+        "dimension": "public_labels",
+        "status": "pass",
+        "evidence": "공개 본문은 한국어 문항명, 평가명, 기업·직무/지원자 근거/표현·면접 관점으로 표시되며 원시 criterion ID나 런타임 필드명을 노출하지 않는다."
+      },
+      {
+        "dimension": "cover_purpose",
+        "status": "pass",
+        "evidence": "1쪽은 IBK기업은행 IT 분야, 자기소개서 직무 적합성 연습 보고서, 후보 선택 목적을 명확히 보여 준다."
+      },
+      {
+        "dimension": "cover_restraint",
+        "status": "pass",
+        "evidence": "1쪽 표지는 날짜와 짧은 검토 상태 외에 시각물, 출처 유형, 후보 수, 생성·검증 기능 설명을 싣지 않은 절제된 구성이다."
+      },
+      {
+        "dimension": "heading_nonredundancy",
+        "status": "pass",
+        "evidence": "후보 시작 페이지는 한 개의 설명적 주제목과 전략 줄만 사용하고, 계속 페이지는 CANDIDATE n · CONTINUED와 구체적 준비/면접 대비의 짧은 표지만 둔다."
+      },
+      {
+        "dimension": "candidate_score_visibility",
+        "status": "pass",
+        "evidence": "6·8·10·12·14쪽에 각 후보 총점과 문항 적합성, 기업·직무, 지원자 관점, 경험 근거, 표현, 면접 방어의 6개 점수·설명이 모두 보인다."
+      },
+      {
+        "dimension": "pagination_coherence",
+        "status": "pass",
+        "evidence": "후보별 시작/계속 페이지가 6–7, 8–9, 10–11, 12–13, 14–15쪽으로 인접하고 답안·전문가 검토·면접 표가 잘리지 않는다."
+      },
+      {
+        "dimension": "visual_integration",
+        "status": "pass",
+        "evidence": "2쪽 문항 역할, 3쪽 근거 경계, 5쪽 후보 비교 PNG가 각각 관련 섹션 안에 목적·관계·대체텍스트·캡션·검색 가능한 텍스트 대응물과 함께 배치돼 있다."
+      },
+      {
+        "dimension": "source_link_usability",
+        "status": "pass",
+        "evidence": "16쪽 공개 근거는 설명형 링크명으로 표시되고 report.txt에는 http/https 원시 URL이 한 건도 노출되지 않는다."
+      },
+      {
+        "dimension": "single_stylesheet_integrity",
+        "status": "pass",
+        "evidence": "report.html에는 data-report-profile-style이 붙은 editorial-report-professional.css 링크 1개만 있고 style 블록과 요소 style 속성은 0개다."
+      },
+      {
+        "dimension": "design_consistency",
+        "status": "pass",
+        "evidence": "16쪽 전체가 동일한 남색·청록 강조, 얇은 규칙선, 좌측 정렬, 반복되는 점수 행·푸터 체계를 유지하며 내용 잘림이나 색상만의 구분이 없다."
+      }
+    ],
+    "findings": []
+  },
+  "overall_status": "pass",
+  "limitations": [
+    "자기소개서 네 문항은 Linkareer의 2025년 상반기 금융일반 페이지를 기반으로 하며 2026년 하반기 공식 지원서 문항 동일성은 확인되지 않았다.",
+    "확인된 2026년 하반기 공고 접수는 2026-09-14 10:00에 마감되었으므로 이 결과는 제출 확정본이 아니라 2026 IT 직무 적합성 연습본이다.",
+    "실제 사용자 수·운영 성과·프로젝트 팀 규모와 정확한 개인 담당 범위는 확인 전까지 답안에서 생략하거나 관찰 가능한 구현 범위로 좁혀야 한다.",
+    "이 검토는 콘텐츠와 편집 품질에 대한 독립 최종 검증이며 지원자의 사실 확인, 문안 선택, 제출 또는 채용 판단 권한을 갖지 않는다."
+  ],
+  "authority_effect": "none"
+}

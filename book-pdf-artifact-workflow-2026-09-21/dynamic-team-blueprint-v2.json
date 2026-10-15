@@ -1,0 +1,110 @@
+{
+  "kind": "dynamic-agent-team-blueprint/v2",
+  "blueprintId": "dynamic-team:claim-led-book-pdf-source-to-validation",
+  "revision": "book-pdf-dynamic-team/2",
+  "status": "candidate_not_activated",
+  "authorityEffect": "none",
+  "supersedes": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/dynamic-team-blueprint.json",
+  "capabilityBindingRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/dynamic-artifact-capability-bindings-v2.json",
+  "expressionSpecRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-expression-spec-v2.md",
+  "writingContractRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/writing-quality-contract-v1.md",
+  "authoringLoopRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/report-authoring-loop-candidate.json",
+  "editorialRubricRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-v1.json",
+  "architecturePattern": "ordered_handoff_candidate",
+  "roles": [
+    {
+      "order": 1,
+      "roleId": "role:source-investigator-context-curator",
+      "registeredProfileRefs": [
+        "artifacts/agents/agent-operation/agents/context-curator.yaml",
+        "artifacts/agents/agent-operation/agents/external-evidence-scout.yaml"
+      ],
+      "skillRefs": [
+        "artifacts/agents/agent-operation/skill/context-engineering/SKILL.md",
+        "artifacts/agents/engineering/skill/source-driven-development/SKILL.md"
+      ],
+      "toolRefs": ["tool:repository-read", "tool:primary-source-browser", "tool:sha256-digest"],
+      "output": "source-context-packet/v2",
+      "additionalDuty": "Preserve the difference between local reconstructed-source observation and external background before prose is written."
+    },
+    {
+      "order": 2,
+      "roleId": "role:domain-prerequisite-researcher",
+      "registeredProfileRefs": [
+        "artifacts/agents/agent-operation/agents/knowledge-demand-planner.yaml",
+        "artifacts/agents/agent-operation/agents/external-evidence-scout.yaml"
+      ],
+      "skillRefs": [
+        "artifacts/agent-loop/work/progressive-knowledge-research/skill/progressive-knowledge-research-loop-operation/SKILL.md",
+        "artifacts/agents/engineering/skill/source-driven-development/SKILL.md"
+      ],
+      "toolRefs": ["tool:repository-read", "tool:primary-source-browser"],
+      "output": "prerequisite-background-claim-packet/v2",
+      "additionalDuty": "Research only the generator, React and client-tool-loop concepts needed to understand the next manuscript unit."
+    },
+    {
+      "order": 3,
+      "roleId": "role:technical-editorial-writer",
+      "registeredProfileRefs": [
+        "artifacts/agents/research/agents/component-research-synthesizer.yaml",
+        "artifacts/agents/requirement-realization/agents/artifact-builder.yaml"
+      ],
+      "skillRefs": [
+        "artifacts/agent-loop/document/documentation-surface/skill/document-functional-requirement/SKILL.md",
+        "capability:claim-led-narrative-composition",
+        "capability:high-context-concept-framing"
+      ],
+      "toolRefs": ["tool:repository-read"],
+      "output": "technical-book-manuscript-candidate/v2",
+      "additionalDuty": "Frame the human problem and system principle before project keywords; reject keyword-first pages and write each chapter as a causal argument with a worked trace, failure path, limitation, transferable principle and transition."
+    },
+    {
+      "order": 4,
+      "roleId": "role:pdf-information-visual-designer",
+      "registeredProfileRefs": ["artifacts/agents/work-area/agents/design.yaml"],
+      "skillRefs": [
+        "artifacts/agent-loop/design/frontend-design-source/skill/frontend-design-source-loop-operation/SKILL.md",
+        "artifacts/agent-loop/design/visual-parity-remediation/skill/visual-parity-loop-operation/SKILL.md",
+        "capability:content-function-page-selection",
+        "capability:paged-media-rendering",
+        "capability:chapter-rhythm-visual-review"
+      ],
+      "toolRefs": [
+        "tool:raster-concept-generation",
+        "tool:html-css-paged-media-renderer",
+        "tool:browser-layout-geometry-audit",
+        "tool:contact-sheet-renderer"
+      ],
+      "output": "book-pdf-candidate/v2",
+      "additionalDuty": "Use 01 only for narrative progress and 07 only for evidence work; do not translate the manuscript into cards."
+    },
+    {
+      "order": 5,
+      "roleId": "role:independent-fact-visual-validator",
+      "registeredProfileRefs": [
+        "artifacts/agents/assurance/agents/independent-knowledge-verifier.yaml",
+        "artifacts/agents/requirement-realization/agents/independent-validator.yaml"
+      ],
+      "skillRefs": [
+        "artifacts/agent-loop/evidence-validation-reuse/skill/evidence-validation-reuse-loop-operation/SKILL.md",
+        "capability:pdf-structural-inspection"
+      ],
+      "toolRefs": [
+        "tool:repository-read",
+        "tool:pdfkit-page-text-inspector",
+        "tool:browser-layout-geometry-audit",
+        "tool:sha256-digest"
+      ],
+      "output": "independent-fact-visual-validation/v2",
+      "independenceRequired": true,
+      "currentStatus": "not_activated_pending"
+    }
+  ],
+  "handoffInvariant": "Each successor receives the exact predecessor revision and digest; skills and tools grant no authority or acceptance.",
+  "activation": "not_performed",
+  "acknowledgement": "not_received",
+  "independentValidation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}

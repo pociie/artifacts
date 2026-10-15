@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "rubric-operation/v1",
+  "operationId": "operation:self-introduction-v3-20260907",
+  "status": "evaluated",
+  "authorityEffect": "none",
+  "bindings": {
+    "definition": "evaluation-rubric-v3.json#definition@v3",
+    "profile": "evaluation-rubric-v3.json#profile@v3",
+    "evidenceSnapshot": "evidence-map-v3.json",
+    "userProjection": "user-understanding-projection-v3.json",
+    "subjects": "self-introduction-content-v3.json#sets",
+    "claimLedger": "claim-ledger-v3.json"
+  },
+  "protocol": {
+    "unit": "complete three-answer set",
+    "rater": "single editorial assessor",
+    "scale": "ordinal 0-4 with common anchors",
+    "transformation": "sum(weight * rating / 4)",
+    "protectedGateOrder": ["G1", "G2", "G3", "G4", "G5", "G6"],
+    "unknownPolicy": "unavailable/conflicting/not_applicable remain explicit",
+    "scorePurpose": "draft-review comparison only"
+  },
+  "assessments": [
+    {
+      "setId": "set-1",
+      "state": "scored",
+      "gateStatus": "pass",
+      "score": 94.5,
+      "criterionRatings": {"value_viewpoint_visibility": 4, "human_context": 4, "narrative_coherence": 4, "modern_ai_paradigm": 4, "role_fit": 4, "business_translation": 3, "future_contribution": 4, "evidence_attribution": 3, "causal_process": 4, "service_mechanism_abstraction": 4, "prompt_compliance": 4, "readability_distinctiveness": 4, "interview_defense": 3},
+      "evidenceBindings": {"value": ["content-v3#set-1/q1", "content-v3#set-1/q3", "user-projection#value-01"], "role": ["content-v3#set-1/q1", "research#lotte-job"], "project": ["content-v3#set-1/q2", "project-abstraction-map-v3"], "communication": ["content-v3#set-1", "claim-ledger-v3#set-1"]},
+      "limitations": ["actual changed files and dated runs require applicant confirmation"]
+    },
+    {
+      "setId": "set-2",
+      "state": "scored",
+      "gateStatus": "pass",
+      "score": 90.25,
+      "criterionRatings": {"value_viewpoint_visibility": 4, "human_context": 3, "narrative_coherence": 4, "modern_ai_paradigm": 3, "role_fit": 4, "business_translation": 3, "future_contribution": 4, "evidence_attribution": 4, "causal_process": 3, "service_mechanism_abstraction": 4, "prompt_compliance": 4, "readability_distinctiveness": 3, "interview_defense": 3},
+      "evidenceBindings": {"value": ["content-v3#set-2/q1", "content-v3#set-2/q3", "user-projection#value-01"], "role": ["content-v3#set-2/q1", "research#lotte-company"], "project": ["content-v3#set-2/q2", "project-abstraction-map-v3"], "communication": ["content-v3#set-2", "claim-ledger-v3#set-2"]},
+      "limitations": ["actual collaboration counterpart and agreement artifact require applicant confirmation"]
+    },
+    {
+      "setId": "set-3",
+      "state": "scored",
+      "gateStatus": "pass",
+      "score": 91.75,
+      "criterionRatings": {"value_viewpoint_visibility": 3, "human_context": 4, "narrative_coherence": 4, "modern_ai_paradigm": 3, "role_fit": 4, "business_translation": 3, "future_contribution": 4, "evidence_attribution": 4, "causal_process": 4, "service_mechanism_abstraction": 4, "prompt_compliance": 4, "readability_distinctiveness": 3, "interview_defense": 3},
+      "evidenceBindings": {"value": ["content-v3#set-3/q1", "content-v3#set-3/q3", "user-projection#value-01"], "role": ["content-v3#set-3/q1", "research#nist-ai-rmf"], "project": ["content-v3#set-3/q2", "project-abstraction-map-v3"], "communication": ["content-v3#set-3", "claim-ledger-v3#set-3"]},
+      "limitations": ["dated test and deployment evidence are not supplied"]
+    },
+    {
+      "setId": "set-4",
+      "state": "scored",
+      "gateStatus": "pass",
+      "score": 96.25,
+      "criterionRatings": {"value_viewpoint_visibility": 4, "human_context": 4, "narrative_coherence": 4, "modern_ai_paradigm": 4, "role_fit": 4, "business_translation": 4, "future_contribution": 4, "evidence_attribution": 4, "causal_process": 4, "service_mechanism_abstraction": 3, "prompt_compliance": 4, "readability_distinctiveness": 3, "interview_defense": 4},
+      "evidenceBindings": {"value": ["content-v3#set-4/q1", "content-v3#set-4/q3", "user-projection#value-01"], "role": ["content-v3#set-4/q1", "research#microsoft-hai"], "project": ["content-v3#set-4/q2", "project-abstraction-map-v3"], "communication": ["content-v3#set-4", "claim-ledger-v3#set-4"]},
+      "limitations": ["no observed user feedback or AI output evaluation study is supplied"]
+    },
+    {
+      "setId": "set-5",
+      "state": "scored",
+      "gateStatus": "pass",
+      "score": 93.75,
+      "criterionRatings": {"value_viewpoint_visibility": 4, "human_context": 4, "narrative_coherence": 4, "modern_ai_paradigm": 3, "role_fit": 4, "business_translation": 4, "future_contribution": 3, "evidence_attribution": 3, "causal_process": 4, "service_mechanism_abstraction": 4, "prompt_compliance": 4, "readability_distinctiveness": 4, "interview_defense": 3},
+      "evidenceBindings": {"value": ["content-v3#set-5/q1", "content-v3#set-5/q3", "user-projection#value-01"], "role": ["content-v3#set-5/q1", "research#lotte-job"], "project": ["content-v3#set-5/q2", "project-abstraction-map-v3"], "communication": ["content-v3#set-5", "claim-ledger-v3#set-5"]},
+      "limitations": ["customer and operations metrics are not supplied"]
+    }
+  ],
+  "operationMetrics": [
+    {"metricId": "answer.length_gate_pass_rate", "value": 1, "unit": "ratio", "numerator": 15, "denominator": 15, "state": "observed", "scoreContribution": 0},
+    {"metricId": "protected_gate_pass_rate", "value": 1, "unit": "ratio", "numerator": 6, "denominator": 6, "state": "observed", "scoreContribution": 0},
+    {"metricId": "rubric.assessor.agreement", "value": null, "unit": "ratio", "numerator": null, "denominator": null, "state": "unavailable", "scoreContribution": 0},
+    {"metricId": "rubric.outcome.join_coverage", "value": null, "unit": "ratio", "numerator": null, "denominator": null, "state": "unavailable", "scoreContribution": 0},
+    {"metricId": "user_understanding.user_correction", "value": null, "unit": "count", "numerator": null, "denominator": null, "state": "pending_user_review", "scoreContribution": 0}
+  ],
+  "lifecycle": {
+    "currentState": "evaluated",
+    "nextState": "observed_after_user_review",
+    "invalidationTriggers": ["user correction", "material claim correction", "new dated outcome", "job posting revision", "rubric revision"],
+    "authorityEffect": "none"
+  }
+}

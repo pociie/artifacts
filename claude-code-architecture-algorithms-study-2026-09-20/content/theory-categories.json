@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "categories": [
+    {
+      "id": "state",
+      "title": "상태·계산 모델",
+      "pattern": "state machine|transition invariant|interpreter|command pattern|chain of responsibility|pipeline|short-circuit|deterministic reduction|stable sort|cycle detection|DAG linearization|linked lineage|pure function|compositional analysis|normal form|canonicalization|canonical hashing",
+      "description": "입력이 어떤 중간 표현과 상태 전이를 거쳐 결과가 되는지, 그리고 각 전이 전후에 무엇이 계속 참이어야 하는지를 설명한다.",
+      "question": "단계의 순서나 표현을 바꿔도 같은 상태와 불변조건에 도달하는가?"
+    },
+    {
+      "id": "time",
+      "title": "동시성·시간·합의",
+      "pattern": "optimistic concurrency|compare-and-swap|conflict serializability|critical section|bounded concurrency|structured concurrency|cooperative cancellation|background job|retry budget|exponential backoff|conservative scheduling|batching|eventual consistency|single-writer|settlement|version token|versioned state|snapshot consistency|commutativity",
+      "description": "여러 실행이 같은 상태를 읽고 쓰는 동안 순서, 취소, 재시도, 관찰 시점이 결과의 의미를 바꾸지 않게 하는 조건을 다룬다.",
+      "question": "stale read, 중복 실행, 취소가 끼어들어도 effect와 최종 상태의 의미가 보존되는가?"
+    },
+    {
+      "id": "protocol",
+      "title": "프로토콜·식별",
+      "pattern": "correlation id|tagged union|protocol completion|namespace collision|namespace identity|referential integrity|round-trip invariant|^precedence$|lossy projection|structural typing|conditional type|compiler lowering",
+      "description": "서로 다른 계층이 같은 작업과 같은 메시지를 가리킨다는 사실을 타입, 식별자, completion 규약으로 유지한다.",
+      "question": "생산자와 소비자가 동일한 값·작업·종료 의미를 해석한다는 증거가 있는가?"
+    },
+    {
+      "id": "durability",
+      "title": "내구성·복구",
+      "pattern": "checkpoint|event replay|event sourcing|at-least-once|idempotence|idempotency|schema evolution|forward migration|backward-compatible repair|tombstone|projection repair|cache rehydration|lossy state migration|copy-merge|two-phase merge|fixed-point|sentinel",
+      "description": "부분 기록, 재시작, 버전 변화가 있어도 이전 사실을 잃거나 같은 effect를 다시 확정하지 않도록 만드는 복구 계약을 설명한다.",
+      "question": "중단 지점에서 재개했을 때 무엇을 재생하고 무엇을 다시 실행하지 않아야 하는가?"
+    },
+    {
+      "id": "authority",
+      "title": "권한·신뢰 경계",
+      "pattern": "capability attenuation|authorization|deny|permit|policy|reference monitor|data minimization|language sandboxing|supply-chain provenance|provenance|read set",
+      "description": "실행 가능성, 허용 여부, 데이터 노출을 분리하고 신뢰하지 않은 입력이 effect 권한으로 곧바로 승격되지 않게 한다.",
+      "question": "누가 어떤 근거로 effect를 허용하며, 더 약한 권한으로만 위임된다는 사실을 어디서 확인하는가?"
+    },
+    {
+      "id": "composition",
+      "title": "구성·변형·성능",
+      "pattern": "adapter|anti-corruption|factory|configuration|layered|partial evaluation|dead-code elimination|source-to-source transformation|lazy loading|memoization|prompt caching|working set|amortized cost|semantic compression|indexing|lifetime|ownership|state handoff",
+      "description": "동일한 핵심 의미를 여러 실행 표면과 제품 변형에 조립하면서 비용과 의존성의 위치를 통제하는 방법을 다룬다.",
+      "question": "조립 방식이나 최적화를 바꿔도 핵심 계약이 adapter와 build 변형 안에서 보존되는가?"
+    },
+    {
+      "id": "operations",
+      "title": "검증·관측·운영",
+      "pattern": "characterization testing|contract test|golden master|control plane|telemetry|observability|observer|fan-out|resource cleanup|structured task lifecycle|saga observation|stale-while-revalidate",
+      "description": "실행 결과를 관찰하고 회귀를 검출하며, cleanup과 운영 신호가 본래 동작을 왜곡하지 않도록 만드는 증거 체계를 다룬다.",
+      "question": "최종 출력뿐 아니라 실패·중단·복구 경로의 보장을 어떤 관찰과 테스트로 입증할 수 있는가?"
+    }
+  ]
+}

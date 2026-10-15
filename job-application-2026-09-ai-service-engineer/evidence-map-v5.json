@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "self-introduction-evidence-map/v5",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "purpose": "자기소개서의 과거 사실·사용자 제공 맥락·제한적 해석·미래 계획을 분리하고, 상위 서비스 언어로 안전하게 번역한다.",
+  "sourcePolicy": {"pdfVisible": ["https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007"], "internalOnly": ["repository paths", "research URLs except official posting", "raw prompt/transcript/private reasoning"]},
+  "legend": {
+    "F": "공식 공고·저장소 문서에서 확인한 사실",
+    "U": "사용자가 직접 제공한 맥락",
+    "P": "제출 전 개인 확인이 필요한 기여·실행·선택",
+    "I": "자료를 상위 서비스 의미로 번역한 제한적 해석",
+    "N": "입사 후 계획",
+    "M": "측정·근거가 없는 제한"
+  },
+  "entries": [
+    {
+      "id": "role-scope",
+      "class": "F",
+      "claim": "공고는 AI 서비스 API·백엔드, 데이터 파이프라인, AI 프로젝트 지원, AI 플랫폼 운영·고도화, 서비스 발굴·검증, 튜닝·품질 검증을 업무로 제시한다.",
+      "source": "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007",
+      "safeWording": "사용자 업무를 API·데이터 흐름과 결과 검증으로 연결하는 AI 서비스 엔지니어로 기여하겠습니다.",
+      "avoid": "모델 연구·학습 중심 직무로 공고를 재정의하기"
+    },
+    {
+      "id": "role-capability",
+      "class": "F",
+      "claim": "공고의 기본자격에는 데이터·서비스 프로세스, Cloud Native/IaaS/PaaS, 데이터 파이프라인 운영, CI/CD, API·CLI·SDK·Webhooks·MQ, Docker·Kubernetes 이해가 포함된다.",
+      "source": "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007",
+      "safeWording": "서비스 처리와 데이터 흐름, 품질 검증을 함께 보는 역량으로 표현한다.",
+      "avoid": "확인하지 않은 특정 플랫폼 경험을 자기소개서에 추가하기"
+    },
+    {
+      "id": "project-scale",
+      "class": "F",
+      "claim": "root package manifest는 28개 npm workspace를 선언한다.",
+      "source": "package.json",
+      "safeWording": "28개 workspace를 포함한 넓은 TypeScript 모노레포에서 핵심 처리 흐름과 주변 범위를 구분했다.",
+      "avoid": "28개 서비스·팀·사용자·트래픽 규모로 확대하기"
+    },
+    {
+      "id": "project-structure",
+      "class": "F",
+      "claim": "현재 구조 문서는 domain/application/adapters/composition과 core/generic/supporting 영역의 책임 분리를 설명한다.",
+      "source": "docs/architecture/project-structure.md; docs/architecture/module-operating-model.md",
+      "safeWording": "업무 규칙·서비스 처리·외부 연결의 책임을 구분해 변경 범위를 생각했다.",
+      "avoid": "모든 경계를 본인이 직접 구현·운영했다고 확정하기"
+    },
+    {
+      "id": "loop-architecture-design",
+      "class": "F+I+P",
+      "claim": "Loop Architecture 문서는 작업 맥락, 재사용 자료, 처리 경로, 검증, 변경 시 재평가를 분리하는 설계 경계를 제공하며, 사용자는 이를 현재 개인 프로젝트의 설계 경험으로 제시했다.",
+      "source": "artifacts/loop-architecture/**; user-provided project context",
+      "safeWording": "작업 맥락·재사용 자료·검증·변경 재평가를 하나의 흐름으로 섞지 않고 설계 자료로 구분했다.",
+      "avoid": "실제 런타임 활성화·품질 승인·운영 성과로 표현하기"
+    },
+    {
+      "id": "project-contribution",
+      "class": "U+P",
+      "claim": "사용자는 개인 프로젝트에서 요구 분석·구조 설계·코드 구현·검증·배포 구성을 연결했다고 설명했다. 실제 변경 파일·검증 명령·시점은 제출 전 확인 대상이다.",
+      "source": "user-provided project description; project-abstraction-map-v5.json",
+      "safeWording": "개인 프로젝트의 요구 분석부터 설계·구현·검증·배포 구성을 연결했다.",
+      "avoid": "저장소 전체를 단독 구현했다거나 생산 운영을 완료했다고 주장하기"
+    },
+    {
+      "id": "project-high-level-flow",
+      "class": "I+P",
+      "claim": "프로젝트를 사용자 목표→업무 맥락→서비스 처리 흐름→결과 검증→피드백 기반 개선의 상위 서비스 흐름으로 설명한다.",
+      "source": "project-abstraction-map-v5.json; local repository docs",
+      "safeWording": "사람의 업무 목적을 서비스 처리로 구조화하고 결과 확인과 개선으로 연결했다.",
+      "avoid": "내부 모듈·알고리즘·필드 이름을 성과의 대리어로 사용하기"
+    },
+    {
+      "id": "user-value",
+      "class": "U",
+      "claim": "사용자는 ‘불편함을 발견하면 개선하려 노력하는 것’을 삶의 가치관으로 직접 제시했다.",
+      "source": "user-provided-existing-answer-q3",
+      "safeWording": "불편함을 발견하면 개선하려 노력한다.",
+      "avoid": "한 문장만으로 협업 능력·전문성·안정적 성격을 확정하기"
+    },
+    {
+      "id": "human-viewpoint",
+      "class": "I+N",
+      "claim": "AI가 사람의 판단을 대신하기보다 결과 확인과 다음 행동을 돕는다는 관점은 사용자의 가치관·공고·프로젝트 자료를 결합한 편집 해석이며 최종 의미 확인이 필요하다.",
+      "source": "user-understanding-projection-v4.json; domain-knowledge-v5.json",
+      "safeWording": "AI 서비스는 사람의 판단과 책임을 보조하고 확인 가능한 다음 행동으로 연결해야 한다고 생각합니다.",
+      "avoid": "사용자 확인 전 확정된 정체성·철학으로 일반화하기"
+    },
+    {
+      "id": "canonical-language",
+      "class": "I",
+      "claim": "핵심 개념을 사용자 목표·업무 맥락·서비스 처리 흐름·결과 검증·검토 가능한 기록·피드백 기반 개선으로 고정하고 내부 용어는 설명어로 제한한다.",
+      "source": "domain-knowledge-v5.json; artifacts/knowledge/ai/ai-service-engineer-domain-and-evaluation-v5.md",
+      "safeWording": "추상어를 쓸 때 입력·처리·결과·확인 기준·다음 행동을 함께 적는다.",
+      "avoid": "독자가 의미를 복원해야 하는 내부 용어를 문단의 주어로 두기"
+    },
+    {
+      "id": "question-boundary",
+      "class": "I",
+      "claim": "Q1은 직무 행동, Q2는 과거 프로젝트의 선택과 검증, Q3는 회사에서 반복할 가치관 행동을 중심으로 한다.",
+      "source": "question-differentiation-v5.json",
+      "safeWording": "문항별 주어와 판단 기준을 달리해 같은 경험의 반복을 줄인다.",
+      "avoid": "세 문항 모두 같은 사용자 목표·서비스 처리 일반론으로 작성하기"
+    },
+    {
+      "id": "quality-and-outcome-boundary",
+      "class": "M",
+      "claim": "현재 생산 사용자·고객 결과·처리시간·비용·가동률·정확도·장애·채택의 실행 증거는 제공되지 않았다.",
+      "source": "project-abstraction-map-v5.json; claim-ledger-v5.json",
+      "safeWording": "설계 기준으로 삼았다·확인 가능하도록 구성했다·입사 후 관찰하겠다.",
+      "avoid": "높였다·줄였다·해결했다·운영했다를 과거 성과로 사용하기"
+    },
+    {
+      "id": "source-visibility",
+      "class": "I",
+      "claim": "상세 외부·저장소 출처는 knowledge/reference/JSON에 보관하고 최종 PDF에는 공식 모집공고만 노출한다.",
+      "source": "domain-knowledge-v5.json; work-item reference v5",
+      "safeWording": "보고서의 참고자료는 공식 모집공고로 제한하고 상세 근거는 내부 산출물에 보관했다.",
+      "avoid": "PDF에 사용자가 요청하지 않은 연구·스타일 가이드 링크를 나열하기"
+    }
+  ],
+  "sentenceReviewProtocol": [
+    "문항의 주어를 먼저 확인하고, Q1은 직무 행동·Q2는 과거 선택·Q3는 조직 행동으로 쓴다.",
+    "과거 사실·제한적 해석·입사 후 계획의 시제를 분리한다.",
+    "개인 기여는 사용자 제공 정보로 시작하되 실제 변경·실행·배포 증거를 제출 전에 확인한다.",
+    "핵심 문장에는 행위자·대상·행동·판단 기준 또는 다음 행동 중 세 요소 이상을 남긴다.",
+    "같은 개념에는 같은 보편 용어를 쓰고 프로젝트 내부어는 한 번 설명한 뒤 반복하지 않는다.",
+    "구현 단위가 문단의 중심이 되면 사용자 목표→업무 맥락→서비스 처리→결과 검증→개선 흐름으로 다시 쓴다."
+  ],
+  "claimClassesForLedger": {"F": "official/repository fact", "U": "user-provided", "P": "user confirmation required", "I": "bounded interpretation", "N": "future plan", "M": "measurement limitation"}
+}

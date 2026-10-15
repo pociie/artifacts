@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "title": "Claude Code core engineering study",
+  "repository": "https://github.com/stupidhumans/claude-code-source-code",
+  "expectedRevision": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+  "version": "2.1.88",
+  "created": "2026-09-20",
+  "defaultSourceRoot": "../../sources/stupidhumans/claude-code-source-code",
+  "sourceSubdirectory": "src",
+  "includeExtensions": [".ts", ".tsx"],
+  "largestFileLimit": 40,
+  "fallbackGroup": "other",
+  "groups": [
+    {
+      "id": "conversation-engine",
+      "match": {
+        "exact": ["query.ts", "QueryEngine.ts", "utils/queryContext.ts", "constants/prompts.ts", "context.ts"],
+        "prefix": ["query/", "services/api/", "utils/processUserInput/"]
+      }
+    },
+    {
+      "id": "message-context-persistence",
+      "match": {
+        "exact": ["utils/messages.ts", "utils/attachments.ts", "utils/sessionStorage.ts", "utils/sessionRestore.ts", "utils/fileStateCache.ts", "utils/fileHistory.ts"],
+        "prefix": ["services/compact/", "memdir/", "utils/messages/"]
+      }
+    },
+    {
+      "id": "tool-runtime-contract",
+      "match": {
+        "exact": ["Tool.ts", "tools.ts", "hooks/useCanUseTool.tsx"],
+        "prefix": ["services/tools/"]
+      }
+    },
+    {
+      "id": "coding-file-tools",
+      "match": { "regex": ["^tools/(FileReadTool|FileEditTool|FileWriteTool|GlobTool|GrepTool|LSPTool|NotebookEditTool)/"] }
+    },
+    {
+      "id": "shell-effect-tools",
+      "match": { "regex": ["^tools/(BashTool|PowerShellTool)/", "^utils/(bash|powershell|shell)/"] }
+    },
+    {
+      "id": "permission-security",
+      "match": {
+        "exact": ["types/permissions.ts", "utils/sandbox.ts"],
+        "prefix": ["utils/permissions/", "services/policyLimits/"]
+      }
+    },
+    {
+      "id": "agent-task-runtime",
+      "match": {
+        "exact": ["Task.ts", "tasks.ts", "utils/forkedAgent.ts"],
+        "prefix": ["tools/AgentTool/", "tasks/", "utils/swarm/"]
+      }
+    },
+    {
+      "id": "interactive-sdk-surfaces",
+      "match": {
+        "exact": ["main.tsx", "replLauncher.tsx", "ink.ts"],
+        "prefix": ["screens/", "components/PromptInput/", "ink/", "cli/", "bridge/", "hooks/useReplBridge"]
+      }
+    },
+    {
+      "id": "extension-adapters",
+      "match": {
+        "exact": ["utils/hooks.ts"],
+        "prefix": ["services/mcp/", "utils/plugins/", "skills/", "utils/hooks/"]
+      }
+    },
+    {
+      "id": "operations-composition",
+      "match": {
+        "exact": ["utils/config.ts", "cost-tracker.ts", "costHook.ts"],
+        "prefix": ["bootstrap/", "services/analytics/"]
+      }
+    }
+  ],
+  "lexicalPressures": [
+    { "id": "reliability", "pattern": "\\b(retry|fallback|abort|cleanup|error|recover|orphan|resume|flush|corrupt|stale|leak|deadlock|infinite loop)\\b", "flags": "i" },
+    { "id": "performance", "pattern": "\\b(latency|critical path|cache|caching|memory|O\\(|jank|slow|fast|prefetch|token|cost)\\b", "flags": "i" },
+    { "id": "security", "pattern": "\\b(permission|sandbox|deny|allow|dangerous|injection|untrusted|secret|credential|symlink|destructive)\\b", "flags": "i" },
+    { "id": "compatibility", "pattern": "\\b(backward|compatib|deprecated|legacy|VCR|fixture|provider|Windows|Bedrock|Vertex)\\b", "flags": "i" },
+    { "id": "concurrency", "pattern": "\\b(race|concurrent|parallel|queue|atomic|generation|lock|interleave|ordering)\\b", "flags": "i" }
+  ],
+  "callExpressions": [
+    { "id": "featureCalls", "callee": "feature" },
+    { "id": "logEventCalls", "callee": "logEvent" },
+    { "id": "queryCheckpointCalls", "callee": "queryCheckpoint" },
+    { "id": "buildToolCalls", "callee": "buildTool" }
+  ],
+  "textOccurrences": [
+    { "id": "todoMarkers", "pattern": "\\bTODO\\b", "flags": "g" },
+    { "id": "withoutThisMarkers", "pattern": "[Ww]ithout this", "flags": "g" },
+    { "id": "previouslyMarkers", "pattern": "[Pp]reviously", "flags": "g" }
+  ]
+}

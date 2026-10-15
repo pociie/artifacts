@@ -1,0 +1,95 @@
+{
+  "kind": "work-execution-binding/v1",
+  "schemaVersion": 1,
+  "bindingId": "binding:minimal-orchestrator-worktree-delivery:r1",
+  "workRef": "work:runtime-loop-agent-artifacts",
+  "workRevision": "r2",
+  "instruction": {
+    "instructionRef": "instruction:opaque:minimal-orchestrator-worktree-delivery",
+    "revision": "r1",
+    "requestDigest": "sha256:8718889cdc9c02dd62c6e9be59dc01f38cb0f2182a5741527e6e199e2dbe3a3d",
+    "objectiveRef": "objective:minimal-orchestrator-worktree-delivery",
+    "origin": {
+      "channel": "chat",
+      "sessionRef": "session:opaque:requester",
+      "turnRef": "turn:opaque:minimal-orchestrator-r1",
+      "requestingAgentRef": "agent-session:opaque:root",
+      "callbackRouteRef": "callback:opaque:requester"
+    },
+    "rawPromptStored": false
+  },
+  "composition": {
+    "loopRef": "artifacts/agent-loop/work/issue-worktree-orchestration/loop.yaml",
+    "loopRevision": "v6",
+    "agentRef": "artifacts/agents/engineering/agents/bounded-source-implementer.yaml",
+    "origin": "reusable",
+    "dynamicBlueprintRefs": [],
+    "coverageDecisionRef": "coverage:reuse-first:minimal-orchestrator-worktree-delivery"
+  },
+  "execution": {
+    "assignmentRef": "assignment:minimal-orchestrator-contract-contribution",
+    "executionSessionRef": "session:opaque:child-writer",
+    "worktreeRef": "worktree:opaque:minimal-orchestrator-child",
+    "branchRef": "refs/heads/judangs/minimal-orchestrator-delivery",
+    "baseCommit": "b4c93b52fbe8669c85ff21dab80916c776d45e2f",
+    "mutableStateRef": ".collab/memory/orchestrator-minimal-worktree-delivery",
+    "runRef": null,
+    "taskRef": null,
+    "dispatchRef": null,
+    "coordinatorMode": "coordination_only",
+    "orchestratorCommitBoundary": "none"
+  },
+  "delivery": {
+    "topologyMode": "delegated_child",
+    "deliveryOwnerRef": "agent:worktree-loop-delivery-owner",
+    "externalDelivery": false,
+    "deliveryKind": "ordinary",
+    "targetRepositoryRef": "repository:pociie/collab-mono",
+    "targetBranchRef": "refs/heads/integration",
+    "pullRequestRef": null,
+    "parentDeliveryRef": "github:pull-request:95",
+    "status": "contribution_ready",
+    "deliveryReceiptRef": null
+  },
+  "notificationPolicy": {
+    "deliverOn": ["hitl_required", "review_ready", "completed", "stopped"],
+    "suppress": [
+      "started",
+      "progress",
+      "heartbeat",
+      "retry_within_budget",
+      "validation_running",
+      "ci_pending",
+      "worker_done_unaccepted"
+    ],
+    "fallbackRouteRef": "callback:opaque:user-inbox",
+    "dedupeKeyRef": "dedupe:instruction-digest:event-type:work-revision"
+  },
+  "lifecycle": {
+    "state": "validating",
+    "decisionPacketRef": null,
+    "completionReceiptRef": null,
+    "stopReasonRef": null,
+    "resumeConditionRef": null
+  },
+  "privacy": {
+    "sanitized": true,
+    "containsRawPrompt": false,
+    "containsTranscript": false,
+    "containsPrivateReasoning": false,
+    "containsCredentials": false,
+    "containsReplayableApproval": false
+  },
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "evidenceRefs": [
+    "docs/plan/artifacts/minimal-orchestrator-worktree-delivery-plan.md",
+    "artifacts/agent-loop/observation/execution-supervision/contract.md",
+    "artifacts/loop-architecture/core/branch-operation-governance.md",
+    "worktree-settlement:allow_current_writer"
+  ],
+  "integrity": {
+    "algorithm": "sha256",
+    "bindingDigest": "sha256:a9f9c94b0dcfbe8062acf512d786d54607e3cdffcf7734a5d27c60dd3b93fe88"
+  }
+}

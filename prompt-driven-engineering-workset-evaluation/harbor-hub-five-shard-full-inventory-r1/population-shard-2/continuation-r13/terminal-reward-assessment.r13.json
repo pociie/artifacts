@@ -1,0 +1,760 @@
+{
+  "artifactLifecycle": {
+    "dynamicComposition": {
+      "automaticPromotion": false,
+      "componentRefs": [
+        "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+        "artifacts/loop-architecture/components/execution-topology-requirement/component.json",
+        "artifacts/loop-architecture/components/agentic-architecture/component.json",
+        "artifacts/loop-architecture/components/agent-architecture-coordination/component.json"
+      ],
+      "disposition": "operated",
+      "dynamicArtifactRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dynamic/native-subject-capability-gate.r13.json"
+      ],
+      "expiryConditionRefs": [
+        "memory:...:dynamic-expiry:item-settled",
+        "memory:...:dynamic-expiry:source-r13-changed",
+        "memory:...:dynamic-expiry:qualification-fingerprint-changed"
+      ],
+      "fallbackRef": "memory:...:dynamic-fallback:hold-item-and-wake-on-changed-fingerprint",
+      "operationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dynamic-artifact-composition-resolution.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dynamic-artifact-register.r13.json"
+      ],
+      "outcomeEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/independent-evaluation.r13.json"
+      ],
+      "required": true,
+      "residualGapRef": "memory:...:continuation-r13:dynamic-residual-gap:subject-effective-capability",
+      "reusableArtifactRefs": [
+        ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/provider-private/task-package-manifest.r13.json",
+        "artifacts/loop-architecture/components/execution-routing/algorithms/compound-instruction-mode-journey/algorithm.json",
+        "artifacts/loop-architecture/components/work-queue-coordination/algorithms/population-settlement-accounting/algorithm.json"
+      ],
+      "validityWindowRef": "memory:...:continuation-r13:dynamic-validity-window"
+    },
+    "operations": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-discovery.r13.json"
+        ],
+        "limitations": [],
+        "operationId": "discover",
+        "state": "operated"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-discovery.r13.json"
+        ],
+        "limitations": [],
+        "operationId": "reuse",
+        "state": "operated"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dynamic-artifact-register.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dynamic/native-subject-capability-gate.r13.json"
+        ],
+        "limitations": [
+          "created only a bounded run-private candidate; not a reusable source patch"
+        ],
+        "operationId": "create",
+        "state": "operated"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-lifecycle-observation.r13.json"
+        ],
+        "limitations": ["reusable source update was not authorized for this quality gap"],
+        "operationId": "update",
+        "state": "rejected"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-lifecycle-observation.r13.json"
+        ],
+        "limitations": ["one item and one residual capability gap do not justify source splitting"],
+        "operationId": "split",
+        "state": "rejected"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-lifecycle-observation.r13.json"
+        ],
+        "limitations": ["no semantically compatible dynamic candidates were eligible for merge"],
+        "operationId": "merge",
+        "state": "rejected"
+      }
+    ],
+    "requestedOperationIds": ["discover", "reuse", "create", "update", "split", "merge"]
+  },
+  "assessmentId": "assessment:harbor-population-shard-2:r13:abhishek203-task-aw",
+  "assessmentRevision": 1,
+  "authorityEffect": "none",
+  "bindings": {
+    "evaluationReport": {
+      "digest": "sha256:60427fe718d53ed2b1e9cba72ef30fc636860c8f12eae97c84a88c1c1142f13a",
+      "final": false,
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/independent-evaluation.r13.json",
+      "simulationEvidenceDigest": "sha256:e357ae3be8d70c5192454c7506b18745f45fe7f4c5c22b22be90003e6cf3a2a1"
+    },
+    "evaluator": {
+      "digest": "sha256:4cc3cd8d17db20c0a73449d107170c1db81aeff160bf10968643e1d688c03a62",
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/algorithms/workset-terminal-reward-reduction/implementation.py"
+    },
+    "profile": {
+      "digest": "sha256:ca1e8d48eff7e065cf4cf1f2e4be5ec86778f97509df137e2de6308bdc0632bf",
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/profiles/workset-terminal-reward.profile.json"
+    },
+    "rubric": {
+      "digest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18",
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    },
+    "simulationEvidence": {
+      "digest": "sha256:e357ae3be8d70c5192454c7506b18745f45fe7f4c5c22b22be90003e6cf3a2a1",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/simulation-evidence.r13.json",
+      "settled": true
+    }
+  },
+  "calibration": {
+    "evidenceRefs": [],
+    "humanLabelPopulationRef": null,
+    "metrics": {
+      "abstentionRate": null,
+      "chanceCorrectedAgreement": null,
+      "falseAllowRate": null,
+      "falseBlockRate": null
+    },
+    "ownerThresholds": {
+      "maxAbstentionRate": 0.1,
+      "maxFalseAllowRate": 0.1,
+      "maxFalseBlockRate": 0.15,
+      "minChanceCorrectedAgreement": 0.7
+    },
+    "state": "not_required"
+  },
+  "criterionObservations": [
+    {
+      "criterionId": "gate.binding.final_evaluation",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/independent-evaluation.r13.json"
+      ],
+      "limitations": [
+        "evaluation report remains non-final because no Harbor Subject execution or effective receipts exist"
+      ],
+      "score": null,
+      "state": "unavailable"
+    },
+    {
+      "criterionId": "gate.boundary.authority_privacy",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/source-and-plan-binding.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/independent-evaluation.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.lifecycle.terminal_settlement",
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/settlement-ledger.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/terminal-item-receipt.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.lifecycle.population_disposition_integrity",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/population-settlement-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/item-receipt-reconciliation.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.context.requirement_scope_lifetime_integrity",
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/requirement-scoped-context-revalidation.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/mode-reasoning-envelope.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.routing.compound_obligation_coverage",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/compound-mode-journey.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/mode-reasoning-envelope.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.validation.reward_hacking",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/terminal-reward-reduction.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-lifecycle-observation.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.outcome.required_validation",
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/independent-evaluation.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/simulation-evidence.r13.json"
+      ],
+      "limitations": ["protected verifier did not run"],
+      "score": null,
+      "state": "unavailable"
+    },
+    {
+      "criterionId": "gate.artifact.lifecycle_coverage",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-lifecycle-observation.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.artifact.reuse_before_dynamic",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-discovery.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dynamic-artifact-composition-resolution.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.artifact.dynamic_residual_gap",
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dynamic-artifact-composition-resolution.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dynamic-artifact-register.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "gate.artifact.dynamic_binding_integrity",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dynamic-artifact-composition-resolution.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dynamic-artifact-register.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/independent-evaluation.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.requirement_understanding",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/source-and-plan-binding.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/independent-evaluation.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.operability",
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/subject-operation.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/provider-observation.r13.json"
+      ],
+      "limitations": ["effective model, reasoning effort, and runtime timeout receipts are absent"],
+      "score": null,
+      "state": "unavailable"
+    },
+    {
+      "criterionId": "reward.routing",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/route-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/compound-mode-journey.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.reasoning_control",
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/mode-reasoning-control-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/mode-reasoning-envelope.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.context_adaptation",
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/requirement-scoped-context-revalidation.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/source-and-plan-binding.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.workflow",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/workflow-pattern-qualification.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/compound-mode-journey.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.agent_architecture",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/architecture-selection.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/topology-requirement.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.agent_swarm",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/swarm-selection.r13.json"
+      ],
+      "limitations": [
+        "swarm was explicitly not required by the selected architecture-only topology"
+      ],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.artifact.discover",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-discovery.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.artifact.reuse",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-discovery.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.artifact.create",
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-lifecycle-observation.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.artifact.update",
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-lifecycle-observation.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.artifact.split",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-lifecycle-observation.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.artifact.merge",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/artifact-lifecycle-observation.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.artifact.dynamic_composition",
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dynamic-artifact-composition-resolution.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/dynamic-artifact-register.r13.json"
+      ],
+      "limitations": [
+        "dynamic candidate is bounded and held but unvalidated until effective receipts change"
+      ],
+      "score": null,
+      "state": "partial"
+    },
+    {
+      "criterionId": "reward.loop_architecture_quality",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/route-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/workflow-pattern-qualification.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/topology-requirement.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/coordination-decision.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.evidence_quality",
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/independent-evaluation.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/settlement-ledger.r13.json"
+      ],
+      "limitations": [],
+      "score": 1.0,
+      "state": "supported"
+    },
+    {
+      "criterionId": "reward.outcome_quality",
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/independent-evaluation.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/simulation-evidence.r13.json"
+      ],
+      "limitations": ["no subject/verifier outcome is available"],
+      "score": null,
+      "state": "unavailable"
+    },
+    {
+      "criterionId": "reward.efficiency",
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/subject-operation.r13.json"
+      ],
+      "limitations": ["no elapsed subject execution or effective effort receipt exists"],
+      "score": null,
+      "state": "unavailable"
+    }
+  ],
+  "declaredDecision": {
+    "diagnosticReward": null,
+    "dimensionRewards": [
+      {
+        "dimensionId": "requirement_understanding",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "operability",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "routing",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "reasoning_control",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "context_adaptation",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "workflow",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "agent_architecture",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "agent_swarm",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_discovery",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_reuse",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_creation",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_update",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_split",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_merge",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "dynamic_artifact_composition",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "loop_architecture_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "evidence_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "outcome_quality",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "efficiency",
+        "reward": null,
+        "state": "unavailable"
+      }
+    ],
+    "disposition": "require_context",
+    "findings": [
+      {
+        "criterionId": "gate.binding.final_evaluation",
+        "findingType": "protected_gate_failure",
+        "ownerRoute": "EVALUATOR_UNCERTAINTY",
+        "severity": "critical"
+      },
+      {
+        "criterionId": "gate.outcome.required_validation",
+        "findingType": "protected_gate_failure",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "critical"
+      },
+      {
+        "criterionId": "reward.operability",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ENVIRONMENT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.dynamic_composition",
+        "findingType": "evidence_gap",
+        "ownerRoute": "DYNAMIC_ARTIFACT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.outcome_quality",
+        "findingType": "evidence_gap",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "major"
+      }
+    ],
+    "improvementTargetCriterionIds": [
+      "gate.binding.final_evaluation",
+      "gate.outcome.required_validation",
+      "reward.operability",
+      "reward.artifact.dynamic_composition",
+      "reward.outcome_quality"
+    ],
+    "primaryReward": 0.0,
+    "promotionEligible": false,
+    "reasonCodes": [
+      "final_evaluation_incomplete",
+      "protected_criterion_unresolved",
+      "qualifying_criterion_unresolved",
+      "required_active_dimension_unavailable"
+    ],
+    "useClass": "workset_terminal"
+  },
+  "dimensionThresholds": [
+    {
+      "dimensionId": "requirement_understanding",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "operability",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "routing",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "reasoning_control",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "context_adaptation",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "workflow",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "agent_architecture",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "agent_swarm",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "artifact_discovery",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "artifact_reuse",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "artifact_creation",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "artifact_update",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "artifact_split",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "artifact_merge",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "dynamic_artifact_composition",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "loop_architecture_quality",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "evidence_quality",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "outcome_quality",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    },
+    {
+      "dimensionId": "efficiency",
+      "minimumReward": 0.8,
+      "weight": 1.0
+    }
+  ],
+  "freeze": {
+    "activationDigest": "sha256:2d95235ec038aef16ccc46b21c3266877c336acc8e25cd6a489ad8bbcba61d44",
+    "environmentDigest": "sha256:18090a9e1e81f8d5f41ada24d1f1269f4cbf3de83cb2ff5115f5d5ccb6179839",
+    "frozenBeforeExecution": true,
+    "rubricDigest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18",
+    "taskDigest": "sha256:d57791b31055465c3a19dc86918cd05a26ab9f86238a7ee928fd795060b1eebb",
+    "thresholdsDigest": "sha256:208ba1fc751f36dfcb364b75602b65bcfa659c74fddd48b5ccfe2c7a6e116552"
+  },
+  "integrity": {
+    "algorithm": "canonical-json-sha256/v1",
+    "digest": "sha256:849bc08ced620b86904244643c947e011ee3ee30518dbdf5b86902a80145bada"
+  },
+  "kind": "workset-terminal-reward-assessment/v1",
+  "roles": {
+    "evaluatorRef": "role:evaluator:engineering",
+    "independentValidatorRef": "role:independent-validator:deterministic",
+    "oracleOwnerRef": "role:oracle-owner:harbor",
+    "rewardReducerRef": "role:reward-reducer:terminal",
+    "subjectAgentRef": "role:subject-agent:harbor"
+  },
+  "schemaVersion": 1,
+  "settlement": {
+    "evidenceRefs": [
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/settlement-ledger.r13.json",
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r13/terminal-item-receipt.r13.json"
+    ],
+    "state": "complete"
+  },
+  "status": "report_only",
+  "workset": {
+    "environmentRef": "environment:harbor:darwin-arm64-host:terminal-bench-qemu-alpine-ssh",
+    "split": "development",
+    "taskRef": "abhishek203/task-a-4",
+    "taskRevision": "revision:1"
+  }
+}

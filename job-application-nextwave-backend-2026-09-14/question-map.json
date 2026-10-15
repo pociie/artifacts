@@ -1,0 +1,20 @@
+{
+  "kind": "job-application-question-map/v1",
+  "schema_version": 1,
+  "run_id": "job-application-nextwave-backend-2026-09-14",
+  "language": "ko",
+  "questions": [
+    {"id": "question-strength", "prompt": "본인을 가장 잘 나타낼 수 있는 강점 한 가지를 경험과 함께 설명", "max_chars": 500, "answer_role": "핵심 강점 → 공개 프로젝트 장면 → 백엔드 직무 전이"},
+    {"id": "question-motivation", "prompt": "회사와 백엔드 개발 직무에 관심을 갖게 된 계기와 지원 이유", "max_chars": 700, "answer_role": "직무 관심 → 공고 요구와 경험의 접점 → 입사 후 방향"},
+    {"id": "question-problem", "prompt": "예상하지 못한 문제 또는 기술적 어려움을 상황·행동·결과 중심으로 설명", "max_chars": 800, "answer_role": "문제 상황 → 책임·순서 분리 행동 → 확인 가능한 결과와 한계"},
+    {"id": "question-contribution", "prompt": "입사 후 안정성과 사용자 경험 향상에 기여할 방식", "max_chars": null, "working_max_chars": 1000, "answer_role": "API·데이터·관찰·복구를 사용자 경험과 연결", "limit_status": "unknown"}
+  ],
+  "set_differentiators": [
+    {"candidate_id": "candidate-set-1", "lens": "책임 단위와 도메인 모델"},
+    {"candidate_id": "candidate-set-2", "lens": "API 계약과 데이터 책임"},
+    {"candidate_id": "candidate-set-3", "lens": "검증 가능성과 안정성 신호"},
+    {"candidate_id": "candidate-set-4", "lens": "데이터 생명주기와 처리 경계"},
+    {"candidate_id": "candidate-set-5", "lens": "사용자 행동과 실패 경험"}
+  ],
+  "coverage_rule": "각 세트는 네 문항을 모두 포함하되, 한 가지 중심 렌즈가 세트 전체에서 반복·확장되도록 구성한다."
+}

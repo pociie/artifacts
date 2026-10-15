@@ -1,0 +1,85 @@
+{
+  "kind": "sanitized-coordination-consistency-gate-report/v1",
+  "reportId": "consistency-gate:book-pdf-coordination-v3",
+  "status": "pass_with_noncompensatory_holds",
+  "candidateRef": "collaboration-bundle-v3.json",
+  "manifestRef": "artifact-state-manifest.json",
+  "checks": [
+    {
+      "id": "json-parse",
+      "result": "pass",
+      "evidence": "All current coordination-v3 JSON and selected visual JSON artifacts parse."
+    },
+    {
+      "id": "working-memory-binding",
+      "result": "pass",
+      "evidence": "working-memory-binding/v1 checker returned valid for the task-local namespace."
+    },
+    {
+      "id": "reusable-operation-request",
+      "result": "pass",
+      "evidence": "reusable-artifact operation-request v2 checker returned valid with authorityEffect none and acceptedAsEvidence false."
+    },
+    {
+      "id": "source-review-resource-convergence",
+      "result": "pass_for_delivery_only",
+      "evidence": "Three review Tasks completed and all three worker terminals were released; no reclaimable worker remains.",
+      "limitation": "Delivery and resource convergence do not accept any source-analysis claim."
+    },
+    {
+      "id": "visual-mockup-integrity",
+      "result": "pass_for_current_snapshot",
+      "evidence": "Thirteen manifest paths exist and every listed SHA-256 matches; files report 1536 by 1024 RGB PNG.",
+      "limitation": "This is deterministic file integrity, not independent visual acceptance."
+    },
+    {
+      "id": "visual-candidate-handoff",
+      "result": "received_with_holds",
+      "evidence": "A visual-owned candidate handoff, author-side validation candidate, pending settlement-status record, prototype PDF, and prototype contact sheet exist with recorded digests.",
+      "limitation": "The handoff has no recipient acknowledgement; validation is explicitly non-independent; the settlement record explicitly says settlement is pending."
+    },
+    {
+      "id": "predecessor-supersession",
+      "result": "pass",
+      "evidence": "v1 and v2 predecessor digests and separate dispositions are recorded; neither file was rewritten by v3."
+    },
+    {
+      "id": "write-boundary-separation",
+      "result": "pass",
+      "evidence": "The coordinator writes only coordination-v3; visual PDF expression, mockups, manifest, and source-to-claim files remain visual-agent-owned and read-only to the coordinator."
+    },
+    {
+      "id": "canonical-boundary",
+      "result": "pass",
+      "evidence": "AGENTS.md and artifacts/loop-architecture/** are explicitly read-only and out of scope for v3."
+    },
+    {
+      "id": "existing-versus-pending",
+      "result": "pass_with_findings",
+      "evidence": "The v3 manifest hashes only existing files and labels unmaterialized README outputs and future role outputs as pending.",
+      "findings": [
+        "recipient-handoff-candidate.json exists, but the README-named recipient-handoff.json remains pending",
+        "validation-candidate.json exists as author-side preliminary evidence, but independent validation-evidence.json remains pending",
+        "settlement-status.json exists only as a pending-status record; settlement-evidence.json remains pending",
+        "architecture-selection.json now resolves to a visual-owned route-decision-v3.json, but that route and the candidate handoff still bind predecessor collaboration-bundle-v2"
+      ]
+    },
+    {
+      "id": "authority-and-lifecycle",
+      "result": "pass_with_holds",
+      "evidence": "Candidate records state authorityEffect none and do not claim activation, acceptance, publication, promotion, or settlement."
+    }
+  ],
+  "noncompensatoryHolds": [
+    "a visual candidate handoff arrived, but recipient acknowledgement and an independently validated contribution packet have not",
+    "source-analysis claims have not received independent validation",
+    "fact and visual validation has not arrived",
+    "visual route and handoff candidates still bind predecessor collaboration-bundle-v2 and have not been reconciled to coordinator bundle v3",
+    "registered-profile reuse or proven-gap dynamic blueprint qualification is unmade",
+    "no authorized acceptance or settlement decision exists"
+  ],
+  "decision": "The v3 coordination candidate is internally consistent enough to preserve and hand off, but it is not activated, accepted, publishable, promoted, or settled.",
+  "nextAction": "Have the visual owner and recipient freeze and acknowledge an exact contribution packet, reconcile the visual candidates' predecessor-v2 binding without silent substitution, then bind the frozen source and visual packets to an independent validation request. Any later activation or acceptance requires a separate authorized decision.",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false
+}

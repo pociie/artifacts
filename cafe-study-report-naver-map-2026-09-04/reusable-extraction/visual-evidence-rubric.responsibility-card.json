@@ -1,0 +1,145 @@
+{
+  "kind": "reusable-artifact-responsibility-card/v1",
+  "schemaVersion": 1,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "artifactId": "candidate:contract-checker:visual-evidence-rubric",
+  "version": "1",
+  "baseResponsibilityClass": "contract_checker",
+  "specialization": "visual-evidence-rubric",
+  "scope": {
+    "value": "unresolved",
+    "evidenceClassification": "unavailable",
+    "evidenceRefs": []
+  },
+  "purpose": "시각 자료의 적격성, 비교 가능성, 불확실성, 관찰 지표를 비보상적 순서로 표현하는 재사용 후보의 책임을 기술한다.",
+  "expectedOutcome": "도메인 프로필이 공급자·장소·임계값·선호 차원을 주입하더라도 필수 실패와 증거 부족이 비교값으로 가려지지 않는 보고 전용 판정 기록",
+  "owner": {
+    "value": null,
+    "evidenceClassification": "unavailable",
+    "evidenceRefs": []
+  },
+  "maintainer": {
+    "value": null,
+    "evidenceClassification": "unavailable",
+    "evidenceRefs": []
+  },
+  "intendedConsumers": [
+    "domain visual-evaluation profile authors",
+    "visual evidence evaluators",
+    "deterministic result integrators"
+  ],
+  "owns": [
+    "visual evidence acceptance and rejection vocabulary",
+    "mandatory qualifying comparative observational decision order",
+    "evidence-to-subject traceability and uncertainty states"
+  ],
+  "mustNotOwn": [
+    "provider collection authentication or effects",
+    "domain-specific dimensions weights or thresholds",
+    "agent assignment acceptance promotion or final user choice"
+  ],
+  "sourceMembers": [
+    ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/reusable-extraction/visual-evidence-rubric-definition.candidate.json"
+  ],
+  "interfaces": {
+    "inputs": [
+      "source-bound visual evidence units",
+      "domain and task rubric profile",
+      "subject eligibility and comparison observations"
+    ],
+    "outputs": [
+      "evidence-unit dispositions",
+      "subject eligibility findings",
+      "comparison results separated from observations and limitations"
+    ],
+    "publicRefs": [
+      ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/reusable-extraction/visual-evidence-rubric-definition.candidate.json"
+    ],
+    "compatibility": "This report-only candidate has no public runtime consumer; future adoption requires a source-managed schema revision and explicit profile migration."
+  },
+  "dependencies": [
+    {
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/decision-rubric/contract.md",
+      "digest": null
+    },
+    {
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/rubric-operation/contract.md",
+      "digest": null
+    }
+  ],
+  "bindings": {
+    "promptContracts": [],
+    "skills": [
+      {
+        "ref": "artifacts/agents/agent-operation/skill/reusable-artifact-lifecycle-management/SKILL.md",
+        "digest": null
+      }
+    ],
+    "knowledge": [
+      {
+        "ref": "artifacts/knowledge/architecture/engineering-decision-rubrics-and-reuse-evaluation.md",
+        "digest": "6919e4e70f27fc8e1a08a1a4788d3fff295a5dea854d52c5b54bfd44ab420272"
+      },
+      {
+        "ref": "artifacts/knowledge/ai/prompt-design-and-quality-engineering.md",
+        "digest": "a79d204501603b1a0db4215bef9f65dd472f7695871154eb233e1c8796dd9f50"
+      }
+    ],
+    "context": [
+      {
+        "ref": "artifacts/loop-architecture/components/work-pattern-context-resolution/rubrics/domain-work-pattern/rubric.json",
+        "digest": null
+      }
+    ],
+    "memory": [],
+    "tools": [],
+    "mcp": [],
+    "hooks": [],
+    "validation": [
+      {
+        "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/validate-report.mjs",
+        "digest": "379d5bb9213606819fca2d47d95dcf3ae56c3c77718c2ddce5dd07fbe3b4797a"
+      }
+    ]
+  },
+  "lifecycle": {
+    "reviewTriggers": [
+      "a second independent domain or provider uses the same stable responsibility",
+      "false acceptance or false rejection evidence appears",
+      "decision-rubric or rubric-operation contracts change"
+    ],
+    "failure": "Retain the task-local profile and surface unavailable or conflicting evidence without publishing a reusable unit.",
+    "recovery": "Change one bounded finding fingerprint, freeze the candidate, and validate representative positive negative ambiguous conflicting and recovery cases.",
+    "rollback": "Remove the report-only candidate binding and keep the cafe task profile self-contained.",
+    "supersession": "A source-managed owner may replace the candidate only with explicit version compatibility and migration evidence.",
+    "retirement": "Retire when an existing rubric owner fully covers the responsibility or cross-context evidence does not justify maintenance cost."
+  },
+  "evidence": {
+    "classification": "inferred",
+    "refs": [
+      {
+        "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/visual-rubric.json",
+        "digest": "8ee2bccb1e3222b64d8c3e26526159bf6f77597d848217ef0599b1c42ce827dd"
+      },
+      {
+        "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/evaluation.json",
+        "digest": "c3a3c0151f155c903bb109a293348ec259988827eafd51392f59578b2197842f"
+      }
+    ],
+    "limitations": [
+      "Only one cafe-selection task and one image provider have been observed.",
+      "No independent cross-domain consumer or accepted field outcome exists.",
+      "The candidate has no source-managed schema or deterministic standalone checker."
+    ],
+    "counterevidence": [
+      "Engineering Decision Rubric already owns the four criterion kinds and non-compensatory decision semantics.",
+      "A task-local profile may remain clearer and cheaper than a new shared contract."
+    ]
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "b2d9a2e26ac8afde81056dda7a3ff27b9d03fac8b2694e4d98a9cd18a63def3e"
+  }
+}

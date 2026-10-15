@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "e3fcec1baea3d59df168abc0ab7465313620b2b45774856cafec5bc819aef023",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-36-openthoughts-tasktrove-exp-rpt-stack-bash-withtests-gpt5mini-v2/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-36-openthoughts-tasktrove-exp-rpt-stack-bash-withtests-gpt5mini-v2/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "6d7d4af6bb17d925f89c408640af4932fb057387465fcbf17c71dc27f168ba77",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "762486b873d0657bd43c81848bdd9788a8247ff0028954361f93a420b12c4b5a",
+      "topologySelectionDecisionSha256": "52381f8f7646f38b500bf04b5174d56aca213a1bdef413c664b57f60a9983c4b"
+    },
+    {
+      "coordinationPlanDecisionSha256": "e3fcec1baea3d59df168abc0ab7465313620b2b45774856cafec5bc819aef023",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-36-openthoughts-tasktrove-exp-rpt-stack-bash-withtests-gpt5mini-v2/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-36-openthoughts-tasktrove-exp-rpt-stack-bash-withtests-gpt5mini-v2/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "6d7d4af6bb17d925f89c408640af4932fb057387465fcbf17c71dc27f168ba77",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "762486b873d0657bd43c81848bdd9788a8247ff0028954361f93a420b12c4b5a",
+      "topologySelectionDecisionSha256": "52381f8f7646f38b500bf04b5174d56aca213a1bdef413c664b57f60a9983c4b"
+    },
+    {
+      "coordinationPlanDecisionSha256": "e3fcec1baea3d59df168abc0ab7465313620b2b45774856cafec5bc819aef023",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-36-openthoughts-tasktrove-exp-rpt-stack-bash-withtests-gpt5mini-v2/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-36-openthoughts-tasktrove-exp-rpt-stack-bash-withtests-gpt5mini-v2/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "6d7d4af6bb17d925f89c408640af4932fb057387465fcbf17c71dc27f168ba77",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "762486b873d0657bd43c81848bdd9788a8247ff0028954361f93a420b12c4b5a",
+      "topologySelectionDecisionSha256": "52381f8f7646f38b500bf04b5174d56aca213a1bdef413c664b57f60a9983c4b"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

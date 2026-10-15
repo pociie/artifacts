@@ -1,0 +1,244 @@
+{
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "schemaVersion": 1,
+  "evidenceId": "evidence:harbor-hub-five-shard-full-inventory-r1:population-shard-2:continuation-r5:probe-01",
+  "status": "held",
+  "authorityEffect": "none",
+  "scope": {
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r5/probe-01",
+    "requestDigest": "sha256:f4c468cd438a3c1490bc4a6bcc9be8554c2bbd33fd88b0a737c946e9bfc7d998",
+    "providerClass": "harbor",
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:dc8b56e26addb909623cd1c09b451b232a8b1a077277bda8cbbe82743c7ba9c6",
+    "sourceDigest": "sha256:dc8b56e26addb909623cd1c09b451b232a8b1a077277bda8cbbe82743c7ba9c6",
+    "verifierDigest": "sha256:452fabedbea53b205cecbf28a97c2ccec6d51f746a2eba87531db61e5fd8c17d",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/skill/operate-engineering-workset-simulation/SKILL.md",
+      "artifacts/loop-architecture/components/execution-routing/pre-route-workflow-resolution.md"
+    ]
+  },
+  "workingMemory": {
+    "bindingRef": "continuation-r5/working-memory-binding.json",
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r5",
+    "sessionCursor": "continuation-r5/cursor-settled",
+    "checkpointRefs": [
+      "continuation-r5/checkpoints/source-binding.json",
+      "continuation-r5/checkpoints/settlement.json"
+    ],
+    "retention": "runtime-private-until-lane-settlement-then-sanitized-immutable-projection",
+    "invalidation": [
+      "operation_revision_change",
+      "source_digest_change",
+      "hub_inventory_digest_change",
+      "provider_capability_change",
+      "model_effort_timeout_receipt_change",
+      "settlement_state_change",
+      "privacy_classification_change"
+    ],
+    "digest": "sha256:b484a3395f67e384ae50dc51ad0b7d80f345405522e2893b04917686216ea432"
+  },
+  "provider": {
+    "qualificationRef": "continuation-r5/probe-dispositions.json",
+    "qualificationDigest": "sha256:39b93bd95ba4c6b388809a6f02b4f7fc2e1a6c0826ea8e8b0f505447ea48995f",
+    "state": "held",
+    "limitations": [
+      "dataset_license_unobserved",
+      "cross_platform_emulation_unqualified",
+      "inert_initialization_probe_required",
+      "protected_verifier_not_run",
+      "effective_model_unverified",
+      "effective_reasoning_effort_unverified",
+      "subject_timeout_runtime_unverified",
+      "cost_budget_unqualified"
+    ]
+  },
+  "population": {
+    "selectionRule": "integer(SHA256(canonicalDatasetId)[0:16],16) mod 5 == 1; plan-bound case-preserving id",
+    "taskCount": 1,
+    "taskDigests": ["sha256:f4c468cd438a3c1490bc4a6bcc9be8554c2bbd33fd88b0a737c946e9bfc7d998"],
+    "exclusions": [
+      "first-materialized-task-only",
+      "remaining-dataset-tasks-not-probed",
+      "remaining-shard-candidates-not-probed-in-bounded-continuation"
+    ]
+  },
+  "environment": {
+    "platformRef": "probes/probe-01-ryanmarten-tb-test.json",
+    "environmentDigest": "sha256:dc51c3e3da8c9b5758b095543f94f4c5082ff401a8d63414a2898708e787d541",
+    "compatibilityState": "held",
+    "limitations": [
+      "cross_platform_emulation_unqualified",
+      "verifier_isolation_not_operated",
+      "subject_timeout_runtime_unverified",
+      "cost_budget_unqualified"
+    ]
+  },
+  "oracle": { "state": "not_run", "taskResults": [] },
+  "arms": [
+    {
+      "id": "arm:harbor-subject-baseline:probe-01",
+      "modelRef": "model:gpt-5.6-luna",
+      "requestedReasoningEffort": "max",
+      "allowedReasoningEfforts": ["max"],
+      "reasoningProfileRef": "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/policy/ai-execution-mode-operation.policy.json",
+      "instructionProfileRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "artifactProjectionDigest": "sha256:f4c468cd438a3c1490bc4a6bcc9be8554c2bbd33fd88b0a737c946e9bfc7d998",
+      "admitted": false
+    }
+  ],
+  "trials": [],
+  "outcomes": {
+    "benchmarkEligibility": false,
+    "architectureInterpretationEligibility": false,
+    "eligibleTrialIds": [],
+    "disqualifications": [
+      "provider-qualification-held",
+      "cross-platform-emulation-unqualified",
+      "license-metadata-unobserved",
+      "model-effort-timeout-unverified",
+      "no-oracle-or-subject-trial"
+    ]
+  },
+  "failures": [
+    {
+      "id": "failure:probe-01:license",
+      "class": "license",
+      "code": "dataset-license-unobserved",
+      "subjectRef": "population-shard-2/continuation-r5/probe-01",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-01:platform",
+      "class": "platform",
+      "code": "cross-platform-emulation-unqualified",
+      "subjectRef": "population-shard-2/continuation-r5/probe-01",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-01:credentials",
+      "class": "provider",
+      "code": "inert-initialization-probe-required",
+      "subjectRef": "population-shard-2/continuation-r5/probe-01",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-01:verifier",
+      "class": "verifier",
+      "code": "protected-verifier-not-run",
+      "subjectRef": "population-shard-2/continuation-r5/probe-01",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-01:model",
+      "class": "model",
+      "code": "effective-model-unverified",
+      "subjectRef": "population-shard-2/continuation-r5/probe-01",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-01:effort",
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "subjectRef": "population-shard-2/continuation-r5/probe-01",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-01:timeout",
+      "class": "environment",
+      "code": "subject-timeout-runtime-unverified",
+      "subjectRef": "population-shard-2/continuation-r5/probe-01",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:probe-01:cost",
+      "class": "environment",
+      "code": "cost-budget-unqualified",
+      "subjectRef": "population-shard-2/continuation-r5/probe-01",
+      "evidenceRefs": ["continuation-r5/probe-dispositions.json"],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    }
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r5",
+    "contentEvidenceRefs": []
+  },
+  "settlement": {
+    "state": "complete",
+    "resources": [
+      {
+        "resourceClass": "task-materialization",
+        "resourceRefDigest": "sha256:f4c468cd438a3c1490bc4a6bcc9be8554c2bbd33fd88b0a737c946e9bfc7d998",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-01-ryanmarten-tb-test.json"]
+      },
+      {
+        "resourceClass": "detail-page",
+        "resourceRefDigest": "sha256:6a65cb69b8a74964ff0a4a47eb175d070151a39aec64e804a7d479444ea5c634",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-01-ryanmarten-tb-test.json"]
+      },
+      {
+        "resourceClass": "environment-image-cache",
+        "resourceRefDigest": "sha256:dc51c3e3da8c9b5758b095543f94f4c5082ff401a8d63414a2898708e787d541",
+        "state": "deleted",
+        "evidenceRefs": ["probes/probe-01-ryanmarten-tb-test.json"]
+      },
+      {
+        "resourceClass": "verifier-image-cache",
+        "resourceRefDigest": "sha256:452fabedbea53b205cecbf28a97c2ccec6d51f746a2eba87531db61e5fd8c17d",
+        "state": "deleted",
+        "evidenceRefs": ["probes/probe-01-ryanmarten-tb-test.json"]
+      },
+      {
+        "resourceClass": "containers",
+        "resourceRefDigest": "sha256:95cde1588c21f348cefadcfcc6e990c7423ab0e545e39f5bcf83a0758be9da5d",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-01-ryanmarten-tb-test.json"]
+      },
+      {
+        "resourceClass": "provider-jobs",
+        "resourceRefDigest": "sha256:6f373e1da04cbb8b873b1b8171eb835d26ab9cc018924516940604e7658425bb",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-01-ryanmarten-tb-test.json"]
+      },
+      {
+        "resourceClass": "auth-material",
+        "resourceRefDigest": "sha256:93c176f9e563b746aaa5d42c3006dd592667bc69f35afa79fe85fa5d3845b67b",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-01-ryanmarten-tb-test.json"]
+      },
+      {
+        "resourceClass": "temporary-files",
+        "resourceRefDigest": "sha256:3348c8aeea14cbca8964c1c2758b44141ce647ba768f18c27d99fa07381a0d1e",
+        "state": "settled",
+        "evidenceRefs": ["probes/probe-01-ryanmarten-tb-test.json"]
+      }
+    ],
+    "reconciliationRef": "continuation-r5/settlement-ledger.json"
+  },
+  "sourceRefs": [
+    "continuation-r5/source-and-plan-binding.json",
+    "continuation-r5/working-memory-binding.json",
+    "continuation-r5/probe-dispositions.json"
+  ],
+  "createdAt": "2026-08-28T13:12:08Z",
+  "digest": "sha256:7aa6dc9b1f07037ba169e4b3f004f63bc5ac233cadce04477e296819c27c1b30"
+}

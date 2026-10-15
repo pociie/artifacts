@@ -1,0 +1,51 @@
+{
+  "kind": "sanitized-agent-architecture-selection/v1",
+  "selectionId": "architecture-selection:book-pdf-source-to-visual-validation",
+  "revision": "book-pdf-architecture/1",
+  "status": "candidate_not_activated",
+  "authorityEffect": "none",
+  "routeRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/route-decision-v3.json",
+  "canonicalSelectionRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/README.md",
+  "canonicalCoordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+  "canonicalUse": "reference_only",
+  "selectedPattern": "pipeline",
+  "communicationTopology": "ordered_handoff",
+  "topologyRequirement": "architecture_only_candidate",
+  "swarmRequired": false,
+  "orderedRoles": [
+    "role:source-investigator-context-curator",
+    "role:domain-prerequisite-researcher",
+    "role:technical-editorial-writer",
+    "role:pdf-information-visual-designer",
+    "role:independent-fact-visual-validator"
+  ],
+  "selectionReasons": [
+    "Each material stage consumes the exact revision produced by its predecessor.",
+    "The source and prerequisite packets constrain, rather than merely inspire, writing and design.",
+    "Independent validation must occur after the manuscript and visual candidate are frozen.",
+    "The requested result does not require consensus voting or a long-lived swarm."
+  ],
+  "rejectedPatterns": [
+    {
+      "pattern": "single_agent",
+      "reason": "Does not represent the requested independent validator or recipient-specific handoffs."
+    },
+    {
+      "pattern": "independent_fan_in",
+      "reason": "The outputs are sequentially dependent rather than independently mergeable peers."
+    },
+    {
+      "pattern": "hierarchical_synthesis",
+      "reason": "A synthesis controller is unnecessary when exact predecessor packets establish a simpler order."
+    },
+    {
+      "pattern": "swarm_consensus",
+      "reason": "Agreement is not a substitute for source traceability or external acceptance."
+    }
+  ],
+  "runtimeQualification": "not_requested",
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "promotion": "not_performed"
+}
+

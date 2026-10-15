@@ -1,0 +1,146 @@
+{
+  "kind": "source-to-claim-packet/v1",
+  "packetId": "source-to-claim:book-pdf-turn-lifecycle",
+  "revision": "book-pdf-source-review/1",
+  "status": "candidate_with_limitations",
+  "sourceClasses": {
+    "observed_source_fact": "현재 task가 참조하는 local reconstruction snapshot 또는 그 산출물에서 직접 확인한 내용",
+    "external_background": "공식 언어·framework·tool 문서나 participant-supplied external source가 제공하는 일반 개념",
+    "project_inference": "observed source fact와 external background를 프로젝트 설명에 연결한 해석"
+  },
+  "sources": [
+    {
+      "id": "SRC-LOCAL-RECONSTRUCTION",
+      "class": "observed_source_fact",
+      "refs": [
+        ".collab/artifacts/claude-code-source-study-2026-09-20/build-study-pack.mjs",
+        ".collab/artifacts/claude-code-architecture-algorithms-study-2026-09-20/book-edition-2026-09-21/manifest.json",
+        ".collab/artifacts/claude-code-architecture-algorithms-study-2026-09-20/book-edition-2026-09-21/engineering/editorial-rationale.md"
+      ],
+      "limitations": [
+        "제3자 복원 snapshot이며 upstream 전체 구현이 아니다.",
+        "누락 모듈과 build parity가 있을 수 있다.",
+        "upstream 의도나 현재 공식 제품 동작을 증명하지 않는다."
+      ]
+    },
+    {
+      "id": "SRC-VIDEO-GENERATOR",
+      "class": "external_background",
+      "url": "https://www.youtube.com/watch?v=3ZnBDXQQN_E",
+      "admission": "participant_supplied_starting_lens",
+      "verification": "transcript_not_independently_verified"
+    },
+    {
+      "id": "SRC-VIDEO-REACT",
+      "class": "external_background",
+      "url": "https://www.youtube.com/watch?v=W83jWFwEnTU",
+      "admission": "participant_supplied_starting_lens",
+      "verification": "transcript_not_independently_verified"
+    },
+    {
+      "id": "SRC-MDN-GENERATOR",
+      "class": "external_background",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+      "publisher": "MDN"
+    },
+    {
+      "id": "SRC-MDN-YIELD",
+      "class": "external_background",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield",
+      "publisher": "MDN"
+    },
+    {
+      "id": "SRC-REACT-EVENTS",
+      "class": "external_background",
+      "url": "https://react.dev/learn/responding-to-events",
+      "publisher": "React"
+    },
+    {
+      "id": "SRC-REACT-SNAPSHOT",
+      "class": "external_background",
+      "url": "https://react.dev/learn/state-as-a-snapshot",
+      "publisher": "React"
+    },
+    {
+      "id": "SRC-REACT-QUEUE",
+      "class": "external_background",
+      "url": "https://react.dev/learn/queueing-a-series-of-state-updates",
+      "publisher": "React"
+    },
+    {
+      "id": "SRC-ANTHROPIC-TOOL-LOOP",
+      "class": "external_background",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/how-tool-use-works",
+      "publisher": "Anthropic"
+    }
+  ],
+  "claims": [
+    {
+      "id": "CLM-001",
+      "label": "external_background",
+      "claim": "Generator/yield는 실행을 pause하고 next(value), throw(), return()으로 재개·오류·종료를 전달할 수 있다.",
+      "sourceRefs": ["SRC-MDN-GENERATOR", "SRC-MDN-YIELD"],
+      "writingImplication": "generator 문법 소개보다 turn lifecycle, cancellation, error propagation, finally cleanup을 먼저 설명한다.",
+      "visualImplication": "generator를 단일 반복 화살표가 아니라 suspended/running/completed 상태와 resume 채널로 그린다."
+    },
+    {
+      "id": "CLM-002",
+      "label": "external_background",
+      "claim": "React 이벤트 핸들러, render별 state snapshot, handler 이후 처리되는 update queue와 batching은 서로 다른 시간 경계다.",
+      "sourceRefs": ["SRC-REACT-EVENTS", "SRC-REACT-SNAPSHOT", "SRC-REACT-QUEUE"],
+      "writingImplication": "Enter 이벤트와 agent loop 완료를 같은 사건으로 서술하지 않는다.",
+      "visualImplication": "UI lane에서 event, captured snapshot, queued update, next render를 분리한다."
+    },
+    {
+      "id": "CLM-003",
+      "label": "external_background",
+      "claim": "Client tool loop는 model request, tool call, client-side effect, tool_result, continuation 경계를 가진다.",
+      "sourceRefs": ["SRC-ANTHROPIC-TOOL-LOOP"],
+      "writingImplication": "model이 tool을 요청하는 일과 client가 effect를 실행·허가하는 일을 구분한다.",
+      "visualImplication": "model, orchestration, permission/effect lane을 분리하고 tool_result가 continuation 입력임을 표시한다."
+    },
+    {
+      "id": "CLM-004",
+      "label": "observed_source_fact",
+      "claim": "기존 project study는 async generator와 React/Ink를 각각 progressive turn protocol과 interactive projection의 렌즈로 배치하며, 실제 source path와 failure/state ownership 질문으로 범위를 보정한다.",
+      "sourceRefs": ["SRC-LOCAL-RECONSTRUCTION"],
+      "writingImplication": "두 영상을 장의 결론이 아니라 코드 읽기의 출발 질문으로 쓴다.",
+      "visualImplication": "UI와 generator 사이에 message/context와 streaming 경계를 삽입한다."
+    },
+    {
+      "id": "CLM-005",
+      "label": "project_inference",
+      "claim": "독자가 가장 적은 개념 점프로 시스템을 이해하려면 user event에서 durability/recovery까지 시간 순서로 전개하는 편이 적합하다.",
+      "sourceRefs": ["CLM-001", "CLM-002", "CLM-003", "CLM-004"],
+      "writingImplication": "각 장은 이전 단계가 다음 단계에 넘기는 state/effect를 명시한다.",
+      "visualImplication": "동일한 7-stage ribbon을 장 opener, sequence diagram, footer navigation에서 반복한다."
+    },
+    {
+      "id": "CLM-006",
+      "label": "project_inference",
+      "claim": "source reconstruction의 관찰과 공식 배경지식, 설계 추론을 같은 확정성으로 표시하면 독자가 provenance를 오해한다.",
+      "sourceRefs": ["SRC-LOCAL-RECONSTRUCTION", "SRC-MDN-GENERATOR", "SRC-REACT-SNAPSHOT", "SRC-ANTHROPIC-TOOL-LOOP"],
+      "writingImplication": "모든 핵심 설명 단위에 OBSERVED SOURCE FACT, EXTERNAL BACKGROUND, PROJECT INFERENCE 중 하나를 붙인다.",
+      "visualImplication": "색만이 아니라 label+shape로 근거 유형을 중복 부호화한다."
+    }
+  ],
+  "recommendedNarrativeOrder": [
+    "user_event",
+    "react_snapshot_and_update_queue",
+    "message_and_context",
+    "generator_turn",
+    "streaming",
+    "tool_permission_and_effect",
+    "durability_and_recovery"
+  ],
+  "requiredDevices": [
+    "prerequisite_callout",
+    "ownership_map",
+    "sequence_diagram",
+    "state_diagram",
+    "evidence_vs_inference_label"
+  ],
+  "prohibitedPresentationShortcut": "dashboard_card_enumeration_as_primary_narrative",
+  "authorityEffect": "none"
+}
+

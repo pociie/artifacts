@@ -1,0 +1,100 @@
+{
+  "kind": "harbor-shard-settlement-ledger/v2",
+  "schemaVersion": 2,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "shardId": "population-shard-5",
+  "continuationId": "population-shard-5:continuation-r12",
+  "claimId": "claim:population-shard-5:aarr-aarri-bench:r12",
+  "claimDigest": "sha256:22b0372e5ea84c0de41c7c85c00b773b36da00ce225623e2ee08eaeb1d76ddcd",
+  "itemId": "aarr/aarri-bench",
+  "operationDecisionDigest": "sha256:12d62634e792c850f001703679d67711fb3f217af8811dc268b51dce4dbbdfb8",
+  "requirementScopeDigest": "sha256:3f2b7a1f00900db29b21ff5a318be74799675e2162a24696cfdd743a4350beba",
+  "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:e185aff8ec6d9dc521d527c67fa959614fefc94514a3a092d00c00b25bb125ab",
+  "itemTerminalStatus": "held",
+  "holdReasonCode": "provider:effective-model-effort-timeout-credential-receipts-unavailable",
+  "executionAttempted": false,
+  "activeProviderResourceCount": 0,
+  "resourceCount": 9,
+  "resources": [
+    {
+      "resourceClass": "queue-claim",
+      "state": "settled",
+      "disposition": "report_only_admission_projection; runtime queue owner CAS remains required",
+      "resourceRefDigest": "sha256:8a48d31106edec417dfb961fbf82c079cddd9b1cd185f9af4c3ac336f5b20068",
+      "evidenceRefs": [
+        "continuation-r12/claim-decision.r12.json",
+        "continuation-r12/claim-settlement.r12.json"
+      ]
+    },
+    {
+      "resourceClass": "task-materialization",
+      "state": "not_created",
+      "disposition": "capability hold before provider materialization",
+      "resourceRefDigest": "sha256:6305649acfb122e8518374bde36b066e757c0dd185b35bfc3a595d986cb96e68",
+      "evidenceRefs": ["continuation-r12/task-representative-observation.r12.json"]
+    },
+    {
+      "resourceClass": "provider-preflight-diagnostic",
+      "state": "settled",
+      "disposition": "typed effective-receipt capability hold recorded",
+      "resourceRefDigest": "sha256:06d8fc493f9841440077e6ada95284ad5b5d130b01586168df29eb97a25e578b",
+      "evidenceRefs": ["continuation-r12/provider-qualification.r12.json"]
+    },
+    {
+      "resourceClass": "provider-job",
+      "state": "not_created",
+      "disposition": "no provider admission",
+      "resourceRefDigest": "sha256:37526f78a224269e2139f034cec1674dc255eacd235693db06b25bdb0279217a",
+      "evidenceRefs": ["continuation-r12/harbor-execution-observation.r12.json"]
+    },
+    {
+      "resourceClass": "candidate-container",
+      "state": "not_created",
+      "disposition": "no Subject execution",
+      "resourceRefDigest": "sha256:94be0615fae347f8e252e87d92916809017b7e2955db8497e8d903fd3a7f305a",
+      "evidenceRefs": ["continuation-r12/harbor-execution-observation.r12.json"]
+    },
+    {
+      "resourceClass": "verifier-state",
+      "state": "not_created",
+      "disposition": "no protected verifier execution",
+      "resourceRefDigest": "sha256:004323d8a9ee1c3ca5df588fe4c31802b3f247a09eac2eb84b3a6fdcedec9d55",
+      "evidenceRefs": ["continuation-r12/harbor-execution-observation.r12.json"]
+    },
+    {
+      "resourceClass": "auth-material",
+      "state": "not_created",
+      "disposition": "credentials not available or projected",
+      "resourceRefDigest": "sha256:fc5fdd96e2693addb7d4ba9c718b305fde6b357e21316166cb0c4a895816a883",
+      "evidenceRefs": ["continuation-r12/provider-qualification.r12.json"]
+    },
+    {
+      "resourceClass": "temporary-files",
+      "state": "settled",
+      "disposition": "no external task files created",
+      "resourceRefDigest": "sha256:ba954870131e94b8888d1b3055b7afbabcdc714812a628b0a931b0fc2c211492",
+      "evidenceRefs": ["continuation-r12/harbor-execution-observation.r12.json"]
+    },
+    {
+      "resourceClass": "generated-evidence",
+      "state": "settled",
+      "disposition": "portable metadata projection",
+      "resourceRefDigest": "sha256:ca10874b666a20b4f12b320137209183a16c710bfe57dcb466c531f177ac76eb",
+      "evidenceRefs": ["continuation-r12/terminal-receipt.aarr-aarri-bench.r12.json"]
+    }
+  ],
+  "terminalReceiptRef": "continuation-r12/terminal-receipt.aarr-aarri-bench.r12.json",
+  "terminalReceiptDigest": "sha256:95354905f96e05997d42a2cf1b6b4a216ddd25f655e828f9bdf73cf60c4568d9",
+  "terminalRewardResultRef": "continuation-r12/terminal-reward-result.r12.json",
+  "rewardReductionDisposition": "require_context",
+  "unresolvedExecutionResources": [],
+  "privacy": {
+    "metadataOnly": true,
+    "credentialsStored": false,
+    "privateReasoningStored": false,
+    "runtimeHandlesStored": false
+  },
+  "status": "complete",
+  "digest": "sha256:66b43ddea262a5c0b3df66e8361796a565162a8267353027e16ab4651851f3e1"
+}

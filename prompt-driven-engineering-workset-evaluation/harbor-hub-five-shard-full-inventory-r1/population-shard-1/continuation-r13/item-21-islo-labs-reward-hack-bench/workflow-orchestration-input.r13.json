@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "1b873d61bdd8fc923f9b4b6ace971b1586164ae59de5a175ddf93ee3e56daefe",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-21-islo-labs-reward-hack-bench/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-21-islo-labs-reward-hack-bench/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "9e06927b95b678e957c67973dbef9b3470051e31c628c7636151d1c79945edd0",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "7ac1f5260f1b1572c0e865b92fa27b9ca506bf2893e941983026ae29096e692a",
+      "topologySelectionDecisionSha256": "efc2b7f99066649d359fadf7b3b1d3f2d0f48c5257969999fae87d73bbb7016f"
+    },
+    {
+      "coordinationPlanDecisionSha256": "1b873d61bdd8fc923f9b4b6ace971b1586164ae59de5a175ddf93ee3e56daefe",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-21-islo-labs-reward-hack-bench/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-21-islo-labs-reward-hack-bench/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "9e06927b95b678e957c67973dbef9b3470051e31c628c7636151d1c79945edd0",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "7ac1f5260f1b1572c0e865b92fa27b9ca506bf2893e941983026ae29096e692a",
+      "topologySelectionDecisionSha256": "efc2b7f99066649d359fadf7b3b1d3f2d0f48c5257969999fae87d73bbb7016f"
+    },
+    {
+      "coordinationPlanDecisionSha256": "1b873d61bdd8fc923f9b4b6ace971b1586164ae59de5a175ddf93ee3e56daefe",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-21-islo-labs-reward-hack-bench/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-21-islo-labs-reward-hack-bench/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "9e06927b95b678e957c67973dbef9b3470051e31c628c7636151d1c79945edd0",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "7ac1f5260f1b1572c0e865b92fa27b9ca506bf2893e941983026ae29096e692a",
+      "topologySelectionDecisionSha256": "efc2b7f99066649d359fadf7b3b1d3f2d0f48c5257969999fae87d73bbb7016f"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

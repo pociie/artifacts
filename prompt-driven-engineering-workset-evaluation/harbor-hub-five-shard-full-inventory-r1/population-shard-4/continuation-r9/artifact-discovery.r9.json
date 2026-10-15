@@ -1,0 +1,77 @@
+{
+  "authorityEffect": "none",
+  "decision": {
+    "authorityEffect": "none",
+    "capabilityGaps": [],
+    "kind": "artifact-reuse-resolution-decision/v1",
+    "rejectedCandidates": [],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r9:population-shard-4:abundant/swe-gen-go:d433b9581efa9cddb7215b07ea429c4c45b397d48061c926dcad10b8fd46cd75",
+    "selectedArtifacts": [
+      {
+        "artifactKind": "evaluation_contract",
+        "artifactRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+        "capabilityIds": ["privacy_boundary", "task_execution", "verifier_binding"],
+        "coveredConcernIds": ["task-execution-support"]
+      },
+      {
+        "artifactKind": "context_contract",
+        "artifactRef": "artifacts/agent-loop/execution-preparation/context-resolution/loop.yaml",
+        "capabilityIds": ["context_lifetime", "revision_freeze"],
+        "coveredConcernIds": ["context-reconciliation-support"]
+      },
+      {
+        "artifactKind": "routing_contract",
+        "artifactRef": "artifacts/loop-architecture/components/execution-routing/component.json",
+        "capabilityIds": ["reassessment", "six_mode_routing"],
+        "coveredConcernIds": ["routing-support"]
+      }
+    ],
+    "selectedMode": "single_task",
+    "status": "selected",
+    "uncoveredConcernIds": []
+  },
+  "digest": "sha256:738088e961530ed7e30267f9f7d45bcbc572eea316401062547ad7bf0b4f7619",
+  "dynamicArtifact": {
+    "created": false,
+    "disposition": "not_required",
+    "reason": "reusable coverage left no residual representation gap"
+  },
+  "itemId": "abundant/swe-gen-go",
+  "kind": "harbor-reusable-artifact-discovery/v2",
+  "limitations": [
+    "selected reusable contracts govern evidence and boundaries; task behavior remains in the private Harbor package"
+  ],
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r9:population-shard-4:abundant/swe-gen-go:d433b9581efa9cddb7215b07ea429c4c45b397d48061c926dcad10b8fd46cd75",
+  "routeRef": "artifacts/population-shard-4/continuation-r9/route-decision.r9.json",
+  "schemaVersion": 2,
+  "selectedArtifacts": [
+    {
+      "artifactDigest": "sha256:1c54e93f79fc7de79ee77f052b1b482e55fc04e0a1c76fc84d13b1de5ad24703",
+      "artifactRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "coverage": ["task-execution-support"],
+      "disposition": "selected"
+    },
+    {
+      "artifactDigest": "sha256:652b365c188ccae2a529ef6dd39737e9c26ef34d9481b870c5e639e3daa8b148",
+      "artifactRef": "artifacts/agent-loop/execution-preparation/context-resolution/loop.yaml",
+      "coverage": ["context-reconciliation-support"],
+      "disposition": "selected"
+    },
+    {
+      "artifactDigest": "sha256:e2e9fd764b17ce14ba523c3b28891c71702c747294cbce43166837245c169724",
+      "artifactRef": "artifacts/loop-architecture/components/execution-routing/component.json",
+      "coverage": ["routing-support"],
+      "disposition": "selected"
+    }
+  ],
+  "selectedMode": "single_task",
+  "shardId": "population-shard-4",
+  "sourceRefs": [
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+    "artifacts/agent-loop/execution-preparation/context-resolution/loop.yaml",
+    "artifacts/loop-architecture/components/execution-routing/component.json"
+  ],
+  "status": "selected",
+  "taskPackageDigest": "sha256:533504b9b99cfb6fe716b32681612e700b9f7e25cb621ccadbf46713f9bb9368"
+}

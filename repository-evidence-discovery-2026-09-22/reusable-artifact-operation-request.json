@@ -1,0 +1,137 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:repository-evidence-discovery-hardening",
+  "requestRevision": "revision:v1",
+  "requestRelation": "new_objective",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/repository-evidence-discovery-2026-09-22/route-decision.json",
+    "decisionDigest": "sha256:909f6d25669ddb4bd84318e344c64a2dd38fa9b3dd8e89cf41c6961159046e9a",
+    "effectiveMode": "loop"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:repository-evidence-artifact-builder",
+    "agencyRef": "artifacts/agents/requirement-realization/agents/artifact-builder.yaml",
+    "agencyDigest": "sha256:06ebe77c9b1b5754e6f2e749c470d9129854abe04690022b3156705f6f10410d",
+    "responsibilityClass": "builder",
+    "outcomeContract": "outcome:bounded-repository-evidence-discovery-hardening",
+    "outputContract": "output:provider-neutral-discovery-contract-and-validation-evidence",
+    "decisionScopes": [
+      "context-resolution-repository-discovery",
+      "provider-neutral-retrieval-routing",
+      "focused-contract-validation"
+    ],
+    "nonAuthority": [
+      "external-tool-installation",
+      "repository-content-disclosure",
+      "runtime-tool-activation",
+      "adjacent-loop-change",
+      "self-acceptance",
+      "integration"
+    ]
+  },
+  "objective": "Improve the existing Context Resolution capability so conceptual repository discovery prefers bounded semantic retrieval, known-symbol navigation, and structural outline before exact-literal search, while rejecting broad synonym OR-regex discovery and preserving a capability-aware fallback.",
+  "successEvidenceRefs": [
+    "evidence:repository-discovery-native-owner-explicit",
+    "evidence:query-class-to-capability-routing-validated",
+    "evidence:broad-or-regex-negative-cases-rejected",
+    "evidence:exact-literal-fallback-retained"
+  ],
+  "protectedConstraintRefs": [
+    "constraint:context-resolution-retains-selection-ownership",
+    "constraint:tool-capability-resolution-retains-adapter-selection",
+    "constraint:no-external-index-or-disclosure-without-separate-admission",
+    "constraint:authority-effect-none",
+    "constraint:existing-working-tree-edits-preserved"
+  ],
+  "nonGoalRefs": [
+    "non-goal:install-sema-or-mgrep",
+    "non-goal:select-one-provider-as-framework-default",
+    "non-goal:replace-exact-literal-search",
+    "non-goal:change-product-runtime",
+    "non-goal:edit-adjacent-dirty-loop-architecture-components"
+  ],
+  "lifecycleIntent": "improve_existing",
+  "capabilities": [
+    "repository evidence discovery",
+    "semantic retrieval routing",
+    "symbol navigation",
+    "structural outline",
+    "exact literal fallback",
+    "retrieval privacy classification"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "783a32562aa185dbef333dde7c7c8945adb294fe76af24b935aa271916d242be",
+  "allowedBaseClasses": ["loop", "skill", "contract_checker", "knowledge_reference"],
+  "allowedScopes": ["framework"],
+  "requiredFacts": ["owner", "scope", "consumer", "validation"],
+  "exactArtifactIds": [
+    "loop:agent-loop/execution-preparation/context-resolution",
+    "skill:agents/agent-operation/skill/context-engineering"
+  ],
+  "relationshipDepth": 1,
+  "maxCandidates": 8,
+  "contextBudget": {
+    "maxSourceMembers": 16,
+    "maxConsumerRefs": 8,
+    "maxValidationRefs": 8
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "Whether repository discovery already has a typed operation record and deterministic negative checks.",
+      "Whether external semantic retrieval can be named without bypassing Tool Capability Resolution and privacy admission."
+    ],
+    "allowedRelationshipTypes": [
+      "defines",
+      "consumes",
+      "depends_on",
+      "validates",
+      "binds_capability"
+    ],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "consumer",
+      "effect",
+      "route_or_topology",
+      "lifecycle",
+      "protected_constraint"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "evidence:bounded-context-resolution-change-produced",
+      "evidence:focused-contract-tests-pass",
+      "evidence:adjacent-findings-reported-not-executed"
+    ],
+    "validationRefs": [
+      "validation:reusable-artifact-operation-request-v2",
+      "validation:repository-evidence-discovery-schema",
+      "validation:repository-evidence-discovery-checker-tests",
+      "validation:agent-loop-spec"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "loop-budget:repository-evidence-discovery:v1",
+  "dataClassification": "internal",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": true,
+  "constructionAllowed": true,
+  "residualGapProven": true,
+  "requestDigest": "8684914948b42f457fb8625b4f55dfce1a283652458ab64537dfa6148adf1da7"
+}

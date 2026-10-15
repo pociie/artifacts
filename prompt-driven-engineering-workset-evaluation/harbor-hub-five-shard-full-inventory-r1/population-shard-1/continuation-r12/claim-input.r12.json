@@ -1,0 +1,68 @@
+{
+  "activeClaims": [],
+  "authorityEffect": "none",
+  "digest": "sha256:6bf2b390907c3a124326f4c0cd15d942d06a9907a452599f41d2ca0e99cb11b7",
+  "eventCursor": 2,
+  "eventHeadSha256": "sha256:03594dc02039aa8d16b4bccbe6f0d5eb5d3ea98afd0efe547867c661ed14f73b",
+  "kind": "atomic-lane-claim-admission-input/v3",
+  "maxConcurrency": 1,
+  "proposals": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 2,
+      "expectedEventHeadSha256": "03594dc02039aa8d16b4bccbe6f0d5eb5d3ea98afd0efe547867c661ed14f73b",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r12",
+      "fingerprint": {
+        "capability": "sha256:361504914e9107dc849344399312e5118602185addb76bc7530d4e26177a56c1",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:1e69b34ca8842f04bf57ba3bb83378eb4b04aced13572cb7b920230524255379"
+      },
+      "identityDigest": "sha256:ad52656f020f3e403ceb880642c28350fb51f9a94f91fc08feba87b55dded282",
+      "itemId": "Enterprise-Bench/l1-l2-bench",
+      "laneId": "population-shard-1",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-1:Enterprise-Bench/l1-l2-bench:r12",
+      "sequence": 1,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-1:r12-controller"
+    }
+  ],
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-1",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r12",
+  "reconciliationRef": "continuation-r12/queue-reconciliation-before-claim.r12.json",
+  "resolverDecision": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "Enterprise-Bench/l1-l2-bench",
+        "laneId": "population-shard-1",
+        "proposalId": "proposal:population-shard-1:Enterprise-Bench/l1-l2-bench:r12",
+        "workerId": "worker:harbor-population-shard-1:r12-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 2,
+      "eventHeadSha256": "03594dc02039aa8d16b4bccbe6f0d5eb5d3ea98afd0efe547867c661ed14f73b",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r12"
+    },
+    "eventCursor": 2,
+    "eventHeadSha256": "03594dc02039aa8d16b4bccbe6f0d5eb5d3ea98afd0efe547867c661ed14f73b",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-1",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r12",
+    "rejected": []
+  },
+  "resolverInputDigest": "sha256:7d143bd329fe91230e34b4ebf35b6987c845b7129e2eb5866127fa8bbad626f0",
+  "schemaVersion": 3,
+  "terminalReceiptRefs": [
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1-r4:settlement-ledger-video-processing",
+    "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:settlement-ledger"
+  ]
+}

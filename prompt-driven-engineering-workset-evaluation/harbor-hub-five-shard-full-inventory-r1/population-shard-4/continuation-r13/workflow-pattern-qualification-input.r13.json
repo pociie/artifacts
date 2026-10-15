@@ -1,0 +1,100 @@
+{
+  "candidates": [
+    {
+      "activationEvidence": [
+        "specialized_capability_required",
+        "qualified_candidates_available",
+        "decision_owner_retained"
+      ],
+      "compatibleModes": ["single_task", "loop", "orchestration"],
+      "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/capability-route-selection/coordination-policy.json",
+      "disqualifiers": [
+        "capability_readiness_unknown",
+        "advisor_needs_effect_authority",
+        "missing_decision_owner"
+      ],
+      "patternId": "expert_pool",
+      "structuralCost": 1
+    },
+    {
+      "activationEvidence": [
+        "multiple_independent",
+        "partitionable_context",
+        "declared_aggregation_owner"
+      ],
+      "compatibleModes": ["single_task", "loop", "orchestration"],
+      "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/independent-fan-in/coordination-policy.json",
+      "disqualifiers": [
+        "cross-contributor write dependency",
+        "missing reconciliation rule",
+        "unbounded contributor set"
+      ],
+      "patternId": "fan_out_fan_in",
+      "structuralCost": 1
+    },
+    {
+      "activationEvidence": ["separable_validation", "frozen_criteria", "bounded_revision"],
+      "compatibleModes": ["single_task", "loop", "orchestration"],
+      "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/bounded-revision/coordination-policy.json",
+      "disqualifiers": [
+        "author_validator_collapse",
+        "mutable_acceptance_criteria",
+        "unbounded_revision"
+      ],
+      "patternId": "generator_validator",
+      "structuralCost": 1
+    },
+    {
+      "activationEvidence": [
+        "multi_level_ownership",
+        "bounded_delegation",
+        "per_level_aggregation_owner"
+      ],
+      "compatibleModes": ["single_task", "loop", "orchestration"],
+      "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/hierarchical-synthesis/coordination-policy.json",
+      "disqualifiers": [
+        "flat_independent_work",
+        "implicit_parent_authority",
+        "missing_level_settlement"
+      ],
+      "patternId": "hierarchical_delegation",
+      "structuralCost": 1
+    },
+    {
+      "activationEvidence": [
+        "ordered_dependency",
+        "exact_output_contract",
+        "single_aggregation_owner"
+      ],
+      "compatibleModes": ["single_task", "loop", "orchestration"],
+      "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+      "disqualifiers": [
+        "independent parallel contributions",
+        "missing handoff contract",
+        "unbounded feedback"
+      ],
+      "patternId": "pipeline",
+      "structuralCost": 1
+    },
+    {
+      "activationEvidence": [
+        "dynamic_contribution_shape",
+        "qualified_member_bounds",
+        "supervision_owner"
+      ],
+      "compatibleModes": ["single_task", "loop", "orchestration"],
+      "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/adaptive-supervision/coordination-policy.json",
+      "disqualifiers": [
+        "static_linear_work",
+        "unbounded_dynamic_membership",
+        "missing_settlement_policy"
+      ],
+      "patternId": "supervisor",
+      "structuralCost": 1
+    }
+  ],
+  "constraints": ["one_owner", "topology_none", "no_parallel_contributions"],
+  "routeRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:adameubanks/rating-generation-consistency:6f425580e941b7de0d2e5a4e1a2fd0f096d570068d4d32efb2e9ac7fbceb1a83",
+  "selectedMode": "single_task",
+  "signals": ["single_owner", "single_boundary", "exact_output_contract"]
+}

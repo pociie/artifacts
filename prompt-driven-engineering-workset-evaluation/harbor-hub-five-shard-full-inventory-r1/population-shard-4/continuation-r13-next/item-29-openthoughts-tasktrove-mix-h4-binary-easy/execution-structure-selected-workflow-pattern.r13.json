@@ -1,0 +1,48 @@
+{
+  "authorityEffect": "none",
+  "eligiblePatternIds": ["pipeline"],
+  "kind": "agentic-architecture-decision/v1",
+  "rejectedPatterns": [
+    {
+      "patternId": "generator_validator",
+      "reasonCodes": ["missing_evidence:separable_validation"]
+    },
+    {
+      "patternId": "fan_out_fan_in",
+      "reasonCodes": [
+        "mode_incompatible",
+        "missing_evidence:independent_partitions",
+        "disqualified:one_owner_per_stage"
+      ]
+    },
+    {
+      "patternId": "expert_pool",
+      "reasonCodes": [
+        "mode_incompatible",
+        "missing_evidence:multiple_specialists",
+        "disqualified:one_owner_per_stage"
+      ]
+    },
+    {
+      "patternId": "supervisor",
+      "reasonCodes": [
+        "mode_incompatible",
+        "missing_evidence:dynamic_bounded_tasks",
+        "disqualified:one_owner_per_stage"
+      ]
+    },
+    {
+      "patternId": "hierarchical_delegation",
+      "reasonCodes": [
+        "mode_incompatible",
+        "missing_evidence:hierarchical_ownership",
+        "disqualified:one_owner_per_stage"
+      ]
+    }
+  ],
+  "routeRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:openthoughts/tasktrove-mix-h4-binary-easy:a66b44d5e8dbe9b48504fff309e8433ffe03279732ce54971d6eee53ace7f8e5:workflow",
+  "selectedCoordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+  "selectedPatternId": "pipeline",
+  "status": "selected",
+  "tieBreak": "structural_cost_then_pattern_id"
+}

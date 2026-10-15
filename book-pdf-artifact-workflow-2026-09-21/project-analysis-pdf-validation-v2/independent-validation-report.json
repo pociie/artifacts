@@ -1,0 +1,485 @@
+{
+  "kind": "project-analysis-pdf-independent-validation-report/v2",
+  "validatedAt": "2026-09-21T17:00:49Z",
+  "status": "pass_with_non_blocking_holds",
+  "overall": "pass",
+  "authorityEffect": "none",
+  "validator": {
+    "role": "independent_fact_visual_reader_validator",
+    "runId": "run_837aab6bfcd6",
+    "taskId": "task_1d5d148380fa",
+    "dispatchId": "ctx_62a86105473b",
+    "independentOfProducer": true,
+    "producerTaskId": "task_830ec6458d86",
+    "producerDispatchId": "ctx_97728d9c598c"
+  },
+  "executionRoute": {
+    "requestRelation": "validate_current_outcome",
+    "outerObligationState": "active",
+    "effectivePrimaryMode": "orchestration",
+    "segmentMode": "investigation",
+    "workPurpose": "validate",
+    "operationFamily": "criteria_evaluation",
+    "effectIntent": "read_only_candidate_with_single_report_output",
+    "outputShape": "validation_report",
+    "contributionShape": "one_owner",
+    "executionSurface": "delegated_single_writer",
+    "validationSeparability": "independent",
+    "reportOnly": true,
+    "authorityEffect": "none"
+  },
+  "target": {
+    "outputFreeze": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/pdf-delivery-v1/author-output-freeze-v2.json",
+      "expectedSha256": "f5118fec8caf03628f39733780e4ee05bfe0d6129bd4d82c99a635ca20c0e4cd",
+      "observedSha256": "f5118fec8caf03628f39733780e4ee05bfe0d6129bd4d82c99a635ca20c0e4cd",
+      "bytes": 4274,
+      "status": "pass"
+    },
+    "correctionInputFreeze": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/pdf-delivery-v1/correction-input-freeze-v2.json",
+      "expectedSha256": "e51903b9a91e5443f8d13a0c367602d0fc10d5b61034345bc83d3ef23b29497d",
+      "observedSha256": "e51903b9a91e5443f8d13a0c367602d0fc10d5b61034345bc83d3ef23b29497d",
+      "status": "pass"
+    },
+    "handoff": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/recipient-handoff-manifest.json",
+      "expectedSha256": "4f2adb2f5704b2ee39046a02bf65d1ed9e038e7c6a20f13740733f546c4d020a",
+      "observedSha256": "4f2adb2f5704b2ee39046a02bf65d1ed9e038e7c6a20f13740733f546c4d020a",
+      "bytes": 15835,
+      "status": "pass"
+    },
+    "readerPdf": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/claude-code-project-analysis.pdf",
+      "expectedSha256": "001289cccb32c83c12bd3f282d5ce0a6e6f6ec35e379c0bc712fd4a7ddbe8802",
+      "observedSha256": "001289cccb32c83c12bd3f282d5ce0a6e6f6ec35e379c0bc712fd4a7ddbe8802",
+      "expectedBytes": 5083379,
+      "observedBytes": 5083379,
+      "status": "pass"
+    },
+    "sourceRevision": {
+      "sourceRoot": ".collab/sources/stupidhumans/claude-code-source-code",
+      "expectedCommit": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+      "observedCommit": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+      "expectedTree": "1b6b4ab07d0d7b795129852183137c28099c5550",
+      "observedTree": "1b6b4ab07d0d7b795129852183137c28099c5550",
+      "commitObjectPresent": true,
+      "treeObjectPresent": true,
+      "worktreeStatus": "clean",
+      "status": "pass"
+    }
+  },
+  "immutableCandidate": {
+    "root": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2",
+    "digestRecipe": "sha256 over UTF-8 lines <file-sha256> <bytes> <relative-path>\\n emitted in lexicographically sorted relative-path order",
+    "fileCount": 45,
+    "totalBytes": 12672774,
+    "expectedTreeSha256": "098277489eb48239a7f627a630979281d9c48d01258605ed9a48c097750a3383",
+    "beforeValidationTreeSha256": "098277489eb48239a7f627a630979281d9c48d01258605ed9a48c097750a3383",
+    "afterValidationTreeSha256": "098277489eb48239a7f627a630979281d9c48d01258605ed9a48c097750a3383",
+    "mutatedByValidator": false,
+    "renderScriptExecuted": false,
+    "status": "pass"
+  },
+  "digestAndByteValidation": {
+    "directFreezeCorrectionHandoffAndCandidateReferences": {
+      "rawDigestReferences": 63,
+      "uniquePathDigestChecks": 55,
+      "rawByteClaims": 45,
+      "uniqueByteCountChecks": 44,
+      "missingPaths": 0,
+      "digestMismatches": 0,
+      "byteCountMismatches": 0,
+      "status": "pass"
+    },
+    "projectAnalysisManifest": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/project-analysis-v1/artifact-manifest.json",
+      "expectedSha256": "49400762416b9570b9b9d5db07bbb75cdd19622e2c899dd189e030b3ede17742",
+      "observedSha256": "49400762416b9570b9b9d5db07bbb75cdd19622e2c899dd189e030b3ede17742",
+      "artifactChecks": 14,
+      "mismatches": 0,
+      "status": "pass"
+    },
+    "candidateArtifactSet": {
+      "scope": "44 candidate files excluding the self-referential handoff manifest",
+      "fileCount": 44,
+      "totalBytes": 12656939,
+      "expectedSha256": "09cbcdb442b06d26de3bc7853a385df5888cd2ae32078d553622b15dcd83595d",
+      "observedSha256": "09cbcdb442b06d26de3bc7853a385df5888cd2ae32078d553622b15dcd83595d",
+      "status": "pass"
+    },
+    "combinedEvidenceRevision": {
+      "expectedSha256": "b764d925c92087351d05af79153dc66f130e477878396849c469725d2644282e",
+      "observedSha256": "b764d925c92087351d05af79153dc66f130e477878396849c469725d2644282e",
+      "status": "pass"
+    },
+    "overall": "pass"
+  },
+  "correctionDependencyValidation": {
+    "requiredProjectAndAuthoringInputs": [
+      {
+        "role": "project_analysis_source",
+        "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/project-analysis-v1/artifact-manifest.json",
+        "sha256": "49400762416b9570b9b9d5db07bbb75cdd19622e2c899dd189e030b3ede17742",
+        "status": "pass"
+      },
+      {
+        "role": "pdf_expression_spec",
+        "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-expression-spec-v2.md",
+        "sha256": "5e5881ff524e13f7f22150f55c43cd35090e3d8ea6fb4deca82acc9a1facf33d",
+        "status": "pass"
+      },
+      {
+        "role": "flow_and_continuity_spec",
+        "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-flow-and-continuity-spec-v1.md",
+        "sha256": "bbcde8592504f1f78b96013cfc51e47c0eca504e0bf81f45c71df8367372a1e3",
+        "status": "pass"
+      },
+      {
+        "role": "writing_quality_contract",
+        "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/writing-quality-contract-v1.md",
+        "sha256": "517accc76e904d3b58d7e3960121f50614b3fc728b68709822e55c6c657f98e7",
+        "status": "pass"
+      },
+      {
+        "role": "typography_and_page_system",
+        "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/typography-and-page-system-v1.json",
+        "sha256": "bb88969c6271b91604914749ee1254fa0ffefc96ebfd3a357972cc49bb9bb3d1",
+        "status": "pass"
+      }
+    ],
+    "historicalVisualContribution": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/visual-pagination-continuity-contribution-manifest-v1.json",
+      "expectedSha256": "68267f5d22c98e042c726e6366415b2895979aa2433fea301a06f35349cd7000",
+      "observedSha256": "68267f5d22c98e042c726e6366415b2895979aa2433fea301a06f35349cd7000",
+      "use": "lineage_and_contribution_evidence_only",
+      "transitiveSharedPathClosure": "not_required_by_correction_freeze_v2",
+      "mutableProjectContextSharedPathsRequired": false,
+      "status": "pass"
+    },
+    "failedPredecessorEvidence": {
+      "failedOutputFreezeSha256": "0fb5223acd3dd16cbcf1efd00050547355334890e013c9791f584b3c60af635d",
+      "failedIndependentReportSha256": "f75461e24cac263a0cec828e1a43660cdd40cc617017d41437d0aba5a1674f81",
+      "bothExact": true,
+      "status": "pass"
+    },
+    "correctionBudget": {
+      "allowed": 1,
+      "used": 1,
+      "additionalCorrectionStarted": false,
+      "status": "pass"
+    },
+    "overall": "pass"
+  },
+  "defectClosure": {
+    "id": "DEFECT-PDF-TEXT-ORDER-001",
+    "engine": "macOS PDFKit via Swift",
+    "queries": [
+      {
+        "visible": "worker_done",
+        "requiredNormalHits": 2,
+        "normalHits": 2,
+        "reversed": "enod_rekrow",
+        "requiredReversedHits": 0,
+        "reversedHits": 0,
+        "status": "pass"
+      },
+      {
+        "visible": "Phase A",
+        "requiredNormalHits": 2,
+        "normalHits": 2,
+        "reversed": "A esahP",
+        "requiredReversedHits": 0,
+        "reversedHits": 0,
+        "status": "pass"
+      },
+      {
+        "visible": "공식 module owner",
+        "requiredNormalHits": 2,
+        "normalHits": 2,
+        "reversed": "renwo eludom 식공",
+        "requiredReversedHits": 0,
+        "reversedHits": 0,
+        "status": "pass"
+      },
+      {
+        "visible": "tool_result",
+        "requiredNormalHits": 12,
+        "normalHits": 12,
+        "reversed": "tluser_loot",
+        "requiredReversedHits": 0,
+        "reversedHits": 0,
+        "status": "pass"
+      }
+    ],
+    "tagMarkers": {
+      "StructTreeRoot": true,
+      "MarkInfo": true,
+      "Lang": true
+    },
+    "candidateAttribution": "The corrected v2 PDF no longer reproduces the v1 logical-text-order fingerprint under PDFKit.",
+    "status": "closed"
+  },
+  "pdfValidation": {
+    "pageCount": {
+      "expected": 37,
+      "observedByPdfKit": 37,
+      "status": "pass"
+    },
+    "pageSize": {
+      "label": "A4",
+      "points": "594.95996x841.91998",
+      "allPagesMatch": true,
+      "status": "pass"
+    },
+    "selectableText": {
+      "documentStringLength": 45838,
+      "perPageCharacterSum": 45802,
+      "minimumPageCharacters": 379,
+      "maximumPageCharacters": 2374,
+      "emptyTextPages": [],
+      "allPagesNonEmpty": true,
+      "status": "pass"
+    },
+    "previewSet": {
+      "count": 37,
+      "sequenceFailures": [],
+      "invalidPngSignatures": [],
+      "dimensions": {
+        "794x1123": 18,
+        "794x1124": 19
+      },
+      "contactSheetDimensions": "1900x4294",
+      "status": "pass"
+    },
+    "layout": {
+      "independentDomPageCount": 37,
+      "horizontalOverflowPages": [],
+      "verticalOverflowPages": [],
+      "clippedSemanticUnits": [],
+      "folioOverlapUnits": [],
+      "missingFolios": [],
+      "folioSequence": "001-037",
+      "status": "pass"
+    },
+    "continuations": {
+      "groups": [
+        {
+          "id": "TRACE-E2E",
+          "pages": [7, 8],
+          "ranges": ["1-5", "6-10"],
+          "status": "pass"
+        },
+        {
+          "id": "SEMANTIC-MODULES",
+          "pages": [24, 25],
+          "ranges": ["M1-M4", "M5-M8"],
+          "status": "pass"
+        },
+        {
+          "id": "ROADMAP",
+          "pages": [30, 31],
+          "ranges": ["A-B", "C-E"],
+          "status": "pass"
+        },
+        {
+          "id": "ALGORITHM-INDEX",
+          "pages": [33, 34],
+          "ranges": ["1-6", "7-12"],
+          "status": "pass"
+        }
+      ],
+      "failures": 0,
+      "status": "pass"
+    },
+    "links": {
+      "htmlAnchors": 181,
+      "invalidHtmlAnchors": 0,
+      "sourceAnchors": 178,
+      "unpinnedSourceAnchors": 0,
+      "pdfLinkAnnotations": 268,
+      "pdfUniqueUrls": 92,
+      "pdfInvalidSchemes": 0,
+      "syntaxAndBindingStatus": "pass",
+      "externalReachabilityStatus": "hold"
+    },
+    "taggedPdfAccessibility": {
+      "structureMarkers": "pass",
+      "assistiveTechnologyBehavior": "hold"
+    },
+    "status": "pass_with_non_blocking_holds"
+  },
+  "previewComparison": {
+    "v1Root": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v1/previews",
+    "v2Root": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews",
+    "byteIdenticalPageCount": 35,
+    "byteIdenticalPages": [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 31, 32, 33, 34, 35, 36, 37],
+    "changedPages": [6, 30],
+    "changedPageFindings": {
+      "6": "The lead adds the intended visible tool_result closure sentence; composition, table, inference block, folio, and page edge remain intact.",
+      "30": "The running header adds the intended Phase A-B label; roadmap body, diagram, warning, folio, and page edge remain intact."
+    },
+    "unexpectedChangedPages": [],
+    "status": "pass"
+  },
+  "sourceAndClaimValidation": {
+    "materialClaims": {
+      "count": 64,
+      "classCounts": {
+        "observed_project_fact": 37,
+        "external_background": 3,
+        "project_inference": 19,
+        "unresolved": 5
+      },
+      "allowedEvidenceClasses": ["observed_project_fact", "external_background", "project_inference", "unresolved"],
+      "missingBindings": 0,
+      "duplicateClaimIds": [],
+      "sourceReferenceTokensChecked": 103,
+      "sourceReferenceFailures": 0,
+      "status": "pass"
+    },
+    "exactSourceRevision": {
+      "commit": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+      "tree": "1b6b4ab07d0d7b795129852183137c28099c5550",
+      "status": "pass"
+    },
+    "status": "pass"
+  },
+  "algorithmCards": [
+    {"id": "ALG-TURN-LOOP", "page": 9, "evidenceRefCount": 9, "allRequiredFields": "pass", "catalogToReaderRefs": "pass", "status": "pass"},
+    {"id": "ALG-EFFECT-INTERPRETER", "page": 10, "evidenceRefCount": 8, "allRequiredFields": "pass", "catalogToReaderRefs": "pass", "status": "pass"},
+    {"id": "ALG-STREAM-REDUCER", "page": 11, "evidenceRefCount": 7, "allRequiredFields": "pass", "catalogToReaderRefs": "pass", "status": "pass"},
+    {"id": "ALG-TRANSCRIPT-APPEND", "page": 12, "evidenceRefCount": 7, "allRequiredFields": "pass", "catalogToReaderRefs": "pass", "status": "pass"},
+    {"id": "ALG-RESUME-GRAPH", "page": 13, "evidenceRefCount": 7, "allRequiredFields": "pass", "catalogToReaderRefs": "pass", "status": "pass"},
+    {"id": "ALG-API-NORMALIZATION", "page": 14, "evidenceRefCount": 6, "allRequiredFields": "pass", "catalogToReaderRefs": "pass", "status": "pass"},
+    {"id": "ALG-TOOL-SCHEDULER", "page": 15, "evidenceRefCount": 6, "allRequiredFields": "pass", "catalogToReaderRefs": "pass", "status": "pass"},
+    {"id": "ALG-COMPACTION-MIGRATION", "page": 16, "evidenceRefCount": 7, "allRequiredFields": "pass", "catalogToReaderRefs": "pass", "status": "pass"},
+    {"id": "ALG-FILE-EDIT-COMMIT", "page": 17, "evidenceRefCount": 9, "allRequiredFields": "pass", "catalogToReaderRefs": "pass", "status": "pass"},
+    {"id": "ALG-QUERY-ENGINE-PROJECTION", "page": 18, "evidenceRefCount": 8, "allRequiredFields": "pass", "catalogToReaderRefs": "pass", "status": "pass"},
+    {"id": "ALG-INPUT-DISPATCH", "page": 19, "evidenceRefCount": 7, "allRequiredFields": "pass", "catalogToReaderRefs": "pass", "status": "pass"},
+    {"id": "ALG-REMOTE-RECONNECT", "page": 20, "evidenceRefCount": 8, "allRequiredFields": "pass", "catalogToReaderRefs": "pass", "status": "pass"}
+  ],
+  "algorithmSummary": {
+    "catalogCards": 12,
+    "renderedCards": 12,
+    "requiredFieldsPerCard": ["trigger", "state", "transition", "invariant", "failure", "recovery", "exactEvidence", "readerSignificance"],
+    "checkedEvidenceRefs": 89,
+    "uniqueEvidenceRefs": 89,
+    "missingFiles": 0,
+    "outOfRangeLines": 0,
+    "catalogToReaderReferenceMismatches": 0,
+    "unpinnedRenderedSourceLinks": 0,
+    "fieldFailures": 0,
+    "status": "pass"
+  },
+  "coverage": [
+    {"area": "project_status_provenance_and_limitations", "pages": [1, 2, 37], "status": "pass"},
+    {"area": "code_and_system_execution_flow", "pages": [5, 6, 7, 8], "status": "pass"},
+    {"area": "runtime_algorithms", "pages": [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21], "status": "pass"},
+    {"area": "physical_topology", "pages": [22, 23], "status": "pass"},
+    {"area": "semantic_module_candidates", "pages": [24, 25, 26], "status": "pass"},
+    {"area": "project_management", "pages": [27], "status": "pass"},
+    {"area": "evidence_governance", "pages": [28], "status": "pass"},
+    {"area": "incremental_modularization", "pages": [29], "status": "pass"},
+    {"area": "roadmap", "pages": [30, 31], "status": "pass"},
+    {"area": "explicit_unknowns", "pages": [32, 37], "status": "pass"}
+  ],
+  "visualInspection": {
+    "contactSheet": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/contact-sheet.png",
+      "finding": "All 37 thumbnails are present in sequence with a coherent page system, no blank page, no obvious page-edge clipping, and clear alternation between systems-monograph and evidence-notebook treatments.",
+      "status": "pass"
+    },
+    "v2PagesInspected": [1, 5, 6, 7, 8, 9, 20, 22, 23, 24, 25, 28, 30, 31, 33, 34, 37],
+    "v1ComparisonPagesInspected": [6, 30],
+    "representativePurposes": {
+      "1": "cover and source limitation framing",
+      "5": "system model",
+      "6": "changed end-to-end sequence page",
+      "7": "worked trace start",
+      "8": "worked trace continuation",
+      "9": "first algorithm card",
+      "20": "twelfth algorithm card",
+      "22": "physical topology",
+      "23": "topology evidence and unresolved interpretation",
+      "24": "semantic modules M1-M4",
+      "25": "semantic modules M5-M8 continuation",
+      "28": "evidence governance",
+      "30": "changed roadmap phases A-B",
+      "31": "roadmap phases C-E continuation",
+      "33": "algorithm evidence index 1-6",
+      "34": "algorithm evidence index 7-12 continuation",
+      "37": "sources and limitations"
+    },
+    "legibility": "pass",
+    "visualOverflowOrClipping": "pass",
+    "continuationMarkers": "pass",
+    "folioPlacement": "pass",
+    "changedPageComposition": "pass",
+    "status": "pass"
+  },
+  "dimensionResults": [
+    {"dimension": "output_freeze_identity", "status": "pass", "attribution": "The supplied v2 freeze digest matches exactly."},
+    {"dimension": "correction_freeze_identity", "status": "pass", "attribution": "The correction-input freeze referenced by the output freeze matches exactly."},
+    {"dimension": "handoff_and_reader_pdf_identity", "status": "pass", "attribution": "The exact v2 handoff, PDF digest, and PDF byte count match."},
+    {"dimension": "direct_digest_and_byte_counts", "status": "pass", "attribution": "All 55 unique direct path/digest checks and 44 unique byte-count checks match."},
+    {"dimension": "candidate_tree_immutability", "status": "pass", "attribution": "The 45-file candidate tree matches 09827748... before and after validation; render.mjs was not executed."},
+    {"dimension": "correction_dependency_dispositions", "status": "pass", "attribution": "All five direct authoring inputs and 14 project-analysis artifacts match; the historical visual manifest is exact and correctly treated as lineage only without requiring its two mutable shared references."},
+    {"dimension": "source_revision", "status": "pass", "attribution": "The local source commit, tree, object presence, and clean worktree match the correction freeze."},
+    {"dimension": "defect_pdf_text_order_001", "status": "pass", "attribution": "Independent macOS PDFKit searches meet all normal-hit thresholds and return zero reversed hits."},
+    {"dimension": "pdf_page_count_and_a4_geometry", "status": "pass", "attribution": "PDFKit observes 37 pages, all 594.95996x841.91998 points."},
+    {"dimension": "tagged_pdf_markers", "status": "pass", "attribution": "StructTreeRoot, MarkInfo, and Lang markers are present in the frozen PDF bytes."},
+    {"dimension": "pdf_selectable_text_and_empty_pages", "status": "pass", "attribution": "Every page exposes selectable text; the per-page sum is 45802 characters and no page is empty."},
+    {"dimension": "preview_sequence_and_contact_sheet", "status": "pass", "attribution": "There are 37 sequential valid PNG previews at 794x1123/1124 plus a 1900x4294 contact sheet."},
+    {"dimension": "v1_v2_preview_preservation", "status": "pass", "attribution": "Exactly 35 pages are byte-identical; only intended pages 6 and 30 changed."},
+    {"dimension": "overflow_clipping_and_folios", "status": "pass", "attribution": "Independent DOM geometry and visual inspection found no overflow, clipped semantic unit, or folio overlap, and folios run 001-037."},
+    {"dimension": "continuation", "status": "pass", "attribution": "All four multi-page groups preserve start/continued identity and ranges."},
+    {"dimension": "link_syntax_and_pdf_annotations", "status": "pass", "attribution": "All 181 HTML anchors are valid, all 178 source anchors are commit-pinned, and PDFKit observes 268 link annotations across 92 https URLs with no invalid scheme."},
+    {"dimension": "claim_bindings_and_evidence_classes", "status": "pass", "attribution": "All 64 claims are uniquely bound, use exactly the four allowed evidence classes, and all 103 source-reference tokens resolve."},
+    {"dimension": "algorithm_cards_and_exact_source_references", "status": "pass", "attribution": "All 12 cards contain the eight required fields and all 89 unique exact source locators resolve within the pinned source tree."},
+    {"dimension": "required_topic_coverage", "status": "pass", "attribution": "All ten required topic areas are represented on mapped pages."},
+    {"dimension": "visual_reader_quality", "status": "pass", "attribution": "The contact sheet, 17 representative v2 pages, and v1/v2 comparisons for changed pages 6 and 30 are legible, complete, and compositionally intact."},
+    {"dimension": "external_url_reachability", "status": "hold", "attribution": "Network reachability was intentionally not exercised."},
+    {"dimension": "physical_print_and_grayscale", "status": "hold", "attribution": "No physical A4 print or grayscale proof was performed."},
+    {"dimension": "assistive_technology_behavior", "status": "hold", "attribution": "Tagged markers and PDFKit logical text order pass, but assistive-technology behavior was not exercised."},
+    {"dimension": "reconstructed_source_runtime_execution", "status": "hold", "attribution": "Build and runtime execution of the third-party reconstructed source snapshot remain outside the read-only validation boundary."}
+  ],
+  "defects": [],
+  "closedDefects": [
+    {
+      "id": "DEFECT-PDF-TEXT-ORDER-001",
+      "status": "closed",
+      "candidateAttribution": true,
+      "closureEvidence": "Independent PDFKit results: worker_done 2/0 reversed, Phase A 2/0 reversed, 공식 module owner 2/0 reversed, tool_result 12/0 reversed."
+    }
+  ],
+  "holds": [
+    "External URL network reachability was not checked.",
+    "Physical A4 print and grayscale proofing were not performed.",
+    "Assistive-technology behavior was not exercised; only tagged markers and PDFKit logical text/search order were validated.",
+    "Build and runtime execution of the third-party reconstructed source snapshot were not performed."
+  ],
+  "targetedCommandResults": [
+    {"commandClass": "shasum/stat-compatible Node digest verifier", "result": "The v2 output freeze, correction freeze, handoff, reader PDF, all direct referenced artifacts, and all direct byte claims match; 55 unique digest paths and 44 unique byte paths passed."},
+    {"commandClass": "recursive candidate-tree digest verifier", "result": "Using lexicographically sorted relative-path order, the 45-file v2 candidate tree is 098277489eb48239a7f627a630979281d9c48d01258605ed9a48c097750a3383 before and after validation; the 44-file self-excluding artifact set is 09cbcdb442b06d26de3bc7853a385df5888cd2ae32078d553622b15dcd83595d."},
+    {"commandClass": "correction dependency and manifest verifier", "result": "Five required correction inputs, 14 project-analysis artifacts, failed predecessor evidence, and the lineage-only historical visual manifest match; its mutable transitive shared paths were not required."},
+    {"commandClass": "git rev-parse/status/cat-file", "result": "Source HEAD 2ca5ddab..., tree 1b6b4ab..., commit/tree objects present, source worktree clean."},
+    {"commandClass": "read-only Playwright DOM evaluation", "result": "37 pages; no overflow, clipping, folio overlap, missing claim binding, duplicate claim ID, invalid link, continuation failure, or topic gap; 64 claims, four evidence classes, and 12 algorithm cards."},
+    {"commandClass": "algorithm catalog and source-locator verifier", "result": "All 89 unique source references exist in the pinned tree, numbered lines are in range, reader references equal catalog references, and rendered source links are commit-pinned."},
+    {"commandClass": "macOS PDFKit read-only inspection", "result": "37 A4 pages, 45802 per-page text characters, no empty page, corrected search counts 2/2/2/12 with all reversed counts zero, 268 link annotations, and 92 unique https URLs."},
+    {"commandClass": "PDF byte marker inspection", "result": "StructTreeRoot, MarkInfo, and Lang markers are present."},
+    {"commandClass": "PNG IHDR and v1/v2 byte comparison", "result": "37 sequential valid previews at 794x1123/1124, contact sheet 1900x4294, 35 byte-identical pages, and only pages 6 and 30 changed."},
+    {"commandClass": "local image inspection", "result": "Contact sheet plus v2 pages 1, 5, 6, 7, 8, 9, 20, 22, 23, 24, 25, 28, 30, 31, 33, 34, and 37 were inspected; v1 pages 6 and 30 were compared directly."}
+  ],
+  "decision": {
+    "overall": "pass",
+    "reason": "The exact corrected candidate satisfies the frozen factual, structural, visual, provenance, and correction requirements. DEFECT-PDF-TEXT-ORDER-001 is independently closed, the candidate remained immutable, and the only residual items are the four expressly non-blocking holds.",
+    "activation": "not_performed",
+    "formalAcceptance": "not_performed",
+    "publication": "not_performed",
+    "promotion": "not_performed",
+    "integration": "not_performed",
+    "settlement": "not_performed",
+    "authorityEffect": "none"
+  }
+}

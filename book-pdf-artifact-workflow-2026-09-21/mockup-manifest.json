@@ -1,0 +1,132 @@
+{
+  "kind": "visual-evidence-manifest/v1",
+  "manifestId": "visual-evidence:book-pdf-editorial-directions",
+  "revision": "book-pdf-visual-evidence/1",
+  "assetCount": 13,
+  "minimumRequested": 10,
+  "minimumSatisfied": true,
+  "generationMethod": "AI-generated original editorial concept boards",
+  "rawPromptPersisted": false,
+  "commonProperties": {
+    "format": "PNG",
+    "width": 1536,
+    "height": 1024,
+    "colorModel": "RGB",
+    "intendedUse": "visual direction only; rebuild final PDF with live text and vector/CSS layout"
+  },
+  "assets": [
+    {
+      "id": "VIS-01",
+      "path": "mockups/01-systems-monograph.png",
+      "sha256": "dff0772239eafa87de01855a30bc2eb094151f8eecd0c70a7d0c7781f468da89",
+      "direction": "Systems Monograph",
+      "pdfUse": ["cover", "part/chapter opener", "continuous prose", "system ownership diagram"],
+      "disposition": "selected_primary_narrative_design"
+    },
+    {
+      "id": "VIS-02",
+      "path": "mockups/02-tradeoff-ledger.png",
+      "sha256": "85c1e7706aba557c6381da2612468bdf182ef39b12c180c69c97d97b83c9724a",
+      "direction": "Trade-off Ledger",
+      "pdfUse": ["architecture decision spread", "benefit/cost/failure comparison"],
+      "disposition": "supporting_page_pattern"
+    },
+    {
+      "id": "VIS-03",
+      "path": "mockups/03-evolutionary-field-guide.png",
+      "sha256": "89b8722276010a50519a8a6d778465d4b2e7ea3ce516b2b168f07a70ce72b8bc",
+      "direction": "Evolutionary Field Guide",
+      "pdfUse": ["fitness checkpoint", "change-over-time appendix"],
+      "disposition": "optional_support"
+    },
+    {
+      "id": "VIS-04",
+      "path": "mockups/04-agent-operations-manual.png",
+      "sha256": "a7c7affa5e3f8bc570476d3ff9c60adfc96ade008651ec02e7846a738a053d46",
+      "direction": "Agent Operations Manual",
+      "pdfUse": ["operations reference only"],
+      "disposition": "not_primary_dashboard_risk"
+    },
+    {
+      "id": "VIS-05",
+      "path": "mockups/05-illustrated-grokking.png",
+      "sha256": "85be4f999220ff0213ff413b06b947e63ba7e4d9fb98995695a043218efef0a1",
+      "direction": "Illustrated Grokking",
+      "pdfUse": ["beginner prerequisite explainer", "exercise page"],
+      "disposition": "audience_variant"
+    },
+    {
+      "id": "VIS-06",
+      "path": "mockups/06-domain-atlas.png",
+      "sha256": "74bb40ea9957ae6a42f0331ec301e8db667218617aa83838388ff3b04dadd109",
+      "direction": "Domain Atlas",
+      "pdfUse": ["bounded-context map", "ownership glossary"],
+      "disposition": "supporting_page_pattern"
+    },
+    {
+      "id": "VIS-07",
+      "path": "mockups/07-evidence-notebook.png",
+      "sha256": "ad3b9a710ff7024365d218fc42f0e8b12e2e324a7f7c70b1ea0d04b0b37c3d5f",
+      "direction": "Evidence Notebook",
+      "pdfUse": ["source excerpt", "claim-to-source", "unknown", "inference", "uncertainty", "limitations"],
+      "disposition": "selected_primary_evidence_design"
+    },
+    {
+      "id": "VIS-08",
+      "path": "mockups/08-algorithm-cookbook.png",
+      "sha256": "845c53bee8e0fea800927dfe52f3432da926f54fcd3a1ace21ee5ae1444204ab",
+      "direction": "Algorithm Cookbook",
+      "pdfUse": ["algorithm recipe", "precondition/steps/failure sidebar"],
+      "disposition": "supporting_page_pattern"
+    },
+    {
+      "id": "VIS-09",
+      "path": "mockups/09-recovery-casebook.png",
+      "sha256": "2ca52839cbda8ed4dde5aa63e87e959e1d85a3baffd470ca5042b0ff9b587122",
+      "direction": "Recovery Casebook",
+      "pdfUse": ["failure path", "recovery trace", "incident lesson"],
+      "disposition": "selected_supporting_design"
+    },
+    {
+      "id": "VIS-10",
+      "path": "mockups/10-technical-review.png",
+      "sha256": "3bffb9dbba5fc9a86775a842a2b5582de03b4129c0be60f487c57e761742a851",
+      "direction": "Technical Review",
+      "pdfUse": ["bounded review summary only"],
+      "disposition": "not_primary_dashboard_risk"
+    },
+    {
+      "id": "VIS-11",
+      "path": "mockups/11-reference-handbook.png",
+      "sha256": "c5a39a31180e41cb8c625a1db4b427327aca041ed9e90b38fca9f2274be4fef8",
+      "direction": "Reference Handbook",
+      "pdfUse": ["glossary", "source index", "claim/source appendix"],
+      "disposition": "selected_supporting_design"
+    },
+    {
+      "id": "VIS-12",
+      "path": "mockups/12-collaborative-workbook.png",
+      "sha256": "52d3aad446b7aac44a0ebe04364cb5401f64d7125628d8465e508882c2919bd5",
+      "direction": "Collaborative Workbook",
+      "pdfUse": ["reader exercise", "team review worksheet"],
+      "disposition": "optional_learning_variant"
+    },
+    {
+      "id": "VIS-13",
+      "path": "mockups/13-turn-lifecycle-anatomy.png",
+      "sha256": "901ccb20122fdf1e28cfef1ad187ec693f7914a13686ea6dbf9dc3277d023b50",
+      "direction": "Turn Lifecycle Anatomy",
+      "pdfUse": ["seven-stage content spine", "sequence overview", "stage navigation"],
+      "disposition": "selected_content_structure_not_primary_visual_style"
+    }
+  ],
+  "selection": {
+    "narrativeDesign": "VIS-01",
+    "evidenceDesign": "VIS-07",
+    "contentSpine": "VIS-13",
+    "supportingDesigns": ["VIS-09", "VIS-11"],
+    "rationale": "Use content function to select between monograph explanation and evidence-notebook verification; retain the lifecycle sequence independently from surface styling."
+  },
+  "authorityEffect": "none"
+}
+

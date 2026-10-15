@@ -1,0 +1,111 @@
+{
+  "kind": "registered-profile-lookup/v1",
+  "revision": "book-pdf-profile-lookup/1",
+  "status": "report_only",
+  "catalogRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "lookupPerformedBeforeBlueprint": true,
+  "queryTerms": [
+    "source",
+    "context",
+    "research",
+    "knowledge",
+    "editor",
+    "writer",
+    "document",
+    "visual",
+    "design",
+    "review",
+    "validator",
+    "quality",
+    "fact",
+    "evidence",
+    "pdf"
+  ],
+  "candidateRoles": [
+    {
+      "role": "Source Investigator/Context Curator",
+      "profiles": [
+        {
+          "ref": "artifacts/agents/agent-operation/agents/context-curator.yaml",
+          "disposition": "partially_covered",
+          "fit": "최소 context packet과 명시적 제외를 다룬다.",
+          "gap": "출처별 claim 추출과 제3자 snapshot 한계 기록은 output contract 밖이다."
+        },
+        {
+          "ref": "artifacts/agents/agent-operation/agents/external-evidence-scout.yaml",
+          "disposition": "partially_covered",
+          "fit": "qualified external evidence와 source limitation을 다룬다.",
+          "gap": "live-session inventory와 프로젝트 source-owner projection은 직접 소유하지 않는다."
+        }
+      ]
+    },
+    {
+      "role": "Domain Prerequisite Researcher",
+      "profiles": [
+        {
+          "ref": "artifacts/agents/agent-operation/agents/knowledge-demand-planner.yaml",
+          "disposition": "partially_covered",
+          "fit": "competency question과 knowledge gap을 먼저 구조화한다.",
+          "gap": "조사 수행과 서적형 prerequisite 설명 작성은 별도다."
+        },
+        {
+          "ref": "artifacts/agents/agent-operation/agents/external-evidence-scout.yaml",
+          "disposition": "partially_covered",
+          "fit": "MDN, React, Anthropic 같은 primary background source 조사에 맞는다.",
+          "gap": "독자 학습 순서와 prerequisite callout 설계는 직접 소유하지 않는다."
+        }
+      ]
+    },
+    {
+      "role": "Technical Editorial Writer",
+      "profiles": [
+        {
+          "ref": "artifacts/agents/research/agents/component-research-synthesizer.yaml",
+          "disposition": "partially_covered",
+          "fit": "source facts, limitations, requirements, unresolved questions를 연결한다.",
+          "gap": "연속 산문, 장 구조, 독자용 예제와 편집 리듬은 output contract 밖이다."
+        },
+        {
+          "ref": "artifacts/agents/requirement-realization/agents/artifact-builder.yaml",
+          "disposition": "partially_covered",
+          "fit": "bounded artifact construction과 evidence traceability를 보존한다.",
+          "gap": "등록상 archetype 재사용 대상이 아니며 technical-book writing profile도 아니다."
+        }
+      ]
+    },
+    {
+      "role": "PDF Information/Visual Designer",
+      "profiles": [
+        {
+          "ref": "artifacts/agents/work-area/agents/design.yaml",
+          "disposition": "partially_covered",
+          "fit": "design direction, visual parity, accessibility risk를 다룬다.",
+          "gap": "paged-media 정보 설계, 인쇄 제약, 본문/도해/부록 문법은 직접 규정하지 않는다."
+        }
+      ]
+    },
+    {
+      "role": "independent Fact/Visual Validator",
+      "profiles": [
+        {
+          "ref": "artifacts/agents/assurance/agents/independent-knowledge-verifier.yaml",
+          "disposition": "partially_covered",
+          "fit": "source-set과 claim binding을 독립적으로 검증한다.",
+          "gap": "페이지 가독성, grayscale, overflow, visual hierarchy는 다루지 않는다."
+        },
+        {
+          "ref": "artifacts/agents/requirement-realization/agents/independent-validator.yaml",
+          "disposition": "partially_covered",
+          "fit": "frozen candidate의 구조·의미·traceability를 변경 없이 검증한다.",
+          "gap": "등록상 dynamic archetype 대상이 아니며 print/visual rubric은 task-local로 보강해야 한다."
+        }
+      ]
+    }
+  ],
+  "catalogFinding": "No registered profile covers any complete task-local role without narrowing or additional output criteria.",
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "promotion": "not_performed",
+  "authorityEffect": "none"
+}
+

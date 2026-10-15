@@ -1,0 +1,142 @@
+{
+  "authorityEffect": "none",
+  "decision": {
+    "authorityEffect": "none",
+    "eligiblePatternIds": ["pipeline"],
+    "kind": "agentic-architecture-decision/v1",
+    "rejectedPatterns": [
+      {
+        "patternId": "generator_validator",
+        "reasonCodes": ["missing_evidence:separable_validation"]
+      },
+      {
+        "patternId": "fan_out_fan_in",
+        "reasonCodes": [
+          "mode_incompatible",
+          "missing_evidence:independent_partitions",
+          "disqualified:one_owner_per_stage"
+        ]
+      },
+      {
+        "patternId": "expert_pool",
+        "reasonCodes": [
+          "mode_incompatible",
+          "missing_evidence:multiple_specialists",
+          "disqualified:one_owner_per_stage"
+        ]
+      },
+      {
+        "patternId": "supervisor",
+        "reasonCodes": [
+          "mode_incompatible",
+          "missing_evidence:dynamic_bounded_tasks",
+          "disqualified:one_owner_per_stage"
+        ]
+      },
+      {
+        "patternId": "hierarchical_delegation",
+        "reasonCodes": [
+          "mode_incompatible",
+          "missing_evidence:hierarchical_ownership",
+          "disqualified:one_owner_per_stage"
+        ]
+      }
+    ],
+    "routeRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:tinycomputerai/bun-server-bench:f329db55a8195408199f30b17e9e284fd5430c074520e21d6805e34df287fc7a:workflow",
+    "selectedCoordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "selectedPatternId": "pipeline",
+    "status": "selected",
+    "tieBreak": "structural_cost_then_pattern_id"
+  },
+  "digest": "sha256:6bf78470b402f1d4ec8f11a851167e6a4976e3f2865592e6be23c4f8a2d38c38",
+  "identityDigest": "sha256:f329db55a8195408199f30b17e9e284fd5430c074520e21d6805e34df287fc7a",
+  "itemId": "tinycomputerai/bun-server-bench",
+  "kind": "harbor-item-workflow-pattern-evidence/v2",
+  "laneIdentitySelectsWorkflow": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "request": {
+    "candidates": [
+      {
+        "activationEvidence": [
+          "ordered_dependency",
+          "exact_output_contract",
+          "single_aggregation_owner"
+        ],
+        "compatibleModes": ["single_task", "loop", "orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+        "disqualifiers": [
+          "independent_parallel_contributions",
+          "missing_handoff_contract",
+          "unbounded_feedback"
+        ],
+        "patternId": "pipeline",
+        "structuralCost": 1
+      },
+      {
+        "activationEvidence": ["separable_validation", "frozen_criteria", "bounded_revision"],
+        "compatibleModes": ["single_task", "loop", "orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/bounded-revision/coordination-policy.json",
+        "disqualifiers": [
+          "author_validator_collapse",
+          "mutable_acceptance_criteria",
+          "unbounded_revision"
+        ],
+        "patternId": "generator_validator",
+        "structuralCost": 2
+      },
+      {
+        "activationEvidence": ["independent_partitions"],
+        "compatibleModes": ["orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/independent-fan-in/coordination-policy.json",
+        "disqualifiers": ["one_owner_per_stage"],
+        "patternId": "fan_out_fan_in",
+        "structuralCost": 3
+      },
+      {
+        "activationEvidence": ["multiple_specialists"],
+        "compatibleModes": ["orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/independent-fan-in/coordination-policy.json",
+        "disqualifiers": ["one_owner_per_stage"],
+        "patternId": "expert_pool",
+        "structuralCost": 4
+      },
+      {
+        "activationEvidence": ["dynamic_bounded_tasks"],
+        "compatibleModes": ["orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/adaptive-supervision/coordination-policy.json",
+        "disqualifiers": ["one_owner_per_stage"],
+        "patternId": "supervisor",
+        "structuralCost": 5
+      },
+      {
+        "activationEvidence": ["hierarchical_ownership"],
+        "compatibleModes": ["orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/hierarchical-synthesis/coordination-policy.json",
+        "disqualifiers": ["one_owner_per_stage"],
+        "patternId": "hierarchical_delegation",
+        "structuralCost": 6
+      }
+    ],
+    "constraints": [
+      "one_owner_per_stage",
+      "no_unbounded_revision",
+      "no_criteria_mutation",
+      "no_parallel_fan_out"
+    ],
+    "routeRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:tinycomputerai/bun-server-bench:f329db55a8195408199f30b17e9e284fd5430c074520e21d6805e34df287fc7a:workflow",
+    "selectedMode": "single_task",
+    "signals": [
+      "ordered_dependency",
+      "exact_output_contract",
+      "single_aggregation_owner",
+      "frozen_criteria",
+      "bounded_revision"
+    ]
+  },
+  "schemaVersion": 2,
+  "sourceDigests": {
+    "coordinationPolicy": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+    "qualificationAlgorithm": "sha256:70bf2260280c07bf93ebae65c862d1f9a85b2c4e8b54fcb4b2b48b9add376dc8",
+    "workflowPattern": "sha256:93bf91356072b399cd3684ea2d482c7fe3afe4ca083e8443e86978b2bdb5d7bd"
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "kind": "reusable-artifact-responsibility-card/v1",
+  "schemaVersion": 1,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "artifactId": "loop:document:job-application-report-production",
+  "version": "v1-report-only-candidate",
+  "baseResponsibilityClass": "loop",
+  "specialization": "job-application-report-production",
+  "scope": {
+    "value": "personal",
+    "evidenceClassification": "exact",
+    "evidenceRefs": [
+      {
+        "ref": ".collab/artifacts/job-application-report-reuse-2026-09-14/agent-operation-boundary.json",
+        "digest": "e1dc68a23d1b6d7975c08ab9635f3a1a003c8a654b87e5d1439e93b0e317afa4"
+      }
+    ]
+  },
+  "purpose": "Produce evidence-grounded job-application answer candidates and a reader-facing report through differentiated questions, protected quality gates, bounded revision, expert guidance, and measured publication validation.",
+  "expectedOutcome": "A schema-valid report-only result containing complete candidate sets, attributable criterion evidence, qualified editing candidates, limitations, missing-material requests, interview preparation, and publication evidence without a submission claim.",
+  "owner": {
+    "value": "owner:job-application-report-production-loop",
+    "evidenceClassification": "exact",
+    "evidenceRefs": [
+      {
+        "ref": "artifacts/agent-loop/document/job-application-report-production/governance.md",
+        "digest": null
+      }
+    ]
+  },
+  "maintainer": {
+    "value": null,
+    "evidenceClassification": "unavailable",
+    "evidenceRefs": []
+  },
+  "intendedConsumers": [
+    "applicants preparing evidence-grounded application answers",
+    "career advisers reviewing candidate distinctions and interview defensibility",
+    "report-production agents operating under a bounded runtime request"
+  ],
+  "owns": [
+    "job-application report request and result contract",
+    "question differentiation and cross-question non-overlap invariant",
+    "application-report quality meaning and protected eligibility gates",
+    "bounded feedback edit and qualification reduction",
+    "reader-facing report projection and publication-validation handoff"
+  ],
+  "mustNotOwn": [
+    "company role applicant or project source truth",
+    "applicant identity values confirmation or final wording acceptance",
+    "cross-domain research context rubric review prompt or handoff semantics",
+    "renderer tool admission report submission publication or hiring decision",
+    "promotion integration or shared inventory ownership"
+  ],
+  "sourceMembers": [
+    "artifacts/agent-loop/document/job-application-report-production/contract.md",
+    "artifacts/agent-loop/document/job-application-report-production/examples/job-application-report-request.example.json",
+    "artifacts/agent-loop/document/job-application-report-production/examples/job-application-report-result.example.json",
+    "artifacts/agent-loop/document/job-application-report-production/governance.md",
+    "artifacts/agent-loop/document/job-application-report-production/job-application-report-production-governance-structure.md",
+    "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+    "artifacts/agent-loop/document/job-application-report-production/policy/job-application-report-production.policy.json",
+    "artifacts/agent-loop/document/job-application-report-production/requirements/job-application-report-production.requirement.json",
+    "artifacts/agent-loop/document/job-application-report-production/schemas/job-application-report-request.schema.json",
+    "artifacts/agent-loop/document/job-application-report-production/schemas/job-application-report-result.schema.json",
+    "artifacts/agent-loop/document/job-application-report-production/scripts/check_job_application_report.mjs",
+    "artifacts/agent-loop/document/job-application-report-production/scripts/test_job_application_report.mjs",
+    "artifacts/agent-loop/document/job-application-report-production/skill/job-application-report-loop-operation/SKILL.md",
+    "artifacts/agent-loop/document/job-application-report-production/skill/job-application-report-loop-operation/references/operation-protocol.md",
+    "artifacts/agent-loop/document/job-application-report-production/vocabularies/job-application-report-quality-policy.json"
+  ],
+  "interfaces": {
+    "inputs": [
+      "job-application-report-request/v1",
+      "native outputs of selected research context rubric review prompt and handoff Loops"
+    ],
+    "outputs": [
+      "job-application-candidate-set/v1",
+      "job-application-report-result/v1",
+      "job-application-report-validation/v1"
+    ],
+    "publicRefs": [
+      "artifacts/agent-loop/document/job-application-report-production/loop.yaml",
+      "artifacts/agent-loop/document/job-application-report-production/contract.md",
+      "artifacts/agent-loop/document/job-application-report-production/schemas/job-application-report-request.schema.json",
+      "artifacts/agent-loop/document/job-application-report-production/schemas/job-application-report-result.schema.json",
+      "artifacts/agent-loop/document/job-application-report-production/skill/job-application-report-loop-operation/SKILL.md"
+    ],
+    "compatibility": "Version 1 is report-only and additive. Schema, protected-gate, score-transform, role-boundary, privacy, or settlement changes require a new revision and fresh runtime validation."
+  },
+  "dependencies": [
+    {
+      "ref": "artifacts/agent-loop/work/progressive-knowledge-research/loop.yaml",
+      "digest": null
+    },
+    {
+      "ref": "artifacts/agent-loop/execution-preparation/context-resolution/loop.yaml",
+      "digest": null
+    },
+    {
+      "ref": "artifacts/agent-loop/assessment/rubric-management/loop.yaml",
+      "digest": null
+    },
+    {
+      "ref": "artifacts/agent-loop/assessment/agent-review/loop.yaml",
+      "digest": null
+    },
+    {
+      "ref": "artifacts/agent-loop/execution-preparation/prompt-assistance/loop.yaml",
+      "digest": null
+    },
+    {
+      "ref": "artifacts/agent-loop/work/session-handoff-resume/loop.yaml",
+      "digest": null
+    },
+    {
+      "ref": "artifacts/agents/requirement-realization/architectures/requirement-realization.pipeline.json",
+      "digest": null
+    }
+  ],
+  "bindings": {
+    "promptContracts": [],
+    "skills": [
+      {
+        "ref": "artifacts/agent-loop/document/job-application-report-production/skill/job-application-report-loop-operation/SKILL.md",
+        "digest": null
+      }
+    ],
+    "knowledge": [
+      {
+        "ref": "artifacts/knowledge/ai/prompt-design-and-quality-engineering.md",
+        "digest": null
+      },
+      {
+        "ref": "artifacts/knowledge/architecture/cross-domain-rubric-management.md",
+        "digest": null
+      }
+    ],
+    "context": [
+      {
+        "ref": "artifacts/agent-loop/execution-preparation/context-resolution/loop.yaml",
+        "digest": null
+      }
+    ],
+    "memory": [],
+    "tools": [],
+    "mcp": [],
+    "hooks": [],
+    "validation": [
+      {
+        "ref": "artifacts/agent-loop/document/job-application-report-production/scripts/check_job_application_report.mjs",
+        "digest": null
+      },
+      {
+        "ref": "artifacts/agent-loop/document/job-application-report-production/scripts/test_job_application_report.mjs",
+        "digest": null
+      },
+      {
+        "ref": "artifacts/agent-loop/spec/scripts/check_agent_loops.cjs",
+        "digest": null
+      },
+      {
+        "ref": "artifacts/agent-loop/spec/scripts/check_loop_package.py",
+        "digest": null
+      }
+    ]
+  },
+  "lifecycle": {
+    "reviewTriggers": [
+      "request or result contract changes",
+      "protected criterion or score transformation changes",
+      "composed owner or role boundary changes",
+      "privacy publication or visible-content policy changes",
+      "repeated unsupported-claim score-reduction or user-correction findings"
+    ],
+    "failure": "Return exact schema, evidence, protected-gate, score, publication, privacy, or missing-context findings without repairing the frozen result or claiming acceptance.",
+    "recovery": "Change the smallest invalidated request, evidence, candidate, profile, or publication artifact; perform only the remaining bounded revision and rerun deterministic and independent validation.",
+    "rollback": "Remove the report-only package and its optional routing while preserving task-local chronology, extraction, and validation evidence; no runtime report migration is implied.",
+    "supersession": "Bind a successor revision, compatibility statement, consumer migration, rollback evidence, independent review, and separate lifecycle decision.",
+    "retirement": "Require no current consumers or a separately accepted replacement and preserve prior report-only evidence as historical observation."
+  },
+  "evidence": {
+    "classification": "derived",
+    "refs": [
+      {
+        "ref": ".collab/artifacts/job-application-report-reuse-2026-09-14/session-chronology.json",
+        "digest": null
+      },
+      {
+        "ref": ".collab/artifacts/job-application-report-reuse-2026-09-14/extraction-decision.json",
+        "digest": null
+      },
+      {
+        "ref": ".collab/artifacts/job-application-2026-09-ai-service-engineer/publication-assessment-v6.json",
+        "digest": "8bdebc931a605ac015a608361b3193c18699f4c76b303eada24a4ea870822651"
+      }
+    ],
+    "limitations": [
+      "The extraction is based on one completed application workflow and cannot establish cross-company or cross-role usefulness.",
+      "The material author also performed this deterministic validation; independent semantic review is unavailable.",
+      "The package coordinates report production but does not include a renderer, research provider, or external submission capability.",
+      "The shared reusable-artifact inventory has not been updated by its integration owner."
+    ],
+    "counterevidence": [
+      "Accessibility conformance beyond searchable text remained unavailable in the observed completed report.",
+      "No repeat execution against a materially different application request has been observed."
+    ]
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "37a82cc2924ef652e7d3b8b46b9a91c2d2c03b2a11bbd3100f343bc55618a11a"
+  }
+}

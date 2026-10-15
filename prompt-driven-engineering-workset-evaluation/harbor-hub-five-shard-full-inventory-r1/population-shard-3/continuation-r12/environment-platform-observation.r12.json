@@ -1,0 +1,39 @@
+{
+  "authorityEffect": "none",
+  "digest": "sha256:a6295858f7900e40389fdc575730f9f768e4d927683f0ef6667d6699664dbb19",
+  "dockerAvailable": true,
+  "dockerRuntimePlatformRef": "platform:linux-aarch64",
+  "environmentDigest": "sha256:70aca5881dba23be4a339260384bf53d7b7e4ad44386d732c7e25e90a3a3c10e",
+  "hostPlatformRef": "platform:darwin-arm64",
+  "itemId": "LiteCoder/LiteCoder-rl",
+  "kind": "harbor-environment-platform-observation/v3",
+  "limitations": [
+    "Docker was available, but the selected task image could not be admitted for linux/arm64",
+    "no Subject or protected verifier process was started",
+    "effective model, effort, and timeout receipts remain unavailable"
+  ],
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "postExecutionObservation": {
+    "providerResourceCount": 0,
+    "state": "environment_setup_failed",
+    "subjectStarted": false,
+    "verifierStarted": false
+  },
+  "preExecutionQualification": {
+    "reasonCodes": [
+      "task_image_manifest_unavailable_linux_arm64",
+      "effective_timeout_receipt_unavailable"
+    ],
+    "state": "held"
+  },
+  "privacy": {
+    "metadataOnly": true,
+    "protectedVerifierBodyProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "schemaVersion": 3,
+  "shardId": "population-shard-3",
+  "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:e185aff8ec6d9dc521d527c67fa959614fefc94514a3a092d00c00b25bb125ab",
+  "status": "subject_environment_setup_failed",
+  "targetPlatformRef": "platform:linux-arm64"
+}

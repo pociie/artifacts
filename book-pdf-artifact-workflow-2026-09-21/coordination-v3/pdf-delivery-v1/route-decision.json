@@ -1,0 +1,68 @@
+{
+  "kind": "sanitized-six-mode-route-decision/v1",
+  "decisionId": "route-decision:claude-code-project-analysis-pdf-delivery:v1",
+  "requestRelation": "continue_objective_with_output_and_supervision_authorization",
+  "historyCoverage": "current_v3_coordination_and_successor_handoffs",
+  "priorPrimaryMode": "orchestration",
+  "outerObligationState": "active_until_pdf_delivery",
+  "effectivePrimaryMode": "orchestration",
+  "segmentModes": [
+    {
+      "mode": "loop",
+      "subject": "agent-role:visual-pdf-spec-builder",
+      "scope": "compose and render one successor source-bound project-analysis PDF in a newly assigned isolated output boundary"
+    },
+    {
+      "mode": "investigation",
+      "subject": "agent-role:independent-fact-visual-reader-validator",
+      "scope": "read-only validation of the frozen successor PDF contribution"
+    },
+    {
+      "mode": "loop",
+      "subject": "agent-role:visual-pdf-spec-builder",
+      "scope": "at most one digest-bound correction cycle when independent findings require it"
+    },
+    {
+      "mode": "single_task",
+      "subject": "agent-role:source-analysis-coordinator",
+      "scope": "freeze inputs and outputs, supervise handoffs, verify lifecycle settlement, and deliver the validated candidate"
+    }
+  ],
+  "selectedArchitecture": {
+    "pattern": "existing-owner-authoring_then_new-independent-validation_with_bounded_correction",
+    "reason": "The existing visual/PDF owner is live and idle with the relevant role and claim; independent validation must remain a separate identity after exact output freeze."
+  },
+  "runId": "run_837aab6bfcd6",
+  "writeBoundaries": {
+    "coordinator": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/pdf-delivery-v1/**",
+    "author": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v1/**",
+    "validator": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-validation-v1/**",
+    "mutableState": ".collab/memory/book-pdf-delivery-2026-09-21/**"
+  },
+  "protectedBoundaries": [
+    "AGENTS.md",
+    "artifacts/loop-architecture/**",
+    "coordination-v3/** outside pdf-delivery-v1",
+    "all predecessor visual candidates and manifests",
+    "the read-only source workspace"
+  ],
+  "completionEvidence": [
+    "digest-bound authoring input freeze",
+    "successor PDF, source, preview, and author handoff manifest",
+    "independent fact, visual, accessibility, link, and reader-comprehension validation",
+    "bounded correction and revalidation only when required",
+    "worker_done processing and explicit resource disposition",
+    "final local artifact delivery to the requester"
+  ],
+  "stopConditions": [
+    "the author input digest changes before author acknowledgement",
+    "the existing visual owner rejects or cannot safely accept the isolated boundary",
+    "a validator finds a material unresolved factual or render defect after the one allowed correction",
+    "a protected boundary would need mutation",
+    "worker liveness becomes unverifiable"
+  ],
+  "authorityEffect": "none",
+  "artifactAcceptance": "not_claimed_by_routing",
+  "publication": "not_performed",
+  "settlement": "not_performed"
+}

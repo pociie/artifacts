@@ -1,0 +1,80 @@
+{
+  "activeClaims": [],
+  "authorityEffect": "none",
+  "digest": "sha256:f11ad31372e88a53a9e1cadc364d66ecfeac1596d0b8a16c3f14b618229bb6e5",
+  "eventCursor": 14,
+  "eventHeadSha256": "sha256:f589a50cfd0b682b1a6cafb7a6e97de4c62d612631c841412ce57e88b612827d",
+  "kind": "atomic-lane-claim-admission-input/v3",
+  "maxConcurrency": 1,
+  "proposals": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 14,
+      "expectedEventHeadSha256": "f589a50cfd0b682b1a6cafb7a6e97de4c62d612631c841412ce57e88b612827d",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:96690dae549a436a042c1231186fe80733258c9725b7e50a8aeb2cbdc75141ca"
+      },
+      "identityDigest": "sha256:be3e2670fbb0e9986260404f11455853254e0b0d1b0bec6963774bad9c8eee47",
+      "itemId": "hack-verifiable-environments/hv-terminal-bench-2-1",
+      "laneId": "population-shard-5",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-5:hack-verifiable-environments/hv-terminal-bench-2-1:r13",
+      "sequence": 14,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-5:r13-controller"
+    }
+  ],
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-5",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-14-hack-verifiable-environments-hv-terminal-bench-2-1/queue-reconciliation-before-claim.r13.json",
+  "resolverDecision": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "hack-verifiable-environments/hv-terminal-bench-2-1",
+        "laneId": "population-shard-5",
+        "proposalId": "proposal:population-shard-5:hack-verifiable-environments/hv-terminal-bench-2-1:r13",
+        "workerId": "worker:harbor-population-shard-5:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 14,
+      "eventHeadSha256": "f589a50cfd0b682b1a6cafb7a6e97de4c62d612631c841412ce57e88b612827d",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 14,
+    "eventHeadSha256": "f589a50cfd0b682b1a6cafb7a6e97de4c62d612631c841412ce57e88b612827d",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-5",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "resolverInputDigest": "sha256:00e8ad8ef76a9f0ff25d5f69b3200c769ed1373b554ac72368561ccee44a9842",
+  "schemaVersion": 3,
+  "terminalReceiptRefs": [
+    "population-shard-5/runs/gpqa-10/2026-08-28__21-31-46/result.json",
+    "population-shard-5/runs/tb3-crash-safe-loop/2026-08-28__21-37-10/result.json",
+    "population-shard-5/r7/runs/compilebench-next/2026-08-28__22-29-42/result.json",
+    "population-shard-5/continuation-r12/terminal-receipt.aarr-aarri-bench.r12.json",
+    "population-shard-5/continuation-r13/item-02-abundant-swe-gen-rust/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-03-actava-ai-chi-bench/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-04-ale-rsi-post-training/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-06-blobfishai-counselbench-100/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-07-crustbench-crustbench/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-08-deveval-deveval/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-09-futurehouse-bixbench/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-10-futurehouse-bixbench-cli/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-11-gorilla-bfcl_parity/terminal-item-receipt.r13.json",
+    "population-shard-5/continuation-r13/item-13-grandsmile-unicode/terminal-item-receipt.r13.json"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "kind": "job-application-research-evidence/v1",
+  "status": "report_only",
+  "authority_effect": "none",
+  "request_ref": "request.json",
+  "observed_at": "2026-09-15T18:00:00+09:00",
+  "research_rounds": 2,
+  "source_observations": [
+    {
+      "source_id": "source-ibk-posting",
+      "authority": "primary",
+      "observation": "2026년 하반기 IBK기업은행 신입행원 공고는 IT 분야와 금융 시스템 개발·운영, 애플리케이션 유지보수, 네트워크·보안, DB, 인프라 업무를 안내한다.",
+      "freshness": "current-posting",
+      "used_for": [
+        "question-motivation",
+        "question-it-capability"
+      ]
+    },
+    {
+      "source_id": "source-ibk-alio",
+      "authority": "primary",
+      "observation": "공고는 2026년 8월 28일부터 9월 14일까지 접수하고 IT 실기에서 알고리즘·데이터베이스를 평가한다고 안내한다.",
+      "freshness": "current-posting",
+      "used_for": [
+        "question-strength",
+        "question-it-capability"
+      ]
+    },
+    {
+      "source_id": "source-ibk-blog",
+      "authority": "primary",
+      "observation": "IBK 공식 블로그도 2026년 하반기 채용 분야로 디지털·IT와 접수 일정을 안내한다.",
+      "freshness": "current-posting",
+      "used_for": [
+        "question-motivation"
+      ]
+    },
+    {
+      "source_id": "source-previous-ibk-cover-letter",
+      "authority": "qualified_secondary",
+      "observation": "이전 IBK 자기소개서는 지원동기·강점과 약점·준비·은행원 외 직업을 묻는 네 문항 구조로 확인되며, 제3자 답변 내용은 지원자 사실로 사용하지 않았다.",
+      "freshness": "historical-reference",
+      "used_for": [
+        "question-map"
+      ]
+    },
+    {
+      "source_id": "source-portfolio-profile",
+      "authority": "applicant_owned",
+      "observation": "공개 프로필은 Spring 백엔드 구조·아키텍처 관심과 핀테크 서비스 개념을 소개하고 네 개의 공개 저장소를 고정한다.",
+      "freshness": "observed-public-profile",
+      "used_for": [
+        "question-motivation",
+        "question-it-capability"
+      ]
+    },
+    {
+      "source_id": "source-portfolio-bank-msa",
+      "authority": "project_observation",
+      "observation": "공개 저장소 README는 핀테크 플랫폼의 회원·인증·결제·Gateway·Consumer와 다중 모듈 책임을 설명한다.",
+      "freshness": "observed-public-repository",
+      "used_for": [
+        "question-strength",
+        "question-it-capability"
+      ]
+    },
+    {
+      "source_id": "source-portfolio-kafka",
+      "authority": "project_observation",
+      "observation": "공개 학습 저장소는 Kafka의 지연·순서·전달 보장·중복·트랜잭션과 Spring Kafka를 다룬다.",
+      "freshness": "observed-public-repository",
+      "used_for": [
+        "question-strength",
+        "question-growth",
+        "question-it-capability"
+      ]
+    },
+    {
+      "source_id": "source-portfolio-static-analysis",
+      "authority": "project_observation",
+      "observation": "공개 프로젝트는 ELF 분석부터 제어 흐름과 LLVM IR로 이어지는 정적 분석 단계를 설명한다.",
+      "freshness": "observed-public-repository",
+      "used_for": [
+        "question-strength",
+        "question-growth",
+        "question-it-capability"
+      ]
+    },
+    {
+      "source_id": "source-portfolio-algorithm",
+      "authority": "project_observation",
+      "observation": "공개 저장소는 Programmers·Baekjoon·SWEA 문제 풀이 기록을 관리한다.",
+      "freshness": "observed-public-repository",
+      "used_for": [
+        "question-growth"
+      ]
+    }
+  ]
+}

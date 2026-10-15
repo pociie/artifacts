@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 32,
+      "expectedEventHeadSha256": "627f14ca539c8aa27ea2a46e949d359ebbc37dd1039923db29b20a0bbba65507",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:85ee082fcddb566f9db2669a281ad1fa8517663ea383959317fbb59ff1f50db7"
+      },
+      "identityDigest": "sha256:141fbedd597ad516de0ca0fda4b1f8d6e016b66a5db64e913df05004d87f5b01",
+      "itemId": "openthoughts/tasktrove-openswe-tasks-patched-v5-oracle-success",
+      "laneId": "population-shard-4",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-4:openthoughts/tasktrove-openswe-tasks-patched-v5-oracle-success:r13",
+      "sequence": 33,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-4:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 32,
+    "eventHeadSha256": "sha256:627f14ca539c8aa27ea2a46e949d359ebbc37dd1039923db29b20a0bbba65507",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:98e9eb8d25497b4147f5de1d795a71df6328f5e53f39840e4b6195206f62a72c",
+  "eventCursor": 32,
+  "eventHeadSha256": "sha256:627f14ca539c8aa27ea2a46e949d359ebbc37dd1039923db29b20a0bbba65507",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-4",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13-next/item-33-openthoughts-tasktrove-openswe-tasks-patched-v5-oracle-success/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "openthoughts/tasktrove-openswe-tasks-patched-v5-oracle-success",
+        "laneId": "population-shard-4",
+        "proposalId": "proposal:population-shard-4:openthoughts/tasktrove-openswe-tasks-patched-v5-oracle-success:r13",
+        "workerId": "worker:harbor-population-shard-4:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 32,
+      "eventHeadSha256": "627f14ca539c8aa27ea2a46e949d359ebbc37dd1039923db29b20a0bbba65507",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 32,
+    "eventHeadSha256": "627f14ca539c8aa27ea2a46e949d359ebbc37dd1039923db29b20a0bbba65507",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-4",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}

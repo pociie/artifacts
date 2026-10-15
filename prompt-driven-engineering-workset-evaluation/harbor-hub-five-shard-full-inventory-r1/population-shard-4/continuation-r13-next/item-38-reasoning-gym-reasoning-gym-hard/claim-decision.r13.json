@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 37,
+      "expectedEventHeadSha256": "9ca20b1bf4c91581756572ab4c9cd2d9dd0843e7f5330322117ba088d19bbf6e",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:afe4a10d8f7573e9f17f86754b67b8de5fa1b16d89e6adf83e3d510c5a8ecf93"
+      },
+      "identityDigest": "sha256:37f21225e7edea9fa1b9e03b6ba92878a743c5dbe88507d7e6e5b29b4562a354",
+      "itemId": "reasoning-gym/reasoning-gym-hard",
+      "laneId": "population-shard-4",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-4:reasoning-gym/reasoning-gym-hard:r13",
+      "sequence": 38,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-4:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 37,
+    "eventHeadSha256": "sha256:9ca20b1bf4c91581756572ab4c9cd2d9dd0843e7f5330322117ba088d19bbf6e",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:dfc368ccab8b58b91f3476608603cc431e5711c255786b1f4b545e32c4b79f95",
+  "eventCursor": 37,
+  "eventHeadSha256": "sha256:9ca20b1bf4c91581756572ab4c9cd2d9dd0843e7f5330322117ba088d19bbf6e",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-4",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13-next/item-38-reasoning-gym-reasoning-gym-hard/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "reasoning-gym/reasoning-gym-hard",
+        "laneId": "population-shard-4",
+        "proposalId": "proposal:population-shard-4:reasoning-gym/reasoning-gym-hard:r13",
+        "workerId": "worker:harbor-population-shard-4:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 37,
+      "eventHeadSha256": "9ca20b1bf4c91581756572ab4c9cd2d9dd0843e7f5330322117ba088d19bbf6e",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 37,
+    "eventHeadSha256": "9ca20b1bf4c91581756572ab4c9cd2d9dd0843e7f5330322117ba088d19bbf6e",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-4",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}

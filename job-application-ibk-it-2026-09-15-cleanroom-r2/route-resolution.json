@@ -1,0 +1,53 @@
+{
+  "kind": "ai-execution-route-resolution/v1",
+  "revision": "ibk-it-cleanroom-r2",
+  "status": "report_only",
+  "authority_effect": "none",
+  "request_relation": "new_objective",
+  "history_coverage": "not_applicable",
+  "session_boundary": "not_applicable",
+  "prior_primary_mode": "none",
+  "outer_obligation_state": "none",
+  "prior_completion_evidence": "not_applicable",
+  "normalized_facts": {
+    "work_purpose": ["research", "deliver"],
+    "operation_family": "outcome_production",
+    "effect_intent": "mixed",
+    "output_shape": "validated_candidate",
+    "temporal_shape": "iterative",
+    "contribution_shape": "multiple_dependent",
+    "execution_surface": "multiple_workers",
+    "uncertainty": "medium",
+    "novelty": "adjacent",
+    "risk": "medium",
+    "reversibility": "reversible",
+    "evidence_diversity": "cross_domain",
+    "source_conflict": "none",
+    "validation_separability": "independent",
+    "context_partitionability": "high",
+    "capability_readiness": "verified",
+    "lifecycle_readiness": "verified"
+  },
+  "missing_facts": [],
+  "conflicting_facts": [],
+  "candidate_mode": "orchestration",
+  "effective_primary_mode": "orchestration",
+  "eligible_modes": ["orchestration"],
+  "rejected_modes": [
+    {"mode": "communication", "blocker": "material research and local artifact production are required"},
+    {"mode": "investigation", "blocker": "the request requires a bounded produced PDF, not findings only"},
+    {"mode": "single_task", "blocker": "the mandatory profile requires multiple independent expert contributions"},
+    {"mode": "loop", "blocker": "independent proposal, challenge, and validator contributions are mandatory"},
+    {"mode": "session_control", "blocker": "no session-control action was requested"}
+  ],
+  "workflow_pattern": "supervised proposal-challenge-revision-validation pipeline",
+  "subject_topology": "one objective-owning orchestrator with read-only specialist reviewers, one builder, and one independent validator",
+  "non_subject_scopes": ["reusable-artifact coverage", "ambient runtime", "controller topology"],
+  "reassessment_triggers": ["question wording changes", "character rule changes", "posting facts conflict", "applicant evidence becomes unavailable", "publication capability changes"],
+  "stop_conditions": ["a blocking personal fact remains unresolved", "the posting cannot be bound", "the aggregate settlement checker fails twice with the same fingerprint"],
+  "policy_refs": [
+    "artifacts/loop-architecture/components/execution-routing/pre-route-workflow-resolution.md",
+    "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/policy/ai-execution-routing.policy.json",
+    "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/policy/ai-execution-mode-operation.policy.json"
+  ]
+}

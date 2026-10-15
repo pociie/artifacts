@@ -1,0 +1,31 @@
+{
+  "kind": "work-execution-binding/v1",
+  "bindingId": "work-execution-binding:claude-code-source-project-analysis:v1",
+  "status": "report_only_candidate",
+  "origin": "opaque-session:current-v3-continuation",
+  "requestDigest": "sha256:173053b4a42dae7829fbd189ddf5fb125a600cf1cee94a3030b0f45066c910ee",
+  "routeRef": "route-decision.json",
+  "objectiveRef": "analysis-objective.json",
+  "parentBundle": {
+    "ref": "../collaboration-bundle-v3.json",
+    "digest": "sha256:d0d376444dc1b29d8713250097e8206a5feca9cee125b5a1a63af593b2f8cb45"
+  },
+  "priorContribution": {
+    "ref": "../source-analysis-contribution-packet.json",
+    "digest": "sha256:dc832ff8ae4870d755ebb57197cce2f80bc1f2309c9d0892d9ecca1347edbcda",
+    "disposition": "received_input_pending_source_reopen_and_independent_acceptance"
+  },
+  "executionOwner": "agent-role:source-analysis-coordinator",
+  "deliveryOwner": "requester",
+  "sourceWorkspace": {
+    "identity": "source-workspace:claude-code-source-code-analysis",
+    "revision": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+    "tree": "1b6b4ab07d0d7b795129852183137c28099c5550",
+    "effect": "read_only"
+  },
+  "artifactRoot": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/project-analysis-v1/",
+  "callbackPolicy": "final_user_report_only",
+  "completionSignal": "digest-bound artifact manifest plus focused deterministic validation",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false
+}

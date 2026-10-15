@@ -1,0 +1,242 @@
+{
+  "kind": "publication-rubric-assessment/v1",
+  "rubricRef": "report-publication-rubric-v6.json",
+  "rubricId": "rubric:job-application-report:publication-v6",
+  "rubricRevision": "2026-09-08.2",
+  "status": "passed",
+  "authorityEffect": "none",
+  "decision": {
+    "valid": true,
+    "mandatoryGate": "pass",
+    "qualifyingGate": "pass",
+    "qualifyingPassRate": 1,
+    "qualifyingRequired": 1,
+    "noCompensation": true,
+    "interpretation": "report-only; valid는 PDF 품질·공개 범위의 기술적 통과를 의미하며 제출 승인이나 채용 판단이 아님"
+  },
+  "criteria": [
+    {
+      "id": "publication-boundary",
+      "kind": "mandatory",
+      "status": "pass",
+      "checks": [
+        {
+          "id": "visible-source-scope",
+          "status": "pass",
+          "evidence": {
+            "actual": [
+              "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007"
+            ],
+            "expected": [
+              "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007"
+            ]
+          }
+        },
+        {
+          "id": "internal-publication-token-absence",
+          "status": "pass",
+          "evidence": {
+            "findings": [],
+            "checkedCount": 18
+          }
+        }
+      ],
+      "limitation": "토큰 부재 검사는 선언된 비노출 목록의 완전성을 보장하지 않으며, 최종 PDF의 사람 검토를 대체하지 않는다."
+    },
+    {
+      "id": "content-contract",
+      "kind": "mandatory",
+      "status": "pass",
+      "checks": [
+        {
+          "id": "html-page-count",
+          "status": "pass",
+          "evidence": {
+            "actual": 15,
+            "expected": 15
+          }
+        },
+        {
+          "id": "answer-inventory",
+          "status": "pass",
+          "evidence": {
+            "answerCount": 15,
+            "expectedAnswers": 15,
+            "minLength": 354,
+            "maxLength": 478,
+            "requiredRange": [
+              300,
+              700
+            ],
+            "scores": [
+              95.5,
+              94.63,
+              97.88,
+              98.5,
+              95.5
+            ],
+            "minScore": 90
+          }
+        },
+        {
+          "id": "live-essay-text",
+          "status": "pass",
+          "evidence": {
+            "liveTextBlocks": 15,
+            "expectedBlocks": 15
+          }
+        },
+        {
+          "id": "pdf-searchable-text",
+          "status": "pass",
+          "evidence": {
+            "textStreams": 15,
+            "textOperators": 20201,
+            "toUnicodeMaps": 357,
+            "minimums": {
+              "textStreams": 15,
+              "textOperators": 15,
+              "toUnicodeMaps": 1
+            }
+          }
+        }
+      ],
+      "limitation": "HTML의 선택 가능한 본문 구조를 검증하며, 모든 PDF 뷰어의 텍스트 추출 결과를 보장하지 않는다."
+    },
+    {
+      "id": "pdf-contract",
+      "kind": "mandatory",
+      "status": "pass",
+      "checks": [
+        {
+          "id": "pdf-file",
+          "status": "pass",
+          "evidence": {
+            "bytes": 2231014,
+            "minBytes": 100000
+          }
+        },
+        {
+          "id": "pdf-page-count",
+          "status": "pass",
+          "evidence": {
+            "actual": 15,
+            "expected": 15
+          }
+        }
+      ],
+      "limitation": "PDF 객체 수를 확인하지만 인쇄소·뷰어별 출력 차이와 태그 접근성 적합성은 별도 검토가 필요하다."
+    },
+    {
+      "id": "render-contract",
+      "kind": "mandatory",
+      "status": "pass",
+      "checks": [
+        {
+          "id": "render-validation",
+          "status": "pass",
+          "evidence": {
+            "pageCount": 15,
+            "expectedPages": 15,
+            "overflowPages": [],
+            "maxOverflowPages": 0
+          }
+        }
+      ],
+      "limitation": "현재 렌더 환경의 결과이며 다른 PDF 뷰어의 글꼴 대체 결과까지 대표하지 않는다."
+    },
+    {
+      "id": "raster-asset-contract",
+      "kind": "qualifying",
+      "status": "pass",
+      "checks": [
+        {
+          "id": "raster-assets",
+          "status": "pass",
+          "evidence": {
+            "format": "png",
+            "details": [
+              {
+                "name": "cover-flow",
+                "exists": true,
+                "bytes": 44159
+              },
+              {
+                "name": "company-role-map",
+                "exists": true,
+                "bytes": 68610
+              },
+              {
+                "name": "domain-interest-map",
+                "exists": true,
+                "bytes": 75395
+              },
+              {
+                "name": "project-flow",
+                "exists": true,
+                "bytes": 52042
+              },
+              {
+                "name": "selection-path",
+                "exists": true,
+                "bytes": 49374
+              },
+              {
+                "name": "score-profile",
+                "exists": true,
+                "bytes": 57127
+              }
+            ],
+            "embeddedCount": 6
+          }
+        }
+      ],
+      "limitation": "래스터 자산의 시각적 품질은 자동 검사만으로 완전히 판단할 수 없어 페이지 이미지 확인을 병행한다."
+    },
+    {
+      "id": "source-traceability",
+      "kind": "qualifying",
+      "status": "pass",
+      "checks": [
+        {
+          "id": "design-source-binding",
+          "status": "pass",
+          "evidence": {
+            "file": "report-design-v6.json",
+            "requiredPaths": [
+              "researchBinding.method",
+              "researchBinding.recordRef",
+              "researchBinding.sourceRefs",
+              "sourceQualityPolicy",
+              "publicationPolicy"
+            ],
+            "missing": []
+          }
+        }
+      ],
+      "limitation": "출처의 사실성은 자료조사 기록에서 관리하며, 이 검사는 연결 필드의 존재와 공개 정책만 확인한다."
+    },
+    {
+      "id": "accessibility-observation",
+      "kind": "observational",
+      "status": "unavailable",
+      "checks": [
+        {
+          "id": "tagged-pdf-audit",
+          "status": "unavailable",
+          "evidence": {
+            "reason": "현재 도구 범위에는 전용 태그-PDF 적합성 감사기가 없음"
+          }
+        }
+      ],
+      "limitation": "W3C 기반 시각·구조 원칙을 적용했지만 공식 접근성 인증을 주장하지 않는다."
+    }
+  ],
+  "observationalUnknowns": [
+    {
+      "id": "accessibility-observation",
+      "limitation": "W3C 기반 시각·구조 원칙을 적용했지만 공식 접근성 인증을 주장하지 않는다."
+    }
+  ],
+  "observedAt": "2026-09-08T04:22:28.879Z"
+}

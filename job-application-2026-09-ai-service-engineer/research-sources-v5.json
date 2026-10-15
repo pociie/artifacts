@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "self-introduction-research-sources/v5",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "publicationPolicy": "이 파일은 내부 근거 보관용이다. 최종 PDF에는 공식 모집공고만 표시한다.",
+  "sources": [
+    {"id": "official-recruitment", "type": "official-job-posting", "title": "롯데이노베이트 2026년 9월 신입사원 일반채용", "url": "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007", "observed": "2026-09-08", "usedFor": ["role scope", "requirements", "preferred skills", "300-character constraint"]},
+    {"id": "local-project-structure", "type": "repository", "locator": ["package.json", "docs/architecture/project-structure.md", "docs/architecture/module-operating-model.md", "shared/README.md"], "observed": "2026-09-08", "usedFor": ["workspace scale", "module responsibility", "service flow"]},
+    {"id": "local-loop-architecture", "type": "repository", "locator": ["artifacts/loop-architecture/README.md", "artifacts/loop-architecture/components/execution-routing/README.md", "artifacts/loop-architecture/components/work-pattern-context-resolution/README.md", "artifacts/loop-architecture/components/reusable-artifact-capability-lifecycle/contract.md"], "observed": "2026-09-08", "usedFor": ["high-level design translation", "authority boundary", "context/reuse/verification/adaptive review"]},
+    {"id": "local-knowledge-governance", "type": "repository-knowledge", "locator": ["artifacts/knowledge/README.md", "artifacts/knowledge/governance/knowledge-governance.md", "artifacts/agent-loop/execution-preparation/context-resolution/governance.md"], "observed": "2026-09-08", "usedFor": ["source provenance", "unknown/conflict handling", "projection boundary"]},
+    {"id": "nist-ai-rmf-measure", "type": "primary-guidance", "title": "NIST AI RMF Playbook: Measure", "url": "https://airc.nist.gov/airmf-resources/playbook/measure/", "observed": "2026-09-08", "usedFor": ["measurement context", "TEVV documentation", "feedback and reassessment"]},
+    {"id": "nist-ai-rmf", "type": "primary-guidance", "title": "NIST AI Risk Management Framework", "url": "https://www.nist.gov/itl/ai-risk-management-framework", "observed": "2026-09-08", "usedFor": ["trustworthiness across lifecycle"]},
+    {"id": "iso-25010", "type": "standard-landing-page", "title": "ISO/IEC 25010", "url": "https://www.iso.org/standard/78176.html", "observed": "2026-09-08", "usedFor": ["quality construct separation"]},
+    {"id": "iso-25022", "type": "standard-landing-page", "title": "ISO/IEC 25022", "url": "https://www.iso.org/standard/35746.html", "observed": "2026-09-08", "usedFor": ["measurement context and indicators"]},
+    {"id": "microsoft-word-choice", "type": "style-guidance", "title": "Microsoft Style Guide: Word Choice", "url": "https://learn.microsoft.com/en-us/style-guide/word-choice/", "observed": "2026-09-08", "usedFor": ["familiar words and consistency"]},
+    {"id": "microsoft-avoid-jargon", "type": "style-guidance", "title": "Microsoft Style Guide: Avoid Jargon", "url": "https://learn.microsoft.com/en-us/style-guide/word-choice/avoid-jargon", "observed": "2026-09-08", "usedFor": ["plain language"]},
+    {"id": "fowler-ubiquitous-language", "type": "primary-explanatory", "title": "Ubiquitous Language", "url": "https://martinfowler.com/bliki/UbiquitousLanguage.html", "observed": "2026-09-08", "usedFor": ["bounded language translation"]},
+    {"id": "ets-reliability", "type": "assessment-guidance", "title": "ETS reliability and validity reference", "url": "https://www.ets.org/research/policy_research_reports/publications/report/2018/jysw.html", "observed": "2026-09-08", "usedFor": ["score interpretation and single-rater limitation"]},
+    {"id": "instructgpt", "type": "primary-research", "title": "Training language models to follow instructions with human feedback", "url": "https://arxiv.org/abs/2203.02155", "observed": "2026-09-08", "usedFor": ["feedback-guided revision analogy; boundary against claiming RLHF"]},
+    {"id": "dpo", "type": "primary-research", "title": "Direct Preference Optimization", "url": "https://arxiv.org/abs/2305.18290", "observed": "2026-09-08", "usedFor": ["preference signal analogy; boundary against claiming DPO"]}
+  ],
+  "researchInterpretation": {
+    "feedbackLoop": "사람의 선호와 오류 기준을 명시하고 사전-수정-사후 평가를 기록하는 편집 루프는 연구의 피드백·선호 개념에서 영감을 받을 수 있으나 모델 학습은 아니다.",
+    "measurement": "점수는 맥락·구성개념·관찰 규칙과 함께 해석하며 단일 숫자를 역량이나 채용 결과로 변환하지 않는다.",
+    "language": "보편적 업무 용어를 우선하되 bounded context의 내부어는 근거·번역 경계 안에서 보존한다."
+  }
+}

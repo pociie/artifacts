@@ -1,0 +1,132 @@
+{
+  "kind": "harbor-shard-source-plan-projection/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "continuationId": "population-shard-2:continuation-r5",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r5",
+  "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:dc8b56e26addb909623cd1c09b451b232a8b1a077277bda8cbbe82743c7ba9c6",
+  "structureDigest": "sha256:dc8b56e26addb909623cd1c09b451b232a8b1a077277bda8cbbe82743c7ba9c6",
+  "resolutionDecisionDigest": "sha256:b1d84a88ae49f897ecdd383ee66b567a4742cf9770b9a2bf77c63cc79b4631e0",
+  "planRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/population-shard-plan.json",
+  "planSha256": "sha256:705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+  "planPopulationRevision": "sha256:3129ad473a1c60f76d7159614e57c251e1fdf0a3ee64c9c347166e3315a1dd69",
+  "algorithm": "sha256-prefix64-modulo-v1",
+  "shard": {
+    "number": 2,
+    "zeroBasedIndex": 1,
+    "shardCount": 5,
+    "plannedPopulationCount": 54,
+    "plannedShardCounts": {
+      "population-shard-1": 60,
+      "population-shard-2": 54,
+      "population-shard-3": 66,
+      "population-shard-4": 49,
+      "population-shard-5": 58
+    }
+  },
+  "hubObservation": {
+    "sourceSurface": "https://hub.harborframework.com/datasets?page={page}",
+    "observedAt": "2026-08-28T12:57:15Z",
+    "pageCount": 10,
+    "allHttp200": true,
+    "reportedTotal": 287,
+    "canonicalRowCount": 287,
+    "uniqueCanonicalDatasetIds": 287,
+    "visibilityCounts": { "Public": 287 },
+    "canonicalization": "trim Unicode NFC; preserve provider case and slash spelling",
+    "inventoryDigest": "sha256:fc7b45b9f5cddb714cd8f651b6bb20cc498992cd53776805b631c43d1ca1e3ad",
+    "canonicalIdsDigest": "sha256:bc7a4b855eff6dfa8eacacbbae9a7010ec001ddfc4a605632b058f0d999d0a29",
+    "pageBodyDigestsUnchanged": true,
+    "pageChecks": [
+      {
+        "page": 1,
+        "httpStatus": 200,
+        "bodyBytes": 244730,
+        "bodySha256": "sha256:bc919f6089c59056ca442914258456e8a748049c439c9a0999220408ce0e00f9"
+      },
+      {
+        "page": 2,
+        "httpStatus": 200,
+        "bodyBytes": 247536,
+        "bodySha256": "sha256:9c0836c83bbfad199e91bafbb29f95d018ed8716a1d910b182a2d48d1eb4619f"
+      },
+      {
+        "page": 3,
+        "httpStatus": 200,
+        "bodyBytes": 250408,
+        "bodySha256": "sha256:3740422afb353bd8061f056ebac3c84e6ed51588ebc62c8bca3b9dc202b59d39"
+      },
+      {
+        "page": 4,
+        "httpStatus": 200,
+        "bodyBytes": 252887,
+        "bodySha256": "sha256:c01e2d707ee868f883e07df13769a50257fe65977b81f354a105f8f7c298bac1"
+      },
+      {
+        "page": 5,
+        "httpStatus": 200,
+        "bodyBytes": 253048,
+        "bodySha256": "sha256:425ff5213b664ec741e8a823d21e9a2efbae3d52706092c70048b1a9dc6eef2a"
+      },
+      {
+        "page": 6,
+        "httpStatus": 200,
+        "bodyBytes": 254932,
+        "bodySha256": "sha256:3e6499bb66323f4205ac977207f6231f0281574a80399504faea6ffd490acc5b"
+      },
+      {
+        "page": 7,
+        "httpStatus": 200,
+        "bodyBytes": 255769,
+        "bodySha256": "sha256:fb3ecb5d6caa85556164d1e171013e72ca55bf44bdb02762e1259340fbae996e"
+      },
+      {
+        "page": 8,
+        "httpStatus": 200,
+        "bodyBytes": 254880,
+        "bodySha256": "sha256:796f59394231502f346408b89c8efd9907067e7e14ac03d7dc671a0c703bf8a4"
+      },
+      {
+        "page": 9,
+        "httpStatus": 200,
+        "bodyBytes": 252218,
+        "bodySha256": "sha256:ec9e2783c410186184540fabe17df6f63da5aa077318f03f89a8052d03689a3c"
+      },
+      {
+        "page": 10,
+        "httpStatus": 200,
+        "bodyBytes": 171207,
+        "bodySha256": "sha256:f0446b7d2b5d928aef19be2572f3eb2053b806281e46776cc75769472b2fc55d"
+      }
+    ]
+  },
+  "ownedProbeCandidates": [
+    {
+      "probeId": "probe-01-ryanmarten-tb-test",
+      "datasetId": "ryanmarten/tb-test",
+      "identityDigest": "sha256:492051d0ef4a11cfea6471d52c531e063e630e979e3d745d26ebc9c1abb5ad29",
+      "scope": "first-materialized-task-only"
+    },
+    {
+      "probeId": "probe-02-harbor-index",
+      "datasetId": "harbor-index/harbor-index",
+      "identityDigest": "sha256:251b4a8c333d25ef724d98c673aa5c043e284a08900a40c1b48f2c537e056cbf",
+      "scope": "first-materialized-task-only"
+    },
+    {
+      "probeId": "probe-03-NovitaAI-tb21-file-recovery",
+      "datasetId": "NovitaAI/tb21-file-recovery",
+      "identityDigest": "sha256:a8d0e8edc8cde732d6310c91bb04ca601b31e94881fda04cc6863bbfc3af4fae",
+      "scope": "first-materialized-task-only"
+    }
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "rawPageBodiesExcluded": true,
+    "rawTaskMaterializationsExcluded": true
+  },
+  "createdAt": "2026-08-28T13:12:08Z",
+  "digest": "sha256:0e0f546d8d345ba3f3b7a5c3fc2dd1548fa7bb84e237f9e326df680fbbc24ec4"
+}

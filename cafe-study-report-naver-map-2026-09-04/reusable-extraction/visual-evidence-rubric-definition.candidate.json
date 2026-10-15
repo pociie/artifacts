@@ -1,0 +1,155 @@
+{
+  "kind": "visual-evidence-rubric-definition-candidate/v1",
+  "schemaVersion": 1,
+  "candidateId": "candidate:visual-evidence-eligibility-and-comparison/v1",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "automaticPromotion": false,
+  "stableResponsibility": "시각 자료의 증거 적격성, 비교 가능성, 불확실성 및 관찰 지표를 분리해 평가하는 공급자·도메인 중립 계약",
+  "owns": [
+    "시각 증거 단위의 채택·배제 상태와 사유",
+    "필수 적격성, 최소 비교 자격, 선호 비교, 관찰 지표의 비보상적 순서",
+    "사실·추론·상충·판단 불가의 분리",
+    "증거 단위에서 평가 대상 결론까지의 추적성"
+  ],
+  "mustNotOwn": [
+    "특정 공급자의 수집·인증·접근 방식",
+    "카페·부동산·여행 등 개별 도메인의 평가 차원과 가중치",
+    "사용자의 최종 선택이나 수용 임계값",
+    "외부 효과, 런타임 권한, 에이전트 배치, 승격 결정"
+  ],
+  "decisionOrder": [
+    "mandatory",
+    "qualifying",
+    "comparative",
+    "observational"
+  ],
+  "assessmentAnchors": [
+    "not_applicable",
+    "unavailable",
+    "conflicting",
+    "fails_mandatory",
+    "partially_supported",
+    "supported",
+    "independently_verified"
+  ],
+  "universalCriteria": {
+    "mandatory": [
+      {
+        "id": "visual.source_identity",
+        "question": "각 증거 단위의 허용 출처, 대상, 관찰 시점, 순번 또는 안정 식별자를 추적할 수 있는가?",
+        "unknownDisposition": "exclude_evidence_unit"
+      },
+      {
+        "id": "visual.relevance",
+        "question": "이미지가 현재 평가 질문에 직접 답할 수 있으며 장식·메뉴·외관·가림·중복만을 보여주는 자료가 아닌가?",
+        "unknownDisposition": "exclude_evidence_unit"
+      },
+      {
+        "id": "visual.prohibited_inference",
+        "question": "이미지로 관찰할 수 없는 상태를 사실로 확정하거나 결측을 유리한 값으로 대체하지 않았는가?",
+        "unknownDisposition": "withhold_subject_claim"
+      }
+    ],
+    "qualifying": [
+      {
+        "id": "visual.minimum_relevant_units",
+        "question": "도메인 프로필이 정한 최소 관련 이미지 수를 충족하는가?",
+        "unknownDisposition": "subject_ineligible"
+      },
+      {
+        "id": "visual.dimension_coverage",
+        "question": "결론에 필요한 서로 다른 관찰 차원이 최소 한 번 이상 직접 확인되는가?",
+        "unknownDisposition": "subject_ineligible"
+      },
+      {
+        "id": "visual.cross_view_consistency",
+        "question": "서로 다른 시점의 이미지가 같은 주장을 지지하거나 상충이 명시적으로 보존되는가?",
+        "unknownDisposition": "preserve_uncertainty"
+      }
+    ],
+    "comparative": [
+      {
+        "id": "visual.profile_dimensions",
+        "question": "필수·자격 기준을 통과한 대상끼리만 도메인 프로필의 관찰 가능한 차원으로 비교하는가?",
+        "unknownDisposition": "withhold_dimension"
+      },
+      {
+        "id": "visual.preference_mechanism",
+        "question": "가중치나 선호 관계가 작업 목표·소비자·유효 기간에 묶이고 필수 실패를 보상하지 않는가?",
+        "unknownDisposition": "withhold_comparison"
+      }
+    ],
+    "observational": [
+      {
+        "id": "visual.evidence_sufficiency",
+        "question": "채택 수, 배제 수, 차원 범위, 중복, 가림, 상충 및 판단 불가가 비교 점수와 별도로 보이는가?",
+        "unknownDisposition": "retain_unavailable"
+      },
+      {
+        "id": "visual.evaluator_drift",
+        "question": "평가자 간 불일치 또는 반복 판정 변화가 측정되었는가?",
+        "unknownDisposition": "retain_unavailable"
+      },
+      {
+        "id": "visual.outcome_join",
+        "question": "실제 사용 결과 또는 독립 검증과 평가 결론의 연결이 있는가?",
+        "unknownDisposition": "withhold_effectiveness_claim"
+      }
+    ]
+  },
+  "profileRules": {
+    "domainProfileOwnsDimensions": true,
+    "taskProfileOwnsWeightsAndThresholds": true,
+    "universalWeightsAllowed": false,
+    "mandatoryCriteriaMayBeWeakened": false,
+    "missingEvidenceMayReceivePositiveValue": false,
+    "evidenceSufficiencyMayEnterPreferenceScore": false
+  },
+  "requiredEvidenceUnitFields": [
+    "subject_id",
+    "source_ref",
+    "observed_at",
+    "unit_index_or_id",
+    "acceptance_state",
+    "observation_tags",
+    "exclusion_reasons",
+    "limitations"
+  ],
+  "requiredValidationCases": [
+    "positive_relevant_image",
+    "negative_decor_or_menu_only",
+    "duplicate_image",
+    "people_obscured_ambiguous",
+    "minimum_count_failure",
+    "dimension_coverage_failure",
+    "conflicting_views",
+    "source_change_invalidation",
+    "missing_outcome_join",
+    "mandatory_failure_not_compensated"
+  ],
+  "promotionBoundary": {
+    "currentDisposition": "task_local_hypothesis",
+    "requiredBeforePromotion": [
+      "명시적인 공용 소유자와 소비자",
+      "서로 다른 도메인과 공급자의 독립 사례",
+      "양성·음성·모호·상충·실패·복구 케이스",
+      "평가자 합의도와 오탐·미탐 관찰",
+      "결정적 스키마·검사기와 독립 검증",
+      "마이그레이션·롤백·무효화·폐기 정책"
+    ]
+  },
+  "sourceBasis": [
+    "artifacts/agent-loop/assessment/engineering-evaluation/decision-rubric/contract.md",
+    "artifacts/agent-loop/assessment/engineering-evaluation/rubric-operation/contract.md",
+    "artifacts/loop-architecture/components/work-pattern-context-resolution/rubrics/domain-work-pattern/rubric.json",
+    "artifacts/knowledge/architecture/engineering-decision-rubrics-and-reuse-evaluation.md",
+    "artifacts/knowledge/ai/prompt-design-and-quality-engineering.md"
+  ],
+  "limitations": [
+    "현재 근거는 한 번의 카페·네이버 지도 이미지 조사뿐이다.",
+    "공용 스키마와 결정적 검사기는 아직 없으며 이 파일은 승격 후보가 아니다.",
+    "독립적인 이중 판정, 실제 방문 결과, 공급자 간 재현성이 확인되지 않았다."
+  ]
+}

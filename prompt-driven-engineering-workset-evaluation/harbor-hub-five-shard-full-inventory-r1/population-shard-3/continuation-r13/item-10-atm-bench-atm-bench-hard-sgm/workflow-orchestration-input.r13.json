@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "2c7bad360a36c7f30db159eb06d530421383806ebf1cf9b41a2f82044c761b62",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-10-atm-bench-atm-bench-hard-sgm/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-10-atm-bench-atm-bench-hard-sgm/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "e4c576902549fe4ad707eb086281c8d0edbb15b2c7e3ea932858f7f31f5b5da1",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "12fe6088b8fd93a12e652c7a77bcaed3107aee4a7a248a0fe0ea77562fa93ee6",
+      "topologySelectionDecisionSha256": "e18d7b3a8bf0105d6a94eb9e7c9bba23a57f529c07e332c683a6f3a7891e0339"
+    },
+    {
+      "coordinationPlanDecisionSha256": "2c7bad360a36c7f30db159eb06d530421383806ebf1cf9b41a2f82044c761b62",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-10-atm-bench-atm-bench-hard-sgm/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-10-atm-bench-atm-bench-hard-sgm/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "e4c576902549fe4ad707eb086281c8d0edbb15b2c7e3ea932858f7f31f5b5da1",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "12fe6088b8fd93a12e652c7a77bcaed3107aee4a7a248a0fe0ea77562fa93ee6",
+      "topologySelectionDecisionSha256": "e18d7b3a8bf0105d6a94eb9e7c9bba23a57f529c07e332c683a6f3a7891e0339"
+    },
+    {
+      "coordinationPlanDecisionSha256": "2c7bad360a36c7f30db159eb06d530421383806ebf1cf9b41a2f82044c761b62",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-10-atm-bench-atm-bench-hard-sgm/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/item-10-atm-bench-atm-bench-hard-sgm/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "e4c576902549fe4ad707eb086281c8d0edbb15b2c7e3ea932858f7f31f5b5da1",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "12fe6088b8fd93a12e652c7a77bcaed3107aee4a7a248a0fe0ea77562fa93ee6",
+      "topologySelectionDecisionSha256": "e18d7b3a8bf0105d6a94eb9e7c9bba23a57f529c07e332c683a6f3a7891e0339"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

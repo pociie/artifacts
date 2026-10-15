@@ -1,0 +1,60 @@
+{
+  "activeClaimCount": 0,
+  "authorityEffect": "none",
+  "continuationCounts": {
+    "itemsDiscovered": 1,
+    "itemsEvaluated": 0,
+    "itemsExecuted": 0,
+    "itemsHeld": 1,
+    "itemsQualified": 0,
+    "itemsRejected": 0,
+    "itemsSettled": 1
+  },
+  "currentItem": {
+    "effectiveReceiptState": "missing_require_context",
+    "identityDigest": "sha256:d39b03b25efba06a6749a3e83eac3d70ca7619092c69b9611e1dc72068f5b96a",
+    "itemId": "openthoughts/tasktrove-exp-rpt-pymethods2test-large",
+    "terminalReward": 0.0,
+    "terminalStatus": "held"
+  },
+  "digest": "sha256:828fe827338252a814dc713a90981060894fa21b70380b576cd85e0d915e82d3",
+  "exactTerminalReceiptCount": 21,
+  "frozenPopulationCount": 49,
+  "holdWakeCondition": [
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "network_policy_and_cost_budget_qualified",
+    "changed_item_or_capability_fingerprint"
+  ],
+  "kind": "harbor-population-shard-operation-state/v2",
+  "nextAction": "claim_next_pending_plan_order_member_after_settlement_if_worker_window_permits; otherwise_hold_until_changed_provider_capability_fingerprint",
+  "nextPlanOrderItem": "openthoughts/tasktrove-exp-rpt-stack-bash-withtests-v2",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "operationRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+  "pendingItemCount": 28,
+  "phase": "item_terminal_settlement_hold",
+  "populationComplete": false,
+  "populationSettlementDigest": "sha256:b48097d377bfe835e704a42eaaa62454775d5b97e51c19a2f7f205f9e03f3c09",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "runtimeAuthority": "report_only; no queue-owner mutation available",
+  "schemaVersion": 2,
+  "shardId": "population-shard-4",
+  "shardIndex": 3,
+  "sourceBindingDigest": "sha256:47be09c8536a0301561a218e8dc825c6e530f73d90225e66a46834e205c86735",
+  "terminalCounts": {
+    "cancelled": 0,
+    "completed": 1,
+    "failed": 0,
+    "held": 20
+  },
+  "terminalRewardDigest": "sha256:d245c3266194b21359fae22822c442a7d5dda71c445832b704a3fcc0038da3ba"
+}

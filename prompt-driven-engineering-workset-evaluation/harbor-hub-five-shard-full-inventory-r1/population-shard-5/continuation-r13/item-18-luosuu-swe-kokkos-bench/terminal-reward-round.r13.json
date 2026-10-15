@@ -1,0 +1,244 @@
+{
+  "authorityEffect": "none",
+  "bindings": {
+    "evaluationReportDigest": "sha256:7627df7009e7b4eb9d88ab04f9ebc9ff2d81089aaa8ff628611c58813b2dca77",
+    "evaluationReportRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-18-luosuu-swe-kokkos-bench/final-independent-evaluation.r13.json",
+    "populationAccountingRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-18-luosuu-swe-kokkos-bench/population-settlement-decision.r13.json",
+    "reducerOutputDigest": "sha256:79a68c9e4a32afb57f4529ff104dde5ee5e80f5a223eb9bea59243d4ee4c124a",
+    "reducerOutputRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-18-luosuu-swe-kokkos-bench/terminal-reward-reducer-output.r13.json",
+    "settlementRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-18-luosuu-swe-kokkos-bench/item-resource-settlement.r13.json",
+    "simulationEvidenceDigest": "sha256:eb861171e81e13a5fda2fd347420c9555874efaad9d524e1505d03016682b002",
+    "simulationEvidenceRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-18-luosuu-swe-kokkos-bench/simulation-evidence.r13.json",
+    "terminalAssessmentDigest": "sha256:d3ccf1057aa0cba5b273dd3f8b542f42c636401013edc4140b899edf89e1804a",
+    "terminalAssessmentRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-18-luosuu-swe-kokkos-bench/terminal-reward-assessment.r13.json"
+  },
+  "decision": {
+    "diagnosticReward": null,
+    "dimensionRewards": [
+      {
+        "dimensionId": "requirement_understanding",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "operability",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "routing",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "reasoning_control",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "context_adaptation",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "workflow",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "agent_architecture",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "agent_swarm",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_discovery",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_reuse",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_creation",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "artifact_update",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "artifact_split",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "artifact_merge",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "dynamic_artifact_composition",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "loop_architecture_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "evidence_quality",
+        "reward": 1.0,
+        "state": "scored"
+      },
+      {
+        "dimensionId": "outcome_quality",
+        "reward": null,
+        "state": "unavailable"
+      },
+      {
+        "dimensionId": "efficiency",
+        "reward": null,
+        "state": "unavailable"
+      }
+    ],
+    "disposition": "require_context",
+    "findings": [
+      {
+        "criterionId": "gate.outcome.required_validation",
+        "findingType": "protected_gate_failure",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "critical"
+      },
+      {
+        "criterionId": "reward.operability",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ENVIRONMENT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.update",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ARTIFACT_UPDATE_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.split",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ARTIFACT_SPLIT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.merge",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ARTIFACT_MERGE_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.dynamic_composition",
+        "findingType": "evidence_gap",
+        "ownerRoute": "DYNAMIC_ARTIFACT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.outcome_quality",
+        "findingType": "evidence_gap",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "major"
+      }
+    ],
+    "improvementTargetCriterionIds": [
+      "gate.outcome.required_validation",
+      "reward.operability",
+      "reward.artifact.update",
+      "reward.artifact.split",
+      "reward.artifact.merge",
+      "reward.artifact.dynamic_composition",
+      "reward.outcome_quality"
+    ],
+    "primaryReward": 0.0,
+    "promotionEligible": false,
+    "reasonCodes": [
+      "protected_criterion_unresolved",
+      "qualifying_criterion_unresolved",
+      "required_active_dimension_unavailable"
+    ],
+    "useClass": "workset_terminal"
+  },
+  "digest": "sha256:7734b22adef4bf25f367c0dac92bcff5fcd0de2562b4998e093c77d1033eece4",
+  "execution": {
+    "effectiveReceiptState": "missing_require_context",
+    "effectiveSubjectTimeoutSeconds": null,
+    "modelEffective": null,
+    "modelRequested": "gpt-5.6-luna",
+    "promotionEligible": false,
+    "provider": "harbor@0.22.0",
+    "reasoningEffortEffective": null,
+    "reasoningEffortRequested": "max",
+    "requestedSubjectTimeoutSeconds": 3600,
+    "subject": "Harbor Subject",
+    "subjectRetries": 0,
+    "subjectTerminalState": "not_started",
+    "subjectTrials": 0,
+    "verifierState": "not_started"
+  },
+  "frameworkRevision": "r4",
+  "identityDigest": "sha256:a1c270d48cdbda3a3db064218c6406ca65e53a7628956c17ae3efe24ef8df119",
+  "itemId": "luosuu/SWE-kokkos-bench",
+  "itemTerminalStatus": "held",
+  "kind": "workset-terminal-reward-round/v2",
+  "nonCompensatoryGates": {
+    "effectiveExecutionReceiptObserved": false,
+    "effectiveExecutionReceiptRequired": true,
+    "populationItemBindingExact": true,
+    "protectedOutcomeValidationObserved": false,
+    "protectedOutcomeValidationRequired": true,
+    "resourceSettlementComplete": true
+  },
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "preservedGaps": [
+    "qualified_harbor_hub_auth",
+    "task_instruction_and_image_manifest_observed",
+    "protected_verifier_observed",
+    "effective_model_receipt_equals_gpt-5.6-luna",
+    "effective_reasoning_effort_receipt_equals_max",
+    "effective_subject_timeout_receipt_equals_3600_seconds",
+    "network_policy_and_cost_budget_qualified"
+  ],
+  "privacy": {
+    "credentialsProjected": false,
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawTaskContentProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "roundId": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-18-luosuu-swe-kokkos-bench:terminal-reward-round",
+  "schemaVersion": 2,
+  "shardDisposition": {
+    "activeItemCount": 0,
+    "currentItem": "luosuu/SWE-kokkos-bench",
+    "currentItemStatus": "held",
+    "frozenMemberCount": 58,
+    "otherMembersDisposition": "not_inferred",
+    "pendingItemCount": 39,
+    "state": "in_progress",
+    "terminalCounts": {
+      "cancelled": 0,
+      "completed": 3,
+      "failed": 0,
+      "held": 16
+    },
+    "terminalSettledItemCount": 19
+  },
+  "status": "settled",
+  "terminalReward": 0.0
+}

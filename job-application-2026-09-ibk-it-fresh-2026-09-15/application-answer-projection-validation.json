@@ -1,0 +1,37 @@
+{
+  "kind": "job-application-answer-projection-validation/v1",
+  "status": "pass",
+  "authority_effect": "none",
+  "request_ref": ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15/request.json",
+  "result_ref": ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15/result.json",
+  "projection_ref": ".collab/artifacts/job-application-2026-09-ibk-it-fresh-2026-09-15/application-answer-projection.json",
+  "projection_scope": {
+    "candidate_count": 5,
+    "answer_count": 20,
+    "included": [
+      "지원 메타데이터",
+      "문항 원문",
+      "세트 라벨",
+      "답변 본문"
+    ],
+    "excluded": [
+      "점수",
+      "검증 영수증",
+      "면접 준비",
+      "추가 확인 사항",
+      "실행 메커니즘"
+    ]
+  },
+  "checks": [
+    {
+      "id": "answer-body-parity",
+      "status": "passed",
+      "evidence": "다섯 세트와 스무 개 답변의 본문·문자 수가 최종 결과와 일치한다."
+    },
+    {
+      "id": "review-metadata-exclusion",
+      "status": "passed",
+      "evidence": "지원 답안 투영에는 답변에 필요한 공개 메타데이터만 남겼다."
+    }
+  ]
+}

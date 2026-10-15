@@ -1,0 +1,78 @@
+{
+  "authorityEffect": "none",
+  "continuationId": "population-shard-4:continuation-r9",
+  "kind": "harbor-population-shard-queue-reconciliation/v2",
+  "legacyAggregate": {
+    "authorityForCurrentAccounting": "rejected_aggregate_without_identity_receipts",
+    "digest": "sha256:9084ae3b4e9146d69007b9311da8092cfa729cbbd54da36477b8bd87ef80f2fe",
+    "reason": "r6 item-scoped contract makes one-item receipts authoritative; aggregate counters cannot settle unobserved identities",
+    "reportedCounts": {
+      "discovered": 49,
+      "evaluated": 0,
+      "executed": 0,
+      "held": 49,
+      "qualified": 0,
+      "rejected": 0,
+      "settled": 49
+    },
+    "reportedDisposition": "49 settled_hold",
+    "settlementRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-4/settlement.json",
+    "sourceRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-4/shard-summary.json",
+    "stateRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-4/operation-state.json"
+  },
+  "observedAt": "2026-08-28T13:46:46Z",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "predecessorR5": {
+    "derivedWithoutOverwrite": true,
+    "digest": "sha256:713cd920129c7f2234a228b0974c8dc56174cf4151875dbfed246b4bad63edc2",
+    "itemId": "harbor/hello-world",
+    "itemTerminalStatus": "completed",
+    "receiptRef": "continuation-r9/terminal-receipt.harbor-hello-world.r5.json",
+    "reward": 1.0
+  },
+  "preservation": {
+    "historicalRoundR5Preserved": true,
+    "legacyAggregatePreserved": true,
+    "priorTerminalReceiptsOverwritten": false,
+    "writesOnlySuccessorArea": true
+  },
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true
+  },
+  "queuePolicy": {
+    "accountingRule": "exact active claims plus unique identity-bearing terminal receipts",
+    "casePreservingIdentity": true,
+    "claimPredicate": "same shard assignment, no terminal disposition, no active claim, and materially changed capability/task fingerprint",
+    "providerReobservation": "validation_only",
+    "repartitionPerformed": false
+  },
+  "queueSnapshotBeforeClaim": {
+    "activeClaims": 0,
+    "eligibleClaimCount": 48,
+    "frozenShardMembers": 49,
+    "identityBearingTerminalReceipts": 1,
+    "pendingWithoutTerminalDisposition": 48,
+    "populationComplete": false,
+    "terminalCompleted": 1,
+    "terminalHeld": 0,
+    "terminalRejected": 0
+  },
+  "reconciliationDigest": "sha256:05136b5061c251def0e196e7d0cae615339263d96db40e964651a8fbfe1c9afc",
+  "schemaVersion": 2,
+  "shardId": "population-shard-4",
+  "sourceBinding": {
+    "decisionDigest": "sha256:5b5fa2713334ff3e1c0451a48291c1343318435f9be3620f8cbfaf6b8ecc6663",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r9",
+    "planSha256": "sha256:705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+    "populationDigest": "sha256:3129ad473a1c60f76d7159614e57c251e1fdf0a3ee64c9c347166e3315a1dd69",
+    "shardCounts": {
+      "population-shard-1": 60,
+      "population-shard-2": 54,
+      "population-shard-3": 66,
+      "population-shard-4": 49,
+      "population-shard-5": 58
+    },
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:fb88be3a0d69a80d51adda2bc4f6d62e52d5a525fcf33789efb099f474c6eed7"
+  }
+}

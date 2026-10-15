@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "58612c4065995901305bb2d8cc311c25dbe9a26c81c73bc8f12d00cfcb95e284",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-17-openthoughts-tasktrove-exp-flat25-stackoverflow-v2/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-17-openthoughts-tasktrove-exp-flat25-stackoverflow-v2/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "37b453b3a5da2fcab33061a1c29280a9325d445e8b0841fdc6353ab2f52ba096",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "21d922e3412f73b508a51c30c656f74a6d570da6abf1c21bbe0c6df940447242",
+      "topologySelectionDecisionSha256": "670cddd3799fb81f64c381d4f16769001ff7bff7789d376d8c245dc1b76f8125"
+    },
+    {
+      "coordinationPlanDecisionSha256": "58612c4065995901305bb2d8cc311c25dbe9a26c81c73bc8f12d00cfcb95e284",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-17-openthoughts-tasktrove-exp-flat25-stackoverflow-v2/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-17-openthoughts-tasktrove-exp-flat25-stackoverflow-v2/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "37b453b3a5da2fcab33061a1c29280a9325d445e8b0841fdc6353ab2f52ba096",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "21d922e3412f73b508a51c30c656f74a6d570da6abf1c21bbe0c6df940447242",
+      "topologySelectionDecisionSha256": "670cddd3799fb81f64c381d4f16769001ff7bff7789d376d8c245dc1b76f8125"
+    },
+    {
+      "coordinationPlanDecisionSha256": "58612c4065995901305bb2d8cc311c25dbe9a26c81c73bc8f12d00cfcb95e284",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-17-openthoughts-tasktrove-exp-flat25-stackoverflow-v2/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-17-openthoughts-tasktrove-exp-flat25-stackoverflow-v2/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "37b453b3a5da2fcab33061a1c29280a9325d445e8b0841fdc6353ab2f52ba096",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "21d922e3412f73b508a51c30c656f74a6d570da6abf1c21bbe0c6df940447242",
+      "topologySelectionDecisionSha256": "670cddd3799fb81f64c381d4f16769001ff7bff7789d376d8c245dc1b76f8125"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

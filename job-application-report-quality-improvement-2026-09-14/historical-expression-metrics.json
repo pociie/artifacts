@@ -1,0 +1,40 @@
+{
+  "kind": "job-application-historical-expression-audit/v1",
+  "observed_at": "2026-09-14",
+  "method": {
+    "ngram_size": 5,
+    "repeated_sentence_min_codepoints": 24,
+    "minimum_candidate_share": 0.6,
+    "interpretation": "Diagnostic signals requiring semantic review; not quality scores or automatic rejection thresholds."
+  },
+  "runs": [
+    {
+      "id": "coremotion-five-set",
+      "question_metrics": [
+        { "question_id": "question-1-goal", "max_pairwise_ngram_jaccard": 0.212, "repeated_long_sentence_count": 3 },
+        { "question_id": "question-2-motivation-fit", "max_pairwise_ngram_jaccard": 0.11, "repeated_long_sentence_count": 1 },
+        { "question_id": "question-3-strength-gap", "max_pairwise_ngram_jaccard": 0.202, "repeated_long_sentence_count": 3 },
+        { "question_id": "question-4-process-improvement", "max_pairwise_ngram_jaccard": 0.325, "repeated_long_sentence_count": 4 }
+      ]
+    },
+    {
+      "id": "finebridge-two-set",
+      "question_metrics": [
+        { "question_id": "question-collaboration", "max_pairwise_ngram_jaccard": 0, "repeated_long_sentence_count": 0 },
+        { "question_id": "question-preparation", "max_pairwise_ngram_jaccard": 0.037, "repeated_long_sentence_count": 0 },
+        { "question_id": "question-value-formation", "max_pairwise_ngram_jaccard": 0, "repeated_long_sentence_count": 0 },
+        { "question_id": "question-three-to-five-year-goal", "max_pairwise_ngram_jaccard": 0, "repeated_long_sentence_count": 0 }
+      ]
+    },
+    {
+      "id": "nextwave-five-set-v2",
+      "question_metrics": [
+        { "question_id": "question-strength", "max_pairwise_ngram_jaccard": 0.18, "repeated_long_sentence_count": 2 },
+        { "question_id": "question-motivation", "max_pairwise_ngram_jaccard": 0.275, "repeated_long_sentence_count": 3 },
+        { "question_id": "question-problem", "max_pairwise_ngram_jaccard": 0.233, "repeated_long_sentence_count": 4 },
+        { "question_id": "question-contribution", "max_pairwise_ngram_jaccard": 0.445, "repeated_long_sentence_count": 8 }
+      ]
+    }
+  ],
+  "authority_effect": "none"
+}

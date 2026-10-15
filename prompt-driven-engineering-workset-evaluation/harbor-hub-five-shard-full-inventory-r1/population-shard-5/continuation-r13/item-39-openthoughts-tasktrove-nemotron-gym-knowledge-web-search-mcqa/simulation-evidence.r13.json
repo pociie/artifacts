@@ -1,0 +1,255 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:5b67e5461fa7cced367680e21c9eccebe911c168371fc9817215d3b8f221a40c",
+      "id": "harbor-gpt-5-6-luna",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T15:53:48Z",
+  "digest": "sha256:9ae5c7b483d27f3d9ad3f967a1e92e76fba8075acc94406a5d65415cbbe783a1",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:0f8e6ba429166d6fd62644e4e0be9a9a2ff22f34bf77d61b86c1be898c3b4f34",
+    "limitations": [
+      "platform_state_unobserved",
+      "network_policy_unresolved",
+      "cost_budget_unqualified"
+    ],
+    "platformRef": "environment:darwin-arm64-docker"
+  },
+  "evidenceId": "engineering-workset-simulation:population-shard-5:continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa:openthoughts/tasktrove-nemotron-gym-knowledge-web-search-mcqa",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/candidate-probe.r13.json"
+      ],
+      "id": "provider-auth",
+      "subjectRef": "item:openthoughts/tasktrove-nemotron-gym-knowledge-web-search-mcqa"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "benchmark",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/candidate-probe.r13.json"
+      ],
+      "id": "task-instruction",
+      "subjectRef": "item:openthoughts/tasktrove-nemotron-gym-knowledge-web-search-mcqa"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/candidate-probe.r13.json"
+      ],
+      "id": "protected-verifier",
+      "subjectRef": "item:openthoughts/tasktrove-nemotron-gym-knowledge-web-search-mcqa"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-model",
+      "subjectRef": "item:openthoughts/tasktrove-nemotron-gym-knowledge-web-search-mcqa"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/harbor-subject-operation.r13.json"
+      ],
+      "id": "effective-effort",
+      "subjectRef": "item:openthoughts/tasktrove-nemotron-gym-knowledge-web-search-mcqa"
+    },
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": [
+        ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/harbor-subject-operation.r13.json"
+      ],
+      "id": "subject-timeout",
+      "subjectRef": "item:openthoughts/tasktrove-nemotron-gym-knowledge-web-search-mcqa"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider_qualification_held",
+      "effective_execution_receipt_missing",
+      "oracle_not_run"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "task_instruction_unavailable",
+      "task_image_manifest_unavailable",
+      "protected_verifier_unavailable"
+    ],
+    "selectionRule": "one exact case-preserving frozen item; no dataset-wide inference",
+    "taskCount": 1,
+    "taskDigests": ["sha256:6fcce2b3b458e655d9fe8cc52e0f18ceca1bcc84b9aee2a30e4ebc17a8616dc3"]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa"
+  },
+  "provider": {
+    "limitations": [],
+    "qualificationDigest": "sha256:3d7384df125e933b99ae0f09e658e6e14cfe664812a6d070f3b1c1fa0efc0735",
+    "qualificationRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/candidate-probe.r13.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:6b2eb3147cdc68b7802f802aff0d03c1069c32307933f195a08b46f6db914ae1",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+    ],
+    "sourceDigest": "sha256:cd752898dba5ab9086b989b0b1762483e6c8539fb39f52eb738df8c4fddabd87",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656",
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7"
+  },
+  "settlement": {
+    "reconciliationRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/item-resource-settlement.r13.json",
+    "resources": [
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/candidate-probe.r13.json"
+        ],
+        "resourceClass": "subject-container",
+        "resourceRefDigest": "sha256:fe6bd9344d5bc50db63e95540bde3190ab0b35e13cc6260e02018b5a38ee4c21",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/candidate-probe.r13.json"
+        ],
+        "resourceClass": "verifier-container",
+        "resourceRefDigest": "sha256:809ed795076354871efbab594ed7a306bd3d7f59e63a8d42d04686f760b54e50",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/candidate-probe.r13.json"
+        ],
+        "resourceClass": "credential-injection",
+        "resourceRefDigest": "sha256:645bcffdd3baccd3b81e4d1a1f17a145539a05c209bced98ece10f202d96072a",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/candidate-probe.r13.json"
+        ],
+        "resourceClass": "task-workspace",
+        "resourceRefDigest": "sha256:ecbcb41ff4653cd761528356f57d61697c693a6726c63a7aa1b0d44bbbf8f70b",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/candidate-probe.r13.json"
+        ],
+        "resourceClass": "image-cache",
+        "resourceRefDigest": "sha256:b9b014dccb9e9aecbdcc6fcf0ca7d3927c400d850523d0fb2605b47301637473",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/candidate-probe.r13.json"
+        ],
+        "resourceClass": "network-policy-scope",
+        "resourceRefDigest": "sha256:9820b4127c018ba9fc8a37779e1ff37a773f4336368891383da6da1abba56f1a",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/harbor-subject-operation.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/candidate-probe.r13.json"
+        ],
+        "resourceClass": "cost-budget-scope",
+        "resourceRefDigest": "sha256:0e7b4d935b5f9f3bcac31d3115527bc516cabf391da4d09956e6e891ebdc6539",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": [
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/dynamic-candidate.r13.json",
+          ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/dynamic-artifact-composition-decision.r13.json"
+        ],
+        "resourceClass": "dynamic-candidate",
+        "resourceRefDigest": "sha256:9b9542fc53d5baf3d7348ebc2e0dd15cafb9fe7230558eb42f3e302e7137e670",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/preclaim-verification.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/source-and-plan-binding.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/route-decision.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/dynamic-artifact-composition-decision.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/execution-structure-21-output-bundle.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/subject-operation-request.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/native-subject-topology-operation-receipt.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/native-subject-topology-operation-observation.r13.json"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/working-memory-binding.r13.json",
+    "checkpointRefs": [
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/preclaim-verification.r13.json",
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/claim-source-freeze.r13.json",
+      ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa/item-resource-settlement.r13.json"
+    ],
+    "digest": "sha256:53977accd8a83dc6bc0b3ca39b9f11757a2637d72000891cd4e532dd354be2ad",
+    "invalidation": [
+      "objective_revision_changes",
+      "requirement_scope_digest_changes",
+      "frozen_population_plan_digest_changes",
+      "item_capability_fingerprint_changes",
+      "terminal_settlement_emitted"
+    ],
+    "namespaceRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa",
+    "retention": "continuation_local_until_successor_or_expiry",
+    "sessionCursor": "session:harbor-hub-five-shard-full-inventory-r1:population-shard-5:continuation-r13/item-39-openthoughts-tasktrove-nemotron-gym-knowledge-web-search-mcqa"
+  }
+}

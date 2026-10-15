@@ -1,0 +1,42 @@
+{
+  "candidateSpaceInspection": {
+    "architecturePatternCount": 6,
+    "modeCount": 6,
+    "reusableSwarmPatternCount": 4,
+    "selectionStatus": "report_only_candidates_inspected_in_campaign_base"
+  },
+  "execution": {
+    "agent": "codex",
+    "credentialInjection": "CODEX_FORCE_AUTH_JSON=1",
+    "dataset": "abundant/swe-gen-java@latest",
+    "model": "gpt-5.6-luna",
+    "provider": "harbor",
+    "providerVersion": "0.22.0",
+    "reasoningEffort": "max",
+    "subjectTimeoutPolicy": "multiplier_1;effective_task_declared_timeout_must_be_at_most_3600",
+    "taskResolution": "--n-tasks 1",
+    "verification": "enabled"
+  },
+  "identityDigest": "sha256:dde74a7e707f60a1978399f9af6bea1b45f345e818cbf66aa425b48418b5f650",
+  "itemId": "abundant/swe-gen-java",
+  "kind": "harbor-item-route-delta/v1",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "ordinal": 2,
+  "privacy": {
+    "privateReasoningStored": false,
+    "rawPromptStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "selectedRoute": {
+    "architecturePattern": "not_required",
+    "coordinationPolicy": "not_required",
+    "dynamicArtifactComposition": "terminal-receipt-and-reward-vector",
+    "mode": "single_task",
+    "reason": "one_deterministic_representative_provider_task_with_local_lane_control",
+    "roleContext": "single-lane-controller-and-provider-subject",
+    "swarmDecision": "no-swarm",
+    "workflow": "workflow-pattern-execution"
+  },
+  "shardId": "population-shard-4"
+}

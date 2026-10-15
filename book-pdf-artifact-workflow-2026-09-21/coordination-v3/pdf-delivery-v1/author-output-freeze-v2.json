@@ -1,0 +1,60 @@
+{
+  "kind": "project-analysis-pdf-author-output-freeze/v2",
+  "status": "corrected_author_candidate_frozen_pending_final_independent_validation",
+  "frozenAt": "2026-09-21T16:46:48Z",
+  "runId": "run_837aab6bfcd6",
+  "producer": {
+    "roleRef": "agent-role:visual-pdf-spec-builder",
+    "taskId": "task_830ec6458d86",
+    "dispatchId": "ctx_97728d9c598c",
+    "outcome": "succeeded",
+    "workerDoneDeliveryId": "delivery_fdce3983bd50"
+  },
+  "correctionInputFreeze": {
+    "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/pdf-delivery-v1/correction-input-freeze-v2.json",
+    "sha256": "e51903b9a91e5443f8d13a0c367602d0fc10d5b61034345bc83d3ef23b29497d"
+  },
+  "supersedesFailedCandidateFreeze": {
+    "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/pdf-delivery-v1/author-output-freeze.json",
+    "sha256": "0fb5223acd3dd16cbcf1efd00050547355334890e013c9791f584b3c60af635d",
+    "reason": "One permitted correction cycle addressed DEFECT-PDF-TEXT-ORDER-001; the failed v1 candidate remains preserved."
+  },
+  "handoffManifest": {
+    "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/recipient-handoff-manifest.json",
+    "sha256": "4f2adb2f5704b2ee39046a02bf65d1ed9e038e7c6a20f13740733f546c4d020a",
+    "enumerates": "seven primary artifacts and thirty-seven page previews with exact sha256 and byte counts"
+  },
+  "primaryArtifacts": [
+    {"role": "reader_pdf", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/claude-code-project-analysis.pdf", "sha256": "001289cccb32c83c12bd3f282d5ce0a6e6f6ec35e379c0bc712fd4a7ddbe8802", "bytes": 5083379, "pageCount": 37, "tagged": true},
+    {"role": "authoring_source", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/claude-code-project-analysis.html", "sha256": "00b93b8314c2f654c6a60f1780acca1726652d5e717c11c154ff3ac8796f4a4d"},
+    {"role": "contact_sheet", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/contact-sheet.png", "sha256": "d3ef2d111f5752cb8eb8f68b5c7c15b4e457161ea4f52c6b5341afb258e76405"},
+    {"role": "contact_sheet_source", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/contact-sheet.html", "sha256": "6e4db2e1464ff905f965efdbcdbec93ba7f160540a5bcfb270801c3aa102b5e1"},
+    {"role": "render_audit", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/render-audit.json", "sha256": "2dc2376445df60b9649fea739686657ee52ba5d598e31a9ae08992f9d152d186"},
+    {"role": "render_script", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/render.mjs", "sha256": "249b9369cad519e58a5e1bf8588c67fa0776494ed3dea09d35d05d60a954acf1"},
+    {"role": "author_validation", "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/authoring-validation.json", "sha256": "428274a34a3e6656b109c1490154d79fa7fe46924bf343906d67b75997cd9ef0", "result": "pass_author_side_correction_candidate"}
+  ],
+  "previewSet": {
+    "directory": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/previews",
+    "count": 37,
+    "exactPerFileDigests": "carried_by_handoff_manifest"
+  },
+  "closedAuthorSideFingerprint": {
+    "id": "DEFECT-PDF-TEXT-ORDER-001",
+    "method": "tagged Chromium PDF structure plus two bounded contextual text adjustments",
+    "normalHits": {"worker_done": 2, "Phase A": 2, "공식 module owner": 2, "tool_result": 12},
+    "reversedHits": {"enod_rekrow": 0, "A esahP": 0, "renwo eludom 식공": 0, "tluser_loot": 0},
+    "independentConfirmation": "pending"
+  },
+  "candidateTreeSha256": "098277489eb48239a7f627a630979281d9c48d01258605ed9a48c097750a3383",
+  "nextOwner": "new_independent_fact_visual_reader_validator",
+  "invalidation": "Any content or digest change under project-analysis-pdf-v2 invalidates this freeze and dependent validation.",
+  "authorityEffect": "none",
+  "nonClaims": {
+    "activation": "not_claimed",
+    "formalAcceptance": "not_claimed",
+    "publication": "not_claimed",
+    "promotion": "not_claimed",
+    "integration": "not_claimed",
+    "settlement": "not_claimed"
+  }
+}

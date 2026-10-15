@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "790f64a6caee593a5c44e579b144a778caa4c13a1a97ca78b28360cc0d59fd3a",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-45-punitarani-harvey-labs/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-45-punitarani-harvey-labs/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "b9d409ab2b0034205f6f2b7ce85858ef0da824177b2131d3a3acce495ace8108",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "33d355c0d6c63708633fa207dbceff436a883af9862ed2baded1caed0f83cddc",
+      "topologySelectionDecisionSha256": "eb769d9aa6ad018eaa287b08fe93e9222a3d221de597d7d0d75ba2859f1b78bd"
+    },
+    {
+      "coordinationPlanDecisionSha256": "790f64a6caee593a5c44e579b144a778caa4c13a1a97ca78b28360cc0d59fd3a",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-45-punitarani-harvey-labs/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-45-punitarani-harvey-labs/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "b9d409ab2b0034205f6f2b7ce85858ef0da824177b2131d3a3acce495ace8108",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "33d355c0d6c63708633fa207dbceff436a883af9862ed2baded1caed0f83cddc",
+      "topologySelectionDecisionSha256": "eb769d9aa6ad018eaa287b08fe93e9222a3d221de597d7d0d75ba2859f1b78bd"
+    },
+    {
+      "coordinationPlanDecisionSha256": "790f64a6caee593a5c44e579b144a778caa4c13a1a97ca78b28360cc0d59fd3a",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-45-punitarani-harvey-labs/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-45-punitarani-harvey-labs/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "b9d409ab2b0034205f6f2b7ce85858ef0da824177b2131d3a3acce495ace8108",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "33d355c0d6c63708633fa207dbceff436a883af9862ed2baded1caed0f83cddc",
+      "topologySelectionDecisionSha256": "eb769d9aa6ad018eaa287b08fe93e9222a3d221de597d7d0d75ba2859f1b78bd"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

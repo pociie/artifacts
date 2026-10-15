@@ -1,0 +1,72 @@
+{
+  "kind": "job-application-frozen-findings/v1",
+  "status": "frozen_before_revision",
+  "authority_effect": "none",
+  "request_ref": "request.json",
+  "candidate_ids": ["candidate-a", "candidate-b"],
+  "mandatory_gates": [
+    {
+      "id": "request-and-question-coverage",
+      "status": "pass",
+      "finding": "각 후보가 네 문항을 모두 답하고 문항별 서사 역할과 최대 글자 수를 분리했다."
+    },
+    {
+      "id": "source-and-freshness-boundary",
+      "status": "pass",
+      "finding": "직무 주장은 제공된 공고 핵심 내용에 한정하고, .example 회사 사이트의 미확인 정보는 사용하지 않았다."
+    },
+    {
+      "id": "applicant-attribution-and-confirmation",
+      "status": "pass",
+      "finding": "지원자가 제공한 전공·역량·경험은 단정적으로 쓰되, 협업 맥락과 장기 목표는 확인 사항으로 표시했다."
+    },
+    {
+      "id": "project-evidence-and-causality",
+      "status": "pass",
+      "finding": "24건 인터뷰, 600건 문의와 31% 비중, 요구사항·QA·VOC 순서를 보존하고 정량 성과를 부풀리지 않았다."
+    },
+    {
+      "id": "role-domain-language-clarity",
+      "status": "pass",
+      "finding": "내부 도구명은 필요한 곳에서만 쓰고 사용자 단계·요구사항·출시 후 확인이라는 보편 언어로 번역했다."
+    },
+    {
+      "id": "publication-and-privacy-safety",
+      "status": "pass",
+      "finding": "HTML과 텍스트 추출물은 공개 출처만 표시하고 이름·나이·내부 실행 기록·로컬 경로를 공개하지 않도록 구성했다."
+    }
+  ],
+  "comparative_findings": [
+    {
+      "candidate_id": "candidate-a",
+      "before_score": 93.0,
+      "dimension_ratings": {
+        "question-fit-and-differentiation": 3.7,
+        "role-and-domain-alignment": 3.7,
+        "applicant-viewpoint-and-values": 3.8,
+        "evidence-causality-and-attribution": 3.7,
+        "project-abstraction-and-transfer": 3.7,
+        "clarity-and-interview-defensibility": 3.7
+      },
+      "revision_target": "협업 답변에서 팀의 공동 목표와 본인의 연결 역할을 더 분명히 하고, 포부를 단계별 책임과 지표로 구체화한다."
+    },
+    {
+      "candidate_id": "candidate-b",
+      "before_score": 92.4,
+      "dimension_ratings": {
+        "question-fit-and-differentiation": 3.7,
+        "role-and-domain-alignment": 3.8,
+        "applicant-viewpoint-and-values": 3.7,
+        "evidence-causality-and-attribution": 3.7,
+        "project-abstraction-and-transfer": 3.7,
+        "clarity-and-interview-defensibility": 3.7
+      },
+      "revision_target": "문의 분석의 인과와 수치 한계를 함께 명시하고, 도구 역량을 실제 기획 행동과 연결해 나열감을 줄인다."
+    }
+  ],
+  "revision_budget": {
+    "configured_passes": 1,
+    "same_fingerprint_limit": 1,
+    "revision_basis": "question fit, role alignment, evidence causality, and interview defensibility"
+  }
+}

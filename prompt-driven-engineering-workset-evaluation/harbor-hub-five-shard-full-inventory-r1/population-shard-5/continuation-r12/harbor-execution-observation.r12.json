@@ -1,0 +1,56 @@
+{
+  "kind": "harbor-execution-observation/v3",
+  "schemaVersion": 3,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "shardId": "population-shard-5",
+  "itemId": "aarr/aarri-bench",
+  "attempted": false,
+  "status": "not_started_capability_hold",
+  "provider": {
+    "class": "harbor",
+    "version": "0.22.0",
+    "qualificationRef": "artifacts/population-shard-5/continuation-r12/provider-qualification.r12.json",
+    "acceptedTrialCount": 0
+  },
+  "taskRef": "aarr/aarri-bench/cross-pollination",
+  "taskRevision": 1,
+  "taskPageDigest": "sha256:6305649acfb122e8518374bde36b066e757c0dd185b35bfc3a595d986cb96e68",
+  "model": {
+    "requested": "gpt-5.6-luna",
+    "effective": null,
+    "effectiveReceiptPresent": false
+  },
+  "reasoningEffort": {
+    "requested": "max",
+    "effective": null,
+    "effectiveReceiptPresent": false
+  },
+  "timeouts": {
+    "requestedSubjectSeconds": 3600,
+    "requestedVerifierSeconds": 3600,
+    "effectiveSubjectSeconds": null,
+    "effectiveVerifierSeconds": null,
+    "adapterObservedSubjectSeconds": 600,
+    "adapterObservedVerifierSeconds": 600,
+    "effectiveReceiptPresent": false
+  },
+  "trialId": null,
+  "trialState": "not_started",
+  "verifier": {
+    "state": "not_started",
+    "failureCode": "provider:effective-model-effort-timeout-credential-receipts-unavailable",
+    "rawVerifierReward": null
+  },
+  "runtime": {
+    "containerCreated": false,
+    "subjectResourceCreated": false,
+    "activeProviderResourceCountAfterRound": 0
+  },
+  "privacy": {
+    "metadataOnly": true,
+    "credentialsProjected": false,
+    "privateTrajectoryProjected": false,
+    "rawProviderMaterialProjected": false
+  }
+}

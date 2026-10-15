@@ -1,0 +1,73 @@
+{
+  "authorityEffect": "none",
+  "blockers": [],
+  "effectivePrimaryMode": "single_task",
+  "excludedScopeKinds": ["ambient", "controller", "coverage"],
+  "kind": "subject-operation-scope-binding-decision/v1",
+  "reasonCodes": [
+    "non_subject_scopes_explicitly_excluded",
+    "selected_subject_topology_content_bound"
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-5:stanford/medagentbench:r13:execute-harbor-subject",
+  "routeDecisionSha256": "10b0b5908255381b79eef88148894b18d37e6fd8486adc0e845f56c2ef24c957",
+  "scopeBindings": [
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:ab5020ee80ff2b5c1fa15cff80b372374f779db8ad68bbf1cdf6e8e663fa83e2",
+      "disposition": "coverage_stimulus_only",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-47-stanford-medagentbench/source-and-plan-binding.r13.json",
+      "scopeId": "coverage:population-shard-5:stanford/medagentbench:r13",
+      "scopeKind": "coverage",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:f3d61016dc00d7caaee857ba340e817ee91ac5503b7e09bbe2f3c7940dcfd2e7",
+      "disposition": "context_only",
+      "ref": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-5/working-state.json",
+      "scopeId": "ambient:population-shard-5:stanford/medagentbench:r13",
+      "scopeKind": "ambient",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:7577ff29fb66939fbc7fe6fe069b6d514377f57588b2c610476c6d11d0081c19",
+      "disposition": "control_plane_only",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-47-stanford-medagentbench/claim.r13.json",
+      "scopeId": "controller:population-shard-5:stanford/medagentbench:r13",
+      "scopeKind": "controller",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": true,
+      "digest": "sha256:4c32b0ab9869df66981d86d5778123288cc3b4eb58ba25961f3e2da058dabc67",
+      "disposition": "eligible_report_only",
+      "ref": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-47-stanford-medagentbench/subject-topology-binding.r13.json",
+      "scopeId": "subject-scope:population-shard-5:stanford/medagentbench:r13",
+      "scopeKind": "subject",
+      "state": "selected"
+    }
+  ],
+  "scopedMode": "single_task",
+  "segmentMode": null,
+  "status": "ready",
+  "subjectOperation": {
+    "agentArchitectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmDigest": null,
+    "agentSwarmRef": null,
+    "bindingDigest": "sha256:4c32b0ab9869df66981d86d5778123288cc3b4eb58ba25961f3e2da058dabc67",
+    "bindingRef": ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-47-stanford-medagentbench/subject-topology-binding.r13.json",
+    "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "disposition": "eligible_report_only",
+    "scopeId": "subject-scope:population-shard-5:stanford/medagentbench:r13",
+    "workflowPatternDigest": "sha256:93bf91356072b399cd3684ea2d482c7fe3afe4ca083e8443e86978b2bdb5d7bd",
+    "workflowPatternId": "pipeline",
+    "workflowPatternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/pipeline/workflow-pattern.json"
+  },
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "topologyRequirementDecisionSha256": "6b055d1bba5cfae1431c047bc0211c42e2c6f9d0daa81c0d7358c02ef63954ff",
+  "topologySelectionDecisionSha256": "a1dfd30f45da3eb609358e176fad1bc53e7b8b3feb42a8ca2e33a7119a4e9662"
+}

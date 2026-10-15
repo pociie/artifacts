@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "self-introduction-evaluation-data-operations/v5",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "purpose": "평가 점수가 현재 작업 목적에 맞는 정보가 되도록 평가 단위·출처·결손·변환·피드백·재평가 데이터를 분리 운영한다.",
+  "dataLayers": [
+    {"id": "source_facts", "meaning": "공고·저장소·사용자 제공 내용의 원천 사실", "examples": ["official role duties", "28 workspaces", "user value statement"], "cannotInfer": ["production outcome", "complete personal ownership"]},
+    {"id": "claim_records", "meaning": "문장 주장의 class·근거·제한·미래성", "artifact": "claim-ledger-v5.json", "unknownRule": "unknown remains explicit"},
+    {"id": "rubric_observations", "meaning": "0~4 anchor에 따른 문항·도메인 관찰 평정", "artifact": "assessment-operation-v5.json", "cannotInfer": ["ability certification", "hiring probability"]},
+    {"id": "revision_events", "meaning": "v4 baseline→v5 revision의 문제·수정·점수 변화", "artifact": "revision-plan-v5.json", "cannotInfer": ["model reward", "user preference truth"]},
+    {"id": "render_validation", "meaning": "글자 수·페이지·PDF overflow·source policy 결과", "artifact": "render-validation-v5.json", "cannotInfer": ["content truth", "candidate fit"]}
+  ],
+  "operationStages": [
+    {"id": "intake", "check": "공고·문항·사용자 목표·출력 제약을 고정", "failure": "scope drift", "disposition": "stop and rebind"},
+    {"id": "source_assurance", "check": "official/repository/user/derived/unknown class and observed date", "failure": "unsupported claim", "disposition": "quarantine claim"},
+    {"id": "rubric_freeze", "check": "question-specific contract, axes, weights, anchors, gates frozen before post-score", "failure": "moving goalpost", "disposition": "do not score"},
+    {"id": "baseline_assessment", "check": "v4 set/question weakness and score recorded", "failure": "no comparison", "disposition": "reconstruct baseline"},
+    {"id": "feedback_selection", "check": "one highest-impact defect per set selected", "failure": "unbounded rewrite", "disposition": "reduce scope"},
+    {"id": "revision", "check": "one pass with changed sentence category and evidence boundary", "failure": "claim inflation or question overlap", "disposition": "reject change"},
+    {"id": "post_assessment", "check": "same rubric and evaluator; score delta and residual unknown recorded", "failure": "incomparable score", "disposition": "mark unavailable"},
+    {"id": "publication_gate", "check": "score >=90, all gates pass, 5 sets, 15 answers in range, PDF source policy", "failure": "candidate not published", "disposition": "exclude from PDF"},
+    {"id": "post_use_observation", "check": "user meaning confirmation, expert comments, submission/interview outcome if voluntarily supplied", "failure": "no false update", "disposition": "keep outcome unavailable"}
+  ],
+  "metrics": [
+    {"id": "question_coverage", "definition": "answers satisfying required signals / 15", "target": 1, "observed": 1, "interpretation": "문항 요구 충족"},
+    {"id": "length_compliance", "definition": "answers in 300~700 chars / 15", "target": 1, "observed": 1, "interpretation": "글자 수 gate"},
+    {"id": "canonical_term_coverage", "definition": "required universal concepts with stable terms / required concepts", "target": 0.9, "observed": 1, "interpretation": "용어 명료성"},
+    {"id": "undefined_critical_term_rate", "definition": "critical terms without definition or translation / critical terms", "target": 0, "observed": 0, "interpretation": "추론 부담"},
+    {"id": "unsupported_past_outcome_claims", "definition": "unsupported past outcome claims", "target": 0, "observed": 0, "interpretation": "과장 방지"},
+    {"id": "question_boundary_pass", "definition": "sets with distinct primary subject by q1/q2/q3 / 5", "target": 1, "observed": 1, "interpretation": "문항 차별화"},
+    {"id": "score_threshold_pass", "definition": "sets with score >=90 and gate pass / 5", "target": 1, "observed": 1, "interpretation": "PDF inclusion"},
+    {"id": "average_score_delta", "definition": "average post score - average pre score", "target": ">=0", "observed": 1.8, "interpretation": "이번 편집 루프의 비교 신호"},
+    {"id": "source_visibility_compliance", "definition": "visible sources other than official posting", "target": 0, "observed": 0, "interpretation": "사용자 출력 정책"},
+    {"id": "inter_rater_reliability", "definition": "independent rater agreement", "target": "unavailable", "observed": "unavailable", "interpretation": "0점 처리하지 않음"},
+    {"id": "user_semantic_acknowledgement", "definition": "user-confirmed extended viewpoint", "target": "pending", "observed": "pending", "interpretation": "직접 가치관과 해석 분리"},
+    {"id": "submission_outcome_join", "definition": "score joined to submission/interview/hiring outcome", "target": "unavailable", "observed": "unavailable", "interpretation": "채용 예측 금지"}
+  ],
+  "feedbackRecordSchema": {"required": ["setId", "questionId", "beforeTextRef", "issueCategory", "feedbackSignal", "changeRef", "afterTextRef", "preScore", "postScore", "residualUnknown", "reviewerRole"], "reviewerRole": "single editorial evaluator; user and expert review pending"},
+  "missingDataPolicy": {"unknown": "preserve label", "pending_user_review": "do not publish as settled fact", "unavailable": "do not impute zero or average", "conflict": "retain both claims and stop promotion until resolved"},
+  "limitations": ["현재 점수는 단일 평가자 결과", "점수 범위와 가중치는 편집 목적에 특화", "문항의 진정성·면접 설득력은 사용자와 전문가가 별도 확인", "사후 채용 결과 데이터 수집을 자동화하거나 추정하지 않음"]
+}

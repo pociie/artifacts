@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "harbor-hub-r14-compact-campaign-base/v1",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "sourcePopulationOperationId": "harbor-hub-five-shard-full-inventory-r1",
+  "lane": "population-shard-2",
+  "population": {
+    "planSha256": "sha256:705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+    "populationRevision": "sha256:3129ad473a1c60f76d7159614e57c251e1fdf0a3ee64c9c347166e3315a1dd69",
+    "inventorySha256": "sha256:8a732a91c29fada632ef1e9296a39e51122079effea00417561d790bbfbaa592",
+    "algorithm": "sha256-prefix64-modulo-v1",
+    "frozenShardItemCount": 54
+  },
+  "capabilityFingerprint": {
+    "framework": "harbor@0.22.0",
+    "agent": "codex",
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "authMode": "CODEX_FORCE_AUTH_JSON=1",
+    "publicDatasetDownload": true,
+    "verification": "enabled",
+    "subjectTimeoutCeilingSeconds": 3600,
+    "executionMode": "local",
+    "hostedLaunch": false,
+    "installOnly": false,
+    "frameworkRevision": "sha256:ec23c40270733d0a9ffd336abcd2f51c084fbb439acd73ccd67d2e0c7fdc5d68"
+  },
+  "concurrency": {"logicalLaneCount": 5, "globalSubjectSlots": 3, "laneControllerPolicy": "sequential-item-admission"},
+  "queue": {"queueId": "queue:harbor-hub-five-shard-full-inventory-r14:population-shard-2", "queueRevision": "harbor-hub-item-scoped-population-settlement-r14", "claimBoundary": "refresh-before-each-item"},
+  "candidateSpace": {
+    "routingModes": ["communication", "investigation", "single_task", "loop", "orchestration", "session_control"],
+    "architecturePatterns": ["expert-pool", "fan-out-fan-in", "generator-validator", "hierarchical-delegation", "pipeline", "supervisor"],
+    "reusableSwarmPatterns": ["adaptive-supervision", "bounded-revision", "capability-route-selection", "hierarchical-synthesis", "independent-fan-in", "ordered-handoff"]
+  },
+  "topology": {"topologyRequirement": "none", "architecture": "not_required", "swarm": "not_required", "coordination": "not_required"},
+  "priorEvidence": {"priorContinuation": "r13", "priorHeldEvidenceCount": 47, "priorMissingEvidenceCount": 7},
+  "authorityEffect": "none",
+  "routingEffect": "none"
+}

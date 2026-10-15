@@ -1,0 +1,35 @@
+{
+  "kind": "task-local-effect-admission/v1",
+  "status": "admitted",
+  "authorityEffect": "none",
+  "objectiveRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/agent-operation-boundary.json",
+  "routeDecisionRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/route-decision.json",
+  "routeDecisionDigest": "c1c186e482571c3d5e545c01bf3497bf1f946b819b668eac934cfd830225b5fa",
+  "authorizationBasis": {
+    "ref": "user-request:2026-09-14:reusable-job-application-report-artifact",
+    "summary": "The requester explicitly asked to extract the completed report workflow into reusable artifacts without losing accumulated requirements."
+  },
+  "admittedEffect": {
+    "class": "local_repository_write",
+    "target": "artifacts/agent-loop/document/job-application-report-production",
+    "allowed": [
+      "add one report-only Agent Loop package",
+      "add schemas, policy, examples, operation guidance, and focused validators within the exact target"
+    ]
+  },
+  "excludedEffects": [
+    "modify existing reusable loops or shared registries",
+    "modify the existing job-application report or its source data",
+    "write outside the exact reusable package and task-local evidence directory",
+    "publish, submit, push, or create external resources",
+    "perform destructive or workspace-global operations"
+  ],
+  "unrelatedDirtyStatePolicy": "preserve and do not stage, repair, or reinterpret unrelated changes",
+  "invalidationTriggers": [
+    "target path changes",
+    "a second reusable unit becomes necessary",
+    "the work requires an external effect",
+    "a semantic owner conflict is discovered"
+  ],
+  "settlement": "This record admits only the stated task-local file additions; it grants no acceptance, promotion, integration, or future runtime authority."
+}

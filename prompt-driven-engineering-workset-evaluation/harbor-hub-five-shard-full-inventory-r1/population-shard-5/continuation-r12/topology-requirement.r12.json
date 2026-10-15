@@ -1,0 +1,41 @@
+{
+  "kind": "harbor-execution-topology-requirement-evidence/v2",
+  "schemaVersion": 2,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "shardId": "population-shard-5",
+  "itemId": "aarr/aarri-bench",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-5:aarr-aarri-bench:r12",
+  "routeRef": "continuation-r12/route-decision.r12.json",
+  "workflowRef": "continuation-r12/workflow-pattern-qualification.r12.json",
+  "status": "selected_report_only",
+  "topologyRequirement": "architecture_only",
+  "architectureQualification": "report_only_candidate",
+  "swarmQualification": "not_required",
+  "decision": {
+    "kind": "execution-topology-requirement-decision/v1",
+    "status": "selected",
+    "selectedMode": "single_task",
+    "targetScope": "effective_primary",
+    "topologyRequirement": "architecture_only",
+    "reasonCodes": [
+      "Subject_and_independent_verifier_are_separate_roles",
+      "controller_and_evaluator_are_not_subject_actors",
+      "one_bounded_item_does_not_require_Swarm"
+    ],
+    "requiredCapabilityClasses": ["subject", "independent_verifier"],
+    "branchingDeferredToWorkflow": true,
+    "authorityEffect": "none"
+  },
+  "architecture": {
+    "selected": true,
+    "status": "report_only_candidate",
+    "nativeReceiptObserved": false,
+    "reason": "provider admission held before Subject execution"
+  },
+  "swarm": {
+    "optionalActivated": false,
+    "selected": false,
+    "reason": "one bounded owner; no multi-contribution requirement"
+  }
+}

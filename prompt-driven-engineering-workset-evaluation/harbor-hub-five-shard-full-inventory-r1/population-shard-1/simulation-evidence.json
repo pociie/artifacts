@@ -1,0 +1,386 @@
+{
+  "arms": [
+    {
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "artifactProjectionDigest": "sha256:dfd2b93eab360e046df6b635795a1d03dd16ab13a757210ca724342c2193f4f6",
+      "id": "arm:harbor-subject-baseline",
+      "instructionProfileRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "modelRef": "model:gpt-5.6-luna",
+      "reasoningProfileRef": "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/policy/ai-execution-mode-operation.policy.json",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "createdAt": "2026-08-28T12:36:12.512836Z",
+  "digest": "sha256:b1bc1b1a642b6b43f1f3a5c920d495adfc26b81a41151ab5bfaf0bba0f6a8635",
+  "environment": {
+    "compatibilityState": "held",
+    "environmentDigest": "sha256:11d584e3a73628dce5bb60df8f52cb359a6a61be25ef22dbb13b21bbb9940bca",
+    "limitations": [
+      "task-revision-unobserved",
+      "task-image-manifest-unavailable",
+      "network-policy-unresolved",
+      "verifier-isolation-unavailable",
+      "cost-budget-unqualified"
+    ],
+    "platformRef": "environment-platform-observation.json"
+  },
+  "evidenceId": "evidence:harbor-hub-five-shard-full-inventory-r1:population-shard-1",
+  "failures": [
+    {
+      "blocking": true,
+      "class": "provider",
+      "code": "harbor-hub-auth-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": ["provider-qualification.json"],
+      "id": "failure:harbor-auth",
+      "subjectRef": "population-shard-1"
+    },
+    {
+      "blocking": true,
+      "class": "license",
+      "code": "dataset-license-unobserved",
+      "eligibilityImpact": "both",
+      "evidenceRefs": ["inventory-freeze.json", "route-and-gate-evidence.json"],
+      "id": "failure:license",
+      "subjectRef": "population-shard-1"
+    },
+    {
+      "blocking": true,
+      "class": "task",
+      "code": "task-instruction-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": ["route-and-gate-evidence.json"],
+      "id": "failure:task-input",
+      "subjectRef": "population-shard-1"
+    },
+    {
+      "blocking": true,
+      "class": "platform",
+      "code": "task-image-manifest-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": ["environment-platform-observation.json"],
+      "id": "failure:platform",
+      "subjectRef": "population-shard-1"
+    },
+    {
+      "blocking": true,
+      "class": "verifier",
+      "code": "protected-verifier-unavailable",
+      "eligibilityImpact": "both",
+      "evidenceRefs": ["environment-platform-observation.json"],
+      "id": "failure:verifier",
+      "subjectRef": "population-shard-1"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-model-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": ["provider-qualification.json"],
+      "id": "failure:model",
+      "subjectRef": "population-shard-1"
+    },
+    {
+      "blocking": true,
+      "class": "model",
+      "code": "effective-reasoning-effort-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": ["provider-qualification.json"],
+      "id": "failure:effort",
+      "subjectRef": "population-shard-1"
+    },
+    {
+      "blocking": true,
+      "class": "environment",
+      "code": "subject-timeout-unverified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": ["environment-platform-observation.json"],
+      "id": "failure:timeout",
+      "subjectRef": "population-shard-1"
+    },
+    {
+      "blocking": true,
+      "class": "environment",
+      "code": "network-policy-unresolved",
+      "eligibilityImpact": "both",
+      "evidenceRefs": ["environment-platform-observation.json"],
+      "id": "failure:network",
+      "subjectRef": "population-shard-1"
+    },
+    {
+      "blocking": true,
+      "class": "environment",
+      "code": "cost-budget-unqualified",
+      "eligibilityImpact": "both",
+      "evidenceRefs": ["environment-platform-observation.json"],
+      "id": "failure:budget",
+      "subjectRef": "population-shard-1"
+    }
+  ],
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "oracle": {
+    "state": "not_run",
+    "taskResults": []
+  },
+  "outcomes": {
+    "architectureInterpretationEligibility": false,
+    "benchmarkEligibility": false,
+    "disqualifications": [
+      "provider-qualification-held",
+      "task-input-and-license-unavailable",
+      "platform-and-verifier-unqualified",
+      "model-effort-timeout-unverified",
+      "no-oracle-or-subject-trial"
+    ],
+    "eligibleTrialIds": []
+  },
+  "population": {
+    "exclusions": [
+      "non-owned-shard-indices-1-2-3-4",
+      "revision-not-exposed-by-inventory",
+      "task-level-input-not-available"
+    ],
+    "selectionRule": "Freeze all 287 rows from 10 Hub pages; canonicalize Unicode NFKC + trim + lowercase; own integer(SHA256(canonicalDatasetId)[0:16],16) mod 5 == 0 using exact arbitrary-precision arithmetic.",
+    "taskCount": 58,
+    "taskDigests": [
+      "sha256:c02bdde3d2ed6de28e01ab899fb123e1cf7990469b203f6d8341b1f1a3118d7d",
+      "sha256:f495d4710cfed7a6f428cbe945f8d31799eede3c5163613527bf0a58a3a01f22",
+      "sha256:c46b9ca0c4c40419c43004c2d4234d6cbc0ae4eee745efb144c00190f2f3b14b",
+      "sha256:cb43e14d04a972e772db20c880123bc4f16905050c968bd677c86df359447ea5",
+      "sha256:f02afe4d73dbaf53ff0cc9a13c7f3e1f3e97c8e9848f7c4cf974a759bd530446",
+      "sha256:0017a8e15f246084bc8188fe83906c76d0f958cf0737d236cb3376adf8bcdec6",
+      "sha256:1678f0053ae4f313216e11816f12b00cea68f4bf178d5d7efb869d69ffaeec57",
+      "sha256:3b9f7ef2246fa7bee242f22a1bb4c1d020de709ce9d068271141bd8f008d18fe",
+      "sha256:559c5f63df4683a19142893d3f6a9da2e0397f8c6cedf09285da4d279f4dd81d",
+      "sha256:d6731c76cb71e34d5afe4101c82eda4fd3ae03f40a60d726a9507a05fbf12e1d",
+      "sha256:9e1f0bee17115b3de9fa296bb6ebf6582c55716d4435b2339c445d0858780483",
+      "sha256:29bf1b040acfa370002666c5f97cc1ce60ea2a97693a7019a9d9ebd9720d23a5",
+      "sha256:76de729224d61dbf951605654aaa5bdceefb76ba5d73603a504d73b3e52df0e6",
+      "sha256:7edc0f40c36ef53700e9f46337f626353c86427ffc3119d642a316499756d3c6",
+      "sha256:2fb98af4013855bd17e779321631f6b8742e71d8bd002a2d38119a3bdb5661b6",
+      "sha256:0be7301a9ec3bf504ee1c6a61c606482f459e00c969d7f1694480b3695f7f3b8",
+      "sha256:8f13ed8d8c1a0b530d8922471fd97f72e99b0a36a156c742b03a100e133d7ba0",
+      "sha256:c404d0a73da5ab582c0b6e7163839a8061e5ea0bc039aa80099e4c1764518545",
+      "sha256:622dd0edcf2b6876353e9d9b6485b7cc1a42a2a489baa4652db216a19774dbf7",
+      "sha256:d2a35c7b808cf5812b1bae37ee9dabf9f2d7996b87e76ce0009de066fe60b039",
+      "sha256:1f988db7cd432af9c0b5146f51366743b60c2bea51c3bf249ebebabaa40d265e",
+      "sha256:7b77d16c9a670996b977aa1791269097952c64bf9abdca45057030f05ce9b9c1",
+      "sha256:a4b93b4f180978553ff8727c8259ead81e127b302c67513c8351bf747fd52466",
+      "sha256:2640d626d6a09e7786b33874b4d84ccc41bb784d5ad4a67bdcb9ae02e163ced1",
+      "sha256:a228cae8e86d425279447253bca7d466fca2c05c8cdea6348875df705f6a6809",
+      "sha256:a541b901499be48f6341a19f4056305652645f212f7bfa6df8872ec9d5284d40",
+      "sha256:fe47a6fc76d8d5be5ea18cd6c242468b9d4b5d08de850af9bf0bdb6198f2b197",
+      "sha256:bcd2891acf7dd4d718d17def4ebe2a352d3e5208dd2584ff5eeabb7cab9933c3",
+      "sha256:dbab26184a110b06066dc37c4f2d0fe1c1e7678ff9f0960823daa10cd94ec215",
+      "sha256:0c8c2f1b7012619dfec4ab0d061017ac6c0a60134eed80776bff0a27e555a918",
+      "sha256:699297e3c7b70cd97a8d7ec8a52d5d318ffe53febb47cd883f603803599ed8d3",
+      "sha256:77524dd6fc36b0abfb21d43e5b2d4e1b06d5f7fb800f52a1f7c9a253bffd470f",
+      "sha256:aceb040c9956af58275ddad6543f901059481234f3fb6e6cdd40ff73d02c1336",
+      "sha256:8db39e1a8c6f08ca399bc82dcfb0e50ca0f8a9da24c38a221507ec69610b359b",
+      "sha256:e8ec9c3dc13544e7a4e7341874e2f168478ea13551492de7694754965190d52d",
+      "sha256:d6ec5a01d63bf9f22645396f7cb0781f5ae5292553a730b70311481703345ec7",
+      "sha256:d82cedf66510945ca09bd847183f3b7d4ad74f1176c183a28732173587c4676a",
+      "sha256:6038c34a4843efec906328487e3a7e79543170b7193d21c82f22dfc11ff5233e",
+      "sha256:5a1a08e58087093c80b5294073f0d5eabc80b27199fe6f3ff3d253e318af4135",
+      "sha256:19856b19356bd3e53ca4065f66f42a0ee067e9fdc32ccbdafcd3d3c12b6e24e5",
+      "sha256:aa8e588a00f6e836d078577e97cf26c080a7d74566c9b9b35a9b88d8c18380aa",
+      "sha256:de79bbd562e9f4f219702732c5bcc92cf606526ced7967fec6bbb569b4426146",
+      "sha256:b0b0c5c80119ccb5d9c4875743a0fc1d20e8f4fa0e6b1bc5a0c569b2bbcb7a63",
+      "sha256:41e237dfd35da22394fdeeb954c3747014dc262ce98b6361d37e4a5f4e175948",
+      "sha256:94e80c219e92202c44b7f5e441c79ea156491dc922bf1d62da8fb74d09b1024f",
+      "sha256:bf3409263ceeaf521c3c16f092f4e60693e2158201e3ed12b7d45fb36a0d0711",
+      "sha256:b47b0c788835c32e0d627f0d131abd9b78eca70d40d4dba66dc24dbb21cd04d8",
+      "sha256:7b4a2ac8b2e2dd65150772829b59f7c931a233cdcba943142ef1275190aa689d",
+      "sha256:5d22ab1d5e8012df9b04eab048cfba8ad5e048458f33645a5c3f1b03791a07b6",
+      "sha256:0919ab6f504281226b0877f325a266a63d2181b6c44d0d310ef6f91a544508ef",
+      "sha256:98fb179c6eb10cfe31feb93e2b88c429fd0fcc4c269af038694cc5925a6d3d80",
+      "sha256:f465cc365d54ca2b6a84cec46bc2c533b6bc7b14d0f7e8c49ccbc0845d88000e",
+      "sha256:a2ec1f04b5fc0e05bac21dcd67532b5ef8d3dc657e8a6a8c1486f89bfe5394c5",
+      "sha256:387faffe64ae9ee7eb2b8fed8e033b75afcb199eeb05f9e57fbf05700d5a05f1",
+      "sha256:c7bdbe63fa9eae65d4a2a5e9a6881ce7365b5e5591b71653cdcd26f07f6e3f52",
+      "sha256:8e06c2f979af0b8e7a0981c30da74ce1bf4a2ebd3bffe8ca9680bfbb950c67b0",
+      "sha256:397f9387263cda76f4f2511e3bb48694b7b20a0d25ee79e3a549ed825277ef49",
+      "sha256:c6e7e1b86ebcc09d9544f71c5d86c044d7fe1853d896da1d8a37821551e80c26"
+    ]
+  },
+  "privacy": {
+    "contentEvidenceRefs": [],
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1"
+  },
+  "provider": {
+    "limitations": [
+      "hub-auth-not-established",
+      "effective-model-unverified",
+      "effective-effort-unverified",
+      "subject-timeout-unverified"
+    ],
+    "qualificationDigest": "sha256:e3d5ac487decedd0965b114f41f3b6b8760c54556008948f5b94905be7819555",
+    "qualificationRef": "provider-qualification.json",
+    "state": "held"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-1",
+    "providerClass": "harbor",
+    "requestDigest": "sha256:e9d4c52b75b57cc366a26155131d865f8fb5fe268c6816452174e42b7d47d8f1",
+    "rubricRefs": [
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/skill/operate-engineering-workset-simulation/SKILL.md",
+      "artifacts/loop-architecture/components/execution-routing/pre-route-workflow-resolution.md"
+    ],
+    "sourceDigest": "sha256:70e69fe6ed938230c1b46b7a2647721cc5e045b19c6657ad8ca19155445a7129",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:70e69fe6ed938230c1b46b7a2647721cc5e045b19c6657ad8ca19155445a7129",
+    "verifierDigest": "sha256:4ab4bc7ad2c84fd1f2328e84b13ce66aa819ee88b22122ceb3c349b0e653cbcc"
+  },
+  "settlement": {
+    "reconciliationRef": "settlement-ledger.json",
+    "resources": [
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "hub-page-01",
+        "resourceRefDigest": "sha256:035a6da3f57721126a6c57b7ab700cc8825f4ab3c3a64218c02fc951fe9fcdd1",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "hub-page-02",
+        "resourceRefDigest": "sha256:478a3b735a70509463d42c4c5d21e4df9154c97dac3bcb7dd98dd30add740efc",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "hub-page-03",
+        "resourceRefDigest": "sha256:ec28f82b54b4634fbec38486c8e6a561cb1d4bf1485b211d97cf593820c937fe",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "hub-page-04",
+        "resourceRefDigest": "sha256:101de8695178e15c2c30050f7adc5bf1195b93e1302059b973e05b8478ba081c",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "hub-page-05",
+        "resourceRefDigest": "sha256:614c02f9dd2e420af15ab6f8c22ffe2103ac24152bb7c594981fc02d47f74b93",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "hub-page-06",
+        "resourceRefDigest": "sha256:e8a19cccd081478998abbd43cb0ef6d41a410a4aafed59cb966a754602d613f9",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "hub-page-07",
+        "resourceRefDigest": "sha256:56e46e8534e22003bbbeed9a2a7699f8bbffa347a5f700b3f4f6b0d0e32ef31c",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "hub-page-08",
+        "resourceRefDigest": "sha256:b2b391e8ab7aaf8e3310518c42e9df9634893a4a372a40694917670232cfa9a6",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "hub-page-09",
+        "resourceRefDigest": "sha256:2e19f9b1a76798c0bc6b6cd2ae3c3ecf88de1ca490a7bbe64ab12bfb56216a3e",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "hub-page-10",
+        "resourceRefDigest": "sha256:58ab210af67a393d01b452d83a7d3c41f78422e39461e610129724e2dc90dfe7",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "queue-claims",
+        "resourceRefDigest": "sha256:d3126586a5864283a7ef4207027f3f352c7184146998107204cf4b33a68b947f",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "provider-jobs",
+        "resourceRefDigest": "sha256:355444da5e372bfc0dd170fe2550e85f0b4665151316ca256b76ebed5c5c1919",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "task-workspaces",
+        "resourceRefDigest": "sha256:faf939daccc4c329193531aa9ca929bd24a8ace20918677a5ea078a5fc7b0392",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "containers",
+        "resourceRefDigest": "sha256:d3ed03fba3a04b9e93b7e5c87a10f48ad9de792b0e8e99099d9a0e9094328624",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "volumes",
+        "resourceRefDigest": "sha256:453645246e40ffddb5d2dd4f4956af3adf5e2e5ac1004cfa8f12fc140a4717bc",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "auth-material",
+        "resourceRefDigest": "sha256:8dd26d32186332c0230c978d5e30cddc9aaccfd31b1c062f65b5ab95a93d3154",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "temporary-files",
+        "resourceRefDigest": "sha256:01dec3f37b62f3f9af27846865d3c5304b80e7d42611804304f1cd06b544bc06",
+        "state": "settled"
+      },
+      {
+        "evidenceRefs": ["settlement-ledger.json"],
+        "resourceClass": "verifier-state",
+        "resourceRefDigest": "sha256:155b73fc59e131cd36cd145d47d34aaba5fa072a09568799dfe392dce9eb0682",
+        "state": "settled"
+      }
+    ],
+    "state": "complete"
+  },
+  "sourceRefs": [
+    "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/04-current-harbor-hub-five-shard-operation.md",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/operation-extraction-resolution.json",
+    "artifacts/loop-architecture/components/execution-routing/pre-route-workflow-resolution.md",
+    "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/policy/ai-execution-routing.policy.json",
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/skill/operate-engineering-workset-simulation/SKILL.md",
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "https://hub.harborframework.com/datasets"
+  ],
+  "status": "held",
+  "trials": [],
+  "workingMemory": {
+    "bindingRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/working-memory-binding.json",
+    "checkpointRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/checkpoint-inventory-freeze.json",
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/checkpoint-settlement.json"
+    ],
+    "digest": "sha256:4cc1cc2d0864c49def2be02b3da67866f033776c32bf83b7fa64ede85a8115ef",
+    "invalidation": [
+      "operation_revision_change",
+      "source_digest_change",
+      "hub_inventory_digest_change",
+      "provider_capability_change",
+      "model_effort_timeout_receipt_change",
+      "settlement_state_change",
+      "privacy_classification_change"
+    ],
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1",
+    "retention": "runtime-private-until-lane-settlement-then-sanitized-immutable-projection",
+    "sessionCursor": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/cursor-settled"
+  }
+}

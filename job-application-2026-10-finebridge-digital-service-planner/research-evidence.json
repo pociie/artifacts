@@ -1,0 +1,71 @@
+{
+  "kind": "job-application-research-evidence/v1",
+  "status": "report_only",
+  "authority_effect": "none",
+  "request_ref": "request.json",
+  "observed_at": "2026-09-14T00:00:00+09:00",
+  "research_rounds": 0,
+  "source_observations": [
+    {
+      "source_id": "source-finebridge-posting",
+      "authority": "primary",
+      "observation": "사용자 제공 채용 공고 핵심 내용: 금융 서비스 사용자 분석, 모바일 서비스 및 신규 기능 기획, 서비스 요구사항 정의, 화면 및 사용자 흐름 설계, 개발·디자인 조직과 협업, 데이터 기반 서비스 개선.",
+      "applicability": "직무 책임과 답안의 근거 선택에 직접 적용",
+      "freshness": "observed_on_request_date",
+      "visibility": "public_report_allowed",
+      "limit": "제공된 핵심 내용과 URL만 바인딩했으며 실제 페이지의 전체 문구·자격 요건·회사 설명은 확인하지 않았다."
+    },
+    {
+      "source_id": "source-finebridge-company",
+      "authority": "primary",
+      "observation": "회사 도메인은 .example 가상 주소로 제공되었고 별도 회사 상품·고객군·전략 정보는 제공되지 않았다.",
+      "applicability": "회사 고유 주장 생성 금지와 한계 표시에 적용",
+      "freshness": "unavailable",
+      "visibility": "metadata_only",
+      "limit": "독립적인 회사 페이지 관찰을 근거로 사용하지 않았다."
+    },
+    {
+      "source_id": "source-applicant-profile",
+      "authority": "applicant_owned",
+      "observation": "지원자 프로필, 전공, 신입 지원 형태, 희망 직무와 보유 역량이 사용자 입력으로 제공되었다.",
+      "applicability": "지원자 소유 사실과 포부 초안의 범위에 적용",
+      "freshness": "user_provided",
+      "visibility": "runtime_private",
+      "limit": "실제 이력서 파일은 제공·검토되지 않았다."
+    },
+    {
+      "source_id": "source-applicant-experiences",
+      "authority": "applicant_owned",
+      "observation": "금융 앱 UX 산학 프로젝트, 핀테크 스타트업 운영 인턴, 600건 VOC 분류와 인증 안내 문구 개선 경험이 사용자 입력으로 제공되었다.",
+      "applicability": "답안의 경험·행동·결과·한계 연결에 적용",
+      "freshness": "user_provided",
+      "visibility": "runtime_private",
+      "limit": "실제 포트폴리오·인터뷰 원문·QA 또는 운영 지표는 제공·검토되지 않았다."
+    }
+  ],
+  "writing_implications": [
+    {
+      "id": "research-implication-role-flow",
+      "claim": "공고의 사용자 분석과 화면·흐름 설계 요구를 인터뷰 24건에서 발견한 단계 인지 문제와 연결한다.",
+      "source_ids": ["source-finebridge-posting", "source-applicant-experiences"],
+      "certainty": "supported_inference"
+    },
+    {
+      "id": "research-implication-data-feedback",
+      "claim": "데이터 기반 개선 요구를 600건 문의 분류, 인증 비중 발견, 안내 문구 개선, 릴리즈 후 VOC 추적의 순서로 보여준다.",
+      "source_ids": ["source-finebridge-posting", "source-applicant-experiences"],
+      "certainty": "supported_inference"
+    },
+    {
+      "id": "research-implication-company-limit",
+      "claim": "회사 고유 상품·전략을 확인할 수 없으므로 회사 찬사 대신 공고의 업무 책임에만 답안을 맞춘다.",
+      "source_ids": ["source-finebridge-company", "source-finebridge-posting"],
+      "certainty": "limitation"
+    }
+  ],
+  "unresolved_source_facts": [
+    "공식 공고 전체 자격 요건과 평가 기준",
+    "회사 상품·고객군·최근 디지털 전략",
+    "공고 URL의 실제 접근 가능성과 최신성"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "kind": "project-analysis-pdf-correction-input-freeze/v2",
+  "status": "frozen_for_one_correction_cycle",
+  "runId": "run_837aab6bfcd6",
+  "supersedes": {
+    "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/pdf-delivery-v1/authoring-input-freeze.json",
+    "sha256": "1fe79995a7160c2bb20fc8b46e16d4e0669daf57ca48be32a16ad7689baf2d4e",
+    "reason": "The first independent validation found one candidate PDF text-order defect and two transitive mutable-reference mismatches inside a historical visual contribution manifest. The predecessor freeze remains preserved."
+  },
+  "failedCandidate": {
+    "outputFreeze": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/pdf-delivery-v1/author-output-freeze.json",
+      "sha256": "0fb5223acd3dd16cbcf1efd00050547355334890e013c9791f584b3c60af635d"
+    },
+    "validationReport": {
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-validation-v1/independent-validation-report.json",
+      "sha256": "f75461e24cac263a0cec828e1a43660cdd40cc617017d41437d0aba5a1674f81",
+      "judgment": "fail"
+    }
+  },
+  "blockingCorrection": {
+    "fingerprint": "DEFECT-PDF-TEXT-ORDER-001",
+    "requiredChange": "Produce a successor PDF whose visual composition remains intact and whose logical text/search order matches visible text for material phrases.",
+    "queries": [
+      {"visible": "worker_done", "mustBeAtLeast": 2, "reversed": "enod_rekrow", "mustBe": 0},
+      {"visible": "Phase A", "mustBeAtLeast": 2, "reversed": "A esahP", "mustBe": 0},
+      {"visible": "공식 module owner", "mustBeAtLeast": 2, "reversed": "renwo eludom 식공", "mustBe": 0},
+      {"visible": "tool_result", "mustBeAtLeast": 12, "reversed": "tluser_loot", "mustBe": 0}
+    ],
+    "representativeAffectedPages": [2, 5, 10, 16, 18, 24, 27, 28, 29, 30, 31, 32, 37]
+  },
+  "requiredProjectAndAuthoringInputs": [
+    {
+      "role": "project_analysis_source",
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/project-analysis-v1/artifact-manifest.json",
+      "sha256": "49400762416b9570b9b9d5db07bbb75cdd19622e2c899dd189e030b3ede17742"
+    },
+    {
+      "role": "pdf_expression_spec",
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-expression-spec-v2.md",
+      "sha256": "5e5881ff524e13f7f22150f55c43cd35090e3d8ea6fb4deca82acc9a1facf33d"
+    },
+    {
+      "role": "flow_and_continuity_spec",
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-flow-and-continuity-spec-v1.md",
+      "sha256": "bbcde8592504f1f78b96013cfc51e47c0eca504e0bf81f45c71df8367372a1e3"
+    },
+    {
+      "role": "writing_quality_contract",
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/writing-quality-contract-v1.md",
+      "sha256": "517accc76e904d3b58d7e3960121f50614b3fc728b68709822e55c6c657f98e7"
+    },
+    {
+      "role": "typography_and_page_system",
+      "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/typography-and-page-system-v1.json",
+      "sha256": "bb88969c6271b91604914749ee1254fa0ffefc96ebfd3a357972cc49bb9bb3d1"
+    }
+  ],
+  "historicalContributionDisposition": {
+    "path": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/visual-pagination-continuity-contribution-manifest-v1.json",
+    "sha256": "68267f5d22c98e042c726e6366415b2895979aa2433fea301a06f35349cd7000",
+    "use": "lineage and contribution evidence only; direct authoring contracts above govern the correction",
+    "transitiveSharedPathClosure": "not_required",
+    "reason": "Two internal project-context-enrichment quality references point to later mutable revisions. Those references do not supply project facts, render code, or visual requirements for this correction. The manifest itself remains exact and preserved."
+  },
+  "sourceRevision": {
+    "commit": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+    "tree": "1b6b4ab07d0d7b795129852183137c28099c5550",
+    "sourceEffect": "read_only"
+  },
+  "successorOutputBoundary": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v2/**",
+  "requiredOutputs": [
+    "claude-code-project-analysis.html",
+    "claude-code-project-analysis.pdf",
+    "previews/page-01.png through page-37.png",
+    "contact-sheet.png",
+    "contact-sheet.html",
+    "render-audit.json",
+    "render.mjs",
+    "authoring-validation.json",
+    "recipient-handoff-manifest.json"
+  ],
+  "preserve": [
+    ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-v1/**",
+    ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/project-analysis-pdf-validation-v1/**",
+    "AGENTS.md",
+    "artifacts/loop-architecture/**",
+    "all predecessor and source-analysis artifacts"
+  ],
+  "correctionBudget": {
+    "allowed": 1,
+    "usedByThisFreeze": 1,
+    "additionalEquivalentCorrectionTasks": "not_allowed"
+  },
+  "authorityEffect": "none",
+  "nonClaims": {
+    "activation": "not_claimed",
+    "formalAcceptance": "not_claimed",
+    "publication": "not_claimed",
+    "promotion": "not_claimed",
+    "integration": "not_claimed",
+    "settlement": "not_claimed"
+  }
+}

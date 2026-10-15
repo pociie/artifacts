@@ -1,0 +1,20 @@
+{
+  "kind": "task-local-effect-admission/v1",
+  "status": "admitted",
+  "authorityEffect": "none",
+  "objectiveRef": "route-decision.json",
+  "admittedEffect": {
+    "type": "local_write",
+    "scope": ".collab/artifacts/job-application-2026-10-finebridge-digital-service-planner/**",
+    "purpose": "write runtime request, evidence projections, candidate report, validation, and review receipts"
+  },
+  "excludedEffects": [
+    "source_artifact_edit",
+    "external_network_mutation",
+    "application_submission",
+    "git_commit_or_push",
+    "identity_publication_without_consent"
+  ],
+  "authorizationBasis": "explicit user request to use the repository's job-application writing artifact",
+  "settlement": "local runtime files are the only intended mutable target; validation and user confirmation remain separate"
+}

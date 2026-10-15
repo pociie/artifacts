@@ -1,0 +1,73 @@
+{
+  "authorityEffect": "none",
+  "blockers": [],
+  "effectivePrimaryMode": "single_task",
+  "excludedScopeKinds": ["ambient", "controller", "coverage"],
+  "kind": "subject-operation-scope-binding-decision/v1",
+  "reasonCodes": [
+    "non_subject_scopes_explicitly_excluded",
+    "selected_subject_topology_content_bound"
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-1:punitarani/harvey-labs:r13:execute-harbor-subject",
+  "routeDecisionSha256": "b9d409ab2b0034205f6f2b7ce85858ef0da824177b2131d3a3acce495ace8108",
+  "scopeBindings": [
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:2d220baab401c387de95aecf24b5a4ab697da406d9c5365ff5ccbe1597adf2c4",
+      "disposition": "coverage_stimulus_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-45-punitarani-harvey-labs/source-and-plan-binding.r13.json",
+      "scopeId": "coverage:population-shard-1:punitarani/harvey-labs:r13",
+      "scopeKind": "coverage",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:69cdc2489576d3d2dd2ce16f62ea9e948316b53e79cc755a4dc482a04514921b",
+      "disposition": "context_only",
+      "ref": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/environment-platform-observation.json",
+      "scopeId": "ambient:population-shard-1:punitarani/harvey-labs:r13",
+      "scopeKind": "ambient",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:3f077de80ad33088c2bdf8d2a2499bd23eefcb7b29a14606876e5b009819f342",
+      "disposition": "control_plane_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-45-punitarani-harvey-labs/claim.r13.json",
+      "scopeId": "controller:population-shard-1:punitarani/harvey-labs:r13",
+      "scopeKind": "controller",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": true,
+      "digest": "sha256:5268b265c16823530c4043e0bbaa2070c5e19b5557f22d361bfe8db3d3498d88",
+      "disposition": "eligible_report_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-45-punitarani-harvey-labs/subject-topology-binding.r13.json",
+      "scopeId": "subject-scope:population-shard-1:punitarani/harvey-labs:r13",
+      "scopeKind": "subject",
+      "state": "selected"
+    }
+  ],
+  "scopedMode": "single_task",
+  "segmentMode": null,
+  "status": "ready",
+  "subjectOperation": {
+    "agentArchitectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmDigest": null,
+    "agentSwarmRef": null,
+    "bindingDigest": "sha256:5268b265c16823530c4043e0bbaa2070c5e19b5557f22d361bfe8db3d3498d88",
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-45-punitarani-harvey-labs/subject-topology-binding.r13.json",
+    "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "disposition": "eligible_report_only",
+    "scopeId": "subject-scope:population-shard-1:punitarani/harvey-labs:r13",
+    "workflowPatternDigest": "sha256:93bf91356072b399cd3684ea2d482c7fe3afe4ca083e8443e86978b2bdb5d7bd",
+    "workflowPatternId": "pipeline",
+    "workflowPatternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/pipeline/workflow-pattern.json"
+  },
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "topologyRequirementDecisionSha256": "33d355c0d6c63708633fa207dbceff436a883af9862ed2baded1caed0f83cddc",
+  "topologySelectionDecisionSha256": "eb769d9aa6ad018eaa287b08fe93e9222a3d221de597d7d0d75ba2859f1b78bd"
+}

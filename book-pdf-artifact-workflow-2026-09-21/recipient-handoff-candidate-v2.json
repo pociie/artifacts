@@ -1,0 +1,83 @@
+{
+  "kind": "sanitized-recipient-handoff-candidate/v2",
+  "handoffId": "recipient-handoff:claim-led-book-pdf-source-visual-writing",
+  "handoffRevision": "book-pdf-recipient-handoff/3",
+  "status": "candidate_pending_independent_review",
+  "authorityEffect": "none",
+  "recipient": "recipient:pdf-authorship-owner",
+  "supersedesCandidate": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/recipient-handoff-candidate.json",
+  "changeSummary": [
+    "Replaced keyword-led and feature-card pages with claim-led long-form chapters.",
+    "Added a writing quality contract with abstraction-ladder, keyword-decoupling and transfer tests.",
+    "Added an authoring-loop candidate, editorial rubric, registered-skill bindings and explicit rendering/inspection tools.",
+    "Expanded the PDF prototype from nine mostly demonstrative pages to fifteen substantive pages."
+  ],
+  "combinedEvidenceBinding": {
+    "revision": "book-pdf-recipient-handoff/3",
+    "algorithm": "sha256 over UTF-8 canonical JSON with sorted keys and a trailing newline",
+    "sourceReviewEvidence": [
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/source-to-claim-packet.json",
+        "digest": "sha256:ae9e1d091f0f671c40181d8037261d943a901dd27bc0af31232e34a1239f4b77"
+      }
+    ],
+    "visualAndWritingEvidence": [
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/mockup-manifest.json",
+        "digest": "sha256:46dd76359fcdc1d4d231609517403569cc6653b588557c25ebc67294c7a66e3d"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-expression-spec-v2.md",
+        "digest": "sha256:5e5881ff524e13f7f22150f55c43cd35090e3d8ea6fb4deca82acc9a1facf33d"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/writing-quality-contract-v1.md",
+        "digest": "sha256:517accc76e904d3b58d7e3960121f50614b3fc728b68709822e55c6c657f98e7"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/dynamic-artifact-capability-bindings-v2.json",
+        "digest": "sha256:410610c85a8ca3134f6e074b4e6246632b9cb859ffa08dbaa6b9d0d956078588"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/report-authoring-loop-candidate.json",
+        "digest": "sha256:a4b31c2edc39b143b03e6c66e6931dd09f77a91e33a779a56c5bfef9773e9717"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-v1.json",
+        "digest": "sha256:354102254cc59a982e92b7f275f87224c5028f1f63b4af3e6fd58cfde04f743c"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/dynamic-team-blueprint-v2.json",
+        "digest": "sha256:411177138d59ef119101b016f6dc79af91dbd5327e7324f7fc49ea883a771d06"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/prototype-v2/claim-led-book-pdf-prototype.pdf",
+        "digest": "sha256:219de3a0f867568106aab29c50f290ecd98c9d40b06f1d8888fc1adc8bc96e8d"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/prototype-v2/contact-sheet.png",
+        "digest": "sha256:2e93bbd4dbfa7a8e7d53174d832e342de17993c5bd562954902ae9c4a5705d7a"
+      }
+    ],
+    "combinedDigest": "sha256:a53303171ade921d45e663dff2b1958f5cc0cbf5b136fba55a2e1d08010e65ca"
+  },
+  "recommendedUse": {
+    "writing": "Use the abstraction ladder: human problem → system principle → project mechanism → operational consequence.",
+    "narrative": "Follow one request through event, snapshot, context, generator, stream, effect and recovery.",
+    "design": "Use Systems Monograph for explanatory progress and Evidence Notebook for one-claim evidence review.",
+    "quality": "Reject pages whose argument depends on keywords, badges, feature lists or disconnected cards."
+  },
+  "requiredNextChecks": [
+    "Author-independent verification of factual claims and source applicability.",
+    "Independent visual review at A4 print size and grayscale.",
+    "Accessibility and link review of the frozen PDF.",
+    "Recipient acknowledgement of this exact revision and combined digest."
+  ],
+  "activation": "not_performed",
+  "acknowledgement": "not_received",
+  "independentValidation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}
+

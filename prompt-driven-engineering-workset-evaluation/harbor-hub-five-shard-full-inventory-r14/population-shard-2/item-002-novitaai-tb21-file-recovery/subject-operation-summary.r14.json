@@ -1,0 +1,248 @@
+{
+  "artifactEvidenceDigests": [
+    {
+      "bytes": 1154,
+      "logicalPath": "item-002-novitaai-tb21-file-recovery/jobs/harbor-hub-r14-population-shard-2-002-novitaai-tb21-file-recovery/result.json",
+      "present": true,
+      "sha256": "sha256:6519a9e4e3998c917637d84f987bb81d5620cd79e4cfd2120e632a0f503b4744"
+    },
+    {
+      "bytes": 5152,
+      "logicalPath": "item-002-novitaai-tb21-file-recovery/jobs/harbor-hub-r14-population-shard-2-002-novitaai-tb21-file-recovery/db-wal-recovery__CPWgqAo/result.json",
+      "present": true,
+      "sha256": "sha256:f19966e08005e5eb747af3f9071ca0fcafe6da51692ca7902976654135f1f055"
+    },
+    {
+      "bytes": 2,
+      "logicalPath": "item-002-novitaai-tb21-file-recovery/jobs/harbor-hub-r14-population-shard-2-002-novitaai-tb21-file-recovery/db-wal-recovery__CPWgqAo/verifier/reward.txt",
+      "present": true,
+      "sha256": "sha256:9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "bytes": 4315,
+      "logicalPath": "item-002-novitaai-tb21-file-recovery/jobs/harbor-hub-r14-population-shard-2-002-novitaai-tb21-file-recovery/db-wal-recovery__CPWgqAo/verifier/test-stdout.txt",
+      "present": true,
+      "sha256": "sha256:fd102208158a1d5cb333a2f253cb37f7d6c653077c7eb409b32860c5e33451bc"
+    },
+    {
+      "bytes": 2850,
+      "logicalPath": "item-002-novitaai-tb21-file-recovery/jobs/harbor-hub-r14-population-shard-2-002-novitaai-tb21-file-recovery/job.log",
+      "present": true,
+      "sha256": "sha256:bc2d17c1169ae8d94a5ea3337240a4d6e2ebed61bc1cd87a0f6b839d8b53829e"
+    },
+    {
+      "bytes": 1796,
+      "logicalPath": "item-002-novitaai-tb21-file-recovery/harbor-command.log",
+      "present": true,
+      "sha256": "sha256:7dd59f2c87435f06d0e4e9ef3790125c7b5cb89fabe9fd2e6b89186efa69e3e9"
+    },
+    {
+      "bytes": 1753,
+      "logicalPath": "item-002-novitaai-tb21-file-recovery/provider-command.r14.json",
+      "present": true,
+      "sha256": "sha256:e583d39498f40dcd3afce92b174e4e0f30bc2e671d884bdd6878b2e4c5a6b9a1"
+    }
+  ],
+  "attempt": {
+    "actualAttempt": true,
+    "controllerFinalization": "hung-finalization",
+    "durationSeconds": null,
+    "exitCode": null,
+    "wrapperChildTerminalObserved": true
+  },
+  "configuration": {
+    "agent": "codex",
+    "authMode": "CODEX_FORCE_AUTH_JSON=1",
+    "configuredTimeoutMultipliers": {
+      "subject": 1.0,
+      "task": 1.0,
+      "verifier": 1.0
+    },
+    "effectiveSubjectTimeoutSecondsObserved": null,
+    "executionMode": "local",
+    "framework": "harbor@0.22.0",
+    "frameworkRevision": "sha256:90e03a443bdf20344c3e51000387814f872df81fb245ecc2934badda28624139",
+    "globalSubjectSlots": 3,
+    "hostedLaunch": false,
+    "installOnly": false,
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "subjectAdapter": "harbor@0.22.0-local-subject-adapter",
+    "subjectTimeoutCeilingSeconds": 3600,
+    "timeoutCeilingSatisfied": true,
+    "verificationEnabled": true
+  },
+  "costAndUsage": {
+    "cost_usd": 0.14035312,
+    "n_cache_tokens": 3626496,
+    "n_input_tokens": 3798734,
+    "n_output_tokens": 27813
+  },
+  "identity": {
+    "datasetId": "NovitaAI/tb21-file-recovery",
+    "datasetVersion": "latest",
+    "identityDigest": "sha256:a8d0e8edc8cde732d6310c91bb04ca601b31e94881fda04cc6863bbfc3af4fae",
+    "providerCasePreserved": true
+  },
+  "jobResultAvailable": true,
+  "lane": "population-shard-2",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "ordinal": 2,
+  "provider": {
+    "datasetRef": "NovitaAI/tb21-file-recovery@latest",
+    "providerTaskResolved": true,
+    "selection": "exact_prior_task_binding",
+    "taskDigest": "sha256:1cdc2c615e259bc10265efbe71b518332070c1c002e226566399e9788f18d0aa",
+    "taskFacts": {
+      "contentDomain": "software-engineering-and-data-recovery",
+      "contentShape": "repository-artifact-recovery-with-protected-verifier",
+      "contributionShape": "one_owner",
+      "dynamicMembershipRequired": false,
+      "executionSurface": "delegated_single_writer",
+      "independentValidationRequired": false,
+      "instructionBytes": null,
+      "instructionDigest": null,
+      "instructionState": "private-not-retained",
+      "metadataTags": [],
+      "nativeSubjectOperationRequired": false,
+      "observedTaskDigest": null,
+      "probeOutputDigest": "sha256:e97ab001a01b5b97a2d7c49522d440115f121c08cd6f57b6e3df1abc34b71e52",
+      "qualificationState": "qualified",
+      "rawTaskInstructionStored": false,
+      "reassessmentTrigger": "material task-content, workspace, verifier, capability, or runtime-shape change",
+      "requiredResponsibilityClasses": [
+        "single-Harbor-subject"
+      ],
+      "separableRoleCount": 1,
+      "source": "shared-shard4-semantic-facts-resolver-and-exact-prior-task-binding",
+      "taskBinding": "exact_prior_task",
+      "taskDigest": "sha256:1cdc2c615e259bc10265efbe71b518332070c1c002e226566399e9788f18d0aa",
+      "taskId": "terminal-bench/db-wal-recovery",
+      "taskWorkspaceDigest": null,
+      "workspaceObligations": {
+        "dynamicMembershipRequired": false,
+        "independentMaterialContributors": false,
+        "independentValidationRequired": false,
+        "requiredResponsibilityClasses": [
+          "single-Harbor-subject"
+        ],
+        "scope": "one deterministic representative provider task",
+        "separableRoleCount": 1,
+        "shape": "single-task Harbor workspace",
+        "validationBoundary": "protected-Harbor-verifier-not-a-Subject-role"
+      }
+    },
+    "taskName": "terminal-bench/db-wal-recovery"
+  },
+  "routeResolution": {
+    "admission": "admit_generic_codex",
+    "eligibleModes": [
+      "single_task"
+    ],
+    "frameworkRevision": "sha256:90e03a443bdf20344c3e51000387814f872df81fb245ecc2934badda28624139",
+    "rejectedModes": [
+      {
+        "mode": "communication",
+        "reasonCodes": [
+          "task_effect_not_direct_response",
+          "task_output_not_response"
+        ]
+      },
+      {
+        "mode": "investigation",
+        "reasonCodes": [
+          "task_requires_workspace_mutation"
+        ]
+      },
+      {
+        "mode": "loop",
+        "reasonCodes": [
+          "task_temporal_shape_single_boundary"
+        ]
+      },
+      {
+        "mode": "orchestration",
+        "reasonCodes": [
+          "task_contribution_not_multi_owner",
+          "task_dynamic_membership_not_required"
+        ]
+      },
+      {
+        "mode": "session_control",
+        "reasonCodes": [
+          "task_effect_not_direct_response",
+          "task_output_not_response"
+        ]
+      }
+    ],
+    "resolverRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-4/lane-controller-r14.py",
+    "routeDecision": {
+      "architectureSelection": {
+        "effectivePrimaryMode": "single_task",
+        "segmentMode": null,
+        "targetScope": "effective_primary"
+      },
+      "authorityEffect": "none",
+      "blockers": [],
+      "conflictingFacts": [],
+      "continuityDecision": {
+        "disposition": "standalone",
+        "effectivePrimaryMode": "single_task",
+        "segmentMode": null
+      },
+      "kind": "six-mode-route-decision/v1",
+      "missingFacts": [],
+      "requestRevision": "sha256:90e03a443bdf20344c3e51000387814f872df81fb245ecc2934badda28624139",
+      "selectedMode": "single_task",
+      "status": "selected"
+    },
+    "selected": {
+      "architecturePattern": "not_required",
+      "coordinationPolicy": "not_required",
+      "dynamicArtifactComposition": "task-probe-plus-terminal-receipt-and-reward-vector",
+      "mode": "single_task",
+      "reason": "task/workspace facts resolve one-owner single-writer semantics; Harbor task count is not topology evidence",
+      "roleContext": "task-workspace-derived-lane-controller-and-provider-subject",
+      "swarmDecision": "no-swarm",
+      "workflow": "workflow-pattern-execution"
+    },
+    "structuralNoSwarmDecision": {
+      "decision": "no-swarm",
+      "reason": "no dynamic membership or separable semantic agent roles observed in exact task/workspace obligations"
+    },
+    "topologyDecision": {
+      "authorityEffect": "none",
+      "blockers": [],
+      "kind": "execution-topology-requirement-decision/v1",
+      "reasonCodes": [
+        "one_owner_local_execution_is_sufficient"
+      ],
+      "requestRevision": "sha256:90e03a443bdf20344c3e51000387814f872df81fb245ecc2934badda28624139",
+      "requiredCapabilityClasses": [],
+      "routeDecisionSha256": "6ed5a4dbaab09e0dff709f9948463834f1598f092e9dd1293c07f965b51ab1e5",
+      "selectedMode": "single_task",
+      "status": "selected",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "none"
+    }
+  },
+  "schemaVersion": "harbor-hub-r14-subject-operation-summary/v1",
+  "subject": {
+    "agentExecutionObserved": true,
+    "terminalState": "terminal_result_redacted"
+  },
+  "terminal": {
+    "exceptionTypes": [
+      "provider_redacted_child_result_json"
+    ],
+    "failureClass": "provider_redaction_hung_finalization",
+    "status": "failed",
+    "wakeCondition": "Provider must emit valid child result JSON and controller must finalize the terminal receipt; retry only after the capability or provider-redaction fingerprint changes."
+  },
+  "verifier": {
+    "resultObserved": false,
+    "rewardArtifactObserved": true,
+    "rewardValue": 0.0,
+    "terminalState": "completed_scored_zero"
+  }
+}

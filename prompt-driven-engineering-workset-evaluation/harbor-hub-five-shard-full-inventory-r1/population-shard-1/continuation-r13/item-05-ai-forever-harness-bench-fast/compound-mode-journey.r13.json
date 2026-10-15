@@ -1,0 +1,811 @@
+{
+  "authorityEffect": "none",
+  "decision": {
+    "authorityEffect": "none",
+    "branchingDeferredToWorkflow": true,
+    "contextProjectionRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:continuation-r13/item-05-ai-forever-harness-bench-fast:requirement-scope-projection",
+    "kind": "compound-instruction-mode-journey-decision/v1",
+    "modeSequence": [
+      "investigation",
+      "single_task",
+      "single_task",
+      "single_task",
+      "single_task",
+      "single_task"
+    ],
+    "nestedSegmentCount": 1,
+    "obligationDecisions": [
+      {
+        "dependsOn": [],
+        "obligationId": "reobserve-current-source",
+        "reasoningEnvelopeRequirement": {
+          "boundary": "route_resolution",
+          "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+          "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+          "modeEnvelopeAction": "create_or_reuse",
+          "obligationId": "reobserve-current-source",
+          "required": true,
+          "routeDecisionDigest": "sha256:f71b9a7ada712a547b8f7b5b62590cad4d7c6e524afb6c3f0afe8dad6e32b078",
+          "selectedMode": "investigation",
+          "targetScope": "segment"
+        },
+        "requirementRefs": [
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:current-source-reobservation"
+        ],
+        "routeDecision": {
+          "architectureSelection": {
+            "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+            "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+            "effectivePrimaryMode": "single_task",
+            "patternSelectedByRouting": false,
+            "requirement": "eligible",
+            "segmentMode": "investigation",
+            "segmentRequirement": "not_required",
+            "segmentSelectionStatus": "not_applicable",
+            "segmentStructuralSignals": ["one_material_contribution"],
+            "selectionStatus": "deferred_to_architecture_components",
+            "structuralSignals": [],
+            "targetScope": "effective_primary",
+            "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json"
+          },
+          "authorityEffect": "none",
+          "blockers": [],
+          "conflictingFacts": [],
+          "continuityDecision": {
+            "candidateMode": "investigation",
+            "disposition": "nested_segment",
+            "effectivePrimaryMode": "single_task",
+            "executionSurface": "local_coordinator_only",
+            "historyCoverage": "complete",
+            "modeCompositionRequired": true,
+            "objectiveRelation": "unchanged",
+            "outerObligationAction": "preserve",
+            "outerObligationState": "active",
+            "priorCompletionEvidence": "missing",
+            "priorPrimaryMode": "single_task",
+            "projectionRef": "memory:harbor-hub-five-shard-full-inventory-r1:operation-resolution-r13",
+            "requestRelation": "continue_objective",
+            "segmentMode": "investigation",
+            "sessionBoundary": "cross_session"
+          },
+          "eligibleModes": ["investigation"],
+          "kind": "six-mode-route-decision/v1",
+          "missingFacts": [],
+          "reassessmentTriggers": [
+            "authority_or_instruction_admission_changes",
+            "capability_or_lifecycle_readiness_changes",
+            "dependency_or_contribution_shape_changes",
+            "purpose_effect_or_output_changes",
+            "request_relation_or_history_coverage_changes",
+            "risk_reversibility_or_validation_boundary_changes",
+            "outer_obligation_or_completion_evidence_changes",
+            "execution_surface_changes_contribution_shape"
+          ],
+          "rejectedModes": [
+            {
+              "mode": "communication",
+              "reasonCodes": [
+                "operation_not_direct_response",
+                "effect_not_none",
+                "output_not_response",
+                "temporal_not_immediate",
+                "current_state_evidence_required"
+              ]
+            },
+            {
+              "mode": "single_task",
+              "reasonCodes": ["operation_not_bounded_outcome", "output_not_bounded_candidate"]
+            },
+            {
+              "mode": "loop",
+              "reasonCodes": ["temporal_not_iterative", "iteration_not_bounded"]
+            },
+            {
+              "mode": "orchestration",
+              "reasonCodes": [
+                "contribution_not_multi_owner",
+                "capability_not_verified",
+                "lifecycle_not_verified"
+              ]
+            },
+            {
+              "mode": "session_control",
+              "reasonCodes": ["operation_not_session_operation", "session_revision_not_explicit"]
+            }
+          ],
+          "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-1:ai-forever/harness-bench-fast:r13:reobserve-current-source",
+          "selectedMode": "single_task",
+          "status": "selected"
+        },
+        "status": "selected",
+        "transitionKind": "activate_nested_segment"
+      },
+      {
+        "dependsOn": ["reobserve-current-source"],
+        "obligationId": "resolve-six-mode-route",
+        "reasoningEnvelopeRequirement": {
+          "boundary": "route_resolution",
+          "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+          "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+          "modeEnvelopeAction": "create_or_reuse",
+          "obligationId": "resolve-six-mode-route",
+          "required": true,
+          "routeDecisionDigest": "sha256:09809616981c37e7481c131f91b06a82694f05649f6d7ee277ce5a2cead1d972",
+          "selectedMode": "single_task",
+          "targetScope": "effective_primary"
+        },
+        "requirementRefs": [
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:six-mode-route"
+        ],
+        "routeDecision": {
+          "architectureSelection": {
+            "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+            "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+            "effectivePrimaryMode": "single_task",
+            "patternSelectedByRouting": false,
+            "requirement": "eligible",
+            "segmentMode": null,
+            "segmentRequirement": null,
+            "segmentSelectionStatus": null,
+            "segmentStructuralSignals": [],
+            "selectionStatus": "deferred_to_architecture_components",
+            "structuralSignals": ["one_material_contribution"],
+            "targetScope": "effective_primary",
+            "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json"
+          },
+          "authorityEffect": "none",
+          "blockers": [],
+          "conflictingFacts": [],
+          "continuityDecision": {
+            "candidateMode": "single_task",
+            "disposition": "reaffirm",
+            "effectivePrimaryMode": "single_task",
+            "executionSurface": "local_coordinator_only",
+            "historyCoverage": "complete",
+            "modeCompositionRequired": true,
+            "objectiveRelation": "unchanged",
+            "outerObligationAction": "preserve",
+            "outerObligationState": "active",
+            "priorCompletionEvidence": "missing",
+            "priorPrimaryMode": "single_task",
+            "projectionRef": "memory:harbor-hub-five-shard-full-inventory-r1:operation-resolution-r13",
+            "requestRelation": "continue_objective",
+            "segmentMode": null,
+            "sessionBoundary": "same_session"
+          },
+          "eligibleModes": ["single_task"],
+          "kind": "six-mode-route-decision/v1",
+          "missingFacts": [],
+          "reassessmentTriggers": [
+            "authority_or_instruction_admission_changes",
+            "capability_or_lifecycle_readiness_changes",
+            "dependency_or_contribution_shape_changes",
+            "purpose_effect_or_output_changes",
+            "request_relation_or_history_coverage_changes",
+            "risk_reversibility_or_validation_boundary_changes",
+            "outer_obligation_or_completion_evidence_changes",
+            "execution_surface_changes_contribution_shape"
+          ],
+          "rejectedModes": [
+            {
+              "mode": "communication",
+              "reasonCodes": [
+                "operation_not_direct_response",
+                "effect_not_none",
+                "output_not_response",
+                "temporal_not_immediate",
+                "current_state_evidence_required"
+              ]
+            },
+            {
+              "mode": "investigation",
+              "reasonCodes": ["operation_not_information_acquisition"]
+            },
+            {
+              "mode": "loop",
+              "reasonCodes": ["temporal_not_iterative", "iteration_not_bounded"]
+            },
+            {
+              "mode": "orchestration",
+              "reasonCodes": [
+                "contribution_not_multi_owner",
+                "capability_not_verified",
+                "lifecycle_not_verified"
+              ]
+            },
+            {
+              "mode": "session_control",
+              "reasonCodes": [
+                "operation_not_session_operation",
+                "output_not_control_receipt_or_finding",
+                "session_revision_not_explicit"
+              ]
+            }
+          ],
+          "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-1:ai-forever/harness-bench-fast:r13:resolve-six-mode-route",
+          "selectedMode": "single_task",
+          "status": "selected"
+        },
+        "status": "selected",
+        "transitionKind": "reuse_primary"
+      },
+      {
+        "dependsOn": ["resolve-six-mode-route"],
+        "obligationId": "discover-reusable-artifacts",
+        "reasoningEnvelopeRequirement": {
+          "boundary": "route_resolution",
+          "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+          "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+          "modeEnvelopeAction": "create_or_reuse",
+          "obligationId": "discover-reusable-artifacts",
+          "required": true,
+          "routeDecisionDigest": "sha256:60751aa2899a30b63daf1821588dc345d4f83db28a8ed7aea123bbc4fa8882ca",
+          "selectedMode": "single_task",
+          "targetScope": "effective_primary"
+        },
+        "requirementRefs": [
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:artifact-discovery",
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:residual-gap-dynamic-composition"
+        ],
+        "routeDecision": {
+          "architectureSelection": {
+            "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+            "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+            "effectivePrimaryMode": "single_task",
+            "patternSelectedByRouting": false,
+            "requirement": "eligible",
+            "segmentMode": null,
+            "segmentRequirement": null,
+            "segmentSelectionStatus": null,
+            "segmentStructuralSignals": [],
+            "selectionStatus": "deferred_to_architecture_components",
+            "structuralSignals": ["one_material_contribution"],
+            "targetScope": "effective_primary",
+            "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json"
+          },
+          "authorityEffect": "none",
+          "blockers": [],
+          "conflictingFacts": [],
+          "continuityDecision": {
+            "candidateMode": "single_task",
+            "disposition": "reaffirm",
+            "effectivePrimaryMode": "single_task",
+            "executionSurface": "local_coordinator_only",
+            "historyCoverage": "complete",
+            "modeCompositionRequired": true,
+            "objectiveRelation": "unchanged",
+            "outerObligationAction": "preserve",
+            "outerObligationState": "active",
+            "priorCompletionEvidence": "missing",
+            "priorPrimaryMode": "single_task",
+            "projectionRef": "memory:harbor-hub-five-shard-full-inventory-r1:operation-resolution-r13",
+            "requestRelation": "continue_objective",
+            "segmentMode": null,
+            "sessionBoundary": "same_session"
+          },
+          "eligibleModes": ["single_task"],
+          "kind": "six-mode-route-decision/v1",
+          "missingFacts": [],
+          "reassessmentTriggers": [
+            "authority_or_instruction_admission_changes",
+            "capability_or_lifecycle_readiness_changes",
+            "dependency_or_contribution_shape_changes",
+            "purpose_effect_or_output_changes",
+            "request_relation_or_history_coverage_changes",
+            "risk_reversibility_or_validation_boundary_changes",
+            "outer_obligation_or_completion_evidence_changes",
+            "execution_surface_changes_contribution_shape"
+          ],
+          "rejectedModes": [
+            {
+              "mode": "communication",
+              "reasonCodes": [
+                "operation_not_direct_response",
+                "effect_not_none",
+                "output_not_response",
+                "temporal_not_immediate",
+                "current_state_evidence_required"
+              ]
+            },
+            {
+              "mode": "investigation",
+              "reasonCodes": [
+                "operation_not_information_acquisition",
+                "output_not_information_finding"
+              ]
+            },
+            {
+              "mode": "loop",
+              "reasonCodes": ["temporal_not_iterative", "iteration_not_bounded"]
+            },
+            {
+              "mode": "orchestration",
+              "reasonCodes": [
+                "contribution_not_multi_owner",
+                "capability_not_verified",
+                "lifecycle_not_verified"
+              ]
+            },
+            {
+              "mode": "session_control",
+              "reasonCodes": [
+                "operation_not_session_operation",
+                "output_not_control_receipt_or_finding",
+                "session_revision_not_explicit"
+              ]
+            }
+          ],
+          "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-1:ai-forever/harness-bench-fast:r13:discover-reusable-artifacts",
+          "selectedMode": "single_task",
+          "status": "selected"
+        },
+        "status": "selected",
+        "transitionKind": "reuse_primary"
+      },
+      {
+        "dependsOn": ["discover-reusable-artifacts"],
+        "obligationId": "qualify-workflow-and-topology",
+        "reasoningEnvelopeRequirement": {
+          "boundary": "route_resolution",
+          "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+          "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+          "modeEnvelopeAction": "create_or_reuse",
+          "obligationId": "qualify-workflow-and-topology",
+          "required": true,
+          "routeDecisionDigest": "sha256:a47a9b9cf6424a7d9e80e2bd444889fffc02b51c10fac8a37646ae539aa1c331",
+          "selectedMode": "single_task",
+          "targetScope": "effective_primary"
+        },
+        "requirementRefs": [
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:agent-architecture",
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:agent-swarm-coordination",
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:topology",
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:workflow-pattern"
+        ],
+        "routeDecision": {
+          "architectureSelection": {
+            "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+            "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+            "effectivePrimaryMode": "single_task",
+            "patternSelectedByRouting": false,
+            "requirement": "eligible",
+            "segmentMode": null,
+            "segmentRequirement": null,
+            "segmentSelectionStatus": null,
+            "segmentStructuralSignals": [],
+            "selectionStatus": "deferred_to_architecture_components",
+            "structuralSignals": ["one_material_contribution"],
+            "targetScope": "effective_primary",
+            "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json"
+          },
+          "authorityEffect": "none",
+          "blockers": [],
+          "conflictingFacts": [],
+          "continuityDecision": {
+            "candidateMode": "single_task",
+            "disposition": "reaffirm",
+            "effectivePrimaryMode": "single_task",
+            "executionSurface": "local_coordinator_only",
+            "historyCoverage": "complete",
+            "modeCompositionRequired": true,
+            "objectiveRelation": "unchanged",
+            "outerObligationAction": "preserve",
+            "outerObligationState": "active",
+            "priorCompletionEvidence": "missing",
+            "priorPrimaryMode": "single_task",
+            "projectionRef": "memory:harbor-hub-five-shard-full-inventory-r1:operation-resolution-r13",
+            "requestRelation": "continue_objective",
+            "segmentMode": null,
+            "sessionBoundary": "same_session"
+          },
+          "eligibleModes": ["single_task"],
+          "kind": "six-mode-route-decision/v1",
+          "missingFacts": [],
+          "reassessmentTriggers": [
+            "authority_or_instruction_admission_changes",
+            "capability_or_lifecycle_readiness_changes",
+            "dependency_or_contribution_shape_changes",
+            "purpose_effect_or_output_changes",
+            "request_relation_or_history_coverage_changes",
+            "risk_reversibility_or_validation_boundary_changes",
+            "outer_obligation_or_completion_evidence_changes",
+            "execution_surface_changes_contribution_shape"
+          ],
+          "rejectedModes": [
+            {
+              "mode": "communication",
+              "reasonCodes": [
+                "operation_not_direct_response",
+                "effect_not_none",
+                "output_not_response",
+                "temporal_not_immediate",
+                "current_state_evidence_required"
+              ]
+            },
+            {
+              "mode": "investigation",
+              "reasonCodes": ["operation_not_information_acquisition"]
+            },
+            {
+              "mode": "loop",
+              "reasonCodes": ["temporal_not_iterative", "iteration_not_bounded"]
+            },
+            {
+              "mode": "orchestration",
+              "reasonCodes": [
+                "contribution_not_multi_owner",
+                "capability_not_verified",
+                "lifecycle_not_verified"
+              ]
+            },
+            {
+              "mode": "session_control",
+              "reasonCodes": [
+                "operation_not_session_operation",
+                "output_not_control_receipt_or_finding",
+                "session_revision_not_explicit"
+              ]
+            }
+          ],
+          "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-1:ai-forever/harness-bench-fast:r13:qualify-workflow-and-topology",
+          "selectedMode": "single_task",
+          "status": "selected"
+        },
+        "status": "selected",
+        "transitionKind": "reuse_primary"
+      },
+      {
+        "dependsOn": ["qualify-workflow-and-topology"],
+        "obligationId": "execute-harbor-subject",
+        "reasoningEnvelopeRequirement": {
+          "boundary": "route_resolution",
+          "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+          "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+          "modeEnvelopeAction": "create_or_reuse",
+          "obligationId": "execute-harbor-subject",
+          "required": true,
+          "routeDecisionDigest": "sha256:ad67f518531834322e6cbf1f09f2c6f4c33ec50fa4557dfc2b59df0a5fb343d6",
+          "selectedMode": "single_task",
+          "targetScope": "effective_primary"
+        },
+        "requirementRefs": [
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:effective-capability-receipt",
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:harbor-subject-operation"
+        ],
+        "routeDecision": {
+          "architectureSelection": {
+            "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+            "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+            "effectivePrimaryMode": "single_task",
+            "patternSelectedByRouting": false,
+            "requirement": "eligible",
+            "segmentMode": null,
+            "segmentRequirement": null,
+            "segmentSelectionStatus": null,
+            "segmentStructuralSignals": [],
+            "selectionStatus": "deferred_to_architecture_components",
+            "structuralSignals": ["one_material_contribution"],
+            "targetScope": "effective_primary",
+            "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json"
+          },
+          "authorityEffect": "none",
+          "blockers": [],
+          "conflictingFacts": [],
+          "continuityDecision": {
+            "candidateMode": "single_task",
+            "disposition": "reaffirm",
+            "effectivePrimaryMode": "single_task",
+            "executionSurface": "delegated_single_writer",
+            "historyCoverage": "complete",
+            "modeCompositionRequired": true,
+            "objectiveRelation": "unchanged",
+            "outerObligationAction": "preserve",
+            "outerObligationState": "active",
+            "priorCompletionEvidence": "missing",
+            "priorPrimaryMode": "single_task",
+            "projectionRef": "memory:harbor-hub-five-shard-full-inventory-r1:operation-resolution-r13",
+            "requestRelation": "continue_objective",
+            "segmentMode": null,
+            "sessionBoundary": "same_session"
+          },
+          "eligibleModes": ["single_task"],
+          "kind": "six-mode-route-decision/v1",
+          "missingFacts": [],
+          "reassessmentTriggers": [
+            "authority_or_instruction_admission_changes",
+            "capability_or_lifecycle_readiness_changes",
+            "dependency_or_contribution_shape_changes",
+            "purpose_effect_or_output_changes",
+            "request_relation_or_history_coverage_changes",
+            "risk_reversibility_or_validation_boundary_changes",
+            "outer_obligation_or_completion_evidence_changes",
+            "execution_surface_changes_contribution_shape"
+          ],
+          "rejectedModes": [
+            {
+              "mode": "communication",
+              "reasonCodes": [
+                "operation_not_direct_response",
+                "effect_not_none",
+                "output_not_response",
+                "temporal_not_immediate",
+                "current_state_evidence_required"
+              ]
+            },
+            {
+              "mode": "investigation",
+              "reasonCodes": [
+                "operation_not_information_acquisition",
+                "output_not_information_finding"
+              ]
+            },
+            {
+              "mode": "loop",
+              "reasonCodes": ["temporal_not_iterative", "iteration_not_bounded"]
+            },
+            {
+              "mode": "orchestration",
+              "reasonCodes": [
+                "contribution_not_multi_owner",
+                "capability_not_verified",
+                "lifecycle_not_verified"
+              ]
+            },
+            {
+              "mode": "session_control",
+              "reasonCodes": [
+                "operation_not_session_operation",
+                "output_not_control_receipt_or_finding",
+                "session_revision_not_explicit"
+              ]
+            }
+          ],
+          "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-1:ai-forever/harness-bench-fast:r13:execute-harbor-subject",
+          "selectedMode": "single_task",
+          "status": "selected"
+        },
+        "status": "selected",
+        "transitionKind": "reuse_primary"
+      },
+      {
+        "dependsOn": ["execute-harbor-subject"],
+        "obligationId": "evaluate-reward-and-settle",
+        "reasoningEnvelopeRequirement": {
+          "boundary": "route_resolution",
+          "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+          "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+          "modeEnvelopeAction": "create_or_reuse",
+          "obligationId": "evaluate-reward-and-settle",
+          "required": true,
+          "routeDecisionDigest": "sha256:f0159a46cb6bbdac4afa0ff29c5ac01182470221f67f485f8ebffada1e08964d",
+          "selectedMode": "single_task",
+          "targetScope": "effective_primary"
+        },
+        "requirementRefs": [
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:independent-evaluation",
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:item-resource-settlement",
+          "requirement:population-shard-1:ai-forever/harness-bench-fast:terminal-reward-v4"
+        ],
+        "routeDecision": {
+          "architectureSelection": {
+            "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+            "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+            "effectivePrimaryMode": "single_task",
+            "patternSelectedByRouting": false,
+            "requirement": "eligible",
+            "segmentMode": null,
+            "segmentRequirement": null,
+            "segmentSelectionStatus": null,
+            "segmentStructuralSignals": [],
+            "selectionStatus": "deferred_to_architecture_components",
+            "structuralSignals": ["one_material_contribution"],
+            "targetScope": "effective_primary",
+            "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json"
+          },
+          "authorityEffect": "none",
+          "blockers": [],
+          "conflictingFacts": [],
+          "continuityDecision": {
+            "candidateMode": "single_task",
+            "disposition": "reaffirm",
+            "effectivePrimaryMode": "single_task",
+            "executionSurface": "local_coordinator_only",
+            "historyCoverage": "complete",
+            "modeCompositionRequired": true,
+            "objectiveRelation": "unchanged",
+            "outerObligationAction": "preserve",
+            "outerObligationState": "active",
+            "priorCompletionEvidence": "missing",
+            "priorPrimaryMode": "single_task",
+            "projectionRef": "memory:harbor-hub-five-shard-full-inventory-r1:operation-resolution-r13",
+            "requestRelation": "continue_objective",
+            "segmentMode": null,
+            "sessionBoundary": "same_session"
+          },
+          "eligibleModes": ["single_task"],
+          "kind": "six-mode-route-decision/v1",
+          "missingFacts": [],
+          "reassessmentTriggers": [
+            "authority_or_instruction_admission_changes",
+            "capability_or_lifecycle_readiness_changes",
+            "dependency_or_contribution_shape_changes",
+            "purpose_effect_or_output_changes",
+            "request_relation_or_history_coverage_changes",
+            "risk_reversibility_or_validation_boundary_changes",
+            "outer_obligation_or_completion_evidence_changes",
+            "execution_surface_changes_contribution_shape"
+          ],
+          "rejectedModes": [
+            {
+              "mode": "communication",
+              "reasonCodes": [
+                "operation_not_direct_response",
+                "effect_not_none",
+                "output_not_response",
+                "temporal_not_immediate",
+                "current_state_evidence_required"
+              ]
+            },
+            {
+              "mode": "investigation",
+              "reasonCodes": [
+                "operation_not_information_acquisition",
+                "output_not_information_finding"
+              ]
+            },
+            {
+              "mode": "loop",
+              "reasonCodes": ["temporal_not_iterative", "iteration_not_bounded"]
+            },
+            {
+              "mode": "orchestration",
+              "reasonCodes": [
+                "contribution_not_multi_owner",
+                "capability_not_verified",
+                "lifecycle_not_verified"
+              ]
+            },
+            {
+              "mode": "session_control",
+              "reasonCodes": [
+                "operation_not_session_operation",
+                "output_not_control_receipt_or_finding",
+                "session_revision_not_explicit"
+              ]
+            }
+          ],
+          "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-1:ai-forever/harness-bench-fast:r13:evaluate-reward-and-settle",
+          "selectedMode": "single_task",
+          "status": "selected"
+        },
+        "status": "selected",
+        "transitionKind": "reuse_primary"
+      }
+    ],
+    "outerObjectiveRef": "objective:harbor-hub-five-shard-full-inventory-source-r13",
+    "privateReasoningStored": false,
+    "promptBodyStored": false,
+    "reasoningEnvelopeRequirements": [
+      {
+        "boundary": "route_resolution",
+        "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+        "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+        "modeEnvelopeAction": "create_or_reuse",
+        "obligationId": "reobserve-current-source",
+        "required": true,
+        "routeDecisionDigest": "sha256:f71b9a7ada712a547b8f7b5b62590cad4d7c6e524afb6c3f0afe8dad6e32b078",
+        "selectedMode": "investigation",
+        "targetScope": "segment"
+      },
+      {
+        "boundary": "route_resolution",
+        "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+        "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+        "modeEnvelopeAction": "create_or_reuse",
+        "obligationId": "resolve-six-mode-route",
+        "required": true,
+        "routeDecisionDigest": "sha256:09809616981c37e7481c131f91b06a82694f05649f6d7ee277ce5a2cead1d972",
+        "selectedMode": "single_task",
+        "targetScope": "effective_primary"
+      },
+      {
+        "boundary": "route_resolution",
+        "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+        "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+        "modeEnvelopeAction": "create_or_reuse",
+        "obligationId": "discover-reusable-artifacts",
+        "required": true,
+        "routeDecisionDigest": "sha256:60751aa2899a30b63daf1821588dc345d4f83db28a8ed7aea123bbc4fa8882ca",
+        "selectedMode": "single_task",
+        "targetScope": "effective_primary"
+      },
+      {
+        "boundary": "route_resolution",
+        "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+        "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+        "modeEnvelopeAction": "create_or_reuse",
+        "obligationId": "qualify-workflow-and-topology",
+        "required": true,
+        "routeDecisionDigest": "sha256:a47a9b9cf6424a7d9e80e2bd444889fffc02b51c10fac8a37646ae539aa1c331",
+        "selectedMode": "single_task",
+        "targetScope": "effective_primary"
+      },
+      {
+        "boundary": "route_resolution",
+        "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+        "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+        "modeEnvelopeAction": "create_or_reuse",
+        "obligationId": "execute-harbor-subject",
+        "required": true,
+        "routeDecisionDigest": "sha256:ad67f518531834322e6cbf1f09f2c6f4c33ec50fa4557dfc2b59df0a5fb343d6",
+        "selectedMode": "single_task",
+        "targetScope": "effective_primary"
+      },
+      {
+        "boundary": "route_resolution",
+        "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+        "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+        "modeEnvelopeAction": "create_or_reuse",
+        "obligationId": "evaluate-reward-and-settle",
+        "required": true,
+        "routeDecisionDigest": "sha256:f0159a46cb6bbdac4afa0ff29c5ac01182470221f67f485f8ebffada1e08964d",
+        "selectedMode": "single_task",
+        "targetScope": "effective_primary"
+      }
+    ],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-1:ai-forever/harness-bench-fast:r13",
+    "schemaVersion": 1,
+    "sourceInstructionRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:continuation-r13/item-05-ai-forever-harness-bench-fast:sanitized-round-obligations",
+    "status": "selected",
+    "transitionCount": 0,
+    "workflowCompositionRequired": true,
+    "workflowHandoffs": [
+      {
+        "fromObligationId": "reobserve-current-source",
+        "handoffKind": "typed_requirement_scope",
+        "toObligationId": "resolve-six-mode-route"
+      },
+      {
+        "fromObligationId": "resolve-six-mode-route",
+        "handoffKind": "typed_requirement_scope",
+        "toObligationId": "discover-reusable-artifacts"
+      },
+      {
+        "fromObligationId": "discover-reusable-artifacts",
+        "handoffKind": "typed_requirement_scope",
+        "toObligationId": "qualify-workflow-and-topology"
+      },
+      {
+        "fromObligationId": "qualify-workflow-and-topology",
+        "handoffKind": "typed_requirement_scope",
+        "toObligationId": "execute-harbor-subject"
+      },
+      {
+        "fromObligationId": "execute-harbor-subject",
+        "handoffKind": "typed_requirement_scope",
+        "toObligationId": "evaluate-reward-and-settle"
+      }
+    ]
+  },
+  "digest": "sha256:fb8ec149829869e96cba9520139688b02a3f3d6cacf5b63b8cf6b920a9fe7736",
+  "identityDigest": "sha256:f02afe4d73dbaf53ff0cc9a13c7f3e1f3e97c8e9848f7c4cf974a759bd530446",
+  "itemId": "ai-forever/harness-bench-fast",
+  "kind": "harbor-item-compound-mode-journey-evidence/v2",
+  "modeEnvelopeSupersessionRequired": true,
+  "obligationCount": 6,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "orderedDependencyChain": true,
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "promptBodyStored": false
+  },
+  "requestRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-05-ai-forever-harness-bench-fast/compound-mode-journey-input.r13.json",
+  "schemaVersion": 2,
+  "sourceBindings": {
+    "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r13",
+    "operationDecisionDigest": "sha256:1e7032e238e40d3af281a20c6e3c78d8d95672f86379cc52d5f76bf3f838cd16",
+    "requirementScopeDigest": "sha256:7de1fe4160cec4912ba6856743cc115c946cd445cb736f351467a1666a8c50ef",
+    "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:5c7558dd6d1a5cba73bb227c3295bfb65b2a64d99e761fb95f61fcc2632c0656"
+  }
+}

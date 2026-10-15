@@ -1,0 +1,574 @@
+{
+  "kind": "job-application-report-request/v1",
+  "schema_version": 1,
+  "request_id": "request:ibk-it-cleanroom-r2",
+  "revision": "2026-09-15-cleanroom-r2",
+  "application": {
+    "company_name": "IBK기업은행",
+    "role_title": "2026년 하반기 신입행원 IT 분야",
+    "language": "ko-KR",
+    "official_posting_source_ids": ["source:ibk-posting", "source:job-alio-posting"]
+  },
+  "questions": [
+    {
+      "id": "question:motivation",
+      "prompt": "IBK와 동행, 지원자님을 환영합니다! 다양한 회사들 중에서도 IBK를 선택하신 이유가 궁금합니다. 지원동기에 대해 자유롭게 이야기해 주세요.",
+      "min_chars": 1,
+      "max_chars": 1000,
+      "required_contents": ["IBK 선택 이유", "IT 분야 지원동기", "지원자의 경험과 연결"],
+      "focus": {
+        "family_id": "motivation-and-company-fit",
+        "primary_claim": "복잡한 금융 흐름을 안전하고 오래 운영할 수 있는 구조로 만드는 책임이 지원자의 개발 관심과 맞닿아 있다.",
+        "reader_takeaway": "IBK의 고객·중소기업 금융을 떠받치는 IT 책임과 지원자의 지속 가능한 백엔드 설계 지향이 구체적으로 연결된다.",
+        "reviewer_need": "다른 금융사에도 붙일 수 있는 찬사가 아니라 IBK의 중소기업 금융과 전자금융 운영 책임을 선택 이유로 확인한다.",
+        "evidence_function": "핀테크 백엔드 프로젝트와 유지보수 가능한 구조에 대한 지원자 진술이 동기를 뒷받침한다.",
+        "rhetorical_move_ids": ["direct-answer", "company-role-connection", "choice-or-action", "future-direction"],
+        "voice_evidence_ids": ["applicant:backend-focus", "applicant:maintainability-value", "claim:msa-fintech-flow"],
+        "closing_function": "specific-next-responsibility",
+        "non_overlap_boundary": "학습량이나 약점 관리, 대안 직업 설명은 이 문항에서 전개하지 않는다."
+      },
+      "user_confirmation_ids": ["applicant:backend-focus", "applicant:maintainability-value"]
+    },
+    {
+      "id": "question:strength-weakness",
+      "prompt": "지원자님에 대해 더 알고 싶습니다. 본인의 강점과 약점에 대해 설명해주시고, 직접 경험했던 내용을 바탕으로 표현해 주시면 더욱 좋습니다.",
+      "min_chars": 1,
+      "max_chars": 1000,
+      "required_contents": ["강점", "약점", "직접 경험", "약점 관리 방법"],
+      "focus": {
+        "family_id": "weakness-and-self-management",
+        "primary_claim": "정확히 이해할 때까지 파고드는 끈기가 강점이지만 조급함이 범위를 흔들 수 있어 단계 목표와 상태 점검으로 관리한다.",
+        "reader_takeaway": "강점과 약점이 같은 경험 안에서 드러나며, 약점을 반복 가능한 방식으로 통제한다.",
+        "reviewer_need": "꾸며낸 단점이 아니라 실제 불편과 관리 습관을 확인한다.",
+        "evidence_function": "알고리즘 학습 목표를 단계적으로 확장하고 약 700문제를 풀이한 공개 회고가 자기관리 방식을 보여준다.",
+        "rhetorical_move_ids": ["direct-answer", "result-or-boundary", "self-management", "relevant-context", "learning-or-change"],
+        "voice_evidence_ids": ["applicant:haste-weakness", "applicant:incremental-goals", "applicant:algorithm-practice"],
+        "closing_function": "continuing-improvement",
+        "non_overlap_boundary": "IBK 지원동기나 보안 연구자라는 대안 직업은 이 문항의 결론으로 사용하지 않는다."
+      },
+      "user_confirmation_ids": ["applicant:haste-weakness", "applicant:incremental-goals", "applicant:algorithm-practice"]
+    },
+    {
+      "id": "question:preparation",
+      "prompt": "IBK의 가족이 되기 위해 지원자께서는 어떠한 노력과 구체적인 준비를 기울이셨는지 저희에게 편안하게 전달해 주세요.",
+      "min_chars": 1,
+      "max_chars": 1000,
+      "required_contents": ["IT 직무 준비", "구체적 행동", "금융 시스템과의 연관", "준비의 의미"],
+      "focus": {
+        "family_id": "capability-and-contribution",
+        "primary_claim": "금융 도메인 백엔드 구현, 소프트웨어 구조화, 알고리즘과 보안 학습을 실제 산출물로 연결해 IT 기본기를 준비했다.",
+        "reader_takeaway": "지원자는 코딩테스트 대비에 그치지 않고 금융 서비스의 상태·권한·거래 흐름을 코드로 다뤄 보았다.",
+        "reviewer_need": "기술 목록보다 준비 과정이 IBK IT 업무에서 어떤 책임으로 이어지는지 확인한다.",
+        "evidence_function": "핀테크 멀티모듈·이벤트 처리 프로젝트, 알고리즘 학습, 정적 분석 프로젝트가 상호 보완되는 준비 근거다.",
+        "rhetorical_move_ids": ["direct-answer", "choice-or-action", "company-role-connection", "reason-or-tradeoff", "result-or-boundary"],
+        "voice_evidence_ids": ["applicant:backend-focus", "applicant:algorithm-practice", "applicant:security-study", "claim:msa-service-boundaries"],
+        "closing_function": "concrete-contribution",
+        "non_overlap_boundary": "지원동기의 회사 선택 이유와 약점 관리 서사를 반복하지 않는다."
+      },
+      "user_confirmation_ids": ["applicant:backend-focus", "applicant:algorithm-practice", "applicant:security-study"]
+    },
+    {
+      "id": "question:alternative-career",
+      "prompt": "은행원이 아닌 다른 어떤 직업을 갖고 싶었는지 궁금합니다. 그리고 왜 그 일에 어울리는 사람이라고 생각하는지 이유와 함께 이야기해 주세요.",
+      "min_chars": 1,
+      "max_chars": 1000,
+      "required_contents": ["대안 직업", "그 직업에 어울리는 이유", "경험 근거", "현재 IT 지원과 연결되는 관점"],
+      "focus": {
+        "family_id": "growth-and-career-direction",
+        "primary_claim": "다른 길을 택한다면 시스템 보안 연구자가 되고 싶으며, 공격 관점과 개발 관점을 함께 넓혀 온 탐구 방식이 그 직업에 맞는다.",
+        "reader_takeaway": "대안 직업도 현재의 IT 지원과 단절되지 않고 안전한 시스템을 이해하고 만드는 공통 책임으로 이어진다.",
+        "reviewer_need": "흥미 수준의 직업명이 아니라 지속적으로 준비한 이유와 적합성을 확인한다.",
+        "evidence_function": "정보보안 학습 회고, 정적 프로그램 분석 구현, 백엔드 개발 지향이 대안 직업의 방어 가능한 근거다.",
+        "rhetorical_move_ids": ["direct-answer", "future-direction", "company-role-connection", "choice-or-action", "learning-or-change"],
+        "voice_evidence_ids": ["applicant:security-career-interest", "applicant:security-study", "claim:static-analysis-tool"],
+        "closing_function": "business-or-user-outcome",
+        "non_overlap_boundary": "준비 문항의 전체 기술 학습 목록을 반복하지 않고 보안 연구의 관점과 적합성만 설명한다."
+      },
+      "user_confirmation_ids": ["applicant:security-career-interest", "applicant:security-study"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source:ibk-posting",
+      "source_type": "official_posting",
+      "locator": "https://ibk.incruit.com/hire/viewhire.asp?projectid=128",
+      "authority": "primary",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:job-alio-posting",
+      "source_type": "official_posting",
+      "locator": "https://job.alio.go.kr/recruitview.do?idx=304338",
+      "authority": "primary",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:ibk-job-faq",
+      "source_type": "official_company",
+      "locator": "https://ibk.incruit.com/jobinfo/job_faq.html",
+      "authority": "primary",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:ibk-process",
+      "source_type": "official_company",
+      "locator": "https://ibk.incruit.com/jobinfo/ibk_prosess.html",
+      "authority": "primary",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:ibk-duty",
+      "source_type": "official_company",
+      "locator": "https://ibk.incruit.com/recruiter/duty_introduce.html",
+      "authority": "primary",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:ibk-research",
+      "source_type": "official_company",
+      "locator": "https://research.ibk.co.kr/research/board/finance-state/list",
+      "authority": "primary",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:question-page",
+      "source_type": "qualified_secondary",
+      "locator": "https://linkareer.com/cover-letter/35317",
+      "authority": "qualified_secondary",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:github-profile",
+      "source_type": "applicant_statement",
+      "locator": "https://github.com/judangs",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:blog-algorithm",
+      "source_type": "applicant_statement",
+      "locator": "https://dookie2.tistory.com/category/%EC%9D%B4%EB%AA%A8%EC%A0%80%EB%AA%A8",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:blog-security",
+      "source_type": "applicant_statement",
+      "locator": "https://dookie2.tistory.com/category/%EC%9D%B4%EB%AA%A8%EC%A0%80%EB%AA%A8",
+      "authority": "applicant_owned",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:repo-msa",
+      "source_type": "project_repository",
+      "locator": "https://github.com/judangs/dev-group-bank-msa",
+      "authority": "project_observation",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:repo-payvue-core",
+      "source_type": "project_repository",
+      "locator": "https://github.com/payvue/payvue-core",
+      "authority": "project_observation",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    },
+    {
+      "id": "source:repo-static-analysis",
+      "source_type": "project_repository",
+      "locator": "https://github.com/judangs/Static-Program-Analysis",
+      "authority": "project_observation",
+      "observed_at": "2026-09-15T08:00:00+09:00",
+      "digest": null,
+      "visibility": "public_report_allowed"
+    }
+  ],
+  "application_analysis": {
+    "company_context": [
+      {
+        "id": "analysis:company-purpose",
+        "observation": "IBK는 중소기업 금융 현황을 조사하고 정책·금융 지원에 활용하는 중소기업 중심의 역할을 수행한다.",
+        "evidence_refs": ["source:ibk-research"],
+        "writing_implication": "지원동기는 금융회사의 규모가 아니라 중소기업과 실무 사용자가 의존하는 금융 기반을 안정적으로 운영한다는 공공적 결과에 연결한다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "analysis:posting-closed",
+        "observation": "2026년 하반기 지원서 접수는 2026년 9월 14일 10시에 마감됐다.",
+        "evidence_refs": ["source:job-alio-posting", "source:ibk-process"],
+        "writing_implication": "답안에는 마감 사실을 넣지 않고 보고서에서 이번 공고의 현재 상태와 향후 재사용 한계를 명시한다.",
+        "certainty": "fact"
+      }
+    ],
+    "role_domain_concerns": [
+      {
+        "id": "analysis:it-capabilities",
+        "observation": "IBK는 IT 분야에서 클라우드, 소프트웨어 아키텍처, 데이터베이스, 정보보호 운영·관리, 프로그래밍 역량을 구분해 본다.",
+        "evidence_refs": ["source:ibk-job-faq"],
+        "writing_implication": "기술명을 나열하지 않고 구조 설계, 데이터 일관성, 보안 관점, 구현·검증의 책임으로 번역한다.",
+        "certainty": "fact"
+      },
+      {
+        "id": "analysis:electronic-finance-duty",
+        "observation": "전자금융 IT 업무는 안전하고 편리한 환경을 위해 업무 개발, 시스템 관리·유지보수, 보안체계 운영을 함께 담당한다.",
+        "evidence_refs": ["source:ibk-duty"],
+        "writing_implication": "지원자의 유지보수 가능한 구조 관심을 기능 개발 이후의 운영 책임까지 연결한다.",
+        "certainty": "fact"
+      }
+    ],
+    "domain_stakes": [
+      {
+        "id": "analysis:financial-state-stakes",
+        "observation": "금융 서비스의 거래·잔액·권한 상태가 잘못되면 고객의 자산 확인과 결제·송금, 기업의 업무 흐름에 직접 영향을 줄 수 있다.",
+        "evidence_refs": ["source:ibk-duty", "source:repo-msa"],
+        "writing_implication": "정확성·일관성·권한 경계를 지원자의 핵심 책임 언어로 사용하되 실제 장애 예방 성과를 주장하지 않는다.",
+        "certainty": "inference"
+      },
+      {
+        "id": "analysis:operability-stakes",
+        "observation": "IBK의 IT 역할은 신규 개발뿐 아니라 시스템 관리, 유지보수, 보안체계 운영을 포괄한다.",
+        "evidence_refs": ["source:ibk-duty"],
+        "writing_implication": "장기간 변경 가능한 구조를 고민해 온 포트폴리오의 방향을 직무 적합성으로 해석한다.",
+        "certainty": "fact"
+      }
+    ],
+    "fit_hypotheses": [
+      {
+        "id": "fit:backend-to-bank-it",
+        "statement": "도메인과 책임을 나누는 백엔드 설계 경험은 은행 IT의 변경·운영 책임에 인접한 준비다.",
+        "evidence_refs": ["applicant:backend-focus", "claim:msa-service-boundaries", "analysis:electronic-finance-duty"],
+        "confirmation_required": false
+      },
+      {
+        "id": "fit:security-to-reliability",
+        "statement": "공격 관점과 정적 분석 학습은 정보보호 운영을 이해하는 보조 역량이 될 수 있다.",
+        "evidence_refs": ["applicant:security-study", "claim:static-analysis-tool", "analysis:it-capabilities"],
+        "confirmation_required": false
+      }
+    ],
+    "question_writing_implications": [
+      {
+        "id": "implication:motivation",
+        "question_id": "question:motivation",
+        "context_claim": "IBK IT는 중소기업·고객의 금융 활동을 지탱하는 전자금융 시스템을 개발하고 운영한다.",
+        "writing_implication": "유지보수 가능한 금융 백엔드를 만들고 싶다는 지원자의 방향을 IBK 고유의 중소기업 금융 기반 책임과 연결한다.",
+        "evidence_refs": ["analysis:company-purpose", "analysis:electronic-finance-duty"],
+        "applicant_relevance_refs": ["applicant:backend-focus", "applicant:maintainability-value", "claim:msa-fintech-flow"],
+        "exclusion_boundary": "은행 규모, 안정성, 복지 같은 일반적 선호는 근거가 없으므로 제외한다."
+      },
+      {
+        "id": "implication:strength-weakness",
+        "question_id": "question:strength-weakness",
+        "context_claim": "은행 IT는 정확한 구현과 시간 안의 운영 판단을 함께 요구한다.",
+        "writing_implication": "깊이 파고드는 끈기와 조급함을 단계 목표로 관리한 동일 경험을 사용해 균형을 보여준다.",
+        "evidence_refs": ["analysis:it-capabilities", "analysis:operability-stakes"],
+        "applicant_relevance_refs": ["applicant:haste-weakness", "applicant:incremental-goals", "applicant:algorithm-practice"],
+        "exclusion_boundary": "약점을 완전히 극복했다고 단정하지 않고 현재도 사용하는 관리 습관으로 제한한다."
+      },
+      {
+        "id": "implication:preparation",
+        "question_id": "question:preparation",
+        "context_claim": "IBK IT는 프로그래밍뿐 아니라 소프트웨어 구조, 데이터베이스, 정보보호를 폭넓게 이해해야 한다.",
+        "writing_implication": "핀테크 서비스 구현을 주축으로 알고리즘과 보안 학습을 보조 근거로 배치한다.",
+        "evidence_refs": ["analysis:it-capabilities", "analysis:financial-state-stakes"],
+        "applicant_relevance_refs": ["claim:msa-service-boundaries", "applicant:algorithm-practice", "claim:static-analysis-tool"],
+        "exclusion_boundary": "실제 운영 트래픽, 장애 감소율, 팀 성과는 확인되지 않아 주장하지 않는다."
+      },
+      {
+        "id": "implication:alternative-career",
+        "question_id": "question:alternative-career",
+        "context_claim": "시스템 보안 연구와 은행 IT는 안전한 소프트웨어를 이해하고 운영한다는 책임을 공유한다.",
+        "writing_implication": "대안 직업은 보안 연구자로 명시하고, 정적 분석과 개발 역량을 함께 쌓아 온 선택을 적합성 근거로 사용한다.",
+        "evidence_refs": ["analysis:it-capabilities"],
+        "applicant_relevance_refs": ["applicant:security-career-interest", "applicant:security-study", "claim:static-analysis-tool"],
+        "exclusion_boundary": "보안 실무 경력, 취약점 발견 성과, 연구 논문 성과는 확인되지 않아 제외한다."
+      }
+    ]
+  },
+  "applicant_evidence": {
+    "facts": [
+      {
+        "id": "applicant:backend-focus",
+        "statement": "지원자는 Spring 기반 백엔드 시스템 설계·개발과 도메인 모델링에 집중한다고 공개 프로필에서 밝혔다.",
+        "source_refs": ["source:github-profile"],
+        "confirmed": true,
+        "allowed_uses": ["question:motivation", "question:preparation"]
+      },
+      {
+        "id": "applicant:algorithm-practice",
+        "statement": "지원자는 알고리즘 학습 목표를 단계적으로 높이며 여러 플랫폼에서 약 700문제를 풀고 목표한 등급에 도달했다고 회고했다.",
+        "source_refs": ["source:blog-algorithm"],
+        "confirmed": true,
+        "allowed_uses": ["question:strength-weakness", "question:preparation"]
+      },
+      {
+        "id": "applicant:security-study",
+        "statement": "지원자는 정보보안 공부, 공개 도구 분석, 프로그램 분석 관점 학습을 이어 왔다고 회고했다.",
+        "source_refs": ["source:blog-security"],
+        "confirmed": true,
+        "allowed_uses": ["question:preparation", "question:alternative-career"]
+      },
+      {
+        "id": "applicant:security-career-interest",
+        "statement": "지원자는 시스템 해킹과 취약점 분석, 프로그램 분석 연구에 지속적인 관심이 있다고 밝혔다.",
+        "source_refs": ["source:blog-security"],
+        "confirmed": true,
+        "allowed_uses": ["question:alternative-career"]
+      }
+    ],
+    "value_statements": [
+      {
+        "id": "applicant:maintainability-value",
+        "statement": "복잡성이 커져도 유지보수성과 확장성을 지키는 코드 구조를 중요하게 생각한다.",
+        "source_refs": ["source:github-profile"],
+        "confirmed": true,
+        "allowed_uses": ["question:motivation", "question:strength-weakness"]
+      },
+      {
+        "id": "applicant:haste-weakness",
+        "statement": "빠른 취업을 목표로 필요한 역량을 조급하게 채우려 했던 점을 본인의 이전 약점으로 회고했다.",
+        "source_refs": ["source:blog-algorithm"],
+        "confirmed": true,
+        "allowed_uses": ["question:strength-weakness"]
+      },
+      {
+        "id": "applicant:incremental-goals",
+        "statement": "현재 상태를 점검하고 학습 목표를 단계적으로 수정하는 방식으로 조급함과 중도 포기 위험을 관리했다.",
+        "source_refs": ["source:blog-algorithm"],
+        "confirmed": true,
+        "allowed_uses": ["question:strength-weakness", "question:preparation"]
+      }
+    ],
+    "unknowns": [
+      {
+        "id": "unknown:production-scale",
+        "needed_fact": "프로젝트의 실제 사용자 수, 트래픽, 장애 또는 성능 개선 수치",
+        "affected_question_ids": ["question:motivation", "question:preparation"],
+        "why_material": "수치가 있으면 운영 성과를 강화할 수 있지만 현재 공개 근거만으로는 주장할 수 없다.",
+        "acceptable_evidence": "배포 로그, 모니터링 지표, 회고 또는 지원자의 명시적 확인",
+        "resolution": "omit_from_answer"
+      },
+      {
+        "id": "unknown:team-role",
+        "needed_fact": "Payvue 및 핀테크 프로젝트의 팀 규모와 지원자의 정확한 담당 범위",
+        "affected_question_ids": ["question:motivation", "question:preparation"],
+        "why_material": "협업이나 리더십 성과를 주장하려면 개인 기여와 팀 기여를 구분해야 한다.",
+        "acceptable_evidence": "프로젝트 역할 문서, 이슈·PR 기록 또는 지원자의 명시적 확인",
+        "resolution": "narrow_to_confirmed_scope"
+      },
+      {
+        "id": "unknown:current-question-currency",
+        "needed_fact": "2026년 하반기 실제 지원서의 문항이 제공된 2025년 문항과 동일한지 여부",
+        "affected_question_ids": ["question:motivation", "question:strength-weakness", "question:preparation", "question:alternative-career"],
+        "why_material": "문항이 다르면 제출용 문안으로 그대로 사용할 수 없다.",
+        "acceptable_evidence": "2026년 하반기 지원서 화면 또는 공식 문항 공지",
+        "resolution": "narrow_to_confirmed_scope"
+      }
+    ]
+  },
+  "project_evidence": [
+    {
+      "id": "project:fintech-msa",
+      "kind": "Spring 기반 핀테크 백엔드 플랫폼",
+      "scale": "공개 멀티모듈 저장소와 README에서 확인되는 개인 포트폴리오 프로젝트; 실제 운영 규모는 미확인",
+      "applicant_role": "공개 프로필과 개인 저장소를 통해 확인되는 백엔드 설계·구현자",
+      "contribution": "인증, 결제, 게이트웨이, 이벤트 소비 기능을 책임 단위로 나누고 데이터 접근과 거래 흐름을 구조화했다.",
+      "process": "금융 서비스의 기능을 API·응용·도메인·저장 영역과 서비스 단위로 구분하고 이벤트 흐름을 연결했다.",
+      "learning": "기능 구현만이 아니라 상태, 권한, 데이터 일관성, 변경 가능성을 구조로 표현해야 함을 프로젝트에 반영했다.",
+      "claims": [
+        {
+          "id": "claim:msa-fintech-flow",
+          "statement": "저장소는 회원 인증, 결제·캐시, 그룹 결제 요청, API 라우팅, 이벤트 처리를 포함하는 핀테크 서비스 흐름을 설명한다.",
+          "source_refs": ["source:repo-msa", "source:github-profile"],
+          "certainty": "observed",
+          "outcome_limit": "기능 구조는 확인되지만 실제 고객 사용과 운영 성과는 확인되지 않는다."
+        },
+        {
+          "id": "claim:msa-service-boundaries",
+          "statement": "저장소는 공개 API, 응용 서비스, 도메인, 저장소, 게이트웨이, 이벤트 소비 영역을 구분한 구조를 사용한다.",
+          "source_refs": ["source:repo-msa"],
+          "certainty": "observed",
+          "outcome_limit": "설계 의도와 코드 구조는 확인되지만 조직 환경에서의 유지보수 효과는 확인되지 않는다."
+        }
+      ],
+      "language_translations": [
+        {"internal_term": "MSA", "universal_term": "서비스 책임을 나눈 백엔드 구조", "use_condition": "분산 환경 자체보다 책임 분리가 문항에 중요할 때 사용"},
+        {"internal_term": "Kafka consumer", "universal_term": "서비스에서 발생한 사건을 비동기로 처리하는 구성", "use_condition": "거래 후속 처리와 데이터 일관성의 의미를 설명할 때만 사용"}
+      ]
+    },
+    {
+      "id": "project:payvue-core",
+      "kind": "개인 자산과 그룹 재테크 흐름을 다루는 도메인 모듈",
+      "scale": "공개 조직 저장소의 도메인 모듈과 테스트에서 확인되는 프로젝트; 사용자·팀 규모 미확인",
+      "applicant_role": "공개 프로필이 본인의 서비스로 제시한 프로젝트의 백엔드·도메인 구조 설계자",
+      "contribution": "자산 보유, 공동체 관계, 거래, 알림, 결제 책임을 분리하고 규칙과 상태 전이를 도메인 코드와 테스트로 표현했다.",
+      "process": "개인·그룹 금융 활동을 기능 목록이 아니라 자산, 관계, 거래의 책임과 규칙으로 나누어 구현했다.",
+      "learning": "금융 도메인은 데이터만 저장하는 것이 아니라 행위 가능 조건과 상태 변화의 의미를 명시해야 한다는 관점을 강화했다.",
+      "claims": [
+        {
+          "id": "claim:payvue-domain-tests",
+          "statement": "공개 저장소에는 자산 보유, 공동체 관계, 거래 정책을 분리한 모듈과 해당 규칙을 확인하는 테스트가 존재한다.",
+          "source_refs": ["source:repo-payvue-core"],
+          "certainty": "observed",
+          "outcome_limit": "테스트와 구조는 확인되지만 상용 운영 성과는 확인되지 않는다."
+        }
+      ],
+      "language_translations": [
+        {"internal_term": "core-domain", "universal_term": "서비스의 핵심 금융 규칙", "use_condition": "기술 구조보다 금융 상태와 규칙의 의미가 중요할 때 사용"},
+        {"internal_term": "specification", "universal_term": "행동 가능 여부를 판단하는 업무 규칙", "use_condition": "정확성·검증 책임을 설명할 때만 사용"}
+      ]
+    },
+    {
+      "id": "project:static-analysis",
+      "kind": "Python 기반 정적 프로그램 분석 학습 도구",
+      "scale": "개인 공개 저장소에서 확인되는 학습·구현 프로젝트; 연구 성과나 실사용 규모 미확인",
+      "applicant_role": "개인 저장소의 구현자",
+      "contribution": "실행 파일 형식 파싱, 디스어셈블, 기본 블록과 제어 흐름 복구 과정을 구현했다.",
+      "process": "프로그램을 바이트 수준에서 읽고 명령과 제어 흐름으로 복원하는 단계를 나누어 학습했다.",
+      "learning": "보안 문제를 수작업 분석에만 의존하지 않고 프로그램 구조와 자동화 관점에서 이해하는 시야를 넓혔다.",
+      "claims": [
+        {
+          "id": "claim:static-analysis-tool",
+          "statement": "저장소 README는 x86 실행 파일 파싱, 디스어셈블, 기본 블록 구성, 제어 흐름 복구 기능을 구현했다고 설명한다.",
+          "source_refs": ["source:repo-static-analysis"],
+          "certainty": "observed",
+          "outcome_limit": "취약점 발견 실적이나 LLVM 변환 완료는 확인되지 않으므로 주장하지 않는다."
+        }
+      ],
+      "language_translations": [
+        {"internal_term": "CFG recovery", "universal_term": "프로그램이 어떤 경로로 실행될 수 있는지 복원하는 분석", "use_condition": "보안 연구 적합성을 비개발자도 이해할 수 있게 설명할 때 사용"}
+      ]
+    }
+  ],
+  "source_policy": {
+    "as_of": "2026-09-15",
+    "prefer_primary": true,
+    "allowed_source_ids": [
+      "source:ibk-posting", "source:job-alio-posting", "source:ibk-job-faq", "source:ibk-process", "source:ibk-duty", "source:ibk-research", "source:question-page", "source:github-profile", "source:blog-algorithm", "source:blog-security", "source:repo-msa", "source:repo-payvue-core", "source:repo-static-analysis"
+    ],
+    "visible_source_ids": [
+      "source:ibk-posting", "source:job-alio-posting", "source:ibk-job-faq", "source:ibk-process", "source:ibk-duty", "source:ibk-research", "source:question-page", "source:github-profile", "source:blog-algorithm", "source:blog-security", "source:repo-msa", "source:repo-payvue-core", "source:repo-static-analysis"
+    ],
+    "public_source_scope": "explicit_allowlist",
+    "missing_evidence_policy": "preserve_unknown"
+  },
+  "quality_profile": {
+    "policy_ref": "artifacts/agent-loop/document/job-application-report-production/vocabularies/job-application-report-quality-policy.json",
+    "mandatory_gate_ids": [
+      "request-and-question-coverage", "source-and-freshness-boundary", "context-research-and-writing-implication", "applicant-attribution-and-confirmation", "project-evidence-and-causality", "contextual-synthesis-and-applicant-authorship", "role-domain-language-clarity", "publication-and-privacy-safety"
+    ],
+    "dimensions": [
+      {"id": "question-fit-and-differentiation", "weight": 20},
+      {"id": "role-and-domain-alignment", "weight": 20},
+      {"id": "applicant-viewpoint-and-values", "weight": 18},
+      {"id": "evidence-causality-and-attribution", "weight": 18},
+      {"id": "expression-specificity-and-coherence", "weight": 14},
+      {"id": "clarity-and-interview-defensibility", "weight": 10}
+    ],
+    "rating_min": 0,
+    "rating_max": 4,
+    "qualification_threshold": 90,
+    "score_meaning": "editing_fitness_not_hiring_probability",
+    "revision_passes": 1
+  },
+  "output_profile": {
+    "profile_ref": "artifacts/agent-loop/document/job-application-report-production/profiles/five-set-pdf-report.profile.json",
+    "candidate_count": 5,
+    "report_format": "pdf",
+    "audiences": ["지원자", "자기소개서 검토자"],
+    "required_sections": ["application-overview", "company-role-analysis", "question-analysis", "candidate-answers", "candidate-evaluation", "expert-review", "interview-preparation", "material-requests"],
+    "design": {
+      "tone": "절제된 한국어 편집 보고서",
+      "comparison_layout": "vertical",
+      "avoid_patterns": ["과도한 카드 배치", "기술 목록", "근거 없는 수치", "내부 실행 용어", "표지 장식 이미지"],
+      "raster_policy": "required_for_visual_assets"
+    },
+    "publication": {
+      "searchable_text_required": true,
+      "overflow_policy": "no_clipped_content",
+      "visible_source_policy": "allowlisted_only",
+      "content_policies": [
+        {
+          "id": "policy:no-local-paths",
+          "category": "privacy_path_exclusion",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {"type": "regex_any", "values": ["/Users/", "\\.collab/artifacts/"]},
+          "rationale": "공개 보고서에 로컬 작업 경로를 노출하지 않는다."
+        },
+        {
+          "id": "policy:no-internal-process",
+          "category": "internal_process_exclusion",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {"type": "literal_any", "values": ["run-bundle", "settlement-receipt", "worker_done", "rhetorical_move_ids"]},
+          "rationale": "지원자용 보고서에서 내부 실행·검증 필드명을 제외한다."
+        },
+        {
+          "id": "policy:reader-navigation",
+          "category": "reader_navigation_presence",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "present",
+          "matcher": {"type": "literal_any", "values": ["후보 선택", "면접 준비", "보완 자료"]},
+          "rationale": "지원자가 답안과 후속 준비를 찾을 수 있어야 한다."
+        },
+        {
+          "id": "policy:no-blind-risk",
+          "category": "request_specific_exclusion",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "absent",
+          "matcher": {"type": "literal_any", "values": ["대학교명", "출신학교", "남성", "여성", "군 복무"]},
+          "rationale": "IBK 블라인드 채용에서 금지하는 식별 가능 정보를 답안과 보고서 본문에서 제외한다."
+        },
+        {
+          "id": "policy:ibk-present",
+          "category": "request_specific_presence",
+          "severity": "mandatory",
+          "target": "public_text_extract",
+          "expectation": "present",
+          "matcher": {"type": "literal_any", "values": ["IBK기업은행", "IT 분야"]},
+          "rationale": "보고서가 대상 기업과 직무를 명확히 표시해야 한다."
+        }
+      ]
+    }
+  },
+  "privacy_boundary": {
+    "public_evidence_ids": [
+      "applicant:backend-focus", "applicant:algorithm-practice", "applicant:security-study", "applicant:security-career-interest", "applicant:maintainability-value", "applicant:haste-weakness", "applicant:incremental-goals", "claim:msa-fintech-flow", "claim:msa-service-boundaries", "claim:payvue-domain-tests", "claim:static-analysis-tool"
+    ],
+    "prohibited_content_categories": ["blind-recruitment-identifiers", "private-personal-data", "local-absolute-paths", "internal-runtime-records", "unverified-outcome-metrics"],
+    "identity_handling": "explicit_consent_only"
+  },
+  "stop_budget": {
+    "max_research_rounds": 2,
+    "max_revision_passes": 1,
+    "unchanged_failure_limit": 2
+  }
+}

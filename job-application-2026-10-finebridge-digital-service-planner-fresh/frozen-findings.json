@@ -1,0 +1,117 @@
+{
+  "kind": "job-application-frozen-findings/v1",
+  "status": "frozen_before_revision",
+  "authority_effect": "none",
+  "request_ref": "request.json",
+  "candidate_ids": [
+    "candidate-a",
+    "candidate-b",
+    "candidate-c",
+    "candidate-d",
+    "candidate-e"
+  ],
+  "mandatory_gates": [
+    {
+      "id": "request-and-question-coverage",
+      "status": "pass",
+      "finding": "확인된 자료 범위에서 통과하며, 부족한 개인 사실은 별도 확인 항목으로 남겼다."
+    },
+    {
+      "id": "source-and-freshness-boundary",
+      "status": "pass",
+      "finding": "확인된 자료 범위에서 통과하며, 부족한 개인 사실은 별도 확인 항목으로 남겼다."
+    },
+    {
+      "id": "applicant-attribution-and-confirmation",
+      "status": "pass",
+      "finding": "확인된 자료 범위에서 통과하며, 부족한 개인 사실은 별도 확인 항목으로 남겼다."
+    },
+    {
+      "id": "project-evidence-and-causality",
+      "status": "pass",
+      "finding": "확인된 자료 범위에서 통과하며, 부족한 개인 사실은 별도 확인 항목으로 남겼다."
+    },
+    {
+      "id": "role-domain-language-clarity",
+      "status": "pass",
+      "finding": "확인된 자료 범위에서 통과하며, 부족한 개인 사실은 별도 확인 항목으로 남겼다."
+    },
+    {
+      "id": "publication-and-privacy-safety",
+      "status": "pass",
+      "finding": "확인된 자료 범위에서 통과하며, 부족한 개인 사실은 별도 확인 항목으로 남겼다."
+    }
+  ],
+  "comparative_findings": [
+    {
+      "candidate_id": "candidate-a",
+      "before_score": 93.39999999999999,
+      "dimension_ratings": {
+        "question-fit-and-differentiation": 3.8,
+        "role-and-domain-alignment": 3.8,
+        "applicant-viewpoint-and-values": 3.9,
+        "evidence-causality-and-attribution": 3.8,
+        "expression-specificity-and-coherence": 3.9,
+        "clarity-and-interview-defensibility": 3.8
+      },
+      "revision_target": "문항별 중심 주장과 근거 귀속을 더 선명하게 하고 확인되지 않은 결과를 좁혀 표현한다."
+    },
+    {
+      "candidate_id": "candidate-b",
+      "before_score": 93.1,
+      "dimension_ratings": {
+        "question-fit-and-differentiation": 3.8,
+        "role-and-domain-alignment": 3.9,
+        "applicant-viewpoint-and-values": 3.8,
+        "evidence-causality-and-attribution": 3.8,
+        "expression-specificity-and-coherence": 3.8,
+        "clarity-and-interview-defensibility": 3.8
+      },
+      "revision_target": "문항별 중심 주장과 근거 귀속을 더 선명하게 하고 확인되지 않은 결과를 좁혀 표현한다."
+    },
+    {
+      "candidate_id": "candidate-c",
+      "before_score": 92.94999999999999,
+      "dimension_ratings": {
+        "question-fit-and-differentiation": 3.8,
+        "role-and-domain-alignment": 3.8,
+        "applicant-viewpoint-and-values": 3.8,
+        "evidence-causality-and-attribution": 3.8,
+        "expression-specificity-and-coherence": 3.9,
+        "clarity-and-interview-defensibility": 3.8
+      },
+      "revision_target": "문항별 중심 주장과 근거 귀속을 더 선명하게 하고 확인되지 않은 결과를 좁혀 표현한다."
+    },
+    {
+      "candidate_id": "candidate-d",
+      "before_score": 93.55,
+      "dimension_ratings": {
+        "question-fit-and-differentiation": 3.9,
+        "role-and-domain-alignment": 3.8,
+        "applicant-viewpoint-and-values": 3.9,
+        "evidence-causality-and-attribution": 3.8,
+        "expression-specificity-and-coherence": 3.8,
+        "clarity-and-interview-defensibility": 3.8
+      },
+      "revision_target": "문항별 중심 주장과 근거 귀속을 더 선명하게 하고 확인되지 않은 결과를 좁혀 표현한다."
+    },
+    {
+      "candidate_id": "candidate-e",
+      "before_score": 93.35,
+      "dimension_ratings": {
+        "question-fit-and-differentiation": 3.8,
+        "role-and-domain-alignment": 3.9,
+        "applicant-viewpoint-and-values": 3.8,
+        "evidence-causality-and-attribution": 3.8,
+        "expression-specificity-and-coherence": 3.8,
+        "clarity-and-interview-defensibility": 3.9
+      },
+      "revision_target": "문항별 중심 주장과 근거 귀속을 더 선명하게 하고 확인되지 않은 결과를 좁혀 표현한다."
+    }
+  ],
+  "revision_budget": {
+    "configured_passes": 1,
+    "same_fingerprint_limit": 1,
+    "revision_basis": "question fit, role alignment, evidence causality, expression specificity, and interview defensibility"
+  }
+}

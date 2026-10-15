@@ -1,0 +1,130 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:job-application-report-expression-template-improvement",
+  "requestRevision": "revision:expression-editorial-v1",
+  "requestRelation": "continue_objective",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/job-application-report-expression-template-improvement-2026-09-14/route-decision.json",
+    "decisionDigest": "sha256:eebdd1b8617a6e1ead8f6c219d9e3423c201c68fa3f63f64b4e55971d0ab09ab",
+    "effectiveMode": "loop"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:job-application-expression-editorial-builder",
+    "agencyRef": "artifacts/agents/requirement-realization/agents/artifact-builder.yaml",
+    "agencyDigest": "sha256:06ebe77c9b1b5754e6f2e749c470d9129854abe04690022b3156705f6f10410d",
+    "responsibilityClass": "builder",
+    "outcomeContract": "Improve candidate prose diversity and reproduce the accepted editorial report language while preserving five complete sets, evidence fidelity, and one searchable PDF delivery.",
+    "outputContract": "A bounded reusable-artifact revision, a regenerated Finebridge PDF, and comparative validation evidence.",
+    "decisionScopes": [
+      "question-family-specific prose realization",
+      "cross-candidate semantic and rhetorical distinction",
+      "reader-facing PDF information architecture and design profile",
+      "Finebridge report regeneration and publication validation"
+    ],
+    "nonAuthority": [
+      "application submission",
+      "applicant fact invention",
+      "modification of the AI-service reference report",
+      "unrelated reusable artifact changes",
+      "reusable artifact promotion"
+    ]
+  },
+  "objective": "Use the observed Finebridge and AI-service reports to improve reusable expression and editorial quality, then regenerate the Finebridge five-set PDF so its answers do not collapse into one repeated pattern and its report follows the accepted concise professional format.",
+  "successEvidenceRefs": [
+    "evidence:two-report-comparative-audit",
+    "evidence:expression-pattern-failure-classification",
+    "evidence:question-family-realization-contract",
+    "evidence:editorial-template-contract",
+    "evidence:finebridge-five-set-searchable-pdf",
+    "evidence:focused-regression-and-publication-checks"
+  ],
+  "protectedConstraintRefs": [
+    "constraint:five-complete-answer-sets",
+    "constraint:applicant-evidence-fidelity",
+    "constraint:question-specific-character-bounds",
+    "constraint:one-final-searchable-pdf",
+    "constraint:no-reference-report-mutation",
+    "constraint:no-template-copying-as-expression-diversity",
+    "constraint:authority-effect-none"
+  ],
+  "nonGoalRefs": [
+    "non-goal:rewrite-ai-service-reference-report",
+    "non-goal:invent-finebridge-applicant-outcomes",
+    "non-goal:replace-the-pdf-renderer",
+    "non-goal:alter-unrelated-job-application-artifacts",
+    "non-goal:submit-an-application"
+  ],
+  "lifecycleIntent": "improve_existing",
+  "capabilities": [
+    "comparative report inspection",
+    "job-application expression evaluation",
+    "editorial template composition",
+    "five-set PDF rendering and validation"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "783a32562aa185dbef333dde7c7c8945adb294fe76af24b935aa271916d242be",
+  "allowedBaseClasses": ["loop", "skill", "contract_checker"],
+  "allowedScopes": ["framework"],
+  "requiredFacts": ["owner", "scope", "consumer", "validation"],
+  "exactArtifactIds": ["loop:document:job-application-report-production"],
+  "relationshipDepth": 1,
+  "maxCandidates": 4,
+  "contextBudget": {
+    "maxSourceMembers": 32,
+    "maxConsumerRefs": 12,
+    "maxValidationRefs": 24
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "Whether future users will select a different accepted report design reference."
+    ],
+    "allowedRelationshipTypes": ["defines", "consumes", "validates", "generates"],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "consumer",
+      "effect",
+      "route_or_topology",
+      "lifecycle",
+      "protected_constraint"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "evidence:reusable-expression-and-editorial-contract-produced",
+      "evidence:finebridge-report-regenerated",
+      "evidence:comparison-validation-and-limitations-recorded"
+    ],
+    "validationRefs": [
+      "validation:reusable-artifact-operation-request-v2",
+      "validation:job-application-package-tests",
+      "validation:skill-quick-validation",
+      "validation:loop-package-strict",
+      "validation:finebridge-profile-and-publication"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "loop-budget:bounded-job-application-expression-editorial-v1",
+  "dataClassification": "internal",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": true,
+  "constructionAllowed": true,
+  "residualGapProven": true,
+  "requestDigest": "4601f22cf0730008e17e2853ff73a0924ccf787067f4356a3e6ba4ad160f1bb0"
+}

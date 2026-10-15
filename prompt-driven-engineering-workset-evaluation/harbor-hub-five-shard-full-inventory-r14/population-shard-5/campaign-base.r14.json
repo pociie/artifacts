@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "harbor-hub-r14-compact-campaign-base/v1",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "frameworkRevision": "sha256:ec23c40270733d0a9ffd336abcd2f51c084fbb439acd73ccd67d2e0c7fdc5d68",
+  "sourcePopulationOperationId": "harbor-hub-five-shard-full-inventory-r1",
+  "lane": "population-shard-5",
+  "population": {
+    "planSha256": "sha256:705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+    "populationRevision": "sha256:3129ad473a1c60f76d7159614e57c251e1fdf0a3ee64c9c347166e3315a1dd69",
+    "algorithm": "sha256-prefix64-modulo-v1",
+    "frozenShardItemCount": 58,
+    "plannedReentryCount": 55,
+    "plannedFailedRetryCount": 1,
+    "completedPriorCount": 2
+  },
+  "capabilityFingerprint": {
+    "framework": "harbor@0.22.0",
+    "agent": "codex",
+    "model": "gpt-5.6-luna",
+    "modelArgument": "openai/gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "authMode": "CODEX_FORCE_AUTH_JSON=1",
+    "publicDatasetDownload": true,
+    "verification": "enabled",
+    "subjectTimeoutCeilingSeconds": 3600,
+    "executionMode": "local",
+    "hostedLaunch": false,
+    "installOnly": false
+  },
+  "concurrency": {
+    "logicalLaneCount": 5,
+    "globalSubjectSlots": 3,
+    "laneControllerPolicy": "sequential-item-admission"
+  },
+  "candidateSpace": {
+    "routingModes": ["communication", "investigation", "single_task", "loop", "orchestration", "session_control"],
+    "architecturePatterns": ["expert-pool", "fan-out-fan-in", "generator-validator", "hierarchical-delegation", "pipeline", "supervisor"],
+    "coordinationPolicies": ["capability-route-selection", "independent-fan-in", "bounded-revision", "hierarchical-synthesis", "ordered-handoff", "adaptive-supervision"],
+    "reusableSwarmRefs": [
+      "artifacts/agent-swarms/evidence-governance/engineering-workset-simulation/swarm.json",
+      "artifacts/agent-swarms/evidence-governance/persistent-engineering-workset-lanes/swarm.json",
+      "artifacts/agent-swarms/requirement-realization/functional-requirement-realization/swarm.json",
+      "artifacts/agent-swarms/research/component-algorithm-research/swarm.json"
+    ],
+    "inspectionStatus": "report_only",
+    "structuralCombinationCount": 144
+  },
+  "selectedRoute": {
+    "frameworkRevision": "sha256:ec23c40270733d0a9ffd336abcd2f51c084fbb439acd73ccd67d2e0c7fdc5d68",
+    "mode": "single_task",
+    "workflow": "single-item-native-harbor-execution",
+    "architecturePattern": "not_required",
+    "topology": "none",
+    "swarmDecision": "not_required",
+    "roleContext": "lane-controller-admits-one-native-Harbor-subject-and-settles-one-vector-reward",
+    "coordinationPolicy": "no-swarm-single-owner",
+    "dynamicArtifactComposition": "item-delta-only",
+    "reason": "one_deterministic_representative_provider_task_with_local_lane_control"
+  },
+  "providerContract": {
+    "frameworkRevision": "sha256:ec23c40270733d0a9ffd336abcd2f51c084fbb439acd73ccd67d2e0c7fdc5d68",
+    "harness": "harbor",
+    "harnessVersion": "0.22.0",
+    "agent": "codex",
+    "model": "gpt-5.6-luna",
+    "modelArgument": "openai/gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "credentialInjection": "CODEX_FORCE_AUTH_JSON=1",
+    "verification": "enabled",
+    "subjectTimeoutSeconds": 3600,
+    "taskResolution": "exact prior task binding with --n-tasks 1",
+    "hostedLaunch": false,
+    "installOnly": false
+  },
+  "runtimePolicy": {
+    "slotWrapper": ".collab/runtime/prompt-driven-engineering-workset-evaluation/harbor-hub-r14/with_harbor_slot.py",
+    "slots": 3,
+    "lockDir": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/execution-slots",
+    "privateRoot": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-5",
+    "artifactRoot": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r14/population-shard-5"
+  },
+  "privacy": {
+    "rawPromptsPrivateOnly": true,
+    "privateReasoningPrivateOnly": true,
+    "secretsPrivateOnly": true,
+    "runtimeHandlesPrivateOnly": true,
+    "authorityEffect": "none",
+    "routingEffect": "none"
+  }
+}

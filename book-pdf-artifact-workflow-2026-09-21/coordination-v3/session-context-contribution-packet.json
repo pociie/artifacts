@@ -1,0 +1,78 @@
+{
+  "kind": "sanitized-session-context-contribution-packet/v1",
+  "packetId": "contribution:session-context-integration:v1",
+  "status": "received_pending_independent_validation",
+  "roleRef": "agent-role:session-context-integrator",
+  "mode": "read_only",
+  "claims": [
+    {
+      "id": "CTX-001",
+      "classification": "user-provided-coordination-fact",
+      "statement": "Three task-local AGENTS.md instructions were removed and existing user or peer-session changes must be preserved.",
+      "disposition": "protected_constraint"
+    },
+    {
+      "id": "CTX-002",
+      "classification": "artifact-observed",
+      "statement": "The predecessor collaboration-bundle.json names agent-role:instruction-governance-editor and an AGENTS.md writeBoundary.",
+      "evidenceRefs": ["../collaboration-bundle.json"],
+      "disposition": "stale_superseded_not_rewritten"
+    },
+    {
+      "id": "CTX-003",
+      "classification": "artifact-observed",
+      "statement": "The visual-session collaboration-bundle-v2.json removes the stale editor semantics but does not include the three source-analysis review contributions selected for v3.",
+      "evidenceRefs": ["../collaboration-bundle-v2.json"],
+      "disposition": "predecessor_candidate_superseded_by_v3_scope"
+    },
+    {
+      "id": "CTX-004",
+      "classification": "user-provided-coordination-fact",
+      "statement": ".collab/memory owns mutable assignment, acknowledgement, and state; .collab/artifacts owns sanitized run evidence; artifacts/loop-architecture owns reusable contracts and components only.",
+      "disposition": "protected_constraint"
+    },
+    {
+      "id": "CTX-005",
+      "classification": "artifact-observed",
+      "statement": "Thirteen visual mockup files and a 13-asset mockup manifest exist, superseding the earlier reported count of twelve.",
+      "evidenceRefs": ["../mockup-manifest.json", "../mockups/"],
+      "disposition": "observed_not_independently_validated"
+    },
+    {
+      "id": "CTX-006",
+      "classification": "artifact-observed",
+      "statement": "README.md names recipient-handoff.json, validation-evidence.json, and settlement-evidence.json although those files are not currently materialized.",
+      "evidenceRefs": ["../README.md"],
+      "disposition": "manifest_as_pending_only"
+    }
+  ],
+  "ownership": {
+    "readOnlyOutOfScope": [
+      "AGENTS.md",
+      "artifacts/loop-architecture/**"
+    ],
+    "visualAgentOwned": [
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-expression-spec.md",
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/mockups/**",
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/mockup-manifest.json",
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/source-to-claim-packet.json"
+    ],
+    "coordinatorOwned": [
+      ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/**"
+    ]
+  },
+  "holds": [
+    "visual contribution packet and digest-bound handoff pending",
+    "independent source and visual validation pending",
+    "profile reuse or proven-gap dynamic blueprint decision pending",
+    "activation, acceptance, publication, and settlement not performed"
+  ],
+  "validation": {
+    "privateContentPersisted": false,
+    "mutableRuntimeHandlePersisted": false,
+    "independentValidation": "pending",
+    "acceptance": "not_performed",
+    "settlement": "not_claimed"
+  },
+  "authorityEffect": "none"
+}

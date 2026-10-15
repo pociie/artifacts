@@ -1,0 +1,105 @@
+{
+  "kind": "job-application-context-projection/v1",
+  "status": "report_only",
+  "authority_effect": "none",
+  "projection_scope": "ibk-it-five-set-pdf",
+  "application": {
+    "company_name": "IBK기업은행",
+    "role_title": "IT 신입행원",
+    "language": "ko-KR",
+    "official_posting_source_ids": [
+      "source-ibk-posting",
+      "source-ibk-question-endpoint",
+      "source-ibk-alio"
+    ]
+  },
+  "confirmed_context": [
+    "공식 공고의 IT 업무 범위",
+    "공식 문항의 1,000자 최대 제한",
+    "공개 GitHub 프로필과 저장소의 문서·구조"
+  ],
+  "inferred_context": [
+    "금융 IT 답변에서 데이터·보안·운영 경계를 함께 보여줄 필요"
+  ],
+  "preserved_unknowns": [
+    {
+      "id": "unknown-personal-ibk-motivation",
+      "needed_fact": "공고의 직무 적합성 외에 지원자 개인이 IBK기업은행을 선택한 직접적인 계기와 관심 고객·업무",
+      "affected_question_ids": [
+        "question-motivation"
+      ]
+    },
+    {
+      "id": "unknown-preferred-it-domain",
+      "needed_fact": "입행 후 선호하는 애플리케이션·데이터·보안·인프라 등 IT 세부 영역과 맡고 싶은 초기 책임",
+      "affected_question_ids": [
+        "question-motivation",
+        "question-it-capability"
+      ]
+    },
+    {
+      "id": "unknown-applicant-contribution-depth",
+      "needed_fact": "각 공개 저장소에서 지원자가 직접 작성·설계·검증한 범위와 개인 프로젝트인지 협업 프로젝트인지",
+      "affected_question_ids": [
+        "question-strength",
+        "question-growth",
+        "question-it-capability"
+      ]
+    },
+    {
+      "id": "unknown-portfolio-outcomes",
+      "needed_fact": "포트폴리오의 테스트 결과, 처리량·지연·정확도·오류 재현 등 정량 또는 관찰 가능한 성과",
+      "affected_question_ids": [
+        "question-strength",
+        "question-growth"
+      ]
+    },
+    {
+      "id": "unknown-production-operation",
+      "needed_fact": "실제 배포·운영, 장애 대응, 보안 점검, DB·인프라 관리 경험 여부와 범위",
+      "affected_question_ids": [
+        "question-it-capability"
+      ]
+    },
+    {
+      "id": "unknown-character-minimum",
+      "needed_fact": "제출 시스템의 문항별 최소 글자 수와 최종 글자 수 산정 방식",
+      "affected_question_ids": [
+        "question-motivation",
+        "question-strength",
+        "question-growth",
+        "question-it-capability"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "source_policy": {
+    "as_of": "2026-09-15",
+    "prefer_primary": true,
+    "allowed_source_ids": [
+      "source-ibk-posting",
+      "source-ibk-question-endpoint",
+      "source-ibk-alio",
+      "source-ibk-blog",
+      "source-portfolio-profile",
+      "source-portfolio-bank-msa",
+      "source-portfolio-kafka",
+      "source-portfolio-static-analysis",
+      "source-portfolio-algorithm",
+      "source-previous-ibk-cover-letter"
+    ],
+    "visible_source_ids": [
+      "source-ibk-posting",
+      "source-ibk-alio",
+      "source-ibk-blog",
+      "source-previous-ibk-cover-letter",
+      "source-portfolio-profile",
+      "source-portfolio-bank-msa",
+      "source-portfolio-kafka",
+      "source-portfolio-static-analysis",
+      "source-portfolio-algorithm"
+    ],
+    "missing_evidence_policy": "preserve_unknown",
+    "public_source_scope": "explicit_allowlist"
+  }
+}

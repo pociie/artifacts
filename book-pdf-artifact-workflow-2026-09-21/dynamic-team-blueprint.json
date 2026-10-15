@@ -1,0 +1,205 @@
+{
+  "kind": "dynamic-agent-team-blueprint/v1",
+  "blueprintId": "dynamic-team:book-pdf-source-to-visual-validation",
+  "revision": "book-pdf-dynamic-team/1",
+  "status": "candidate_not_activated",
+  "authorityEffect": "none",
+  "canonicalContractRefs": [
+    "artifacts/agents/spec/dynamic-agent-composition/contract.md",
+    "artifacts/loop-architecture/components/agent-execution-topology-selection/README.md",
+    "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json"
+  ],
+  "contractUse": "reference_only",
+  "profileLookupRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/registered-profile-lookup.json",
+  "objective": "Turn a bounded source-analysis packet into a readable, evidence-labeled book-style PDF candidate and independently validate its facts and visual expression.",
+  "roles": [
+    {
+      "order": 1,
+      "roleId": "role:source-investigator-context-curator",
+      "label": "Source Investigator/Context Curator",
+      "registeredProfileRefs": [
+        "artifacts/agents/agent-operation/agents/context-curator.yaml",
+        "artifacts/agents/agent-operation/agents/external-evidence-scout.yaml"
+      ],
+      "owns": [
+        "read-only live-session inventory projection",
+        "source identity, revision, provenance and limitation capture",
+        "observed source fact extraction",
+        "smallest recipient-specific source packet"
+      ],
+      "mustNotOwn": [
+        "source truth acceptance",
+        "editorial prose",
+        "visual design",
+        "runtime session mutation"
+      ],
+      "inputRefs": ["bounded project scope", "registered profile inventory"],
+      "outputContract": "source-context-packet/v1",
+      "successEvidence": [
+        "each source has identity, class, limitation and freshness",
+        "third-party reconstruction limits are explicit",
+        "unverified video statements are not labeled observed source facts"
+      ],
+      "stopConditions": [
+        "source revision cannot be identified",
+        "required evidence depends on hidden transcript or private context"
+      ]
+    },
+    {
+      "order": 2,
+      "roleId": "role:domain-prerequisite-researcher",
+      "label": "Domain Prerequisite Researcher",
+      "registeredProfileRefs": [
+        "artifacts/agents/agent-operation/agents/knowledge-demand-planner.yaml",
+        "artifacts/agents/agent-operation/agents/external-evidence-scout.yaml"
+      ],
+      "owns": [
+        "competency questions for JavaScript generator, React state and client tool loop",
+        "primary official background source selection",
+        "prerequisite/background claim packet with applicability limits"
+      ],
+      "mustNotOwn": [
+        "project source fact authorship",
+        "project inference acceptance",
+        "PDF layout"
+      ],
+      "inputRefs": ["source-context-packet/v1"],
+      "outputContract": "prerequisite-background-claim-packet/v1",
+      "successEvidence": [
+        "every background claim cites an official source",
+        "background knowledge is not presented as project observation"
+      ],
+      "stopConditions": [
+        "primary source is unavailable after bounded fallback",
+        "background conflicts with project observation and cannot be preserved as conflict"
+      ]
+    },
+    {
+      "order": 3,
+      "roleId": "role:technical-editorial-writer",
+      "label": "Technical Editorial Writer",
+      "registeredProfileRefs": [
+        "artifacts/agents/research/agents/component-research-synthesizer.yaml",
+        "artifacts/agents/requirement-realization/agents/artifact-builder.yaml"
+      ],
+      "owns": [
+        "reader journey and chapter argument",
+        "continuous technical prose and worked traces",
+        "claim/source labels and limitation-preserving synthesis"
+      ],
+      "mustNotOwn": [
+        "new source claims without packet revision",
+        "visual acceptance",
+        "fact acceptance",
+        "profile promotion"
+      ],
+      "inputRefs": ["source-context-packet/v1", "prerequisite-background-claim-packet/v1"],
+      "outputContract": "technical-book-manuscript-candidate/v1",
+      "successEvidence": [
+        "narrative follows the seven-stage turn lifecycle",
+        "observed, background and inference labels remain traceable",
+        "dashboard card enumeration is not the primary narrative"
+      ],
+      "stopConditions": [
+        "a material claim lacks a source or explicit inference label",
+        "missing evidence would be concealed by fluent prose"
+      ]
+    },
+    {
+      "order": 4,
+      "roleId": "role:pdf-information-visual-designer",
+      "label": "PDF Information/Visual Designer",
+      "registeredProfileRefs": ["artifacts/agents/work-area/agents/design.yaml"],
+      "owns": [
+        "A4 paged-media information architecture",
+        "Systems Monograph pages for narrative explanation",
+        "Evidence Notebook pages for claim/source/unknown/inference review",
+        "sequence, state, ownership and recovery diagrams",
+        "print and accessibility constraints"
+      ],
+      "mustNotOwn": [
+        "fact rewriting for layout convenience",
+        "final factual acceptance",
+        "publication"
+      ],
+      "inputRefs": ["technical-book-manuscript-candidate/v1", "pdf-expression-spec"],
+      "outputContract": "book-pdf-candidate/v1",
+      "successEvidence": [
+        "live text remains selectable",
+        "evidence labels survive grayscale",
+        "no clipping, overflow or unreadable small text",
+        "01 and 07 design grammars are selected by content function"
+      ],
+      "stopConditions": [
+        "layout changes alter claim meaning",
+        "visual acceptance rubric is missing"
+      ]
+    },
+    {
+      "order": 5,
+      "roleId": "role:independent-fact-visual-validator",
+      "label": "independent Fact/Visual Validator",
+      "registeredProfileRefs": [
+        "artifacts/agents/assurance/agents/independent-knowledge-verifier.yaml",
+        "artifacts/agents/requirement-realization/agents/independent-validator.yaml"
+      ],
+      "independenceRequired": true,
+      "owns": [
+        "frozen candidate fact/source traceability review",
+        "visual hierarchy, print, grayscale, overflow and accessibility review",
+        "pass/fail/hold report without mutation"
+      ],
+      "mustNotOwn": [
+        "manuscript or PDF mutation",
+        "self-validation",
+        "acceptance",
+        "promotion"
+      ],
+      "inputRefs": ["book-pdf-candidate/v1", "source-to-claim-packet/v1", "visual-evidence-manifest/v1"],
+      "outputContract": "independent-fact-visual-validation/v1",
+      "successEvidence": [
+        "validation binds exact PDF, source packet and visual evidence digests",
+        "limitations and residual risks are retained"
+      ],
+      "stopConditions": [
+        "validator authored the material candidate",
+        "candidate or criteria change after validation starts"
+      ]
+    }
+  ],
+  "handoffs": [
+    {
+      "from": "role:source-investigator-context-curator",
+      "to": "role:domain-prerequisite-researcher",
+      "packet": "source-context-packet/v1"
+    },
+    {
+      "from": "role:domain-prerequisite-researcher",
+      "to": "role:technical-editorial-writer",
+      "packet": "prerequisite-background-claim-packet/v1"
+    },
+    {
+      "from": "role:technical-editorial-writer",
+      "to": "role:pdf-information-visual-designer",
+      "packet": "technical-book-manuscript-candidate/v1"
+    },
+    {
+      "from": "role:pdf-information-visual-designer",
+      "to": "role:independent-fact-visual-validator",
+      "packet": "book-pdf-candidate/v1"
+    }
+  ],
+  "runtimeStateBoundary": ".collab/memory/**",
+  "sanitizedArtifactBoundary": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/**",
+  "activation": "not_performed",
+  "assignment": "not_created",
+  "acknowledgement": "not_created",
+  "acceptance": "not_performed",
+  "promotion": "not_performed",
+  "lifecycle": {
+    "mode": "ephemeral_candidate",
+    "automaticPromotion": false,
+    "expiresOn": "superseded, rejected, or separately activated by an authorized runtime owner"
+  }
+}
+

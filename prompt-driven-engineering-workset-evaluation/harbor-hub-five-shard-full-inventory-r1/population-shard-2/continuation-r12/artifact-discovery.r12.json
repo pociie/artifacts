@@ -1,0 +1,89 @@
+{
+  "authorityEffect": "none",
+  "decision": {
+    "authorityEffect": "none",
+    "capabilityGaps": [
+      {
+        "allowedFallbackKinds": ["construct", "dynamic-contract/v1", "tool"],
+        "concernId": "subject-effective-capability",
+        "requiredCapabilityIds": [
+          "effective-effort-receipt",
+          "effective-model-receipt",
+          "effective-timeout-receipt"
+        ]
+      }
+    ],
+    "kind": "artifact-reuse-resolution-decision/v1",
+    "rejectedCandidates": [
+      {
+        "artifactRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/skill/operate-engineering-workset-simulation/SKILL.md",
+        "reasons": ["no_required_coverage", "unqualified"]
+      }
+    ],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-2:NovitaAI/tb21-systems-security:artifact-discovery",
+    "selectedArtifacts": [
+      {
+        "artifactKind": "task_contract",
+        "artifactRef": ".collab/memory/.collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r12/provider-private/task-package-manifest.r12.json",
+        "capabilityIds": ["harbor-task-materialization"],
+        "coveredConcernIds": ["item-task-contract"]
+      },
+      {
+        "artifactKind": "routing_evidence",
+        "artifactRef": "artifacts/loop-architecture/components/execution-routing/algorithms/compound-instruction-mode-journey/algorithm.json",
+        "capabilityIds": ["compound-mode-journey"],
+        "coveredConcernIds": ["scope-routing-evidence"]
+      },
+      {
+        "artifactKind": "settlement_evidence",
+        "artifactRef": "artifacts/loop-architecture/components/work-queue-coordination/algorithms/population-settlement-accounting/algorithm.json",
+        "capabilityIds": ["resource-settlement"],
+        "coveredConcernIds": ["resource-settlement-evidence"]
+      }
+    ],
+    "selectedMode": "single_task",
+    "status": "require_context",
+    "uncoveredConcernIds": ["subject-effective-capability"]
+  },
+  "digest": "sha256:7d9c0ea835c7b38eae775e04ef8eaf87505ee92cfe8bab4571c72b65dbd62daa",
+  "itemId": "NovitaAI/tb21-systems-security",
+  "kind": "harbor-artifact-discovery-and-reuse/v2",
+  "laneId": "population-shard-2",
+  "nativeCandidates": [
+    {
+      "artifactKind": "task_contract",
+      "artifactRef": ".collab/memory/.collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r12/provider-private/task-package-manifest.r12.json",
+      "availability": "available",
+      "qualification": "qualified",
+      "structuralCost": 1
+    },
+    {
+      "artifactKind": "routing_evidence",
+      "artifactRef": "artifacts/loop-architecture/components/execution-routing/algorithms/compound-instruction-mode-journey/algorithm.json",
+      "availability": "available",
+      "qualification": "qualified",
+      "structuralCost": 1
+    },
+    {
+      "artifactKind": "settlement_evidence",
+      "artifactRef": "artifacts/loop-architecture/components/work-queue-coordination/algorithms/population-settlement-accounting/algorithm.json",
+      "availability": "available",
+      "qualification": "qualified",
+      "structuralCost": 1
+    },
+    {
+      "artifactKind": "provider_subject_receipt",
+      "artifactRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/skill/operate-engineering-workset-simulation/SKILL.md",
+      "availability": "available",
+      "qualification": "unqualified",
+      "structuralCost": 2
+    }
+  ],
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "rawContentProjection": "excluded",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-2:NovitaAI/tb21-systems-security:artifact-discovery",
+  "residualGapIds": ["subject-effective-capability"],
+  "reusableBeforeDynamic": true,
+  "schemaVersion": 2,
+  "selectedMode": "single_task"
+}

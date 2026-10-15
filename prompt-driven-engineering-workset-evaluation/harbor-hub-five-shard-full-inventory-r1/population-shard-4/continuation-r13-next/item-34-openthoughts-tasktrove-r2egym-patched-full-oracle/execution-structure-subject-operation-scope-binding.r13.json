@@ -1,0 +1,73 @@
+{
+  "authorityEffect": "none",
+  "blockers": [],
+  "effectivePrimaryMode": "single_task",
+  "excludedScopeKinds": ["ambient", "controller", "coverage"],
+  "kind": "subject-operation-scope-binding-decision/v1",
+  "reasonCodes": [
+    "non_subject_scopes_explicitly_excluded",
+    "selected_subject_topology_content_bound"
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:openthoughts/tasktrove-r2egym-patched-full-oracle:r13:execute-harbor-subject",
+  "routeDecisionSha256": "6e5eaa48d56028e2b070557c0c6a263be6c3bdfdd018d74088e2af6171e90f45",
+  "scopeBindings": [
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:f50e84178db6607f9cf1783eb47d9967ab0fd8264454ea3083571042fc2dd44b",
+      "disposition": "coverage_stimulus_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-34-openthoughts-tasktrove-r2egym-patched-full-oracle/source-and-plan-binding.r13.json",
+      "scopeId": "coverage:population-shard-4:openthoughts/tasktrove-r2egym-patched-full-oracle:r13",
+      "scopeKind": "coverage",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:700bbb07d960527d427a829e03dc1bb0fbd1b6060945d12c1b92880ad836f9cc",
+      "disposition": "context_only",
+      "ref": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-34-openthoughts-tasktrove-r2egym-patched-full-oracle/environment-platform-observation.r13.json",
+      "scopeId": "ambient:population-shard-4:openthoughts/tasktrove-r2egym-patched-full-oracle:r13",
+      "scopeKind": "ambient",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:b6b1c6a93604c862deda8f5bc42aa4dd7971df6c1b81005f948bd68cb0faaab4",
+      "disposition": "control_plane_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-34-openthoughts-tasktrove-r2egym-patched-full-oracle/claim.r13.json",
+      "scopeId": "controller:population-shard-4:openthoughts/tasktrove-r2egym-patched-full-oracle:r13",
+      "scopeKind": "controller",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": true,
+      "digest": "sha256:f2294b6111d3b0012e76d9ef6c6a186de0e409beaac91ee00e61b0f9eeb96ee7",
+      "disposition": "eligible_report_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-34-openthoughts-tasktrove-r2egym-patched-full-oracle/subject-topology-binding.r13.json",
+      "scopeId": "subject-scope:population-shard-4:openthoughts/tasktrove-r2egym-patched-full-oracle:r13",
+      "scopeKind": "subject",
+      "state": "selected"
+    }
+  ],
+  "scopedMode": "single_task",
+  "segmentMode": null,
+  "status": "ready",
+  "subjectOperation": {
+    "agentArchitectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmDigest": null,
+    "agentSwarmRef": null,
+    "bindingDigest": "sha256:f2294b6111d3b0012e76d9ef6c6a186de0e409beaac91ee00e61b0f9eeb96ee7",
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-34-openthoughts-tasktrove-r2egym-patched-full-oracle/subject-topology-binding.r13.json",
+    "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "disposition": "eligible_report_only",
+    "scopeId": "subject-scope:population-shard-4:openthoughts/tasktrove-r2egym-patched-full-oracle:r13",
+    "workflowPatternDigest": "sha256:93bf91356072b399cd3684ea2d482c7fe3afe4ca083e8443e86978b2bdb5d7bd",
+    "workflowPatternId": "pipeline",
+    "workflowPatternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/pipeline/workflow-pattern.json"
+  },
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "topologyRequirementDecisionSha256": "7afd2b152238c88576332e930f3ba082f6132b319b35f3b48c95a3ae280f76ce",
+  "topologySelectionDecisionSha256": "793332e69de53358e6e763ab2144ac990d6c95a4fef418b310c249cc0ce7c664"
+}

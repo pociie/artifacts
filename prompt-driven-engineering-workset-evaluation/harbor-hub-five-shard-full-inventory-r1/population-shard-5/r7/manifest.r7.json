@@ -1,0 +1,101 @@
+{
+  "kind": "harbor-hub-population-shard-evidence-manifest/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "requestRevision": "harbor-terminal-reward-source-binding-r7",
+  "shardNumber": 5,
+  "shardIndex": 4,
+  "shardCount": 5,
+  "frozenInventoryDigest": "sha256:315e7ce0c918dda29ca6ef609ebaab8a79b65ed85f87cbf91893d4b688bda9ac",
+  "counts": {
+    "discovered": 58,
+    "qualified": 1,
+    "executed": 3,
+    "evaluated": 3,
+    "held": 0,
+    "rejected": 0,
+    "settled": 3,
+    "pending": 55
+  },
+  "benchmarkRewardVector": [1, 1, 0],
+  "terminalArchitectureReward": {
+    "state": "require_context",
+    "primaryReward": 0,
+    "diagnosticReward": null,
+    "reason": "unverified_effective_effort_requires_context"
+  },
+  "operationFacts": {
+    "hierarchyCeiling": 12,
+    "requestedModel": "openai/gpt-5.6-luna",
+    "requestedEffort": "max",
+    "effectiveSubjectTimeoutSec": 3600,
+    "effectiveVerifierTimeoutSec": 3600
+  },
+  "rewardSourceBindings": {
+    "requestedProfileRevision": 3,
+    "evaluatedProfileRevision": 4,
+    "profileDigest": "sha256:ca1e8d48eff7e065cf4cf1f2e4be5ec86778f97509df137e2de6308bdc0632bf",
+    "rubricDigest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18",
+    "evaluatorDigest": "sha256:4cc3cd8d17db20c0a73449d107170c1db81aeff160bf10968643e1d688c03a62",
+    "assessmentDigest": "sha256:badb3080ee572dbcb7d3578ee5e28d94db76fe7af517ab08fc401c00f584973a"
+  },
+  "files": [
+    {
+      "ref": "population-shard-5/r7/claim-ordinal-6.r7.json",
+      "sha256": "sha256:7152d9bcc87c925d4acac49bce7bfaeeb971953cc5200e5dbec8a08ba30aa17b"
+    },
+    {
+      "ref": "population-shard-5/r7/context-reconciliation-binding.r7.json",
+      "sha256": "sha256:aa046902dce4dcd906dc2292902483ef181486c66fcbb39e5c31c72dc909000f"
+    },
+    {
+      "ref": "population-shard-5/r7/evaluation-compilebench-next.r7.json",
+      "sha256": "sha256:845a86617bc37814a31fbf0d276e5f8b2129a946f79eba745da7f2fb69f066fd"
+    },
+    {
+      "ref": "population-shard-5/r7/lane-operation-report.r7.json",
+      "sha256": "sha256:f9ccf14893298af30d0e492e19dc6509788664f6e5b15aa33ebe64f98661cdcd"
+    },
+    {
+      "ref": "population-shard-5/r7/population-settlement-accounting-decision.final.json",
+      "sha256": "sha256:64b6c6d0c40542340ad2ac176d6e14b4e64d4c8e7ee7cfb6d7b12be2aad79d4a"
+    },
+    {
+      "ref": "population-shard-5/r7/population-settlement-accounting-input.final.json",
+      "sha256": "sha256:3f65557131347df20e11a47513d5ed6e52b4e5e06c6ca1f965c99d625970fada"
+    },
+    {
+      "ref": "population-shard-5/r7/provider-outcome-receipts.r7.json",
+      "sha256": "sha256:6d4fdaf4f1145379a9e198b0ac1dbfed27e6251127ce769a642e643aa1907fbd"
+    },
+    {
+      "ref": "population-shard-5/r7/qualification-reconciliation.final.r7.json",
+      "sha256": "sha256:e2221d2f4fdd8cdb3b925a9bbcd8fe525f6fa51669216f7df1664fb3689f233f"
+    },
+    {
+      "ref": "population-shard-5/r7/route-resolutions.r7.json",
+      "sha256": "sha256:2ce56bc3ab1bf5307c253a91d225ea0f67a73d665dd52a1f9ba0e743e2b0436d"
+    },
+    {
+      "ref": "population-shard-5/r7/settlement-ledger.r7.json",
+      "sha256": "sha256:e337aed8843d6a659ced926bbc6d979b72ab91bf0481ccc6c405b63990abc9e4"
+    },
+    {
+      "ref": "population-shard-5/r7/simulation-evidence.r7.json",
+      "sha256": "sha256:152532fbb7b89035f4484fb061e7e49c074e56f769f0752afe9e9983d08d6a9a"
+    },
+    {
+      "ref": "population-shard-5/r7/terminal-reward-assessment-compilebench-next.r7.json",
+      "sha256": "sha256:badb3080ee572dbcb7d3578ee5e28d94db76fe7af517ab08fc401c00f584973a"
+    }
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "rawProviderHandlesRetained": false,
+    "privateReasoningRetained": false,
+    "hiddenOracleContentRetained": false
+  },
+  "wakeCondition": "Keep 55 unclaimed members pending; wake only after a changed capability fingerprint and fresh exact qualification of access, license, platform/resources, credentials, network/cost, verifier, model, effort, and 3600-second timeout."
+}

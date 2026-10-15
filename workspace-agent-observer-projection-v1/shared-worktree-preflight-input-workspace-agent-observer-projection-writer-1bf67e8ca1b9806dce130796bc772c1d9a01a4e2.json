@@ -1,0 +1,264 @@
+{
+  "schemaVersion": 5,
+  "topology": {
+    "taskRootWorktreeId": "9504f57e-df73-4ad7-aa83-1029e03a0fd3::/Users/judangs/project/personal/orca/collab-mono",
+    "requestedWorktreeId": "9504f57e-df73-4ad7-aa83-1029e03a0fd3::/Users/judangs/project/personal/orca/collab-mono",
+    "placement": "task_root",
+    "integrationKind": "horizontal",
+    "integrationTargetWorktreeId": "9504f57e-df73-4ad7-aa83-1029e03a0fd3::/Users/judangs/project/personal/orca/collab-mono",
+    "externalDelivery": false,
+    "selector": {
+      "value": "path:/Users/judangs/project/personal/orca/collab-mono",
+      "resolvedWorktreeId": "9504f57e-df73-4ad7-aa83-1029e03a0fd3::/Users/judangs/project/personal/orca/collab-mono",
+      "workerStartReceiptWorktreeId": "9504f57e-df73-4ad7-aa83-1029e03a0fd3::/Users/judangs/project/personal/orca/collab-mono"
+    },
+    "activeDelegatedChildren": [],
+    "descendants": []
+  },
+  "operation": "dispatch",
+  "expectedHead": "1bf67e8ca1b9806dce130796bc772c1d9a01a4e2",
+  "repository": {
+    "id": "collab-mono",
+    "integrationTargetRef": "refs/heads/main",
+    "observedIntegrationTargetHead": "1bf67e8ca1b9806dce130796bc772c1d9a01a4e2"
+  },
+  "observedGoverningContracts": [
+    {
+      "id": "repository-agent-protocol",
+      "digest": "b6e34ca96e26b1dcd4cf28cc7eaab603dc87c31ccf820374f8c82b9d2bf10120"
+    },
+    {
+      "id": "artifact-plugin-lifecycle",
+      "digest": "e356e02f748759fca13ce52886b6f34388572d4f1827fafae0645ed4aab52f71"
+    },
+    {
+      "id": "shared-worktree-coordination",
+      "digest": "9eccccebdccf1000bdb267df167a7bf8bc44ddc014d7d1f3ddb22bc4b9a620b4"
+    },
+    {
+      "id": "workspace-agent-observer-assignment",
+      "digest": "fa212303e035a9626520eb6e66bd19969437371274aea321185beb9450154c16"
+    }
+  ],
+  "proposedAssignment": {
+    "id": "workspace-agent-observer-projection-writer",
+    "access": "writer",
+    "worktreeId": "9504f57e-df73-4ad7-aa83-1029e03a0fd3::/Users/judangs/project/personal/orca/collab-mono",
+    "readPaths": [],
+    "writePaths": [
+      "artifacts/plugins/tooling/workspace-agent-operations"
+    ],
+    "conflictDomains": [
+      "artifact-plugin:workspace-agent-operations",
+      "contract:visible-session-observer-projection"
+    ],
+    "collaborationMode": "shared_disjoint_writers",
+    "executionSurface": "current_worktree",
+    "expectedIntegrationTargetHead": "1bf67e8ca1b9806dce130796bc772c1d9a01a4e2",
+    "governingContracts": [
+      {
+        "id": "repository-agent-protocol",
+        "digest": "b6e34ca96e26b1dcd4cf28cc7eaab603dc87c31ccf820374f8c82b9d2bf10120"
+      },
+      {
+        "id": "artifact-plugin-lifecycle",
+        "digest": "e356e02f748759fca13ce52886b6f34388572d4f1827fafae0645ed4aab52f71"
+      },
+      {
+        "id": "shared-worktree-coordination",
+        "digest": "9eccccebdccf1000bdb267df167a7bf8bc44ddc014d7d1f3ddb22bc4b9a620b4"
+      },
+      {
+        "id": "workspace-agent-observer-assignment",
+        "digest": "fa212303e035a9626520eb6e66bd19969437371274aea321185beb9450154c16"
+      }
+    ],
+    "integrationPredecessors": [],
+    "generatedOutputs": [],
+    "mutableResources": [],
+    "generatedOutputGroups": [],
+    "toolEffectClass": "path_scoped_write",
+    "contributionState": "none",
+    "retryFingerprint": null,
+    "retryCount": 0,
+    "retryLimit": 2
+  },
+  "activeAssignments": [
+    {
+      "id": "agent-expression-architecture-writer",
+      "access": "writer",
+      "repositoryId": "collab-mono",
+      "integrationTargetRef": "refs/heads/main",
+      "worktreeId": "9504f57e-df73-4ad7-aa83-1029e03a0fd3::/Users/judangs/project/personal/orca/collab-mono",
+      "writePaths": [
+        "artifacts/agent-loop/spec/runtime-artifact-bundle",
+        "artifacts/agents/agent-operation/agents/dynamic-agent-composition-designer.yaml",
+        "artifacts/loop-architecture/components/execution-topology-requirement",
+        "artifacts/loop-architecture/components/work-pattern-context-resolution"
+      ],
+      "readPaths": [],
+      "conflictDomains": [
+        "agent-profile:dynamic-agent-composition-designer",
+        "contract:runtime-artifact-representation",
+        "loop-architecture:execution-topology-minimality",
+        "loop-architecture:knowledge-work-context"
+      ],
+      "mutableResources": [],
+      "generatedOutputGroups": [],
+      "toolEffectClass": "path_scoped_write"
+    },
+    {
+      "id": "claude-code-book-edition-2026-09-21-author",
+      "access": "writer",
+      "repositoryId": "collab-mono",
+      "integrationTargetRef": "refs/heads/main",
+      "worktreeId": "9504f57e-df73-4ad7-aa83-1029e03a0fd3::/Users/judangs/project/personal/orca/collab-mono",
+      "writePaths": [
+        ".collab/artifacts/claude-code-architecture-algorithms-study-2026-09-20/book-edition-2026-09-21"
+      ],
+      "readPaths": [],
+      "conflictDomains": [
+        "artifact:claude-code-architecture-book-edition-2026-09-21",
+        "generated-output:claude-code-architecture-book-edition-2026-09-21"
+      ],
+      "mutableResources": [
+        "resource:book-edition-assignment-browser"
+      ],
+      "generatedOutputGroups": [
+        "generated-output:claude-code-architecture-book-edition-2026-09-21"
+      ],
+      "toolEffectClass": "generated_scoped_write"
+    },
+    {
+      "id": "loop-architecture-completion-generated-output-writer",
+      "access": "writer",
+      "repositoryId": "collab-mono",
+      "integrationTargetRef": "refs/heads/agent/loop-architecture-completion-hardening",
+      "worktreeId": "loop-architecture-completion-hardening",
+      "writePaths": [
+        "artifacts/loop-architecture/package/artifact-improvement-cycle-contract",
+        "artifacts/loop-architecture/package/engineering-evaluation-contract"
+      ],
+      "readPaths": [],
+      "conflictDomains": [
+        "loop-architecture:generated-artifact-portfolio",
+        "loop-architecture:generated-engineering-evaluation"
+      ],
+      "mutableResources": [],
+      "generatedOutputGroups": [],
+      "toolEffectClass": "path_scoped_write"
+    },
+    {
+      "id": "loop-architecture-completion-hardening-writer",
+      "access": "writer",
+      "repositoryId": "collab-mono",
+      "integrationTargetRef": "refs/heads/agent/loop-architecture-completion-hardening",
+      "worktreeId": "loop-architecture-completion-hardening",
+      "writePaths": [
+        "artifacts/loop-architecture/package/component-interoperability-rubric-contract",
+        "artifacts/loop-architecture/package/engineering-functional-requirement-contract",
+        "artifacts/loop-architecture/package/loop-validation-manifest-contract",
+        "artifacts/loop-architecture/package/operation-order-lifecycle-contract",
+        "artifacts/loop-architecture/package/operational-observability-contract",
+        "artifacts/loop-architecture/package/pre-route-decision-contract",
+        "artifacts/loop-architecture/package/reusable-artifact-discovery-contract",
+        "artifacts/loop-architecture/package/semantic-rule-responsibility-contract",
+        "artifacts/loop-architecture/scripts",
+        "docs/plan/loop-architecture-completion-hardening",
+        "governance/governance-fitness.mjs"
+      ],
+      "readPaths": [],
+      "conflictDomains": [
+        "governance:loop-fitness",
+        "loop-architecture:component-interoperability",
+        "loop-architecture:functional-requirements",
+        "loop-architecture:observability",
+        "loop-architecture:operation-order",
+        "loop-architecture:routing-algorithms",
+        "loop-architecture:semantic-responsibility"
+      ],
+      "mutableResources": [],
+      "generatedOutputGroups": [],
+      "toolEffectClass": "path_scoped_write"
+    },
+    {
+      "id": "loop-architecture-domain-structure-docs-writer",
+      "access": "writer",
+      "repositoryId": "collab-mono",
+      "integrationTargetRef": "refs/heads/main",
+      "worktreeId": "loop-architecture-domain-structure-docs",
+      "writePaths": [
+        "docs/architecture/loop-architecture-project-structure.md",
+        "docs/plan/loop-architecture/domain-structure-refactor"
+      ],
+      "readPaths": [],
+      "conflictDomains": [
+        "docs:loop-architecture-domain-refactor-plan",
+        "docs:loop-architecture-project-structure"
+      ],
+      "mutableResources": [],
+      "generatedOutputGroups": [],
+      "toolEffectClass": "path_scoped_write"
+    },
+    {
+      "id": "project-context-enrichment-agent-profile-author",
+      "access": "writer",
+      "repositoryId": "collab-mono",
+      "integrationTargetRef": "refs/heads/main",
+      "worktreeId": "9504f57e-df73-4ad7-aa83-1029e03a0fd3::/Users/judangs/project/personal/orca/collab-mono",
+      "writePaths": [
+        "artifacts/agents/agent-operation/agents/project-context-enrichment-curator.yaml"
+      ],
+      "readPaths": [
+        "artifacts/agent-loop/execution-preparation/prompt-assistance",
+        "artifacts/agent-loop/work/progressive-knowledge-research",
+        "artifacts/agents/agent-operation/agent-operation-governance-structure.md"
+      ],
+      "conflictDomains": [
+        "agent-profile:project-context-enrichment-curator"
+      ],
+      "mutableResources": [],
+      "generatedOutputGroups": [],
+      "toolEffectClass": "path_scoped_write"
+    },
+    {
+      "id": "project-context-enrichment-skill-author",
+      "access": "writer",
+      "repositoryId": "collab-mono",
+      "integrationTargetRef": "refs/heads/main",
+      "worktreeId": "9504f57e-df73-4ad7-aa83-1029e03a0fd3::/Users/judangs/project/personal/orca/collab-mono",
+      "writePaths": [
+        "artifacts/agents/agent-operation/skill/project-context-enrichment"
+      ],
+      "readPaths": [
+        "artifacts/agent-loop/execution-preparation/prompt-assistance",
+        "artifacts/agents/agent-operation/skill/context-engineering",
+        "artifacts/agents/engineering/skill/source-driven-development",
+        "artifacts/knowledge/ai/prompt-design-and-quality-engineering.md"
+      ],
+      "conflictDomains": [
+        "knowledge:project-understanding",
+        "skill:project-context-enrichment"
+      ],
+      "mutableResources": [],
+      "generatedOutputGroups": [],
+      "toolEffectClass": "path_scoped_write"
+    }
+  ],
+  "runtime": {
+    "canonicalConsumerCount": 1,
+    "unresolvedLifecycleEvents": 0,
+    "pendingReviews": 0,
+    "reviewCapacity": 1,
+    "pendingIntegrations": 0,
+    "integrationCapacity": 1
+  },
+  "gates": {
+    "independentReviewerId": "coordinator-read-only-validator",
+    "integrationOwnerId": "coordinator-integration-owner",
+    "nextPhaseDependsOn": [
+      "accepted_revalidation",
+      "scoped_integration"
+    ]
+  }
+}

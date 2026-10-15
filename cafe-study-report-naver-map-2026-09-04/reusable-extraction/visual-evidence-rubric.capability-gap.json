@@ -1,0 +1,56 @@
+{
+  "kind": "capability-gap-record/v1",
+  "schemaVersion": 1,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "gapId": "gap:domain-neutral-visual-evidence-rubric-operation",
+  "consumer": "domain visual-evaluation profile authors and deterministic integrators",
+  "outcome": "Represent visual evidence relevance, subject eligibility, preference comparison, uncertainty, observation, and lifecycle without coupling the contract to one provider or domain.",
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "5d19a6069fe964f81fdc944ccdaee77ace3353ba033a264df0d51783ea2656bd",
+  "uncoveredResponsibility": "The current engineering rubric family provides the decision semantics and operation lifecycle, but no accepted provider-neutral profile contract directly represents visual evidence units and their relevance, duplication, occlusion, dimension coverage, and source-to-subject lineage.",
+  "localCoverage": {
+    "reuse": "Reuse Engineering Decision Rubric for criterion kinds, anchors, evidence states, and non-compensatory ordering; reuse Rubric Operation for task context, populations, validity, invalidation, and outcome observations.",
+    "composition": "Compose Work Pattern Context Resolution for task-domain and responsibility boundaries with the existing bounded pipeline and fan-out/fan-in execution patterns.",
+    "improvement": "Before any new unit, evaluate whether the Engineering Rubric owner should accept an additive visual-evidence profile adapter or whether the responsibility should remain a task-local profile.",
+    "evidenceRefs": [
+      "artifacts/agent-loop/assessment/engineering-evaluation/decision-rubric/contract.md",
+      "artifacts/agent-loop/assessment/engineering-evaluation/rubric-operation/contract.md",
+      "artifacts/loop-architecture/components/work-pattern-context-resolution/rubrics/domain-work-pattern/rubric.json",
+      ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/reusable-extraction/visual-evidence-rubric.assessment.json"
+    ]
+  },
+  "dataClassification": "public",
+  "effectClass": "local_write",
+  "compatibilityConstraints": [
+    "Must not widen the four engineering decision families without the current semantic owner.",
+    "Must keep provider collection and authorization outside the rubric contract.",
+    "Must preserve existing task profiles and never reinterpret historical results under a new rubric revision.",
+    "Must keep mandatory and qualifying failures outside any preference calculation."
+  ],
+  "lifecycleConstraints": [
+    "Start as a report-only candidate with an exact source digest.",
+    "Require independent cross-domain and cross-provider evidence before source promotion.",
+    "Require positive negative ambiguous conflicting failure recovery and invalidation cases.",
+    "Require a named owner maintainer migration rollback review and retirement path."
+  ],
+  "candidateCategories": ["internal", "standard"],
+  "searchedOwnerSources": [
+    "artifacts/agent-loop/assessment/engineering-evaluation/decision-rubric/contract.md",
+    "artifacts/agent-loop/assessment/engineering-evaluation/rubric-operation/contract.md",
+    "artifacts/agent-loop/improvement/reusable-artifact-capability-lifecycle/contract.md",
+    "artifacts/loop-architecture/components/work-pattern-context-resolution/README.md",
+    "artifacts/loop-architecture/components/work-pattern-context-resolution/rubrics/domain-work-pattern/rubric.json",
+    "artifacts/knowledge/architecture/engineering-decision-rubrics-and-reuse-evaluation.md"
+  ],
+  "residualGapProven": false,
+  "disposition": "require_context",
+  "decisionDeadline": "When a second materially different visual-evidence domain or provider and an independent semantic owner are available.",
+  "refreshTrigger": "A current rubric owner adds a visual-evidence unit contract, or representative recurrence and counterexample evidence changes the gap fingerprint.",
+  "blockingState": "missing_context",
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "93f8edfeab8776f024d797a1f386002a793bb266e4baaf118a449d95d31c9701"
+  }
+}

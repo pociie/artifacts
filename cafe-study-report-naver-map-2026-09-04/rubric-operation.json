@@ -1,0 +1,216 @@
+{
+  "kind": "rubric-operation/v1",
+  "schemaVersion": 1,
+  "operationId": "rubric-operation:cafe-study:naver-map-2026-09-04",
+  "revision": "v1-retrospective-managed-projection",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "policyBinding": {
+    "ref": "artifacts/agent-loop/assessment/rubric-management/policy/rubric-management.policy.json",
+    "revision": "v1",
+    "digest": "sha256:e42c16c65eeaf9588f31111439ab79dd20b01c742e86b9a87403c63255eb0bbb"
+  },
+  "definitionBinding": {
+    "ref": "artifacts/agent-loop/work/cafe-study-visual-evidence/rubrics/cafe-study-visual.definition.json",
+    "revision": "v2-managed-structure",
+    "digest": "sha256:c7ae5e21e6bb74aa128f708d2d9af31523fc45cc9a7dd27316d0cf7b5d4dc0f8"
+  },
+  "profileBinding": {
+    "ref": "artifacts/agent-loop/work/cafe-study-visual-evidence/profiles/cafe-study-visual.profile.json",
+    "revision": "2026-09-04.3-managed",
+    "digest": "sha256:dd79a247ecdf18763978962934451cef4780e6428ede411ecf63934809b00984"
+  },
+  "context": {
+    "objectiveRef": "objective:2026-09-04-seoul-jungnang-gangdong-image-only-study-cafe-research",
+    "taskRevision": "sequence-16",
+    "subjectRef": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/evaluation.json",
+    "subjectRevision": "cafe-visual-study-rubric/2026-09-04.2",
+    "subjectDigest": "sha256:03a4f935497149498d0297dc1ca7a62a3533b2984091b62c39266711aff8b773",
+    "populationRef": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/naver-map-raw-image-manifest.json",
+    "consumerRefs": ["consumer:study-cafe-requester"],
+    "decisionUse": "Retrospectively represent the original image-only cafe comparison in the cross-domain rubric-management contract.",
+    "environmentRefs": ["environment:naver-map-ai-view-interior-2026-09-04"],
+    "materiality": "medium"
+  },
+  "freeze": {
+    "frozenAt": "2026-09-04T08:00:00.000Z",
+    "freezeState": "retrospective_reconstruction",
+    "beforeAssessment": false,
+    "bindingRefs": [
+      "artifacts/agent-loop/assessment/rubric-management/policy/rubric-management.policy.json",
+      ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/visual-rubric.json",
+      ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/naver-map-raw-image-manifest.json",
+      ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/evaluation.json",
+      "artifacts/agent-loop/work/cafe-study-visual-evidence/rubrics/cafe-study-visual.definition.json",
+      "artifacts/agent-loop/work/cafe-study-visual-evidence/profiles/cafe-study-visual.profile.json"
+    ],
+    "bindingDigests": [
+      "sha256:e42c16c65eeaf9588f31111439ab79dd20b01c742e86b9a87403c63255eb0bbb",
+      "sha256:60471912603db50c6954dab98802749b494e6c5bcc975637f84a05c14d19bafe",
+      "sha256:5eb18a279c8235112fe2788b8fc6f17991b1c08d7547a735f0dbd9e02d19388e",
+      "sha256:03a4f935497149498d0297dc1ca7a62a3533b2984091b62c39266711aff8b773",
+      "sha256:c7ae5e21e6bb74aa128f708d2d9af31523fc45cc9a7dd27316d0cf7b5d4dc0f8",
+      "sha256:dd79a247ecdf18763978962934451cef4780e6428ede411ecf63934809b00984"
+    ],
+    "changeDisposition": "invalidate_and_start_new_operation"
+  },
+  "evidenceSnapshot": {
+    "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/naver-map-raw-image-manifest.json",
+    "digest": "sha256:5eb18a279c8235112fe2788b8fc6f17991b1c08d7547a735f0dbd9e02d19388e",
+    "observedAt": "2026-09-04T05:34:35.932Z",
+    "validUntil": "2026-10-04T05:34:35.932Z",
+    "sourceClasses": ["Naver Map selected place metadata", "Naver Map AI View interior image URL"],
+    "populationCount": 14,
+    "subjectCount": 14,
+    "inspectedUnitCount": 107,
+    "admittedUnitCount": 53,
+    "rejectedUnitCount": 54,
+    "duplicateUnitCount": 0,
+    "conflictingUnitCount": 0,
+    "unavailableUnitCount": 0,
+    "reasonCounts": [
+      { "reasonCode": "reason:direct-study-evidence", "disposition": "admitted", "count": 53 },
+      { "reasonCode": "reason:no-direct-study-evidence-or-under-floor", "disposition": "rejected", "count": 54 },
+      { "reasonCode": "reason:timestamp-unavailable", "disposition": "limited", "count": 107 }
+    ],
+    "sampling": {
+      "method": "bounded_convenience",
+      "frameRef": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/naver-map-raw-image-manifest.json",
+      "targetCount": 80,
+      "achievedCount": 107,
+      "coverageState": "partial",
+      "limitations": ["The bounded convenience snapshot is not a census of all cafes or all provider images.", "Image capture timestamps were not uniformly available."]
+    },
+    "freshnessState": "current",
+    "rightsState": "allowed_link_only",
+    "provenance": {
+      "entities": [
+        { "id": "entity:raw-image-manifest", "type": "entity", "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/naver-map-raw-image-manifest.json", "digest": "sha256:5eb18a279c8235112fe2788b8fc6f17991b1c08d7547a735f0dbd9e02d19388e" },
+        { "id": "entity:legacy-visual-rubric", "type": "entity", "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/visual-rubric.json", "digest": "sha256:60471912603db50c6954dab98802749b494e6c5bcc975637f84a05c14d19bafe" },
+        { "id": "entity:integrated-evaluation", "type": "entity", "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/evaluation.json", "digest": "sha256:03a4f935497149498d0297dc1ca7a62a3533b2984091b62c39266711aff8b773" }
+      ],
+      "activities": [
+        { "id": "activity:collect-freeze", "type": "activity", "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/collect-naver-interiors.mjs", "digest": "sha256:299fba29a91d7b594c34bbef13d254ece544f256175086a8b0ef9f2643b5030a" },
+        { "id": "activity:classify-assess", "type": "activity", "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/bounded-lane-plan-decision.json", "digest": "sha256:f5d16f98b8cf53f39eeaa7e41c6f9a1f7d2e1c7e8d5c4c4f1f07b7f3a8a32e52" },
+        { "id": "activity:integrate-report", "type": "activity", "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/integrate-evaluation.mjs", "digest": "sha256:1ae571d10e796e5fe503de890c148cc77d2c577bb3c56b602a6e98ef9cd29257" },
+        { "id": "activity:validate-report", "type": "activity", "ref": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/validate-report.mjs", "digest": "sha256:379d5bb9213606819fca2d47d95dcf3ae56c3c77718c2ddce5dd07fbe3b4797a" },
+        { "id": "activity:retrospective-managed-projection", "type": "activity", "ref": "artifacts/agent-loop/assessment/rubric-management/governance.md", "digest": "sha256:876019c63374d6ffc1baadbffeec0a3c1f567e36107654c30c89737bddad798a" }
+      ],
+      "agents": [
+        { "id": "agent:evidence-collector-profile", "type": "agent", "ref": "artifacts/agents/research/agents/cafe-study-evidence-collector.yaml", "digest": "sha256:44e91ee4a8b4289470d8911e2e48bca7d0fa2a338911268787a62b88dee12fd3" },
+        { "id": "agent:image-classifier-profile", "type": "agent", "ref": "artifacts/agents/research/agents/cafe-study-image-classifier.yaml", "digest": "sha256:627b9a31f0c5670a389e129afff3c884bf8cb04732b956e7d8a81f30d0de618d" },
+        { "id": "agent:visual-evaluator-profile", "type": "agent", "ref": "artifacts/agents/research/agents/cafe-study-environment-assessor.yaml", "digest": "sha256:f4e14cf6021a5300a7ccb208d15bdc41afa436d4bf8a368b1854552df4dac6c0" },
+        { "id": "agent:integrator-profile", "type": "agent", "ref": "artifacts/agents/research/agents/cafe-study-evidence-integrator.yaml", "digest": "sha256:d8b95fda2b1dadefadb71c2ec482199c1f723cee6f60a28f9c4b50393dd2e930" },
+        { "id": "agent:validator-profile", "type": "agent", "ref": "artifacts/agents/requirement-realization/agents/independent-validator.yaml", "digest": "sha256:2dd11ad988624889f1494e7b4fd3b9c4cd5e5b0fc8a5a886a3f6906365265f20" },
+        { "id": "agent:operation-auditor-profile", "type": "agent", "ref": "artifacts/agents/evidence-governance/agents/rubric-operation-auditor.yaml", "digest": "sha256:388a6623fb3216b838be445707936f1bddf9aae2c374771b1f2cf1460ea36b1e" }
+      ],
+      "relations": [
+        { "type": "was_generated_by", "fromId": "entity:raw-image-manifest", "toId": "activity:collect-freeze" },
+        { "type": "used", "fromId": "activity:classify-assess", "toId": "entity:raw-image-manifest" },
+        { "type": "used", "fromId": "activity:classify-assess", "toId": "entity:legacy-visual-rubric" },
+        { "type": "was_generated_by", "fromId": "entity:integrated-evaluation", "toId": "activity:integrate-report" },
+        { "type": "was_associated_with", "fromId": "activity:collect-freeze", "toId": "agent:evidence-collector-profile" },
+        { "type": "was_associated_with", "fromId": "activity:classify-assess", "toId": "agent:image-classifier-profile" },
+        { "type": "was_associated_with", "fromId": "activity:classify-assess", "toId": "agent:visual-evaluator-profile" },
+        { "type": "was_associated_with", "fromId": "activity:integrate-report", "toId": "agent:integrator-profile" },
+        { "type": "used", "fromId": "activity:validate-report", "toId": "entity:integrated-evaluation" },
+        { "type": "was_associated_with", "fromId": "activity:validate-report", "toId": "agent:validator-profile" },
+        { "type": "was_associated_with", "fromId": "activity:retrospective-managed-projection", "toId": "agent:operation-auditor-profile" },
+        { "type": "used", "fromId": "activity:retrospective-managed-projection", "toId": "entity:legacy-visual-rubric" }
+      ]
+    }
+  },
+  "roleAssignments": [
+    { "roleClass": "evidence_curator", "principalRef": "artifacts/agents/research/agents/cafe-study-evidence-collector.yaml", "principalRevision": "v1", "principalDigest": "sha256:44e91ee4a8b4289470d8911e2e48bca7d0fa2a338911268787a62b88dee12fd3", "responsibility": "Freeze place and image evidence without scoring.", "independentFromRoleClasses": ["assessor"], "conflictDisclosureRefs": [], "terminalState": "settled" },
+    { "roleClass": "classifier", "principalRef": "artifacts/agents/research/agents/cafe-study-image-classifier.yaml", "principalRevision": "v1", "principalDigest": "sha256:627b9a31f0c5670a389e129afff3c884bf8cb04732b956e7d8a81f30d0de618d", "responsibility": "Admit and reject images using direct study evidence before venue assessment.", "independentFromRoleClasses": ["assessor"], "conflictDisclosureRefs": [], "terminalState": "completed" },
+    { "roleClass": "assessor", "principalRef": "artifacts/agents/research/agents/cafe-study-environment-assessor.yaml", "principalRevision": "v1", "principalDigest": "sha256:f4e14cf6021a5300a7ccb208d15bdc41afa436d4bf8a368b1854552df4dac6c0", "responsibility": "Apply visual anchors to admitted venue evidence.", "independentFromRoleClasses": ["evidence_curator", "classifier", "integrator"], "conflictDisclosureRefs": [], "terminalState": "completed" },
+    { "roleClass": "integrator", "principalRef": "artifacts/agents/research/agents/cafe-study-evidence-integrator.yaml", "principalRevision": "v1", "principalDigest": "sha256:d8b95fda2b1dadefadb71c2ec482199c1f723cee6f60a28f9c4b50393dd2e930", "responsibility": "Calculate the frozen gate-first score projection and report as single writer.", "independentFromRoleClasses": ["assessor", "independent_validator"], "conflictDisclosureRefs": [], "terminalState": "settled" },
+    { "roleClass": "independent_validator", "principalRef": "artifacts/agents/requirement-realization/agents/independent-validator.yaml", "principalRevision": "v1", "principalDigest": "sha256:2dd11ad988624889f1494e7b4fd3b9c4cd5e5b0fc8a5a886a3f6906365265f20", "responsibility": "Validate structure provenance arithmetic source exclusions and report parity without repair.", "independentFromRoleClasses": ["integrator"], "conflictDisclosureRefs": [], "terminalState": "completed" },
+    { "roleClass": "observation_steward", "principalRef": "artifacts/agents/evidence-governance/agents/rubric-operation-auditor.yaml", "principalRevision": "v1", "principalDigest": "sha256:388a6623fb3216b838be445707936f1bddf9aae2c374771b1f2cf1460ea36b1e", "responsibility": "Reconstruct managed operation observations and preserve unavailable agreement duration and field outcomes.", "independentFromRoleClasses": ["assessor", "integrator"], "conflictDisclosureRefs": ["limitation:retrospective-management-projection"], "terminalState": "completed" }
+  ],
+  "stageReceipts": [
+    { "stage": "bind_purpose", "state": "completed", "inputRefs": ["artifacts/agent-loop/work/cafe-study-visual-evidence/examples/cafe-study-work-evolution.example.json"], "outputRefs": ["artifacts/agent-loop/work/cafe-study-visual-evidence/rubrics/cafe-study-visual.definition.json"], "evidenceRefs": ["evidence:chronology-current-constraint-snapshot"], "limitationRefs": [] },
+    { "stage": "resolve_profile", "state": "held", "inputRefs": [".collab/artifacts/cafe-study-report-naver-map-2026-09-04/visual-rubric.json"], "outputRefs": ["artifacts/agent-loop/work/cafe-study-visual-evidence/profiles/cafe-study-visual.profile.json"], "evidenceRefs": ["evidence:legacy-to-managed-field-map"], "limitationRefs": ["limitation:profile-resolved-after-original-assessment"] },
+    { "stage": "freeze_evidence", "state": "completed", "inputRefs": [".collab/artifacts/cafe-study-report-naver-map-2026-09-04/naver-map-raw-image-manifest.json"], "outputRefs": ["entity:raw-image-manifest"], "evidenceRefs": ["evidence:107-image-snapshot"], "limitationRefs": ["limitation:bounded-convenience-sample"] },
+    { "stage": "calibrate_evaluators", "state": "held", "inputRefs": [], "outputRefs": [], "evidenceRefs": [], "limitationRefs": ["limitation:no-same-image-double-scoring"] },
+    { "stage": "assess", "state": "completed", "inputRefs": ["entity:raw-image-manifest", "entity:legacy-visual-rubric"], "outputRefs": ["activity:classify-assess"], "evidenceRefs": ["evidence:three-disjoint-venue-lanes"], "limitationRefs": ["limitation:no-inter-rater-agreement"] },
+    { "stage": "integrate", "state": "completed", "inputRefs": ["activity:classify-assess"], "outputRefs": ["entity:integrated-evaluation"], "evidenceRefs": ["evidence:gate-first-weighted-projection"], "limitationRefs": [] },
+    { "stage": "validate", "state": "completed", "inputRefs": ["entity:integrated-evaluation"], "outputRefs": ["evidence:report-validation"], "evidenceRefs": [".collab/artifacts/cafe-study-report-naver-map-2026-09-04/validate-report.mjs"], "limitationRefs": ["limitation:deterministic-validation-is-not-field-validation"] },
+    { "stage": "observe", "state": "completed", "inputRefs": ["entity:integrated-evaluation"], "outputRefs": ["artifacts/agent-loop/improvement/cafe-study-artifact-improvement/examples/cafe-study-rsi-observation.example.json"], "evidenceRefs": ["evidence:coverage-and-rejection-counts"], "limitationRefs": ["limitation:agreement-duration-and-outcome-unavailable"] },
+    { "stage": "classify_lifecycle", "state": "completed", "inputRefs": ["activity:retrospective-managed-projection"], "outputRefs": ["artifacts/agent-loop/work/cafe-study-visual-evidence/examples/cafe-study-rubric-lineage.example.json"], "evidenceRefs": ["evidence:rubric-lineage-projection"], "limitationRefs": ["limitation:no-retrospective-execution-claim"] }
+  ],
+  "assessment": {
+    "state": "partial",
+    "resultRef": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/evaluation.json",
+    "resultDigest": "sha256:03a4f935497149498d0297dc1ca7a62a3533b2984091b62c39266711aff8b773",
+    "criterionCoverage": [
+      { "criterionId": "source.provenance", "kind": "mandatory", "subjectCount": 14, "availableCount": 14, "unavailableCount": 0, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["entity:raw-image-manifest"], "limitationRefs": [] },
+      { "criterionId": "place.scope-and-category", "kind": "mandatory", "subjectCount": 14, "availableCount": 14, "unavailableCount": 0, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["evidence:place-metadata"], "limitationRefs": ["limitation:menu-composition-not-established"] },
+      { "criterionId": "evidence.no-prohibited-inference", "kind": "mandatory", "subjectCount": 14, "availableCount": 14, "unavailableCount": 0, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["evidence:negative-field-validation"], "limitationRefs": [] },
+      { "criterionId": "evidence.minimum-relevant-images", "kind": "qualifying", "subjectCount": 14, "availableCount": 11, "unavailableCount": 3, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["evidence:admitted-image-counts"], "limitationRefs": ["limitation:three-zero-image-venues"] },
+      { "criterionId": "evidence.work-surface-coverage", "kind": "qualifying", "subjectCount": 14, "availableCount": 11, "unavailableCount": 3, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["evidence:image-observation-tags"], "limitationRefs": [] },
+      { "criterionId": "evidence.spatial-coverage", "kind": "qualifying", "subjectCount": 14, "availableCount": 11, "unavailableCount": 3, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["evidence:image-observation-tags"], "limitationRefs": [] },
+      { "criterionId": "deskUsability", "kind": "comparative", "subjectCount": 10, "availableCount": 10, "unavailableCount": 0, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["entity:integrated-evaluation"], "limitationRefs": ["limitation:ordinal-linear-index-assumption"] },
+      { "criterionId": "seatErgonomics", "kind": "comparative", "subjectCount": 10, "availableCount": 10, "unavailableCount": 0, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["entity:integrated-evaluation"], "limitationRefs": ["limitation:actual-comfort-unavailable"] },
+      { "criterionId": "spatialOpenness", "kind": "comparative", "subjectCount": 10, "availableCount": 10, "unavailableCount": 0, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["entity:integrated-evaluation"], "limitationRefs": ["limitation:perspective-distortion"] },
+      { "criterionId": "lightView", "kind": "comparative", "subjectCount": 10, "availableCount": 10, "unavailableCount": 0, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["entity:integrated-evaluation"], "limitationRefs": ["limitation:time-of-day-and-season-unavailable"] },
+      { "criterionId": "focusInterior", "kind": "comparative", "subjectCount": 10, "availableCount": 10, "unavailableCount": 0, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["entity:integrated-evaluation"], "limitationRefs": ["limitation:not-universal-aesthetic-truth"] },
+      { "criterionId": "operation.evidence-sufficiency", "kind": "observational", "subjectCount": 14, "availableCount": 14, "unavailableCount": 0, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["evidence:coverage-and-rejection-counts"], "limitationRefs": [] },
+      { "criterionId": "operation.evidence-rejection", "kind": "observational", "subjectCount": 14, "availableCount": 14, "unavailableCount": 0, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": ["evidence:coverage-and-rejection-counts"], "limitationRefs": [] },
+      { "criterionId": "operation.evaluator-agreement", "kind": "observational", "subjectCount": 14, "availableCount": 0, "unavailableCount": 14, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": [], "limitationRefs": ["limitation:no-same-image-double-scoring"] },
+      { "criterionId": "operation.duration", "kind": "observational", "subjectCount": 14, "availableCount": 0, "unavailableCount": 14, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": [], "limitationRefs": ["limitation:no-comparable-operation-clock"] },
+      { "criterionId": "operation.field-outcome-join", "kind": "observational", "subjectCount": 14, "availableCount": 0, "unavailableCount": 14, "conflictingCount": 0, "notApplicableCount": 0, "evidenceRefs": [], "limitationRefs": ["limitation:no-field-visit-outcome"] }
+    ],
+    "protectedEligibility": "eligible",
+    "comparisonPerformed": true,
+    "aggregationMechanismId": "aggregation:weighted-sum-after-eligibility",
+    "scoreProjectionRef": ".collab/artifacts/cafe-study-report-naver-map-2026-09-04/evaluation.json",
+    "scoreProjectionDigest": "sha256:03a4f935497149498d0297dc1ca7a62a3533b2984091b62c39266711aff8b773",
+    "disposition": "observed_report_only",
+    "unknownRefs": ["unknown:evaluator-agreement", "unknown:observed-duration", "unknown:field-outcome"],
+    "conflictRefs": [],
+    "counterevidenceRefs": ["evidence:four-ineligible-venues"],
+    "limitationRefs": ["limitation:retrospective-management-projection", "limitation:bounded-source-sample", "limitation:nonvisual-conditions-unavailable"],
+    "dissentRefs": []
+  },
+  "observation": {
+    "acceptedOutcomeJoin": "unavailable",
+    "acceptedOutcomeRef": null,
+    "acceptedOutcomeDigest": null,
+    "independentlyLabeledOutcomePopulation": false,
+    "metrics": [
+      { "metricId": "rubric.evidence.coverage", "status": "observed", "value": 1, "unit": "ratio", "numerator": 107, "denominator": 107, "methodRef": "method:manifest-to-evaluation-count-join", "populationRef": "population:107-frozen-images", "windowRef": "window:2026-09-04-evidence-snapshot", "evidenceRefs": ["entity:raw-image-manifest", "entity:integrated-evaluation"], "scoreContribution": 0 },
+      { "metricId": "rubric.evidence.rejection_rate", "status": "observed", "value": 0.5046728972, "unit": "ratio", "numerator": 54, "denominator": 107, "methodRef": "method:one-minus-admitted-share", "populationRef": "population:107-frozen-images", "windowRef": "window:2026-09-04-evidence-snapshot", "evidenceRefs": ["entity:integrated-evaluation"], "scoreContribution": 0 },
+      { "metricId": "rubric.criteria.unavailable_rate", "status": "observed", "value": 0.1875, "unit": "ratio", "numerator": 3, "denominator": 16, "methodRef": "method:active-criterion-observation-availability", "populationRef": "population:16-active-criteria", "windowRef": "window:retrospective-operation", "evidenceRefs": ["evidence:criterion-coverage"], "scoreContribution": 0 },
+      { "metricId": "rubric.assessor.agreement", "status": "unavailable", "value": null, "unit": "chance-corrected-agreement", "numerator": null, "denominator": 0, "methodRef": "method:weighted-kappa-if-ordinal-double-score-exists", "populationRef": "population:no-double-scored-images", "windowRef": "window:2026-09-04-evidence-snapshot", "evidenceRefs": [], "scoreContribution": 0 },
+      { "metricId": "rubric.decision.abstention", "status": "observed", "value": 4, "unit": "subjects", "numerator": 4, "denominator": 14, "methodRef": "method:ineligible-or-unavailable-subject-count", "populationRef": "population:14-candidate-venues", "windowRef": "window:2026-09-04-evidence-snapshot", "evidenceRefs": ["evidence:four-ineligible-venues"], "scoreContribution": 0 },
+      { "metricId": "rubric.outcome.join_coverage", "status": "unavailable", "value": null, "unit": "ratio", "numerator": null, "denominator": null, "methodRef": "method:accepted-outcome-subject-join", "populationRef": "population:field-outcome-unavailable", "windowRef": "window:post-visit-unavailable", "evidenceRefs": [], "scoreContribution": 0 },
+      { "metricId": "rubric.outcome.false_allow", "status": "unavailable", "value": null, "unit": "subjects", "numerator": null, "denominator": null, "methodRef": "method:independent-outcome-label-comparison", "populationRef": "population:field-outcome-unavailable", "windowRef": "window:post-visit-unavailable", "evidenceRefs": [], "scoreContribution": 0 },
+      { "metricId": "rubric.outcome.false_block", "status": "unavailable", "value": null, "unit": "subjects", "numerator": null, "denominator": null, "methodRef": "method:independent-outcome-label-comparison", "populationRef": "population:field-outcome-unavailable", "windowRef": "window:post-visit-unavailable", "evidenceRefs": [], "scoreContribution": 0 },
+      { "metricId": "rubric.user.correction", "status": "observed", "value": 3, "unit": "material-corrections", "numerator": 3, "denominator": 16, "methodRef": "method:chronology-material-rubric-correction-count", "populationRef": "population:16-sanitized-work-events", "windowRef": "window:2026-09-04-work-evolution", "evidenceRefs": ["event:naver-interior-images-only", "event:global-rubric-management-scope", "event:architecture-native-rubric-extension"], "scoreContribution": 0 },
+      { "metricId": "rubric.profile.drift", "status": "observed", "value": 1, "unit": "detected-structural-gaps", "numerator": 1, "denominator": 1, "methodRef": "method:legacy-combined-record-to-managed-surfaces", "populationRef": "population:legacy-visual-rubric-v2", "windowRef": "window:retrospective-operation", "evidenceRefs": ["evidence:legacy-to-managed-field-map"], "scoreContribution": 0 },
+      { "metricId": "rubric.operation.duration_ms", "status": "unavailable", "value": null, "unit": "milliseconds", "numerator": null, "denominator": null, "methodRef": "method:monotonic-operation-clock", "populationRef": "population:original-operation", "windowRef": "window:2026-09-04-evidence-snapshot", "evidenceRefs": [], "scoreContribution": 0 },
+      { "metricId": "rubric.cost.evaluation_units", "status": "observed", "value": 107, "unit": "image-evaluations", "numerator": 107, "denominator": 1, "methodRef": "method:visually-evaluated-image-count", "populationRef": "population:107-frozen-images", "windowRef": "window:2026-09-04-evidence-snapshot", "evidenceRefs": ["entity:integrated-evaluation"], "scoreContribution": 0 }
+    ],
+    "generalizationLimitRefs": ["limitation:bounded-convenience-sample", "limitation:single-provider-surface", "limitation:no-inter-rater-agreement", "limitation:no-field-outcome", "limitation:retrospective-management-projection"]
+  },
+  "feedback": {
+    "correctionRefs": ["event:naver-interior-images-only", "event:global-rubric-management-scope", "event:architecture-native-rubric-extension"],
+    "appealRefs": [],
+    "withdrawalRefs": [],
+    "unresolvedRefs": ["unknown:evaluator-agreement", "unknown:observed-duration", "unknown:field-outcome", "unknown:weight-sensitivity"]
+  },
+  "lifecycle": {
+    "previousState": "evaluated",
+    "currentState": "observed",
+    "triggerRef": "trigger:cross-domain-rubric-management-request",
+    "transitionRef": "transition:evaluated-to-observed-retrospective-projection",
+    "reviewOwnerRef": "owner:cafe-study-rubric-lifecycle",
+    "reviewDueAt": "2026-10-04T05:34:35.932Z",
+    "lineageRef": "artifacts/agent-loop/work/cafe-study-visual-evidence/examples/cafe-study-rubric-lineage.example.json",
+    "invalidationRefs": ["invalidation:definition-or-profile-change", "invalidation:evidence-or-source-window-change", "invalidation:evaluator-tool-formula-or-outcome-change"],
+    "settlementState": "complete"
+  },
+  "privacy": { "rawPromptStored": false, "transcriptStored": false, "privateReasoningStored": false, "credentialsStored": false, "runtimeHandlesStored": false, "directIdentityStored": false },
+  "integrity": { "algorithm": "sha256", "digest": "sha256:9e3d757bb1a05daa9169da616d4f73f2614338b3daa85b3d45a0ef8858bb9b48" }
+}

@@ -1,0 +1,125 @@
+{
+  "architecture": {
+    "architectureId": "architecture:single-task-pipeline-independent-validation",
+    "authorityEffect": "none",
+    "digest": "sha256:09bc9b279987c9b72178aab9abe38e6ef353f72d1d2a735cd6b2f4bd2b890966",
+    "independence": {
+      "roleIndependent": true,
+      "validationIndependent": true
+    },
+    "itemId": "LiteCoder/LiteCoder-rl",
+    "kind": "harbor-agent-architecture-qualification/v3",
+    "operation": "not_operated_due_provider_hold",
+    "operationId": "harbor-hub-five-shard-full-inventory-r1",
+    "privacy": {
+      "metadataOnly": true
+    },
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-3:LiteCoder/LiteCoder-rl:6c9c5a99c1e698460064925c35d37f2fd005c8455ab6e2f2f43b081c1a58c3fd",
+    "responsibilities": ["primary_owner", "independent_validator"],
+    "schemaVersion": 3,
+    "selectedArchitectureRef": "artifacts/loop-architecture/components/agentic-architecture/component.json",
+    "selectionDecisionDigest": "sha256:6581284e09295c4024fdc9fdaf41e13296bc906d542f72fe12421a1d49a7917c",
+    "selectionDecisionRef": "artifacts/population-shard-3/continuation-r12/topology-selection-decision.r12.json",
+    "shardId": "population-shard-3",
+    "sourceRefs": [
+      "artifacts/loop-architecture/components/agentic-architecture/component.json",
+      "artifacts/loop-architecture/components/agentic-architecture/patterns/pipeline/workflow-pattern.json"
+    ],
+    "status": "selected_report_only",
+    "topologyRequirement": "architecture_only",
+    "workflowPatternId": "pipeline"
+  },
+  "authorityEffect": "none",
+  "decision": {
+    "authorityEffect": "none",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "kind": "agent-execution-topology-selection-decision/v1",
+    "rejectedPairs": [],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-3:LiteCoder/LiteCoder-rl:6c9c5a99c1e698460064925c35d37f2fd005c8455ab6e2f2f43b081c1a58c3fd",
+    "requiredResponsibilityClasses": ["independent_validator", "primary_owner"],
+    "routeDecisionSha256": "7cb1c87109ee3036eebb6af97a4f802adb5c959bfc9f9d51f6ad6008eaf17ac8",
+    "selectedAgentArchitectureRef": "artifacts/loop-architecture/components/agentic-architecture/component.json",
+    "selectedAgentSwarmRef": null,
+    "selectedAgreementPolicySha256": null,
+    "selectedMode": "single_task",
+    "status": "selected",
+    "targetScope": "effective_primary",
+    "topologyRequirement": "architecture_only",
+    "topologyRequirementDecisionSha256": "8067109e1ed32cc357da3c3d3251890e767bf5ec411e1e19d548f46f1e3147ed",
+    "workflowPatternId": "pipeline"
+  },
+  "digest": "sha256:dc74f71de634dc54f79b86ccfb6d5bf687bf9d55be5a7e0ac3de5ad7cf8042a7",
+  "input": {
+    "architectureCandidates": [
+      {
+        "architectureId": "architecture:single-task-pipeline-independent-validation",
+        "artifactRef": "artifacts/loop-architecture/components/agentic-architecture/component.json",
+        "availability": "available",
+        "compatibleModes": ["single_task"],
+        "disqualifiers": [
+          "unbounded_feedback",
+          "independent_parallel_contributions",
+          "shared_mutation"
+        ],
+        "nestedPatterns": [],
+        "primaryPattern": "pipeline",
+        "requiredSignals": ["separable_static_responsibilities", "ordered_dependency"],
+        "responsibilityClasses": ["primary_owner", "independent_validator"],
+        "structuralCost": 1
+      }
+    ],
+    "constraints": ["one_owner", "no_parallel_contributions"],
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "observedSignals": [
+      "separable_static_responsibilities",
+      "ordered_dependency",
+      "exact_output_contract",
+      "single_aggregation_owner"
+    ],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-3:LiteCoder/LiteCoder-rl:6c9c5a99c1e698460064925c35d37f2fd005c8455ab6e2f2f43b081c1a58c3fd",
+    "requiredResponsibilityClasses": ["primary_owner", "independent_validator"],
+    "selectedMode": "single_task",
+    "swarmCandidates": [],
+    "targetScope": "effective_primary",
+    "topologyRequirement": "architecture_only",
+    "topologyRequirementDecision": {
+      "authorityEffect": "none",
+      "blockers": [],
+      "kind": "execution-topology-requirement-decision/v1",
+      "reasonCodes": ["separable_static_responsibilities"],
+      "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-3:LiteCoder/LiteCoder-rl:6c9c5a99c1e698460064925c35d37f2fd005c8455ab6e2f2f43b081c1a58c3fd",
+      "requiredCapabilityClasses": ["agent_architecture_operation"],
+      "routeDecisionSha256": "7cb1c87109ee3036eebb6af97a4f802adb5c959bfc9f9d51f6ad6008eaf17ac8",
+      "selectedMode": "single_task",
+      "status": "selected",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only"
+    },
+    "workflowPatternId": "pipeline"
+  },
+  "itemId": "LiteCoder/LiteCoder-rl",
+  "kind": "harbor-topology-selection-evidence/v2",
+  "laneIdentitySelectsArchitecture": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "schemaVersion": 2,
+  "shardId": "population-shard-3",
+  "swarm": {
+    "authorityEffect": "none",
+    "digest": "sha256:d4036439ba79794d19d36fe5cc355840d159e8f2b3391b5e5c9a7584519c5304",
+    "itemId": "LiteCoder/LiteCoder-rl",
+    "kind": "harbor-agent-swarm-qualification/v3",
+    "operation": "not_operated",
+    "operationId": "harbor-hub-five-shard-full-inventory-r1",
+    "optional": true,
+    "privacy": {
+      "metadataOnly": true
+    },
+    "reasonCodes": ["architecture_only_requirement", "no_dynamic_membership_obligation"],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-3:LiteCoder/LiteCoder-rl:6c9c5a99c1e698460064925c35d37f2fd005c8455ab6e2f2f43b081c1a58c3fd",
+    "schemaVersion": 3,
+    "selectedAgentSwarmRef": null,
+    "shardId": "population-shard-3",
+    "status": "not_selected",
+    "topologyRequirement": "architecture_only"
+  }
+}

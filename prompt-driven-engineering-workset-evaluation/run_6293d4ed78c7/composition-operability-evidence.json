@@ -1,0 +1,184 @@
+{
+  "kind": "composition-operability-evidence/v1",
+  "schemaVersion": 1,
+  "evidenceId": "evidence:prompt-driven-engineering-workset-evaluation:orca-reward-round:run-6293d4ed78c7",
+  "status": "failed",
+  "authorityEffect": "none",
+  "scope": {
+    "workspaceRef": "workspace:collab-mono",
+    "sourceNamespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/jobs/swebench-verified-hub-r1",
+    "objectiveRevision": "reward-guided-artifact-improvement-round/v1",
+    "sessionRef": "session:prompt-driven-engineering-workset-evaluation:2026-08-27",
+    "runRef": "orca:run:run_6293d4ed78c7",
+    "worktreeRef": "worktree:collab-mono:main",
+    "workflowRef": "artifacts/workflows/engineering-evaluation/reward-guided-artifact-improvement-round/workflow.json",
+    "workflowRevision": "sha256:d6357a10cb51219edd6bd71e62e2c5f9ae67fc805b2adba346ae2c10cd100914",
+    "componentCompositionRef": "artifacts/loop-architecture/compositions/default-ai-execution-control/composition.json",
+    "componentCompositionRevision": "sha256:104bcfb0a2a04a9356a4230d0fa9ab20536d76b7fc1cb50e31230c68cee6c3ac"
+  },
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/swebench-verified-hub-r1/working-memory-binding.json",
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/jobs/swebench-verified-hub-r1",
+    "sessionCursor": "memory:prompt-driven-engineering-workset-evaluation:swebench-verified-hub-r1:oracle-entry",
+    "checkpointRefs": [
+      "memory:prompt-driven-engineering-workset-evaluation:swebench-verified-hub-r1:population-freeze",
+      "memory:prompt-driven-engineering-workset-evaluation:swebench-verified-hub-r1:oracle-qualified-amd64",
+      "memory:prompt-driven-engineering-workset-evaluation:swebench-verified-hub-r1:orca-input-admission-failed-and-released"
+    ],
+    "retention": "runtime-private through paired Artifact-aware evaluation, reward reduction, improvement decision, independent review, and exact resource settlement",
+    "invalidation": [
+      "objective_revision_change",
+      "workflow_or_topology_binding_change",
+      "orca_binary_guide_or_prompt_admission_change",
+      "participant_or_resource_settlement_change",
+      "reward_or_improvement_evidence_change"
+    ],
+    "digest": "sha256:e9918a168cd18c77314b64f292d3e1580bea11b5c3af8f7ee1a0e55bd7ca332a"
+  },
+  "artifactSelection": {
+    "selectorRef": "artifacts/loop-architecture/components/artifact-reuse-resolution/algorithms/artifact-reuse-resolution/algorithm.json",
+    "selectedRefs": [
+      "artifacts/agent-loop/execution-preparation/working-memory/loop.yaml",
+      "artifacts/agent-loop/assessment/engineering-workset-simulation/loop.yaml",
+      "artifacts/agent-loop/assessment/engineering-evaluation/simulation-evidence.loop.yaml",
+      "artifacts/agent-loop/assessment/engineering-evaluation/reward-evaluation.loop.yaml",
+      "artifacts/agent-loop/improvement/engineering-optimization/evaluation-guided-improvement.loop.yaml",
+      "artifacts/workflows/engineering-evaluation/reward-guided-artifact-improvement-round/workflow.json",
+      "artifacts/loop-architecture/components/agentic-architecture/patterns/generator-validator/workflow-pattern.json",
+      "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/bounded-revision/coordination-policy.json",
+      "artifacts/agents/requirement-realization/architectures/requirement-realization.pipeline.json",
+      "artifacts/agent-swarms/requirement-realization/functional-requirement-realization/swarm.json",
+      "artifacts/loop-architecture/compositions/default-ai-execution-control/composition.json"
+    ],
+    "rejectedRefs": [],
+    "residualGapRefs": [
+      "gap:orca:codex-update-prompt-prevents-structured-input-admission"
+    ],
+    "digest": "sha256:a16b59583545f16a1dbe934d0b493fe7c75d2700d94b084a1e6391e17a9e3187"
+  },
+  "topology": {
+    "workflowPatternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/generator-validator/workflow-pattern.json",
+    "workflowPatternId": "generator_validator",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/bounded-revision/coordination-policy.json",
+    "agentArchitectureRef": "artifacts/agents/requirement-realization/architectures/requirement-realization.pipeline.json",
+    "agentSwarmRef": "artifacts/agent-swarms/requirement-realization/functional-requirement-realization/swarm.json",
+    "patternQualificationRef": "workflow-check:reward-guided-artifact-improvement-round:generator-validator-qualified",
+    "swarmExtractionRef": "workflow-check:reward-guided-artifact-improvement-round:functional-requirement-realization-ready",
+    "topologySelectionRef": "orca:run:run_6293d4ed78c7:topology-selected",
+    "coordinationPlanRef": "orca:run:run_6293d4ed78c7:coordination-plan-input-admission-failed",
+    "coordinationClosureRef": "orca:run:run_6293d4ed78c7:coordination-not-started",
+    "workflowFrontierRef": "orca:run:run_6293d4ed78c7:frontier-held-before-worker-input"
+  },
+  "contributors": [
+    {
+      "taskRef": "orca:task:task_33cb609bbd3a",
+      "dispatchRef": "orca:dispatch:ctx_960d3fac9033",
+      "roleId": "evaluator",
+      "profileRef": "artifacts/agents/requirement-realization/agents/requirement-domain-lead.yaml",
+      "packetState": "unresolved",
+      "settlementState": "settled",
+      "evidenceRefs": [
+        "orca:failure:ctx_960d3fac9033:agent-prompt-blocked",
+        "orca:release:ctx_960d3fac9033:released"
+      ],
+      "digest": "sha256:78a078bf0923d54a1f226e63424b4489442df298b7031ae6bf7ede0094c93fc2"
+    },
+    {
+      "taskRef": "orca:task:task_0b7d2abda626",
+      "dispatchRef": "orca:dispatch:ctx_0079ab77dc24",
+      "roleId": "validator",
+      "profileRef": "artifacts/agents/requirement-realization/agents/independent-validator.yaml",
+      "packetState": "unresolved",
+      "settlementState": "settled",
+      "evidenceRefs": [
+        "orca:failure:ctx_0079ab77dc24:agent-prompt-blocked",
+        "orca:release:ctx_0079ab77dc24:released"
+      ],
+      "digest": "sha256:61378bc0f2330afd6bb7aa7895ced1a0842a19b4bd9f0e95e4ccccf5cc0711fa"
+    }
+  ],
+  "evaluation": {
+    "profileRef": "artifacts/agent-loop/assessment/engineering-evaluation/reward-evaluation/profiles/loop-architecture-artifact-improvement.reward-profile.json",
+    "dimensions": [
+      {
+        "id": "scope_binding",
+        "status": "pass",
+        "evidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/swebench-verified-hub-r1/working-memory-binding.json"
+        ]
+      },
+      {
+        "id": "reusable_artifact_selection",
+        "status": "pass",
+        "evidenceRefs": [
+          "workflow-check:reward-guided-artifact-improvement-round:passed"
+        ]
+      },
+      {
+        "id": "workflow_operation",
+        "status": "fail",
+        "evidenceRefs": [
+          "orca:run:run_6293d4ed78c7:frontier-held-before-worker-input"
+        ]
+      },
+      {
+        "id": "architecture_swarm_operation",
+        "status": "fail",
+        "evidenceRefs": [
+          "orca:failure:run_6293d4ed78c7:agent-prompt-blocked"
+        ]
+      },
+      {
+        "id": "deterministic_validation",
+        "status": "pass",
+        "evidenceRefs": [
+          "checker:agent-loop-v2:reward-evaluation:passed",
+          "checker:agent-loop-v2:evaluation-guided-improvement:passed",
+          "checker:workflow-composition-v2:reward-guided-round:passed"
+        ]
+      },
+      {
+        "id": "privacy_boundary",
+        "status": "pass",
+        "evidenceRefs": [
+          "policy:loop-assurance:composition-operability-evidence:metadata-only"
+        ]
+      },
+      {
+        "id": "resource_settlement",
+        "status": "pass",
+        "evidenceRefs": [
+          "orca:release:ctx_960d3fac9033:released",
+          "orca:release:ctx_0079ab77dc24:released"
+        ]
+      }
+    ],
+    "aggregation": "all_pass",
+    "rootReward": 0,
+    "failureClasses": [
+      "HARNESS_ADAPTER_GAP",
+      "ORCA_INPUT_ADMISSION_BLOCKED"
+    ]
+  },
+  "settlement": {
+    "resourceRefs": [
+      "orca:dispatch:ctx_960d3fac9033",
+      "orca:dispatch:ctx_0079ab77dc24"
+    ],
+    "reconciliationRef": "orca:run:run_6293d4ed78c7:failed-dispatches-released",
+    "state": "complete"
+  },
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "contentEvidenceRefs": []
+  },
+  "sourceRefs": [
+    "orca:run:run_6293d4ed78c7",
+    "artifacts/workflows/engineering-evaluation/reward-guided-artifact-improvement-round/workflow.json",
+    "artifacts/agent-loop/execution-preparation/tool-capability-resolution/tool-adapter/examples/orca-orchestration-pilot-adapter.example.json",
+    "artifacts/knowledge/tools/orca-cli-capability-profile.md"
+  ],
+  "createdAt": "2026-08-27T10:12:42Z",
+  "digest": "sha256:c9795afe4d755874d0b510e4900dc945a0f759d902302dbb0706a80d88b6cb14"
+}

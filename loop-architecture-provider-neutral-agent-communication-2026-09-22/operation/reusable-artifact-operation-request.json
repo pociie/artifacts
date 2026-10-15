@@ -1,0 +1,126 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:provider-neutral-agent-communication-hardening",
+  "requestRevision": "revision:v1",
+  "requestRelation": "refine_constraints",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/loop-architecture-provider-neutral-agent-communication-2026-09-22/operation/route-decision.json",
+    "decisionDigest": "sha256:0b26a8190ea7d981c69ecff21727352275c0ae233f3f2c549652e84f55f1aed2",
+    "effectiveMode": "loop"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:provider-neutral-agent-communication-builder",
+    "agencyRef": "artifacts/agents/requirement-realization/agents/artifact-builder.yaml",
+    "agencyDigest": "sha256:06ebe77c9b1b5754e6f2e749c470d9129854abe04690022b3156705f6f10410d",
+    "responsibilityClass": "builder",
+    "outcomeContract": "outcome:provider-neutral-human-readable-agent-communication",
+    "outputContract": "output:agent-architecture-coordination-component-increment-and-focused-validation",
+    "decisionScopes": [
+      "owner:loop-architecture-coordination",
+      "provider-neutral-message-and-handoff-semantics",
+      "human-readable-projection",
+      "focused-component-validation"
+    ],
+    "nonAuthority": [
+      "runtime-provider-activation",
+      "live-session-control",
+      "assignment-or-claim-transfer",
+      "artifact-acceptance",
+      "integration",
+      "fan-in-index-edit"
+    ]
+  },
+  "objective": "Improve the existing Agent Architecture Coordination Component so agent messages and handoffs can be planned, expressed in complete human-readable sentences, observed, acknowledged, and settled without depending on Orca orchestration semantics.",
+  "successEvidenceRefs": [
+    "evidence:provider-neutral-message-lifecycle-is-explicit",
+    "evidence:human-readable-instruction-and-explanation-contract-is-validated",
+    "evidence:manager-and-observer-views-cannot-infer-acknowledgement-or-acceptance-from-delivery",
+    "evidence:focused-component-tests-pass"
+  ],
+  "protectedConstraintRefs": [
+    "constraint:preserve-existing-unrelated-worktree-changes",
+    "constraint:keep-provider-handles-and-message-bodies-runtime-private",
+    "constraint:delivery-acknowledgement-application-acceptance-and-ownership-transfer-remain-distinct",
+    "constraint:no-orca-command-or-run-task-dispatch-identity-in-common-contract",
+    "constraint:no-fan-in-registry-or-global-index-edit"
+  ],
+  "nonGoalRefs": [
+    "non-goal:activate-a-runtime-message-adapter",
+    "non-goal:control-or-message-live-agent-sessions",
+    "non-goal:replace-requirement-context-handoff-semantic-ownership",
+    "non-goal:change-agent-swarm-membership-or-authority",
+    "non-goal:rewrite-adjacent-agent-loop-packages"
+  ],
+  "lifecycleIntent": "improve_existing",
+  "capabilities": [
+    "provider-neutral communication planning",
+    "human-readable instruction and explanation projection",
+    "message lifecycle observation",
+    "handoff acknowledgement and settlement separation"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "428a42e075cb9d5d66f87be50bf6b28b0ad29c1b597d88612f213a7634935779",
+  "allowedBaseClasses": ["loop_architecture_component"],
+  "allowedScopes": ["framework"],
+  "requiredFacts": ["owner", "scope", "consumer", "validation"],
+  "exactArtifactIds": ["loop-architecture-component:agent-architecture-coordination"],
+  "relationshipDepth": 1,
+  "maxCandidates": 6,
+  "contextBudget": {
+    "maxSourceMembers": 20,
+    "maxConsumerRefs": 12,
+    "maxValidationRefs": 12
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "Whether an active writer already owns any proposed source path inside the selected Component.",
+      "Whether the current role-context-projection algorithm already has a compatible extension point for provider-neutral message lifecycle evidence."
+    ],
+    "allowedRelationshipTypes": ["depends_on", "consumes", "validates"],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "consumer",
+      "effect",
+      "route_or_topology",
+      "lifecycle",
+      "protected_constraint"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "evidence:bounded-component-change-produced",
+      "evidence:provider-specific-dependency-is-absent-from-new-contract",
+      "evidence:adjacent-findings-reported-not-executed"
+    ],
+    "validationRefs": [
+      "validation:reusable-artifact-operation-request-v2",
+      "validation:agent-architecture-coordination-focused-tests",
+      "validation:loop-architecture-component-check"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "loop-budget:one-component-one-revision:v1",
+  "dataClassification": "internal",
+  "effectIntent": "local_write",
+  "externalSearchAllowed": true,
+  "constructionAllowed": true,
+  "residualGapProven": true,
+  "requestDigest": "0a152064e336267354291a4666ec1d33f19e1f0b9bdf8d2beb9b22dee5a8fc88"
+}

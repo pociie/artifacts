@@ -1,0 +1,71 @@
+{
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "schemaVersion": 3,
+  "authorityEffect": "none",
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-5",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r12",
+  "eventCursor": 2,
+  "eventHeadSha256": "aca0934c7d0edfc110539b47b07335d90f82b0da932e5b445b8cf55a34848c65",
+  "maxConcurrency": 1,
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "proposalId": "proposal:population-shard-5:aarr-aarri-bench:r12",
+      "laneId": "population-shard-5",
+      "workerId": "worker:harbor-population-shard-5:r12-controller",
+      "itemId": "aarr/aarri-bench"
+    }
+  ],
+  "rejected": [],
+  "commitPrecondition": {
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r12",
+    "eventCursor": 2,
+    "eventHeadSha256": "aca0934c7d0edfc110539b47b07335d90f82b0da932e5b445b8cf55a34848c65"
+  },
+  "resolverOutput": {
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-5",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r12",
+    "eventCursor": 2,
+    "eventHeadSha256": "aca0934c7d0edfc110539b47b07335d90f82b0da932e5b445b8cf55a34848c65",
+    "maxConcurrency": 1,
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "proposalId": "proposal:population-shard-5:aarr-aarri-bench:r12",
+        "laneId": "population-shard-5",
+        "workerId": "worker:harbor-population-shard-5:r12-controller",
+        "itemId": "aarr/aarri-bench"
+      }
+    ],
+    "rejected": [],
+    "commitPrecondition": {
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r12",
+      "eventCursor": 2,
+      "eventHeadSha256": "aca0934c7d0edfc110539b47b07335d90f82b0da932e5b445b8cf55a34848c65"
+    },
+    "authorityEffect": "none"
+  },
+  "resolverOutputDigest": "sha256:8a48d31106edec417dfb961fbf82c079cddd9b1cd185f9af4c3ac336f5b20068",
+  "claimInputRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r12/claim-input.r12.json",
+  "claimInputDigest": "sha256:36af0715cb393f7021ca6dbdfd02bb1d4f3d017131291fc62709069adad05e0e",
+  "item": {
+    "itemId": "aarr/aarri-bench",
+    "identityDigest": "sha256:8f2af7a5ed55e6692d7c0490f14203cbdbf14c6db7b61c7bd3313b820df15456",
+    "inventoryOrdinal": 15,
+    "planSequence": 1,
+    "terminalDispositionPresentBeforeClaim": false,
+    "activeClaimPresentBeforeClaim": false,
+    "frozenAssignment": true
+  },
+  "claimStatus": "admitted_report_only",
+  "runtimeQueueMutation": false,
+  "runtimeQueueOwnerCommitRequired": true,
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "runtimeHandlesStored": false,
+    "credentialValuesStored": false
+  },
+  "digest": "sha256:2de3e159647d164c385ccce52e41a71f0de44056faa92b582287f3dc0a759f82"
+}

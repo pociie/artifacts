@@ -1,0 +1,304 @@
+{
+  "kind": "engineering-workset-independent-evaluation/v1",
+  "schemaVersion": 1,
+  "status": "final",
+  "authorityEffect": "none",
+  "evaluationId": "harbor-shard-1-catch2-1843-independent-evaluation-r7",
+  "evaluatorRoleRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:evaluator",
+  "independentValidatorRoleRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:independent-validator",
+  "oracleOwnerRoleRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:oracle",
+  "subjectRoleRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:subject",
+  "simulationEvidenceRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/round-r7/engineering-workset-simulation-evidence.r7.json",
+  "simulationEvidenceDigest": "sha256:2d7224a31ad2d00522d83e75cd2911d7dc24f3326e0b8f4c693b4d9cd8734bb8",
+  "frozenInputs": {
+    "taskDigest": "sha256:ee03b97f71bf59edc1ae109f1a6d7277d8cb9ecd58f206f8fc1caa2ae8fd5dc2",
+    "environmentDigest": "sha256:537d29235385b880e732fd6e822d066c60679e1ce835ffd8ca6007aaa0a5a2ba",
+    "requestDigest": "sha256:9a9bac1ca3d32003eb4a7dd77d39e636a479abd31a8ba6b79e37e9404a3bee53",
+    "verifierDigest": "sha256:d1a7b60df83a72fc820ce76f1883d30dc36f3980ce7570692f7fe30e98ce5b7e"
+  },
+  "independenceCheck": {
+    "state": "supported",
+    "subjectOracleEvaluatorValidatorDistinct": true,
+    "verifierBoundarySeparate": true,
+    "evidenceRefs": [
+      "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-subject-receipt",
+      "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-verifier-receipt",
+      "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-qualification"
+    ]
+  },
+  "outcome": {
+    "state": "passed",
+    "reward": 1.0,
+    "testCount": null,
+    "passedTests": null,
+    "failedTests": null,
+    "resultEvidenceRefs": [
+      "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-verifier-receipt",
+      "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-subject-receipt"
+    ]
+  },
+  "artifactLifecycle": {
+    "discover": {
+      "state": "operated",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:public-import-probe"
+      ]
+    },
+    "reuse": {
+      "state": "operated",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-3:harbor-provider-qualification",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:credential-mechanism-comparison"
+      ]
+    },
+    "create": {
+      "state": "operated",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:representative-task-binding",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation"
+      ]
+    },
+    "update": {
+      "state": "not_applicable",
+      "evidenceRefs": [],
+      "limitations": ["no tracked reusable source mutation was authorized"]
+    },
+    "split": {
+      "state": "not_applicable",
+      "evidenceRefs": [],
+      "limitations": ["one bounded item was evaluated"]
+    },
+    "merge": {
+      "state": "operated",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:terminal-reward-round"
+      ]
+    },
+    "dynamicComposition": {
+      "state": "operated",
+      "required": true,
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:credential-mechanism-comparison",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:terminal-reward-round"
+      ],
+      "residualGapRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:dynamic-codex-auth-json",
+      "validityWindowRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:dynamic-validity-window",
+      "fallbackRef": "hold-only-the-exact-attempted-item-and-wake-on-a-fresh-forced-auth-json-receipt"
+    }
+  },
+  "qualityDimensions": [
+    {
+      "dimensionId": "requirement_understanding",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:context-reconciliation-consumption"
+      ]
+    },
+    {
+      "dimensionId": "operability",
+      "score": 0.9,
+      "state": "partial",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-qualification"
+      ]
+    },
+    {
+      "dimensionId": "routing",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:route-decision-postqualification",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:topology-selection-decision-postqualification"
+      ]
+    },
+    {
+      "dimensionId": "reasoning_control",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation"
+      ]
+    },
+    {
+      "dimensionId": "context_adaptation",
+      "score": 0.9,
+      "state": "partial",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:context-reconciliation-consumption",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:credential-mechanism-comparison"
+      ]
+    },
+    {
+      "dimensionId": "workflow",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:coordination-closure"
+      ]
+    },
+    {
+      "dimensionId": "agent_architecture",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-subject-receipt",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-verifier-receipt"
+      ]
+    },
+    {
+      "dimensionId": "agent_swarm",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:swarm-qualification-postqualification"
+      ]
+    },
+    {
+      "dimensionId": "artifact_discovery",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:public-import-probe"
+      ]
+    },
+    {
+      "dimensionId": "artifact_reuse",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:credential-mechanism-comparison"
+      ]
+    },
+    {
+      "dimensionId": "artifact_creation",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation"
+      ]
+    },
+    {
+      "dimensionId": "artifact_update",
+      "score": null,
+      "state": "not_applicable",
+      "evidenceRefs": []
+    },
+    {
+      "dimensionId": "artifact_split",
+      "score": null,
+      "state": "not_applicable",
+      "evidenceRefs": []
+    },
+    {
+      "dimensionId": "artifact_merge",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:terminal-reward-round"
+      ]
+    },
+    {
+      "dimensionId": "dynamic_artifact_composition",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:credential-mechanism-comparison",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation"
+      ]
+    },
+    {
+      "dimensionId": "loop_architecture_quality",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:coordination-closure"
+      ]
+    },
+    {
+      "dimensionId": "evidence_quality",
+      "score": 0.9,
+      "state": "partial",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation",
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-verifier-receipt"
+      ]
+    },
+    {
+      "dimensionId": "outcome_quality",
+      "score": 1.0,
+      "state": "supported",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-verifier-receipt"
+      ]
+    },
+    {
+      "dimensionId": "efficiency",
+      "score": 0.8,
+      "state": "partial",
+      "evidenceRefs": [
+        "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:provider-runtime-observation"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "findingId": "license-metadata-gap",
+      "ownerRoute": "HARNESS_ADAPTER_GAP",
+      "severity": "major",
+      "state": "open",
+      "summary": "Imported task metadata did not expose a license receipt; no source license text was copied."
+    },
+    {
+      "findingId": "network-enforcement-gap",
+      "ownerRoute": "ENVIRONMENT_GAP",
+      "severity": "major",
+      "state": "open",
+      "summary": "The task declared allow_internet=true, while restricted network enforcement was not independently observed."
+    },
+    {
+      "findingId": "target-platform-receipt-gap",
+      "ownerRoute": "ENVIRONMENT_GAP",
+      "severity": "major",
+      "state": "open",
+      "summary": "The host/container path was arm64 with amd64 emulation; Harbor did not expose a target-platform receipt."
+    },
+    {
+      "findingId": "budget-cap-gap",
+      "ownerRoute": "EFFICIENCY_GAP",
+      "severity": "minor",
+      "state": "open",
+      "summary": "Usage and cost were observed, but no monetary budget cap was supplied."
+    }
+  ],
+  "limitations": [
+    "one representative task was executed in this controller window",
+    "license_metadata_unobserved",
+    "restricted_network_enforcement_unobserved",
+    "target_platform_receipt_unexposed_on_arm64_host",
+    "monetary_budget_cap_not_supplied",
+    "verifier_environment_mode_not_exposed",
+    "independent_review_pending",
+    "no auth value was read or copied",
+    "no tracked reusable source mutation, promotion, or acceptance authority was exercised"
+  ],
+  "settlement": {
+    "state": "complete",
+    "resourceCount": 6,
+    "evidenceRefs": [
+      "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:settlement-ledger",
+      "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-subject-receipt",
+      "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-1:round-r7:harbor-verifier-receipt"
+    ]
+  },
+  "sourceRefs": [
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/round-r7/engineering-workset-simulation-evidence.r7.json",
+    ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/round-r7/provider-qualification.json",
+    ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/round-r7/credential-mechanism-comparison.r7.json",
+    "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md",
+    "artifacts/agent-loop/assessment/engineering-workset-simulation/scripts/check_simulation_evidence.py"
+  ],
+  "createdAt": "2026-08-28T13:52:07.197617Z",
+  "digest": "sha256:5b1ad2b9511c821c2ec69b375ad4340e928f99973ba08610cd6d66df11f8a5e8"
+}

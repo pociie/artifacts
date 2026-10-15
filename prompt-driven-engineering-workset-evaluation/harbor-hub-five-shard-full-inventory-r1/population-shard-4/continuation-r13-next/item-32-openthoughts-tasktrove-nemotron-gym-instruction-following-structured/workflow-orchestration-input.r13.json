@@ -1,0 +1,102 @@
+{
+  "entryNodeIds": ["mode-reasoning-assistance"],
+  "joins": [
+    {
+      "nodeId": "subject-operation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["mode-reasoning-assistance"]
+    },
+    {
+      "nodeId": "operation-observation",
+      "policy": "all_required",
+      "requiredPredecessorIds": ["subject-operation"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "mode-reasoning-assistance",
+      "predecessorIds": [],
+      "required": true
+    },
+    {
+      "id": "subject-operation",
+      "predecessorIds": ["mode-reasoning-assistance"],
+      "required": true
+    },
+    {
+      "id": "operation-observation",
+      "predecessorIds": ["subject-operation"],
+      "required": true
+    }
+  ],
+  "observations": [
+    {
+      "nodeId": "mode-reasoning-assistance",
+      "outputReady": true,
+      "settled": true,
+      "state": "completed"
+    },
+    {
+      "nodeId": "subject-operation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    },
+    {
+      "nodeId": "operation-observation",
+      "outputReady": false,
+      "settled": false,
+      "state": "not_started"
+    }
+  ],
+  "terminalNodeIds": ["operation-observation"],
+  "topologyBindings": [
+    {
+      "coordinationPlanDecisionSha256": "229d3eb0f72f4049a39fa0ff012f672e244954dd0cb7533f5ce4bc21b29c0a42",
+      "nodeId": "mode-reasoning-assistance",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-32-openthoughts-tasktrove-nemotron-gym-instruction-following-structured/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-32-openthoughts-tasktrove-nemotron-gym-instruction-following-structured/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "09c6cb4078a1074cfd87a83866c7ed1843ec5b1db91143a582dd7e8c1476ba63",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "18e74dc857ff262d75a709214ddcc6916b9d7a445627cb2fb78936eea9d2240c",
+      "topologySelectionDecisionSha256": "f3d26389ecf0a11a9efc0b3b8986941819adcc98fc2e79a31cc7a570a136b608"
+    },
+    {
+      "coordinationPlanDecisionSha256": "229d3eb0f72f4049a39fa0ff012f672e244954dd0cb7533f5ce4bc21b29c0a42",
+      "nodeId": "subject-operation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-32-openthoughts-tasktrove-nemotron-gym-instruction-following-structured/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-32-openthoughts-tasktrove-nemotron-gym-instruction-following-structured/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "09c6cb4078a1074cfd87a83866c7ed1843ec5b1db91143a582dd7e8c1476ba63",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "18e74dc857ff262d75a709214ddcc6916b9d7a445627cb2fb78936eea9d2240c",
+      "topologySelectionDecisionSha256": "f3d26389ecf0a11a9efc0b3b8986941819adcc98fc2e79a31cc7a570a136b608"
+    },
+    {
+      "coordinationPlanDecisionSha256": "229d3eb0f72f4049a39fa0ff012f672e244954dd0cb7533f5ce4bc21b29c0a42",
+      "nodeId": "operation-observation",
+      "operationQualificationEvidenceRefs": [
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-32-openthoughts-tasktrove-nemotron-gym-instruction-following-structured/execution-structure-admission-decision.r13.json",
+        ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-32-openthoughts-tasktrove-nemotron-gym-instruction-following-structured/subject-operation-request.r13.json"
+      ],
+      "operationState": "qualified",
+      "routeDecisionSha256": "09c6cb4078a1074cfd87a83866c7ed1843ec5b1db91143a582dd7e8c1476ba63",
+      "status": "ready",
+      "targetScope": "effective_primary",
+      "topologyRequirement": "architecture_only",
+      "topologyRequirementDecisionSha256": "18e74dc857ff262d75a709214ddcc6916b9d7a445627cb2fb78936eea9d2240c",
+      "topologySelectionDecisionSha256": "f3d26389ecf0a11a9efc0b3b8986941819adcc98fc2e79a31cc7a570a136b608"
+    }
+  ],
+  "workflowRef": "artifacts/workflows/agentic-execution/prompt-driven-subject-operation/workflow.json",
+  "workflowRevision": "v3-dynamic-artifact-context"
+}

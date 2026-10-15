@@ -1,0 +1,163 @@
+{
+  "kind": "reusable-artifact-operation-request/v2",
+  "schemaVersion": 2,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "requestId": "request:book-pdf-source-analysis-collaboration-v3",
+  "requestRevision": "revision:v3",
+  "requestRelation": "refine_constraints",
+  "routeBinding": {
+    "decisionRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/route-decision.json",
+    "decisionDigest": "sha256:239861144aa10b8e73b8beae8bc87d10bbfef64b125c4664157b62ff36a3149a",
+    "effectiveMode": "orchestration"
+  },
+  "subject": {
+    "subjectRef": "agent-subject:source-analysis-coordinator",
+    "agencyRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/coordination-v3/source-analysis-coordinator-agency.json",
+    "agencyDigest": "sha256:a6991012bb429e1b943a3e53fb964ba05fb8f09251caa69a50232793b60a2173",
+    "responsibilityClass": "orchestrator",
+    "outcomeContract": "outcome:settled-sanitized-collaboration-candidate",
+    "outputContract": "output:contribution-packets-candidate-bundle-validation-and-holds",
+    "decisionScopes": [
+      "admit-settled-contribution-packets",
+      "bind-current-reusable-owner-contracts",
+      "compose-task-local-candidate",
+      "validate-non-authority-and-ownership-separation"
+    ],
+    "nonAuthority": [
+      "AGENTS.md-editing",
+      "canonical-framework-modification",
+      "agent-or-profile-activation",
+      "dynamic-blueprint-activation",
+      "output-acceptance-or-publication",
+      "peer-memory-materialization"
+    ]
+  },
+  "objective": "Inspect current reusable coverage and compose a bounded task-local collaboration candidate from settled source-analysis, visual-specification, and session-context packets without changing canonical reusable artifacts.",
+  "successEvidenceRefs": [
+    "evidence:workspace-memory-binding-valid",
+    "evidence:source-analysis-packet-settled",
+    "evidence:visual-specification-packet-settled",
+    "evidence:session-context-packet-settled",
+    "evidence:collaboration-candidate-ownership-separated",
+    "evidence:activation-and-acceptance-remain-unmade"
+  ],
+  "protectedConstraintRefs": [
+    "constraint:AGENTS-md-untouched",
+    "constraint:mutable-state-only-in-collab-memory",
+    "constraint:sanitized-evidence-only-in-collab-artifacts",
+    "constraint:reusable-source-only-in-loop-architecture",
+    "constraint:no-private-or-runtime-handle-publication",
+    "constraint:settled-packets-before-role-candidate-composition"
+  ],
+  "nonGoalRefs": [
+    "non-goal:canonical-framework-change",
+    "non-goal:agent-activation",
+    "non-goal:pdf-writer-editor-validator-activation",
+    "non-goal:final-pdf-acceptance",
+    "non-goal:peer-memory-merge",
+    "non-goal:source-repository-mutation"
+  ],
+  "lifecycleIntent": "inspect",
+  "capabilities": [
+    "working memory binding",
+    "execution routing",
+    "agent agency and contribution ownership",
+    "dynamic agent composition",
+    "document and PDF production",
+    "evidence claim and validation packets"
+  ],
+  "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+  "inventoryDigest": "428a42e075cb9d5d66f87be50bf6b28b0ad29c1b597d88612f213a7634935779",
+  "allowedBaseClasses": [
+    "workflow",
+    "loop",
+    "loop_architecture_component",
+    "loop_architecture_composition",
+    "agent_profile",
+    "agent_architecture",
+    "contract_checker",
+    "knowledge_reference",
+    "dynamic_blueprint"
+  ],
+  "allowedScopes": [
+    "framework",
+    "team",
+    "personal"
+  ],
+  "requiredFacts": [
+    "owner",
+    "scope",
+    "consumer",
+    "validation"
+  ],
+  "exactArtifactIds": [],
+  "relationshipDepth": 1,
+  "maxCandidates": 20,
+  "contextBudget": {
+    "maxSourceMembers": 24,
+    "maxConsumerRefs": 16,
+    "maxValidationRefs": 16
+  },
+  "scopeControl": {
+    "namedUnresolvedFacts": [
+      "Which registered profiles already cover PDF writer, editor, and validator responsibilities.",
+      "Whether any residual responsibility gap justifies a task-specific dynamic-blueprint candidate.",
+      "Which exact reusable owners should be referenced by the session-context and contribution packets.",
+      "Whether all source-analysis and visual contribution packets have settled without conflict."
+    ],
+    "allowedRelationshipTypes": [
+      "defines",
+      "consumes",
+      "depends_on",
+      "validates",
+      "generates",
+      "binds_capability",
+      "observed_in"
+    ],
+    "expansionRule": "named_unresolved_fact_must_materially_change_routing_delivery_or_acceptance",
+    "adjacentFindingDisposition": "report_only_follow_up",
+    "onBudgetExhaustion": "narrow_and_continue"
+  },
+  "changeControl": {
+    "materialChangeTriggers": [
+      "objective",
+      "native_owner",
+      "artifact_revision",
+      "public_contract",
+      "consumer",
+      "effect",
+      "route_or_topology",
+      "lifecycle",
+      "protected_constraint"
+    ],
+    "onMaterialChange": "signal_and_return_to_structural_owner",
+    "silentWideningAllowed": false
+  },
+  "completion": {
+    "terminalEvidenceRefs": [
+      "evidence:bounded-reusable-coverage-inspected",
+      "evidence:task-local-candidate-composed-after-settlement",
+      "evidence:adjacent-improvements-unexecuted",
+      "evidence:canonical-source-unchanged"
+    ],
+    "validationRefs": [
+      "validation:reusable-artifact-operation-request-v2",
+      "validation:working-memory-binding-v1",
+      "validation:contribution-packet-digests",
+      "validation:candidate-ownership-and-non-authority-review"
+    ],
+    "stopWhenSatisfied": true,
+    "optionalImprovementDisposition": "report_only_follow_up",
+    "decisionBasisRequired": true,
+    "evidenceAndLimitationsRequired": true
+  },
+  "lifecycleBudgetRef": "loop-budget:book-pdf-source-analysis-collaboration:v3",
+  "dataClassification": "internal",
+  "effectIntent": "read",
+  "externalSearchAllowed": false,
+  "constructionAllowed": false,
+  "residualGapProven": false,
+  "requestDigest": "6f38cf362b41c66550a58578e9c81837b49b0c534edb8465bc22c89fd630354b"
+}

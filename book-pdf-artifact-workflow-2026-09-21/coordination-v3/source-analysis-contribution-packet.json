@@ -1,0 +1,212 @@
+{
+  "kind": "sanitized-source-analysis-contribution-packet/v1",
+  "packetId": "contribution:claude-code-source-analysis:v1",
+  "status": "received_pending_independent_validation",
+  "source": {
+    "repository": "https://github.com/stupidhumans/claude-code-source-code/",
+    "revision": "2ca5ddabfed5f220812ea11f029eda03b21bc4c1",
+    "tree": "1b6b4ab07d0d7b795129852183137c28099c5550",
+    "snapshotLabel": "Claude Code v2.1.88",
+    "authorityBoundary": "third-party recovered snapshot; not official Anthropic source or current-product authority"
+  },
+  "contributors": [
+    {
+      "roleRef": "agent-role:source-analysis-read-only-reviewer:algorithms",
+      "contributionId": "source-analysis:algorithms",
+      "deliveryState": "received",
+      "resourceState": "released",
+      "claimAdmissionState": "pending_independent_validation",
+      "fileMutation": "none"
+    },
+    {
+      "roleRef": "agent-role:source-analysis-read-only-reviewer:project-operations",
+      "contributionId": "source-analysis:project-operations",
+      "deliveryState": "received",
+      "resourceState": "released",
+      "claimAdmissionState": "pending_independent_validation",
+      "fileMutation": "none"
+    },
+    {
+      "roleRef": "agent-role:source-analysis-read-only-reviewer:modularity",
+      "contributionId": "source-analysis:modularity",
+      "deliveryState": "received",
+      "resourceState": "released",
+      "claimAdmissionState": "pending_independent_validation",
+      "fileMutation": "none"
+    }
+  ],
+  "algorithmCandidates": [
+    {
+      "rank": 1,
+      "id": "ALG-TURN-LOOP",
+      "title": "generator-driven query state and bounded continuation",
+      "codeShape": "state-machine",
+      "evidenceRefs": ["src/query.ts"],
+      "state": "proposed"
+    },
+    {
+      "rank": 2,
+      "id": "ALG-EFFECT-INTERPRETER",
+      "title": "tool proposal to authorized effect",
+      "codeShape": "interpreter",
+      "evidenceRefs": ["src/services/tools/toolExecution.ts", "src/services/tools/toolHooks.ts"],
+      "state": "proposed"
+    },
+    {
+      "rank": 3,
+      "id": "ALG-STREAM-REDUCER",
+      "title": "provider stream reduction and mutable finalization",
+      "codeShape": "reducer",
+      "evidenceRefs": ["src/services/api/claude.ts"],
+      "state": "proposed"
+    },
+    {
+      "rank": 4,
+      "id": "ALG-TRANSCRIPT-APPEND",
+      "title": "queued JSONL journal and parent topology",
+      "codeShape": "journal",
+      "evidenceRefs": ["src/utils/sessionStorage.ts", "src/QueryEngine.ts"],
+      "state": "proposed"
+    },
+    {
+      "rank": 5,
+      "id": "ALG-RESUME-GRAPH",
+      "title": "transcript reconstruction, relink, and repair",
+      "codeShape": "graph-transform",
+      "evidenceRefs": ["src/utils/sessionStorage.ts"],
+      "state": "proposed"
+    },
+    {
+      "rank": 6,
+      "id": "ALG-API-NORMALIZATION",
+      "title": "lossy provider-message compiler and pairing repair",
+      "codeShape": "compiler",
+      "evidenceRefs": ["src/services/api/claude.ts", "src/utils/messages.ts"],
+      "state": "proposed"
+    },
+    {
+      "rank": 7,
+      "id": "ALG-TOOL-SCHEDULER",
+      "title": "input-dependent concurrency and deterministic context folding",
+      "codeShape": "scheduler",
+      "evidenceRefs": ["src/services/tools/toolOrchestration.ts", "src/services/tools/StreamingToolExecutor.ts"],
+      "state": "proposed"
+    },
+    {
+      "rank": 8,
+      "id": "ALG-COMPACTION-MIGRATION",
+      "title": "lossy context migration with bounded retries",
+      "codeShape": "migration",
+      "evidenceRefs": ["src/services/compact/autoCompact.ts", "src/services/compact/compact.ts"],
+      "state": "proposed"
+    },
+    {
+      "rank": 9,
+      "id": "ALG-FILE-EDIT-COMMIT",
+      "title": "optimistic concurrency plus atomic-replace attempt",
+      "codeShape": "optimistic-commit",
+      "evidenceRefs": ["src/tools/FileEditTool/FileEditTool.ts", "src/utils/file.ts"],
+      "state": "proposed"
+    },
+    {
+      "rank": 10,
+      "id": "ALG-QUERY-ENGINE-PROJECTION",
+      "title": "headless conversation owner and terminal SDK result",
+      "codeShape": "projection-adapter",
+      "evidenceRefs": ["src/QueryEngine.ts", "src/utils/queryHelpers.ts"],
+      "state": "proposed"
+    },
+    {
+      "rank": 11,
+      "id": "ALG-INPUT-DISPATCH",
+      "title": "local command and prompt classification with remote safety gate",
+      "codeShape": "decision-table",
+      "evidenceRefs": ["src/utils/processUserInput/processUserInput.ts"],
+      "state": "proposed"
+    },
+    {
+      "rank": 12,
+      "id": "ALG-REMOTE-RECONNECT",
+      "title": "bounded WebSocket recovery",
+      "codeShape": "state-machine",
+      "evidenceRefs": ["src/remote/SessionsWebSocket.ts"],
+      "state": "proposed"
+    }
+  ],
+  "projectOperationsCandidate": {
+    "state": "proposed",
+    "finding": "Use an event-driven evidence program rather than simulate an upstream product team.",
+    "lifecycles": [
+      "program: draft -> frozen -> executing -> integrating -> validating -> accepted_or_closed",
+      "claim: proposed -> observed -> corroborated -> accepted_or_rejected_or_unknown_or_superseded",
+      "contribution: planned -> dispatched -> in_progress -> reported -> evidence_reviewed -> settled"
+    ],
+    "gates": [
+      "G0 source freeze and authority boundary",
+      "G1 bounded work readiness",
+      "G2 atomic claim admission",
+      "G3 contribution receipt and evidence review",
+      "G4 synthesis and conflict retention",
+      "G5 release or bounded close",
+      "RG material-change replan"
+    ],
+    "limitations": [
+      "No official upstream team, license grant, current product state, or acceptance authority is established.",
+      "Build, runtime parity, and standard test execution remain unproven.",
+      "Worker completion proves delivery only, not claim acceptance."
+    ]
+  },
+  "modularityCandidate": {
+    "state": "proposed",
+    "physicalTopologyFindings": [
+      "1884 TypeScript or TSX implementation files in 36 top-level groups",
+      "8626 of 13219 resolved import occurrences cross physical top-level groups",
+      "35 of 36 top-level groups participate in one group-level strongly connected component",
+      "617 internal import occurrences remain unresolved across 250 raw specifier strings"
+    ],
+    "measurementConflicts": [
+      "The original analyzer prints groupEdges=40 because it reports the sliced top-40 list; the reviewer measured 313 distinct cross-group edges.",
+      "The original resolver can admit directories before index files; corrected file-only resolution measured 12889 unique resolved file edges.",
+      "All graph counts are lower bounds because unpublished modules and nonliteral dynamic imports are absent."
+    ],
+    "semanticModules": [
+      "M1 composition-routing",
+      "M2 turn-engine",
+      "M3 effect-runtime",
+      "M4 built-in-effects-and-presenters",
+      "M5 session-recovery",
+      "M6 extension-runtime",
+      "M7 surface-adapters",
+      "M8 platform-adapters"
+    ],
+    "sequence": "characterize first, introduce leaf contracts and compatibility facades, shrink broad contexts, invert concrete dependencies, split pure recovery codecs from adapters, expand injection seams, consolidate one vertical extension at a time, then retire barrels and shims only after differential validation"
+  },
+  "claimPolicy": {
+    "labels": [
+      "source-observed",
+      "bounded-inference",
+      "repository-authored",
+      "unknown"
+    ],
+    "admission": "Every material source anchor and corrected metric must be reopened by an independent validator before corroboration or acceptance.",
+    "rawReportsPersisted": false
+  },
+  "validation": {
+    "contributorChecks": [
+      "exact source revision and clean tracked worktree checked",
+      "analysis script syntax checked",
+      "selected source ranges reopened by each reviewer"
+    ],
+    "independentValidation": "pending",
+    "acceptance": "not_performed",
+    "settlement": "not_claimed"
+  },
+  "invalidatedBy": [
+    "source revision or tree change",
+    "corrected graph semantics",
+    "newly recovered missing modules",
+    "contradictory runtime or provider evidence",
+    "claim or artifact contract change"
+  ],
+  "authorityEffect": "none"
+}

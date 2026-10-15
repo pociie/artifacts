@@ -1,0 +1,102 @@
+{
+  "agentArchitectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+  "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+  "agentSwarmDigest": null,
+  "agentSwarmRef": null,
+  "authorityEffect": "none",
+  "controllerMaySelect": false,
+  "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+  "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+  "decisionBindings": [
+    {
+      "decisionKind": "route",
+      "digest": "sha256:943dbb30d13161729b143091079f6175dc26dd66ec4182cda2e690a02fda7c52",
+      "ref": "continuation-r13/route-decision.r13.json"
+    },
+    {
+      "decisionKind": "reasoning_control",
+      "digest": "sha256:7d7e4ab6b0b0085b5a99fdd69d1f83306dd41c4f8fdaab3cf6fba54fb1ed5678",
+      "ref": "continuation-r13/mode-reasoning-control-decision.r13.json"
+    },
+    {
+      "decisionKind": "reasoning_envelope",
+      "digest": "sha256:674ad5e1ebf39f6ad53b446fd5d89d6ea5053fcbd1158e0c7e45b73de121a125",
+      "ref": "continuation-r13/mode-reasoning-envelope.r13.json"
+    },
+    {
+      "decisionKind": "artifact_reuse",
+      "digest": "sha256:e332670843289d6b7254ad4dd3cd8af3d0a906f7425cea765ee29d19049fd667",
+      "ref": "continuation-r13/artifact-discovery.r13.json"
+    },
+    {
+      "decisionKind": "subject_operation_scope",
+      "digest": "sha256:73bd7f226f9a4eaf0675f771611fedc02188b2e9bba9d88d2d878bc163c4d5fb",
+      "ref": "continuation-r13/subject-operation-scope-binding.r13.json"
+    },
+    {
+      "decisionKind": "topology_requirement",
+      "digest": "sha256:cf536809bfb6feaec804fe6dacc024d8099ab782cf63eba701c59f626c126ec4",
+      "ref": "continuation-r13/topology-requirement.r13.json"
+    },
+    {
+      "decisionKind": "workflow_pattern",
+      "digest": "sha256:f85ac03bfe1f94372489be96ed485ff8cad6e2c2866de756da83880aafd9673a",
+      "ref": "continuation-r13/workflow-pattern-qualification.r13.json"
+    },
+    {
+      "decisionKind": "topology_selection",
+      "digest": "sha256:8dea0d51fad5f89bc7a14a43d78efeae00083a7d9fdcc4ce037f35ef9d939a31",
+      "ref": "continuation-r13/architecture-selection.r13.json"
+    },
+    {
+      "decisionKind": "coordination_plan",
+      "digest": "sha256:aff1a6a70e8d020f0fcd85e7052da1b334dd9722287bb0f62226eec121209efd",
+      "ref": "continuation-r13/coordination-decision.r13.json"
+    },
+    {
+      "decisionKind": "role_context_projection",
+      "digest": "sha256:d0058fc12e2edbc5b5b0214eca07606f5458fb97787fee671b6b8a5d24f16c55",
+      "ref": "continuation-r13/role-context-projection.r13.json"
+    }
+  ],
+  "kind": "subject-topology-operation-request/v1",
+  "mode": "single_task",
+  "operationContracts": {
+    "executionRecordSchemaRef": "artifacts/agent-loop/work/workflow-pattern-execution/schemas/workflow-pattern-execution-record-v2.schema.json",
+    "packetSchemaRef": "artifacts/agent-loop/work/workflow-pattern-execution/schemas/subject-operation-packet.schema.json",
+    "receiptSchemaRef": "artifacts/agent-loop/work/workflow-pattern-execution/schemas/subject-topology-operation-receipt-v2.schema.json",
+    "roleResultSchemaRef": "artifacts/agent-loop/work/workflow-pattern-execution/schemas/subject-role-operation-result.schema.json"
+  },
+  "requestId": "subject-operation:harbor-hub-five-shard-full-inventory-r1:population-shard-2:abhishek203/task-aw:r13",
+  "requestRevision": "harbor-context-and-compound-routing-r13:population-shard-2:abhishek203/task-aw:resolve-six-mode-route",
+  "responsibilitySlots": [
+    {
+      "profileDigest": "sha256:3c84136e80f99bc44c4f2f1be8d9349887389da826574d60c2531195c8f35489",
+      "profileRef": "artifacts/agents/agent-operation/agents/work-orchestration-coordinator.yaml",
+      "required": true,
+      "responsibilityClass": "orchestrator",
+      "roleId": "coordinator"
+    },
+    {
+      "profileDigest": "sha256:94a3ec55600f73dc4b6222b2a713b03d5b1da8b64fef6af751ea981d88900aa5",
+      "profileRef": "artifacts/agents/engineering/agents/source-evidence-reviewer.yaml",
+      "required": true,
+      "responsibilityClass": "validator",
+      "roleId": "validator"
+    }
+  ],
+  "runtimeBinding": {
+    "capabilityEvidenceDigest": "sha256:1cffa378946dc5573322336ebb3de034298b47d2f8c07d3cef6b4d193b4324a2",
+    "capabilityEvidenceRef": "continuation-r13/provider-observation.r13.json",
+    "controllerActorRef": "controller:harbor-population-shard-2:r13",
+    "providerRef": "provider:harbor:codex-cli:gpt-5.6-luna",
+    "subjectRuntimeRef": "runtime:harbor-custom-agent:subject-topology:v1"
+  },
+  "schemaVersion": 1,
+  "status": "report_only",
+  "subjectOwnsActivation": true,
+  "subjectRef": "workset:abhishek203/task-aw",
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "workflowPatternId": "pipeline"
+}

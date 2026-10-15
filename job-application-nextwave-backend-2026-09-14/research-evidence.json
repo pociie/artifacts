@@ -1,0 +1,89 @@
+{
+  "kind": "job-application-research-evidence/v1",
+  "schema_version": 1,
+  "run_id": "job-application-nextwave-backend-2026-09-14",
+  "captured_on": "2026-09-14",
+  "language": "ko",
+  "company_and_posting": {
+    "company_name": "넥스트웨이브 테크",
+    "role": "백엔드 개발자",
+    "company_url": "https://www.nextwave-tech.example",
+    "posting_url": "https://careers.nextwave-tech.example/jobs/backend-engineer",
+    "verification_status": "unavailable",
+    "reason": "제공된 .example 주소가 실제 회사·채용 페이지로 확인되지 않아 원문과 회사 고유 맥락을 독립 검증할 수 없었다.",
+    "usable_input": "사용자가 제공한 공고 요약(Java/Spring, REST API, 데이터베이스 모델링, 대규모 트래픽, 서비스 안정성 개선)만 직무 요구로 사용했다."
+  },
+  "public_sources": [
+    {
+      "id": "source-github-profile",
+      "uri": "https://github.com/judangs",
+      "source_type": "applicant_statement",
+      "access_status": "observed",
+      "claims": [
+        "Spring 기반 애플리케이션 개발과 백엔드 시스템 설계·개발을 지향한다고 공개적으로 설명한다.",
+        "객체지향, 애플리케이션 서비스 구조·아키텍처, 도메인 모델링, 책임 기반 구조, 유지보수성과 확장성을 관심사로 제시한다.",
+        "공개 프로필에서 Service/payvue 콘셉트와 핀테크 맥락을 소개한다."
+      ],
+      "limits": ["프로필 문구만으로 실제 업무 경력, 운영 경험, 개인 기여 범위를 확정할 수 없다."]
+    },
+    {
+      "id": "source-bank-project-readme",
+      "uri": "https://github.com/judangs/dev-group-bank-msa/blob/main/Readme.md",
+      "source_type": "project_repository",
+      "access_status": "observed",
+      "claims": [
+        "Spring JPA 기반 MSA 핀테크 백엔드 프로젝트로 설명되어 있다.",
+        "회원·인증, 결제·카드·공동 자금, 게이트웨이, Kafka 이벤트 소비 영역과 API/application/domain/store/core 모듈 구조를 설명한다.",
+        "게이트웨이의 인증·인가·라우팅과 WebFlux 사용, 이벤트 소비 애플리케이션의 데이터소스·트랜잭션 분리를 설명한다."
+      ],
+      "limits": ["README는 프로젝트 구조를 보여 주지만 지원자의 직접 구현 범위와 운영 성과를 증명하지 않는다."]
+    },
+    {
+      "id": "source-bank-issue-44",
+      "uri": "https://github.com/judangs/dev-group-bank-msa/issues/44",
+      "source_type": "project_repository",
+      "access_status": "observed",
+      "claims": [
+        "Redis 도입, 인증 메일과 세션을 유지할 토큰 관리, 임시 인증 정보를 저장하려는 작업 목표가 이슈에 기록되어 있다."
+      ],
+      "limits": ["이슈의 존재는 작업 목표를 보여 주지만 구현자별 기여와 실행 결과는 확정하지 않는다."]
+    },
+    {
+      "id": "source-bank-redis-commit",
+      "uri": "https://github.com/judangs/dev-group-bank-msa/commit/64d5edfb1aef0253312a86df402b008912fa2a2b",
+      "source_type": "project_repository",
+      "access_status": "observed",
+      "claims": [
+        "Redis 저장소 추가 병합 커밋과 관련 변경 파일이 공개되어 있다.",
+        "인증 메일·세션 저장소, 커밋 후 이벤트 기반 메일 처리, Redis 저장·조회·삭제 테스트가 변경 범위에 포함되어 있다.",
+        "기존 예외 재귀 재시도 위험을 줄이고 계정 트랜잭션 커밋 이후 외부 메일 효과를 분리하는 구조가 코드 차이에 나타난다."
+      ],
+      "limits": ["커밋 차이만으로 실제 테스트 실행, 장애 재현, 성능·안정성 지표, 지원자 개인 기여를 확정할 수 없다."]
+    },
+    {
+      "id": "source-kafka-study",
+      "uri": "https://github.com/judangs/study-kafka-with-java/blob/main/Readme.md",
+      "source_type": "project_repository",
+      "access_status": "observed",
+      "claims": [
+        "Kafka의 토픽·파티션, 처리량, 컨슈머 랙, ISR, 멱등성, 컨슈머 동작을 학습 주제로 정리한다."
+      ],
+      "limits": ["학습 저장소이므로 Kafka 실운영 경험이나 실제 트래픽 성과로 표현하지 않는다."]
+    }
+  ],
+  "derived_role_mapping": [
+    {"id": "role-concern-java-spring-api-data", "input": "사용자 제공 공고 요약", "mapping": "Java/Spring 서비스 개발, REST API, 데이터베이스 모델링 → 책임 경계·API 계약·상태 전이·데이터 모델"},
+    {"id": "role-concern-scale-stability-ux", "input": "사용자 제공 공고 요약", "mapping": "대규모 트래픽·서비스 안정성 개선 → 관찰 지표·중복 방지·재처리·복구·오류 안내"}
+  ],
+  "unsupported_claims": [
+    "회사 제품·고객·문화·기술 스택의 공고 밖 세부사항",
+    "공개 프로젝트의 실제 배포·사용자·트래픽·운영 지표",
+    "지원자의 직접 변경 파일과 의사결정 범위",
+    "Redis 변경의 실제 성능 또는 장애율 개선 수치"
+  ],
+  "report_policy": {
+    "visible_source_ids": ["source-github-profile", "source-bank-project-readme", "source-bank-issue-44", "source-bank-redis-commit", "source-kafka-study"],
+    "company_and_posting_urls_visible": false,
+    "reason": "공식 원문 검증이 불가능하므로 회사 맞춤형 사실처럼 노출하지 않는다."
+  }
+}

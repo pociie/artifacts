@@ -1,0 +1,79 @@
+{
+  "kind": "work-coordination-promotion-review/v1",
+  "implementationOwnerRef": "owner:implementation",
+  "candidate": {
+    "commit": "87040a47d509b5c5f9109a231cb6c0df9e2bc47f",
+    "tree": "b024ed73e08b59d2a10585251694f672ad6c58a8",
+    "graphContractDigest": "b39bc6653f94bb4389dfcf38cca955598d6923e97e73068b4069349960cd15a5",
+    "adapterReportDigest": "a3934802490e0fe65bd94a3ca74abe37b5e86dc5af1c180fe6d91324d1139581",
+    "algorithmRevision": "work-coordination-graph-poc:v1"
+  },
+  "requestedControlStrength": "shadow_observation",
+  "recovery": {
+    "runbookRef": "runbook:work-coordination-recovery:v1",
+    "requiredScenarioIds": [
+      "contradictory_observation",
+      "external_outcome_unknown",
+      "projection_overflow",
+      "source_collection_failure",
+      "stale_assignment",
+      "state_divergence",
+      "target_or_contract_drift"
+    ],
+    "passedScenarioIds": [
+      "contradictory_observation",
+      "external_outcome_unknown",
+      "projection_overflow",
+      "source_collection_failure",
+      "stale_assignment",
+      "state_divergence",
+      "target_or_contract_drift"
+    ],
+    "failedScenarioIds": [],
+    "drillDigest": "69b7f75792e77adafc636602b202df688f2fc9e2483d0fdcf27121543f9adde5"
+  },
+  "shadowCases": [
+    {
+      "id": "shadow:known-conflict",
+      "labelStatus": "reviewed",
+      "predictedConflictPairs": [["work:a", "work:b"]],
+      "observedConflictPairs": [["work:a", "work:b"]],
+      "predictedComplete": false,
+      "observedComplete": false,
+      "sourceRef": "fixture:synthetic-known-conflict"
+    },
+    {
+      "id": "shadow:completed",
+      "labelStatus": "reviewed",
+      "predictedConflictPairs": [],
+      "observedConflictPairs": [],
+      "predictedComplete": true,
+      "observedComplete": true,
+      "sourceRef": "fixture:synthetic-completed"
+    }
+  ],
+  "independentReviews": [],
+  "governanceAcceptance": {
+    "decision": "pending",
+    "ownerRef": "owner:governance:unassigned",
+    "evidenceRef": "governance:pending",
+    "candidateCommit": "87040a47d509b5c5f9109a231cb6c0df9e2bc47f",
+    "candidateTree": "b024ed73e08b59d2a10585251694f672ad6c58a8",
+    "acceptedControlStrength": null,
+    "limitationIds": [
+      "limitation:live-collector-unavailable",
+      "limitation:real-history-shadow-unavailable",
+      "limitation:production-recovery-drill-unavailable"
+    ],
+    "rollbackTriggerIds": [
+      "rollback:false-negative",
+      "rollback:false-completion",
+      "rollback:collector-drift"
+    ],
+    "reviewTriggerIds": [
+      "review:adapter-change",
+      "review:algorithm-change",
+      "review:target-change"
+    ]
+  }
+}

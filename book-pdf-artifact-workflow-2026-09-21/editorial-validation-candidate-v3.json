@@ -1,0 +1,107 @@
+{
+  "kind": "author-side-editorial-visual-validation-candidate/v3",
+  "validationId": "validation:typography-clean-book-pdf:author-side",
+  "revision": "book-pdf-editorial-validation/3",
+  "status": "candidate_not_independent",
+  "authorityEffect": "none",
+  "independent": false,
+  "subject": {
+    "pdfRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/prototype-v3/claim-led-book-pdf-prototype.pdf",
+    "pdfDigest": "sha256:e11956e2d689cd461ad156fadc6adb1371c7b04342ffd1803f9b1603a1b0ab47",
+    "baseRubricRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-v1.json",
+    "typographyRubricRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-typography-extension-v1.json",
+    "handoffRef": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/recipient-handoff-candidate-v3.json",
+    "combinedEvidenceDigest": "sha256:d14439276a261a76996969387a60d023fd4c8d4072fc01c864af7ea50f568f41"
+  },
+  "automatedChecks": [
+    {
+      "id": "page-count",
+      "result": "pass",
+      "evidence": "PDFKit reported 15 pages."
+    },
+    {
+      "id": "selectable-text",
+      "result": "pass",
+      "evidence": "PDFKit extracted 19,537 characters and every page contained selectable text."
+    },
+    {
+      "id": "page-overflow",
+      "result": "pass",
+      "evidence": "Browser geometry reported zero horizontal and vertical overflow across all 15 A4 page elements."
+    },
+    {
+      "id": "normal-opening-paragraphs",
+      "result": "pass",
+      "evidence": "All eight marked opening paragraphs used a 13.6 px body and first-letter computed size with float none; no enlarged or floated initial remained."
+    },
+    {
+      "id": "platform-font-usage",
+      "result": "pass",
+      "evidence": "Chromium platform-font inspection reported Apple SD Gothic Neo for body Korean text, AppleMyungjo for display Korean text and Menlo for utility text in this render environment."
+    },
+    {
+      "id": "preview-set",
+      "result": "pass",
+      "evidence": "Fifteen page previews and one contact sheet were regenerated from the same frozen HTML."
+    }
+  ],
+  "rubricApplication": [
+    {
+      "criterion": "reader-purpose-and-high-level-context",
+      "result": "author_side_pass",
+      "evidence": "The report still follows one request and introduces interaction, ownership, resumability, effects and recovery before framework details."
+    },
+    {
+      "criterion": "keyword-decoupling-and-transfer",
+      "result": "author_side_pass_with_limitations",
+      "evidence": "Prose states general system principles before project mechanisms; independent reader comprehension remains pending."
+    },
+    {
+      "criterion": "causal-continuity-and-worked-trace",
+      "result": "author_side_pass",
+      "evidence": "Monograph chapters hand a concrete value or unresolved question to the next stage, with Enter, generator, tool and recovery traces."
+    },
+    {
+      "criterion": "design-function-and-anti-card",
+      "result": "author_side_pass",
+      "evidence": "Continuous prose remains primary; Monograph pages explain and Notebook pages test evidence and failure paths."
+    },
+    {
+      "criterion": "type-role-consistency",
+      "result": "author_side_pass",
+      "evidence": "Display, body and utility styles resolve from shared tokens, and sampled nodes used three distinct platform font roles."
+    },
+    {
+      "criterion": "clean-opening-paragraph",
+      "result": "author_side_pass",
+      "evidence": "Every marked opening paragraph begins at normal body size with no float or drop-cap rule."
+    },
+    {
+      "criterion": "body-readability-and-restrained-emphasis",
+      "result": "author_side_pass_with_limitations",
+      "evidence": "The digital A4 preview uses 10.2 pt body text at 1.62 line height and restrained semantic labels; physical print and grayscale review remain pending."
+    },
+    {
+      "criterion": "glyph-and-fallback-integrity",
+      "result": "author_side_pass_with_limitations",
+      "evidence": "Platform-font inspection found Korean body and display fonts in the render; cross-host font parity requires independent reproduction."
+    },
+    {
+      "criterion": "render-integrity",
+      "result": "author_side_pass_with_limitations",
+      "evidence": "Digital page, text, overflow, preview and computed-style checks pass; physical print, screen-reader and link checks remain pending."
+    }
+  ],
+  "limitations": [
+    "The visual-pdf-spec-builder performed this review and cannot provide independent validation.",
+    "Video transcripts remain participant-supplied starting lenses rather than independently verified sources.",
+    "The analyzed project remains a third-party reconstruction snapshot with missing-module and build-parity limits.",
+    "Platform font usage is evidence for this render host only, not a portable embedding guarantee.",
+    "Physical print, grayscale, screen-reader, link and independent comprehension tests are pending."
+  ],
+  "decision": "candidate_ready_for_independent_fact_visual_typography_and_reader_review",
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}

@@ -1,0 +1,1283 @@
+{
+  "kind": "harbor-hub-shard-settlement/v2",
+  "schemaVersion": 2,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "requestRevision": "harbor-terminal-reward-source-binding-r7",
+  "shardNumber": 5,
+  "shardIndex": 4,
+  "shardCount": 5,
+  "frozenInventoryDigest": "sha256:315e7ce0c918dda29ca6ef609ebaab8a79b65ed85f87cbf91893d4b688bda9ac",
+  "accountingInputRef": "population-shard-5/r7/population-settlement-accounting-input.final.json",
+  "accountingDecisionRef": "population-shard-5/r7/population-settlement-accounting-decision.final.json",
+  "accountingDecisionDigest": "sha256:64b6c6d0c40542340ad2ac176d6e14b4e64d4c8e7ee7cfb6d7b12be2aad79d4a",
+  "atomicRule": "Each claimed item receives one terminal disposition and all materialized runtime resources are reconciled before the next claim; unclaimed members remain pending.",
+  "counts": {
+    "discovered": 58,
+    "qualified": 1,
+    "executed": 3,
+    "evaluated": 3,
+    "held": 0,
+    "rejected": 0,
+    "settled": 3,
+    "pending": 55
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "ordinal": 3,
+      "datasetId": "gpqa-diamond/gpqa-diamond",
+      "disposition": "settled",
+      "terminalReward": 1,
+      "providerOutcome": "completed",
+      "verifierState": "passed",
+      "receiptRef": "population-shard-5/runs/gpqa-10/2026-08-28__21-31-46/result.json",
+      "receiptSha256": "sha256:a452432b9a1d8938c40fa11b16c383a4c063d4158eb5764b4933fa678f832578",
+      "requestedModel": "openai/gpt-5.6-luna",
+      "effectiveModel": "openai/gpt-5.6-luna",
+      "requestedEffort": "max",
+      "effectiveEffort": null,
+      "effectiveEffortState": "unverified",
+      "requestedSubjectTimeoutSec": 3600,
+      "effectiveSubjectTimeoutSec": 3600
+    },
+    {
+      "round": 2,
+      "ordinal": 13,
+      "datasetId": "bauerjustin/tb3-preview-v2",
+      "disposition": "settled",
+      "terminalReward": 1,
+      "providerOutcome": "completed",
+      "verifierState": "passed",
+      "receiptRef": "population-shard-5/runs/tb3-crash-safe-loop/2026-08-28__21-37-10/result.json",
+      "receiptSha256": "sha256:c6091c34715f1b145a99e8567baec45d040e09b15fb07ad946b3b0351694ed8f",
+      "requestedModel": "openai/gpt-5.6-luna",
+      "effectiveModel": "openai/gpt-5.6-luna",
+      "requestedEffort": "max",
+      "effectiveEffort": null,
+      "effectiveEffortState": "unverified",
+      "requestedSubjectTimeoutSec": 3600,
+      "effectiveSubjectTimeoutSec": 3600
+    },
+    {
+      "round": 3,
+      "ordinal": 6,
+      "datasetId": "quesma/compilebench",
+      "disposition": "settled",
+      "terminalReward": 0,
+      "providerOutcome": "completed",
+      "verifierState": "failed",
+      "verifierPasses": 9,
+      "verifierFailures": 1,
+      "receiptRef": "population-shard-5/r7/runs/compilebench-next/2026-08-28__22-29-42/result.json",
+      "receiptSha256": "sha256:6ebcf3a1108f257626dcf2572e5b94f77307ec19478d185be6b64c22bc05ba7d",
+      "requestedModel": "openai/gpt-5.6-luna",
+      "effectiveModel": "openai/gpt-5.6-luna",
+      "requestedEffort": "max",
+      "effectiveEffort": null,
+      "effectiveEffortState": "unverified",
+      "requestedSubjectTimeoutSec": 3600,
+      "effectiveSubjectTimeoutSec": 3600
+    }
+  ],
+  "resourceSummary": {
+    "materializedResourceCount": 16,
+    "unsettledResourceCount": 0,
+    "states": {
+      "settled": 7,
+      "deleted": 9,
+      "held": 0,
+      "pending": 0
+    }
+  },
+  "perResourceSettlement": [
+    {
+      "ordinal": 0,
+      "datasetId": "scale-ai/swe-bench-pro",
+      "taskDigest": "sha256:b7c4b1fd04354e945edf8375e2318d5e09152f0b84adf41e2dd65e7f6e5c707a",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 1,
+      "datasetId": "openthoughts/openthoughts-tblite",
+      "taskDigest": "sha256:fcf8733a356a158e3478a1ca688b6ddd51cc54d7717fa929d601a604a4c09a15",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 2,
+      "datasetId": "vmax-modal/modal-port-v1-eval-patched",
+      "taskDigest": "sha256:67173921e37d703be25d9265323ba96d54ecfb6578568adc535b95c402b79798",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 3,
+      "datasetId": "gpqa-diamond/gpqa-diamond",
+      "taskDigest": "sha256:cbb1e1520a788ce85f2c436b040161cbdaa98be9c055a0dfefb005fe21f76ddb",
+      "disposition": "executed_and_evaluated",
+      "round": 1,
+      "benchmarkState": "passed",
+      "terminalReward": {
+        "state": "observed",
+        "value": 1
+      },
+      "terminalReceiptRef": "population-shard-5/runs/gpqa-10/2026-08-28__21-31-46/result.json",
+      "terminalReceiptSha256": "sha256:a452432b9a1d8938c40fa11b16c383a4c063d4158eb5764b4933fa678f832578",
+      "resourceSettlements": [
+        {
+          "resourceClass": "task-materialization",
+          "state": "settled",
+          "resourceRefDigest": "sha256:cbb1e1520a788ce85f2c436b040161cbdaa98be9c055a0dfefb005fe21f76ddb",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "harbor-job",
+          "state": "settled",
+          "resourceRefDigest": "sha256:4eb7ce1c718ae930f6dfaa2d2bd3f42b08dffde384226da2182b9b309510537a",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "execution-container",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:814f92f02dfc1155a42d1b68a757892c478af575aec67a950fccd5ca8b38fd04",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "verifier-container",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:b73cec2248f7842c8a86db6309a73b225ad37ac2db2a7b614df9e77c715845b7",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "auth-materialization",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:315e7ce0c918dda29ca6ef609ebaab8a79b65ed85f87cbf91893d4b688bda9ac",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        }
+      ],
+      "resourceCount": 5,
+      "settlementState": "complete"
+    },
+    {
+      "ordinal": 4,
+      "datasetId": "abundant/swe-gen-rust",
+      "taskDigest": "sha256:c443e1a0365e088b136700cc53857f37212433f93fb5b66a19c1fa49bfa257c0",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 5,
+      "datasetId": "actava-ai/chi-bench",
+      "taskDigest": "sha256:eafd03a3f9363769db26894140e4b28340f29242627aec1df37c0c964c5ad89b",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 6,
+      "datasetId": "quesma/compilebench",
+      "taskDigest": "sha256:7152f4ac62217810140ce2126e03a4b851716ceb13eaff9c5f323241f08ce323",
+      "disposition": "executed_and_evaluated",
+      "round": 3,
+      "benchmarkState": "failed",
+      "terminalReward": {
+        "state": "observed",
+        "value": 0
+      },
+      "terminalReceiptRef": "population-shard-5/r7/runs/compilebench-next/2026-08-28__22-29-42/result.json",
+      "terminalReceiptSha256": "sha256:6ebcf3a1108f257626dcf2572e5b94f77307ec19478d185be6b64c22bc05ba7d",
+      "resourceSettlements": [
+        {
+          "resourceClass": "admission-claim",
+          "state": "settled",
+          "resourceRefDigest": "sha256:7152d9bcc87c925d4acac49bce7bfaeeb971953cc5200e5dbec8a08ba30aa17b",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "task-materialization",
+          "state": "settled",
+          "resourceRefDigest": "sha256:7152f4ac62217810140ce2126e03a4b851716ceb13eaff9c5f323241f08ce323",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "harbor-job",
+          "state": "settled",
+          "resourceRefDigest": "sha256:6ebcf3a1108f257626dcf2572e5b94f77307ec19478d185be6b64c22bc05ba7d",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "execution-container",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:9dfa11455aebebdf42839b06dc52c80782025a32c86c0dbe51e1e5d357285254",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "verifier-container",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:6c271d87e053aa933ac6b4758729518c173750a07965e54efeed5d8432c40dbc",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "auth-materialization",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:105ff0cb6e42c064b109b5c5e76af7014b1aba391e515fdeb2b2408a6bb60f9f",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        }
+      ],
+      "resourceCount": 6,
+      "settlementState": "complete"
+    },
+    {
+      "ordinal": 7,
+      "datasetId": "scienceagentbench/scienceagentbench",
+      "taskDigest": "sha256:b5328f844ca2311e68d15992166811f7b49b08c5d87d27ae8b74babd349235bb",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 8,
+      "datasetId": "rounakbende10/rh-swe-bench",
+      "taskDigest": "sha256:d895f10e7b11a4badd2df424cc2ac59a6705ebc029a46ddfa880ac13c4f08d1e",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 9,
+      "datasetId": "userbench/UserBench-train400",
+      "taskDigest": "sha256:e877f618cf2e690cfc681fb5f50b4122205603bff6c86f64089cf86626b4c763",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 10,
+      "datasetId": "meta/mlgym-bench",
+      "taskDigest": "sha256:dca111624f30fa046b1ec2032defafaf96794ffef3bac357a3b84e75e2f7ca08",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 11,
+      "datasetId": "reasoning-gym/reasoning-gym-easy",
+      "taskDigest": "sha256:1403d69b1e0cbd10aaa3917f08d8df7d22e372744cb980fba85400481c072dd5",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 12,
+      "datasetId": "theagentcompany/theagentcompany",
+      "taskDigest": "sha256:67cd8005285701c4e99599e745d44a922ee0bc88c64965e971caa0c20212be20",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 13,
+      "datasetId": "bauerjustin/tb3-preview-v2",
+      "taskDigest": "sha256:9d561f23585d87ca49b749692479f9d8bc1f2d77163d168f2a822be9d034b1bb",
+      "disposition": "executed_and_evaluated",
+      "round": 2,
+      "benchmarkState": "passed",
+      "terminalReward": {
+        "state": "observed",
+        "value": 1
+      },
+      "terminalReceiptRef": "population-shard-5/runs/tb3-crash-safe-loop/2026-08-28__21-37-10/result.json",
+      "terminalReceiptSha256": "sha256:c6091c34715f1b145a99e8567baec45d040e09b15fb07ad946b3b0351694ed8f",
+      "resourceSettlements": [
+        {
+          "resourceClass": "task-materialization",
+          "state": "settled",
+          "resourceRefDigest": "sha256:9d561f23585d87ca49b749692479f9d8bc1f2d77163d168f2a822be9d034b1bb",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "harbor-job",
+          "state": "settled",
+          "resourceRefDigest": "sha256:57f049fd99e94e8e8521e8bb8b6aa1932c5e8b694ee18a92e5eac5854ffa1d8e",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "execution-container",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:814f92f02dfc1155a42d1b68a757892c478af575aec67a950fccd5ca8b38fd04",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "verifier-container",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:b73cec2248f7842c8a86db6309a73b225ad37ac2db2a7b614df9e77c715845b7",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        },
+        {
+          "resourceClass": "auth-materialization",
+          "state": "deleted",
+          "resourceRefDigest": "sha256:315e7ce0c918dda29ca6ef609ebaab8a79b65ed85f87cbf91893d4b688bda9ac",
+          "evidenceRefs": ["population-shard-5/r7/settlement-ledger.r7.json"]
+        }
+      ],
+      "resourceCount": 5,
+      "settlementState": "complete"
+    },
+    {
+      "ordinal": 14,
+      "datasetId": "yanagiorigami/frontier-cs",
+      "taskDigest": "sha256:7ac44346e5e122ad4e648b27386f07a95f1e052d4e63144dac7b247ec8f879d1",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 15,
+      "datasetId": "aarr/aarri-bench",
+      "taskDigest": "sha256:6305649acfb122e8518374bde36b066e757c0dd185b35bfc3a595d986cb96e68",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 16,
+      "datasetId": "kumo/kumo-parity",
+      "taskDigest": "sha256:105a3a9645e6e4f1d931fc75bc12c002e5544af2968b8c516ac13a67fdb54f9a",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 17,
+      "datasetId": "deveval/deveval",
+      "taskDigest": "sha256:6f35d6b1bd837994d244e8aee1cf5c1145156d1c4a89ac55a2825a58f74ae164",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 18,
+      "datasetId": "gorilla/bfcl_parity",
+      "taskDigest": "sha256:ba053024f2746a4abfc4a207776bd1f64158280554da884ca929286ce8266ad8",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 19,
+      "datasetId": "ale/rsi-post-training",
+      "taskDigest": "sha256:d869f82fe2ac8e3dcca5fd5d19467ebef766b4c5ff7112d106a28df0ac8fa19c",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 20,
+      "datasetId": "futurehouse/bixbench",
+      "taskDigest": "sha256:10cbfd6c121d0c60d665094fe78dad292c5c971d7a754aa4f78f616b9e8e8a39",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 21,
+      "datasetId": "futurehouse/bixbench-cli",
+      "taskDigest": "sha256:69b8e31991ddd6e83c3be4ba0df4fb452c9cc785eb6f8473928265c52daac3be",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 22,
+      "datasetId": "stanford/medagentbench",
+      "taskDigest": "sha256:15f326b6d56aa459898e44b76c855d6bdadec613d31b303817feb88c8ee2b616",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 23,
+      "datasetId": "blobfishai/counselbench-100",
+      "taskDigest": "sha256:5b61d2a51fcf18e983ff8901372076f65b1d5192a7336bc1ac6e5999a52e3e75",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 24,
+      "datasetId": "crustbench/crustbench",
+      "taskDigest": "sha256:4f5c738cbff08365b3b8b6db2c72a96a610f64d6ab71cb6882ab924f914883d9",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 25,
+      "datasetId": "ineqmath/ineqmath",
+      "taskDigest": "sha256:17ad260849bd470b26ec1c46e6a697ee951ef2bd38b210232b1593e317ead130",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 26,
+      "datasetId": "minnesotanlp/aar",
+      "taskDigest": "sha256:baa741abc14afedc9fd196cd39897bbd604e4341d404fb79d290024ea4d1a33f",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 27,
+      "datasetId": "openai/simpleqa",
+      "taskDigest": "sha256:054597a59b396bd740e44976e7bc495a5437ad986b806ecbd86a60855fcccbc1",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 28,
+      "datasetId": "luosuu/SWE-kokkos-bench",
+      "taskDigest": "sha256:54e74b8b18b4b1aac5ebb8ca0872e4f3b7da5ca823540d2ce42d95ec23ea0f71",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 29,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-curriculum-hard",
+      "taskDigest": "sha256:54ae6db6ad310a3a5f88e9f2e0ffd1bb83ec76b5449ba1600b688b29fee6660b",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 30,
+      "datasetId": "termigen/termigen-environments",
+      "taskDigest": "sha256:919b2e861c554f3f0eaf989907011764a6eb9a4d445fa6eaa86ba62881e53de0",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 31,
+      "datasetId": "xiaoboai/pawbench",
+      "taskDigest": "sha256:4fe571db65d9f1e05f1e7163c96cac59203f0ebce524d0b87a5616847e63a002",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 32,
+      "datasetId": "hack-verifiable-environments/hv-terminal-bench-2-1",
+      "taskDigest": "sha256:480d8243b24f8cd428ca20ab6bd8824bb220742495c3eb316ea971700e2a729b",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 33,
+      "datasetId": "openthoughts/tasktrove-exp-rle-github-issue-v3",
+      "taskDigest": "sha256:088697ac923fdfc6bd889daa5939de297b86a953ab222540eb56ca037ba09fae",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 34,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-ghactions-v3",
+      "taskDigest": "sha256:281a8eb4f66c1425bd7ef9193c10433f895ccd5eef5144a1f0446700c4179a2e",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 35,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-issue",
+      "taskDigest": "sha256:1f2fe2d6c3887f8491d0cc4768fa3b51b1eab5a8fe4a0d8221637b7482bed565",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 36,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-multifile",
+      "taskDigest": "sha256:727eacdfc3dd1b2f414992a9df95d7690bec90cabe56e781de30ab3a33158996",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 37,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-pr-v2",
+      "taskDigest": "sha256:a860e393205b01da646f198869258556072a651c83b111133ef85b3f48572708",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 38,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-pymethods2test-v3",
+      "taskDigest": "sha256:81c9529fc21934634ccc3ffdd7f23108246b6c625e4fd3bd06784a1a0fdfe979",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 39,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-stack-pytest-v2",
+      "taskDigest": "sha256:a5c2a8dfb438c297284140a855cfb1193fd6e8272cf0c849f4e30e72437c718f",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 40,
+      "datasetId": "openthoughts/tasktrove-nemotron-gym-math-advanced-calculations-v3",
+      "taskDigest": "sha256:be2bde017d394dc28ef2c0f2d0aeb1b7b13ab02c55936a23a3b7e4ede67b5088",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 41,
+      "datasetId": "usaco/usaco",
+      "taskDigest": "sha256:543ea18f30b1d71c4474771f8375452dcd6eacd999508f2c365548a59742809d",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 42,
+      "datasetId": "grandsmile/unicode",
+      "taskDigest": "sha256:7244ef359c5040a8b0e0d3dc2a66a5993d510f6fb5f8f9a54b91a98fa42afeeb",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 43,
+      "datasetId": "itmo-autods/openpoly-tg-case",
+      "taskDigest": "sha256:ccb2ef347b9c0d43b71fe959ee417233f111eaafbe09c5e948fe57d531553442",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 44,
+      "datasetId": "openthoughts/tasktrove-exp-flat25-pseudocode-v2",
+      "taskDigest": "sha256:12f32703f46b6622bc27c253230374852d355d5eff7162a802cd52ca4538e006",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 45,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-stack-junit-v6",
+      "taskDigest": "sha256:93519458e67d466e7b88c72aa6ae517db89a76ec6fc6bea1e5165705a80f9369",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 46,
+      "datasetId": "openthoughts/tasktrove-exp-rpt-stack-php-v2-v6",
+      "taskDigest": "sha256:b94fa92b77242917ff7ea89387d40b8262f2d33be5780231787ca7d6b6bdd7bc",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 47,
+      "datasetId": "openthoughts/tasktrove-inferredbugs-sandboxes-verifier",
+      "taskDigest": "sha256:83ba6939ac4d5821f5af93d199423017d4e9fc5422e03cf2903d3eca381b58cc",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 48,
+      "datasetId": "openthoughts/tasktrove-mix-h1-struggle-zone-v2",
+      "taskDigest": "sha256:9314ad0a7bd2a07d63947272849dadcbac025f64364d5224dd1b14154fad9de2",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 49,
+      "datasetId": "openthoughts/tasktrove-mix-h10-reward-proportional-v2",
+      "taskDigest": "sha256:21549bce2bd2899d56b76167e7675b83b668ddefba8dbd561cb4858ead876cbf",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 50,
+      "datasetId": "openthoughts/tasktrove-mix-h5-skill-diverse-v2",
+      "taskDigest": "sha256:2778d353b0ae380398422cfacd3c07ec823a76e36d16ad30f353881ebabdd556",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 51,
+      "datasetId": "openthoughts/tasktrove-nemotron-gym-instruction-following-v2",
+      "taskDigest": "sha256:4c842823043912ab8d8ff4bab40dfda14208663de76c62dc2afd552d2a69c1b0",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 52,
+      "datasetId": "openthoughts/tasktrove-nemotron-gym-knowledge-web-search-mcqa",
+      "taskDigest": "sha256:19ce2adc502d135c37c96e68b78d1ac6adee8d8e2ad14ccbcc3e21946fd260ba",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 53,
+      "datasetId": "openthoughts/tasktrove-swesmith-oracle-filtered",
+      "taskDigest": "sha256:7067142a596cba1bab5d37f749b89116ba6081b64a6d0738f04a4ae4eb034f6b",
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 54,
+      "datasetId": "tbench-dw3-a-dw3_1784073253_2627946/dw3-dataset",
+      "taskDigest": null,
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 55,
+      "datasetId": "tbench-lbtest-lb_1784071796_2517183/lbtest-dataset",
+      "taskDigest": null,
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 56,
+      "datasetId": "tbench-up3-a-up3_1784108188_141385/up3-dataset",
+      "taskDigest": null,
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    },
+    {
+      "ordinal": 57,
+      "datasetId": "tbench-up4-a-up4_1784108341_146593/up4-dataset",
+      "taskDigest": null,
+      "disposition": "pending",
+      "round": null,
+      "benchmarkState": "not_run",
+      "terminalReward": {
+        "state": "not_run",
+        "value": null
+      },
+      "terminalReceiptRef": null,
+      "terminalReceiptSha256": null,
+      "resourceSettlements": [],
+      "resourceCount": 0,
+      "settlementState": "not_started",
+      "pendingReasonCodes": ["awaiting_next_claim_after_changed_capability_fingerprint"]
+    }
+  ],
+  "dynamicCandidates": [
+    {
+      "ref": "population-shard-5/candidates/native-subject-receipt-gap-r1.json",
+      "state": "held_for_adapter_owner",
+      "automaticPromotion": false,
+      "validity": "until Harbor adapter or route fingerprint changes"
+    }
+  ],
+  "reusableOwnerFindings": [
+    {
+      "owner": "execution-routing",
+      "state": "report_only",
+      "finding": "six-mode route and downstream Artifact/Workflow/topology/Architecture/Swarm/coordination choices remain lane-local evidence"
+    },
+    {
+      "owner": "artifact-reuse-resolution",
+      "state": "report_only",
+      "finding": "fresh task Artifact selected after reusable coverage review; no tracked reusable source edit"
+    },
+    {
+      "owner": "workflow-pattern-selection",
+      "state": "report_only",
+      "finding": "generator_validator qualified as the current pattern"
+    },
+    {
+      "owner": "agent-execution-topology-selection",
+      "state": "report_only",
+      "finding": "architecture_only requested; native Subject topology receipt unavailable"
+    },
+    {
+      "owner": "agent-architecture-coordination",
+      "state": "report_only",
+      "finding": "bounded_revision coordination; no authority transfer"
+    },
+    {
+      "owner": "agent-swarm",
+      "state": "not_required",
+      "finding": "optional Swarm false for one bounded owner"
+    },
+    {
+      "owner": "dynamic-composition",
+      "state": "unavailable",
+      "finding": "bounded candidate records exact residual model-effort and Subject-topology receipt gap; no promotion"
+    }
+  ],
+  "wakeCondition": "Keep the 55 unclaimed members pending; wake only after a changed capability fingerprint and a fresh exact qualification of access, license, platform/resources, credentials, network/cost, verifier, model, effort, and 3600-second timeout. Do not infer completion from provider files, Orca state, Git state, or pending counts.",
+  "noSuccessSimulation": true,
+  "createdAt": "2026-08-28T22:59:05.701764Z"
+}

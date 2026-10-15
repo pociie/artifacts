@@ -1,0 +1,62 @@
+{
+  "kind": "claude-code-study-requirement-supplement/v1",
+  "revision": "selected-design-edition-2026-09-22/v1",
+  "completenessBoundary": "T01–T33 come from the retained sanitized session ledger. T34–T36 are the current request projection. Raw prompt transcripts outside retained evidence remain unavailable and are not reconstructed as quotations.",
+  "entries": [
+    {
+      "id": "T34",
+      "chronology": 34,
+      "source": "current-request/revision-1",
+      "requirement": "다섯 개 Claude Code 스터디 산출물을 만들기까지 시간순으로 어떤 요구가 추가·교정되었는지 확인한다.",
+      "status": "active",
+      "finalBookLocation": [
+        "appendix-requirements",
+        "engineering/requirement-chronology.md",
+        "manifest.inputLineage"
+      ],
+      "validationEvidence": [
+        "five named study manifests are digest-bound",
+        "requirement waves W01–W08 preserve invalidations and remaining obligations"
+      ],
+      "owner": "agent-subject:claude-code-selected-design-study-builder",
+      "limitations": "정확한 문장별 시각은 sanitized ledger와 생성 manifest가 보존한 범위까지만 확정한다."
+    },
+    {
+      "id": "T35",
+      "chronology": 35,
+      "source": "current-request/revision-1",
+      "requirement": "파악한 요구를 artifacts/loop-architecture의 실행 라우팅과 reusable-artifact operation 경계에 맞춰 수행한다.",
+      "status": "active",
+      "finalBookLocation": [
+        "manifest.operationBinding",
+        "engineering/route-decision.json",
+        "engineering/reusable-artifact-operation-request.json"
+      ],
+      "validationEvidence": [
+        "six-mode loop route recorded",
+        "objective-owning subject and bounded operation request validated"
+      ],
+      "owner": "agent-subject:claude-code-selected-design-study-builder",
+      "limitations": "라우팅과 operation record는 승인·출판·독립 acceptance 권한을 부여하지 않는다."
+    },
+    {
+      "id": "T36",
+      "chronology": 36,
+      "source": "current-request/revision-1",
+      "requirement": "최종 스터디 PDF는 book-pdf-artifact-workflow에서 선택한 Systems Monograph × Evidence Notebook 형식과 디자인을 사용한다.",
+      "status": "active",
+      "finalBookLocation": [
+        "entire-book",
+        "engineering/design-binding.md",
+        "manifest.designBinding"
+      ],
+      "validationEvidence": [
+        "selected design source digests match",
+        "cream/navy/teal/rust role tokens and monograph/notebook page modes rendered",
+        "typography, tagged text, previews and contact sheet checked"
+      ],
+      "owner": "agent-subject:claude-code-selected-design-study-builder",
+      "limitations": "물리 A4·grayscale·assistive-technology 검토는 독립 검증 전까지 PENDING이다."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "architecture": {
+    "operation": "not_operated",
+    "ref": "artifacts/population-shard-4/architecture-qualification.json",
+    "status": "not_required"
+  },
+  "artifactLifecycle": {
+    "create": "rejected_no_residual_gap",
+    "discovery": "supported",
+    "dynamicComposition": "not_required",
+    "merge": "rejected_no_duplicate_semantics",
+    "reuse": "supported",
+    "split": "rejected_no_structure_change",
+    "update": "rejected_no_source_change"
+  },
+  "authorityEffect": "none",
+  "benchmark": {
+    "executionRef": "artifacts/population-shard-4/harbor-execution-observation.json",
+    "oracle": "2/2 protected tests passed",
+    "reward": 1.0,
+    "state": "passed"
+  },
+  "digest": "sha256:b45bd4f0fdd36e6f217183b67bf782ef2166a0eb034955396dae54315b68fd34",
+  "efficiency": {
+    "cachedInputTokens": 20992,
+    "costUsd": 0.0009668400000000001,
+    "elapsedMs": 130351,
+    "inputTokens": 22509,
+    "outputTokens": 203
+  },
+  "final": true,
+  "gaps": [
+    "independent external claim review was not performed in this worker round",
+    "one representative does not establish population-wide quality",
+    "provider does not expose private reasoning trace; max is a configuration observation",
+    "no Subject Architecture or Swarm operation was required by topology none"
+  ],
+  "kind": "engineering-evaluation-report/v1",
+  "limitations": [
+    "public import qualification is scoped to this public dataset and does not imply Hub authentication for private sources",
+    "network isolation was not required by the task environment policy"
+  ],
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "rawProviderMaterialProjected": false,
+    "runtimePrivateRef": ".collab/memory/harbor-hub-five-shard-full-inventory-r1/population-shard-4/round-r5"
+  },
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r5:population-shard-4:harbor-hello-world:dde3d71950c8",
+  "requirements": {
+    "outputContract": "hello file exists with expected contents",
+    "scope": "one frozen shard-4 representative",
+    "taskPackage": "public_hello_world",
+    "taskRevision": 2
+  },
+  "route": {
+    "reasoningEnvelopeRef": "artifacts/population-shard-4/mode-reasoning-envelope.json",
+    "routeRef": "artifacts/population-shard-4/route-decision.json",
+    "selectedMode": "single_task",
+    "status": "selected"
+  },
+  "simulationEvidenceDigest": "sha256:73960afea1e5f2ac51fc1dec0103b1f88d93af93c84442c1c3d82133d6981e0f",
+  "simulationEvidenceRef": "artifacts/population-shard-4/simulation-evidence.json",
+  "status": "final_report_only",
+  "swarm": {
+    "operation": "not_operated",
+    "ref": "artifacts/population-shard-4/swarm-qualification.json",
+    "status": "not_required"
+  },
+  "taskId": "harbor/hello-world",
+  "terminalEvaluation": {
+    "eligible": true,
+    "reason": "settled simulation, final outcome, exact Artifact lifecycle classification, and metadata-only evidence are bound",
+    "state": "complete"
+  },
+  "workflow": {
+    "patternRef": "artifacts/population-shard-4/workflow-pattern-qualification.json",
+    "status": "not_required_for_one_owner"
+  }
+}

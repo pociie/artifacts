@@ -1,0 +1,151 @@
+{
+  "schemaVersion": "self-introduction-rubric/v3",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-07",
+  "purpose": "롯데이노베이트 AI 서비스 엔지니어 지원 자기소개서 초안의 편집 적합도를 비교하고 90점 이상 세트만 결과물에 남긴다.",
+  "definition": {
+    "id": "rubric:self-introduction-ai-service-engineer",
+    "revision": "v3",
+    "constructs": [
+      {"id": "human_centered_narrative", "name": "사람 중심 서사와 가치", "weight": 30, "meaning": "사용자·업무 맥락과 지원자의 관점이 기술보다 상위에서 드러나는 정도"},
+      {"id": "role_service_fit", "name": "직무·서비스 맥락 적합성", "weight": 25, "meaning": "공고의 AI API·데이터·서비스 운영·검증 업무로 행동을 번역하는 정도"},
+      {"id": "evidence_causal_integrity", "name": "근거·인과·추상화 충실도", "weight": 30, "meaning": "프로젝트 사실·개인 기여·판단·학습을 과장 없이 상위 서비스 흐름으로 연결하는 정도"},
+      {"id": "communication_defense", "name": "전달·방어 가능성", "weight": 15, "meaning": "문항을 충족하면서 짧고 분명하며 후속 질문에 범위를 설명할 수 있는 정도"}
+    ],
+    "criteria": [
+      {"id": "value_viewpoint_visibility", "domain": "human_centered_narrative", "weight": 12, "question": "지원자의 가치관과 기술에 대한 견해가 경험 나열을 넘어 문장으로 드러나는가?"},
+      {"id": "human_context", "domain": "human_centered_narrative", "weight": 8, "question": "사람의 목적·부담·판단·다음 행동이 서비스 설명의 중심에 있는가?"},
+      {"id": "narrative_coherence", "domain": "human_centered_narrative", "weight": 6, "question": "Q1 역량·Q2 증거·Q3 가치관이 하나의 인물상으로 이어지는가?"},
+      {"id": "modern_ai_paradigm", "domain": "human_centered_narrative", "weight": 4, "question": "AI를 사람을 대체하는 기술이 아니라 책임·검토·피드백이 있는 사회기술적 서비스로 이해하는가?"},
+      {"id": "role_fit", "domain": "role_service_fit", "weight": 12, "question": "AI 서비스 API·백엔드·데이터 흐름·플랫폼 고도화·품질 검증과 행동이 연결되는가?"},
+      {"id": "business_translation", "domain": "role_service_fit", "weight": 7, "question": "기술 선택이 업무 프로세스와 사업 가치의 변화로 번역되는가?"},
+      {"id": "future_contribution", "domain": "role_service_fit", "weight": 6, "question": "입사 후 기여가 추상적인 의지가 아니라 관찰·검증·개선 행동으로 제시되는가?"},
+      {"id": "evidence_attribution", "domain": "evidence_causal_integrity", "weight": 10, "question": "공식 사실·저장소 사실·사용자 제공 기여·제한된 해석·미래 계획의 경계가 보이는가?"},
+      {"id": "causal_process", "domain": "evidence_causal_integrity", "weight": 10, "question": "문제→판단→수행→검증→학습의 인과가 이어지는가?"},
+      {"id": "service_mechanism_abstraction", "domain": "evidence_causal_integrity", "weight": 10, "question": "기술 메커니즘을 구현 단위가 아니라 서비스 목적·책임·근거·사용자 영향의 상위 개념으로 설명하는가?"},
+      {"id": "prompt_compliance", "domain": "communication_defense", "weight": 5, "question": "각 문항의 요구 요소와 300~700자 조건을 충족하는가?"},
+      {"id": "readability_distinctiveness", "domain": "communication_defense", "weight": 5, "question": "기술 나열 없이 빠르게 읽히며 다른 지원자와 구별되는가?"},
+      {"id": "interview_defense", "domain": "communication_defense", "weight": 5, "question": "왜 그렇게 판단했는지, 무엇을 실제로 했는지, 무엇이 아직 미확인인지 답할 수 있는가?"}
+    ],
+    "commonScale": {
+      "measurementLevel": "ordinal",
+      "0": "부재·모순·잘못된 귀속",
+      "1": "주장 또는 용어는 있으나 맥락과 근거가 없음",
+      "2": "한 경험 또는 한 문단에서 부분적으로 확인됨",
+      "3": "문제·판단·행동·영향이 인과적으로 연결되고 범위를 방어할 수 있음",
+      "4": "상위 맥락의 관점이 일관되고 사용자·서비스 영향과 한계까지 연결됨",
+      "missingStates": ["unavailable", "conflicting", "not_applicable"],
+      "unknownIsZero": false
+    }
+  },
+  "profile": {
+    "id": "profile:job-application-2026-09-ai-service-engineer-v3",
+    "revision": "v3",
+    "definitionBinding": "rubric:self-introduction-ai-service-engineer@v3",
+    "evaluand": "complete three-answer set",
+    "sources": [
+      "https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007",
+      "https://recruit.lotte.co.kr/companylife/affiliate/detail?compcd=30007",
+      "https://recruit.lotte.co.kr/about/hrsystem",
+      "https://github.com/pociie/collab-mono",
+      "user-understanding-projection-v3.json",
+      "project-abstraction-map-v3.json"
+    ],
+    "protectedGates": ["G1_prompt_and_length", "G2_evidence_attribution", "G3_value_boundary", "G4_abstraction", "G5_role_and_mechanism", "G6_set_distinctness"],
+    "threshold": 90,
+    "formula": "sum(criteria.weight * criteria.rating / 4)",
+    "rounding": "one_decimal",
+    "tieBreak": ["evidence_attribution", "value_viewpoint_visibility", "unresolved_claim_count"]
+  },
+  "operation": {
+    "id": "operation:self-introduction-v3-20260907",
+    "definitionRevision": "v3",
+    "profileRevision": "v3",
+    "evidenceSnapshot": "evidence-map-v3",
+    "subjectSnapshot": "self-introduction-content-v3",
+    "raterProtocol": "single-editorial-rater-with-independent-arithmetic-and-provenance-validation",
+    "observationWindow": "2026-09-07 draft round",
+    "authorityEffect": "none",
+    "limitations": [
+      "독립된 두 명 이상의 최종 평정이 없어 평가자 간 일치도는 unavailable",
+      "사용자 의미 확인과 실제 제출·면접 결과가 없어 사후 타당도는 unavailable",
+      "점수는 글의 편집 적합도이며 지원자의 실제 역량이나 채용 결과가 아님"
+    ]
+  },
+  "gates": [
+    {"id": "G1_prompt_and_length", "status": "pass", "evidence": "15/15 answers measured between 300 and 700 Korean characters"},
+    {"id": "G2_evidence_attribution", "status": "pass", "evidence": "the high-level first-person project context is user-provided and bounded in evidence-map-v3; exact files and dated runs remain separate pre-submission confirmation data"},
+    {"id": "G3_value_boundary", "status": "pass", "evidence": "all five Q3 answers state the user-provided value directly; the expanded human-centered viewpoint is labeled as draft wording, while semantic acknowledgement remains a separate post-delivery checkpoint"},
+    {"id": "G4_abstraction", "status": "pass", "evidence": "all sets use intent/context/execution/evidence/improvement framing and omit implementation-unit exposition"},
+    {"id": "G5_role_and_mechanism", "status": "pass", "evidence": "role claims are aligned with official posting and repository claims remain bounded"},
+    {"id": "G6_set_distinctness", "status": "pass", "evidence": "five sets use distinct lenses: human judgment, shared language, explainable completion, uncertainty/review, and user-burden improvement"}
+  ],
+  "scores": [
+    {
+      "setId": "set-1",
+      "theme": "사람의 판단을 돕는 AI 서비스",
+      "status": "included",
+      "score": 94.5,
+      "domainScores": {"human_centered_narrative": 30.0, "role_service_fit": 23.25, "evidence_causal_integrity": 27.5, "communication_defense": 13.75},
+      "criterionRatings": {"value_viewpoint_visibility": 4, "human_context": 4, "narrative_coherence": 4, "modern_ai_paradigm": 4, "role_fit": 4, "business_translation": 3, "future_contribution": 4, "evidence_attribution": 3, "causal_process": 4, "service_mechanism_abstraction": 4, "prompt_compliance": 4, "readability_distinctiveness": 4, "interview_defense": 3},
+      "scoreMeaning": "사람의 판단과 책임을 중심으로 AI 서비스의 가치를 설명하는 가장 균형적인 기본안",
+      "remainingUncertainty": ["실제 변경 범위와 실행 결과는 제출 전 확인 필요"]
+    },
+    {
+      "setId": "set-2",
+      "theme": "복잡성을 공통 언어로 바꾸는 엔지니어",
+      "status": "included",
+      "score": 90.25,
+      "domainScores": {"human_centered_narrative": 27.0, "role_service_fit": 23.25, "evidence_causal_integrity": 27.5, "communication_defense": 12.5},
+      "criterionRatings": {"value_viewpoint_visibility": 4, "human_context": 3, "narrative_coherence": 4, "modern_ai_paradigm": 3, "role_fit": 4, "business_translation": 3, "future_contribution": 4, "evidence_attribution": 4, "causal_process": 3, "service_mechanism_abstraction": 4, "prompt_compliance": 4, "readability_distinctiveness": 3, "interview_defense": 3},
+      "scoreMeaning": "다양한 요구를 공동의 문제 정의와 책임 언어로 바꾸는 협업 역량을 강조하는 안",
+      "remainingUncertainty": ["협업 상대와 실제 합의 사례는 사용자 확인 필요"]
+    },
+    {
+      "setId": "set-3",
+      "theme": "완수의 기준을 설명 가능성으로",
+      "status": "included",
+      "score": 91.75,
+      "domainScores": {"human_centered_narrative": 26.0, "role_service_fit": 23.25, "evidence_causal_integrity": 30.0, "communication_defense": 12.5},
+      "criterionRatings": {"value_viewpoint_visibility": 3, "human_context": 4, "narrative_coherence": 4, "modern_ai_paradigm": 3, "role_fit": 4, "business_translation": 3, "future_contribution": 4, "evidence_attribution": 4, "causal_process": 4, "service_mechanism_abstraction": 4, "prompt_compliance": 4, "readability_distinctiveness": 3, "interview_defense": 3},
+      "scoreMeaning": "구현 완료와 서비스 완수를 구분하고 검증·재현·설명 가능성을 강조하는 안",
+      "remainingUncertainty": ["실제 검증 실행 이력과 날짜는 사용자 확인 필요"]
+    },
+    {
+      "setId": "set-4",
+      "theme": "불확실성을 함께 검증하는 AI 서비스",
+      "status": "included",
+      "score": 96.25,
+      "domainScores": {"human_centered_narrative": 30.0, "role_service_fit": 25.0, "evidence_causal_integrity": 27.5, "communication_defense": 13.75},
+      "criterionRatings": {"value_viewpoint_visibility": 4, "human_context": 4, "narrative_coherence": 4, "modern_ai_paradigm": 4, "role_fit": 4, "business_translation": 4, "future_contribution": 4, "evidence_attribution": 4, "causal_process": 4, "service_mechanism_abstraction": 3, "prompt_compliance": 4, "readability_distinctiveness": 3, "interview_defense": 4},
+      "scoreMeaning": "AI의 한계와 인간의 검토·피드백을 서비스 품질의 일부로 보는 관점이 가장 선명한 안",
+      "remainingUncertainty": ["AI 실행 결과의 실제 사용자 검증 사례는 제공되지 않음"]
+    },
+    {
+      "setId": "set-5",
+      "theme": "사람의 시간을 돌려주는 개선",
+      "status": "included",
+      "score": 93.75,
+      "domainScores": {"human_centered_narrative": 29.0, "role_service_fit": 23.5, "evidence_causal_integrity": 27.5, "communication_defense": 13.75},
+      "criterionRatings": {"value_viewpoint_visibility": 4, "human_context": 4, "narrative_coherence": 4, "modern_ai_paradigm": 3, "role_fit": 4, "business_translation": 4, "future_contribution": 3, "evidence_attribution": 3, "causal_process": 4, "service_mechanism_abstraction": 4, "prompt_compliance": 4, "readability_distinctiveness": 4, "interview_defense": 3},
+      "scoreMeaning": "불편 개선을 고객의 시간·신뢰·업무 지속성으로 번역하는 가치관 중심 안",
+      "remainingUncertainty": ["실제 고객 또는 운영 지표는 제공되지 않음"]
+    }
+  ],
+  "selection": {
+    "minimumSets": 5,
+    "includedSetIds": ["set-1", "set-2", "set-3", "set-4", "set-5"],
+    "excludedSetIds": [],
+    "thresholdRule": "score >= 90 and every protected gate has status=pass for the draft-review consumer",
+    "averageScore": 93.3,
+    "averageMeaning": "현재 v3 정의·프로필에서 5개 세트가 모두 제출 검토 후보로 남았다는 뜻이며 채용 가능성을 뜻하지 않음"
+  },
+  "metricInterpretation": {
+    "raterAgreement": "unavailable",
+    "acceptedOutcomeJoin": "unavailable",
+    "userSemanticAcknowledgement": "pending_user_review",
+    "scoreConfidence": "editorial_comparison_only",
+    "reassessmentTriggers": ["사용자 가치관 수정", "개인 기여 범위 확인", "실행 결과 추가", "공고 수정", "평가축·가중치 수정"]
+  }
+}

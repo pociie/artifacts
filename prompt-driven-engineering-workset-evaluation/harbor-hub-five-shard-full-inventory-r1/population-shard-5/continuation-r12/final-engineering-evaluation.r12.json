@@ -1,0 +1,102 @@
+{
+  "kind": "engineering-evaluation-report/v2",
+  "schemaVersion": 2,
+  "final": true,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "itemId": "aarr/aarri-bench",
+  "taskId": "aarr/aarri-bench/cross-pollination",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-5:aarr/aarri-bench:8f2af7a5ed55e6692d7c0490f14203cbdbf14c6db7b61c7bd3313b820df15456",
+  "sourceRevision": "head:f3b99b29a2947370e37b25a26c73bb6d40012edd+structure:e185aff8ec6d9dc521d527c67fa959614fefc94514a3a092d00c00b25bb125ab",
+  "requirements": {
+    "scope": "one exact frozen population-shard-5 item",
+    "taskFamily": "aarr/aarri-bench",
+    "taskRevision": 1,
+    "outputContract": "protected Harbor task verifier"
+  },
+  "route": {
+    "status": "selected",
+    "selectedMode": "single_task",
+    "routeRef": "artifacts/population-shard-5/continuation-r12/route-decision.r12.json",
+    "routeDigest": "sha256:d483434544d0b8b4b7962321883eb094311766398cc49bfbf062fd55d96640d4",
+    "compoundJourneyRef": "artifacts/population-shard-5/continuation-r12/compound-mode-journey.r12.json",
+    "compoundDigest": "sha256:b478f666fff201e0c576b7cebe5e5816dbdde8e6a9aad1f9843967ea13c9be2e",
+    "reasoningEnvelopeRef": "artifacts/population-shard-5/continuation-r12/mode-reasoning-envelope.r12.json",
+    "reasoningEnvelopeDigest": "sha256:0d25ec9f0a4d3060ef1c801906807b6ba369e02c77bb96320a93915d6351bdfc"
+  },
+  "workflow": {
+    "status": "selected_report_only",
+    "patternRef": "artifacts/population-shard-5/continuation-r12/workflow-pattern-qualification.r12.json"
+  },
+  "architecture": {
+    "status": "report_only_candidate",
+    "ref": "artifacts/population-shard-5/continuation-r12/architecture-qualification.r12.json",
+    "nativeReceiptObserved": false
+  },
+  "topology": {
+    "requirement": "subject_plus_independent_verifier",
+    "ref": "artifacts/population-shard-5/continuation-r12/topology-requirement.r12.json"
+  },
+  "swarm": {
+    "status": "not_required",
+    "ref": "artifacts/population-shard-5/continuation-r12/swarm-qualification.r12.json"
+  },
+  "coordination": {
+    "status": "selected_report_only",
+    "ref": "artifacts/population-shard-5/continuation-r12/coordination-plan.r12.json"
+  },
+  "artifactLifecycle": {
+    "observationRef": "artifacts/population-shard-5/continuation-r12/artifact-lifecycle-observation.r12.json",
+    "dynamicComposition": "operated_existing_candidate"
+  },
+  "provider": {
+    "class": "harbor",
+    "requestedModel": "gpt-5.6-luna",
+    "effectiveModel": null,
+    "requestedReasoningEffort": "max",
+    "effectiveReasoningEffort": null,
+    "requestedSubjectTimeoutSeconds": 3600,
+    "requestedVerifierTimeoutSeconds": 3600,
+    "effectiveSubjectTimeoutSeconds": null,
+    "effectiveVerifierTimeoutSeconds": null,
+    "effectiveReceiptPresent": false,
+    "qualificationRef": "artifacts/population-shard-5/continuation-r12/provider-qualification.r12.json",
+    "status": "held"
+  },
+  "benchmark": {
+    "executionRef": "artifacts/population-shard-5/continuation-r12/harbor-execution-observation.r12.json",
+    "state": "held",
+    "rawVerifierReward": null,
+    "failureCode": "provider:effective-model-effort-timeout-credential-receipts-unavailable"
+  },
+  "evaluator": {
+    "kind": "deterministic",
+    "independentEvaluationRef": "artifacts/population-shard-5/continuation-r12/independent-evaluation.r12.json"
+  },
+  "efficiency": {
+    "executionStarted": false,
+    "toolEffectCount": 0,
+    "reworkCount": 0
+  },
+  "terminalEvaluation": {
+    "eligible": false,
+    "state": "require_context",
+    "reason": "effective model, effort, timeout, credential, and protected verifier receipts are unavailable before Subject admission",
+    "wakeCondition": "Re-observe Harbor capability for this exact item only after the provider capability fingerprint changes; bind effective gpt-5.6-luna, max effort, subject and verifier timeout at or below 3600 seconds, credentials, protected verifier capability, and task-platform qualification before a fresh item-bound round."
+  },
+  "gaps": [
+    "provider effective model, effort, timeout, and credential receipts are unavailable",
+    "protected verifier outcome is unavailable",
+    "native Subject topology receipt is unavailable; report-only architecture is retained",
+    "existing dynamic candidate remains held for its adapter-owned residual gap"
+  ],
+  "independentEvaluationRef": "artifacts/population-shard-5/continuation-r12/independent-evaluation.r12.json",
+  "status": "final_report_only",
+  "privacy": {
+    "metadataOnly": true,
+    "rawProviderMaterialProjected": false,
+    "privateReasoningProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "digest": "sha256:5617755285d4478ed3196955eaa8ee3889fd749873a43399284851eba1494701"
+}

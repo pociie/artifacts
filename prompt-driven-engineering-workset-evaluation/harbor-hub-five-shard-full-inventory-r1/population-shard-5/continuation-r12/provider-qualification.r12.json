@@ -1,0 +1,83 @@
+{
+  "kind": "harbor-provider-qualification/v3",
+  "schemaVersion": 3,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "shardId": "population-shard-5",
+  "itemId": "aarr/aarri-bench",
+  "providerClass": "harbor",
+  "providerVersion": "0.22.0",
+  "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+  "environmentDigest": "sha256:7e0fe3beb2099321c2141d4441d87726b2f9d118d426d2892602c774ae5a3b18",
+  "requested": {
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "subjectTimeoutSeconds": 3600,
+    "verifierTimeoutSeconds": 3600
+  },
+  "effective": {
+    "model": null,
+    "reasoningEffort": null,
+    "subjectTimeoutSeconds": null,
+    "verifierTimeoutSeconds": null
+  },
+  "effectiveReceiptPresent": false,
+  "effectiveReceiptRequiredForExecution": true,
+  "capabilityReceiptRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-5/capability-qualification.r12.json",
+  "capabilityReceiptDigest": "sha256:06d8fc493f9841440077e6ada95284ad5b5d130b01586168df29eb97a25e578b",
+  "authProbe": {
+    "state": "qualified",
+    "method": "no_additional_task_auth_observed",
+    "valuesRetained": false
+  },
+  "platformProbe": {
+    "state": "qualified",
+    "host": "linux/arm64",
+    "dockerVersion": "29.5.3",
+    "network": "public_network_as_declared"
+  },
+  "qualification": {
+    "access": "qualified",
+    "license": "unverified",
+    "platform": "qualified",
+    "auth": "qualified",
+    "network": "qualified",
+    "cost": "not_observed",
+    "verifier": "not_run",
+    "timeout": "held"
+  },
+  "observed": {
+    "taskProbe": true,
+    "detailStatus": 200,
+    "taskDigest": "sha256:6305649acfb122e8518374bde36b066e757c0dd185b35bfc3a595d986cb96e68",
+    "observedAgentTimeoutSeconds": 600,
+    "observedVerifierTimeoutSeconds": 600,
+    "subjectTimeoutMatchesRequested": false,
+    "capabilityFingerprint": "sha256:7ed61a5d3380a42a141f251d4ce703f79ed4ffd90ff5d5f53ce1e08538ca4c84",
+    "capabilityFingerprintChanged": false
+  },
+  "blockerCodes": [
+    "subject_timeout_not_exact_3600",
+    "license_evidence_incomplete",
+    "effective_model_receipt_missing",
+    "effective_effort_receipt_missing",
+    "effective_timeout_receipt_missing",
+    "protected_verifier_receipt_missing"
+  ],
+  "outcomeDisposition": {
+    "state": "held",
+    "reasonCode": "provider:effective-model-effort-timeout-credential-receipts-unavailable"
+  },
+  "limitations": [
+    "requested values are bound to the r12 campaign envelope; no effective provider receipt was observed",
+    "the adapter's observed 600-second timeout does not prove the requested 3600-second ceiling",
+    "license terms and protected verifier evidence remain unverified"
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "credentialsStored": false,
+    "runtimeHandlesStored": false,
+    "privateReasoningStored": false
+  },
+  "status": "held_before_admission"
+}

@@ -1,0 +1,64 @@
+{
+  "kind": "job-application-answer-projection-validation/v1",
+  "status": "passed",
+  "authority_effect": "none",
+  "source_result_ref": "result.json",
+  "source_result_digest": "d8cfef8df97d3ca6e6905b5465e7d1d2b60fba0560bb1ef7004f8be2a7665eb8",
+  "review_report_refs": ["self-introduction-set-2.html", "self-introduction-set-2.txt"],
+  "application_answer_artifacts": [
+    {
+      "path": "application-ready-self-introduction-set-2.html",
+      "media_type": "text/html",
+      "digest": "27af282744cdd13d83ce9a6114e8aec4be1d16654865bd34c4f62f7fde5f50ac"
+    },
+    {
+      "path": "application-ready-self-introduction-set-2.txt",
+      "media_type": "text/plain",
+      "digest": "427554a99a649d6749749090c0ff9764eb76eaeb41829104da2a5e53f54a50cc"
+    },
+    {
+      "path": "application-answer-projection.json",
+      "media_type": "application/json",
+      "digest": "33c0e9f9bc7ceac6a4fc8da99f62582f67a2fd9711513a685e21ce2c5662193c"
+    }
+  ],
+  "projection_scope": {
+    "candidate_ids": ["candidate-a", "candidate-b"],
+    "question_count_per_candidate": 4,
+    "included": ["allowed application metadata", "question text", "support-plan label", "answer bodies"],
+    "excluded": [
+      "loop names and workflow mechanics",
+      "scores and rubric language",
+      "validation receipts and file references",
+      "interview preparation and confirmation requests",
+      "review-report or process commentary"
+    ]
+  },
+  "checks": [
+    {
+      "id": "answer-body-parity",
+      "status": "passed",
+      "evidence": "all 8 answer bodies from result.json are present in the JSON, HTML, and TXT projection formats"
+    },
+    {
+      "id": "character-count-parity",
+      "status": "passed",
+      "evidence": "all 8 source answer character counts remain unchanged and within their request limits"
+    },
+    {
+      "id": "workflow-metadata-exclusion",
+      "status": "passed",
+      "evidence": "projection contains no loop, artifact, prompt, report-review, score, validation-receipt, interview-preparation, confirmation-request, internal-path, or JSON bookkeeping term"
+    },
+    {
+      "id": "publication-safety",
+      "status": "passed",
+      "evidence": "all projection formats are searchable, have no raster or external media dependency, and have no absolute local path"
+    }
+  ],
+  "authority_limits": [
+    "does not accept the application",
+    "does not submit the application",
+    "does not infer a hiring outcome"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "kind": "job-application-context-projection/v1",
+  "status": "report_only",
+  "authority_effect": "none",
+  "request_ref": "request.json",
+  "projection_policy": "smallest_sufficient_runtime_context",
+  "admitted_applicant_evidence": [
+    "applicant-fact-education",
+    "applicant-fact-career-direction",
+    "applicant-fact-tools",
+    "applicant-fact-finance-app-project",
+    "applicant-fact-internship",
+    "applicant-fact-voc-analysis",
+    "applicant-fact-interview-findings",
+    "applicant-value-stage-clarity",
+    "applicant-value-process-simplicity"
+  ],
+  "admitted_project_evidence": [
+    "project-finance-app-ux",
+    "project-claim-interview-24",
+    "project-claim-flow-redesign",
+    "project-claim-prioritize-clarity",
+    "project-fintech-operations-internship",
+    "project-claim-voc-analysis",
+    "project-claim-requirement-qa",
+    "project-claim-authentication-message"
+  ],
+  "protected_unknowns": [
+    "unknown-q1-collaboration-context",
+    "unknown-q2-analytics-example",
+    "unknown-q3-voc-decline-magnitude",
+    "unknown-q4-three-to-five-year-goal",
+    "unknown-question-minimum-rules",
+    "company-context-unverified"
+  ],
+  "inferences_requiring_confirmation": [
+    "fit-user-flow-requirements",
+    "fit-voc-data-loop",
+    "fit-collaboration-bridge",
+    "fit-three-to-five-year-goal",
+    "role-financial-clarity"
+  ],
+  "universal_language_translations": [
+    "사용자 흐름 -> 사용자가 과업을 완료하기까지 거치는 단계와 상태",
+    "프로토타입 -> 출시 전에 화면과 이용 단계를 확인할 수 있는 시제품",
+    "VOC -> 고객 문의와 이용 중 남긴 의견",
+    "Jira Ticket -> 개발팀이 실행할 수 있도록 정리한 작업 요청",
+    "QA -> 출시 전 기능 확인"
+  ],
+  "privacy": {
+    "identity_handling": "explicit_consent_only",
+    "public_report_identity": "redacted",
+    "runtime_private_sources": [
+      "source-applicant-profile",
+      "source-applicant-experiences"
+    ],
+    "prohibited_public_categories": [
+      "private-reasoning",
+      "raw-prompt",
+      "runtime-handle",
+      "secret",
+      "unconsented-identity"
+    ]
+  }
+}

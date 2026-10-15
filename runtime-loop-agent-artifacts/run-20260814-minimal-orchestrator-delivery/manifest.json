@@ -1,0 +1,259 @@
+{
+  "kind": "runtime-artifact-bundle/v1",
+  "schemaVersion": 1,
+  "bundleId": "bundle:minimal-orchestrator-worktree-delivery:20260814",
+  "workId": "runtime-loop-agent-artifacts",
+  "runId": "run-20260814-minimal-orchestrator-delivery",
+  "createdAt": "2026-08-14T18:30:00+09:00",
+  "authorityEffect": "none",
+  "sourceSnapshot": {
+    "gitCommit": "b4c93b52fbe8669c85ff21dab80916c776d45e2f",
+    "branchRef": "refs/heads/judangs/minimal-orchestrator-delivery",
+    "worktreeRef": "worktree:opaque:minimal-orchestrator-child",
+    "cleanAtStart": true,
+    "governingRefs": [
+      "AGENTS.md",
+      "docs/plan/artifacts/minimal-orchestrator-worktree-delivery-plan.md",
+      "artifacts/agent-loop/work/issue-worktree-orchestration/work-execution-binding/contract.md"
+    ]
+  },
+  "boundary": {
+    "reusableSourceRoots": ["artifacts/agent-loop", "artifacts/agents"],
+    "mutableStateRoot": ".collab/memory/orchestrator-minimal-worktree-delivery",
+    "generatedArtifactRoot": ".collab/artifacts/runtime-loop-agent-artifacts/run-20260814-minimal-orchestrator-delivery",
+    "ignoredByGit": false,
+    "sanitized": true,
+    "containsRawPrompt": false,
+    "containsTranscript": false,
+    "containsPrivateReasoning": false,
+    "containsCredentials": false
+  },
+  "composition": {
+    "loopEntries": [
+      {
+        "id": "issue-worktree-orchestration",
+        "origin": "reusable_source",
+        "ref": "artifacts/agent-loop/work/issue-worktree-orchestration/loop.yaml",
+        "digest": "sha256:2ff30a94afe2b20c939380173e382cf931b3a8b32b74d2aed1cca1af337a587b",
+        "status": "validated"
+      }
+    ],
+    "agentEntries": [
+      {
+        "id": "work-orchestration-coordinator",
+        "origin": "reusable_source",
+        "ref": "artifacts/agents/agent-operation/agents/work-orchestration-coordinator.yaml",
+        "digest": "sha256:7f63aef435960e76634f8b23b81f4306a0c11599d934b6aa6a3f4a8ea5d8a883",
+        "status": "validated"
+      },
+      {
+        "id": "worktree-loop-delivery-owner",
+        "origin": "reusable_source",
+        "ref": "artifacts/agents/agent-operation/agents/worktree-loop-delivery-owner.yaml",
+        "digest": "sha256:785be73f5f4c47e382a925c6cb0fd4480987ee170ba233fcacca0b64ec4b614a",
+        "status": "validated"
+      },
+      {
+        "id": "bounded-source-implementer",
+        "origin": "reusable_source",
+        "ref": "artifacts/agents/engineering/agents/bounded-source-implementer.yaml",
+        "digest": "sha256:6e0572670f6aebcc3e795eefa2b23053d77b838b90770f8817de2336518ea7ac",
+        "status": "selected"
+      }
+    ]
+  },
+  "executionTrace": {
+    "workExecutionBindingRef": ".collab/artifacts/runtime-loop-agent-artifacts/run-20260814-minimal-orchestrator-delivery/provenance/work-execution-binding.json",
+    "workflow": {
+      "id": "workflow:minimal-orchestrator-worktree-delivery",
+      "ref": "docs/plan/artifacts/minimal-orchestrator-worktree-delivery-plan.md",
+      "revision": "plan:minimal-orchestrator-worktree-delivery:v1",
+      "rootLoopId": "issue-worktree-orchestration"
+    },
+    "worktrees": [
+      {
+        "worktreeRef": "worktree:opaque:task-root",
+        "branchRef": "refs/heads/agent/runtime-loop-agent-artifacts",
+        "baseCommit": "b4c93b52fbe8669c85ff21dab80916c776d45e2f",
+        "headCommit": "b4c93b52fbe8669c85ff21dab80916c776d45e2f",
+        "parentWorktreeRef": null,
+        "purpose": "task-root delivery owner and existing Draft PR",
+        "status": "retained"
+      },
+      {
+        "worktreeRef": "worktree:opaque:minimal-orchestrator-child",
+        "branchRef": "refs/heads/judangs/minimal-orchestrator-delivery",
+        "baseCommit": "b4c93b52fbe8669c85ff21dab80916c776d45e2f",
+        "headCommit": "b4c93b52fbe8669c85ff21dab80916c776d45e2f",
+        "parentWorktreeRef": "worktree:opaque:task-root",
+        "purpose": "isolated contract contribution with external delivery disabled",
+        "status": "active"
+      }
+    ],
+    "assignments": [
+      {
+        "assignmentRef": "assignment:minimal-orchestrator-contract-contribution",
+        "loopId": "issue-worktree-orchestration",
+        "agentId": "bounded-source-implementer",
+        "worktreeRef": "worktree:opaque:minimal-orchestrator-child",
+        "branchRef": "refs/heads/judangs/minimal-orchestrator-delivery",
+        "mutableStateRef": ".collab/memory/orchestrator-minimal-worktree-delivery/assignment.json",
+        "status": "validated",
+        "artifactPaths": ["outputs/minimal-orchestrator/change-summary.json"]
+      }
+    ],
+    "activities": [
+      {
+        "activityRef": "activity:execution-binding",
+        "loopId": "issue-worktree-orchestration",
+        "worktreeRef": "worktree:opaque:minimal-orchestrator-child",
+        "branchRef": "refs/heads/judangs/minimal-orchestrator-delivery",
+        "status": "completed",
+        "artifactPaths": ["provenance/work-execution-binding.json"]
+      },
+      {
+        "activityRef": "activity:reuse-selection",
+        "loopId": "issue-worktree-orchestration",
+        "worktreeRef": "worktree:opaque:minimal-orchestrator-child",
+        "branchRef": "refs/heads/judangs/minimal-orchestrator-delivery",
+        "status": "completed",
+        "artifactPaths": ["composition/selection.json"]
+      },
+      {
+        "activityRef": "activity:contract-validation",
+        "loopId": "issue-worktree-orchestration",
+        "worktreeRef": "worktree:opaque:minimal-orchestrator-child",
+        "branchRef": "refs/heads/judangs/minimal-orchestrator-delivery",
+        "status": "validated",
+        "artifactPaths": ["validation/contracts.json"]
+      },
+      {
+        "activityRef": "activity:child-checkpoint",
+        "loopId": "issue-worktree-orchestration",
+        "worktreeRef": "worktree:opaque:minimal-orchestrator-child",
+        "branchRef": "refs/heads/judangs/minimal-orchestrator-delivery",
+        "status": "settled",
+        "artifactPaths": ["settlement/child-contribution.json"]
+      },
+      {
+        "activityRef": "activity:composition-improvement-review",
+        "loopId": "issue-worktree-orchestration",
+        "worktreeRef": "worktree:opaque:minimal-orchestrator-child",
+        "branchRef": "refs/heads/judangs/minimal-orchestrator-delivery",
+        "status": "completed",
+        "artifactPaths": [
+          "improvement/composition-review.json",
+          "improvement/worktree-loop-delivery-owner-promotion.json"
+        ]
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "provenance/work-execution-binding.json",
+      "role": "execution_binding",
+      "digest": "sha256:2ed5a217aad44c36a25eb1583a183091d0a2c2228aa67c0092d7ccc73e8342b8",
+      "producerKind": "workflow_activity",
+      "producerRef": "activity:execution-binding",
+      "sensitivity": "sanitized_public_metadata",
+      "retention": "promotion_evidence"
+    },
+    {
+      "path": "composition/selection.json",
+      "role": "composition_selection",
+      "digest": "sha256:5be5f449bbb10b785ca2109a7ebc2a4a9a5852280a384862cee655a24d175769",
+      "producerKind": "workflow_activity",
+      "producerRef": "activity:reuse-selection",
+      "sensitivity": "sanitized_public_metadata",
+      "retention": "promotion_evidence"
+    },
+    {
+      "path": "outputs/minimal-orchestrator/change-summary.json",
+      "role": "output",
+      "digest": "sha256:c28a572bef818474505ff008f152b53c84077bd7c88986a724173fe7c15668f5",
+      "producerKind": "assignment",
+      "producerRef": "assignment:minimal-orchestrator-contract-contribution",
+      "sensitivity": "sanitized_public_metadata",
+      "retention": "promotion_evidence"
+    },
+    {
+      "path": "validation/contracts.json",
+      "role": "validation",
+      "digest": "sha256:034bc44205317cfb63360116b47280854e3ec8c4a454145fbc1acea2a5456284",
+      "producerKind": "workflow_activity",
+      "producerRef": "activity:contract-validation",
+      "sensitivity": "sanitized_public_metadata",
+      "retention": "promotion_evidence"
+    },
+    {
+      "path": "settlement/child-contribution.json",
+      "role": "settlement",
+      "digest": "sha256:4995928607c198078f737de04e0666c2126a226e8f1e23f7340eac90f0f8bb80",
+      "producerKind": "workflow_activity",
+      "producerRef": "activity:child-checkpoint",
+      "sensitivity": "sanitized_public_metadata",
+      "retention": "promotion_evidence"
+    },
+    {
+      "path": "improvement/composition-review.json",
+      "role": "improvement_review",
+      "digest": "sha256:98e8952540f359f685909eaa0baaf7be0df3f4760139363ec5673b9a29e71548",
+      "producerKind": "workflow_activity",
+      "producerRef": "activity:composition-improvement-review",
+      "sensitivity": "sanitized_public_metadata",
+      "retention": "promotion_evidence"
+    },
+    {
+      "path": "improvement/worktree-loop-delivery-owner-promotion.json",
+      "role": "promotion_review",
+      "digest": "sha256:21bce65bb20e2c14328d3dc301af28e705da50d230aff32918a96a85a94903ad",
+      "producerKind": "workflow_activity",
+      "producerRef": "activity:composition-improvement-review",
+      "sensitivity": "sanitized_public_metadata",
+      "retention": "promotion_evidence"
+    }
+  ],
+  "lifecycle": {
+    "state": "validating",
+    "completionRef": null,
+    "settlementRef": null,
+    "retentionDisposition": "retain_with_checkpoint",
+    "retainedUntil": "superseded by a digest-linked successor bundle",
+    "terminalResources": {
+      "activeCount": 1,
+      "settledRefs": []
+    }
+  },
+  "reuseReview": {
+    "status": "completed",
+    "outputRef": "artifact:improvement:composition-review",
+    "loopCandidates": [
+      {
+        "id": "issue-worktree-orchestration",
+        "disposition": "improve_existing",
+        "evidenceRefs": ["evidence:minimal-orchestrator-responsibility-split"],
+        "automaticPromotion": false
+      }
+    ],
+    "agentCandidates": [
+      {
+        "id": "worktree-loop-delivery-owner",
+        "disposition": "promotion_candidate",
+        "evidenceRefs": ["evidence:distinct-worktree-delivery-contract"],
+        "automaticPromotion": false
+      }
+    ],
+    "skillCandidates": [
+      {
+        "id": "no-new-skill",
+        "disposition": "no_candidate",
+        "evidenceRefs": [],
+        "automaticPromotion": false
+      }
+    ]
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "manifestDigest": "sha256:c3febd78d1a312eab405ee33f0ea5f44de52661761e0099833bd0538c623da9b"
+  }
+}

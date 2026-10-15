@@ -1,0 +1,73 @@
+{
+  "authorityEffect": "none",
+  "blockers": [],
+  "effectivePrimaryMode": "single_task",
+  "excludedScopeKinds": ["ambient", "controller", "coverage"],
+  "kind": "subject-operation-scope-binding-decision/v1",
+  "reasonCodes": [
+    "non_subject_scopes_explicitly_excluded",
+    "selected_subject_topology_content_bound"
+  ],
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-4:tencent/autocodebench:r13:execute-harbor-subject",
+  "routeDecisionSha256": "352b7919c8b985378d0fda3ce6ac20270789d6142163cc9f347b0d040a08d0c7",
+  "scopeBindings": [
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:4e5c4f8cc77a8908f982ece8b5f46bdf661ab96a9a897d7367b8ac7c8db22ece",
+      "disposition": "coverage_stimulus_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-46-tencent-autocodebench/source-and-plan-binding.r13.json",
+      "scopeId": "coverage:population-shard-4:tencent/autocodebench:r13",
+      "scopeKind": "coverage",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:4046b17d5dc3ea7072e9fcf1c6568ce19e6808b39276cb16e899e62701a4fdcd",
+      "disposition": "context_only",
+      "ref": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-46-tencent-autocodebench/environment-platform-observation.r13.json",
+      "scopeId": "ambient:population-shard-4:tencent/autocodebench:r13",
+      "scopeKind": "ambient",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": false,
+      "digest": "sha256:387139c9be83e491225c4cdf529672c9a910dbfdbf3b012688957e0ccf87c94b",
+      "disposition": "control_plane_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-46-tencent-autocodebench/claim.r13.json",
+      "scopeId": "controller:population-shard-4:tencent/autocodebench:r13",
+      "scopeKind": "controller",
+      "state": "present"
+    },
+    {
+      "countedAsSubjectOperation": true,
+      "digest": "sha256:0adabb52b78861488b7f990abbc6ba4e0bef82ccb0eef14291f1fffc2bff33ae",
+      "disposition": "eligible_report_only",
+      "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-46-tencent-autocodebench/subject-topology-binding.r13.json",
+      "scopeId": "subject-scope:population-shard-4:tencent/autocodebench:r13",
+      "scopeKind": "subject",
+      "state": "selected"
+    }
+  ],
+  "scopedMode": "single_task",
+  "segmentMode": null,
+  "status": "ready",
+  "subjectOperation": {
+    "agentArchitectureDigest": "sha256:08d7bbe558b9135038c119bcc0049672e5ec3dbff99453386ab098a6d4167082",
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmDigest": null,
+    "agentSwarmRef": null,
+    "bindingDigest": "sha256:0adabb52b78861488b7f990abbc6ba4e0bef82ccb0eef14291f1fffc2bff33ae",
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/continuation-r13-next/item-46-tencent-autocodebench/subject-topology-binding.r13.json",
+    "coordinationPolicyDigest": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "disposition": "eligible_report_only",
+    "scopeId": "subject-scope:population-shard-4:tencent/autocodebench:r13",
+    "workflowPatternDigest": "sha256:93bf91356072b399cd3684ea2d482c7fe3afe4ca083e8443e86978b2bdb5d7bd",
+    "workflowPatternId": "pipeline",
+    "workflowPatternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/pipeline/workflow-pattern.json"
+  },
+  "targetScope": "effective_primary",
+  "topologyRequirement": "architecture_only",
+  "topologyRequirementDecisionSha256": "0ee6016eb51809aaba8b5d85ee86433d0d30fb9b638ec7a6fdb0a6fcdc1d1b7b",
+  "topologySelectionDecisionSha256": "1307bc5c2ba8c7647bbac671a9d4524dbf42bc671645ec42abef0e2955e56628"
+}

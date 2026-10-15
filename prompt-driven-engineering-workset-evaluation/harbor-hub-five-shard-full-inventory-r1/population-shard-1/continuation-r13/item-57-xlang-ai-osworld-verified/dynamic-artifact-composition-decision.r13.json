@@ -1,0 +1,139 @@
+{
+  "authorityEffect": "none",
+  "automaticPromotion": false,
+  "decision": {
+    "authorityEffect": "none",
+    "automaticPromotion": false,
+    "dynamicCompositionEvaluationEligible": true,
+    "kind": "dynamic-artifact-composition-resolution-decision/v1",
+    "nativeTopologyEvidenceDisposition": "not_required_not_claimed",
+    "nativeTopologyReceiptBinding": null,
+    "rejectedDynamicCandidates": [],
+    "remainingGapIds": [],
+    "requestRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-57-xlang-ai-osworld-verified/xlang-ai/osworld-verified:dynamic-composition",
+    "residualGapIds": ["gap:item-effective-provider-receipt", "gap:r13-context-projection"],
+    "selectedDynamicArtifacts": [
+      {
+        "artifactKind": "construct",
+        "artifactRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-57-xlang-ai-osworld-verified/dynamic-candidate.r13.json",
+        "componentRefs": [
+          "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+          "artifacts/loop-architecture/components/execution-routing/component.json",
+          "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+        ],
+        "coveredGapIds": ["gap:item-effective-provider-receipt"],
+        "digest": "sha256:e4a27464559ab95887d1e225c66bdc96717517d2c3618766c0c09c5050815ae9",
+        "expiryConditionRefs": [
+          "item-terminal-settlement",
+          "operation-revision-successor",
+          "provider-receipt-observed"
+        ],
+        "fallbackRef": "fallback:hold:population-shard-1:xlang-ai/osworld-verified:until-effective-provider-receipt",
+        "invalidationConditionRefs": [
+          "capability-fingerprint-change",
+          "requirement-scope-change",
+          "source-binding-change"
+        ],
+        "operationEvidenceContractRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+        "topologyBearing": false,
+        "validationEvidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-57-xlang-ai-osworld-verified/artifact-reuse-decision.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-57-xlang-ai-osworld-verified/candidate-probe.r13.json"
+        ],
+        "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-1:continuation-r13/item-57-xlang-ai-osworld-verified:xlang-ai/osworld-verified"
+      }
+    ],
+    "selectedMode": "single_task",
+    "selectedReusableArtifactBindings": [
+      {
+        "artifactRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json",
+        "coveredGapIds": ["gap:r13-context-projection"],
+        "digest": "sha256:68812a487135db628c34c709cbc1d3c8e4407b118fcdbfde8a1295a4dd01400a"
+      }
+    ],
+    "selectedReusableArtifactRefs": [
+      ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json"
+    ],
+    "status": "selected"
+  },
+  "digest": "sha256:7a3bfb1a138fefb97ef90a45548197ec881de65929bfa6c47198f3c602397e93",
+  "identityDigest": "sha256:c6e7e1b86ebcc09d9544f71c5d86c044d7fe1853d896da1d8a37821551e80c26",
+  "itemId": "xlang-ai/osworld-verified",
+  "kind": "harbor-item-dynamic-artifact-composition-evidence/v2",
+  "nativeTopologyReceiptInferred": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "runPrivateCandidateOnly": true
+  },
+  "request": {
+    "dynamicCandidates": [
+      {
+        "artifactKind": "construct",
+        "artifactRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-57-xlang-ai-osworld-verified/dynamic-candidate.r13.json",
+        "capabilityIds": ["effective_provider_receipt"],
+        "compatibleModes": ["single_task"],
+        "componentRefs": [
+          "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+          "artifacts/loop-architecture/components/execution-routing/component.json",
+          "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+        ],
+        "coveredGapIds": ["gap:item-effective-provider-receipt"],
+        "digest": "sha256:e4a27464559ab95887d1e225c66bdc96717517d2c3618766c0c09c5050815ae9",
+        "expiryConditionRefs": [
+          "item-terminal-settlement",
+          "operation-revision-successor",
+          "provider-receipt-observed"
+        ],
+        "fallbackRef": "fallback:hold:population-shard-1:xlang-ai/osworld-verified:until-effective-provider-receipt",
+        "invalidationConditionRefs": [
+          "source-binding-change",
+          "requirement-scope-change",
+          "capability-fingerprint-change"
+        ],
+        "operationEvidenceContractRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+        "runPrivate": true,
+        "structuralCost": 1,
+        "topologyBearing": false,
+        "validated": true,
+        "validationEvidenceRefs": [
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-57-xlang-ai-osworld-verified/artifact-reuse-decision.r13.json",
+          ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-57-xlang-ai-osworld-verified/candidate-probe.r13.json"
+        ],
+        "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-1:continuation-r13/item-57-xlang-ai-osworld-verified:xlang-ai/osworld-verified"
+      }
+    ],
+    "nativeTopologyReceiptAvailable": false,
+    "nativeTopologyReceiptDigest": null,
+    "nativeTopologyReceiptRef": null,
+    "requestRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-57-xlang-ai-osworld-verified/xlang-ai/osworld-verified:dynamic-composition",
+    "residualGaps": [
+      {
+        "allowedDynamicKinds": ["context_projection"],
+        "id": "gap:r13-context-projection",
+        "requiredCapabilityIds": ["r13_context_binding"]
+      },
+      {
+        "allowedDynamicKinds": ["construct"],
+        "id": "gap:item-effective-provider-receipt",
+        "requiredCapabilityIds": ["effective_provider_receipt"]
+      }
+    ],
+    "reusableArtifacts": [
+      {
+        "artifactRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/current-operation-envelope.r13.json",
+        "coveredGapIds": ["gap:r13-context-projection"],
+        "digest": "sha256:68812a487135db628c34c709cbc1d3c8e4407b118fcdbfde8a1295a4dd01400a",
+        "qualified": true
+      },
+      {
+        "artifactRef": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md",
+        "coveredGapIds": [],
+        "digest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18",
+        "qualified": true
+      }
+    ],
+    "selectedMode": "single_task"
+  },
+  "schemaVersion": 2
+}

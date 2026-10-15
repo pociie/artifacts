@@ -1,0 +1,32 @@
+{
+  "kind": "job-application-report-settlement-receipt/v1",
+  "schema_version": 1,
+  "status": "fail",
+  "authority_effect": "none",
+  "bundle_ref": ".collab/artifacts/job-application-report-production-hardening-2026-09-15/incomplete-run-bundle.json",
+  "bundle_digest": "66332c19d68bb171472297e24a076a97bef0f60b28c0d8d9358e9640108e6692",
+  "checks": [
+    {
+      "id": "run-bundle-contract",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "runtime-path-completeness",
+      "status": "fail",
+      "issues": [
+        "run:path:missing:result_ref:.collab/artifacts/job-application-ibk-it-2026-09-15-isolated/result.json",
+        "run:path:missing:writing_review_ref:.collab/artifacts/job-application-ibk-it-2026-09-15-isolated/writing-quality-review.json",
+        "run:path:missing:composition_receipt_ref:.collab/artifacts/job-application-ibk-it-2026-09-15-isolated/composition-receipt.json",
+        "run:path:missing:render_receipt_ref:.collab/artifacts/job-application-ibk-it-2026-09-15-isolated/render-validation.json"
+      ]
+    }
+  ],
+  "issues": [
+    "run:path:missing:result_ref:.collab/artifacts/job-application-ibk-it-2026-09-15-isolated/result.json",
+    "run:path:missing:writing_review_ref:.collab/artifacts/job-application-ibk-it-2026-09-15-isolated/writing-quality-review.json",
+    "run:path:missing:composition_receipt_ref:.collab/artifacts/job-application-ibk-it-2026-09-15-isolated/composition-receipt.json",
+    "run:path:missing:render_receipt_ref:.collab/artifacts/job-application-ibk-it-2026-09-15-isolated/render-validation.json"
+  ],
+  "final_user_output": null
+}

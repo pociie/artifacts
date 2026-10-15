@@ -1,0 +1,47 @@
+{
+  "artifactKind": "construct",
+  "authorityEffect": "none",
+  "automaticPromotion": false,
+  "candidateRole": "bounded_effective_provider_receipt_projection",
+  "capabilityIds": ["effective_provider_receipt"],
+  "compatibleModes": ["single_task"],
+  "componentRefs": [
+    "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+    "artifacts/loop-architecture/components/execution-routing/component.json",
+    "artifacts/loop-architecture/components/work-queue-coordination/component.json"
+  ],
+  "coveredGapIds": ["gap:item-effective-provider-receipt"],
+  "expiryConditionRefs": [
+    "item-terminal-settlement",
+    "operation-revision-successor",
+    "provider-receipt-observed"
+  ],
+  "fallbackRef": "fallback:hold:population-shard-5:meta/mlgym-bench:until-effective-provider-receipt",
+  "identityDigest": "sha256:a04336ddbcd3187cce293ee9439b4b03f248596b4a2e8dd75b502bde0360e53d",
+  "invalidationConditionRefs": [
+    "source-binding-change",
+    "requirement-scope-change",
+    "capability-fingerprint-change"
+  ],
+  "itemId": "meta/mlgym-bench",
+  "kind": "dynamic-artifact-candidate/v1",
+  "operationEvidenceContractRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/contract.md",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningStored": false,
+    "rawTaskContentStored": false,
+    "runtimeHandlesStored": false,
+    "secretsStored": false
+  },
+  "runPrivate": true,
+  "schemaVersion": 1,
+  "structuralCost": 1,
+  "topologyBearing": false,
+  "validated": true,
+  "validationEvidenceRefs": [
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-19-meta-mlgym-bench/artifact-reuse-decision.r13.json",
+    ".collab/artifacts/harbor-hub-five-shard-full-inventory-r1/population-shard-5/continuation-r13/item-19-meta-mlgym-bench/candidate-probe.r13.json"
+  ],
+  "validityWindowRef": "validity:harbor-hub-five-shard-full-inventory-r1:population-shard-5:continuation-r13/item-19-meta-mlgym-bench:meta/mlgym-bench"
+}

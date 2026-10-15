@@ -1,0 +1,79 @@
+{
+  "arms": [
+    {
+      "allowedReasoningEfforts": ["max"],
+      "armType": "artifact_aware",
+      "artifactProjectionDigest": "sha256:918c1bc2f86c8617da6296e6fab7d916a54938b1a5935dae8ad4579b84ed3123",
+      "id": "artifact_aware_max",
+      "instructionProfileRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+      "modelRef": "model:gpt-5.6-luna",
+      "reasoningProfileRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "budget": {
+    "maxAttempts": 1,
+    "maxConcurrent": 1,
+    "maxTrials": 1
+  },
+  "digest": "sha256:695160f5d7a84ea0eac899c2c9cb8ff901c49466e46788ef794f6e554b3ea83a",
+  "environment": {
+    "emulationPolicy": "qualified_emulation",
+    "environmentDigest": "sha256:0dced807b062eaec94cea792e5933163c7b41d8ba504c0d5b5a71839fc9f2f3c",
+    "hostPlatformRef": "platform:darwin-arm64",
+    "targetPlatformRef": "platform:linux-aarch64"
+  },
+  "kind": "engineering-workset-simulation-request/v1",
+  "license": {
+    "limitations": [
+      "public visibility and successful package import are the bounded license basis for this representative"
+    ],
+    "qualificationRef": "artifacts/population-shard-4/provider-qualification.json#public-visibility",
+    "state": "qualified"
+  },
+  "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r5",
+  "population": {
+    "frozenBeforeOutcome": true,
+    "selectionRule": "sha256-prefix64-modulo-v1; consumed exact frozen assignment",
+    "tasks": [
+      {
+        "providerTaskRef": "harbor:harbor/hello-world@latest",
+        "taskDigest": "sha256:bfb2e7afa2ddd48fadd57b7a44e4c25bfe987d739e8442bc59eb4ae9fc6d897a",
+        "taskId": "harbor/hello-world"
+      }
+    ]
+  },
+  "privacy": {
+    "prohibitedContent": [
+      "raw_prompt",
+      "transcript",
+      "private_reasoning",
+      "credential",
+      "secret",
+      "runtime_handle",
+      "hidden_oracle_body"
+    ],
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/round-r5",
+    "workingMemoryBindingRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/round-r5/working-memory-binding.json"
+  },
+  "provider": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "class": "harbor",
+    "digest": "sha256:5e38950b4346ddd45ae39e29882570ff80a226e938e883338cd6f967bbe18360",
+    "qualificationRef": "artifacts/population-shard-4/provider-qualification.json",
+    "version": "0.22.0"
+  },
+  "schemaVersion": 1,
+  "source": {
+    "datasetDigest": "sha256:3129ad473a1c60f76d7159614e57c251e1fdf0a3ee64c9c347166e3315a1dd69",
+    "datasetRef": "dataset:harbor/hello-world",
+    "datasetRevision": "sha256:3129ad473a1c60f76d7159614e57c251e1fdf0a3ee64c9c347166e3315a1dd69"
+  },
+  "status": "frozen",
+  "verifier": {
+    "oracleRequired": true,
+    "verifierDigest": "sha256:2972ebb8086f1926bd0e427da4a1039f7583b167c5ef60e4d49f6778f155b380",
+    "verifierRef": "memory:harbor-hub-five-shard-full-inventory-r1:population-shard-4:round-r5:verifier/ctrf.json"
+  }
+}

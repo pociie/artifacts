@@ -1,0 +1,217 @@
+{
+  "kind": "reusable-artifact-assessment/v1",
+  "schemaVersion": 1,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "acceptedAsEvidence": false,
+  "automaticPromotion": false,
+  "assessmentId": "assessment:job-application-report-production:2026-09-14",
+  "objective": "Assess whether the completed report workflow supports one bounded reusable Agent Loop candidate after composing existing owners, preserving runtime-specific facts, and validating positive and negative cases.",
+  "subject": {
+    "artifactId": "loop:document:job-application-report-production",
+    "artifactVersion": "v1-report-only-candidate",
+    "cardRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/reusable-artifact-responsibility-card.json",
+    "cardDigest": "6382a044a5bdc832cae5e3bd1bca0cd703bde5aefd798fc8cbff75a2271d40ff",
+    "inventoryRef": "artifacts/loop-architecture/registry/reusable-artifact-inventory.json",
+    "inventoryDigest": "783a32562aa185dbef333dde7c7c8945adb294fe76af24b935aa271916d242be"
+  },
+  "observationWindow": {
+    "start": "2026-09-07T19:48:40+09:00",
+    "end": "2026-09-14T19:43:48+09:00",
+    "populationRef": ".collab/artifacts/job-application-report-reuse-2026-09-14/session-chronology.json"
+  },
+  "evaluators": {
+    "assessor": "agent-subject:job-application-report-artifact-builder",
+    "independentReviewer": null,
+    "independentReviewStatus": "unavailable"
+  },
+  "evidenceFacts": [
+    {
+      "id": "fact:completed-publication-workflow",
+      "classification": "exact",
+      "ref": ".collab/artifacts/job-application-2026-09-ai-service-engineer/publication-assessment-v6.json",
+      "digest": "8bdebc931a605ac015a608361b3193c18699f4c76b303eada24a4ea870822651",
+      "current": true,
+      "applicable": true,
+      "summary": "One completed workflow passed its declared non-compensatory content, PDF, render, raster, searchable-text, and visible-source checks while preserving an unavailable accessibility audit."
+    },
+    {
+      "id": "fact:sanitized-chronology",
+      "classification": "derived",
+      "ref": ".collab/artifacts/job-application-report-reuse-2026-09-14/session-chronology.json",
+      "digest": "71bc59c7ddd409bd586e37f6fe230cc41bce94123734e8ba1ddb710b6bf71306",
+      "current": true,
+      "applicable": true,
+      "summary": "The artifact sequence shows recurring boundaries for questions, evidence, applicant meaning, project abstraction, domain language, assessment, revision, reader projection, rendering, and publication validation without retaining prompt history."
+    },
+    {
+      "id": "fact:existing-loop-composition",
+      "classification": "exact",
+      "ref": ".collab/artifacts/job-application-report-reuse-2026-09-14/reusable-artifact-selection-report.json",
+      "digest": "15cdc6c078a135341613e5b83044a9a2d420f5ad93aa2fb0dc07741b81c83530",
+      "current": true,
+      "applicable": true,
+      "summary": "Inventory-backed selection identified six existing Loops for research, context, rubric, review, prompt, and handoff responsibilities; the separate effect-admission record closed the selector's local-write context gap."
+    },
+    {
+      "id": "fact:focused-contract-validation",
+      "classification": "exact",
+      "ref": ".collab/artifacts/job-application-report-reuse-2026-09-14/validation-evidence.json",
+      "digest": "9b7db49b7f5a9d9240eefdc2f439a0adc0305ea16d7e07ca820e5cf2b804fb17",
+      "current": true,
+      "applicable": true,
+      "summary": "Request and result validation, 11 positive and negative tests, Loop v2 binding, package structure, schemas, links, serialization, and whitespace checks passed."
+    },
+    {
+      "id": "fact:repository-fitness-follow-up",
+      "classification": "exact",
+      "ref": ".collab/artifacts/job-application-report-reuse-2026-09-14/validation-evidence.json",
+      "digest": "9b7db49b7f5a9d9240eefdc2f439a0adc0305ea16d7e07ca820e5cf2b804fb17",
+      "current": true,
+      "applicable": true,
+      "summary": "Repository fitness remains red on out-of-scope knowledge pages and shared generated portfolio, graph, and inventory projections; those fan-in artifacts were not modified by this non-integration writer."
+    },
+    {
+      "id": "fact:independent-semantic-review",
+      "classification": "unavailable",
+      "ref": ".collab/artifacts/job-application-report-reuse-2026-09-14/reusable-artifact-assessment.json",
+      "digest": null,
+      "current": null,
+      "applicable": true,
+      "summary": "No principal distinct from the material author was assigned to review the frozen reusable candidate."
+    },
+    {
+      "id": "fact:cross-context-repeat-execution",
+      "classification": "unavailable",
+      "ref": ".collab/artifacts/job-application-report-reuse-2026-09-14/extraction-decision.json",
+      "digest": null,
+      "current": null,
+      "applicable": true,
+      "summary": "No second execution against a materially different company, role, question set, applicant evidence set, or report format has been observed."
+    }
+  ],
+  "criteria": {
+    "mandatory": [
+      {
+        "id": "criterion:bounded-residual-responsibility",
+        "status": "supported",
+        "evidenceFactIds": ["fact:sanitized-chronology", "fact:existing-loop-composition"]
+      },
+      {
+        "id": "criterion:existing-owner-preservation",
+        "status": "supported",
+        "evidenceFactIds": ["fact:existing-loop-composition"]
+      },
+      {
+        "id": "criterion:runtime-fact-and-privacy-boundary",
+        "status": "supported",
+        "evidenceFactIds": ["fact:sanitized-chronology", "fact:focused-contract-validation"]
+      },
+      {
+        "id": "criterion:deterministic-positive-negative-validation",
+        "status": "supported",
+        "evidenceFactIds": ["fact:focused-contract-validation"]
+      },
+      {
+        "id": "criterion:non-authority-and-lifecycle-ceiling",
+        "status": "supported",
+        "evidenceFactIds": ["fact:completed-publication-workflow", "fact:repository-fitness-follow-up"]
+      }
+    ],
+    "qualifying": [
+      {
+        "id": "criterion:independent-semantic-validation",
+        "status": "unavailable",
+        "evidenceFactIds": ["fact:independent-semantic-review"]
+      },
+      {
+        "id": "criterion:cross-context-reuse-observation",
+        "status": "unavailable",
+        "evidenceFactIds": ["fact:cross-context-repeat-execution"]
+      }
+    ],
+    "comparative": [
+      {
+        "id": "criterion:smallest-complete-artifact-shape",
+        "status": "supported",
+        "evidenceFactIds": ["fact:existing-loop-composition", "fact:focused-contract-validation"]
+      },
+      {
+        "id": "criterion:task-specific-constant-removal",
+        "status": "supported",
+        "evidenceFactIds": ["fact:sanitized-chronology", "fact:focused-contract-validation"]
+      }
+    ],
+    "observational": [
+      {
+        "id": "criterion:completed-workflow-quality",
+        "status": "supported",
+        "evidenceFactIds": ["fact:completed-publication-workflow"]
+      },
+      {
+        "id": "criterion:repository-integration-readiness",
+        "status": "partially_supported",
+        "evidenceFactIds": ["fact:repository-fitness-follow-up"]
+      }
+    ]
+  },
+  "alternatives": [
+    {
+      "disposition": "compose_existing",
+      "targetRefs": [
+        "artifacts/agent-loop/work/progressive-knowledge-research/loop.yaml",
+        "artifacts/agent-loop/execution-preparation/context-resolution/loop.yaml",
+        "artifacts/agent-loop/assessment/rubric-management/loop.yaml",
+        "artifacts/agent-loop/assessment/agent-review/loop.yaml",
+        "artifacts/agent-loop/execution-preparation/prompt-assistance/loop.yaml",
+        "artifacts/agent-loop/work/session-handoff-resume/loop.yaml"
+      ],
+      "evidenceFactIds": ["fact:existing-loop-composition"]
+    },
+    {
+      "disposition": "retain_task_specific",
+      "targetRefs": [
+        ".collab/artifacts/job-application-2026-09-ai-service-engineer/self-introduction-5sets-v6.pdf"
+      ],
+      "evidenceFactIds": ["fact:completed-publication-workflow"]
+    },
+    {
+      "disposition": "report_only_candidate",
+      "targetRefs": [
+        "artifacts/agent-loop/document/job-application-report-production/loop.yaml"
+      ],
+      "evidenceFactIds": [
+        "fact:sanitized-chronology",
+        "fact:existing-loop-composition",
+        "fact:focused-contract-validation",
+        "fact:independent-semantic-review",
+        "fact:cross-context-repeat-execution"
+      ]
+    }
+  ],
+  "disposition": "report_only_candidate",
+  "mandatoryFailures": [],
+  "unavailableFacts": [
+    "fact:independent-semantic-review",
+    "fact:cross-context-repeat-execution"
+  ],
+  "conflictingFacts": [],
+  "counterevidenceRefs": [
+    ".collab/artifacts/job-application-report-reuse-2026-09-14/validation-evidence.json",
+    ".collab/artifacts/job-application-2026-09-ai-service-engineer/publication-assessment-v6.json"
+  ],
+  "limitations": [
+    "The assessment was authored by the reusable candidate writer and is not independent.",
+    "One successful application workflow and deterministic fixtures do not prove usefulness across applicants, companies, roles, languages, or report formats.",
+    "Repository-wide fitness is not green because separately owned documentation and shared generated projections remain unresolved.",
+    "The candidate has no acceptance, activation, inventory-registration, submission, publication, or promotion effect."
+  ],
+  "migration": "No existing report or reusable Loop is migrated. Future runs may opt into the new request and result contract while native research, context, rubric, review, prompt, and handoff owners remain unchanged.",
+  "rollback": "Delete the report-only source package and remove optional task routing while preserving task-local chronology, selection, assessment, and validation evidence for audit.",
+  "retirement": "Retire only after confirming no current consumer or after a separately accepted successor provides schema compatibility, migration, rollback, and owner evidence.",
+  "nextReviewTrigger": "A second materially different execution, independent semantic review, shared inventory integration, schema or protected-gate change, or observed unsupported-claim or applicant-correction failure.",
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "fa74cd2e3b7243362c5313302a8bb716f74c22841e58e17ead934514253f05c9"
+  }
+}

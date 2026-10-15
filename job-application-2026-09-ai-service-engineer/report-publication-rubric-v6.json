@@ -1,0 +1,156 @@
+{
+  "kind": "publication-rubric/v1",
+  "schemaVersion": 1,
+  "rubricId": "rubric:job-application-report:publication-v6",
+  "revision": "2026-09-08.2",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "frameworkRef": "artifacts/agent-loop/assessment/rubric-management/loop.yaml",
+  "governanceRef": "artifacts/agent-loop/assessment/rubric-management/governance.md",
+  "purpose": {
+    "statement": "검토용 PDF가 사용자에게 필요한 정보만 공개하고, 자기소개서 원문·페이지 구조·래스터 자산·렌더링 상태를 선언된 기준으로 검증하는 rubric이다.",
+    "evaluand": "self-introduction-5sets-v6.pdf와 그 구성 HTML·시각 자산",
+    "intendedDecisionUse": "PDF 1차 산출물의 공개 범위·구조·재현 가능성을 점검하는 report-only decision support",
+    "prohibitedDecisionUse": ["지원자의 역량 인증", "채용 합격 예측", "자동 제출 승인", "회사 내부 사실의 확정"]
+  },
+  "criterionOrder": ["mandatory", "qualifying", "observational"],
+  "scale": {
+    "measurementLevel": "nominal",
+    "anchors": [
+      {"value": "pass", "meaning": "선언된 검사와 근거가 기준을 충족함"},
+      {"value": "fail", "meaning": "기준을 충족하지 못해 수정이 필요함"},
+      {"value": "unavailable", "meaning": "도구나 자료가 없어 판단하지 못함; 실패나 0점으로 대체하지 않음"}
+    ],
+    "missingValuePolicy": "retain_unavailable"
+  },
+  "criteria": [
+    {
+      "id": "publication-boundary",
+      "kind": "mandatory",
+      "question": "최종 보고서가 사용자용 정보와 공식 모집공고만 공개하는가?",
+      "observable": "HTML에 표시된 외부 URL 집합과 내부 산출물·작업 운영 토큰의 부재",
+      "weight": null,
+      "checks": [
+        {"id": "visible-source-scope", "type": "visibleSources", "allowedUrls": ["https://recruit.lotte.co.kr/apply/announcement/detail/21933850?compcd=30007"]},
+        {
+          "id": "internal-publication-token-absence",
+          "type": "forbiddenTokens",
+          "tokens": [
+            {"value": "self-introduction-content-", "reason": "내부 콘텐츠 산출물 파일명"},
+            {"value": "evaluation-rubric-", "reason": "내부 평가 기준 파일명"},
+            {"value": "assessment-operation-", "reason": "내부 평가 운영 파일명"},
+            {"value": "question-differentiation-", "reason": "내부 문항 기준 파일명"},
+            {"value": "claim-ledger", "reason": "내부 주장 원장 파일명"},
+            {"value": "evidence-map", "reason": "내부 근거 매핑 파일명"},
+            {"value": "project-abstraction-map", "reason": "내부 프로젝트 매핑 파일명"},
+            {"value": "quality-loop", "reason": "내부 품질 루프 파일명"},
+            {"value": ".json", "reason": "내부 JSON 산출물 노출"},
+            {"value": "v4", "reason": "이전 작업 버전명 노출"},
+            {"value": "v5", "reason": "이전 작업 버전명 노출"},
+            {"value": "v6", "reason": "내부 작업 버전명 노출"},
+            {"value": "Loop Architecture", "reason": "프로젝트 내부 고유명 노출"},
+            {"value": "progressive-knowledge", "reason": "내부 조사 루프명 노출"},
+            {"value": "authorityEffect", "reason": "내부 권한 메타데이터 노출"},
+            {"value": "report-only", "reason": "내부 산출물 상태명 노출"},
+            {"value": "보상학습", "reason": "내부 편집 방법론 해명 노출"},
+            {"value": "reward learning", "reason": "내부 편집 방법론 해명 노출"}
+          ]
+        }
+      ],
+      "unknownDisposition": "require_context",
+      "limitation": "토큰 부재 검사는 선언된 비노출 목록의 완전성을 보장하지 않으며, 최종 PDF의 사람 검토를 대체하지 않는다."
+    },
+    {
+      "id": "content-contract",
+      "kind": "mandatory",
+      "question": "문항 원문과 보고서 구조가 지원서 조건을 보존하는가?",
+      "observable": "페이지 수, 답변 수, 글자 수, 선택 가능한 본문 구조",
+      "weight": null,
+      "checks": [
+        {"id": "html-page-count", "type": "htmlPageCount", "expected": 15},
+        {"id": "answer-inventory", "type": "answerInventory", "expectedAnswers": 15, "minChars": 300, "maxChars": 700, "minScore": 90},
+        {"id": "live-essay-text", "type": "liveEssayText", "expectedBlocks": 15},
+        {"id": "pdf-searchable-text", "type": "pdfTextLayer", "minTextStreams": 15, "minTextOperators": 15, "minToUnicodeMaps": 1}
+      ],
+      "unknownDisposition": "require_context",
+      "limitation": "HTML의 선택 가능한 본문 구조를 검증하며, 모든 PDF 뷰어의 텍스트 추출 결과를 보장하지 않는다."
+    },
+    {
+      "id": "pdf-contract",
+      "kind": "mandatory",
+      "question": "PDF 파일이 생성되고 페이지 구조가 의도한 범위에 있는가?",
+      "observable": "파일 존재·크기·PDF 페이지 객체 수",
+      "weight": null,
+      "checks": [
+        {"id": "pdf-file", "type": "pdfFile", "minBytes": 100000},
+        {"id": "pdf-page-count", "type": "pdfPageCount", "expected": 15}
+      ],
+      "unknownDisposition": "require_context",
+      "limitation": "PDF 객체 수를 확인하지만 인쇄소·뷰어별 출력 차이와 태그 접근성 적합성은 별도 검토가 필요하다."
+    },
+    {
+      "id": "render-contract",
+      "kind": "mandatory",
+      "question": "렌더링 결과에 페이지 오버플로가 없고 모든 페이지가 구성되는가?",
+      "observable": "렌더 검증 기록의 페이지 수와 overflow 목록",
+      "weight": null,
+      "checks": [
+        {"id": "render-validation", "type": "renderValidation", "expectedPages": 15, "maxOverflowPages": 0}
+      ],
+      "unknownDisposition": "require_context",
+      "limitation": "현재 렌더 환경의 결과이며 다른 PDF 뷰어의 글꼴 대체 결과까지 대표하지 않는다."
+    },
+    {
+      "id": "raster-asset-contract",
+      "kind": "qualifying",
+      "question": "도식은 래스터 자산으로 제공되고 본문 구조를 대신하지 않는가?",
+      "observable": "선언된 PNG 자산의 존재·형식·최소 크기와 HTML의 이미지 삽입",
+      "weight": 1,
+      "checks": [
+        {"id": "raster-assets", "type": "rasterAssets", "directory": "report-assets-v6", "format": "png", "minBytes": 1000, "names": ["cover-flow", "company-role-map", "domain-interest-map", "project-flow", "selection-path", "score-profile"]}
+      ],
+      "unknownDisposition": "retain_unavailable",
+      "limitation": "래스터 자산의 시각적 품질은 자동 검사만으로 완전히 판단할 수 없어 페이지 이미지 확인을 병행한다."
+    },
+    {
+      "id": "source-traceability",
+      "kind": "qualifying",
+      "question": "보고서 구성 계약이 조사 기록과 고품질 출처 정책에 연결되는가?",
+      "observable": "디자인 계약의 조사 바인딩·출처 목록·공개 정책",
+      "weight": 1,
+      "checks": [
+        {"id": "design-source-binding", "type": "jsonFields", "file": "report-design-v6.json", "requiredPaths": ["researchBinding.method", "researchBinding.recordRef", "researchBinding.sourceRefs", "sourceQualityPolicy", "publicationPolicy"]}
+      ],
+      "unknownDisposition": "retain_unavailable",
+      "limitation": "출처의 사실성은 자료조사 기록에서 관리하며, 이 검사는 연결 필드의 존재와 공개 정책만 확인한다."
+    },
+    {
+      "id": "accessibility-observation",
+      "kind": "observational",
+      "question": "태그 PDF 접근성 적합성을 독립적으로 감사했는가?",
+      "observable": "전용 태그-PDF 감사 결과",
+      "weight": null,
+      "checks": [{"id": "tagged-pdf-audit", "type": "unavailable", "reason": "현재 도구 범위에는 전용 태그-PDF 적합성 감사기가 없음"}],
+      "unknownDisposition": "retain_unavailable",
+      "limitation": "W3C 기반 시각·구조 원칙을 적용했지만 공식 접근성 인증을 주장하지 않는다."
+    }
+  ],
+  "decision": {
+    "mandatoryMustPass": true,
+    "qualifyingMinimumPassRate": 1,
+    "observationalScoreContribution": 0,
+    "noCompensation": true,
+    "unknownPolicy": "unavailable는 fail이나 0점으로 치환하지 않고 보완·재검토 항목으로 보존",
+    "finalUse": "report-only; valid는 PDF 품질·공개 범위의 기술적 통과를 의미하며 제출 승인이나 채용 판단이 아님"
+  },
+  "sourceBasis": [
+    {"ref": "artifacts/agent-loop/assessment/rubric-management/loop.yaml", "role": "rubric lifecycle and non-compensatory evaluation"},
+    {"ref": "artifacts/knowledge/sources/report-information-design-and-raster-pdf-v6.md", "role": "report layout, source visibility, and raster/text boundary"},
+    {"ref": "artifacts/knowledge/ai/ai-service-engineer-domain-and-interview-review-v6.md", "role": "role domain and user-facing report content"}
+  ],
+  "limitations": [
+    "이 rubric은 보고서 표현과 산출물 무결성을 평가하며 자기소개서의 채용 적합성을 평가하지 않는다.",
+    "시각 품질·한국어 글꼴·다른 뷰어의 출력 차이는 사람의 페이지 검토가 필요하다.",
+    "사용자의 실제 기여·검증·배포·가치관 확인은 별도의 사용자 확인 기준으로 남는다."
+  ]
+}

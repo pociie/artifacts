@@ -1,0 +1,53 @@
+{
+  "candidate": {
+    "changedRepresentationKinds": ["dispatch_policy", "execution_structure_fingerprint"],
+    "digest": "sha256:9660fe19ae47953a6d48b026fb46a70a15df72ac19fb70bd8874ef7be32efa73",
+    "interventionKind": "communication_contract",
+    "managedFileRefs": [
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/dispatch-policy-amendment.r13.json",
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/dispatch-policy-amendment-independent-validation.r13.json"
+    ],
+    "ref": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/dispatch-policy-amendment.r13.json",
+    "sourceScope": "run_private",
+    "status": "proposed",
+    "targetGapClasses": ["coordination_gap"],
+    "validatorEvidenceRefs": [
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/dispatch-policy-amendment-independent-validation.r13.json"
+    ],
+    "validatorState": "passed"
+  },
+  "controller": {
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "identityDigest": "sha256:464a0f4bf7ff7289b70765f0964961a61c4cf5aaaa5e0f3183de6a06426ea0f9",
+    "privateReasoningAccess": false
+  },
+  "gap": {
+    "classes": ["coordination_gap"],
+    "dissentRefs": [],
+    "evidenceRefs": [
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/dispatch-policy-amendment.r13.json",
+      ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r13/dispatch-policy-amendment-independent-validation.r13.json"
+    ],
+    "nativeOwnerRefs": ["owner:workflow-execution-coordination"],
+    "observed": true
+  },
+  "kind": "engineering-workset-structure-intervention-request/v1",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r13:population-shard-3:dispatch-policy-amendment:r13",
+  "resume": {
+    "baselineFingerprint": "sha256:3f88529d825dd1cc4ef25a14ffc8cbd9f2f4b5581c7417b25aa9d6b48b24f8bf",
+    "candidateFingerprint": "sha256:6f5fdc29ac45b1ae02194f794152cf009d70c70d6a0f8ca0afd2368a6deb6bba",
+    "interventionsUsed": 0,
+    "maxInterventions": 1,
+    "priorRejectedFingerprints": []
+  },
+  "schemaVersion": 1,
+  "subject": {
+    "agentArchitectureRef": "artifacts/agents/evidence-governance/architectures/engineering-workset-simulation.pipeline.json",
+    "agentSwarmRef": null,
+    "identityDigest": "sha256:b9a00bbf5c047d4009d4fc2ba346b2dcbd392eab440c3ae88e3f716f68a802c7",
+    "matrixUnitId": "agentic-labs/erp-bench",
+    "mode": "single_task",
+    "topologyRequirement": "architecture_only",
+    "workflowPatternId": "pipeline"
+  }
+}

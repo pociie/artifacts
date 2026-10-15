@@ -1,0 +1,109 @@
+{
+  "kind": "sanitized-collaboration-bundle/v2",
+  "bundleId": "collaboration-bundle:book-pdf-artifact-workflow",
+  "bundleRevision": "book-pdf-collaboration/2",
+  "status": "candidate",
+  "supersedes": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/collaboration-bundle.json",
+  "staleSemanticsRemoved": [
+    "agent-role:instruction-governance-editor",
+    "AGENTS.md writeBoundary",
+    "AGENTS.md fan-in ownership"
+  ],
+  "objective": "Combine a read-only session-context integration contribution, the source-session review projection, and this session's visual/PDF evidence without persisting raw prompts, private reasoning, mutable runtime state, or provider handles.",
+  "participants": [
+    {
+      "roleRef": "agent-role:session-context-integrator",
+      "mode": "read_only",
+      "contributionScope": [
+        "live-session inventory projection",
+        "prerequisite/background claim packet",
+        "loop-architecture binding references"
+      ],
+      "writeBoundary": [],
+      "nonGoals": [
+        "AGENTS.md editing",
+        "canonical loop-architecture mutation",
+        "runtime activation, assignment, acknowledgement, acceptance or promotion"
+      ]
+    },
+    {
+      "roleRef": "agent-role:visual-pdf-spec-builder",
+      "mode": "task_local_writer",
+      "contributionScope": [
+        "thirteen raster editorial directions",
+        "domain-book reference synthesis",
+        "source-to-claim projection",
+        "PDF expression specification",
+        "dynamic team blueprint and architecture candidate",
+        "prototype PDF and visual evidence",
+        "recipient handoff, validation and settlement evidence"
+      ],
+      "writeBoundary": [
+        ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/**"
+      ],
+      "nonGoals": [
+        "AGENTS.md editing",
+        "canonical reusable contract/component mutation",
+        "runtime session activation",
+        "production publication or final acceptance"
+      ]
+    },
+    {
+      "roleRef": "agent-role:source-session-review-contributor",
+      "mode": "evidence_source_only",
+      "contributionScope": [
+        "two video starting lenses",
+        "MDN, React and Anthropic background references",
+        "project source limitations and narrative-order review"
+      ],
+      "writeBoundary": [],
+      "nonGoals": [
+        "visual candidate authorship",
+        "acceptance or promotion"
+      ]
+    }
+  ],
+  "dependencyEdges": [
+    {
+      "from": "agent-role:source-session-review-contributor",
+      "to": "agent-role:visual-pdf-spec-builder",
+      "deliverable": "source-to-claim-packet/v1",
+      "acceptanceBoundary": "The visual builder preserves labels and limitations but does not accept source truth."
+    },
+    {
+      "from": "agent-role:session-context-integrator",
+      "to": "agent-role:visual-pdf-spec-builder",
+      "deliverable": "read-only context and loop-binding projection",
+      "acceptanceBoundary": "The projection grants no authority and causes no runtime activation."
+    },
+    {
+      "from": "agent-role:visual-pdf-spec-builder",
+      "to": "recipient:pdf-authorship-owner",
+      "deliverable": "digest-bound source-plus-visual recipient handoff",
+      "acceptanceBoundary": "The recipient independently decides whether to activate roles or author a production PDF."
+    }
+  ],
+  "fanInOwner": "recipient:pdf-authorship-owner",
+  "artifactPolicy": {
+    "mutableRuntimeState": ".collab/memory/**",
+    "sanitizedDurableOutputs": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/**",
+    "canonicalContractsAndComponents": "reference_only",
+    "agentsMd": "out_of_scope"
+  },
+  "sharedOutputContract": [
+    "source-session review evidence and visual evidence bind to one recipient-handoff revision and digest",
+    "registered profiles are queried before dynamic candidates are described",
+    "source fact, external background and project inference remain distinguishable",
+    "no raw prompt body, private reasoning, mutable assignment, acknowledgement, session identifier or runtime handle is persisted",
+    "activation, acceptance and promotion remain not performed"
+  ],
+  "reassessmentSignals": [
+    "participant role, write boundary, recipient or dependency edge changes",
+    "source-session review packet revision changes",
+    "visual evidence or PDF candidate digest changes",
+    "a candidate role is activated or acknowledged",
+    "the task advances from exploratory prototype to production acceptance"
+  ],
+  "authorityEffect": "none"
+}
+

@@ -1,0 +1,103 @@
+{
+  "kind": "six-mode-route-decision/v1",
+  "requestRevision": "fresh-r1-five-set-pdf",
+  "status": "selected",
+  "selectedMode": "loop",
+  "continuityDecision": {
+    "requestRelation": "new_objective",
+    "objectiveRelation": "new",
+    "historyCoverage": "not_applicable",
+    "sessionBoundary": "not_applicable",
+    "priorPrimaryMode": "none",
+    "outerObligationState": "none",
+    "priorCompletionEvidence": "not_applicable",
+    "projectionRef": ".collab/artifacts/job-application-2026-10-finebridge-digital-service-planner-fresh/context-projection.json",
+    "executionSurface": "local_coordinator_only",
+    "candidateMode": "loop",
+    "effectivePrimaryMode": "loop",
+    "segmentMode": null,
+    "disposition": "standalone",
+    "outerObligationAction": "start",
+    "modeCompositionRequired": true
+  },
+  "architectureSelection": {
+    "requirement": "eligible",
+    "selectionStatus": "deferred_to_native_artifact",
+    "targetScope": "effective_primary",
+    "effectivePrimaryMode": "loop",
+    "structuralSignals": [
+      "five_complete_candidate_sets",
+      "one_bounded_revision",
+      "publication_validation"
+    ],
+    "segmentMode": null,
+    "segmentRequirement": null,
+    "segmentSelectionStatus": null,
+    "segmentStructuralSignals": [],
+    "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json",
+    "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+    "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+    "patternSelectedByRouting": false
+  },
+  "eligibleModes": [
+    "loop"
+  ],
+  "rejectedModes": [
+    {
+      "mode": "communication",
+      "reasonCodes": [
+        "bounded_revision_required",
+        "publication_artifact_required",
+        "effect_not_none"
+      ]
+    },
+    {
+      "mode": "investigation",
+      "reasonCodes": [
+        "complete_report_production_requested",
+        "mutation_required",
+        "output_not_finding"
+      ]
+    },
+    {
+      "mode": "single_task",
+      "reasonCodes": [
+        "multiple_ordered_stages",
+        "bounded_revision_and_reassessment"
+      ]
+    },
+    {
+      "mode": "orchestration",
+      "reasonCodes": [
+        "one_material_contribution_owner",
+        "no_multi-lane_fan-in_required"
+      ]
+    },
+    {
+      "mode": "session_control",
+      "reasonCodes": [
+        "no_explicit_session_action",
+        "effect_not_session_control"
+      ]
+    }
+  ],
+  "blockers": [],
+  "missingFacts": [
+    "공식 회사·공고 페이지의 전체 내용과 최신성",
+    "1번 문항의 협업 장면·역할 분담·팀 결과",
+    "2번 문항의 GA4 또는 SQL 실제 적용 사례",
+    "3번 문항에 보강할 개선 전후 관찰 수치",
+    "4번 문항의 개인적인 금융 서비스 영역과 3~5년 책임 선호",
+    "문항별 공식 최소 글자 수와 산정 방식"
+  ],
+  "conflictingFacts": [],
+  "reassessmentTriggers": [
+    "objective_or_question_change",
+    "company_role_or_applicant_evidence_change",
+    "quality_profile_or_publication_contract_change",
+    "effect_or_execution_surface_change",
+    "route_or_topology_change",
+    "user_confirmation_or_material_source_change"
+  ],
+  "authorityEffect": "none"
+}

@@ -1,0 +1,76 @@
+{
+  "kind": "six-mode-route-decision/v1",
+  "requestRevision": "set-2-r1",
+  "status": "selected",
+  "selectedMode": "loop",
+  "continuityDecision": {
+    "requestRelation": "new_objective",
+    "objectiveRelation": "new",
+    "historyCoverage": "not_applicable",
+    "sessionBoundary": "not_applicable",
+    "priorPrimaryMode": null,
+    "outerObligationState": "none",
+    "priorCompletionEvidence": "not_applicable",
+    "projectionRef": null,
+    "executionSurface": "local_coordinator_only",
+    "candidateMode": "loop",
+    "effectivePrimaryMode": "loop",
+    "segmentMode": null,
+    "disposition": "standalone",
+    "outerObligationAction": "none",
+    "modeCompositionRequired": false
+  },
+  "architectureSelection": {
+    "requirement": "eligible",
+    "selectionStatus": "deferred_to_architecture_components",
+    "targetScope": "effective_primary",
+    "effectivePrimaryMode": "loop",
+    "structuralSignals": ["one_material_contribution"],
+    "segmentMode": null,
+    "segmentRequirement": null,
+    "segmentSelectionStatus": null,
+    "segmentStructuralSignals": [],
+    "workflowPatternOwnerRef": "artifacts/loop-architecture/components/agentic-architecture/component.json",
+    "agentTopologyOwnerRef": "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+    "coordinationOwnerRef": "artifacts/loop-architecture/components/agent-architecture-coordination/component.json",
+    "patternSelectedByRouting": false
+  },
+  "eligibleModes": ["loop"],
+  "rejectedModes": [
+    {
+      "mode": "communication",
+      "reasonCodes": ["operation_not_direct_response", "effect_not_none", "output_not_response", "temporal_not_immediate"]
+    },
+    {
+      "mode": "investigation",
+      "reasonCodes": ["operation_not_information_acquisition", "effect_not_read_only", "output_not_information_finding", "temporal_not_investigative", "mutation_required"]
+    },
+    {
+      "mode": "single_task",
+      "reasonCodes": ["temporal_not_single_boundary"]
+    },
+    {
+      "mode": "orchestration",
+      "reasonCodes": ["contribution_not_multi_owner"]
+    },
+    {
+      "mode": "session_control",
+      "reasonCodes": ["operation_not_session_operation", "effect_not_session_control", "output_not_control_receipt_or_finding", "session_revision_not_explicit"]
+    }
+  ],
+  "blockers": [],
+  "missingFacts": [],
+  "conflictingFacts": [],
+  "reassessmentTriggers": [
+    "authority_or_instruction_admission_changes",
+    "capability_or_lifecycle_readiness_changes",
+    "dependency_or_contribution_shape_changes",
+    "purpose_effect_or_output_changes",
+    "request_relation_or_history_coverage_changes",
+    "risk_reversibility_or_validation_boundary_changes",
+    "outer_obligation_or_completion_evidence_changes",
+    "execution_surface_changes_contribution_shape",
+    "phase_completion_contract_change"
+  ],
+  "authorityEffect": "none"
+}

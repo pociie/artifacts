@@ -1,0 +1,114 @@
+{
+  "kind": "sanitized-recipient-handoff-candidate/v3",
+  "handoffId": "recipient-handoff:typography-clean-book-pdf-source-visual-writing",
+  "handoffRevision": "book-pdf-recipient-handoff/4",
+  "status": "candidate_pending_independent_review",
+  "authorityEffect": "none",
+  "recipient": "recipient:pdf-authorship-owner",
+  "supersedesCandidate": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/recipient-handoff-candidate-v2.json",
+  "contributionRoles": [
+    {
+      "role": "session-context-integrator",
+      "scope": "Read-only live-session context, prerequisite/background claims and loop-architecture binding supplied as source-review evidence."
+    },
+    {
+      "role": "visual-pdf-spec-builder",
+      "scope": "Task-local visual concepts, claim-led writing contract, typography system, authoring-loop extension, prototype rendering and author-side validation evidence."
+    }
+  ],
+  "materialChangeSignals": [
+    "The earlier one-owner assumption is stale: source-review and visual-writing contributions are now represented as distinct roles in one digest-bound candidate bundle.",
+    "The report design preference changed from enlarged opening letters to normal paragraph openings and role-based typography.",
+    "Typography normalization and computed-style checks are now explicit authoring-loop gates rather than page-local styling choices."
+  ],
+  "changeSummary": [
+    "Removed all drop-cap styling while preserving the fifteen-page causal narrative.",
+    "Added shared display, body and utility type roles with tested Korean glyph fallback.",
+    "Added candidate typography responsibilities for the writer, designer and independent validator.",
+    "Bound source review, writing rules, visual evidence and the typography-clean PDF to one new revision and digest."
+  ],
+  "combinedEvidenceBinding": {
+    "revision": "book-pdf-recipient-handoff/4",
+    "algorithm": "sha256 over UTF-8 canonical JSON containing revision, sourceReviewEvidence and visualAndWritingEvidence, with recursively sorted object keys, arrays preserved and a trailing newline",
+    "sourceReviewEvidence": [
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/source-to-claim-packet.json",
+        "digest": "sha256:ae9e1d091f0f671c40181d8037261d943a901dd27bc0af31232e34a1239f4b77"
+      }
+    ],
+    "visualAndWritingEvidence": [
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/mockup-manifest.json",
+        "digest": "sha256:46dd76359fcdc1d4d231609517403569cc6653b588557c25ebc67294c7a66e3d"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/pdf-expression-spec-v2.md",
+        "digest": "sha256:5e5881ff524e13f7f22150f55c43cd35090e3d8ea6fb4deca82acc9a1facf33d"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/writing-quality-contract-v1.md",
+        "digest": "sha256:517accc76e904d3b58d7e3960121f50614b3fc728b68709822e55c6c657f98e7"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/dynamic-artifact-capability-bindings-v2.json",
+        "digest": "sha256:410610c85a8ca3134f6e074b4e6246632b9cb859ffa08dbaa6b9d0d956078588"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/report-authoring-loop-candidate.json",
+        "digest": "sha256:a4b31c2edc39b143b03e6c66e6931dd09f77a91e33a779a56c5bfef9773e9717"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-v1.json",
+        "digest": "sha256:354102254cc59a982e92b7f275f87224c5028f1f63b4af3e6fd58cfde04f743c"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/typography-and-page-system-v1.json",
+        "digest": "sha256:bb88969c6271b91604914749ee1254fa0ffefc96ebfd3a357972cc49bb9bb3d1"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/authoring-loop-typography-extension-v1.json",
+        "digest": "sha256:c3444e766203eeeb54b0d800026b9a729306eba58f740d537a801ac64a3247ac"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/editorial-quality-rubric-typography-extension-v1.json",
+        "digest": "sha256:0dc735179283d2bf45ef8d6373d54b2246e0bb5960be3ceb754bf78aea32d9e6"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/dynamic-team-blueprint-v3.json",
+        "digest": "sha256:a8ce5a93fa12ba093af0cecb85f75fdab67c85c90efe8b45333ca3a6e9deda71"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/prototype-v3/claim-led-book-pdf-prototype.html",
+        "digest": "sha256:e3cee9130d642eebcb0d357a3c761ca4a5a7a16dd31a14971bfe86b0f12c7948"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/prototype-v3/claim-led-book-pdf-prototype.pdf",
+        "digest": "sha256:e11956e2d689cd461ad156fadc6adb1371c7b04342ffd1803f9b1603a1b0ab47"
+      },
+      {
+        "ref": ".collab/artifacts/book-pdf-artifact-workflow-2026-09-21/prototype-v3/contact-sheet.png",
+        "digest": "sha256:8cd676ed15689908956a0a314decde3009605dfe7d9d28d7184ab6cd29a9480d"
+      }
+    ],
+    "combinedDigest": "sha256:d14439276a261a76996969387a60d023fd4c8d4072fc01c864af7ea50f568f41"
+  },
+  "recommendedUse": {
+    "writing": "Begin from the reader's problem and a transferable system principle, then introduce framework and implementation vocabulary as evidence.",
+    "narrative": "Follow one request through event, snapshot, context, generator, stream, effect and recovery.",
+    "design": "Use Systems Monograph for explanatory progress and Evidence Notebook for claim review; select a page mode by content function.",
+    "typography": "Keep paragraph openings at the body size, apply shared type roles and never rely on capitalization, size or color alone to carry meaning.",
+    "quality": "Hold the candidate when argument, hierarchy or evidence depends on keywords, badges, disconnected cards, drop caps or page-local font overrides."
+  },
+  "requiredNextChecks": [
+    "Author-independent verification of factual claims and source applicability.",
+    "Independent visual review at A4 print size and grayscale, including normal paragraph openings and Korean fallback glyphs.",
+    "Accessibility, reading-order and link review of the frozen PDF.",
+    "Recipient acknowledgement of this exact revision and combined digest."
+  ],
+  "activation": "not_performed",
+  "acknowledgement": "not_received",
+  "independentValidation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}

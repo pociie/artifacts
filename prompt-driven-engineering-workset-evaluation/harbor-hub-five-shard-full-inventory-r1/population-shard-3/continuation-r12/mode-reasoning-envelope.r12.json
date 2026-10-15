@@ -1,0 +1,148 @@
+{
+  "authorityEffect": "none",
+  "digest": "sha256:3c9b0280da3bb35fb5e707c83767e2294ff93c7701da0a898e31e86e788d2ee8",
+  "kind": "mode-reasoning-envelope/v1",
+  "modeStateRevision": "orchestration-r1",
+  "observations": {
+    "outcomeDeviation": {
+      "limitation": "provider Subject did not start",
+      "state": "unavailable",
+      "value": null
+    },
+    "profileConformance": {
+      "denominator": 6,
+      "numerator": 6,
+      "state": "observed",
+      "value": 1.0
+    }
+  },
+  "privacy": {
+    "metadataOnly": true
+  },
+  "privateReasoningStored": false,
+  "promptBodyStored": false,
+  "recordId": "mode-reasoning:harbor-hub-five-shard-full-inventory-r1:population-shard-3:LiteCoder/LiteCoder-rl:r12",
+  "requestRevision": "harbor-hub-five-shard-full-inventory-source-r12:population-shard-3:LiteCoder/LiteCoder-rl:6c9c5a99c1e698460064925c35d37f2fd005c8455ab6e2f2f43b081c1a58c3fd",
+  "requirements": [
+    {
+      "boundary": "material_change",
+      "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+      "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+      "modeEnvelopeAction": "supersede_or_create",
+      "obligationId": "reobserve-public-source",
+      "required": true,
+      "routeDecisionDigest": "sha256:4ce88f09a24205502338643b6a9838f4c70395e52c17d163d89662be357e8946",
+      "selectedMode": "investigation",
+      "targetScope": "effective_primary"
+    },
+    {
+      "boundary": "material_change",
+      "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+      "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+      "modeEnvelopeAction": "supersede_or_create",
+      "obligationId": "resolve-six-mode-route",
+      "required": true,
+      "routeDecisionDigest": "sha256:97a40584283aaad446ba9b6789d7dc0060ae7d0e8b22bdce6f40f73df859242a",
+      "selectedMode": "single_task",
+      "targetScope": "effective_primary"
+    },
+    {
+      "boundary": "route_resolution",
+      "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+      "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+      "modeEnvelopeAction": "create_or_reuse",
+      "obligationId": "discover-reusable-artifacts",
+      "required": true,
+      "routeDecisionDigest": "sha256:6f64b0192167b55f8e094b07fef626b419390c11a220b20dd0115bcaae1792ea",
+      "selectedMode": "single_task",
+      "targetScope": "effective_primary"
+    },
+    {
+      "boundary": "route_resolution",
+      "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+      "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+      "modeEnvelopeAction": "create_or_reuse",
+      "obligationId": "qualify-workflow-and-topology",
+      "required": true,
+      "routeDecisionDigest": "sha256:a59863dd0a8a078fc6d6936e211c5e3daa64841f9ba815ae14b2818c95d56bef",
+      "selectedMode": "single_task",
+      "targetScope": "effective_primary"
+    },
+    {
+      "boundary": "route_resolution",
+      "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+      "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+      "modeEnvelopeAction": "create_or_reuse",
+      "obligationId": "execute-harbor-subject",
+      "required": true,
+      "routeDecisionDigest": "sha256:d26f6d18e62b428091b5ef287d740fda5dad6575d53c6ec299c51004d2e4e2a3",
+      "selectedMode": "single_task",
+      "targetScope": "effective_primary"
+    },
+    {
+      "boundary": "route_resolution",
+      "controlComponentRef": "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+      "metaLoopRef": "artifacts/agent-loop/meta/mode-aware-prompt-assistance/loop.yaml",
+      "modeEnvelopeAction": "create_or_reuse",
+      "obligationId": "evaluate-reward-and-settle",
+      "required": true,
+      "routeDecisionDigest": "sha256:768e695c913e706e01091b52921dcf0559142e4e1ebebeeb1b6e88974e18f2f0",
+      "selectedMode": "single_task",
+      "targetScope": "effective_primary"
+    }
+  ],
+  "schemaVersion": 1,
+  "scope": "compound_ordered_obligations",
+  "scopeEnvelopes": [
+    {
+      "advisoryBudgetOnly": true,
+      "boundary": "material_change",
+      "disposition": "eligible_report_only",
+      "modeId": "investigation",
+      "obligationId": "reobserve-public-source",
+      "targetScope": "effective_primary"
+    },
+    {
+      "advisoryBudgetOnly": true,
+      "boundary": "material_change",
+      "disposition": "eligible_report_only",
+      "modeId": "single_task",
+      "obligationId": "resolve-six-mode-route",
+      "targetScope": "effective_primary"
+    },
+    {
+      "advisoryBudgetOnly": true,
+      "boundary": "route_resolution",
+      "disposition": "eligible_report_only",
+      "modeId": "single_task",
+      "obligationId": "discover-reusable-artifacts",
+      "targetScope": "effective_primary"
+    },
+    {
+      "advisoryBudgetOnly": true,
+      "boundary": "route_resolution",
+      "disposition": "eligible_report_only",
+      "modeId": "single_task",
+      "obligationId": "qualify-workflow-and-topology",
+      "targetScope": "effective_primary"
+    },
+    {
+      "advisoryBudgetOnly": true,
+      "boundary": "route_resolution",
+      "disposition": "eligible_report_only",
+      "modeId": "single_task",
+      "obligationId": "execute-harbor-subject",
+      "targetScope": "effective_primary"
+    },
+    {
+      "advisoryBudgetOnly": true,
+      "boundary": "route_resolution",
+      "disposition": "eligible_report_only",
+      "modeId": "single_task",
+      "obligationId": "evaluate-reward-and-settle",
+      "targetScope": "effective_primary"
+    }
+  ],
+  "status": "report_only",
+  "transcriptStored": false
+}

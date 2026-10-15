@@ -1,0 +1,120 @@
+{
+  "kind": "reviewer-qualification-operation-report/v1",
+  "runRef": "orca:run:run_ad4af5ac41de",
+  "implementationCandidate": {
+    "commit": "585f429fea94af3acced5a709c1b2a7456854678",
+    "tree": "6e62c174da0bae6398c5f34805eee383df4bb0b0"
+  },
+  "finalAcceptedCandidate": {
+    "commit": "538ae82cae7db8bccff8bf54cc342acdcf2c82e3",
+    "tree": "b62436652f32584bc24528ae6d0001b3eca4cd8e",
+    "acceptanceScope": "local reviewer qualification implementation remediation only"
+  },
+  "observedFacts": {
+    "distinctReviewerRuntimes": true,
+    "actualTaskDispatchProvenance": true,
+    "acceptedWorkerDoneForBothLenses": true,
+    "methodsAndScenariosObserved": true,
+    "candidateMutationByReviewers": false,
+    "pairCorrelationMatrixRecorded": true
+  },
+  "independentFindings": {
+    "safety": [
+      "freshness_and_scope_fail_open",
+      "schema_and_malformed_input_fail_open",
+      "method_depth_not_proven"
+    ],
+    "architecture": [
+      "schema_not_composed_with_checker",
+      "freshness_and_scope_not_semantic",
+      "unknown_impact_omits_hard_gates",
+      "pair_trusts_declared_assignment_summary",
+      "candidate_whitespace_warning"
+    ]
+  },
+  "remediation": {
+    "status": "phase_4_semantic_uniqueness_independently_accepted",
+    "changes": [
+      "total malformed-input decisions",
+      "closed top-level and security-relevant nested object shapes",
+      "nested collection and item type uniqueness cardinality and enum enforcement",
+      "baseline method and competence semantic identity-key uniqueness",
+      "explicit observation-time injection",
+      "trusted catalog and lens-profile binding",
+      "unknown-impact rejection",
+      "canonical candidate-scope validation",
+      "resolved assignment digest and decision comparison",
+      "resolved assignment lens-slot binding",
+      "explicit method depth coverage and scenario summaries",
+      "bounded Dispatch-capability recovery runbook"
+    ]
+  },
+  "independentRereview": {
+    "taskRef": "task_9494324e5dcd",
+    "dispatchRef": "ctx_d43d20273bfc",
+    "runtimeIdentityRef": "runtime:sha256:d81faf2b84450df3a17e36017c93f1ab2c5d5baaca74cd5c66913e70d5a2f3dc",
+    "reviewedCommit": "e9fe6aa800abf5ce1d559e58bfbfa169e2520eb7",
+    "reviewedTree": "5fedcc4182ed2de5060b803342120d4012c069f5",
+    "completionMessageRef": "msg_78cc9b855b6a",
+    "decision": "remediation_not_accepted",
+    "findingCount": 4
+  },
+  "secondIndependentRereview": {
+    "taskRef": "task_84fa01a75817",
+    "dispatchRef": "ctx_c2e4b0f71cd1",
+    "runtimeIdentityRef": "runtime:sha256:13c2d634b93f22394180fda438f8c62a3746121495b459aaf4f9083c8105f09d",
+    "reviewedCommit": "f2c2debfdd7e53e3f6644018b47fdb7595123a95",
+    "reviewedTree": "3bc24b591bf1822ed4c29d1c542440349358a6df",
+    "completionMessageRef": "msg_33c9cbace310",
+    "decision": "remediation_not_accepted",
+    "confirmedClosedFindingCount": 4,
+    "newBlockingFindings": ["nested_collection_type_bypass"]
+  },
+  "thirdIndependentRereview": {
+    "taskRef": "task_0922ff4e23c9",
+    "dispatchRef": "ctx_11c65793b2ff",
+    "runtimeIdentityRef": "runtime:sha256:f6caad0a2fea9d79238d9d2d1da9be05da16e6b76ea1cfd12ace214e74c5be49",
+    "reviewedCommit": "eb541c3ce41e0dbf604de6938d1079d1bd62694a",
+    "reviewedTree": "dbedc254b0d8b687bd130dbeeaf38cf5543a7804",
+    "completionMessageRef": "msg_f8b1191efbc3",
+    "decision": "remediation_not_accepted",
+    "newBlockingFindings": ["baseline_object_array_duplicate_bypass"],
+    "phaseDisposition": "phase_3_closed_replanned_to_phase_4"
+  },
+  "phase4IndependentVerification": {
+    "taskRef": "task_4a0d56f2e852",
+    "dispatchRef": "ctx_57b68ccc4747",
+    "runtimeIdentityRef": "runtime:sha256:67f2d48b0ab3edcfc3b2c7e5b8da3ff795ab68ff609b237736777a3dbfb43e57",
+    "reviewedCommit": "538ae82cae7db8bccff8bf54cc342acdcf2c82e3",
+    "reviewedTree": "b62436652f32584bc24528ae6d0001b3eca4cd8e",
+    "completionMessageRef": "msg_cf23c33c2f56",
+    "decision": "remediation_accepted",
+    "materialFindingCount": 0,
+    "authorityEffects": {
+      "eligibility": "none",
+      "reviewAcceptance": "none",
+      "riskAcceptance": "none",
+      "integration": "none",
+      "activation": "none"
+    }
+  },
+  "remainingGaps": [
+    "no independent baseline competence evaluator or accepted baseline receipts",
+    "no explicit instruction-digest acknowledgement from either reviewer",
+    "no externally attested model identity, prompt contract, or calibration dataset",
+    "no independent relationship or incentive-conflict observer",
+    "no external policy owner, trusted root, or owner-to-issuer delegation",
+    "no eligibility issuance and no independent safety or architecture review acceptance",
+    "no governance risk acceptance"
+  ],
+  "phase5Status": "closed",
+  "settlementStatus": "phase_resources_settled_worktree_retirement_check_required_against_final_commit",
+  "decision": "qualification_mechanics_and_runtime_observation_independently_accepted_external_authority_and_independence_incomplete",
+  "authorityEffects": {
+    "eligibility": "none",
+    "reviewAcceptance": "none",
+    "riskAcceptance": "none",
+    "integration": "none",
+    "activation": "none"
+  }
+}

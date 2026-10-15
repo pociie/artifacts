@@ -1,0 +1,142 @@
+{
+  "authorityEffect": "none",
+  "decision": {
+    "authorityEffect": "none",
+    "eligiblePatternIds": ["pipeline"],
+    "kind": "agentic-architecture-decision/v1",
+    "rejectedPatterns": [
+      {
+        "patternId": "generator_validator",
+        "reasonCodes": ["missing_evidence:separable_validation"]
+      },
+      {
+        "patternId": "fan_out_fan_in",
+        "reasonCodes": [
+          "mode_incompatible",
+          "missing_evidence:independent_partitions",
+          "disqualified:one_owner_per_stage"
+        ]
+      },
+      {
+        "patternId": "expert_pool",
+        "reasonCodes": [
+          "mode_incompatible",
+          "missing_evidence:multiple_specialists",
+          "disqualified:one_owner_per_stage"
+        ]
+      },
+      {
+        "patternId": "supervisor",
+        "reasonCodes": [
+          "mode_incompatible",
+          "missing_evidence:dynamic_bounded_tasks",
+          "disqualified:one_owner_per_stage"
+        ]
+      },
+      {
+        "patternId": "hierarchical_delegation",
+        "reasonCodes": [
+          "mode_incompatible",
+          "missing_evidence:hierarchical_ownership",
+          "disqualified:one_owner_per_stage"
+        ]
+      }
+    ],
+    "routeRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-44-polyvorlabs-revbench/polyvorlabs/revbench:workflow",
+    "selectedCoordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "selectedPatternId": "pipeline",
+    "status": "selected",
+    "tieBreak": "structural_cost_then_pattern_id"
+  },
+  "digest": "sha256:a733e805549b051a1c2f71725f442a758c630b5c4c91efda2ecb8825bd04a332",
+  "identityDigest": "sha256:bf3409263ceeaf521c3c16f092f4e60693e2158201e3ed12b7d45fb36a0d0711",
+  "itemId": "polyvorlabs/revbench",
+  "kind": "harbor-item-workflow-pattern-evidence/v2",
+  "laneIdentitySelectsWorkflow": false,
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "request": {
+    "candidates": [
+      {
+        "activationEvidence": [
+          "ordered_dependency",
+          "exact_output_contract",
+          "single_aggregation_owner"
+        ],
+        "compatibleModes": ["single_task", "loop", "orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+        "disqualifiers": [
+          "independent_parallel_contributions",
+          "missing_handoff_contract",
+          "unbounded_feedback"
+        ],
+        "patternId": "pipeline",
+        "structuralCost": 1
+      },
+      {
+        "activationEvidence": ["separable_validation", "frozen_criteria", "bounded_revision"],
+        "compatibleModes": ["single_task", "loop", "orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/bounded-revision/coordination-policy.json",
+        "disqualifiers": [
+          "author_validator_collapse",
+          "mutable_acceptance_criteria",
+          "unbounded_revision"
+        ],
+        "patternId": "generator_validator",
+        "structuralCost": 2
+      },
+      {
+        "activationEvidence": ["independent_partitions"],
+        "compatibleModes": ["orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/independent-fan-in/coordination-policy.json",
+        "disqualifiers": ["one_owner_per_stage"],
+        "patternId": "fan_out_fan_in",
+        "structuralCost": 3
+      },
+      {
+        "activationEvidence": ["multiple_specialists"],
+        "compatibleModes": ["orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/independent-fan-in/coordination-policy.json",
+        "disqualifiers": ["one_owner_per_stage"],
+        "patternId": "expert_pool",
+        "structuralCost": 4
+      },
+      {
+        "activationEvidence": ["dynamic_bounded_tasks"],
+        "compatibleModes": ["orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/adaptive-supervision/coordination-policy.json",
+        "disqualifiers": ["one_owner_per_stage"],
+        "patternId": "supervisor",
+        "structuralCost": 5
+      },
+      {
+        "activationEvidence": ["hierarchical_ownership"],
+        "compatibleModes": ["orchestration"],
+        "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/hierarchical-synthesis/coordination-policy.json",
+        "disqualifiers": ["one_owner_per_stage"],
+        "patternId": "hierarchical_delegation",
+        "structuralCost": 6
+      }
+    ],
+    "constraints": [
+      "one_owner_per_stage",
+      "no_unbounded_revision",
+      "no_criteria_mutation",
+      "no_parallel_fan_out"
+    ],
+    "routeRevision": "harbor-hub-five-shard-full-inventory-r1/population-shard-1/continuation-r13/item-44-polyvorlabs-revbench/polyvorlabs/revbench:workflow",
+    "selectedMode": "single_task",
+    "signals": [
+      "ordered_dependency",
+      "exact_output_contract",
+      "single_aggregation_owner",
+      "frozen_criteria",
+      "bounded_revision"
+    ]
+  },
+  "schemaVersion": 2,
+  "sourceDigests": {
+    "coordinationPolicy": "sha256:7528d2a0a63b197fee0f3e8dd559d3577d6abb6894eb22e4015876f02205ffb8",
+    "qualificationAlgorithm": "sha256:70bf2260280c07bf93ebae65c862d1f9a85b2c4e8b54fcb4b2b48b9add376dc8",
+    "workflowPattern": "sha256:93bf91356072b399cd3684ea2d482c7fe3afe4ca083e8443e86978b2bdb5d7bd"
+  }
+}

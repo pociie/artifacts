@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "self-introduction-draft-comparison/v4",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "purpose": "서로 다른 초안이 실제로 다른 의미를 전달하는지와 평가 요소가 각 초안의 차이를 식별하는지 확인한다.",
+  "rubric": "evaluation-rubric-v4.json",
+  "comparisonUnit": "complete three-answer set",
+  "sets": [
+    {"setId": "set-1", "theme": "사람의 판단을 돕는 AI 서비스", "coreViewpoint": "AI의 가치는 결과 생성이 아니라 사람이 결과를 이해하고 다음 판단을 할 때 생긴다.", "q1Lens": "사용자 목표를 서비스 처리 흐름으로 번역", "q2Lens": "핵심 흐름을 먼저 안정시키는 완수", "q3Lens": "판단 부담을 줄이는 개선", "distinguishingAnchors": ["사용자 판단", "다음 업무 행동", "검토 가능한 기록"], "score": 94.0, "rank": 4, "gateStatus": "pass"},
+    {"setId": "set-2", "theme": "복잡성을 공통 언어로 바꾸는 엔지니어", "coreViewpoint": "서로 다른 요구를 사용자 목표·업무 맥락·결과 검증의 공통 언어로 바꾸어 협업 비용을 줄인다.", "q1Lens": "요구와 책임을 공통 용어로 구조화", "q2Lens": "역할·입력·결과·확인 기준을 분리", "q3Lens": "역할별 불편을 같은 문제 정의로 조정", "distinguishingAnchors": ["공통 용어", "책임 경계", "역할 간 합의"], "score": 91.0, "rank": 5, "gateStatus": "pass", "risk": "명료성 가중치가 커지면 threshold 아래로 내려가는 민감한 세트"},
+    {"setId": "set-3", "theme": "완수의 기준을 설명 가능성으로", "coreViewpoint": "구현 완료가 아니라 결과 확인·오류 재현·원인 설명·변화 확인까지가 서비스 완수다.", "q1Lens": "같은 조건에서 확인하고 오류 원인을 설명", "q2Lens": "사용자 목표가 결과 확인까지 이어지는 상태를 완수로 정의", "q3Lens": "불편을 기록하고 검증 가능한 변화로 전환", "distinguishingAnchors": ["재현", "원인 설명", "변화 확인"], "score": 95.5, "rank": 2, "gateStatus": "pass"},
+    {"setId": "set-4", "theme": "불확실성을 함께 검증하는 AI 서비스", "coreViewpoint": "AI 결과의 오류 가능성과 적용 범위, 사람의 확인·수정을 서비스 품질의 일부로 다룬다.", "q1Lens": "오류 가능성과 사람 확인을 처리 흐름에 포함", "q2Lens": "기준이 깨진 위치를 확인해 수정 범위 축소", "q3Lens": "기술의 한계를 드러내고 피드백으로 개선", "distinguishingAnchors": ["오류 가능성", "적용 범위", "사람 확인"], "score": 98.0, "rank": 1, "gateStatus": "pass"},
+    {"setId": "set-5", "theme": "사람의 시간을 돌려주는 개선", "coreViewpoint": "AI 서비스 개선은 반복 입력·우회·확인 부담을 줄이되 사람의 최종 판단은 남기는 일이다.", "q1Lens": "기술을 처리 시간과 조직의 신뢰로 번역", "q2Lens": "핵심 처리 흐름과 기록을 먼저 안정화", "q3Lens": "반복과 우회를 줄이고 판단을 보존", "distinguishingAnchors": ["반복·우회", "사람의 시간", "판단 보존"], "score": 94.5, "rank": 3, "gateStatus": "pass"}
+  ],
+  "pairwiseReview": [
+    {"pair": ["set-4", "set-3"], "scoreDifference": 2.5, "distinction": "불확실성·사람 확인 vs 설명 가능성·완수 기준", "decision": "distinct"},
+    {"pair": ["set-4", "set-5"], "scoreDifference": 3.5, "distinction": "AI 결과의 한계 관리 vs 사용자 시간·우회 비용 개선", "decision": "distinct"},
+    {"pair": ["set-4", "set-1"], "scoreDifference": 4.0, "distinction": "책임 있는 결과 검증 vs 사람의 판단 지원", "decision": "distinct"},
+    {"pair": ["set-4", "set-2"], "scoreDifference": 7.0, "distinction": "AI 한계·검토 vs 공통 용어·협업 조정", "decision": "distinct"},
+    {"pair": ["set-3", "set-5"], "scoreDifference": 1.0, "distinction": "설명 가능성 vs 시간 절감과 판단 보존", "decision": "distinct_but_review"},
+    {"pair": ["set-3", "set-1"], "scoreDifference": 1.5, "distinction": "완수의 검증 기준 vs 사용자 판단 지원", "decision": "distinct"},
+    {"pair": ["set-3", "set-2"], "scoreDifference": 4.5, "distinction": "재현·원인 설명 vs 역할 간 공통 언어", "decision": "distinct"},
+    {"pair": ["set-5", "set-1"], "scoreDifference": 0.5, "distinction": "시간·우회 부담 vs 판단·다음 행동", "decision": "close_pair_user_choice_required"},
+    {"pair": ["set-5", "set-2"], "scoreDifference": 3.5, "distinction": "사용자 시간과 판단 보존 vs 협업 언어와 책임 분리", "decision": "distinct"},
+    {"pair": ["set-1", "set-2"], "scoreDifference": 3.0, "distinction": "사람의 판단 결과 vs 여러 역할의 공통 문제 정의", "decision": "distinct"}
+  ],
+  "discriminationAnswer": {
+    "canRubricDistinguishDrafts": true,
+    "why": ["모든 세트가 공통 직무·분량·근거 gate를 통과한 뒤 가치관의 적용 대상, 프로젝트 완수 기준, 공통 용어의 역할, AI 한계 인식, 개선의 관찰 지표를 서로 다르게 제시한다.", "criterion ratings의 spread는 1점 수준으로 작지만 score difference와 pairwise lens가 함께 있어 단순 합산보다 의미 차이를 설명할 수 있다.", "set-1/set-5는 점수상 close pair이므로 선택을 자동 확정하지 않고 사용자가 실제 가치관에 가까운 관점을 선택해야 한다."],
+    "cannotConclude": ["어느 세트가 실제 역량이 가장 높음", "어느 세트가 채용 가능성이 가장 높음", "높은 점수가 사용자의 진짜 가치관임"]
+  },
+  "selectionRecommendation": {
+    "primaryCandidate": "set-4",
+    "reason": "공고의 AI 서비스 품질·검증 맥락과 사용자 가치관을 가장 명확하게 결합하고, 오류 가능성·적용 범위·사람 확인이라는 보편 용어로 문장을 방어할 수 있음",
+    "alternatives": [{"setId": "set-3", "when": "프로젝트를 완수한 기준과 검증 경험을 가장 강하게 보여주고 싶을 때"}, {"setId": "set-5", "when": "사용자 시간과 반복 업무 개선을 중심 가치로 두고 싶을 때"}, {"setId": "set-1", "when": "사람의 판단을 돕는 AI 서비스라는 균형형 메시지를 선호할 때"}, {"setId": "set-2", "when": "협업·공통 언어·요구 구조화가 실제 본인 경험과 가장 일치할 때"}],
+    "requiredUserDecision": "문장 품질 점수보다 본인의 실제 견해와 프로젝트 방어 가능성을 우선해 최종 세트를 선택"
+  }
+}

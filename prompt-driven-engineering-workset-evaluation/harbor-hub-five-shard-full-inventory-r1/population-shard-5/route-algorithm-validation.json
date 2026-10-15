@@ -1,0 +1,27 @@
+{
+  "kind": "six-mode-route-algorithm-validation/v1",
+  "schemaVersion": 1,
+  "authorityEffect": "none",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "shardNumber": 5,
+  "shardIndex": 4,
+  "algorithmRef": "artifacts/loop-architecture/components/execution-routing/algorithms/six-mode-route-resolution/implementation.py",
+  "policyRef": "artifacts/loop-architecture/components/execution-routing/patterns/six-mode-execution-routing/routing-policy.json",
+  "inputSourceRef": "population-shard-5/routes/route-decisions.json",
+  "inputDigest": "sha256:b73cec2248f7842c8a86db6309a73b225ad37ac2db2a7b614df9e77c715845b7",
+  "checkedPromptCount": 54,
+  "selectedCount": 54,
+  "contextHeldCount": 4,
+  "mismatchCount": 0,
+  "selectedModeCounts": {
+    "single_task": 54
+  },
+  "invariantChecks": {
+    "smallestEligibleMode": "passed",
+    "noShardModeInheritance": "passed",
+    "newObjectiveContinuity": "passed",
+    "downstreamPatternArchitectureSeparation": "passed",
+    "authorityEffectNone": "passed"
+  },
+  "note": "The four 404 detail pages remain require_context because no actual task prompt was available to route."
+}

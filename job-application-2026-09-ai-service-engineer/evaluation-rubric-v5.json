@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "self-introduction-rubric/v5",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "asOf": "2026-09-08",
+  "purpose": "문항별 소유 관점과 사용자·직무·프로젝트 근거를 분리해 자기소개서 5세트를 비교하고, 모든 보호 게이트 통과와 90점 이상을 PDF 반영 기준으로 삼는다.",
+  "constructPolicy": {
+    "primaryConstruct": "현재 공고·문항·근거 스냅샷에서의 편집 적합도",
+    "notConstructs": [
+      "지원자의 실제 역량 전체",
+      "채용 가능성·합격 확률",
+      "프로젝트의 생산 운영 품질·고객 성과",
+      "사용자의 확정된 성격 또는 가치관에 대한 심리 측정"
+    ],
+    "measurementLevel": "0~4 관찰 평정의 가중 편집 비교 점수",
+    "interpretationRule": "높은 점수는 문항·직무·근거·표현이 현재 기준에서 더 잘 맞는다는 뜻이며 제출 승인이나 채용 판단이 아니다.",
+    "unknownPolicy": "unknown·pending_user_review·unavailable는 0점으로 대체하지 않고 잔여 불확실성으로 보존한다. 확인되지 않은 과거 성과는 점수 상승에 사용할 수 없다."
+  },
+  "domains": [
+    {
+      "id": "question_fit_and_distinctness",
+      "name": "문항 적합성과 차별화",
+      "weight": 20,
+      "meaning": "Q1은 직무 행동, Q2는 과거 사건의 선택과 검증, Q3는 회사에서 반복할 가치관 행동을 소유하며 세트 간 렌즈가 구분되는 정도"
+    },
+    {
+      "id": "role_domain_alignment",
+      "name": "직무·도메인 연결",
+      "weight": 20,
+      "meaning": "공고의 API·백엔드·데이터 파이프라인·운영·발굴·품질 검증을 사용자의 행동과 서비스 결과로 번역하는 정도"
+    },
+    {
+      "id": "user_viewpoint_and_value",
+      "name": "사용자 견해와 가치관",
+      "weight": 18,
+      "meaning": "불편함을 개선하려는 사용자의 직접 가치관과 사람·업무·책임에 대한 견해가 드러나는 정도"
+    },
+    {
+      "id": "evidence_causal_integrity",
+      "name": "근거·인과·귀속",
+      "weight": 18,
+      "meaning": "사실·개인 기여·제한적 해석·입사 후 계획이 문제→선택→수행→검증→학습으로 연결되고 성과를 과장하지 않는 정도"
+    },
+    {
+      "id": "project_design_abstraction",
+      "name": "프로젝트 설계 추상화",
+      "weight": 14,
+      "meaning": "collab-mono와 artifacts/loop-architecture 설계 경험이 저수준 구현 나열 없이 책임·맥락·확인·개선의 설계 판단으로 표현되는 정도"
+    },
+    {
+      "id": "clarity_and_defensibility",
+      "name": "명료성·방어 가능성",
+      "weight": 10,
+      "meaning": "보편 용어로 의미가 한 번에 전달되고 면접에서 범위·근거·미확인을 설명할 수 있는 정도"
+    }
+  ],
+  "questionRubric": [
+    {
+      "id": "q1",
+      "name": "지식 및 기술역량과 직무 발휘",
+      "scoreMeaning": "직무에서 재현할 역량과 행동의 편집 적합도",
+      "required": ["역량을 행동으로 정의", "공고 업무와 연결", "사용자·서비스 결과", "입사 후 발휘와 확인 기준"],
+      "anchors": {"4": "역량·공고업무·대상·검증·다음 행동이 연결", "3": "직무 행동은 선명하나 검증 또는 근거가 약함", "2": "키워드·의지는 있으나 사용자 영향 연결이 부분적", "1": "추상 역량 선언", "0": "직무 오독·무근거 성과"}
+    },
+    {
+      "id": "q2",
+      "name": "프로젝트 완수 경험",
+      "scoreMeaning": "프로젝트 경험의 사건·선택·검증·학습 추적 가능성",
+      "required": ["프로젝트 종류·규모", "역할·기여", "문제 1건", "선택·보류 범위", "수행·확인·배움"],
+      "anchors": {"4": "한 사건의 문제→선택 이유→수행→확인 상태→학습이 재현 가능", "3": "역할·인과는 선명하나 사건·선택·검증 중 하나가 약함", "2": "과정 동사 나열과 추상적 배움", "1": "저장소 규모·소유권을 성과로 확대", "0": "경험·기여·결과 방어 불가"}
+    },
+    {
+      "id": "q3",
+      "name": "가치관과 회사에서의 실현",
+      "scoreMeaning": "가치관을 조직의 반복 가능한 행동과 관찰 신호로 번역한 정도",
+      "required": ["직접 가치관", "사람·업무·책임 관점", "우선순위 기준", "행동·관찰 신호", "공유·정착"],
+      "anchors": {"4": "가치·관점·행위자별 행동·신호·피드백이 연결", "3": "가치·행동·신호가 있으나 책임 또는 우선순위가 일부 약함", "2": "가치 선언과 일반적 개선 순서", "1": "좋은 태도·자동화 선언", "0": "가치 부재 또는 사람 책임 제거"}
+    }
+  ],
+  "protectedGates": [
+    {"id": "G1_length", "question": "15개 답변 모두 300~700자인가?", "passRule": "15/15 in range"},
+    {"id": "G2_question_required", "question": "각 문항의 필수요소가 들어갔는가?", "passRule": "q1/q2/q3 contract satisfied for every set"},
+    {"id": "G3_attribution", "question": "공식 사실·사용자 제공·개인 확인 필요·해석·미래 계획을 구분했는가?", "passRule": "no unsupported personal or production claim"},
+    {"id": "G4_no_outcome_inflation", "question": "운영 성과·고객 효과·지표를 근거 없이 과거형으로 쓰지 않았는가?", "passRule": "unsupported past outcome claims = 0"},
+    {"id": "G5_question_boundary", "question": "Q1/Q2/Q3가 서로의 중심을 침범하지 않는가?", "passRule": "primary subject differs by question"},
+    {"id": "G6_project_abstraction", "question": "프로젝트를 상위 서비스·사람의 흐름으로 표현했는가?", "passRule": "low-level terms are subordinate or absent"},
+    {"id": "G7_universal_language", "question": "보편 용어로 의미가 명확한가?", "passRule": "critical terms defined or translated"},
+    {"id": "G8_traceability", "question": "핵심 과거 주장마다 근거와 한계가 연결되는가?", "passRule": "material claims bind to evidence-map and claim-ledger"},
+    {"id": "G9_user_boundary", "question": "사용자 가치관과 편집 해석을 구분하는가?", "passRule": "direct value retained; viewpoint extension marked for confirmation"}
+  ],
+  "additionalCriteria": [
+    {"id": "personal_contribution_confirmation", "class": "mandatory_protected", "meaning": "과거형 개인 기여마다 사용자가 확인할 수 있는 변경 범위·실행·검증 근거가 있는가", "current": "pending_user_review", "scoreEffect": "gate or context requirement; not imputed"},
+    {"id": "reader_restatement", "class": "qualifying", "meaning": "저장소 맥락을 보지 않은 독자가 행위자·대상·행동·판단 기준·다음 행동을 다시 말할 수 있는가", "current": "editorial_design_check", "scoreEffect": "clarity_and_defensibility diagnostic"},
+    {"id": "counterevidence_and_boundary", "class": "qualifying", "meaning": "언제 적용되지 않는지, 무엇을 측정하지 않았는지, 실패·복구 조건이 무엇인지 말할 수 있는가", "current": "recorded_in_claim_ledger", "scoreEffect": "evidence_causal_integrity diagnostic"},
+    {"id": "revision_no_regression", "class": "mandatory_protected", "meaning": "v5 수정 후 기존 gate·귀속·용어·추적성이 하락하지 않고 새 unsupported claim이 0인가", "current": "pass", "scoreEffect": "publication gate"},
+    {"id": "distinct_viewpoint", "class": "comparative", "meaning": "close pair를 억지 점수차가 아니라 핵심 관점과 사용자 선택으로 구분했는가", "current": "set-1/set-5 close pair retained", "scoreEffect": "pairwise decision support"},
+    {"id": "rater_agreement", "class": "observational", "meaning": "독립 평가자 간 일치·불일치·기권을 별도 기록할 수 있는가", "current": "unavailable_single_rater", "scoreEffect": "not added to total"},
+    {"id": "accepted_outcome_join", "class": "observational", "meaning": "사용자 의미 확인·제출·면접 후 피드백과 편집 평가를 정확히 연결할 수 있는가", "current": "unavailable", "scoreEffect": "not added to total"}
+  ],
+  "scoreModel": {
+    "scale": "0~4, quarter-point allowed when evidence is between anchors",
+    "formula": "sum(domain.weight * domain.rating / 4)",
+    "threshold": 90,
+    "inclusionRule": "score >= 90 and all protected gates pass",
+    "rounding": "two decimal places for domain values; two decimals for total",
+    "nonCompensatoryRule": "gate failure excludes a set even if weighted score is >= 90",
+    "sensitivity": "Recalculate ranking under ±5-point shifts to question-fit, role-domain, and clarity weights; report rank changes and close pairs.",
+    "reliability": "Single evaluator in this run; inter-rater agreement and post-submission outcomes are unavailable."
+  },
+  "setProfile": {
+    "set-1": {"ratings": {"question_fit_and_distinctness": 4, "role_domain_alignment": 3.75, "user_viewpoint_and_value": 4, "evidence_causal_integrity": 3.75, "project_design_abstraction": 3.75, "clarity_and_defensibility": 3.5}, "questionFitScores": {"q1": 3.8, "q2": 3.8, "q3": 3.9}},
+    "set-2": {"ratings": {"question_fit_and_distinctness": 4, "role_domain_alignment": 3.75, "user_viewpoint_and_value": 4, "evidence_causal_integrity": 3.75, "project_design_abstraction": 3.5, "clarity_and_defensibility": 3.5}, "questionFitScores": {"q1": 3.9, "q2": 3.8, "q3": 3.8}},
+    "set-3": {"ratings": {"question_fit_and_distinctness": 4, "role_domain_alignment": 4, "user_viewpoint_and_value": 4, "evidence_causal_integrity": 4, "project_design_abstraction": 3.75, "clarity_and_defensibility": 3.5}, "questionFitScores": {"q1": 4, "q2": 3.9, "q3": 3.9}},
+    "set-4": {"ratings": {"question_fit_and_distinctness": 4, "role_domain_alignment": 4, "user_viewpoint_and_value": 4, "evidence_causal_integrity": 4, "project_design_abstraction": 3.75, "clarity_and_defensibility": 3.75}, "questionFitScores": {"q1": 4, "q2": 3.9, "q3": 4}},
+    "set-5": {"ratings": {"question_fit_and_distinctness": 4, "role_domain_alignment": 3.75, "user_viewpoint_and_value": 4, "evidence_causal_integrity": 3.75, "project_design_abstraction": 3.75, "clarity_and_defensibility": 3.5}, "questionFitScores": {"q1": 3.8, "q2": 3.9, "q3": 3.9}}
+  },
+  "interpretation": {
+    "high_score": "문항의 역할, 공고와의 연결, 사용자 관점, 근거 범위, 프로젝트 추상화, 명료성이 현재 기준에서 함께 충족됨",
+    "close_pair": "점수 차가 1점 미만이면 실제 가치관·면접 방어 가능성·지원자의 자연스러움을 우선해 선택",
+    "not_a_reward": "수치 변화는 피드백을 반영한 편집 결과의 관찰값이지 모델 또는 지원자에 대한 보상 신호가 아님"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "kind": "engineering-workset-simulation-evidence/v1",
+  "schemaVersion": 1,
+  "evidenceId": "simulation:codepde-public-oracle-r1",
+  "status": "failed",
+  "authorityEffect": "none",
+  "scope": {
+    "objectiveRevision": "prompt-driven-engineering-workset-evaluation/phase-58/codepde-public-oracle-r1",
+    "requestDigest": "sha256:b4e0da1fc872b995e74a604796608a7c3115fd7d9ff0619c3a9264de0eb220ca",
+    "providerClass": "harbor",
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor",
+    "sourceRevision": "9f9643d7dabe9dc5cee774061c551abb9447d184",
+    "sourceDigest": "sha256:d5875270b10d4df05b5976e0703f5f80fa35545792b016b0b48f506af28b56f2",
+    "verifierDigest": "sha256:db2fa7e2752a0a971314711a4b9c0546cda0586c7c4a4d7148a0d2b1d4ef1f4d",
+    "rubricRefs": []
+  },
+  "workingMemory": {
+    "bindingRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/codepde-public-oracle-r1/working-memory-binding.json",
+    "namespaceRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/jobs/codepde-public-oracle-r1",
+    "sessionCursor": "memory:prompt-driven-engineering-workset-evaluation:codepde-public-oracle-r1:settled",
+    "checkpointRefs": [
+      "memory:prompt-driven-engineering-workset-evaluation:codepde-public-oracle-r1:oracle-stop",
+      "memory:prompt-driven-engineering-workset-evaluation:codepde-public-oracle-r1:resource-settlement"
+    ],
+    "retention": "runtime-private negative qualification evidence retained through independent assessment",
+    "invalidation": [
+      "objective_revision_change",
+      "source_or_population_digest_change",
+      "provider_adapter_or_platform_change",
+      "verifier_or_simulation_evidence_checker_change",
+      "resource_settlement_change"
+    ],
+    "digest": "sha256:783396e2c47ea1f556e70568343cc93d9d42f18c4adad9324d07e157de789a44"
+  },
+  "provider": {
+    "qualificationRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/qualification/examples/harbor-rewardkit-luna.phase-10.example.json",
+    "qualificationDigest": "sha256:1d0a6a112d8e5d25590dfa5e3e7b58981ed25910c49711d3442323c30efaab75",
+    "state": "qualified",
+    "limitations": ["local Docker no-network enforcement was unavailable"]
+  },
+  "population": {
+    "selectionRule": "all five frozen CodePDE tasks before outcome observation",
+    "taskCount": 5,
+    "taskDigests": [
+      "sha256:087e2fd926844a784e8471fd1c37717963fab96418a6820bbae540d99d657896",
+      "sha256:8a50c8476e8f886643fe50004f55036d7c28aa7f3db79eda1ad660f2309289f5",
+      "sha256:5be2f675859fb73477cae48f868f2dae6286a3dc59397011f40760538e3f8645",
+      "sha256:70ad4f6253216cf2ed7d881cccd92ca03cff171d75ba24bdfe3d78ad9cf20685",
+      "sha256:1ebccee00913b815eafe76e5900c00428f314e13eec7f8a706c704823e98c790"
+    ],
+    "exclusions": []
+  },
+  "environment": {
+    "platformRef": "platform:darwin-arm64-docker",
+    "environmentDigest": "sha256:bd343b8104cf1c05876c094589f57a857ed3f5e29e0f92f10dc24570f1bc5670",
+    "compatibilityState": "qualified",
+    "limitations": ["qualification applies only to the observed CodePDE container path"]
+  },
+  "oracle": {
+    "state": "failed",
+    "taskResults": [
+      {
+        "taskId": "codepde-advection",
+        "taskDigest": "sha256:087e2fd926844a784e8471fd1c37717963fab96418a6820bbae540d99d657896",
+        "status": "not_run",
+        "reward": null,
+        "evidenceRefs": [
+          "memory:prompt-driven-engineering-workset-evaluation:codepde-public-oracle-r1:job-result"
+        ],
+        "failureRefs": ["failure:codepde-oracle-population-incomplete"]
+      },
+      {
+        "taskId": "codepde-burgers",
+        "taskDigest": "sha256:8a50c8476e8f886643fe50004f55036d7c28aa7f3db79eda1ad660f2309289f5",
+        "status": "not_run",
+        "reward": null,
+        "evidenceRefs": [
+          "memory:prompt-driven-engineering-workset-evaluation:codepde-public-oracle-r1:job-result"
+        ],
+        "failureRefs": ["failure:codepde-oracle-population-incomplete"]
+      },
+      {
+        "taskId": "codepde-cns1d",
+        "taskDigest": "sha256:5be2f675859fb73477cae48f868f2dae6286a3dc59397011f40760538e3f8645",
+        "status": "cancelled",
+        "reward": null,
+        "evidenceRefs": [
+          "memory:prompt-driven-engineering-workset-evaluation:codepde-public-oracle-r1:job-result"
+        ],
+        "failureRefs": ["failure:codepde-oracle-population-incomplete"]
+      },
+      {
+        "taskId": "codepde-darcy",
+        "taskDigest": "sha256:70ad4f6253216cf2ed7d881cccd92ca03cff171d75ba24bdfe3d78ad9cf20685",
+        "status": "cancelled",
+        "reward": null,
+        "evidenceRefs": [
+          "memory:prompt-driven-engineering-workset-evaluation:codepde-public-oracle-r1:job-result"
+        ],
+        "failureRefs": ["failure:codepde-oracle-population-incomplete"]
+      },
+      {
+        "taskId": "codepde-reacdiff1d",
+        "taskDigest": "sha256:1ebccee00913b815eafe76e5900c00428f314e13eec7f8a706c704823e98c790",
+        "status": "failed",
+        "reward": 0,
+        "evidenceRefs": [
+          "memory:prompt-driven-engineering-workset-evaluation:codepde-public-oracle-r1:reacdiff1d-result",
+          "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/phases/58-public-harbor-workset-qualification-pilot.md"
+        ],
+        "failureRefs": ["failure:codepde-oracle-verifier-mismatch"]
+      }
+    ]
+  },
+  "arms": [],
+  "trials": [],
+  "outcomes": {
+    "benchmarkEligibility": false,
+    "architectureInterpretationEligibility": false,
+    "eligibleTrialIds": [],
+    "disqualifications": [
+      "the public source license was not established by an explicit repository license file",
+      "one published Oracle earned zero against its own verifier",
+      "the frozen Oracle population did not complete",
+      "no Artifact-aware model arm was admitted"
+    ]
+  },
+  "failures": [
+    {
+      "id": "failure:codepde-source-license-unresolved",
+      "class": "license",
+      "code": "license:source-license-unresolved",
+      "subjectRef": "source:codepde:9f9643d7dabe9dc5cee774061c551abb9447d184",
+      "evidenceRefs": [
+        "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/phases/58-public-harbor-workset-qualification-pilot.md"
+      ],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:codepde-oracle-verifier-mismatch",
+      "class": "verifier",
+      "code": "verifier:published-oracle-earned-zero",
+      "subjectRef": "task:codepde-reacdiff1d",
+      "evidenceRefs": [
+        "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/phases/58-public-harbor-workset-qualification-pilot.md"
+      ],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    },
+    {
+      "id": "failure:codepde-oracle-population-incomplete",
+      "class": "task",
+      "code": "task:oracle-population-incomplete",
+      "subjectRef": "population:codepde-public-oracle-r1",
+      "evidenceRefs": [
+        "memory:prompt-driven-engineering-workset-evaluation:codepde-public-oracle-r1:job-result"
+      ],
+      "blocking": true,
+      "eligibilityImpact": "both"
+    }
+  ],
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContentAbsent": true,
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/jobs/codepde-public-oracle-r1",
+    "contentEvidenceRefs": []
+  },
+  "settlement": {
+    "state": "complete",
+    "resources": [
+      {
+        "resourceClass": "harbor-job",
+        "resourceRefDigest": "sha256:7245bc8b85c8caa1b49fe5bbeec52cfe44dbf967e8a79f9739a3e251e96b69c2",
+        "state": "settled",
+        "evidenceRefs": [
+          "memory:prompt-driven-engineering-workset-evaluation:codepde-public-oracle-r1:resource-check"
+        ]
+      }
+    ],
+    "reconciliationRef": "memory:prompt-driven-engineering-workset-evaluation:codepde-public-oracle-r1:resource-settlement"
+  },
+  "sourceRefs": [
+    "docs/plan/loop-architecture/prompt-driven-engineering-workset-evaluation/phases/58-public-harbor-workset-qualification-pilot.md",
+    "memory:prompt-driven-engineering-workset-evaluation:codepde-public-oracle-r1:job-result"
+  ],
+  "createdAt": "2026-08-27T09:11:16Z",
+  "digest": "sha256:3966c9fbe2dfdb116fade99325cab0d9a5c3638a9935758ed0924a4bea87273c"
+}

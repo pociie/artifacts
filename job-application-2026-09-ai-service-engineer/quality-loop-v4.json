@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "self-introduction-quality-loop/v4",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "objective": "사용자의 가치관과 견해가 드러나는 상위 서비스 서사의 자기소개서 5세트를 만들고, 보편 용어·문장 추적성·평가 신뢰 한계를 반영한 평가체계에서 90점 이상인 세트만 PDF에 포함한다.",
+  "correctionsFromV3": [
+    "의도·여정·공유 맥락·근거·불확실성·서비스 약속처럼 독자가 프로젝트 내부 의미를 복원해야 하는 표현을 canonical domain language로 교체",
+    "저장소 근거 경로의 drift를 확인하고 packages/shared/README.md를 현재의 shared/README.md로 정정",
+    "평가축을 사람 중심 서사·직무 적합성·근거 인과·도메인 언어 명료성·전달 방어의 5개 domain으로 재구성",
+    "평가자·사용자 확인·사후 결과·점수 자체를 서로 다른 데이터로 보존하고 score confidence를 editorial comparison only로 제한",
+    "criterion anchor와 counter-evidence를 추가해 5개 초안의 차이를 관찰 가능한 문장으로 판별",
+    "정확한 문장 주소·근거·한계를 claim ledger에 연결하고 undefined critical term, canonical coverage, pairwise separation, sensitivity를 추가",
+    "Q3의 사용자 제공 가치 문구는 모두 유지하되 동일 문장 반복을 제거하고 판단 대상·회사 행동을 세트별로 다르게 구성"
+  ],
+  "scope": {
+    "included": ["official job/company/HR context", "user-provided value and project context", "high-level repository abstraction", "universal domain language", "five sets with three answers", "non-compensatory gates", "weighted editorial comparison", "PDF with visible scores"],
+    "excluded": ["application submission", "candidate identity or expertise inference", "production/customer/metric claims not provided", "source architecture changes", "raw prompts/transcripts/private reasoning/secrets/runtime handles", "automated selection of the user's true value system"]
+  },
+  "routing": {
+    "mode": "bounded_iterative_investigation_and_loop",
+    "run": "run_f0b7f9c94e82",
+    "readOnlyWorkers": ["domain-language-research", "evaluation-method-research", "v3-adversarial-review", "project-domain-abstraction-review"],
+    "integrationOwner": "current-coordinator",
+    "materialChangeSignals": ["user corrects value or viewpoint", "project ownership/evidence changes", "job posting changes", "rubric construct or weight changes", "new dated execution/outcome evidence", "canonical term meaning changes"]
+  },
+  "stages": [
+    {"id": "S1", "name": "purpose_context_and_user_boundary", "checks": ["evaluand is one three-answer set", "consumer is draft editor", "90 threshold and five-set minimum fixed", "user-provided value separated from editorial interpretation"], "exit": "construct, consumer, user boundary and evidence classes bound"},
+    {"id": "S2", "name": "official_role_and_project_abstraction", "checks": ["official role scope separated from repository facts", "project expressed as user goal→work context→service processing→result verification→improvement", "personal contribution and outcome gaps preserved"], "exit": "evidence-map-v4 and project-abstraction-map-v4 ready"},
+    {"id": "S3", "name": "canonical_language_freeze", "checks": ["universal terms preferred over project/team terms", "one concept-one term mapping fixed", "critical abstract words defined or replaced", "reader can identify actor/action/object/criterion"], "exit": "domain-language-map-v4 and coverage snapshot ready"},
+    {"id": "S4", "name": "construct_and_profile_freeze", "checks": ["five domain weights sum to 100", "all criteria have observable anchors and counter-evidence", "nine protected gates precede weighted score", "ordinal transformation and unknown states recorded"], "exit": "evaluation-rubric-v4 frozen before scoring"},
+    {"id": "S5", "name": "five_set_generation", "checks": ["all 15 answers 300~700 characters", "Q1 includes knowledge/skill and workplace expression", "Q2 includes type/scale/role/contribution/process/learning", "Q3 includes direct value and workplace realization", "each set has a distinct viewpoint"], "exit": "15 draft answers ready"},
+    {"id": "S6", "name": "semantic_claim_and_contrastive_review", "checks": ["no low-level implementation exposition in essay center", "past/future/evidence classes separated", "all core terms map to canonical concepts", "no unsupported operational outcome", "exact duplicate Q3 core sentence rate zero", "close pair is explicitly reviewed"], "exit": "known hard failures rewritten or excluded"},
+    {"id": "S7", "name": "scoring_discrimination_and_sensitivity", "checks": ["all gates pass", "criterion anchors used", "weighted score arithmetic independently recalculated", "pairwise separation and criterion spread recorded", "weight-sensitivity ranking recorded", "only score >=90 included"], "exit": "five included sets selected under baseline profile"},
+    {"id": "S8", "name": "render_and_independent_validation", "checks": ["all JSON parses", "character counts and scores visible", "PDF page layout has no overflow", "content, arithmetic, provenance and render checks are separate", "score caveat is visible"], "exit": "PDF and machine-readable v4 artifacts ready"},
+    {"id": "S9", "name": "user_semantic_review", "checks": ["user confirms or edits viewpoint wording", "user confirms personal contribution and project facts", "user selects among close pair if needed"], "exit": "pending_user_review can become accepted or revised"}
+  ],
+  "dataOperations": {
+    "definition": "evaluation-rubric-v4.json",
+    "profile": "evaluation-rubric-v4.json#profile",
+    "operation": "assessment-operation-v4.json",
+    "evidence": "evidence-map-v4.json",
+    "userProjection": "user-understanding-projection-v4.json",
+    "domainLanguage": "domain-language-map-v4.json",
+    "coverage": "domain-language-coverage-v4.json",
+    "claims": "claim-ledger-v4.json",
+    "metrics": "evaluation-data-operations-v4.json",
+    "unknownPolicy": "unavailable/conflicting/pending_user_review/not_applicable remain explicit and never become zero or pass",
+    "lifecycle": "draft -> language_bound -> profile_resolved -> evidence_ready -> gated -> evaluated -> selected -> user_review -> accepted_or_revised"
+  },
+  "acceptance": {
+    "includedSets": 5,
+    "minimumScore": 90,
+    "allAnswersWithinRange": true,
+    "protectedGates": 9,
+    "allProtectedGatesPass": true,
+    "canonicalTermCoverage": 1.0,
+    "undefinedCriticalTermRate": 0.0,
+    "sentenceTraceabilityRate": 1.0,
+    "userSemanticAcknowledgement": "pending",
+    "raterAgreement": "unavailable",
+    "acceptedOutcomeJoin": "unavailable",
+    "setDistinctness": "observed_pass_with_set-1_set-5_close_pair",
+    "authorityEffect": "none"
+  },
+  "followUpForApplicant": [
+    "다섯 세트의 중심 관점 중 실제 본인의 견해와 가장 가까운 문장을 표시하고 어색한 표현을 수정",
+    "collab-mono에서 실제로 변경한 영역·결정·대안·검증 실행·배포 사실을 claim ledger에 확정",
+    "날짜가 있는 테스트·배포·장애·성과가 있다면 해당 문장에만 과거형으로 추가",
+    "면접 대비를 위해 프로젝트에서 실패한 선택과 버린 대안을 하나씩 준비",
+    "set-2 문장을 소리 내어 읽고 독자가 한 번에 이해하지 못하는 용어가 있는지 확인"
+  ]
+}

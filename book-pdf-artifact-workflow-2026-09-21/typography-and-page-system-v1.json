@@ -1,0 +1,94 @@
+{
+  "kind": "book-pdf-typography-and-page-system/v1",
+  "systemId": "typography-system:clean-technical-book",
+  "revision": "book-pdf-typography/1",
+  "status": "candidate",
+  "authorityEffect": "none",
+  "purpose": "Keep typography quiet, legible and role-based so visual emphasis never substitutes for explanation.",
+  "responsibility": {
+    "owns": [
+      "font-role tokens",
+      "type scale and leading",
+      "line-length and paragraph rhythm",
+      "emphasis hierarchy",
+      "running-head, folio, code and evidence-label treatment",
+      "typographic validation requirements"
+    ],
+    "mustNotOwn": [
+      "manuscript claims",
+      "source truth",
+      "page-mode selection",
+      "acceptance or publication"
+    ]
+  },
+  "principles": [
+    "Typography reveals structure without becoming a separate illustration.",
+    "A paragraph begins at the normal body size; decorative drop caps and oversized initial letters are prohibited.",
+    "Korean and Latin text share a compatible visual weight and baseline rhythm.",
+    "Bold, color and uppercase are supporting signals and never the sole carriers of meaning.",
+    "Long-form reading uses stable line length, leading and paragraph spacing across chapters."
+  ],
+  "fontRoles": {
+    "display": {
+      "stack": ["Noto Serif KR", "AppleMyungjo", "Georgia", "serif"],
+      "use": ["cover title", "chapter title", "material thesis"],
+      "constraint": "Use sentence case; do not set Korean titles in spaced all-caps styling."
+    },
+    "body": {
+      "stack": ["Pretendard", "SUIT", "Noto Sans KR", "Apple SD Gothic Neo", "sans-serif"],
+      "use": ["continuous prose", "captions", "notes"],
+      "constraint": "Prefer regular weight; use semibold only for short inline emphasis."
+    },
+    "utility": {
+      "stack": ["SFMono-Regular", "Menlo", "Consolas", "monospace"],
+      "use": ["code", "evidence labels", "source ids", "running metadata"],
+      "constraint": "Do not use utility type for narrative paragraphs."
+    }
+  },
+  "scale": {
+    "coverTitle": {"sizePt": 43, "lineHeight": 1.04},
+    "chapterTitle": {"sizePt": 22, "lineHeight": 1.18},
+    "lead": {"sizePt": 13.2, "lineHeight": 1.5},
+    "body": {"sizePt": 10.2, "lineHeight": 1.62},
+    "caption": {"sizePt": 8.1, "lineHeight": 1.45},
+    "utility": {"sizePt": 7.4, "lineHeight": 1.35},
+    "code": {"sizePt": 8.3, "lineHeight": 1.5}
+  },
+  "paragraphSystem": {
+    "openingParagraph": "normal body size and weight; no enlarged first character",
+    "targetKoreanCharactersPerLine": "38-48",
+    "paragraphSpacingMm": 3.2,
+    "firstLineIndent": "none for prototype; use spacing consistently instead",
+    "columnUse": "two columns only for continuous essay sections; single column for traces and evidence review"
+  },
+  "emphasisRules": [
+    "Use heading hierarchy before bold or color.",
+    "Limit bold emphasis to one short phrase per paragraph when needed.",
+    "Do not emphasize a sequence by styling every stage as a separate card.",
+    "Evidence states require text labels and border forms in addition to color.",
+    "Avoid decorative uppercase strings except compact Latin running heads and source labels."
+  ],
+  "prohibitedPatterns": [
+    "drop caps",
+    "oversized opening letters",
+    "all-caps Korean headings",
+    "mixed display fonts inside one title",
+    "bold keywords replacing explanatory sentences",
+    "font-size changes used to imply unsupported importance",
+    "body text below 9.5 pt",
+    "utility monospace used as body copy"
+  ],
+  "validation": [
+    "inspect computed font family, size, weight and line height for every semantic role",
+    "confirm no opening paragraph uses first-letter enlargement",
+    "confirm fallback fonts render all Korean glyphs",
+    "confirm every page has selectable text and no overflow",
+    "inspect the contact sheet for stable rhythm and abrupt density changes",
+    "leave physical print, grayscale and assistive-technology validation pending for an independent validator"
+  ],
+  "activation": "not_performed",
+  "acceptance": "not_performed",
+  "publication": "not_performed",
+  "settlement": "not_claimed"
+}
+

@@ -1,0 +1,92 @@
+{
+  "attempt": {
+    "actualAttempt": true,
+    "durationSeconds": 190.249,
+    "exitCode": null,
+    "finishedAtUnixSeconds": 1787953675.0439968,
+    "startedAtUnixSeconds": 1787953484.795219
+  },
+  "configuration": {
+    "agent": "codex",
+    "authMode": "CODEX_FORCE_AUTH_JSON=1",
+    "configuredTimeoutMultipliers": {
+      "subject": 1.0,
+      "task": 1.0,
+      "verifier": 1.0
+    },
+    "effectiveSubjectTimeoutSecondsObserved": null,
+    "executionMode": "local",
+    "framework": "harbor@0.22.0",
+    "frameworkRevision": "sha256:ec23c40270733d0a9ffd336abcd2f51c084fbb439acd73ccd67d2e0c7fdc5d68",
+    "globalSubjectSlots": 3,
+    "hostedLaunch": false,
+    "installOnly": false,
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "max",
+    "subjectAdapter": "harbor@0.22.0-local-subject-adapter",
+    "subjectTimeoutCeilingSeconds": 3600,
+    "timeoutCeilingSatisfied": true,
+    "verificationEnabled": true
+  },
+  "costAndUsage": {},
+  "identity": {
+    "datasetId": "NovitaAI/tb21-data-science",
+    "datasetVersion": "latest",
+    "identityDigest": "sha256:bd8bce739f7ae64c133d986af741e72ea5c40da0ede132437d39eaec8f32c1e3",
+    "providerCasePreserved": true
+  },
+  "jobResultAvailable": true,
+  "lane": "population-shard-2",
+  "operationId": "harbor-hub-five-shard-full-inventory-r14",
+  "ordinal": 1,
+  "provider": {
+    "datasetRef": "NovitaAI/tb21-data-science@latest",
+    "providerTaskResolved": true,
+    "selection": "exact_prior_task_binding",
+    "taskDigest": "e2acbc34aa5f20bbe3b10d2d297cdec9e6f2086c94a70068f2325e7bb7ab1212",
+    "taskFacts": {
+      "contentDomain": "molecular-biology-and-bioinformatics",
+      "contentShape": "scientific-artifact-generation-with-protected-verifier",
+      "contributionShape": "one_owner",
+      "executionSurface": "delegated_single_writer",
+      "instructionState": "private-not-retained",
+      "nativeSubjectOperationRequired": false,
+      "probeOutputDigest": null,
+      "qualificationState": "qualified",
+      "rawTaskInstructionStored": false,
+      "reassessmentTrigger": "material task-content, workspace, verifier, capability, or runtime-shape change",
+      "source": "exact-prior-task-binding-and-provider-workspace-contract",
+      "taskBinding": "exact_prior_task",
+      "taskDigest": "sha256:7b571544b64d9be1c91526837e5d805c2181afe0e6fd57a7f0676bba36c868d7",
+      "taskId": "terminal-bench/dna-assembly",
+      "workspaceObligations": {
+        "dynamicMembershipRequired": false,
+        "independentMaterialContributors": false,
+        "independentValidationRequired": false,
+        "requiredResponsibilityClasses": [
+          "single-Harbor-subject"
+        ],
+        "scope": "one deterministic representative provider task",
+        "separableRoleCount": 1,
+        "shape": "single-task Harbor workspace",
+        "validationBoundary": "protected-Harbor-verifier-not-a-Subject-role"
+      }
+    },
+    "taskName": "terminal-bench/dna-assembly"
+  },
+  "schemaVersion": "harbor-hub-r14-subject-operation-summary/v1",
+  "subject": {
+    "agentExecutionObserved": true,
+    "terminalState": "completed"
+  },
+  "terminal": {
+    "exceptionTypes": [],
+    "failureClass": "subject_execution",
+    "status": "completed",
+    "wakeCondition": "Subject execution must complete without an uncategorized Harbor exception."
+  },
+  "verifier": {
+    "resultObserved": true,
+    "terminalState": "completed"
+  }
+}

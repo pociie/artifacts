@@ -1,0 +1,89 @@
+{
+  "arms": [
+    {
+      "admissionReason": "platform:task-image-linux-arm64-manifest-unavailable",
+      "admitted": false,
+      "allowedReasoningEfforts": ["max"],
+      "armType": "artifact_aware",
+      "artifactProjectionDigest": "sha256:c4f484bddaca4a0eeb1f00c3189991d47ba325029079864636b6de565be2594b",
+      "id": "harbor-gpt-5-6-luna-max",
+      "instructionProfileRef": "profile:harbor-task-instruction",
+      "modelRef": "model:gpt-5.6-luna",
+      "reasoningProfileRef": "profile:harbor-gpt-5-6-luna",
+      "requestedReasoningEffort": "max"
+    }
+  ],
+  "authorityEffect": "none",
+  "budget": {
+    "effectiveTimeoutSeconds": 3600,
+    "maxAttempts": 1,
+    "maxConcurrent": 1,
+    "maxTrials": 1
+  },
+  "digest": "sha256:53f94530bde56d7c46af28d2731a2c8058d8ba3698969df2f1a641521433a699",
+  "identityDigest": "sha256:6c9c5a99c1e698460064925c35d37f2fd005c8455ab6e2f2f43b081c1a58c3fd",
+  "itemId": "LiteCoder/LiteCoder-rl",
+  "kind": "engineering-workset-simulation-request/v2",
+  "mode": {
+    "routeDigest": "sha256:7cb1c87109ee3036eebb6af97a4f802adb5c959bfc9f9d51f6ad6008eaf17ac8",
+    "selectedMode": "single_task"
+  },
+  "objectiveRevision": "harbor-hub-five-shard-full-inventory-source-r12",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "population": {
+    "frozenBeforeOutcome": true,
+    "selectionRule": "first task from the exact frozen case-preserving item",
+    "tasks": [
+      {
+        "providerTaskRef": "LiteCoder/LiteCoder-rl/gdb-reverse-debug-memory-bug",
+        "taskDigest": "sha256:15551e2897c253659416936b3980c24ea8f83860995827e88944427e6b88e674",
+        "taskId": "gdb-reverse-debug-memory-bug"
+      }
+    ]
+  },
+  "privacy": {
+    "metadataOnly": true,
+    "prohibitedContent": [
+      "raw_prompt",
+      "transcript",
+      "private_reasoning",
+      "credential",
+      "secret",
+      "runtime_handle",
+      "hidden_oracle_body"
+    ],
+    "runtimePrivateRootRef": ".collab/memory/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12"
+  },
+  "provider": {
+    "adapterRef": "artifacts/agent-loop/assessment/engineering-workset-simulation/adapters/harbor/README.md",
+    "class": "harbor",
+    "qualificationDigest": "sha256:bdb9904d19940a4a365c81799a2a82d91f4769fe238e332c7af8a6c644aadbba",
+    "qualificationRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-3/continuation-r12/provider-qualification.r12.json",
+    "version": "0.22.0"
+  },
+  "schemaVersion": 2,
+  "source": {
+    "datasetDigest": "sha256:c6b7634e0119b92951fa44ff9da4a15ff052e209debd6eb72961d7623c03c249",
+    "datasetRef": "LiteCoder/LiteCoder-rl",
+    "taskDigest": "sha256:15551e2897c253659416936b3980c24ea8f83860995827e88944427e6b88e674",
+    "taskRef": "LiteCoder/LiteCoder-rl/gdb-reverse-debug-memory-bug",
+    "taskRevision": 1
+  },
+  "status": "frozen_before_provider_admission",
+  "topology": {
+    "architectureRef": "artifacts/loop-architecture/components/agentic-architecture/component.json",
+    "coordinationClosureStatus": "closed",
+    "requirement": "architecture_only",
+    "swarmRef": null
+  },
+  "verifier": {
+    "oracleRequired": true,
+    "verifierDigest": "sha256:9c89a76b6284304c1a5f56b656acbeb2940c85b4f4a30cefb9bec0b6c2cc7fb7",
+    "verifierRef": "memory:private:protected-verifier-contract"
+  },
+  "workflow": {
+    "coordinationPolicyRef": "artifacts/loop-architecture/components/agent-architecture-coordination/patterns/ordered-handoff/coordination-policy.json",
+    "patternId": "pipeline",
+    "patternRef": "artifacts/loop-architecture/components/agentic-architecture/patterns/pipeline/workflow-pattern.json"
+  }
+}

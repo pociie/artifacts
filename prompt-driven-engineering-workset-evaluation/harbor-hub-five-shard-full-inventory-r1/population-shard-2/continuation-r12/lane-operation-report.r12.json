@@ -1,0 +1,86 @@
+{
+  "authorityEffect": "none",
+  "blockingCodes": [
+    "effective_model_unverified",
+    "effective_reasoning_effort_unverified",
+    "subject_timeout_runtime_unverified",
+    "cross_platform_emulation_unqualified",
+    "dataset_license_unobserved",
+    "cost_budget_unqualified",
+    "protected_verifier_not_run",
+    "dynamic_candidate_held_report_only"
+  ],
+  "continuationCounts": {
+    "discovered": 1,
+    "evaluated": 0,
+    "executed": 0,
+    "held": 1,
+    "qualified": 0,
+    "rejected": 0,
+    "settled": 1
+  },
+  "continuationId": "population-shard-2:continuation-r12",
+  "cumulativeItemCounts": {
+    "discovered": 6,
+    "evaluated": 0,
+    "executed": 0,
+    "held": 6,
+    "qualified": 0,
+    "rejected": 0,
+    "settled": 6
+  },
+  "currentItem": {
+    "disposition": "held_before_subject_execution",
+    "identityDigest": "sha256:bda24d861960f89b41087ef9a17d0325cbba30f268aceacc0f614364dd99d34b",
+    "itemId": "NovitaAI/tb21-systems-security",
+    "qualificationFingerprint": "sha256:1ebf0810ef0eaae71cbf39137237845b21e9673746ef94c69e740498fd7726c1",
+    "taskId": "terminal-bench/qemu-alpine-ssh",
+    "terminalReceipt": true
+  },
+  "digest": "sha256:69f4587198f71bad7902e531171806c4a60b492acdd7a682f28b3a4b6e0c8237",
+  "dynamicComposition": {
+    "candidateRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-2/continuation-r12/dynamic/subject-capability-gate.r12.json",
+    "remainingGapIds": ["gap:subject-effective-capability"],
+    "required": true,
+    "status": "require_context"
+  },
+  "itemScoped": true,
+  "kind": "harbor-shard-lane-operation-report/v3",
+  "laneId": "population-shard-2",
+  "nextAction": "hold_after_one_terminal_round; claim next only after bounded worker window reopens and latest source/context is consumed",
+  "operationId": "harbor-hub-five-shard-full-inventory-r1",
+  "planDigest": "sha256:705987df0c6bacdd644b177d34d4e72d2ff9e82cf27137c81959e975ee8bf8b7",
+  "planRef": ".collab/artifacts/prompt-driven-engineering-workset-evaluation/harbor-hub-five-shard-full-inventory-r1/population-shard-4/population-shard-plan.json",
+  "populationCounts": {
+    "aggregateClaimsIgnored": 54,
+    "pendingItemReceipts": 48,
+    "shardCandidatesDiscovered": 54,
+    "terminalItemReceipts": 6
+  },
+  "privacy": {
+    "metadataOnly": true,
+    "privateReasoningProjected": false,
+    "rawContentProjected": false,
+    "runtimeHandlesProjected": false
+  },
+  "requestedEffectiveReceipts": {
+    "configuredHierarchyCeiling": 12,
+    "effectiveModel": null,
+    "effectiveReasoningEffort": null,
+    "operationEffectiveSubjectTimeoutSeconds": 3600,
+    "requestedModel": "gpt-5.6-luna",
+    "requestedReasoningEffort": "max",
+    "requestedSubjectTimeoutSeconds": 3600,
+    "runtimeEffectiveSubjectTimeoutSeconds": null
+  },
+  "routeStatusCounts": {
+    "investigation": 1,
+    "no_eligible_mode": 0,
+    "require_context": 0,
+    "single_task": 5
+  },
+  "schemaVersion": 3,
+  "settlementRef": "continuation-r12/settlement-ledger.r12.json",
+  "sourceRevision": "harbor-hub-five-shard-full-inventory-source-r12",
+  "wakeCondition": "reobserve only this item after changed effective-capability or qualification fingerprint; otherwise begin the next frozen pending member after a fresh r12 context read"
+}

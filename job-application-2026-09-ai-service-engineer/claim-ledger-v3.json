@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "self-introduction-claim-ledger/v3",
+  "status": "report_only",
+  "authorityEffect": "none",
+  "legend": {
+    "F": "공식 공고 또는 저장소 사실",
+    "U": "사용자 제공 맥락",
+    "P": "개인 기여로 서술된 사용자 주장",
+    "I": "제한된 해석",
+    "N": "입사 후 계획",
+    "M": "측정 불가 또는 확인 필요"
+  },
+  "records": [
+    {"setId": "set-1", "question": "q1", "classes": ["F", "U", "I", "N"], "sources": ["role-scope", "project-purpose", "human-centered-viewpoint"], "confirmation": "value viewpoint semantic acknowledgement"},
+    {"setId": "set-1", "question": "q2", "classes": ["F", "U", "P", "I"], "sources": ["project-purpose", "project-scale", "project-contribution"], "confirmation": "exact owned changes and dated verification"},
+    {"setId": "set-1", "question": "q3", "classes": ["U", "I", "N"], "sources": ["user-value", "human-centered-viewpoint"], "confirmation": "personal wording fit"},
+    {"setId": "set-2", "question": "q1", "classes": ["F", "I", "N"], "sources": ["role-scope", "company-context"], "confirmation": "none beyond applicant fit"},
+    {"setId": "set-2", "question": "q2", "classes": ["F", "U", "P", "I"], "sources": ["project-purpose", "project-contribution"], "confirmation": "actual responsibility and alternatives"},
+    {"setId": "set-2", "question": "q3", "classes": ["U", "I", "N"], "sources": ["user-value", "hr-context"], "confirmation": "personal wording fit"},
+    {"setId": "set-3", "question": "q1", "classes": ["F", "I", "N", "M"], "sources": ["role-scope", "project-outcome-limit", "nist-genai-profile"], "confirmation": "actual quality evidence if claimed"},
+    {"setId": "set-3", "question": "q2", "classes": ["U", "P", "I", "M"], "sources": ["project-purpose", "project-contribution", "project-outcome-limit"], "confirmation": "dated checks and deployment configuration"},
+    {"setId": "set-3", "question": "q3", "classes": ["U", "I", "N"], "sources": ["user-value"], "confirmation": "personal wording fit"},
+    {"setId": "set-4", "question": "q1", "classes": ["F", "I", "N"], "sources": ["role-scope", "human-centered-viewpoint", "microsoft-hai"], "confirmation": "none beyond applicant fit"},
+    {"setId": "set-4", "question": "q2", "classes": ["U", "P", "I"], "sources": ["project-purpose", "project-contribution"], "confirmation": "actual responsibility and alternatives"},
+    {"setId": "set-4", "question": "q3", "classes": ["U", "I", "N"], "sources": ["user-value", "human-centered-viewpoint"], "confirmation": "personal wording fit"},
+    {"setId": "set-5", "question": "q1", "classes": ["F", "U", "I", "N"], "sources": ["role-scope", "project-purpose", "company-context"], "confirmation": "none beyond applicant fit"},
+    {"setId": "set-5", "question": "q2", "classes": ["U", "P", "I"], "sources": ["project-scale", "project-contribution", "project-purpose"], "confirmation": "actual responsibility and alternatives"},
+    {"setId": "set-5", "question": "q3", "classes": ["U", "I", "N"], "sources": ["user-value"], "confirmation": "personal wording fit"}
+  ],
+  "unavailableEvidence": ["dated personal run receipts", "production/customer outcomes", "independent recruiter or hiring labels", "accepted submission outcome"],
+  "rule": "A claim class, source and confirmation state are kept with the draft; unavailable evidence is not converted to zero or a favorable score."
+}

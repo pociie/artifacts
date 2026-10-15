@@ -1,0 +1,566 @@
+{
+  "kind": "workset-terminal-reward-assessment/v1",
+  "schemaVersion": 1,
+  "status": "report_only",
+  "authorityEffect": "none",
+  "assessmentId": "assessment:harbor-shard-5:r12:aarr-aarri-bench",
+  "assessmentRevision": 1,
+  "workset": {
+    "taskRef": "aarr/aarri-bench/cross-pollination",
+    "taskRevision": "1",
+    "split": "development",
+    "environmentRef": "harbor:linux-arm64:aarr-aarri-bench"
+  },
+  "bindings": {
+    "simulationEvidence": {
+      "ref": "artifacts/population-shard-5/continuation-r12/simulation-evidence.r12.json",
+      "digest": "sha256:439730052aa7a2671cd33ca8028ab0ade268af2f47c3b040e66a0996741bfa71",
+      "settled": true
+    },
+    "evaluationReport": {
+      "ref": "artifacts/population-shard-5/continuation-r12/final-engineering-evaluation.r12.json",
+      "digest": "sha256:5617755285d4478ed3196955eaa8ee3889fd749873a43399284851eba1494701",
+      "simulationEvidenceDigest": "sha256:439730052aa7a2671cd33ca8028ab0ade268af2f47c3b040e66a0996741bfa71",
+      "final": true
+    },
+    "profile": {
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/profiles/workset-terminal-reward.profile.json",
+      "digest": "sha256:ca1e8d48eff7e065cf4cf1f2e4be5ec86778f97509df137e2de6308bdc0632bf"
+    },
+    "rubric": {
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md",
+      "digest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18"
+    },
+    "evaluator": {
+      "ref": "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/algorithms/workset-terminal-reward-reduction/implementation.py",
+      "digest": "sha256:4cc3cd8d17db20c0a73449d107170c1db81aeff160bf10968643e1d688c03a62"
+    }
+  },
+  "roles": {
+    "subjectAgentRef": "agent:harbor-subject:aarr-aarri-bench",
+    "oracleOwnerRef": "agent:harbor-protected-verifier:aarr-aarri-bench",
+    "evaluatorRef": "agent:independent-evaluator:aarr-aarri-bench",
+    "independentValidatorRef": "agent:terminal-settlement-validator:aarr-aarri-bench",
+    "rewardReducerRef": "agent:workset-terminal-reward-reducer:v4"
+  },
+  "freeze": {
+    "frozenBeforeExecution": true,
+    "taskDigest": "sha256:6305649acfb122e8518374bde36b066e757c0dd185b35bfc3a595d986cb96e68",
+    "environmentDigest": "sha256:7e0fe3beb2099321c2141d4441d87726b2f9d118d426d2892602c774ae5a3b18",
+    "rubricDigest": "sha256:0f37e73cbfecc9f886dc97f5305b567ea870932d701445f0c4377dde4c41ac18",
+    "activationDigest": "sha256:2d95235ec038aef16ccc46b21c3266877c336acc8e25cd6a489ad8bbcba61d44",
+    "thresholdsDigest": "sha256:208ba1fc751f36dfcb364b75602b65bcfa659c74fddd48b5ccfe2c7a6e116552"
+  },
+  "artifactLifecycle": {
+    "requestedOperationIds": ["discover", "reuse", "create", "update", "split", "merge"],
+    "operations": [
+      {
+        "operationId": "discover",
+        "state": "operated",
+        "evidenceRefs": [
+          "artifacts/population-shard-5/continuation-r12/artifact-discovery.r12.json"
+        ],
+        "limitations": []
+      },
+      {
+        "operationId": "reuse",
+        "state": "operated",
+        "evidenceRefs": [
+          "artifacts/population-shard-5/continuation-r12/artifact-discovery.r12.json"
+        ],
+        "limitations": []
+      },
+      {
+        "operationId": "create",
+        "state": "operated",
+        "evidenceRefs": [
+          "artifacts/population-shard-5/continuation-r12/artifact-lifecycle-observation.r12.json"
+        ],
+        "limitations": [
+          "existing bounded run-private candidate was reused; no tracked source was created"
+        ]
+      },
+      {
+        "operationId": "update",
+        "state": "rejected",
+        "evidenceRefs": [
+          "artifacts/population-shard-5/continuation-r12/artifact-lifecycle-observation.r12.json"
+        ],
+        "limitations": ["no reusable source update was admitted"]
+      },
+      {
+        "operationId": "split",
+        "state": "rejected",
+        "evidenceRefs": [
+          "artifacts/population-shard-5/continuation-r12/artifact-lifecycle-observation.r12.json"
+        ],
+        "limitations": ["single item and existing ownership boundaries remain coherent"]
+      },
+      {
+        "operationId": "merge",
+        "state": "rejected",
+        "evidenceRefs": [
+          "artifacts/population-shard-5/continuation-r12/artifact-lifecycle-observation.r12.json"
+        ],
+        "limitations": ["no semantic-overlap merge was proposed"]
+      }
+    ],
+    "dynamicComposition": {
+      "required": true,
+      "disposition": "operated",
+      "residualGapRef": "gap:harbor-adapter:effective-effort-and-native-subject-topology-receipt",
+      "reusableArtifactRefs": [
+        "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+        "artifacts/loop-architecture/components/agentic-architecture/patterns/generator-validator/workflow-pattern.json"
+      ],
+      "dynamicArtifactRefs": ["population-shard-5/candidates/native-subject-receipt-gap-r1.json"],
+      "componentRefs": [
+        "artifacts/loop-architecture/components/artifact-reuse-resolution/component.json",
+        "artifacts/loop-architecture/components/mode-reasoning-control/component.json",
+        "artifacts/loop-architecture/components/agentic-architecture/component.json",
+        "artifacts/loop-architecture/components/agent-execution-topology-selection/component.json",
+        "artifacts/loop-architecture/components/agent-architecture-coordination/component.json"
+      ],
+      "operationEvidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/artifact-discovery.r12.json",
+        "artifacts/population-shard-5/continuation-r12/artifact-lifecycle-observation.r12.json"
+      ],
+      "outcomeEvidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/final-engineering-evaluation.r12.json",
+        "artifacts/population-shard-5/continuation-r12/independent-evaluation.r12.json"
+      ],
+      "validityWindowRef": "population-shard-5/candidates/native-subject-receipt-gap-r1.json",
+      "expiryConditionRefs": [
+        "harbor_adapter_revision_change",
+        "route_policy_change",
+        "operation_revision_change",
+        "capability_receipt_change"
+      ],
+      "fallbackRef": "hold_item_before_subject_execution_and_require_fresh_exact_capability_receipts",
+      "automaticPromotion": false
+    }
+  },
+  "criterionObservations": [
+    {
+      "criterionId": "gate.binding.final_evaluation",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/final-engineering-evaluation.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.boundary.authority_privacy",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/independent-evaluation.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.lifecycle.terminal_settlement",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["artifacts/population-shard-5/continuation-r12/settlement-ledger.r12.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.lifecycle.population_disposition_integrity",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/population-settlement-accounting-decision.after-claim.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.context.requirement_scope_lifetime_integrity",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/mode-reasoning-envelope.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.routing.compound_obligation_coverage",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/compound-mode-journey.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.validation.reward_hacking",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/agent-loop/assessment/engineering-evaluation/workset-terminal-reward/contract.md"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.outcome.required_validation",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/independent-evaluation.r12.json"
+      ],
+      "limitations": ["protected verifier outcome is unavailable before Subject execution"]
+    },
+    {
+      "criterionId": "gate.artifact.lifecycle_coverage",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/artifact-lifecycle-observation.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.artifact.reuse_before_dynamic",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["artifacts/population-shard-5/continuation-r12/artifact-discovery.r12.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.artifact.dynamic_residual_gap",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["artifacts/population-shard-5/continuation-r12/artifact-discovery.r12.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "gate.artifact.dynamic_binding_integrity",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/artifact-lifecycle-observation.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.requirement_understanding",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/preclaim-verification.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.operability",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/provider-qualification.r12.json"
+      ],
+      "limitations": ["effective provider receipts are unavailable before Subject admission"]
+    },
+    {
+      "criterionId": "reward.routing",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/route-decision.r12.json",
+        "artifacts/population-shard-5/continuation-r12/compound-mode-journey.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.reasoning_control",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/mode-reasoning-envelope.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.context_adaptation",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/preclaim-verification.r12.json",
+        "artifacts/population-shard-5/continuation-r12/mode-reasoning-envelope.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.workflow",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/workflow-pattern-qualification.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.agent_architecture",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/architecture-qualification.r12.json",
+        "artifacts/population-shard-5/continuation-r12/topology-requirement.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.agent_swarm",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/swarm-qualification.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.artifact.discover",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": ["artifacts/population-shard-5/continuation-r12/artifact-discovery.r12.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.artifact.reuse",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "graph",
+      "evidenceRefs": ["artifacts/population-shard-5/continuation-r12/artifact-discovery.r12.json"],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.artifact.create",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/artifact-lifecycle-observation.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.artifact.update",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "contract_test",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/artifact-lifecycle-observation.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.artifact.split",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/artifact-lifecycle-observation.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.artifact.merge",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "graph",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/artifact-lifecycle-observation.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.artifact.dynamic_composition",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "state_trace",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/final-engineering-evaluation.r12.json"
+      ],
+      "limitations": [
+        "dynamic composition is bound, but outcome improvement cannot be observed without Subject and verifier execution"
+      ]
+    },
+    {
+      "criterionId": "reward.loop_architecture_quality",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/source-and-plan-binding.r12.json",
+        "artifacts/population-shard-5/continuation-r12/architecture-qualification.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.evidence_quality",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/independent-evaluation.r12.json",
+        "artifacts/population-shard-5/continuation-r12/settlement-ledger.r12.json"
+      ],
+      "limitations": []
+    },
+    {
+      "criterionId": "reward.outcome_quality",
+      "state": "unavailable",
+      "score": null,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/final-engineering-evaluation.r12.json"
+      ],
+      "limitations": ["protected verifier outcome is unavailable before Subject execution"]
+    },
+    {
+      "criterionId": "reward.efficiency",
+      "state": "supported",
+      "score": 1.0,
+      "evaluatorKind": "deterministic",
+      "evidenceRefs": [
+        "artifacts/population-shard-5/continuation-r12/harbor-execution-observation.r12.json"
+      ],
+      "limitations": []
+    }
+  ],
+  "dimensionThresholds": [
+    { "dimensionId": "requirement_understanding", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "operability", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "routing", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "reasoning_control", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "context_adaptation", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "workflow", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "agent_architecture", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "agent_swarm", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "artifact_discovery", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "artifact_reuse", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "artifact_creation", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "artifact_update", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "artifact_split", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "artifact_merge", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "dynamic_artifact_composition", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "loop_architecture_quality", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "evidence_quality", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "outcome_quality", "minimumReward": 0.8, "weight": 1.0 },
+    { "dimensionId": "efficiency", "minimumReward": 0.8, "weight": 1.0 }
+  ],
+  "calibration": {
+    "state": "not_required",
+    "humanLabelPopulationRef": null,
+    "metrics": {
+      "falseAllowRate": null,
+      "falseBlockRate": null,
+      "abstentionRate": null,
+      "chanceCorrectedAgreement": null
+    },
+    "ownerThresholds": {
+      "maxFalseAllowRate": 0.1,
+      "maxFalseBlockRate": 0.15,
+      "maxAbstentionRate": 0.1,
+      "minChanceCorrectedAgreement": 0.7
+    },
+    "evidenceRefs": []
+  },
+  "settlement": {
+    "state": "complete",
+    "evidenceRefs": [
+      "artifacts/population-shard-5/continuation-r12/settlement-ledger.r12.json",
+      "artifacts/population-shard-5/continuation-r12/terminal-receipt.aarr-aarri-bench.r12.json"
+    ]
+  },
+  "declaredDecision": {
+    "useClass": "workset_terminal",
+    "disposition": "require_context",
+    "primaryReward": 0.0,
+    "diagnosticReward": null,
+    "dimensionRewards": [
+      { "dimensionId": "requirement_understanding", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "operability", "state": "unavailable", "reward": null },
+      { "dimensionId": "routing", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "reasoning_control", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "context_adaptation", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "workflow", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "agent_architecture", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "agent_swarm", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "artifact_discovery", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "artifact_reuse", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "artifact_creation", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "artifact_update", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "artifact_split", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "artifact_merge", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "dynamic_artifact_composition", "state": "unavailable", "reward": null },
+      { "dimensionId": "loop_architecture_quality", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "evidence_quality", "state": "scored", "reward": 1.0 },
+      { "dimensionId": "outcome_quality", "state": "unavailable", "reward": null },
+      { "dimensionId": "efficiency", "state": "scored", "reward": 1.0 }
+    ],
+    "reasonCodes": [
+      "protected_criterion_unresolved",
+      "qualifying_criterion_unresolved",
+      "required_active_dimension_unavailable"
+    ],
+    "findings": [
+      {
+        "criterionId": "gate.outcome.required_validation",
+        "findingType": "protected_gate_failure",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "critical"
+      },
+      {
+        "criterionId": "reward.operability",
+        "findingType": "evidence_gap",
+        "ownerRoute": "ENVIRONMENT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.artifact.dynamic_composition",
+        "findingType": "evidence_gap",
+        "ownerRoute": "DYNAMIC_ARTIFACT_GAP",
+        "severity": "major"
+      },
+      {
+        "criterionId": "reward.outcome_quality",
+        "findingType": "evidence_gap",
+        "ownerRoute": "OUTCOME_GAP",
+        "severity": "major"
+      }
+    ],
+    "improvementTargetCriterionIds": [
+      "gate.outcome.required_validation",
+      "reward.operability",
+      "reward.artifact.dynamic_composition",
+      "reward.outcome_quality"
+    ],
+    "promotionEligible": false
+  },
+  "integrity": {
+    "algorithm": "canonical-json-sha256/v1",
+    "digest": "sha256:b270b4bf77eac4cb2888e19139e45be83c46dfdc3bbe6682ed88f43a80dac892"
+  }
+}

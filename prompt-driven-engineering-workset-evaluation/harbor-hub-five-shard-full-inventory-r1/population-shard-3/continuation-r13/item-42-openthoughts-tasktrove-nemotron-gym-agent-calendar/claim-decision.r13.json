@@ -1,0 +1,71 @@
+{
+  "activeClaimCount": 0,
+  "admitted": [
+    {
+      "activeClaimPresent": false,
+      "expectedEventCursor": 9,
+      "expectedEventHeadSha256": "29b37a9615193151c0f66f549b7bc251dbac50592a5c93373833612b94871c6a",
+      "expectedQueueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+      "fingerprint": {
+        "capability": "sha256:ee006ceb3ac404ed6766404f166bdad583e449182693b045157af427f24369d6",
+        "differenceBasis": [
+          "new_current_case_preserving_assignment",
+          "current_source_revision",
+          "no_prior_exact_receipt_for_item"
+        ],
+        "materiallyDifferent": true,
+        "taskMetadata": "sha256:d8fc8ae530ceed0e188e0bb275f9e59725fe8c987e6143cb4de5bc06c11bbe9f"
+      },
+      "identityDigest": "sha256:b4ee7d47fd232ed15ad1db050d6f8f3333ab68806627f87b04dfcf35c682ea33",
+      "itemId": "openthoughts/tasktrove-nemotron-gym-agent-calendar",
+      "laneId": "population-shard-3",
+      "priority": 0,
+      "proposalId": "proposal:population-shard-3:openthoughts/tasktrove-nemotron-gym-agent-calendar:r13",
+      "sequence": 42,
+      "terminalDispositionPresent": false,
+      "workerId": "worker:harbor-population-shard-3:r13-controller"
+    }
+  ],
+  "authorityEffect": "none",
+  "commitPrecondition": {
+    "eventCursor": 9,
+    "eventHeadSha256": "sha256:29b37a9615193151c0f66f549b7bc251dbac50592a5c93373833612b94871c6a",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+  },
+  "digest": "sha256:c6d4d656cd086b92abf4d53ca6871a2e7e43c8d366258e4be66b65a4d9580c25",
+  "eventCursor": 9,
+  "eventHeadSha256": "sha256:29b37a9615193151c0f66f549b7bc251dbac50592a5c93373833612b94871c6a",
+  "externalQueueMutation": false,
+  "kind": "atomic-lane-claim-admission-decision/v3",
+  "maxConcurrency": 1,
+  "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-3",
+  "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+  "reconciliationRef": "continuation-r13/item-42-openthoughts-tasktrove-nemotron-gym-agent-calendar/queue-reconciliation-before-claim.r13.json",
+  "rejected": [],
+  "resolverOutput": {
+    "activeClaimCount": 0,
+    "admitted": [
+      {
+        "itemId": "openthoughts/tasktrove-nemotron-gym-agent-calendar",
+        "laneId": "population-shard-3",
+        "proposalId": "proposal:population-shard-3:openthoughts/tasktrove-nemotron-gym-agent-calendar:r13",
+        "workerId": "worker:harbor-population-shard-3:r13-controller"
+      }
+    ],
+    "authorityEffect": "none",
+    "commitPrecondition": {
+      "eventCursor": 9,
+      "eventHeadSha256": "29b37a9615193151c0f66f549b7bc251dbac50592a5c93373833612b94871c6a",
+      "queueRevision": "harbor-hub-item-scoped-population-settlement-r13"
+    },
+    "eventCursor": 9,
+    "eventHeadSha256": "29b37a9615193151c0f66f549b7bc251dbac50592a5c93373833612b94871c6a",
+    "kind": "atomic-lane-claim-admission-decision/v1",
+    "maxConcurrency": 1,
+    "queueId": "queue:harbor-hub-five-shard-full-inventory-r1:population-shard-3",
+    "queueRevision": "harbor-hub-item-scoped-population-settlement-r13",
+    "rejected": []
+  },
+  "runtimeAuthority": "report_only_algorithm_admission; runtime_queue_owner_cas_not_available",
+  "schemaVersion": 3
+}
